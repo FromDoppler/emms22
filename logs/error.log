@@ -1,0 +1,2 @@
+2022/06/28 17:54:04 [error] 8#8: *1 open() "/var/www/html/favicon.ico" failed (2: No such file or directory), client: 172.22.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2022/06/28 18:42:08 [error] 8#8: *5 directory index of "/var/www/html/services/" is forbidden, client: 172.20.0.1, server: localhost, request: "GET /services/ HTTP/1.1", host: "localhost"
