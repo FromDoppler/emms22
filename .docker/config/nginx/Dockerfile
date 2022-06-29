@@ -1,6 +1,6 @@
 FROM nginx:1.14.2
 
-LABEL Maintainer = "Matias Cappato <mcappato@makingsense.com>"
+LABEL Maintainer = "Hernan Cardoso <cardoso@fromdoppler.com>"
 
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
