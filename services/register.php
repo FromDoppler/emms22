@@ -1,7 +1,8 @@
 <?php
 require_once('../utils/GeoIp.php');
+require_once('../utils/SecurityHelper.php');
+require_once('../config.php');
 
 $ip = GeoIp::getIp();
 $country = GeoIp::getCountryName();
-print_r($ip);
-print_r($country);
+SecurityHelper::init($ip, PRODUCTION);
