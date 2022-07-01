@@ -20,8 +20,8 @@ class Doppler {
 		self::$account = $account;
 	}
 
-    public static function subscriber($data,$list) {
-        $endPointSubscriber = self::urlBase.urlencode(self::$account).'/lists/'.$list.'/subscribers?api_key='.self::$apiKey;
+    public static function subscriber($data) {
+        $endPointSubscriber = self::urlBase.urlencode(self::$account).'/lists/'.$data['list'].'/subscribers?api_key='.self::$apiKey;
         $customFields = array(
             array('name' => 'FIRSTNAME', 'Value' => $data['firstname']),
             array('name' => 'LASTNAME', 'Value' => $data['lastname']),

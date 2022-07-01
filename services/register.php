@@ -4,6 +4,7 @@ require_once('../utils/SecurityHelper.php');
 require_once('../utils/Doppler.php');
 require_once('../utils/Validator.php');
 require_once('../utils/ErrorLog.php');
+require_once('../utils/DB.php');
 require_once('../config.php');
 
 $ip = GeoIp::getIp();
@@ -39,10 +40,14 @@ try {
         'medium_utm' => $medium_utm,
         'campaign_utm' => $campaign_utm,
         'content_utm' => $content_utm,
-        'term_utm' => $term_utm
+        'term_utm' => $term_utm,
+        'form_id' => 'landing',
+        'list' => LIST_LANDING,
     );
     SecurityHelper::isSubmitValid($ALLOW_IPS);
-    Doppler::subscriber($user, LIST_LANDING);
+    Doppler::subscriber($user);
+    $db = new DB($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
+    $db->insertSubscriptionDoppler($user);
    
 }
 catch (Exception $e) {

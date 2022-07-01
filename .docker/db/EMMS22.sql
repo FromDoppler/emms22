@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jun 29, 2022 at 08:43 PM
+-- Generation Time: Jul 01, 2022 at 05:03 PM
 -- Server version: 8.0.25
 -- PHP Version: 7.4.20
 
@@ -43,6 +43,34 @@ CREATE TABLE `google_oauth` (
 INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
 (1, 'google', '{\"access_token\":\"ya29.A0ARrdaM9HtKFoP6Bj_U_ep1D9GQcokAz5scTic3VMtJKeY0HOBOrSTPWFCi-PNei_JLFItRWJrGt2aDg2spol9k9Imb-YMc3vBszzx1TqZXpcYjEgjaStFqzHpd6IGfBiShXoHnxDVCRlPmlDyI35vTOop7mUH8kYUNnWUtBVEFTQVRBU0ZRRl91NjFWNVBueXpkb2ZyUmpKYmhZUTFjTU9jZw0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscriptions_doppler`
+--
+
+DROP TABLE IF EXISTS `subscriptions_doppler`;
+CREATE TABLE `subscriptions_doppler` (
+  `id` int NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `list` varchar(50) NOT NULL,
+  `register` varchar(50) NOT NULL,
+  `form_id` varchar(50) NOT NULL,
+  `firstname` varchar(150) DEFAULT NULL,
+  `lastname` varchar(150) DEFAULT NULL,
+  `phone` varchar(300) NOT NULL,
+  `country` varchar(150) NOT NULL,
+  `ip` varchar(150) NOT NULL,
+  `country_ip` varchar(150) NOT NULL,
+  `privacy` tinyint(1) NOT NULL,
+  `promotions` tinyint(1) DEFAULT NULL,
+  `source_utm` varchar(150) DEFAULT NULL,
+  `medium_utm` varchar(150) DEFAULT NULL,
+  `campaign_utm` varchar(150) DEFAULT NULL,
+  `content_utm` varchar(150) DEFAULT NULL,
+  `term_utm` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
 --
 -- Indexes for dumped tables
 --
@@ -54,6 +82,12 @@ ALTER TABLE `google_oauth`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `subscriptions_doppler`
+--
+ALTER TABLE `subscriptions_doppler`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -62,6 +96,12 @@ ALTER TABLE `google_oauth`
 --
 ALTER TABLE `google_oauth`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `subscriptions_doppler`
+--
+ALTER TABLE `subscriptions_doppler`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
