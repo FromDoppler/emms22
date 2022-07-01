@@ -24,3 +24,7 @@ $DB_NAME = getenv("MYSQL_DATABASE");
 $DB_USER = getenv("MYSQL_USER");
 $DB_PASSWORD = getenv("MYSQL_PASSWORD");
 $DB_HOST = getenv("MYSQL_HOST");
+
+#DOPPLER
+
+if (!defined('LIST_LANDING')) define('LIST_LANDING', 28547158);

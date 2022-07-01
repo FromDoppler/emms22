@@ -25,7 +25,7 @@ class Doppler {
         $customFields = array(
             array('name' => 'FIRSTNAME', 'Value' => $data['firstname']),
             array('name' => 'LASTNAME', 'Value' => $data['lastname']),
-            array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['policy'])),
+            array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])),
             array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])),
             array('name' => 'tel', 'Value' => $data['phone']),
             array('name' => 'pais', 'Value' => $data['country']),
@@ -48,8 +48,8 @@ class Doppler {
         );
         $response = json_decode(self::executeCurl($endPointSubscriber,$headers));
         echo "<pre>";
-        print_r($endPointSubscriber);
-        print_r($dataSubscriber);
+        //print_r($endPointSubscriber);
+        //print_r($dataSubscriber);
         print_r($response);
         foreach($response->errors as $error) {
             throw new Exception('Doppler: Error '.$error->key. '->'.$error->detail);
