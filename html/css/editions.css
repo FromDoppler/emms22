@@ -1,0 +1,13 @@
+.emms22__hero {
+  background: #310e44;
+}
+
+.emms22__hero__content {
+  max-width: 50%;
+  color: #ffffff;
+}
+
+.emms22__hero__content h1 {
+  font-size: 3.8em;
+  font-weight: 700;
+}
