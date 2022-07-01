@@ -22,9 +22,24 @@ class Doppler {
 
     public static function subscriber($data,$list) {
         $endPointSubscriber = self::urlBase.urlencode(self::$account).'/lists/'.$list.'/subscribers?api_key='.self::$apiKey;
+        $customFields = array(
+            array('name' => 'FIRSTNAME', 'Value' => $data['firstname']),
+            array('name' => 'LASTNAME', 'Value' => $data['lastname']),
+            array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['policy'])),
+            array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])),
+            array('name' => 'tel', 'Value' => $data['phone']),
+            array('name' => 'pais', 'Value' => $data['country']),
+            array('name' => 'IP', 'Value' => $data['ip']),
+            array('name' => 'PaisIP', 'Value' => $data['country_ip']),
+            array('name' => 'utmsource', 'Value' => $data['source_utm']),
+            array('name' => 'utmmedium', 'Value' => $data['medium_utm']),
+            array('name' => 'utmcampaign', 'Value' => $data['campaign_utm']),
+            array('name' => 'utmcontent', 'Value' => $data['content_utm']),
+            array('name' => 'utmterm', 'Value' => $data['term_utm'])
+        );
         $dataSubscriber = array(
 		    "email" => $data['email'],
-		    "fields" => $data['fields']
+		    "fields" => $customFields
 	    );
         $dataJson = json_encode($dataSubscriber);
         $headers = array(
@@ -32,6 +47,10 @@ class Doppler {
             'Content: '.strlen($dataJson)
         );
         $response = json_decode(self::executeCurl($endPointSubscriber,$headers));
+        echo "<pre>";
+        print_r($endPointSubscriber);
+        print_r($dataSubscriber);
+        print_r($response);
         foreach($response->errors as $error) {
             throw new Exception('Doppler: Error '.$error->key. '->'.$error->detail);
         }
