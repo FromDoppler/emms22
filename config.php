@@ -11,6 +11,10 @@ $ALLOW_IPS = array('::1', '200.5.229.58', '200.5.253.210', '127.0.0.1');
 $ACCOUNT_DOPPLER = getenv("ACCOUNT_DOPPLER");
 $API_KEY_DOPPLER = getenv("API_KEY_DOPPLER");
 
+#API RELAY
+$ACCOUNT_RELAY = getenv("ACCOUNT_RELAY");
+$API_KEY_RELAY = getenv("API_KEY_RELAY");
+
 #GOOGLE SPREADSHEET
 //https://docs.google.com/spreadsheets/d/1HpSLWrz5lLcUKFyVGGF7PQ2FJvsydTV0IMahZogbQt0/edit#gid=0
 $GOOGLE_CLIENT_ID = getenv("GOOGLE_CLIENT_ID");
@@ -26,5 +30,4 @@ $DB_PASSWORD = getenv("MYSQL_PASSWORD");
 $DB_HOST = getenv("MYSQL_HOST");
 
 #DOPPLER
-
 if (!defined('LIST_LANDING')) define('LIST_LANDING', 28547158);

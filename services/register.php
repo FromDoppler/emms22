@@ -11,7 +11,7 @@ require_once('../config.php');
 
 $ip = GeoIp::getIp();
 $countryGeo = GeoIp::getCountryName();
-$email = isset($_POST['email']) ? $_POST['email'] : 'hcardoso6+20220701@makingsense.com';
+$email = isset($_POST['email']) ? $_POST['email'] : 'hcardoso+20220701@makingsense.com';
 $firstname = isset($_POST['firstname']) ? $_POST['firstname'] : 'Peter';
 $lastname = isset($_POST['lastname']) ? $_POST['lastname']	: 'Parker';
 $phone = isset($_POST['phone']) ? $_POST['phone'] : '+542494619633';
@@ -30,9 +30,7 @@ try {
 }    
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
-    print_r($e->getMessage());
-    //BOOT
-    exit;
+    exit('submits');
 }
 try {
     $user = array(
@@ -56,7 +54,6 @@ try {
 }    
  catch (Exception $e) {
     ErrorLog::log($e->getMessage());
-    print_r($e->getMessage());
 }
 
 try {
@@ -65,7 +62,6 @@ try {
 }    
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
-    print_r($e->getMessage());
 }
 
 try {    
@@ -75,12 +71,19 @@ try {
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
-    print_r($e->getMessage());
 }
 try {    
     SpreadSheetGoogle::write($ID_SPREADSHEET, $user, 'A1:N1');
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
-    print_r($e->getMessage());
-}    
+}
+
+try {    
+    Relay::init($ACCOUNT_RELAY, $API_KEY_RELAY);
+    Relay::sendEmailRegister($user['email'], 'Registrado con exito!', 'landing');
+   
+}
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+}  
