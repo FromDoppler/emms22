@@ -3,7 +3,7 @@ class SecurityHelper {
 	
 	const CAPTCHA_TIME =  86400; // 60*60*24 seconds (24 hours)
 	const SUBMISSIONS_TIME = 86400; // 60*60*24 seconds (24 hours)
-	const ALLOWED_SUBMISSIONS = 30;
+	const ALLOWED_SUBMISSIONS = 3;
 	
 	private static $ip;
 	private static $memcached;
@@ -25,6 +25,7 @@ class SecurityHelper {
 	
 	public static function incrementSubmissions() {
 		if(self::$enabled) {
+
 			$submissions = self::$memcached->increment(self::$submissionsKey);
 			if (!$submissions) {
 				$submissions = 1;
@@ -38,9 +39,16 @@ class SecurityHelper {
 
 	public static function maximumSubmissionsCount() {
 		return (self::$enabled) ? self::$memcached->get(self::$bannedKey) : 0;
-
 	}
 
+	public static function isSubmitValid($allowIps) {
+		if (in_array(self::$ip, $allowIps) || !self::maximumSubmissionsCount()) {
+			self::incrementSubmissions();
+			}
+			else {
+				throw new Exception('SecurityHelper: error submision');
+			}
+	}	
 }
 
 ?>
