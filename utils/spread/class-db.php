@@ -1,12 +1,10 @@
 <?php
-
-require($_SERVER['DOCUMENT_ROOT'] . '/config.php');
-
 class DBSpread
 {
 
     public function __construct($dbHost, $dbUsername, $dbPassword,  $dbName)
     {
+        
         if (!isset($this->db)) {
             // Connect to the database
             $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);

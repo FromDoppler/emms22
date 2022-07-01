@@ -5,6 +5,7 @@ require_once('../utils/Doppler.php');
 require_once('../utils/Validator.php');
 require_once('../utils/ErrorLog.php');
 require_once('../utils/DB.php');
+require_once('../utils/SpreadSheetGoogle.php');
 require_once('../config.php');
 
 $ip = GeoIp::getIp();
@@ -48,6 +49,7 @@ try {
     Doppler::subscriber($user);
     $db = new DB($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
     $db->insertSubscriptionDoppler($user);
+    SpreadSheetGoogle::write($ID_SPREADSHEET, $user, 'A1:N1');
    
 }
 catch (Exception $e) {
