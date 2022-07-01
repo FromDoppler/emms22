@@ -49,13 +49,31 @@
 
 html, body{
     font-family: 'Proxima-Nova', 'helvetica' ,'sans-serif';
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 .emms22__container--lg {
     max-width: 1200px;
-    margin: 0 auto
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
 }
 
 .emms22__container--md {
     max-width: 990px;
+    position: relative;
+    width: 90%;
 }
