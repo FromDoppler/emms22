@@ -9,7 +9,7 @@ class DBSpread
             // Connect to the database
             $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
             if ($conn->connect_error) {
-                die("Failed to connect with MySQL: " . $conn->connect_error);
+                die("Failed to connect with MySQL: " . $conn->connect_error." dbHost:  $dbHost");
             } else {
                 $this->db = $conn;
             }
