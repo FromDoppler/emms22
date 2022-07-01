@@ -6,6 +6,7 @@ require_once('../utils/Validator.php');
 require_once('../utils/ErrorLog.php');
 require_once('../utils/DB.php');
 require_once('../utils/SpreadSheetGoogle.php');
+require_once('../utils/Relay.php');
 require_once('../config.php');
 
 $ip = GeoIp::getIp();
@@ -23,10 +24,17 @@ $campaign_utm = (isset($_POST['campaign_utm']) && (trim($_POST['campaign_utm']) 
 $content_utm = (isset($_POST['content_utm']) && (trim($_POST['content_utm']) !== "")) ? $_POST['content_utm'] : null;
 $term_utm = (isset($_POST['term_utm']) && (trim($_POST['term_utm']) !== "")) ? $_POST['term_utm'] : null;
 
-SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
-Doppler::init($ACCOUNT_DOPPLER, $API_KEY_DOPPLER);
 try {
-
+    SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
+    SecurityHelper::isSubmitValid($ALLOW_IPS);
+}    
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+    print_r($e->getMessage());
+    //BOOT
+    exit;
+}
+try {
     $user = array(
         'firstname' => Validator::validateRequired('firstname', $firstname),
         'lastname' => Validator::validateRequired('lastname', $lastname),
@@ -45,14 +53,34 @@ try {
         'form_id' => 'landing',
         'list' => LIST_LANDING,
     );
-    SecurityHelper::isSubmitValid($ALLOW_IPS);
+}    
+ catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+    print_r($e->getMessage());
+}
+
+try {
+    Doppler::init($ACCOUNT_DOPPLER, $API_KEY_DOPPLER);
     Doppler::subscriber($user);
+}    
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+    print_r($e->getMessage());
+}
+
+try {    
     $db = new DB($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
     $db->insertSubscriptionDoppler($user);
-    SpreadSheetGoogle::write($ID_SPREADSHEET, $user, 'A1:N1');
    
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
     print_r($e->getMessage());
-} 
+}
+try {    
+    SpreadSheetGoogle::write($ID_SPREADSHEET, $user, 'A1:N1');
+}
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+    print_r($e->getMessage());
+}    
