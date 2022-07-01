@@ -7,7 +7,7 @@ class DB {
     protected $query_closed = TRUE;
 	public $query_count = 0;
 
-	public function __construct($dbhost = 'db', $dbuser = 'root', $dbpass = '', $dbname = '', $charset = 'utf8') {
+	public function __construct($dbhost, $dbuser, $dbpas, $dbname, $charset = 'utf8') {
 		$this->connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 		if ($this->connection->connect_error) {
 			$this->error('Failed to connect to MySQL - ' . $this->connection->connect_error);
@@ -116,7 +116,7 @@ class DB {
 
     public function error($error) {
         if ($this->show_errors) {
-            exit($error);
+			throw new Exception('DB: Error '.$error);
         }
     }
 
@@ -125,6 +125,34 @@ class DB {
 	    if (is_float($var)) return 'd';
 	    if (is_int($var)) return 'i';
 	    return 'b';
+	}
+
+	public function insertSubscriptionDoppler($subscription) {
+
+		$fields = "(email, list, form_id, register, firstname, lastname, country, phone, ip, country_ip, privacy, ";
+		$fields .= "promotions, source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
+		date_default_timezone_set('America/Argentina/Buenos_Aires');
+		$values = array(
+			$subscription['email'],
+			$subscription['list'],
+			$subscription['form_id'],
+			date("Y-m-d h:i:s A"),
+			$subscription['firstname'],
+			$subscription['lastname'],
+			$subscription['country'],
+			$subscription['phone'],
+			$subscription['ip'],
+			$subscription['country_ip'],
+			intval($subscription['privacy']),
+			intval($subscription['promotions']),
+			$subscription['source_utm'],
+			$subscription['medium_utm'],
+			$subscription['campaign_utm'],
+			$subscription['content_utm'],
+			$subscription['term_utm']
+		);
+		$this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+		$this->close();
 	}
 
 }

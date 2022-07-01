@@ -6,7 +6,7 @@ class Doppler {
  
     const urlBase = 'https://restapi.fromdoppler.com/accounts/';
 
-    private static function executeCurl($url, $headers) {
+    private static function executeCurl($url, $data, $headers, $method) {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
@@ -20,12 +20,12 @@ class Doppler {
 		self::$account = $account;
 	}
 
-    public static function subscriber($data,$list) {
-        $endPointSubscriber = self::urlBase.urlencode(self::$account).'/lists/'.$list.'/subscribers?api_key='.self::$apiKey;
+    public static function subscriber($data) {
+        $endPointSubscriber = self::urlBase.urlencode(self::$account).'/lists/'.$data['list'].'/subscribers?api_key='.self::$apiKey;
         $customFields = array(
             array('name' => 'FIRSTNAME', 'Value' => $data['firstname']),
             array('name' => 'LASTNAME', 'Value' => $data['lastname']),
-            array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['policy'])),
+            array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])),
             array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])),
             array('name' => 'tel', 'Value' => $data['phone']),
             array('name' => 'pais', 'Value' => $data['country']),
@@ -46,18 +46,16 @@ class Doppler {
             'Content-Type: application/json',
             'Content: '.strlen($dataJson)
         );
-        $response = json_decode(self::executeCurl($endPointSubscriber,$headers));
-        echo "<pre>";
-        print_r($endPointSubscriber);
-        print_r($dataSubscriber);
-        print_r($response);
-        foreach($response->errors as $error) {
-            throw new Exception('Doppler: Error '.$error->key. '->'.$error->detail);
-        }
-
+        $response = json_decode(self::executeCurl($endPointSubscriber, $dataJson, $headers, 'POST'));
+        if(isset($response->errors)) :
+            foreach($response->errors as $error) :
+                throw new Exception('Doppler: Error '.$error->key. '->'.$error->detail);
+            endforeach;
+        endif;
+        if(isset($response->errorCode)) :
+            throw new Exception('Doppler: Error '.$response->detail);
+        endif;    
     }
-	
-
 }
 
 ?>

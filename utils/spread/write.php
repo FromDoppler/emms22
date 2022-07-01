@@ -1,7 +1,7 @@
 <?php
 
 
-function write_to_sheet($user, $spreadsheetId, $range, $values)
+function write_to_sheet($spreadsheetId, $range, $values)
 {
     require_once($_SERVER['DOCUMENT_ROOT'] . "/config.php");
     require_once ('class-db.php');
@@ -44,7 +44,7 @@ function write_to_sheet($user, $spreadsheetId, $range, $values)
             $data = (array) json_decode($response->getBody());
             $data['refresh_token'] = $refresh_token;
             $db->update_access_token(json_encode($data));
-            write_to_sheet($user, $spreadsheetId, $range, $values);
+            write_to_sheet($spreadsheetId, $range, $values);
         } else {
             echo $e->getMessage(); //print the error just in case your data is not added.
         }
