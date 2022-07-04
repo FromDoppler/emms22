@@ -8,15 +8,17 @@ require_once('../utils/DB.php');
 require_once('../utils/SpreadSheetGoogle.php');
 require_once('../utils/Relay.php');
 require_once('../config.php');
+$_POST = json_decode(file_get_contents('php://input'), true);
 
 $ip = GeoIp::getIp();
 $countryGeo = GeoIp::getCountryName();
-$email = isset($_POST['email']) ? $_POST['email'] : 'hcardoso+20220701@makingsense.com';
+
+$email = isset($_POST['email']) ? $_POST['email'] : 'mroy+20299999@makingsense.com';
 $firstname = isset($_POST['firstname']) ? $_POST['firstname'] : 'Peter';
 $lastname = isset($_POST['lastname']) ? $_POST['lastname']	: 'Parker';
 $phone = isset($_POST['phone']) ? $_POST['phone'] : '+542494619633';
-$privacy 	= isset($_POST['privacy']) ? $_POST['privacy'] 	: true;
-$promotions = isset($_POST['promotions']) ? $_POST['promotions'] : true;
+$privacy 	= isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies'] 	: true;
+$promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : true;
 $country 	= isset($_POST['country']) ? $_POST['country'] : 'Arg';
 $source_utm = (isset($_POST['source_utm']) && (trim($_POST['source_utm']) !== "")) ? $_POST['source_utm'] : null;
 $medium_utm = (isset($_POST['medium_utm']) && (trim($_POST['medium_utm']) !== "")) ? $_POST['medium_utm'] : null;
