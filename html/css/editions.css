@@ -1,5 +1,6 @@
 .emms22__hero {
   background: #310e44;
+  padding: 75px 0px 175px;
 }
 
 .emms22__hero__content {
@@ -8,6 +9,38 @@
 }
 
 .emms22__hero__content h1 {
-  font-size: 3.8em;
+  font-size: 72px;
   font-weight: 700;
+  line-height: 79px;
+  margin: 0;
+  padding: 20px 0px 20px 0px;
+}
+
+.emms22__hero__content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 500px;
+}
+
+.emms22__hero__content__video {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  flex-wrap: wrap;
+}
+
+.emms22__hero__content__video__container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+@media screen and (min-width: 1260px) {
+  .emms22__hero__content__video {
+    max-width: 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
 }
