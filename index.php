@@ -51,7 +51,7 @@ echo "hola mundo";
 		<div>
 			<form id="earlyForm">
 				<input type="text" name="name" value="Matías">
-				<input type="text" name="lastname"  value="Rodriguez">
+				<input type="text" name="lastname" value="Rodriguez">
 				<input type="email" name="email" value="mroy+656@makingsense.com">
 				<!-- AGREGAR SELECTOR -->
 				<input type="text" name="country" value="Argentina">
@@ -65,6 +65,11 @@ echo "hola mundo";
 				<input type="text" name="company" value="Doppler">
 				<input type="checkbox" name="acceptPolicies">
 				<input type="checkbox" name="acceptPromotions">
+				<input type="hidden" id="utm_source" name="utm_source" value='<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : "" ?>' />
+				<input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
+				<input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
+				<input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
+				<input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
 				<button>Enviar</button>
 			</form>
 		</div>

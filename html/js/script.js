@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			'company': formData.get('company'),
 			'acceptPolicies': (formData.get('acceptPolicies') === 'on') ? true : null,
 			'acceptPromotions': (formData.get('acceptPromotions') === 'on') ? true : null,
+			'utm_source': formData.get('utm_source'),
+			'utm_campaign': formData.get('utm_campaign'),
+			'utm_content': formData.get('utm_content'),
+			'utm_term': formData.get('utm_term'),
+			'utm_medium': formData.get('utm_medium'),
+
 		};
 
 		fetch(endPointApi, {
