@@ -4,7 +4,7 @@ class Doppler {
     private static $apiKey;
     private static $account;
  
-    const urlBase = 'https://restapi.fromdoppler.com/accounts/';
+    private const urlBase = 'https://restapi.fromdoppler.com/accounts/';
 
     private static function executeCurl($url, $data, $headers, $method) {
         $ch = curl_init($url);
