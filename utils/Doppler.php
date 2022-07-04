@@ -29,6 +29,8 @@ class Doppler {
             array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])),
             array('name' => 'tel', 'Value' => $data['phone']),
             array('name' => 'pais', 'Value' => $data['country']),
+            array('name' => 'Industria', 'Value' => $data['industry']),
+            array('name' => 'Company', 'Value' => $data['company']),
             array('name' => 'IP', 'Value' => $data['ip']),
             array('name' => 'PaisIP', 'Value' => $data['country_ip']),
             array('name' => 'utmsource', 'Value' => $data['source_utm']),
