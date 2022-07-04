@@ -14,11 +14,11 @@ $ip = GeoIp::getIp();
 $countryGeo = GeoIp::getCountryName();
 
 $email = isset($_POST['email']) ? $_POST['email'] : null;
-$firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
+$firstname = isset($_POST['name']) ? $_POST['name'] : null;
 $lastname = isset($_POST['lastname']) ? $_POST['lastname']	: 'Parker';
 $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
-$privacy 	= isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies'] 	: null;
-$promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : null;
+$privacy 	= isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies'] 	: false;
+$promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : false;
 $country 	= isset($_POST['country']) ? $_POST['country'] : null;
 $industry 	= isset($_POST['industry']) ? $_POST['industry'] : null;
 $company 	= isset($_POST['company']) ? $_POST['company'] : null;

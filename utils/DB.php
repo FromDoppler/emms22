@@ -129,8 +129,8 @@ class DB {
 
 	public function insertSubscriptionDoppler($subscription) {
 
-		$fields = "(email, list, form_id, register, firstname, lastname, country, phone, ip, country_ip, industry , ";
-		$fields .= "company, privacy, promotions, source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
+		$fields = "(email, list, form_id, register, firstname, lastname, country, phone, industry , company, ";
+		$fields .= "ip, country_ip, privacy, promotions, source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
 		date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$values = array(
 			$subscription['email'],
