@@ -4,8 +4,11 @@
 }
 
 .emms22__hero__content {
+  display: flex;
   max-width: 50%;
   color: #ffffff;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .emms22__hero__content h1 {
@@ -24,23 +27,72 @@
 }
 
 .emms22__hero__content__video {
-  width: 100%;
-  padding-right: 12px;
-  padding-left: 12px;
-  flex-wrap: wrap;
+  display: flex;
+  max-width: 512px;
+}
+.emms22__hero__content__video__container {
+  align-self: center;
 }
 
 .emms22__hero__content__video__container video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  align-content: center;
 }
 
-@media screen and (min-width: 1260px) {
-  .emms22__hero__content__video {
-    max-width: 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-  }
+.emms22__editions__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emms22__editions__content {
+  text-align: center;
+  margin: auto;
+}
+.emms22__editions__content h2 {
+  font-size: 44px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.emms22__editions__content p {
+  font-size: 19px;
+  line-height: 28px;
+  color: #333333;
+  max-width: 800px;
+}
+
+.emms22__editions__first__card img,
+.emms22__editions__cards img {
+  width: 300px;
+  height: 200px;
+}
+.emms22__editions__first__card h4 {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.emms22__editions__first__card {
+  align-content: space-between;
+}
+
+.emms22__editions__cards__container {
+  display: flex;
+}
+
+.emms22__editions__content__cards {
+  justify-content: space-between;
+}
+
+.emms22__editions__cards {
+  max-width: 300px;
+}
+
+.emms22__editions__cards a,
+.emms22__editions__first__card a {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  color: #33ad73;
 }
