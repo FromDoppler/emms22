@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jul 01, 2022 at 05:03 PM
+-- Generation Time: Jul 04, 2022 at 07:18 PM
 -- Server version: 8.0.25
 -- PHP Version: 7.4.20
 
@@ -41,7 +41,7 @@ CREATE TABLE `google_oauth` (
 --
 
 INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
-(1, 'google', '{\"access_token\":\"ya29.A0ARrdaM9HtKFoP6Bj_U_ep1D9GQcokAz5scTic3VMtJKeY0HOBOrSTPWFCi-PNei_JLFItRWJrGt2aDg2spol9k9Imb-YMc3vBszzx1TqZXpcYjEgjaStFqzHpd6IGfBiShXoHnxDVCRlPmlDyI35vTOop7mUH8kYUNnWUtBVEFTQVRBU0ZRRl91NjFWNVBueXpkb2ZyUmpKYmhZUTFjTU9jZw0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
+(1, 'google', '{\"access_token\":\"ya29.A0ARrdaM-_3zxvCFGrNOoaC_1RAT9KOM9---ooEwBjyibGWnjLNL4ZsapH0qFW59j4kXT28LxRMEke7OqoWHHKINIOv2DQGC0TxoEitgGAjyscNLYTPVQ_fz1rBrZ25tTuiOSM8eVFvwCbZTL8L3qo8k6pW6X91KwYUNnWUtBVEFTQVRBU0ZRRl91NjFWZDkxck5odDAyb0FRV1dOQ2EtbjRtZw0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
 
 -- --------------------------------------------------------
 
@@ -60,6 +60,8 @@ CREATE TABLE `subscriptions_doppler` (
   `lastname` varchar(150) DEFAULT NULL,
   `phone` varchar(300) NOT NULL,
   `country` varchar(150) NOT NULL,
+  `industry` varchar(300) NOT NULL,
+  `company` varchar(300) NOT NULL,
   `ip` varchar(150) NOT NULL,
   `country_ip` varchar(150) NOT NULL,
   `privacy` tinyint(1) NOT NULL,
@@ -101,7 +103,7 @@ ALTER TABLE `google_oauth`
 -- AUTO_INCREMENT for table `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
