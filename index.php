@@ -1,5 +1,5 @@
 <?php
-echo "hola mundo";
+	require_once('config.php');
 ?>
 
 <!DOCTYPE html>
