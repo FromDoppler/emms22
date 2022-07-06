@@ -24,6 +24,10 @@
   display: inline-block;
 }
 
+.emms22__header__nav li:nth-child(2){
+    margin-left: 50px;
+}
+
 .emms22__header__nav li a {
   font-size: 14px;
   font-family: "Proxima-Nova-Bold";
@@ -38,3 +42,26 @@
   opacity: 1;
   transition-duration: 0.2s;
 }
+
+.emms22__header.emms22__header-scroll{
+    position: fixed;
+    background: #191919;
+    padding: 20px 0 10px 0;
+    animation: nav-scroll 0.5s;
+}
+
+@keyframes nav-scroll {
+    0%{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
