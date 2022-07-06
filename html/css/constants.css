@@ -74,6 +74,7 @@ a{
 
 .emms22__container--md {
     max-width: 990px;
+    margin: 0 auto;
     position: relative;
     width: 90%;
 }

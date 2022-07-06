@@ -7,7 +7,7 @@
     padding: 60px 0;
 }
 
-.emms22__container--lg{
+.emms22__header .emms22__container--lg{
     display: flex;
     justify-content: space-between;
 }
@@ -25,12 +25,15 @@
     display: inline-block;
 }
 
+.emms22__header__nav li:nth-child(2){
+    margin-left: 50px;
+}
+
 .emms22__header__nav li a{
     font-size: 14px;
     font-family: 'Proxima-Nova-Bold';
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-left: 50px;
     opacity: 0.6;
     transition-duration: .2s;
 }
@@ -38,4 +41,22 @@
 .emms22__header__nav li a:hover{
     opacity: 1;
     transition-duration: .2s;
+}
+
+.emms22__header.emms22__header-scroll{
+    position: fixed;
+    background: #191919;
+    padding: 20px 0 10px 0;
+    animation: nav-scroll 0.5s;
+}
+
+@keyframes nav-scroll {
+    0%{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

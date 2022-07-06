@@ -7,7 +7,6 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../css/styles.css">
-
    
 </head>
 <body>
@@ -15,11 +14,11 @@
 
         <!-- Header -->
         <nav class="emms22__header">
-            <div class="emms22__container--lg">
+            <div class="emms22__container--lg emms22__fade-in">
                 <div class="emms22__header__logo">
                     <a href=""><img src="../img/logo-emms.png" alt="Emms 2022"></a>
                 </div>
-                <div class="emms22__header__warning">
+                <div class="emms22__header__warning emms22__fade-top">
                     <a>¡ÚLTIMOS LUGARES DISPONIBLES! REGÍSTRATE GRATIS AHORA</a>
                 </div>
                 <ul class="emms22__header__nav">
@@ -32,11 +31,30 @@
         <!-- Hero -->
         <div class="emms22__hero">
             <div class="emms22__hero__back">
-                <img src="../img/back-hero.png" alt="back">
+               <!--  <img src="../img/back-hero.png" alt="back"> -->
+               <video src="../img/background-loop-compress.mp4" loop muted autoplay playsinline></video>
             </div>
             <div class="emms22__container--lg">
                 <div class="emms22__hero__intro">
-                    <div class="emms22__hero__intro__counter"></div>
+                    <ul class="emms22__hero__intro__counter">
+                        <li><p>FALTAN</p></li>
+                        <li class="emms22__hero__intro__counter__number">
+                            <div><span id="d"></span></div>
+                            <span class="emms22__hero__intro__counter__number--data">días</span>
+                        </li>
+                        <li class="emms22__hero__intro__counter__number">
+                            <div><span id="h"></span></div>
+                            <span class="emms22__hero__intro__counter__number--data">horas</span>
+                        </li>
+                        <li class="emms22__hero__intro__counter__number">
+                            <div><span id="m"></span></div>
+                            <span class="emms22__hero__intro__counter__number--data">minutos</span>
+                        </li>
+                        <li class="emms22__hero__intro__counter__number">
+                            <div><span id="s"></span></div>
+                            <span class="emms22__hero__intro__counter__number--data">segundos</span>
+                        </li>
+                    </ul>
                     <div class="emms22__hero__intro__info">
                         <p>EVENTO ONLINE Y GRATUITO - 18 Y 19 DE OCTUBRE</p>
                         <h1>¡Vuelve el EMMS!</h1>
@@ -45,10 +63,11 @@
                             <li>SPEAKERS INTERNACIONALES</li>
                             <li>CAPACITACIÓN E INSPIRACIÓN</li>
                         </ul>
+                        <span>EARLY BIRDS: Preinscripción hasta el 1° de agosto.</span>
                     </div>
                     <div class="emms22__hero__intro__share"></div>
                 </div>
-                <div class="emms22__hero__container-form">
+                <div class="emms22__hero__container-form parallax-form">
                     <form class="emms22__hero__form" id="form" action="success-reservation.php" method="post">
                         <ul class="emms22__hero__form__field-group">
                             <li class="emms22__hero__form__field-item" id="first-form-item">
@@ -278,7 +297,7 @@
                                     <input id="full-company-input" name="full-company-input" type="hidden" value="">
                             </li>
                         </ul>
-                        <ul class="dp-exclusive-features-list field-group">
+                        <ul class="emms22__hero__form__field-group">
                             <li class="emms22__hero__form__field-item emms22__hero__form__field-item__checkbox">
                                     <input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check"><span class="checkmark"></span><label for="acepto-politicas">
                                         Acepto la Política de Privacidad de Doppler *
@@ -289,14 +308,10 @@
                                     Acepto recibir promociones de Doppler y sus aliados</label>
                             </li>
                         </ul>
-
-                        <div class="">
-                            <div>
-                                <button type="button" class="dp-button button-big" id="register-button">
-                                    <span class="button-text"> REGISTRARME </span>
-                                </button>
+                            <div class="emms22__hero__btn">
+                                <button type="button" class="emms22__button emms22__fade-in" id="register-button">REGISTRARME</button>
                             </div>
-                            <div class="legal-form-container">
+                            <div class="emms22__hero__legal">
                                 <p>Doppler te informa que los datos de carácter personal que nos proporciones al rellenar el presente formulario serán tratados por Doppler LLC como responsable de esta Web.<br>
                                     <strong>Finalidad: </strong>Dar de alta esta suscripción para enviar newsletters con información y promociones de productos o servicios propios o de nuestros aliados.<br>
                                     <strong>Legitimación: </strong>Consentimiento del interesado. <br>
@@ -308,12 +323,60 @@
                                     transfronterizas y otros temas. <br>
                                 </p>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
         </div>
 
+        <!-- Numbers -->
+
+        <div class="emms22__numbers">
+            <div class="emms22__container--lg">
+                <span class="parallax-waves"></span>
+                <h2 class="emms22__fade-in">El evento más importante de Marketing Digital</h2>
+                <ul>
+                    <li class="emms22__numbers__counter-text-content emms22__fade-in">
+                        <p class="emms22__numbers__counter-text" data-number="200000"></p>
+                        <span>Inscritos</span>
+                    </li>
+                    <li class="emms22__fade-in">
+                        <p class="emms22__numbers__counter-text" data-number="14"></p>
+                        <span>Ediciones</span>
+                    </li>
+                    <li class="emms22__fade-in">
+                        <p class="emms22__numbers__counter-text" data-number="10"></p>
+                        <span>Países</span>
+                    </li>
+                    <li class="emms22__fade-in">
+                        <p class="emms22__numbers__counter-text" data-number="150"></p>
+                        <span>Speakers</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Description -->
+
+        <div class="emms22__back-purple">
+
+            <div class="emms22__description">
+                <div class="emms22__container--lg">
+                    <div class="emms22__description__text emms22__fade-in">
+                        <h2>Llega una nueva edición del evento más esperado por la comunidad del Marketing.</h2>
+                        <p>Una oportunidad para descubrir las últimas tendencias y estrategias que implementan los líderes del mundo para hacer crecer sus negocios.</p>
+                        <p><strong>Inspírate y capacítate desde la comodidad de tu casa.</strong> Súmate ahora al evento que te acercará a los mayores expertos en Marketing Digital.</p>
+                        <button type="button" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</button>
+                    </div>
+                    <div class="emms22__description__video emms22__fade-in">
+                        <video src="../img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </main>
+
+    <script src="../js/home.js"></script>
 </body>
 </html>

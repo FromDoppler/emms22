@@ -1,4 +1,47 @@
 
+
+.emms22__fade-in{
+    opacity: 0;
+}
+
+.emms22__fade-in-animation{
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.emms22__fade-top{
+    opacity: 0;
+}
+
+.emms22__fade-top-animation{
+    opacity: 0;
+    animation: fade-top 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-top{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
 /* Header */
 
 .emms22__header{
@@ -11,12 +54,29 @@
 
 .emms22__header__warning{
     text-align: center;
+    animation-delay: 1.2s;
 }
 
 .emms22__header__warning a{
     font-size: 19px;
     font-weight: 800;
     color: #FF4FB6;
+    opacity: 1;
+    animation: warning 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes warning{
+    0%{
+        opacity: 1;
+        color: #FF4FB6;
+    }
+    50%{
+        opacity: 1;
+        color: #f9b121;
+    }
 }
 
 
@@ -25,6 +85,15 @@
 .emms22__hero{
     position: relative;
     padding-top: 156px;
+}
+
+.emms22__hero .emms22__container--lg{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fade-top 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
 }
 
 .emms22__hero__back{
@@ -42,8 +111,11 @@
     object-fit: cover;
 }
 
-.emms22__container--lg{
-    display: flex;
+.emms22__hero__back video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .emms22__hero__intro{
@@ -57,6 +129,10 @@
     font-weight: 700;
     color: #FFFFFF;
     margin: 0 0 24px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
 }
 
 .emms22__hero__intro__info h1{
@@ -66,6 +142,63 @@
     font-weight: 700;
     color: #FFFFFF;
     margin: 0 0 45px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+
+.emms22__hero__intro__counter{
+    padding: 60px 0 20px 0;
+    margin: 0 0 50px 0;
+}
+
+.emms22__hero__intro__counter li{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    color: #fff;
+    margin-right: 25px;
+}
+
+.emms22__hero__intro__counter li p{
+    font-size: 13px;
+    margin: 0;
+}
+
+.emms22__hero__intro__counter li div{
+    width: 58px;
+    height: 60px;
+    background: #474747;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.emms22__hero__intro__counter li div span{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    line-height: 60px;
+    z-index: 1;
+    position: relative;
+}
+
+.emms22__hero__intro__counter li div::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: #191919;
+}
+
+.emms22__hero__intro__counter li .emms22__hero__intro__counter__number--data{
+    font-size: 13px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .emms22__hero__intro__info ul li{
@@ -73,6 +206,45 @@
     line-height: 28px;
     font-weight: 400;
     color: #FFFFFF;
+    position: relative;
+    padding: 0 0 0 36px;
+    margin: 0 0 31px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+.emms22__hero__intro__info ul li:nth-child(1){
+    animation-delay: 0.8s;
+}
+.emms22__hero__intro__info ul li:nth-child(2){
+    animation-delay: 0.9s;
+}
+.emms22__hero__intro__info ul li:nth-child(3){
+    animation-delay: 1s;
+}
+
+.emms22__hero__intro__info ul li::before{
+    content: url("../img/check-w.svg");
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background: #BD7AFF;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2px;
+}
+
+.emms22__hero__intro__info span{
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    margin: 48px 0 0 0;
+    animation-delay: 1.1s;
 }
 
 .emms22__hero__container-form{
@@ -83,6 +255,7 @@
     padding: 48px 36px;
     box-sizing: border-box;
     color: #fff;
+    margin: 0 0 -118px 0;
 }
 
 .emms22__hero__form__field-item{
@@ -113,3 +286,240 @@
     border: solid 2px #FAB221;
 }
 
+.emms22__hero__form__field-group{
+    margin: 0 0 37px 0;
+}
+
+.emms22__hero__form__field-group li{
+    margin: 0px 0px 20px 0px; 
+}
+
+.emms22__hero__form__field-item__checkbox{
+    position: relative;
+}
+
+.emms22__hero__form__field-item__checkbox input[type=checkbox]{
+    cursor: pointer;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+}
+
+.emms22__hero__form__field-item__checkbox .checkmark{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #5e3e94;
+    pointer-events: none;
+}
+
+.emms22__hero__form__field-item__checkbox .checkmark::after{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #5e3e94;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.emms22__hero__form__field-item__checkbox input[type=checkbox]:checked~.checkmark{
+    border-color: #33ad73;
+    background-color: #33ad73;
+}
+
+.emms22__hero__form__field-item__checkbox input[type=checkbox]:checked~.checkmark::after{
+    display: block;
+    border-color: #fff;
+}
+
+.emms22__hero__form__field-item__checkbox label{
+    font-family: 'Proxima-Nova';
+    font-size: 10px;
+    margin: 0 0 0 29px;
+    cursor: pointer;
+}
+
+.emms22__hero__btn{
+    margin: 38px 0 0 0;
+}
+
+.emms22__hero__btn .emms22__button{
+    height: 51px;
+    color: #fff;
+    box-shadow: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+.emms22__hero__legal {
+    margin: 34px 0 0 0;
+}
+
+.emms22__hero__legal p{
+    font-family: 'Proxima-Nova';
+    font-size: 10px;
+    line-height: 17px;
+    margin: 0;
+}
+
+.emms22__hero__legal p strong{
+    font-family: 'Proxima-Nova-Bold';
+    font-weight: 400;
+}
+
+.emms22__hero__legal p a{
+    font-family: 'Proxima-Nova-Bold';
+    font-weight: 400;
+    color: #33AD73;
+}
+
+.emms22__hero__legal p a:hover{
+    text-decoration: underline;
+}
+
+
+/* Numbers */
+
+.emms22__numbers{
+    padding: 172px 0 117px 0;
+}
+
+.emms22__numbers .emms22__container--lg{
+    position: relative;
+}
+
+.emms22__numbers .emms22__container--lg .parallax-waves{
+    position: absolute;
+    top: 70%;
+    left: -4%;
+    width: 42px;
+    height: 430px;
+    background: url(../img/back-waves.svg) no-repeat;
+    background-size: contain;
+}
+
+.emms22__numbers h2{
+    font-family: 'Proxima-Nova-Bold';
+    font-size: 27px;
+    text-align: center;
+    color: #333333;
+    margin: 0 0 75px 0;
+}
+
+.emms22__numbers ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.emms22__numbers ul li{
+    width: 260px;
+    text-align: center;
+    position: relative;
+}
+
+.emms22__numbers ul li:nth-child(1){
+    animation-delay: 0.4s;
+}
+.emms22__numbers ul li:nth-child(2){
+    animation-delay: 0.5s;
+}
+.emms22__numbers ul li:nth-child(3){
+    animation-delay: 0.6s;
+}
+.emms22__numbers ul li:nth-child(4){
+    animation-delay: 0.7s;
+}
+
+.emms22__numbers ul li::after{
+    content: "";
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 21px;
+    height: 17px;
+    background: url(../img/icon-triangle.svg) no-repeat;
+    background-size: contain;
+}
+
+.emms22__numbers ul li p{
+    font-family: 'Proxima-Nova-Bold';
+    font-size: 70px;
+    color: #333333;
+    margin: 0;
+}
+
+.emms22__numbers ul li span{
+    font-size: 16px;
+    color: #333333;
+}
+
+/* Description */
+
+.emms22__back-purple{
+    background: url(../img/back-purple.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.emms22__description{
+    padding: 145px 0;
+}
+
+.emms22__description .emms22__container--lg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emms22__description .emms22__description__text{
+    width: 40%;
+    animation-delay: 0.1s;
+}
+
+.emms22__description .emms22__description__text h2{
+    font-family: 'Proxima-Nova-Bold';
+    font-size: 33px;
+    line-height: 37px;
+    color: #fff;
+    margin: 0 0 30px 0;
+}
+
+.emms22__description .emms22__description__text p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 0 30px 0;
+}
+
+.emms22__description .emms22__description__text p strong{
+    font-family: 'Proxima-Nova-Bold';
+}
+
+.emms22__description .emms22__description__text .emms22__button{
+    color: #fff;
+    box-shadow: none;
+    margin: 20px 0 0 0;
+    height: 51px;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+.emms22__description .emms22__description__video{
+    width: 52%;
+    animation-delay: 0.2s;
+}
+
+.emms22__description .emms22__description__video video{
+    width: 100%;
+}
