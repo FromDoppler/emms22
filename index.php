@@ -65,7 +65,6 @@ echo "hola mundo";
 				<li><a href="">ediciones anteriores</a></li>
 			</ul>
 		</nav>
-<<<<<<< Updated upstream
 		<div>
 			<form id="earlyForm">
 				<input type="text" name="name" value="Matías">
@@ -91,9 +90,6 @@ echo "hola mundo";
 				<button>Enviar</button>
 			</form>
 		</div>
-=======
-
->>>>>>> Stashed changes
 	</main>
 </body>
 
