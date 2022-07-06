@@ -4,8 +4,9 @@ echo "hola mundo";
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>EMMS 2021: Conferencias online de Marketing Digital.</title>
@@ -29,22 +30,43 @@ echo "hola mundo";
 	<meta property="og:image:height" content="630" />
 	<link rel="canonical" href="https://goemms.com/" />
 
-    <link rel="stylesheet" href="html/css/styles.css">
+	<link rel="stylesheet" href="html/css/styles.css">
+
+	<?php if (PRODUCTION) { ?>
+		<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
+		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97"></script>
+		<script type="text/javascript">
+			function OptanonWrapper() {}
+		</script>
+		<!-- El aviso de consentimiento de cookies de OneTrust finaliza para goemms.com. -->
+	<?php
+	} else { ?>
+		<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
+		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97-test"></script>
+		<script type="text/javascript">
+			function OptanonWrapper() {}
+		</script>
+		<!-- El aviso de consentimiento de cookies de OneTrust finaliza para goemms.com. -->
+
+	<?php } ?>
+
 </head>
+
 <body>
-    <main class="emms22__home">
+	<main class="emms22__home">
 
-        <!-- Nav -->
-        <nav class="emms22__nav">
-            <div class="emms22__nav__logo">
-                <img src="" alt="">
-            </div>
-            <ul class="emms22__nav__menu">
-                <li><a href="">inicio</a></li>
-                <li><a href="">ediciones anteriores</a></li>
-            </ul>
-        </nav>
+		<!-- Nav -->
+		<nav class="emms22__nav">
+			<div class="emms22__nav__logo">
+				<img src="" alt="">
+			</div>
+			<ul class="emms22__nav__menu">
+				<li><a href="">inicio</a></li>
+				<li><a href="">ediciones anteriores</a></li>
+			</ul>
+		</nav>
 
-    </main>
+	</main>
 </body>
+
 </html>
