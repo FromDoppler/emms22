@@ -8,11 +8,10 @@ require_once('../utils/DB.php');
 require_once('../utils/SpreadSheetGoogle.php');
 require_once('../utils/Relay.php');
 require_once('../config.php');
-$_POST = json_decode(file_get_contents('php://input'), true);
 
 $ip = GeoIp::getIp();
 $countryGeo = GeoIp::getCountryName();
-
+$_POST = json_decode(file_get_contents('php://input'), true);
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $firstname = isset($_POST['name']) ? $_POST['name'] : null;
 $lastname = isset($_POST['lastname']) ? $_POST['lastname']	: 'Parker';
@@ -36,8 +35,11 @@ catch (Exception $e) {
     ErrorLog::log($e->getMessage());
     exit('submits');
 }
+
 try {
+    date_default_timezone_set('America/Argentina/Buenos_Aires');
     $user = array(
+        'register' => date("Y-m-d h:i:s A"),
         'firstname' => Validator::validateRequired('firstname', $firstname),
         'lastname' => Validator::validateRequired('lastname', $lastname),
         'email' => Validator::validateEmail($email),
@@ -73,13 +75,14 @@ catch (Exception $e) {
 try {    
     $db = new DB($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
     $db->insertSubscriptionDoppler($user);
-   
+    $db->saveRegistered($user);
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
 }
+
 try {    
-    SpreadSheetGoogle::write($ID_SPREADSHEET, $user);
+    SpreadSheetGoogle::write($ID_SPREADSHEET, $user, $db);
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
@@ -88,7 +91,13 @@ catch (Exception $e) {
 try {    
     Relay::init($ACCOUNT_RELAY, $API_KEY_RELAY);
     Relay::sendEmailRegister($user['email'], 'Registrado con exito!', 'landing');
-   
+}
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+}  
+
+try {    
+    $db->close();
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());

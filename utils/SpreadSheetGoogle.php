@@ -3,7 +3,7 @@ require_once 'spread/write.php';
 
 class SpreadSheetGoogle {
 
-    public static function write($idSpreadSheet, $user) {
+    public static function write($idSpreadSheet, $user, $db) {
         date_default_timezone_set('America/Argentina/Buenos_Aires');
         $range = 'A1:P1';
         $values = array( array(
@@ -24,6 +24,6 @@ class SpreadSheetGoogle {
             $user['content_utm'] . " ",
             $user['term_utm'] . " "
         ));
-        write_to_sheet($idSpreadSheet, $range, $values);
+        write_to_sheet($idSpreadSheet, $range, $values, $db);
     } 
 }

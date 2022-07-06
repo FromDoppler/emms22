@@ -10,6 +10,7 @@ class DB {
 	public function __construct($dbhost, $dbuser, $dbpass, $dbname, $charset = 'utf8') {
 		$this->connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 		if ($this->connection->connect_error) {
+			echo "dbhost $dbhost";
 			$this->error('Failed to connect to MySQL - ' . $this->connection->connect_error);
 		}
 		$this->connection->set_charset($charset);
@@ -154,8 +155,70 @@ class DB {
 			$subscription['term_utm']
 		);
 		$this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
-		$this->close();
 	}
 
+	public function saveRegistered($subscription) {
+
+		$registered = $this->query("SELECT id FROM registered WHERE email='" . $subscription['email'] . "'");
+    	if ($registered->fetchArray()) {
+			//update
+			$fields = "firstname ='" . $subscription['firstname'] . "', lastname ='" . $subscription['lastname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', ";
+			$fields .= "country ='" . $subscription['country'] . "', phone ='" . $subscription['phone'] . "', company ='" . $subscription['company'] . "', industry ='" . $subscription['industry'] . "', ";
+			$fields .= "source_utm ='" . $subscription['source_utm'] . "', medium_utm ='" . $subscription['medium_utm'] . "', campaign_utm ='" . $subscription['campaign_utm'] . "', ";
+			$fields .= "content_utm ='" . $subscription['content_utm'] . "', term_utm ='" . $subscription['term_utm'] . "' ";
+			$update = $this->query("UPDATE registered SET $fields WHERE email='" . $subscription['email'] . "'");
+		}
+		else {
+			//insert
+			$fields = "(email, phase, register, firstname, lastname, country, phone, industry , company, ";
+			$fields .= "source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
+		
+			$values = array(
+				$subscription['email'],
+				$subscription['form_id'],
+				$subscription['register'],
+				$subscription['firstname'],
+				$subscription['lastname'],
+				$subscription['country'],
+				$subscription['phone'],
+				$subscription['industry'],
+				$subscription['company'],
+				$subscription['source_utm'],
+				$subscription['medium_utm'],
+				$subscription['campaign_utm'],
+				$subscription['content_utm'],
+				$subscription['term_utm']
+			);
+			$this->query("INSERT INTO registered $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+		}	
+	}
+
+	
+    public function google_oauth_is_table_empty() {
+        $result = $this->query("SELECT id FROM google_oauth WHERE provider = 'google'");
+        if ($result->num_rows) {
+            return false;
+        }
+        return true;
+    }
+
+    public function google_oauth_get_access_token() {
+        $sql = $this->query("SELECT provider_value FROM google_oauth WHERE provider = 'google'");
+        $result = $sql->fetchArray();
+        return json_decode($result['provider_value']);
+    }
+
+    public function google_oauth_get_refersh_token() {
+        $result = $this->google_oauth_get_access_token();
+        return $result->refresh_token;
+    }
+
+    public function google_oauth_update_access_token($token) {
+        if ($this->google_oauth_is_table_empty()) {
+            $this->query("INSERT INTO google_oauth(provider, provider_value) VALUES('google', '$token')");
+        } else {
+            $this->query("UPDATE google_oauth SET provider_value = '$token' WHERE provider = 'google'");
+        }
+    }
 }
 ?>
