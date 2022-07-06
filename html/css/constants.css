@@ -64,16 +64,17 @@ a {
 }
 
 .emms22__container--lg {
+  display: flex;
   max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+  margin: auto;
   width: 90%;
+  flex-flow: row wrap;
 }
 
 .emms22__container--md {
+  display: flex;
   max-width: 990px;
-  margin: 0 auto;
-  position: relative;
+  margin: auto;
   width: 90%;
 }
 
