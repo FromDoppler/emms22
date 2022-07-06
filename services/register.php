@@ -6,28 +6,40 @@ require_once('../utils/Validator.php');
 require_once('../utils/ErrorLog.php');
 require_once('../utils/DB.php');
 require_once('../utils/SpreadSheetGoogle.php');
+require_once('../utils/Relay.php');
 require_once('../config.php');
 
 $ip = GeoIp::getIp();
 $countryGeo = GeoIp::getCountryName();
-$email = isset($_POST['email']) ? $_POST['email'] : 'hcardoso6+20220701@makingsense.com';
-$firstname = isset($_POST['firstname']) ? $_POST['firstname'] : 'Peter';
+$_POST = json_decode(file_get_contents('php://input'), true);
+$email = isset($_POST['email']) ? $_POST['email'] : null;
+$firstname = isset($_POST['name']) ? $_POST['name'] : null;
 $lastname = isset($_POST['lastname']) ? $_POST['lastname']	: 'Parker';
-$phone = isset($_POST['phone']) ? $_POST['phone'] : '+542494619633';
-$privacy 	= isset($_POST['privacy']) ? $_POST['privacy'] 	: true;
-$promotions = isset($_POST['promotions']) ? $_POST['promotions'] : true;
-$country 	= isset($_POST['country']) ? $_POST['country'] : 'Arg';
-$source_utm = (isset($_POST['source_utm']) && (trim($_POST['source_utm']) !== "")) ? $_POST['source_utm'] : null;
-$medium_utm = (isset($_POST['medium_utm']) && (trim($_POST['medium_utm']) !== "")) ? $_POST['medium_utm'] : null;
-$campaign_utm = (isset($_POST['campaign_utm']) && (trim($_POST['campaign_utm']) !== "")) ? $_POST['campaign_utm']	: null;
-$content_utm = (isset($_POST['content_utm']) && (trim($_POST['content_utm']) !== "")) ? $_POST['content_utm'] : null;
-$term_utm = (isset($_POST['term_utm']) && (trim($_POST['term_utm']) !== "")) ? $_POST['term_utm'] : null;
+$phone = isset($_POST['phone']) ? $_POST['phone'] : null;
+$privacy 	= isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies'] 	: false;
+$promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : false;
+$country 	= isset($_POST['country']) ? $_POST['country'] : null;
+$industry 	= isset($_POST['industry']) ? $_POST['industry'] : null;
+$company 	= isset($_POST['company']) ? $_POST['company'] : null;
+$source_utm = isset($_POST['source_utm']) ? $_POST['source_utm'] : null;
+$medium_utm = isset($_POST['medium_utm']) ? $_POST['medium_utm'] : null;
+$campaign_utm = isset($_POST['campaign_utm']) ? $_POST['campaign_utm']	: null;
+$content_utm = isset($_POST['content_utm']) ? $_POST['content_utm'] : null;
+$term_utm = isset($_POST['term_utm']) ? $_POST['term_utm'] : null;
 
-SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
-Doppler::init($ACCOUNT_DOPPLER, $API_KEY_DOPPLER);
 try {
+    SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
+    SecurityHelper::isSubmitValid($ALLOW_IPS);
+}    
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+    exit('submits');
+}
 
+try {
+    date_default_timezone_set('America/Argentina/Buenos_Aires');
     $user = array(
+        'register' => date("Y-m-d h:i:s A"),
         'firstname' => Validator::validateRequired('firstname', $firstname),
         'lastname' => Validator::validateRequired('lastname', $lastname),
         'email' => Validator::validateEmail($email),
@@ -35,6 +47,8 @@ try {
         'promotions' => Validator::validateBool('promotions', $promotions),
         'phone' => Validator::validateRequired('phone', $phone),
         'country' =>  Validator::validateRequired('country', $country),
+        'industry' =>  Validator::validateRequired('industry', $industry),
+        'company' =>  Validator::validateRequired('company', $company),
         'ip' => $ip,
         'country_ip' => $countryGeo,
         'source_utm' => $source_utm,
@@ -45,14 +59,46 @@ try {
         'form_id' => 'landing',
         'list' => LIST_LANDING,
     );
-    SecurityHelper::isSubmitValid($ALLOW_IPS);
+}    
+ catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+}
+
+try {
+    Doppler::init($ACCOUNT_DOPPLER, $API_KEY_DOPPLER);
     Doppler::subscriber($user);
+}    
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+}
+
+try {    
     $db = new DB($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
     $db->insertSubscriptionDoppler($user);
-    SpreadSheetGoogle::write($ID_SPREADSHEET, $user, 'A1:N1');
-   
+    $db->saveRegistered($user);
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
-    print_r($e->getMessage());
-} 
+}
+
+try {    
+    SpreadSheetGoogle::write($ID_SPREADSHEET, $user, $db);
+}
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+}
+
+try {    
+    Relay::init($ACCOUNT_RELAY, $API_KEY_RELAY);
+    Relay::sendEmailRegister($user['email'], 'Registrado con exito!', 'landing');
+}
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+}  
+
+try {    
+    $db->close();
+}
+catch (Exception $e) {
+    ErrorLog::log($e->getMessage());
+}  

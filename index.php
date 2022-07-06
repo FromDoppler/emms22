@@ -1,11 +1,12 @@
 <?php
-echo "hola mundo";
+require_once('config.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>EMMS 2021: Conferencias online de Marketing Digital.</title>
@@ -29,22 +30,59 @@ echo "hola mundo";
 	<meta property="og:image:height" content="630" />
 	<link rel="canonical" href="https://goemms.com/" />
 
-    <link rel="stylesheet" href="html/css/styles.css">
+	<link rel="stylesheet" href="html/css/styles.css">
+	<script type="text/javascript" src="./html/js/script.js"></script>
+	
+	<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
+	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97<?= (PRODUCTION) ? '' : '-test' ?>"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() {}
+	</script>
+	<!-- El aviso de consentimiento de cookies de OneTrust finaliza para goemms.com. -->
+
+
+
 </head>
+
 <body>
-    <main class="emms22__home">
+	<main class="emms22__home">
 
-        <!-- Nav -->
-        <nav class="emms22__nav">
-            <div class="emms22__nav__logo">
-                <img src="" alt="">
-            </div>
-            <ul class="emms22__nav__menu">
-                <li><a href="">inicio</a></li>
-                <li><a href="">ediciones anteriores</a></li>
-            </ul>
-        </nav>
-
-    </main>
+		<!-- Nav -->
+		<nav class="emms22__nav">
+			<div class="emms22__nav__logo">
+				<img src="" alt="">
+			</div>
+			<ul class="emms22__nav__menu">
+				<li><a href="">inicio</a></li>
+				<li><a href="">ediciones anteriores</a></li>
+			</ul>
+		</nav>
+		<div>
+			<form id="earlyForm">
+				<input type="text" name="name" value="Matías">
+				<input type="text" name="lastname" value="Rodriguez">
+				<input type="email" name="email" value="mroy+656@makingsense.com">
+				<!-- AGREGAR SELECTOR -->
+				<input type="text" name="country" value="Argentina">
+				<!--  -->
+				<!-- AGREGAR PHONE -->
+				<input type="text" name="phone" value="+542983417387">
+				<!--  -->
+				<!-- SELECTOR -->
+				<input type="text" name="industry" value="IT">
+				<!--  -->
+				<input type="text" name="company" value="Doppler">
+				<input type="checkbox" name="acceptPolicies">
+				<input type="checkbox" name="acceptPromotions">
+				<input type="hidden" id="utm_source" name="utm_source" value='<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : "" ?>' />
+				<input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
+				<input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
+				<input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
+				<input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
+				<button>Enviar</button>
+			</form>
+		</div>
+	</main>
 </body>
+
 </html>

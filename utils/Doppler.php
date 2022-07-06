@@ -4,7 +4,7 @@ class Doppler {
     private static $apiKey;
     private static $account;
  
-    const urlBase = 'https://restapi.fromdoppler.com/accounts/';
+    private const urlBase = 'https://restapi.fromdoppler.com/accounts/';
 
     private static function executeCurl($url, $data, $headers, $method) {
         $ch = curl_init($url);
@@ -29,6 +29,8 @@ class Doppler {
             array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])),
             array('name' => 'tel', 'Value' => $data['phone']),
             array('name' => 'pais', 'Value' => $data['country']),
+            array('name' => 'Industria', 'Value' => $data['industry']),
+            array('name' => 'Company', 'Value' => $data['company']),
             array('name' => 'IP', 'Value' => $data['ip']),
             array('name' => 'PaisIP', 'Value' => $data['country_ip']),
             array('name' => 'utmsource', 'Value' => $data['source_utm']),

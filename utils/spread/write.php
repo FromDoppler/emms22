@@ -1,15 +1,10 @@
 <?php
 
 
-function write_to_sheet($spreadsheetId, $range, $values)
-{
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/config.php");
-    require_once ('class-db.php');
+function write_to_sheet($spreadsheetId, $range, $values, $db) {
+    
     require_once ('config.php');
-
-    $db = new DBSpread($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
-
-    $arr_token = (array) $db->get_access_token();
+    $arr_token = (array) $db->google_oauth_get_access_token();
     $accessToken = array(
         'access_token' => $arr_token['access_token'],
         'expires_in' => $arr_token['expires_in'],
@@ -30,7 +25,7 @@ function write_to_sheet($spreadsheetId, $range, $values)
         $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
     } catch (Exception $e) {
         if (401 == $e->getCode()) {
-            $refresh_token = $db->get_refersh_token();
+            $refresh_token = $db->google_oauth_get_refersh_token();
             $client = new GuzzleHttp\Client(['base_uri' => 'https://accounts.google.com']);
             $response = $client->request('POST', '/o/oauth2/token', [
                 'form_params' => [
@@ -43,8 +38,8 @@ function write_to_sheet($spreadsheetId, $range, $values)
 
             $data = (array) json_decode($response->getBody());
             $data['refresh_token'] = $refresh_token;
-            $db->update_access_token(json_encode($data));
-            write_to_sheet($spreadsheetId, $range, $values);
+            $db->google_oauth_update_access_token(json_encode($data));
+            write_to_sheet($spreadsheetId, $range, $values, $db);
         } else {
             echo $e->getMessage(); //print the error just in case your data is not added.
         }
