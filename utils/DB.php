@@ -155,7 +155,42 @@ class DB {
 			$subscription['term_utm']
 		);
 		$this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
-		//$this->close();
+	}
+
+	public function saveRegistered($subscription) {
+
+		$registered = $this->query("SELECT id FROM registered WHERE email='" . $subscription['email'] . "'");
+    	if ($registered->fetchArray()) {
+			//update
+			$fields = "firstname ='" . $subscription['firstname'] . "', lastname ='" . $subscription['lastname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', ";
+			$fields .= "country ='" . $subscription['country'] . "', phone ='" . $subscription['phone'] . "', company ='" . $subscription['company'] . "', industry ='" . $subscription['industry'] . "', ";
+			$fields .= "source_utm ='" . $subscription['source_utm'] . "', medium_utm ='" . $subscription['medium_utm'] . "', campaign_utm ='" . $subscription['campaign_utm'] . "', ";
+			$fields .= "content_utm ='" . $subscription['content_utm'] . "', term_utm ='" . $subscription['term_utm'] . "' ";
+			$update = $this->query("UPDATE registered SET $fields WHERE email='" . $subscription['email'] . "'");
+		}
+		else {
+			//insert
+			$fields = "(email, phase, register, firstname, lastname, country, phone, industry , company, ";
+			$fields .= "source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
+		
+			$values = array(
+				$subscription['email'],
+				$subscription['form_id'],
+				$subscription['register'],
+				$subscription['firstname'],
+				$subscription['lastname'],
+				$subscription['country'],
+				$subscription['phone'],
+				$subscription['industry'],
+				$subscription['company'],
+				$subscription['source_utm'],
+				$subscription['medium_utm'],
+				$subscription['campaign_utm'],
+				$subscription['content_utm'],
+				$subscription['term_utm']
+			);
+			$this->query("INSERT INTO registered $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+		}	
 	}
 
 	

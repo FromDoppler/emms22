@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jul 04, 2022 at 07:18 PM
+-- Generation Time: Jul 06, 2022 at 07:32 PM
 -- Server version: 8.0.25
 -- PHP Version: 7.4.20
 
@@ -41,7 +41,34 @@ CREATE TABLE `google_oauth` (
 --
 
 INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
-(1, 'google', '{\"access_token\":\"ya29.A0ARrdaM-_3zxvCFGrNOoaC_1RAT9KOM9---ooEwBjyibGWnjLNL4ZsapH0qFW59j4kXT28LxRMEke7OqoWHHKINIOv2DQGC0TxoEitgGAjyscNLYTPVQ_fz1rBrZ25tTuiOSM8eVFvwCbZTL8L3qo8k6pW6X91KwYUNnWUtBVEFTQVRBU0ZRRl91NjFWZDkxck5odDAyb0FRV1dOQ2EtbjRtZw0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
+(1, 'google', '{\"access_token\":\"ya29.a0ARrdaM9AC4n4pInjdavF0d7NU1ECN5wydyvFhZCCnQhteMz4QtaXw50e-Ov59P-ZG7N5yLTN5wtDqL4dR9mml0Ys7id2KCqXRtdGeFO9dkQoexqdBXAfAJDTYM-tSz5txThYIwsQHtRDgls4XQl-z_4s_UWWHuo\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(2, 'google', '{\"access_token\":\"ya29.a0ARrdaM-1ARzDnJJRW2lj8Zyt9zx2p-LZASkTxeU2dN0dkilAUS5YUDYS7A4aoD44cZIUvD-3CDOFnK_GJT2s_vQi7ihU2kv4b3ghBbMQnVrnQJ8xTp4zMpu6hPrm1oZc86ON3snpcXPly-i_OZQizYSNsbVQRBo\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(3, 'google', '{\"access_token\":\"ya29.A0ARrdaM_s5Ev99a9g6A6nizjISUW2MLxTPJ6irjPLMnJd99-dYs5kqvw5mGVZxrP4YGbreu5yxUcYyZOXWshs0zTBLMboNM6cnlyuC39NzobSrX8FoGRv90HzbSpjktWzN4jmFa9LBPkL_RG8sIhlGqg-lZnREVwYUNnWUtBVEFTQVRBU0ZRRl91NjFWZVZmTGF3ck1MWkhmdHY3WWJ0UVgwUQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registered`
+--
+
+DROP TABLE IF EXISTS `registered`;
+CREATE TABLE `registered` (
+  `id` bigint NOT NULL,
+  `register` varchar(50) NOT NULL,
+  `phase` varchar(150) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `firstname` varchar(150) NOT NULL,
+  `lastname` varchar(150) NOT NULL,
+  `country` varchar(150) NOT NULL,
+  `phone` varchar(300) NOT NULL,
+  `industry` varchar(300) NOT NULL,
+  `company` varchar(300) NOT NULL,
+  `source_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `medium_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `campaign_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `content_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `term_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -84,6 +111,12 @@ ALTER TABLE `google_oauth`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `registered`
+--
+ALTER TABLE `registered`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
@@ -97,13 +130,19 @@ ALTER TABLE `subscriptions_doppler`
 -- AUTO_INCREMENT for table `google_oauth`
 --
 ALTER TABLE `google_oauth`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `registered`
+--
+ALTER TABLE `registered`
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
