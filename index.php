@@ -31,7 +31,24 @@ echo "hola mundo";
 	<link rel="canonical" href="https://goemms.com/" />
 
 	<link rel="stylesheet" href="html/css/styles.css">
-	<script type="text/javascript" src="./html/js/script.js"></script>
+
+	<?php if (PRODUCTION) { ?>
+		<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
+		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97"></script>
+		<script type="text/javascript">
+			function OptanonWrapper() {}
+		</script>
+		<!-- El aviso de consentimiento de cookies de OneTrust finaliza para goemms.com. -->
+	<?php
+	} else { ?>
+		<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
+		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97-test"></script>
+		<script type="text/javascript">
+			function OptanonWrapper() {}
+		</script>
+		<!-- El aviso de consentimiento de cookies de OneTrust finaliza para goemms.com. -->
+
+	<?php } ?>
 
 </head>
 
@@ -48,6 +65,7 @@ echo "hola mundo";
 				<li><a href="">ediciones anteriores</a></li>
 			</ul>
 		</nav>
+<<<<<<< Updated upstream
 		<div>
 			<form id="earlyForm">
 				<input type="text" name="name" value="Matías">
@@ -73,6 +91,9 @@ echo "hola mundo";
 				<button>Enviar</button>
 			</form>
 		</div>
+=======
+
+>>>>>>> Stashed changes
 	</main>
 </body>
 
