@@ -1,3 +1,3 @@
 logs/*
 .docker/.env
-.docker/db/*
+.docker/db/data/*

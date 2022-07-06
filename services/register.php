@@ -79,7 +79,7 @@ catch (Exception $e) {
     ErrorLog::log($e->getMessage());
 }
 try {    
-    SpreadSheetGoogle::write($ID_SPREADSHEET, $user);
+    SpreadSheetGoogle::write($ID_SPREADSHEET, $user, $db);
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
