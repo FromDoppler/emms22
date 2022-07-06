@@ -1,5 +1,5 @@
 <?php
-	require_once('config.php');
+require_once('config.php');
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
 	<link rel="canonical" href="https://goemms.com/" />
 
 	<link rel="stylesheet" href="html/css/styles.css">
-
+	<script type="text/javascript" src="./html/js/script.js"></script>
 	<?php if (PRODUCTION) { ?>
 		<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
 		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97"></script>
