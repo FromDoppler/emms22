@@ -21,11 +21,11 @@ $promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : f
 $country 	= isset($_POST['country']) ? $_POST['country'] : null;
 $industry 	= isset($_POST['industry']) ? $_POST['industry'] : null;
 $company 	= isset($_POST['company']) ? $_POST['company'] : null;
-$source_utm = isset($_POST['source_utm']) ? $_POST['source_utm'] : null;
-$medium_utm = isset($_POST['medium_utm']) ? $_POST['medium_utm'] : null;
-$campaign_utm = isset($_POST['campaign_utm']) ? $_POST['campaign_utm']	: null;
-$content_utm = isset($_POST['content_utm']) ? $_POST['content_utm'] : null;
-$term_utm = isset($_POST['term_utm']) ? $_POST['term_utm'] : null;
+$source_utm = isset($_POST['utm_source']) ? $_POST['utm_source'] : null;
+$medium_utm = isset($_POST['utm_medium']) ? $_POST['utm_medium'] : null;
+$campaign_utm = isset($_POST['utm_campaign']) ? $_POST['utm_campaign']	: null;
+$content_utm = isset($_POST['utm_content']) ? $_POST['utm_content'] : null;
+$term_utm = isset($_POST['utm_term']) ? $_POST['utm_term'] : null;
 
 try {
     SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
