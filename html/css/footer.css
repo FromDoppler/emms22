@@ -1,0 +1,42 @@
+/* Footer */
+
+.emms22__footer{
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    padding: 42px 60px;
+}
+
+.emms22__footer__event p{
+    font-size: 12px;
+    color: #fff;
+    margin: 0;
+}
+
+.emms22__footer__event p strong{
+    font-family: "Proxima-Nova-Bold";
+}
+
+.emms22__footer__event p a{
+    display: inline-block;
+    width: 84px;
+    margin-left: 3px;
+}
+
+.emms22__footer__social ul {
+    display: flex;
+}
+
+.emms22__footer__social ul li{
+    margin: 0 10px;
+}
+
+.emms22__footer__actions a{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 16px;
+    color: #33AD73;
+}
+
+.emms22__footer__actions a:hover{
+    text-decoration: underline;
+}

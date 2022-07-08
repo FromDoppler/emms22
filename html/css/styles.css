@@ -1,17 +1,20 @@
-@import './constants.css';
-@import './header.css';
-@import './home.css';
-@import "./editions.css";
+@import 'constants.css';
+@import 'header.css';
+@import 'home.css';
+@import "editions.css";
+@import "footer.css";
 
 .emms22__button {
   font-weight: bold;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 48px;
+  text-align: center;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   border-radius: 5px;
   border: none;
   background: #33ad73;
-  padding: 0.7rem 2rem;
+  padding: 0;
+  display: block;
 }
 
 .emms22__button a {
@@ -27,6 +30,6 @@
 
 .emms22__button:hover {
   background: #008046;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
