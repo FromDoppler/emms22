@@ -1,4 +1,8 @@
+.emms22__home{
+    background: #f6f6f6;
+}
 
+/* ----------------------------------------------------------- Animaciones */
 
 .emms22__fade-in{
     opacity: 0;
@@ -42,7 +46,7 @@
 
 
 
-/* Header */
+/* ----------------------------------------------------------- Header */
 
 .emms22__header{
     position: absolute;
@@ -80,14 +84,14 @@
 }
 
 
-/* Hero */
+/* ----------------------------------------------------------- Hero */
 
-.emms22__hero{
+.emms22__hero-home{
     position: relative;
     padding-top: 156px;
 }
 
-.emms22__hero .emms22__container--lg{
+.emms22__hero-home .emms22__container--lg{
     display: flex;
     justify-content: space-between;
     opacity: 0;
@@ -96,7 +100,7 @@
     animation-delay: 0.4s;
 }
 
-.emms22__hero__back{
+.emms22__hero-home__back{
     position: absolute;
     left: 0;
     right: 0;
@@ -105,25 +109,35 @@
     overflow: hidden;
 }
 
-.emms22__hero__back img{
+.emms22__hero-home__back::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.emms22__hero-home__back img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.emms22__hero__back video{
+.emms22__hero-home__back video{
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.emms22__hero__intro{
+.emms22__hero-home__intro{
     max-width: 550px;
     width: 50%;
 }
 
-.emms22__hero__intro__info p{
+.emms22__hero-home__intro__info p{
     font-size: 20px;
     line-height: 32px;
     font-weight: 700;
@@ -135,7 +149,7 @@
     animation-delay: 0.6s;
 }
 
-.emms22__hero__intro__info h1{
+.emms22__hero-home__intro__info h1{
     font-family: 'Proxima-Nova-Bold';
     font-size: 107px;
     line-height: 107px;
@@ -148,12 +162,12 @@
     animation-delay: 0.7s;
 }
 
-.emms22__hero__intro__counter{
+.emms22__hero-home__intro__counter{
     padding: 60px 0 20px 0;
     margin: 0 0 50px 0;
 }
 
-.emms22__hero__intro__counter li{
+.emms22__hero-home__intro__counter li{
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -161,12 +175,12 @@
     margin-right: 25px;
 }
 
-.emms22__hero__intro__counter li p{
+.emms22__hero-home__intro__counter li p{
     font-size: 13px;
     margin: 0;
 }
 
-.emms22__hero__intro__counter li div{
+.emms22__hero-home__intro__counter li div{
     width: 58px;
     height: 60px;
     background: #474747;
@@ -174,7 +188,7 @@
     overflow: hidden;
 }
 
-.emms22__hero__intro__counter li div span{
+.emms22__hero-home__intro__counter li div span{
     font-size: 30px;
     text-align: center;
     display: block;
@@ -183,7 +197,7 @@
     position: relative;
 }
 
-.emms22__hero__intro__counter li div::after{
+.emms22__hero-home__intro__counter li div::after{
     content: "";
     position: absolute;
     left: 0;
@@ -193,7 +207,7 @@
     background: #191919;
 }
 
-.emms22__hero__intro__counter li .emms22__hero__intro__counter__number--data{
+.emms22__hero-home__intro__counter li .emms22__hero-home__intro__counter__number--data{
     font-size: 13px;
     position: absolute;
     top: calc(100% + 5px);
@@ -201,7 +215,7 @@
     transform: translateX(-50%);
 }
 
-.emms22__hero__intro__info ul li{
+.emms22__hero-home__intro__info ul li{
     font-size: 28px;
     line-height: 28px;
     font-weight: 400;
@@ -214,17 +228,17 @@
     animation-fill-mode: forwards;
 }
 
-.emms22__hero__intro__info ul li:nth-child(1){
+.emms22__hero-home__intro__info ul li:nth-child(1){
     animation-delay: 0.8s;
 }
-.emms22__hero__intro__info ul li:nth-child(2){
+.emms22__hero-home__intro__info ul li:nth-child(2){
     animation-delay: 0.9s;
 }
-.emms22__hero__intro__info ul li:nth-child(3){
+.emms22__hero-home__intro__info ul li:nth-child(3){
     animation-delay: 1s;
 }
 
-.emms22__hero__intro__info ul li::before{
+.emms22__hero-home__intro__info ul li::before{
     content: url("../img/check-w.svg");
     position: absolute;
     top: 3px;
@@ -239,7 +253,7 @@
     line-height: 2px;
 }
 
-.emms22__hero__intro__info span{
+.emms22__hero-home__intro__info span{
     font-size: 16px;
     color: #fff;
     display: block;
@@ -247,7 +261,7 @@
     animation-delay: 1.1s;
 }
 
-.emms22__hero__container-form{
+.emms22__home__container-form{
     max-width: 425px;
     width: 50%;
     background: #5E3E94;
@@ -256,13 +270,14 @@
     box-sizing: border-box;
     color: #fff;
     margin: 0 0 -118px 0;
+    box-shadow: 0 1px 88px rgba(0, 0, 0, 0.65);
 }
 
-.emms22__hero__form__field-item{
+.emms22__home__form__field-item{
     margin: 0 0 14px 0;
 }
 
-.emms22__hero__form__field-item label{
+.emms22__home__form__field-item label{
     font-family: 'Proxima-Nova-Bold';
     font-size: 12px;
     line-height: 14px;
@@ -270,7 +285,7 @@
     margin: 0 0 5px 0;
 }
 
-.emms22__hero__form__field-item input, select{
+.emms22__home__form__field-item input, select{
     height: 33px;
     width: 100%;
     box-sizing: border-box;
@@ -282,23 +297,23 @@
     outline: none;
 }
 
-.emms22__hero__form__field-item input:focus{
+.emms22__home__form__field-item input:focus{
     border: solid 2px #FAB221;
 }
 
-.emms22__hero__form__field-group{
+.emms22__home__form__field-group{
     margin: 0 0 37px 0;
 }
 
-.emms22__hero__form__field-group li{
+.emms22__home__form__field-group li{
     margin: 0px 0px 20px 0px; 
 }
 
-.emms22__hero__form__field-item__checkbox{
+.emms22__home__form__field-item__checkbox{
     position: relative;
 }
 
-.emms22__hero__form__field-item__checkbox input[type=checkbox]{
+.emms22__home__form__field-item__checkbox input[type=checkbox]{
     cursor: pointer;
     position: absolute;
     width: 14px;
@@ -306,7 +321,7 @@
     opacity: 0;
 }
 
-.emms22__hero__form__field-item__checkbox .checkmark{
+.emms22__home__form__field-item__checkbox .checkmark{
     position: absolute;
     left: 0;
     top: -2px;
@@ -318,7 +333,7 @@
     pointer-events: none;
 }
 
-.emms22__hero__form__field-item__checkbox .checkmark::after{
+.emms22__home__form__field-item__checkbox .checkmark::after{
     content: '';
     position: absolute;
     left: 5px;
@@ -332,28 +347,28 @@
     transform: rotate(45deg);
 }
 
-.emms22__hero__form__field-item__checkbox input[type=checkbox]:checked~.checkmark{
+.emms22__home__form__field-item__checkbox input[type=checkbox]:checked~.checkmark{
     border-color: #33ad73;
     background-color: #33ad73;
 }
 
-.emms22__hero__form__field-item__checkbox input[type=checkbox]:checked~.checkmark::after{
+.emms22__home__form__field-item__checkbox input[type=checkbox]:checked~.checkmark::after{
     display: block;
     border-color: #fff;
 }
 
-.emms22__hero__form__field-item__checkbox label{
+.emms22__home__form__field-item__checkbox label{
     font-family: 'Proxima-Nova';
     font-size: 10px;
     margin: 0 0 0 29px;
     cursor: pointer;
 }
 
-.emms22__hero__btn{
+.emms22__home__btn{
     margin: 38px 0 0 0;
 }
 
-.emms22__hero__btn .emms22__button{
+.emms22__home__btn .emms22__button{
     height: 51px;
     color: #fff;
     box-shadow: none;
@@ -361,34 +376,72 @@
     margin: 0;
 }
 
-.emms22__hero__legal {
+.emms22__home__legal {
     margin: 34px 0 0 0;
 }
 
-.emms22__hero__legal p{
+.emms22__home__legal p{
     font-family: 'Proxima-Nova';
     font-size: 10px;
     line-height: 17px;
     margin: 0;
 }
 
-.emms22__hero__legal p strong{
+.emms22__home__legal p strong{
     font-family: 'Proxima-Nova-Bold';
     font-weight: 400;
 }
 
-.emms22__hero__legal p a{
+.emms22__home__legal p a{
     font-family: 'Proxima-Nova-Bold';
     font-weight: 400;
     color: #33AD73;
 }
 
-.emms22__hero__legal p a:hover{
+.emms22__home__legal p a:hover{
     text-decoration: underline;
 }
 
+.emms22__hero-home__registered{
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 170px 0;
+    text-align: center;
+}
 
-/* Numbers */
+.emms22__hero-home__registered h2{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 89px;
+    line-height: 89px;
+    color: #fff;
+    margin: 0 0 51px 0;
+}
+
+.emms22__hero-home__registered p{
+    font-size: 19px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 0 40px 0;
+}
+
+.emms22__hero-home__registered a{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 19px;
+    line-height: 24px;
+    color: #33AD73;
+}
+
+.emms22__hero-home__registered a:hover{
+    text-decoration: underline;
+}
+
+.emms22__hero-home__registered .emms22__hero-home__intro__counter li:nth-child(1){
+    display: block;
+    margin: 0 0 23px 0;
+}
+
+/* ----------------------------------------------------------- Numbers */
 
 .emms22__numbers{
     padding: 172px 0 117px 0;
@@ -396,6 +449,7 @@
 
 .emms22__numbers .emms22__container--lg{
     position: relative;
+    display: block;
 }
 
 .emms22__numbers .emms22__container--lg .parallax-waves{
@@ -464,16 +518,94 @@
     color: #333333;
 }
 
-/* Description */
+@property --num1 {
+    syntax: "<integer>";
+    inherits: true;
+    initial-value: 100000;
+  }
+  
+  .emms22__fade-in-animation #count1::after {
+    counter-reset: my-counter1 var(--num1);
+    content: counter(my-counter1);
+    animation: count1 2s linear ;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes count1 {
+    to {
+      --num1: 200000;
+    }
+  }
+
+  @property --num2 {
+    syntax: "<integer>";
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .emms22__fade-in-animation #count2::after {
+    counter-reset: my-counter2 var(--num2);
+    content: counter(my-counter2);
+    animation: count2 2s linear ;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes count2 {
+    to {
+      --num2: 14;
+    }
+  }
+
+  @property --num3 {
+    syntax: "<integer>";
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .emms22__fade-in-animation #count3::after {
+    counter-reset: my-counter3 var(--num3);
+    content: counter(my-counter3);
+    animation: count3 2s linear ;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes count3 {
+    to {
+      --num3: 10;
+    }
+  }
+
+  @property --num4 {
+    syntax: "<integer>";
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .emms22__fade-in-animation #count4::after {
+    counter-reset: my-counter4 var(--num4);
+    content: counter(my-counter4);
+    animation: count4 2s linear ;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes count4 {
+    to {
+      --num4: 150;
+    }
+  }
+
+/* ----------------------------------------------------------- Description */
 
 .emms22__back-purple{
     background: url(../img/back-purple.png) no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
 
 .emms22__description{
-    padding: 145px 0;
+    padding: 145px 0 202px 0;
 }
 
 .emms22__description .emms22__container--lg{
@@ -484,7 +616,7 @@
 
 .emms22__description .emms22__description__text{
     width: 40%;
-    animation-delay: 0.1s;
+    animation-delay: 0.2s;
 }
 
 .emms22__description .emms22__description__text h2{
@@ -509,7 +641,7 @@
 .emms22__description .emms22__description__text .emms22__button{
     color: #fff;
     box-shadow: none;
-    margin: 20px 0 0 0;
+    margin: 45px 0 0 0;
     height: 51px;
     cursor: pointer;
     animation-delay: 0.3s;
@@ -517,9 +649,275 @@
 
 .emms22__description .emms22__description__video{
     width: 52%;
-    animation-delay: 0.2s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation-delay: 0.3s;
 }
 
 .emms22__description .emms22__description__video video{
     width: 100%;
+    display: block;
+}
+
+
+/* ----------------------------------------------------------- Speakers */
+
+.emms22__speakers{
+    padding: 0 0 175px 0;
+}
+
+.emms22__speakers .emms22__container--md{
+    display: block;
+}
+
+.emms22__speakers h2{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 27px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto 70px auto;
+    max-width: 780px;
+    animation-delay: 0.2s;
+}
+
+.emms22__speakers .emms22__speakers__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.emms22__speakers .emms22__speakers__list li{
+    width: 20%;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.emms22__speakers .emms22__speakers__list li:nth-child(1){
+    animation-delay: 0.3s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(3){
+    animation-delay: 0.5s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(4){
+    animation-delay: 0.6s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(5){
+    animation-delay: 0.7s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(6){
+    animation-delay: 0.8s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(7){
+    animation-delay: 0.9s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(8){
+    animation-delay: 1s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(9){
+    animation-delay: 1.1s;
+}
+.emms22__speakers .emms22__speakers__list li:nth-child(10){
+    animation-delay: 1.2s;
+}
+
+.emms22__speakers .emms22__speakers__list li img{
+    max-width: 108px;
+}
+
+.emms22__speakers .emms22__speakers__list li p{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+    margin: 17px 0 0 0;
+}
+
+.emms22__speakers .emms22__speakers__list li p span{
+    font-family: "Proxima-Nova";
+    font-size: 14px;
+    display: block;
+}
+
+.emms22__speakers .emms22__speakers__action{
+    max-width: 600px;
+    margin: 55px auto 0 auto;
+    text-align: center;
+}
+
+.emms22__speakers .emms22__speakers__action p{
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+    margin: 0;
+    animation-delay: 1.3s;
+}
+
+.emms22__speakers .emms22__speakers__action p strong{
+    font-family: "Proxima-Nova-Bold";
+}
+
+.emms22__speakers .emms22__speakers__action .emms22__button{
+    color: #fff;
+    height: 50px;
+    margin: 50px auto 0 auto;
+    box-shadow: none;
+    cursor: pointer;
+    animation-delay: 1.4s;
+}
+
+
+/* ----------------------------------------------------------- Partners */
+
+.emms22__partners{
+    text-align: center;
+    padding: 87px 0 121px 0;
+}
+
+.emms22__partners .emms22__container--md{
+    display: block;
+}
+
+.emms22__partners h3{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 20px;
+    line-height: 30px;
+    color: #333;
+    margin: 0 0 52px 0;
+    animation-delay: 0.1s;
+}
+
+.emms22__partners .emms22__partners_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.emms22__partners .emms22__partners_list li{
+    height: 40px;
+    margin: 0 12px 31px 12px;
+}
+
+.emms22__partners .emms22__partners_list li:nth-child(1){
+    animation-delay: 0.2s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(2){
+    animation-delay: 0.3s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(3){
+    animation-delay: 0.4s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(4){
+    animation-delay: 0.5s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(5){
+    animation-delay: 0.6s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(6){
+    animation-delay: 0.7s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(7){
+    animation-delay: 0.8s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(8){
+    animation-delay: 0.9s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(9){
+    animation-delay: 1s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(10){
+    animation-delay: 1.1s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(11){
+    animation-delay: 1.2s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(12){
+    animation-delay: 1.3s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(13){
+    animation-delay: 1.4s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(14){
+    animation-delay: 1.5s;
+}
+.emms22__partners .emms22__partners_list li:nth-child(15){
+    animation-delay: 1.6s;
+}
+
+.emms22__partners .emms22__partners_list li img{
+    height: 100%;
+}
+
+.emms22__partners p{
+    font-size: 16px;
+    color: #333;
+    margin: 45px 0 0 0;
+    animation-delay: 1.7s;
+}
+
+.emms22__partners p strong{
+    font-family: "Proxima-Nova-Bold";
+    color: #33AD73;
+}
+
+
+/* ----------------------------------------------------------- Bottom form */
+
+.emms22__bottom-form{
+    background: url(../img/back-purple.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    padding: 113px 0 60px 0;
+}
+
+.emms22__bottom-form .emms22__bottom-form__title{
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 58px auto;
+}
+
+.emms22__bottom-form .emms22__bottom-form__title h3{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    margin: 0 0 20px 0;
+    animation-delay: 0.1s;
+}
+
+.emms22__bottom-form .emms22__bottom-form__title p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0;
+    animation-delay: 0.2s;
+}
+
+.emms22__bottom-form .emms22__home__container-form{
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    animation-delay: 0.3s;
+}
+
+.emms22__bottom-form .emms22__home__form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.emms22__bottom-form .emms22__home__form .emms22__home__container-form__column{
+    width: 47%;
+}
+
+.emms22__bottom-form .emms22__home__form__field-group:nth-child(2){
+    margin: 0;
+}
+
+.emms22__bottom-form .emms22__home__form__field-item.emms22__home__form__field-item__checkbox:nth-child(2){
+    margin: 0;
+}
+
+.emms22__bottom-form .emms22__home__legal{
+    margin: 12px 0 0 0;
 }

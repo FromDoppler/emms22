@@ -20,13 +20,11 @@ window.addEventListener('scroll', function() {
 (function () {
     var elements;
     var elements2;
-    var numbers;
     var windowHeight;
 
     function init() {
         elements = document.querySelectorAll('.emms22__fade-in');
         elements2 = document.querySelectorAll('.emms22__fade-top');
-        numbers = document.querySelectorAll('.emms22__numbers__counter-text-content');
         windowHeight = window.innerHeight;
     }
 
@@ -38,6 +36,10 @@ window.addEventListener('scroll', function() {
             if (positionFromTop - windowHeight <= 0) {
                 element.classList.add('emms22__fade-in-animation');
                 element.classList.remove('emms22__fade-in');
+            }
+            else{
+                element.classList.remove('emms22__fade-in-animation');
+                element.classList.add('emms22__fade-in');
             }
         }
     }
@@ -51,27 +53,19 @@ window.addEventListener('scroll', function() {
                 element2.classList.add('emms22__fade-top-animation');
                 element2.classList.remove('emms22__fade-top');
             }
-        }
-    }
-
-    function counterNumber() {
-        for (var i = 0; i < numbers.length; i++) {
-            var number = numbers[i];
-            var positionFromTop = numbers[i].getBoundingClientRect().top;
-
-            if (positionFromTop - windowHeight <= 0) {
-                //number.classList.add('emms22__numbers__counter-text-animation');
+            else{
+                element2.classList.remove('emms22__fade-top-animation');
+                element2.classList.add('emms22__fade-top');
             }
         }
     }
 
-    window.addEventListener('scroll', checkPosition, checkPosition2, counterNumber);
+    window.addEventListener('scroll', checkPosition, checkPosition2);
     window.addEventListener('resize', init);
 
     init();
     checkPosition();
-    checkPosition2();
-    counterNumber()
+    checkPosition2()
 })();
 
 
@@ -92,9 +86,9 @@ window.addEventListener('scroll', function () {
 
 var now = new Date();
 var current_year = now.getFullYear();
-var next_year = current_year + 1;
+var next_year = current_year + 1; 
 
-var target_date = new Date("Jan 1, " + next_year).getTime();
+var target_date = new Date("Oct 18, " + current_year).getTime();
  
 var days, hours, minutes, seconds;
  
@@ -134,25 +128,50 @@ function pad(num, size) {
 }
 
 
-// Text Counter Animation 
+// Date Counter 2
 
-let totalNumber = document.querySelectorAll('.emms22__numbers__counter-text');
-let getNumber = Array.from(totalNumber)
+var now2 = new Date();
+var current_year2 = now2.getFullYear();
+var next_year2 = current_year2 + 1; 
 
-getNumber.map((viewNumber) => {
-    console.log(viewNumber.dataset.number)
-    let startCount = 0
-    let counterUP = () => {
-        startCount++
-       viewNumber.innerHTML = `${startCount}`
-       if(startCount == viewNumber.dataset.number){
-           clearInterval(countStop)
-       }
-    }
-    let countStop = setInterval(() => {
-        counterUP()
-    }, 2)
-})
+var target_date2 = new Date("Oct 18, " + current_year2).getTime();
+ 
+var days2, hours2, minutes2, seconds2;
+ 
+var $days2 = document.getElementById("d2");
+var $hours2 = document.getElementById("h2");
+var $minutes2 = document.getElementById("m2");
+var $seconds2 = document.getElementById("s2");
+
+function update2() {
+    var current_date2 = new Date().getTime();
+    var seconds_left2 = (target_date2 - current_date2) / 1000;
+ 
+    days2 = parseInt(seconds_left2 / 86400);
+    seconds_left2 = seconds_left2 % 86400;
+     
+    hours2 = parseInt(seconds_left2 / 3600);
+    seconds_left2 = seconds_left2 % 3600;
+     
+    minutes2 = parseInt(seconds_left2 / 60);
+    seconds2 = parseInt(seconds_left2 % 60);
+     
+    $days2.innerHTML = pad2(days2, 2);
+    $hours2.innerHTML = pad2(hours2, 2);
+    $minutes2.innerHTML = pad2(minutes2, 2);
+    $seconds2.innerHTML = pad2(seconds2, 2);
+}
+
+
+update2();
+
+setInterval(update2, 1000);
+
+function pad2(num2, size2) {
+    var s = num2+"";
+    while (s.length < size2) s = "0" + s;
+    return s;
+}
 
 
  // To play videos only when visible
