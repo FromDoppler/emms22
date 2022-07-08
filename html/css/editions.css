@@ -1,11 +1,18 @@
 .emms22__hero {
   background: #310e44;
-  padding: 75px 0px 175px;
+  padding: 75px 0px;
+}
+
+.emms22__hero__container {
+  display: flex;
+}
+.emms22__hero__content,
+.emms22__hero__content__video {
+  display: flex;
+  flex: 1;
 }
 
 .emms22__hero__content {
-  display: flex;
-  max-width: 50%;
   color: #ffffff;
   align-items: baseline;
   flex-wrap: wrap;
@@ -16,7 +23,6 @@
   font-weight: 700;
   line-height: 79px;
   margin: 0;
-  padding: 20px 0px 20px 0px;
 }
 
 .emms22__hero__content p {
@@ -26,22 +32,25 @@
   max-width: 500px;
 }
 
-.emms22__hero__content__video {
-  display: flex;
-  max-width: 512px;
-}
-.emms22__hero__content__video__container {
-  align-self: center;
+.emms22__hero__content button {
+  margin-top: 3rem;
 }
 
-.emms22__hero__content__video__container video {
-  width: 100%;
-  align-content: center;
+.emms22__hero__content__video {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.emms22__hero__content__video video {
+  max-width: 512px;
+  padding: 3rem;
 }
 
 .emms22__editions__wrapper {
   display: flex;
   flex-wrap: wrap;
+  gap: 3rem;
+  padding-top: 3rem;
 }
 
 .emms22__editions__content {
@@ -62,27 +71,48 @@
   max-width: 800px;
 }
 
-.emms22__editions__first__card img,
+.emms22__editions__first__card__img img,
 .emms22__editions__cards img {
   width: 300px;
   height: 200px;
 }
+
 .emms22__editions__first__card h4 {
   font-size: 17px;
   line-height: 22px;
   font-weight: 700;
 }
 
-.emms22__editions__first__card {
-  align-content: space-between;
+.emms22__editions__first__card__content {
+  display: flex;
+  gap: 3rem;
+}
+
+.emms22__editions__first__card__img,
+.emms22__editions__first__card__text {
+  flex: 1;
+}
+
+.emms22__editions__first__card__img {
+  display: flex;
+  justify-content: end;
 }
 
 .emms22__editions__cards__container {
   display: flex;
+  align-items: center;
+}
+
+.emms22__editions__first__card__container {
+  display: flex;
+  align-items: center;
 }
 
 .emms22__editions__content__cards {
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 3rem;
 }
 
 .emms22__editions__cards {
@@ -90,9 +120,38 @@
 }
 
 .emms22__editions__cards a,
-.emms22__editions__first__card a {
+.emms22__editions__first__card__text a {
   font-weight: 700;
   font-size: 17px;
   line-height: 22px;
   color: #33ad73;
+}
+
+@media only screen and (max-width: 992px) {
+  .emms22__hero__container {
+    text-align: center;
+  }
+
+  .emms22__hero__content {
+    justify-content: center;
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .emms22__editions__first__card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 0rem;
+  }
+
+  .emms22__editions__first__card__img,
+  .emms22__editions__first__card__text {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+  }
 }
