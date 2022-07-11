@@ -68,7 +68,7 @@
                             <li>SPEAKERS INTERNACIONALES</li>
                             <li>CAPACITACIÓN E INSPIRACIÓN</li>
                         </ul>
-                        <span>EARLY BIRDS: Preinscripción hasta el 1° de agosto.</span>
+                        <span>EARLY BIRDS: Preinscripción hasta el 15 de agosto.</span>
                     </div>
                     <div class="emms22__hero-home__intro__share"></div>
                 </div>
@@ -366,6 +366,7 @@
             <div class="emms22__container--lg">
                 <span class="parallax-waves"></span>
                 <h2 class="emms22__fade-in">El evento más importante de Marketing Digital</h2>
+                <h3 class="emms22__fade-in">EDICIONES ANTERIORES</h3>
                 <ul>
                     <li class="emms22__fade-in">
                         <p class="emms22__numbers__counter-text" id="count1">+</p>
@@ -487,7 +488,7 @@
                     <li class="emms22__fade-in"><img src="../img/logo-airbnb.png" alt="Airbnb"></li>
                     <li class="emms22__fade-in"><img src="../img/logo-woocommerce.png" alt="Woocommerce"></li>
                 </ul>
-                <p class="emms22__fade-in">¿Quieres ser Media Partner del EMMS 2022? Escríbenos a <strong>partners@fromdoppler.com</strong></p>
+                <p class="emms22__fade-in">¿Quieres ser Media Partner del EMMS 2022? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></p>
             </div>
         </div>
 
@@ -766,7 +767,7 @@
 
         <footer class="emms22__footer">
             <div class="emms22__footer__event emms22__fade-in">
-                <p><strong>EMMS 2022</strong> - Un eventro creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img src="../img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+                <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img src="../img/logo-doppler--neg.svg" alt="Doppler"></a></p>
             </div>
             <div class="emms22__footer__social emms22__fade-in">
                 <ul>
@@ -785,6 +786,6 @@
 
     </main>
 
-    <script src="../js/home.js?version=<?= VERSION ?>"></script>
+    <script src="../js/animations.js?version=<?= VERSION ?>"></script>
 </body>
 </html>
