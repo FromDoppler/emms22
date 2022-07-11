@@ -374,6 +374,7 @@
     box-shadow: none;
     cursor: pointer;
     margin: 0;
+    width: 100%;
 }
 
 .emms22__home__legal {
@@ -467,7 +468,17 @@
     font-size: 27px;
     text-align: center;
     color: #333333;
-    margin: 0 0 75px 0;
+    margin: 0 0 48px 0;
+}
+
+.emms22__numbers h3{
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: #333333;
+    margin: 0 0 55px 0;
+    animation-delay: 0.3s;
 }
 
 .emms22__numbers ul{
@@ -642,6 +653,7 @@
     color: #fff;
     box-shadow: none;
     margin: 45px 0 0 0;
+    max-width: 347px;
     height: 51px;
     cursor: pointer;
     animation-delay: 0.3s;
@@ -760,6 +772,7 @@
 
 .emms22__speakers .emms22__speakers__action .emms22__button{
     color: #fff;
+    max-width: 347px;
     height: 50px;
     margin: 50px auto 0 auto;
     box-shadow: none;
@@ -855,9 +868,13 @@
     animation-delay: 1.7s;
 }
 
-.emms22__partners p strong{
+.emms22__partners p a{
     font-family: "Proxima-Nova-Bold";
     color: #33AD73;
+}
+
+.emms22__partners p a:hover{
+    text-decoration: underline;
 }
 
 
