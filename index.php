@@ -861,7 +861,7 @@ require_once('config.php');
 				</ul>
 			</div>
 			<div class="emms22__footer__actions emms22__fade-in">
-				<a href="#" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
+				<a onclick="OneTrust.ToggleInfoDisplay()" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
 				<a href="https://qa.fromdoppler.com/es/legal/privacidad/?utm_source=direct" target="_blank">Políticas de privacidad y legales</a>
 			</div>
 		</footer>
