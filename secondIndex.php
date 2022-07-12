@@ -68,7 +68,7 @@ require_once('config.php');
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-	<main class="emms22__home parallax-form">
+	<main class="emms22__home">
 
 		<!-- Header -->
 		<nav class="emms22__header">
@@ -92,7 +92,7 @@ require_once('config.php');
 
 
 
-			<div class="emms22__hero-home__registered">
+			<div class="emms22__hero-home__registered parallax-form">
 				<h2>¡Ya eres parte del EMMS 2022!</h2>
 				<p>Te mantendremos informado de las últimas novedades a través de tu Email.</p>
 				<a href="">Agrega el evento a tu calendario.</a>
