@@ -257,10 +257,6 @@ require_once('config.php');
 
 	</main>
 	<script src="/html/js/animations.js?version=<?= VERSION ?>"></script>
-	<script src="/html/js/modules/jquery.min.js"></script>
-	<script src="/html/js/modules/intlTelInput/intlTelInput.min.js"></script>
-	<script src="/html/js/modules/intlTelInput/intlTelInput.js"></script>
-	<script src="/html/js/modules/intlTelInput/phoneValidation.js"></script>
 
 </body>
 
