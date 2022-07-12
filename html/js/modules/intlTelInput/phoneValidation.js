@@ -64,7 +64,6 @@ var reset = function () {
 
 // on blur: validate
 phoneInputField.addEventListener('blur', function () {
-	console.log('no se llama')
 	reset();
 	if (phoneInputField.value.trim()) {
 		if (phoneInput.isValidNumber()) {
@@ -92,11 +91,9 @@ var reset = function () {
 
 // on blur: validate2
 phoneInputFieldFooter.addEventListener('blur', function () {
-	console.log('se llama')
 	reset();
 	if (phoneInputFieldFooter.value.trim()) {
 		if (phoneInputFooter.isValidNumber()) {
-			console.log('no tendria que entrar aca')
 			$(phoneInputFieldFooter).closest('.holder').removeClass('error');
 
 

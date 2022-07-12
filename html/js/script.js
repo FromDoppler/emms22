@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	earlyForms.forEach(form => { form.addEventListener('submit', sendData) });
 
 	function sendData(e) {
-		console.log('se llama')
 		e.preventDefault();
 		const formBtn = this.querySelector('button');
 		const formData = new FormData(this);
@@ -89,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	function _validateForm(form) {
-console.log(form)
 		// document.querySelector('input, textarea, select', form);
 
 		form.querySelectorAll('input, textarea, select').forEach(field => {
