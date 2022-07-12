@@ -1,0 +1,73 @@
+.emms22__home__form__field-item .error {
+  display: block;
+}
+
+.emms22__home__form__field-item .error:after {
+  left: 0;
+  top: 100%;
+  color: #e34f45;
+  content: attr(data-error);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0;
+  text-transform: none;
+  text-transform: initial;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emms22__home__form__field-item .input-error {
+  border: 1px solid #e34f45;
+}
+
+.emms22__home__form__field-item .holder .iti__selected-dial-code {
+  color: #655a5a;
+  font-weight: bold;
+}
+.emms22__home__form__field-item .holder .iti__country-list {
+  position: absolute;
+  z-index: 12;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 -1px;
+  box-shadow: 1px 1px 4px rgb(0 0 0 / 20%);
+  background-color: white;
+  color: #655a5a;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  max-height: 200px;
+  max-width: 370px;
+  overflow-y: scroll;
+  overflow-x: unset;
+}
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
