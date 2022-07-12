@@ -25,7 +25,8 @@
                 <div class="emms22__header__warning emms22__fade-top">
                     <a>¡ÚLTIMOS LUGARES DISPONIBLES! REGÍSTRATE GRATIS AHORA</a>
                 </div>
-                <ul class="emms22__header__nav">
+                <a class="emms22__header__nav--mb" id="btn-burger"><img src="../img/icon-burger.svg" alt="Menú"></a>
+                <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
                     <li><a href="">inicio</a></li>
                     <li><a href="">ediciones anteriores</a></li>
                 </ul>
@@ -70,7 +71,31 @@
                         </ul>
                         <span>EARLY BIRDS: Preinscripción hasta el 15 de agosto.</span>
                     </div>
-                    <div class="emms22__hero-home__intro__share"></div>
+                    <div class="emms22__hero-home__intro__share">
+                        <ul>
+                            <li>¡COMPARTE ESTE EVENTO!</li>
+                            <li>
+                                <a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/sharer.php?u=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+                                    <img src="../img/share-facebook.svg" alt="Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://URL', 'Twitter', 'toolbar=0, status=0, width=550, height=350');"> 
+                                    <img src="../img/share-tw.svg" alt="Twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');"> 
+                                    <img src="../img/share-in.svg" alt="Linkedin">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://api.whatsapp.com/send?text=https://goemms.com/" target="_blank"> 
+                                    <img src="../img/share-whats.svg" alt="Whatsapp">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="emms22__home__container-form parallax-form">
                     <form class="emms22__home__form" id="form" action="success-reservation.php" method="post">
@@ -292,9 +317,31 @@
                                     </select>
                             </li>
                             <li class="emms22__home__form__field-item">
-                                <label for="company-input">Industria *</label>
-                                <input id="company-input" name="company" type="text" placeholder="Tu industria" class="company company-number">
-                                <input id="full-company-input" name="full-company-input" type="hidden" value="">
+                                    <label class="required-label" for="country">Industria *</label>
+                                    <span class="dropdown-arrow"></span>
+                                    <select id="company-input" name="company" class="required" autocomplete="off">
+                                        <option disabled selected value>Elige una industria</option>
+                                        <option value="Agencias-de-Empleo">Agencias de Empleo</option>
+                                        <option value="Alimentación-Consumo-Masivo">Alimentación / Consumo Masivo</option>
+                                        <option value="Automóviles">Automóviles</option>
+                                        <option value="Banca-Finanzas-Seguros">Banca / Finanzas / Seguros</option>
+                                        <option value="Belleza-Cosmética">Belleza / Cosmética</option>
+                                        <option value="Educación">Educación</option>
+                                        <option value="Entretenimiento">Entretenimiento</option>
+                                        <option value="Industria-Fabricación">Industria / Fabricación</option>
+                                        <option value="Informática-Electrónica">Informática / Electrónica</option>
+                                        <option value="Medios-de-Comunicación">Medios de Comunicación</option>
+                                        <option value="Real-Estate">Real Estate</option>
+                                        <option value="Retail">Retail</option>
+                                        <option value="Ropa-Accesorios-Artículos Deportivos">Ropa / Accesorios / Artículos Deportivos</option>
+                                        <option value="Salud">Salud</option>
+                                        <option value="Sector-Público">Sector Público</option>
+                                        <option value="Servicios">Servicios</option>
+                                        <option value="Supermercado">Supermercado</option>
+                                        <option value="Telecomunicaciones">Telecomunicaciones</option>
+                                        <option value="Turismo">Turismo</option>
+                                        <option value="Otros">Otros</option>
+                                    </select>
                             </li>
                             <li class="emms22__home__form__field-item">
                                     <label for="company-input">Empresa *</label>
@@ -720,10 +767,32 @@
                                         </select>
                                 </li>
                                 <li class="emms22__home__form__field-item">
-                                    <label for="company-input">Industria *</label>
-                                    <input id="company-input" name="company" type="text" placeholder="Tu industria" class="company company-number">
-                                    <input id="full-company-input" name="full-company-input" type="hidden" value="">
-                                </li>
+                                    <label class="required-label" for="country">Industria *</label>
+                                    <span class="dropdown-arrow"></span>
+                                    <select id="company-input" name="company" class="required" autocomplete="off">
+                                        <option disabled selected value>Elige una industria</option>
+                                        <option value="Agencias-de-Empleo">Agencias de Empleo</option>
+                                        <option value="Alimentación-Consumo-Masivo">Alimentación / Consumo Masivo</option>
+                                        <option value="Automóviles">Automóviles</option>
+                                        <option value="Banca-Finanzas-Seguros">Banca / Finanzas / Seguros</option>
+                                        <option value="Belleza-Cosmética">Belleza / Cosmética</option>
+                                        <option value="Educación">Educación</option>
+                                        <option value="Entretenimiento">Entretenimiento</option>
+                                        <option value="Industria-Fabricación">Industria / Fabricación</option>
+                                        <option value="Informática-Electrónica">Informática / Electrónica</option>
+                                        <option value="Medios-de-Comunicación">Medios de Comunicación</option>
+                                        <option value="Real-Estate">Real Estate</option>
+                                        <option value="Retail">Retail</option>
+                                        <option value="Ropa-Accesorios-Artículos Deportivos">Ropa / Accesorios / Artículos Deportivos</option>
+                                        <option value="Salud">Salud</option>
+                                        <option value="Sector-Público">Sector Público</option>
+                                        <option value="Servicios">Servicios</option>
+                                        <option value="Supermercado">Supermercado</option>
+                                        <option value="Telecomunicaciones">Telecomunicaciones</option>
+                                        <option value="Turismo">Turismo</option>
+                                        <option value="Otros">Otros</option>
+                                    </select>
+                            </li>
                                 <li class="emms22__home__form__field-item">
                                         <label for="company-input">Empresa *</label>
                                         <input id="company-input" name="company" type="text" placeholder="Tu empresa" class="company company-number">
@@ -787,5 +856,16 @@
     </main>
 
     <script src="../js/animations.js?version=<?= VERSION ?>"></script>
+    <script>
+        // Mobile nav
+
+console.log("hola")
+
+const heading = document.getElementById('nav-mb');
+const btn = document.getElementById('btn-burger');
+btn.addEventListener('click', (e) => {
+  heading.classList.toggle('emms22__header__nav--hidden');
+});
+    </script>
 </body>
 </html>
