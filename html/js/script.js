@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				})
 					.then(resp => resp)
 					.then(resp => {
+						localStorage.setItem('registered', true);
 						window.location.href = '/secondIndex.php'; //relative to domain
-
 					})
 					.catch((error) => {
 						// Tenemos la respuesta de errores
