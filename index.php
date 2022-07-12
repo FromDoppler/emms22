@@ -571,31 +571,31 @@ require_once('config.php');
 						<ul class="emms22__home__form__field-group">
 							<li class="emms22__home__form__field-item" id="first-form-item">
 								<div class="holder">
-									<label class="required-label" for="name">Nombre *</label>
+									<label class="required-label">Nombre *</label>
 									<input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item ">
 								<div class="holder">
-									<label class="required-label" for="lastname">Apellido *</label>
+									<label class="required-label">Apellido *</label>
 									<input type="text" name="lastname" id="lastname" placeholder="Tu apellido" class="required">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
-									<label class="required-label" for="email">Email *</label>
+									<label class="required-label">Email *</label>
 									<input type="email" name="email" id="email" placeholder="¡No olvides usar @!" class="email required">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
-									<label class="required-label" for="phone-input">Teléfono *</label>
+									<label class="required-label">Teléfono *</label>
 									<input id="phoneInputFooter" name="phone-input" type="tel" class="required phone phone-number">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
-									<label class="required-label" for="country">País *</label>
+									<label class="required-label">País *</label>
 									<span class="dropdown-arrow"></span>
 									<select id="country" name="country" class="required" autocomplete="off">
 										<option disabled selected value>Elige un país</option>
@@ -796,7 +796,7 @@ require_once('config.php');
 							</li>
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
-									<label for="industry">Industria *</label>
+									<label>Industria *</label>
 									<select name="industry-input" type="text" placeholder="Tu industria" class="required">
 										<option disabled selected value>Elige una industria</option>
 										<option value="Agencias-de-Empleo">Agencias de Empleo</option>
@@ -824,7 +824,7 @@ require_once('config.php');
 							</li>
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
-									<label for="company">Empresa *</label>
+									<label>Empresa *</label>
 									<input name="company" type="text" placeholder="Tu empresa" class="required">
 								</div>
 							</li>
@@ -832,13 +832,13 @@ require_once('config.php');
 						<ul class="emms22__home__form__field-group">
 							<li class="emms22__home__form__field-item emms22__home__form__field-item__checkbox">
 								<div class="holder">
-									<input name="privacy" type="checkbox" value="true" class="required check"><span class="checkmark"></span><label for="acepto-politicas">
+									<input name="privacy" type="checkbox" value="true" class="required check"><span class="checkmark"></span><label>
 										Acepto la Política de Privacidad de Doppler *
 									</label>
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item emms22__home__form__field-item__checkbox">
-								<input name="promotions" type="checkbox" value="true"><span class="checkmark"></span><label for="acepto-promociones">
+								<input name="promotions" type="checkbox" value="true"><span class="checkmark"></span><label>
 									Acepto recibir promociones de Doppler y sus aliados</label>
 							</li>
 						</ul>
