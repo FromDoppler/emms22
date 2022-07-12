@@ -29,6 +29,7 @@ require_once('config.php');
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<link rel="canonical" href="https://goemms.com/" />
+	<script src="/html/js/security.js?version=<?= VERSION ?>"></script>
 
 	<link rel="stylesheet" href="..\html\css\styles.css?version=<?= VERSION ?>">
 	<!--<script type="text/javascript" src="./html/js/script.js"></script>-->
