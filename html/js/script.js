@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const endPointApi = '../../services/register.php';
 		const dialCode = dialCodeContainer.innerHTML;
 		const fullPhone = (dialCode + formData.get('phone-input')).trim();
+
 		if (_validateForm(this)) {
 
 			const holderPhone = document.getElementById("holder-phone");
@@ -27,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 					'email': formData.get('email'),
 					'country': formData.get('country'),
 					'phone': fullPhone,
-					'industry': formData.get('industry'),
+					'industry': formData.get('industry-input'),
 					'company': formData.get('company'),
-					'acceptPolicies': formData.get('privacy'),
-					'acceptPromotions': formData.get('promotions'),
+					'acceptPolicies': (formData.get('privacy') === 'true') ? true : null,
+					'acceptPromotions': (formData.get('promotions' === 'true')) ? true : null,
 					'utm_source': formData.get('utm_source'),
 					'utm_campaign': formData.get('utm_campaign'),
 					'utm_content': formData.get('utm_content'),
