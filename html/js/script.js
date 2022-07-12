@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					'email': formData.get('email'),
 					'country': formData.get('country'),
 					'phone': fullPhone,
-					'industry': formData.get('industry'),
+					'industry': formData.get('industry-input'),
 					'company': formData.get('company'),
 					'acceptPolicies': formData.get('privacy'),
 					'acceptPromotions': formData.get('promotions'),

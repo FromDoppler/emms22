@@ -339,7 +339,29 @@ require_once('config.php');
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label for="industry-input">Industria *</label>
-									<input name="industry-input" type="text" placeholder="Tu industria" class="required">
+									<select name="industry-input" type="text" placeholder="Tu industria" class="required">
+										<option disabled selected value>Elige una industria</option>
+										<option value="Agencias-de-Empleo">Agencias de Empleo</option>
+										<option value="Alimentación-Consumo-Masivo">Alimentación / Consumo Masivo</option>
+										<option value="Automóviles">Automóviles</option>
+										<option value="Banca-Finanzas-Seguros">Banca / Finanzas / Seguros</option>
+										<option value="Belleza-Cosmética">Belleza / Cosmética</option>
+										<option value="Educación">Educación</option>
+										<option value="Entretenimiento">Entretenimiento</option>
+										<option value="Industria-Fabricación">Industria / Fabricación</option>
+										<option value="Informática-Electrónica">Informática / Electrónica</option>
+										<option value="Medios-de-Comunicación">Medios de Comunicación</option>
+										<option value="Real-Estate">Real Estate</option>
+										<option value="Retail">Retail</option>
+										<option value="Ropa-Accesorios-Artículos Deportivos">Ropa / Accesorios / Artículos Deportivos</option>
+										<option value="Salud">Salud</option>
+										<option value="Sector-Público">Sector Público</option>
+										<option value="Servicios">Servicios</option>
+										<option value="Supermercado">Supermercado</option>
+										<option value="Telecomunicaciones">Telecomunicaciones</option>
+										<option value="Turismo">Turismo</option>
+										<option value="Otros">Otros</option>
+									</select>
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
@@ -756,7 +778,29 @@ require_once('config.php');
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label for="industry">Industria *</label>
-									<input name="industry" type="text" placeholder="Tu industria" class="required">
+									<select name="industry-input" type="text" placeholder="Tu industria" class="required">
+										<option disabled selected value>Elige una industria</option>
+										<option value="Agencias-de-Empleo">Agencias de Empleo</option>
+										<option value="Alimentación-Consumo-Masivo">Alimentación / Consumo Masivo</option>
+										<option value="Automóviles">Automóviles</option>
+										<option value="Banca-Finanzas-Seguros">Banca / Finanzas / Seguros</option>
+										<option value="Belleza-Cosmética">Belleza / Cosmética</option>
+										<option value="Educación">Educación</option>
+										<option value="Entretenimiento">Entretenimiento</option>
+										<option value="Industria-Fabricación">Industria / Fabricación</option>
+										<option value="Informática-Electrónica">Informática / Electrónica</option>
+										<option value="Medios-de-Comunicación">Medios de Comunicación</option>
+										<option value="Real-Estate">Real Estate</option>
+										<option value="Retail">Retail</option>
+										<option value="Ropa-Accesorios-Artículos Deportivos">Ropa / Accesorios / Artículos Deportivos</option>
+										<option value="Salud">Salud</option>
+										<option value="Sector-Público">Sector Público</option>
+										<option value="Servicios">Servicios</option>
+										<option value="Supermercado">Supermercado</option>
+										<option value="Telecomunicaciones">Telecomunicaciones</option>
+										<option value="Turismo">Turismo</option>
+										<option value="Otros">Otros</option>
+									</select>
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
