@@ -128,50 +128,6 @@ function pad(num, size) {
 }
 
 
-// Date Counter 2
-
-var now2 = new Date();
-var current_year2 = now2.getFullYear();
-var next_year2 = current_year2 + 1; 
-
-var target_date2 = new Date("Oct 18, " + current_year2).getTime();
- 
-var days2, hours2, minutes2, seconds2;
- 
-var $days2 = document.getElementById("d2");
-var $hours2 = document.getElementById("h2");
-var $minutes2 = document.getElementById("m2");
-var $seconds2 = document.getElementById("s2");
-
-function update2() {
-    var current_date2 = new Date().getTime();
-    var seconds_left2 = (target_date2 - current_date2) / 1000;
- 
-    days2 = parseInt(seconds_left2 / 86400);
-    seconds_left2 = seconds_left2 % 86400;
-     
-    hours2 = parseInt(seconds_left2 / 3600);
-    seconds_left2 = seconds_left2 % 3600;
-     
-    minutes2 = parseInt(seconds_left2 / 60);
-    seconds2 = parseInt(seconds_left2 % 60);
-     
-    $days2.innerHTML = pad2(days2, 2);
-    $hours2.innerHTML = pad2(hours2, 2);
-    $minutes2.innerHTML = pad2(minutes2, 2);
-    $seconds2.innerHTML = pad2(seconds2, 2);
-}
-
-
-update2();
-
-setInterval(update2, 1000);
-
-function pad2(num2, size2) {
-    var s = num2+"";
-    while (s.length < size2) s = "0" + s;
-    return s;
-}
 
 
  // To play videos only when visible
