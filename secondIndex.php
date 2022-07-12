@@ -35,6 +35,7 @@ require_once('config.php');
 	<!--<script type="text/javascript" src="./html/js/script.js"></script>-->
 	<link rel="stylesheet" href="..\html\css\libs\intl-tel-input\intelInput.css">
 	<link rel="stylesheet" href="..\html\css\libs\intl-tel-input\intelInput.min.css">
+	<script src='https://www.fromdoppler.com//wp-content/themes/doppler_site/utm/utm.js?version=1.0.109'></script>
 	<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
 	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97<?= (PRODUCTION) ? '' : '-test' ?>"></script>
 	<script type="text/javascript">
@@ -68,7 +69,7 @@ require_once('config.php');
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-	<main class="emms22__home parallax-form">
+	<main class="emms22__home">
 
 		<!-- Header -->
 		<nav class="emms22__header">
@@ -92,7 +93,7 @@ require_once('config.php');
 
 
 
-			<div class="emms22__hero-home__registered">
+			<div class="emms22__hero-home__registered parallax-form">
 				<h2>¡Ya eres parte del EMMS 2022!</h2>
 				<p>Te mantendremos informado de las últimas novedades a través de tu Email.</p>
 				<a href="">Agrega el evento a tu calendario.</a>
