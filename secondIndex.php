@@ -42,10 +42,30 @@ require_once('config.php');
 	<!-- El aviso de consentimiento de cookies de OneTrust finaliza para goemms.com. -->
 
 
-
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-M768WZR');
+	</script>
+	<!-- End Google Tag Manager -->
 </head>
 
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
 	<main class="emms22__home parallax-form">
 
@@ -55,7 +75,7 @@ require_once('config.php');
 				<div class="emms22__header__logo">
 					<a href=""><img src="./html/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
-				
+
 				<ul class="emms22__header__nav">
 					<li><a href="">inicio</a></li>
 					<li><a href="">ediciones anteriores</a></li>
@@ -232,7 +252,7 @@ require_once('config.php');
 			</div>
 		</div>
 
-	
+
 
 		<!-- Footer -->
 
