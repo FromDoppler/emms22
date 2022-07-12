@@ -30,7 +30,7 @@ require_once('config.php');
 	<meta property="og:image:height" content="630" />
 	<link rel="canonical" href="https://goemms.com/" />
 
-	<link rel="stylesheet" href="..\html\css\styles.css">
+	<link rel="stylesheet" href="..\html\css\styles.css?version=<?= VERSION ?>">
 	<!--<script type="text/javascript" src="./html/js/script.js"></script>-->
 	<link rel="stylesheet" href="..\html\css\libs\intl-tel-input\intelInput.css">
 	<link rel="stylesheet" href="..\html\css\libs\intl-tel-input\intelInput.min.css">
