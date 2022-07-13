@@ -1,9 +1,11 @@
 /* 404 */
-
+.emms22__wrapper__404 {
+  overflow: hidden;
+}
 .emms22__404 {
   background: #310e44;
-  padding: 75px 0px;
   height: 100vh;
+  padding-top: 3rem;
 }
 
 .error-404 {
@@ -16,7 +18,7 @@
 .emms22__404__container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3rem;
   margin: 0 auto;
 }
 .error-404-message {
@@ -34,14 +36,14 @@
   line-height: 25px;
   text-align: center;
   color: #ffffff;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .emms22__404__button {
   border: none;
   padding: 1rem 3rem;
   font-size: 18px;
-  background-color: rgba(51, 173, 115, 1);
+  background-color: #33ad73;
   color: white;
   cursor: pointer;
   font-weight: bold;
