@@ -492,6 +492,7 @@
 }
 
 .emms22__hero-home__registered a.addeventatc{
+		display: inline-block;
     font-family: "Proxima-Nova-Bold";
     font-size: 18px;
     line-height: 51px;
