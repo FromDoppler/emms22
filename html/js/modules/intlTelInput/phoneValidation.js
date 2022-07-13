@@ -29,9 +29,10 @@ const phoneInput = window.intlTelInput(phoneInputField, {
 				countryCode = countryResponse.countryCode;
 				countryName = countryResponse.countryName;
 				document.getElementById('country').value = countryName;
+				document.getElementById('country2').value = countryName;
+				callback(countryCode);
 			});
 
-		callback(countryCode);
 
 	}
 });
@@ -52,9 +53,9 @@ const phoneInputFooter = window.intlTelInput(phoneInputFieldFooter, {
 				countryCode = countryResponse.countryCode;
 				countryName = countryResponse.countryName;
 				document.getElementById('country').value = countryName;
+				document.getElementById('country2').value = countryName;
+				callback(countryCode);
 			});
-
-		callback(countryCode);
 
 	}
 });

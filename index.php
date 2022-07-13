@@ -159,7 +159,7 @@ require_once('config.php');
 								<div class="holder">
 									<label class="required-label" for="country">País *</label>
 									<span class="dropdown-arrow"></span>
-									<select name="country" class="required" autocomplete="off" autocomplete="off">
+									<select id="country" name="country" class="required" autocomplete="off" autocomplete="off">
 										<option disabled selected value>Elige un país</option>
 										<option value="Afghanistan">Afghanistan</option>
 										<option value="Albania">Albania</option>
@@ -598,7 +598,7 @@ require_once('config.php');
 								<div class="holder">
 									<label class="required-label">País *</label>
 									<span class="dropdown-arrow"></span>
-									<select id="country" name="country" class="required" autocomplete="off" autocomplete="off">
+									<select id="country2" name="country" class="required" autocomplete="off" autocomplete="off">
 										<option disabled selected value>Elige un país</option>
 										<option value="Afghanistan">Afghanistan</option>
 										<option value="Albania">Albania</option>
