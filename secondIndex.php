@@ -15,11 +15,6 @@ require_once('config.php');
 	include_once('commonHeader.php');
 	?>
 
-
-
-
-
-
 </head>
 
 <body>
@@ -33,12 +28,12 @@ require_once('config.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href=""><img src="./html/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./index.php"><img src="../html/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
-
-				<ul class="emms22__header__nav">
-					<li><a href="">inicio</a></li>
-					<li><a href="">ediciones anteriores</a></li>
+				<a class="emms22__header__nav--mb" id="btn-burger"></a>
+				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
+					<li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
+					<li><a href="./editions.php">ediciones anteriores</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -49,12 +44,16 @@ require_once('config.php');
 				<video src="./html/img/background-loop-compress.mp4" loop muted autoplay playsinline></video>
 			</div>
 
-
-
 			<div class="emms22__hero-home__registered parallax-form">
 				<h2>¡Ya eres parte del EMMS 2022!</h2>
-				<p>Te mantendremos informado de las últimas novedades a través de tu Email.</p>
-				<a href="">Agrega el evento a tu calendario.</a>
+				<div class="emms22__hero-home__registered__text">
+					<p>Te mantendremos informado de las últimas novedades a través de tu Email.</p>
+					<p>Agrega el evento a tu calendario para no perderlo de vista :)</p>
+				</div>
+				<div class="emms22__hero-home__registered__btn-calendar">
+					<a title="Add to Calendar" class="emms22__button addeventatc" data-id="iS14401775" rel="noopener" href="https://www.addevent.com/event/iS14401775" target="_blank">EMMS DÍA 1</a>
+					<a title="Add to Calendar" class="emms22__button addeventatc" data-id="pl14402520" rel="noopener" href="https://www.addevent.com/event/pl14402520" target="_blank">EMMS DÍA 2</a>
+				</div>
 				<ul class="emms22__hero-home__intro__counter">
 					<li>
 						<p>FALTAN</p>
@@ -76,6 +75,31 @@ require_once('config.php');
 						<span class="emms22__hero-home__intro__counter__number--data">segundos</span>
 					</li>
 				</ul>
+				<div class="emms22__share">
+					<ul>
+						<li>¡COMPARTE ESTE EVENTO!</li>
+						<li>
+							<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/sharer.php?u=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+								<img src="../html/img/share-facebook.svg" alt="Facebook">
+							</a>
+						</li>
+						<li>
+							<a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://URL', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+								<img src="../html/img/share-tw.svg" alt="Twitter">
+							</a>
+						</li>
+						<li>
+							<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
+								<img src="../html/img/share-in.svg" alt="Linkedin">
+							</a>
+						</li>
+						<li>
+							<a href="https://api.whatsapp.com/send?text=https://goemms.com/" target="_blank">
+								<img src="../html/img/share-whats.svg" alt="Whatsapp">
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 		</div>
@@ -120,7 +144,6 @@ require_once('config.php');
 						<h2>Llega una nueva edición del evento más esperado por la comunidad del Marketing.</h2>
 						<p>Una oportunidad para descubrir las últimas tendencias y estrategias que implementan los líderes del mundo para hacer crecer sus negocios.</p>
 						<p><strong>Inspírate y capacítate desde la comodidad de tu casa.</strong> Súmate ahora al evento que te acercará a los mayores expertos en Marketing Digital.</p>
-						<a href="#form" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
 					</div>
 					<div class="emms22__description__video emms22__fade-in">
 						<video src="./html/img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
@@ -178,7 +201,6 @@ require_once('config.php');
 					<div class="emms22__speakers__action">
 						<p class="emms22__fade-in">Próximamente conocerás los Speakers 2022.</p>
 						<p class="emms22__fade-in">Regístrate gratis ahora y descubre antes que nadie las últimas novedades del <strong>EMMS</strong>.</p>
-						<a href="#form" class="emms22__button emms22__fade-in">APÚNTATE AHORA</a>
 					</div>
 				</div>
 			</div>

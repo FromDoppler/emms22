@@ -13,7 +13,8 @@ require_once('config.php');
 	<?php
 	include_once('commonHeader.php');
 	?>
-
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
 	<script type="text/javascript" src="./html/js/script.js?version=<?= VERSION ?>"></script>
 	<link rel="stylesheet" href="..\html\css\libs\intl-tel-input\intelInput.css">
 	<link rel="stylesheet" href="..\html\css\libs\intl-tel-input\intelInput.min.css">
@@ -29,14 +30,15 @@ require_once('config.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href=""><img src="./html/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./index.php"><img src="../html/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<div class="emms22__header__warning emms22__fade-top">
-					<a>&iexcl;&Uacute;LTIMOS LUGARES DISPONIBLES! REG&Iacute;STRATE GRATIS AHORA</a>
+					<a>¡ÚLTIMOS LUGARES DISPONIBLES! REGÍSTRATE GRATIS AHORA</a>
 				</div>
-				<ul class="emms22__header__nav">
-					<li><a href="">inicio</a></li>
-					<li><a href="">ediciones anteriores</a></li>
+				<a class="emms22__header__nav--mb" id="btn-burger"></a>
+				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
+					<li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
+					<li><a href="./editions.php">ediciones anteriores</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -80,8 +82,33 @@ require_once('config.php');
 						</ul>
 						<span>EARLY BIRDS: Preinscripci&oacute;n hasta el 15 de agosto.</span>
 					</div>
-					<div class="emms22__hero-home__intro__share"></div>
+					<div class="emms22__share">
+						<ul>
+							<li>¡COMPARTE ESTE EVENTO!</li>
+							<li>
+								<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/sharer.php?u=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+									<img src="../html/img/share-facebook.svg" alt="Facebook">
+								</a>
+							</li>
+							<li>
+								<a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://URL', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+									<img src="../html/img/share-tw.svg" alt="Twitter">
+								</a>
+							</li>
+							<li>
+								<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
+									<img src="../html/img/share-in.svg" alt="Linkedin">
+								</a>
+							</li>
+							<li>
+								<a href="https://api.whatsapp.com/send?text=https://goemms.com/" target="_blank">
+									<img src="../html/img/share-whats.svg" alt="Whatsapp">
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+
 				<div class="emms22__home__container-form parallax-form">
 					<form class="emms22__home__form" id="earlyForm" novalidate autocomplete="off">
 						<ul class="emms22__home__form__field-group">
@@ -423,7 +450,7 @@ require_once('config.php');
 						<h2>Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing.</h2>
 						<p>Una oportunidad para descubrir las &uacute;ltimas tendencias y estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios.</p>
 						<p><strong>Insp&iacute;rate y capac&iacute;tate desde la comodidad de tu casa.</strong> S&uacute;mate ahora al evento que te acercar&aacute; a los mayores expertos en Marketing Digital.</p>
-						<a href="#form" class="emms22__button emms22__fade-in">PREINSCRIPCI&Oacute;N GRATUITA</a>
+						<a data-scroll="form" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
 					</div>
 					<div class="emms22__description__video emms22__fade-in">
 						<video src="./html/img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
@@ -481,7 +508,7 @@ require_once('config.php');
 					<div class="emms22__speakers__action">
 						<p class="emms22__fade-in">Pr&oacute;ximamente conocer&aacute;s los Speakers 2022.</p>
 						<p class="emms22__fade-in">Reg&iacute;strate gratis ahora y descubre antes que nadie las &uacute;ltimas novedades del <strong>EMMS</strong>.</p>
-						<a href="#form" class="emms22__button emms22__fade-in">AP&Uacute;NTATE AHORA</a>
+						<a data-scroll="form" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">APÚNTATE AHORA</a>
 					</div>
 				</div>
 			</div>
@@ -494,7 +521,7 @@ require_once('config.php');
 		<div class="emms22__partners">
 			<div class="emms22__container--md">
 				<h3 class="emms22__fade-in">Nos han acompa&ntilde;ado en ediciones anteriores</h3>
-				<ul class="emms22__partners_list">
+				<ul class="emms22__partners_list emms22__partners_list--dk">
 					<li class="emms22__fade-in"><img src="./html/img/logo-metricool.png" alt="Metricol"></li>
 					<li class="emms22__fade-in"><img src="./html/img/logo-wayra.png" alt="Wayra"></li>
 					<li class="emms22__fade-in"><img src="./html/img/logo-asociacion-marketing-espana.png" alt="Asociaci&oacute;n Marketing Espa&ntilde;a"></li>
@@ -511,7 +538,28 @@ require_once('config.php');
 					<li class="emms22__fade-in"><img src="./html/img/logo-airbnb.png" alt="Airbnb"></li>
 					<li class="emms22__fade-in"><img src="./html/img/logo-woocommerce.png" alt="Woocommerce"></li>
 				</ul>
-				<p class="emms22__fade-in">&iquest;Quieres ser Media Partner del EMMS 2022? Escr&iacute;benos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></p>
+				<div class="emms22__partners_list emms22__partners_list--mb main-carousel" data-flickity='{ "prevNextButtons": false, "autoPlay": true }'>
+					<div class="carousel-cell">
+						<div><img src="../html/img/logo-metricool.png" alt="Metricol"></div>
+						<div><img src="../html/img/logo-wayra.png" alt="Wayra"></div>
+						<div><img src="../html/img/logo-asociacion-marketing-espana.png" alt="Asociación Marketing España"></div>
+						<div><img src="../html/img/logo-camece.png" alt="Camece"></div>
+						<div><img src="../html/img/logo-capece.png" alt="Capece"></div>
+						<div><img src="../html/img/logo-amvo.png" alt="Amvo"></div>
+						<div><img src="../html/img/logo-linkedin.png" alt="Linkedin"></div>
+						<div><img src="../html/img/logo-bigbox.png" alt="Bigbox"></div>
+					</div>
+					<div class="carousel-cell">
+						<div><img src="../html/img/logo-semrush.png" alt="Semrush"></div>
+						<div><img src="../html/img/logo-crehana.png" alt="Crehana"></div>
+						<div><img src="../html/img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></div>
+						<div><img src="../html/img/logo-vtex.png" alt="Vtex"></div>
+						<div><img src="../html/img/logo-banco-frances.png" alt="Banco Francés"></div>
+						<div><img src="../html/img/logo-airbnb.png" alt="Airbnb"></div>
+						<div><img src="../html/img/logo-woocommerce.png" alt="Woocommerce"></div>
+					</div>
+				</div>
+				<p class="emms22__fade-in">¿Quieres ser Media Partner del EMMS 2022? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></p>
 			</div>
 		</div>
 

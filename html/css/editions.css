@@ -8,6 +8,11 @@
 .emms22__hero__container {
   display: flex;
 }
+
+.emms22__hero__container.emms22__hero__container--editions{
+	padding-top: 4rem;
+}
+
 .emms22__hero__content,
 .emms22__hero__content__video {
   display: flex;
