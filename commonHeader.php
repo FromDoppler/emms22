@@ -4,14 +4,14 @@
 	<meta name="theme-color" content="#3F0453">
 
 	<meta name="title" content="EMMS 2022: El mayor evento de Marketing Digital">
-	<meta name="description" content="Llega una nueva edición del evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. Gratis y online. ¡Reserva tu cupo ahora!">
+	<meta name="description" content="Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing. Descubre las &uacute;ltimas tendencias y las estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios. Gratis y online. &iexcl;Reserva tu cupo ahora!">
 	<meta name="keywords" content="">
 	<meta name="language" content="Spanish">
 	<meta name="revisit-after" content="15 days">
 	<meta name="author" content="Doppler">
 
 	<meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
-	<meta property="og:description" content="Llega una nueva edición del evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. Gratis y online. ¡Reserva tu cupo ahora!">
+	<meta property="og:description" content="Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing. Descubre las &uacute;ltimas tendencias y las estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios. Gratis y online. &iexcl;Reserva tu cupo ahora!">
 	<meta property="og:image" content="https://goemms.com/html/img/share.png">
 	<meta property="og:url" content="https://goemms.com/">
 	<meta property="og:site_name" content="EMMS 2022: El mayor evento de Marketing Digital">
