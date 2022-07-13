@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EMMS 2022: Ediciones anteriores</title>
 
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css?version=<?= VERSION ?>">
   <link rel="stylesheet" href="../css/editions.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/constants.css">
@@ -19,11 +19,12 @@
 
     <!-- Header -->
     <nav class="emms22__header">
-      <div class="emms22__container--lg">
+      <div class="emms22__container--lg emms22__fade-in">
         <div class="emms22__header__logo">
           <a href=""><img src="../img/logo-emms.png" alt="Emms 2022"></a>
         </div>
-        <ul class="emms22__header__nav">
+        <a class="emms22__header__nav--mb" id="btn-burger"><img src="../img/icon-burger.svg" alt="Menú"></a>
+        <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
           <li><a href="https://goemms.com/" target="_blank">inicio</a></li>
           <li><a href="">ediciones anteriores</a></li>
         </ul>
@@ -33,7 +34,7 @@
     <!-- Hero -->
     <section class="emms22__hero">
       <div class="emms22__container--lg emms22__hero__container">
-        <div class="emms22__hero__content">
+        <div class="emms22__hero__content emms22__fade-in">
           <h1>Somos Doppler</h1>
           <p>
             Desde 2007 organizamos EMMS, el evento online y gratuito del que se han nutrido para hacer crecer sus
@@ -43,32 +44,31 @@
           <p>Somos la herramienta líder del mercado hispanohablante. Multiplica tus conversiones y fideliza a tu
             audiencia
             a través de Campañas de Email Marketing y Marketing Automation, SMS, y Emails Transaccionales.</p>
-          <button class="emms22__button"><a href="https://www.fromdoppler.com/" target="_blank" rel="noopener">DESCUBRE
+          <button class="emms22__hero__button"><a href="https://www.fromdoppler.com/?origin=emms-edicionesanteriores"
+              target="_blank" rel="noopener">DESCUBRE
               MÁS SOBRE DOPPLER</a>
           </button>
         </div>
-        <div class="emms22__hero__content__video">
-
+        <div class="emms22__hero__content__video emms22__fade-in">
           <video class="padding-top" autoplay muted loop>
             <source src="../img/video-ediciones-anteriores-2022-compress.mp4" type="video/mp4"
               alt="Video de ediciones anteriores" />
           </video>
-
         </div>
       </div>
     </section>
 
     <!-- Section previous editions -->
     <section class="emms22__editions">
-      <div class="emms22__container--md">
+      <div class="emms22__container--md emms22__fade-in">
         <div class="emms22__editions__wrapper">
-          <div class="emms22__editions__content">
+          <div class="emms22__editions__content emms22__fade-in">
             <h2>Revive las ediciones anteriores</h2>
             <p>¿Te has perdido alguno de nuestros eventos o quieres revivirlo? Disfruta gratis todas las conferencias y
               potencia tu negocio junto a los líderes del Marketing Digital.</p>
           </div>
 
-          <div class="emms22__editions__first__card__content">
+          <div class="emms22__editions__first__card__content emms22__fade-in">
             <div class="emms22__editions__first__card__img">
               <img src="../img/emms/emms2021.png" alt="EMMS 2021">
             </div>
@@ -87,7 +87,7 @@
 
           <div class="emms22__editions__cards__container">
             <div class="emms22__editions__content__cards">
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2020.png" alt="EMMS 2020">
                 <h4>EMMS 2020</h4>
                 <p>A lo largo de 5 días, 18 oradores de primer nivel compartieron su conocimiento sobre Marketing
@@ -99,7 +99,7 @@
                   rel="noopener">Revive el evento</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2019.png" alt="EMMS 2019">
                 <h4>EMMS 2019</h4>
                 <p>Las temáticas más votadas por el público y los especialistas que están cambiando el Marketing
@@ -110,7 +110,7 @@
                   target="_blank" rel="noopener">Mira las conferencias</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2018.png" alt="EMMS 2018">
                 <h4>EMMS 2018</h4>
                 <p>Las conferencias en inglés con traducción en simultáneo marcaron un antes y un después para los
@@ -120,7 +120,7 @@
                   target="_blank" rel="noopener">Mira las conferencias</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2017.png" alt="EMMS 2017">
                 <h4>EMMS 2017</h4>
                 <p>¡La décima edición tuvo récord de registros! Fueron 8 conferencias organizadas en nivel inicial y
@@ -129,7 +129,7 @@
                   target="_blank" rel="noopener">Mira las conferencias</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2016.png" alt="EMMS 2016">
                 <h4>EMMS 2016</h4>
                 <p>Se sumaron novedosos formatos como charlas motivacionales, entrevistas a expertos, debates en vivo
@@ -140,7 +140,7 @@
                   rel="noopener">Disfruta cada formato</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2015.png" alt="EMMS 2015">
                 <h4>EMMS 2015</h4>
                 <p>Como cada edición, el EMMS se renovó. Las conferencias se convirtieron en un evento de dos días con
@@ -150,7 +150,7 @@
                   rel="noopener">Descubre lo que pasó</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2014.png" alt="EMMS 2014">
                 <h4>EMMS 2014</h4>
                 <p>El evento se transformó volviéndose 100% online, internacional y gratis. Con una duración de 10
@@ -160,7 +160,7 @@
                   rel="noopener">Escucha las ponencias</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2013.png" alt="EMMS 2013">
                 <h4>EMMS 2013</h4>
                 <p>Por primera vez el evento viajó por 5 países: Ecuador, España, República Dominicana, México y
@@ -169,7 +169,7 @@
                 <a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8qr7C4nts3AwCXRP3fPi1y1" target="_blank"
                   rel="noopener">Mira los videos</a>
               </div>
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2012.png" alt="EMMS 2012">
                 <h4>EMMS 2012</h4>
                 <p>Inspirado en el “fin del mundo” volvió el EMMS para salvar a aquellos que no pensaban actualizarse
@@ -179,7 +179,7 @@
                   rel="noopener">Dale play a las charlas</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2011.png" alt="EMMS 2011">
                 <h4>EMMS 2011</h4>
                 <p>El evento más relevante de Marketing Online llegó a México. Se discutieron temas como el Mobile
@@ -188,7 +188,7 @@
                   rel="noopener">Mira las conferencias</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2010.png" alt="EMMS 2010">
                 <h4>EMMS 2010</h4>
                 <p>Los asistentes aprendieron sobre análisis de Métricas, Social Email Marketing, Diseño y Conversión,
@@ -199,7 +199,7 @@
                   rel="noopener">Disfruta las Capacitaciones</a>
               </div>
 
-              <div class="emms22__editions__cards">
+              <div class="emms22__editions__cards emms22__fade-in">
                 <img src="../img/emms/emms2009.png" alt="EMMS 2009">
                 <h4>EMMS 2009</h4>
                 <p>Solo 500 personas tuvieron la posibilidad de vivir este evento en Buenos Aires, Argentina.
@@ -215,8 +215,46 @@
       </div>
     </section>
 
+    <!-- Footer -->
+
+    <footer class="emms22__footer">
+      <div class="emms22__footer__event emms22__fade-in">
+        <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/"
+            target="_blank"><img src="../img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+      </div>
+      <div class="emms22__footer__social emms22__fade-in">
+        <ul>
+          <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="../img/icono-instagram.svg"
+                alt="Instagram"></a></li>
+          <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img
+                src="../img/icono-facebook.svg" alt="Facebook"></a></li>
+          <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="../img/icono-youtube.svg"
+                alt="Youtube"></a></li>
+          <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="../img/icono-linkedin.svg"
+                alt="Linkedin"></a></li>
+          <li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="../img/icono-twitter.svg"
+                alt="Twitter"></a></li>
+        </ul>
+      </div>
+      <div class="emms22__footer__actions emms22__fade-in">
+        <a href="#" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
+        <a href="https://qa.fromdoppler.com/es/legal/privacidad/?utm_source=direct" target="_blank">Políticas de
+          privacidad
+          y legales</a>
+      </div>
+    </footer>
+
   </main>
 
+  <script src="../js/animations.js?version=<?= VERSION ?>"></script>
+  <script>
+    // Mobile nav
+    const heading = document.getElementById('nav-mb');
+    const btn = document.getElementById('btn-burger');
+    btn.addEventListener('click', (e) => {
+      heading.classList.toggle('emms22__header__nav--hidden');
+    });
+  </script>
 
 </body>
 
