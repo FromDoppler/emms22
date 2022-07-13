@@ -88,7 +88,7 @@ var now = new Date();
 var current_year = now.getFullYear();
 var next_year = current_year + 1; 
 
-var target_date = new Date("Oct 18, " + current_year).getTime();
+var target_date = new Date("Nov 9, " + current_year).getTime();
  
 var days, hours, minutes, seconds;
  
@@ -181,3 +181,24 @@ function setShareLinks() {
 }
 
 
+// Mobile nav
+
+const heading = document.getElementById('nav-mb');
+const btn = document.getElementById('btn-burger');
+btn.addEventListener('click', (e) => {
+    heading.classList.toggle('emms22__header__nav--hidden');
+    btn.classList.toggle('emms22__header__nav--mb--active');
+});
+
+	
+// Flickity Carousel
+
+var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity(elem, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    prevNextButtons: false,
+    fade: true,
+    wrapAround: true
+});

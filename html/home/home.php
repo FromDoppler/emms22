@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMMS 2022</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
     <link rel="stylesheet" href="../css/styles.css?version=<?= VERSION ?>">
    
 </head>
@@ -25,9 +27,9 @@
                 <div class="emms22__header__warning emms22__fade-top">
                     <a>¡ÚLTIMOS LUGARES DISPONIBLES! REGÍSTRATE GRATIS AHORA</a>
                 </div>
-                <a class="emms22__header__nav--mb" id="btn-burger"><img src="../img/icon-burger.svg" alt="Menú"></a>
+                <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
-                    <li><a href="">inicio</a></li>
+                    <li><a href="" class="emms22__header__nav--btn-active">inicio</a></li>
                     <li><a href="">ediciones anteriores</a></li>
                 </ul>
             </div>
@@ -71,7 +73,7 @@
                         </ul>
                         <span>EARLY BIRDS: Preinscripción hasta el 15 de agosto.</span>
                     </div>
-                    <div class="emms22__hero-home__intro__share">
+                    <div class="emms22__share">
                         <ul>
                             <li>¡COMPARTE ESTE EVENTO!</li>
                             <li>
@@ -380,10 +382,10 @@
             </div>
 
             <!-- El siguiente div .emms22__hero-home__registered es el que se activa luego del registro en el form -->
-            <!-- <div class="emms22__hero-home__registered">
+<!--             <div class="emms22__hero-home__registered">
                 <h2>¡Ya eres parte del EMMS 2022!</h2>
                 <p>Te mantendremos informado de las últimas novedades a través de tu Email.</p>
-                <a href="">Agrega el evento a tu calendario.</a>
+                <a title="Add to Calendar" class="addeventatc" data-id="Tm14391098" href="https://www.addevent.com/event/Tm14391098" target="_blank">Agrega el evento a tu calendario.</a>
                 <ul class="emms22__hero-home__intro__counter">
                         <li><p>FALTAN</p></li>
                         <li class="emms22__hero-home__intro__counter__number">
@@ -402,7 +404,32 @@
                             <div><span id="s2"></span></div>
                             <span class="emms22__hero-home__intro__counter__number--data">segundos</span>
                         </li>
-                    </ul>
+                </ul>
+                <div class="emms22__share">
+                        <ul>
+                            <li>¡COMPARTE ESTE EVENTO!</li>
+                            <li>
+                                <a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/sharer.php?u=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+                                    <img src="../img/share-facebook.svg" alt="Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://URL', 'Twitter', 'toolbar=0, status=0, width=550, height=350');"> 
+                                    <img src="../img/share-tw.svg" alt="Twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');"> 
+                                    <img src="../img/share-in.svg" alt="Linkedin">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://api.whatsapp.com/send?text=https://goemms.com/" target="_blank"> 
+                                    <img src="../img/share-whats.svg" alt="Whatsapp">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
             </div> -->
 
         </div>
@@ -518,7 +545,7 @@
         <div class="emms22__partners">
             <div class="emms22__container--md">
                 <h3 class="emms22__fade-in">Nos han acompañado en ediciones anteriores</h3>
-                <ul class="emms22__partners_list">
+                <ul class="emms22__partners_list emms22__partners_list--dk">
                     <li class="emms22__fade-in"><img src="../img/logo-metricool.png" alt="Metricol"></li>
                     <li class="emms22__fade-in"><img src="../img/logo-wayra.png" alt="Wayra"></li>
                     <li class="emms22__fade-in"><img src="../img/logo-asociacion-marketing-espana.png" alt="Asociación Marketing España"></li>
@@ -535,6 +562,27 @@
                     <li class="emms22__fade-in"><img src="../img/logo-airbnb.png" alt="Airbnb"></li>
                     <li class="emms22__fade-in"><img src="../img/logo-woocommerce.png" alt="Woocommerce"></li>
                 </ul>
+                <div class="emms22__partners_list emms22__partners_list--mb main-carousel" data-flickity='{ "prevNextButtons": false, "autoPlay": true }'>
+                    <div class="carousel-cell">
+                        <div><img src="../img/logo-metricool.png" alt="Metricol"></div>
+                        <div><img src="../img/logo-wayra.png" alt="Wayra"></div>
+                        <div><img src="../img/logo-asociacion-marketing-espana.png" alt="Asociación Marketing España"></div>
+                        <div><img src="../img/logo-camece.png" alt="Camece"></div>
+                        <div><img src="../img/logo-capece.png" alt="Capece"></div>
+                        <div><img src="../img/logo-amvo.png" alt="Amvo"></div>
+                        <div><img src="../img/logo-linkedin.png" alt="Linkedin"></div>
+                        <div><img src="../img/logo-bigbox.png" alt="Bigbox"></div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div><img src="../img/logo-semrush.png" alt="Semrush"></div>
+                        <div><img src="../img/logo-crehana.png" alt="Crehana"></div>
+                        <div><img src="../img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></div>
+                        <div><img src="../img/logo-vtex.png" alt="Vtex"></div>
+                        <div><img src="../img/logo-banco-frances.png" alt="Banco Francés"></div>
+                        <div><img src="../img/logo-airbnb.png" alt="Airbnb"></div>
+                        <div><img src="../img/logo-woocommerce.png" alt="Woocommerce"></div>
+                    </div>
+                </div>
                 <p class="emms22__fade-in">¿Quieres ser Media Partner del EMMS 2022? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></p>
             </div>
         </div>
@@ -856,16 +904,9 @@
     </main>
 
     <script src="../js/animations.js?version=<?= VERSION ?>"></script>
-    <script>
-        // Mobile nav
+    <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 
-console.log("hola")
-
-const heading = document.getElementById('nav-mb');
-const btn = document.getElementById('btn-burger');
-btn.addEventListener('click', (e) => {
-  heading.classList.toggle('emms22__header__nav--hidden');
-});
-    </script>
 </body>
 </html>

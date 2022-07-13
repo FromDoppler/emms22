@@ -40,3 +40,23 @@
 .emms22__footer__actions a:hover{
     text-decoration: underline;
 }
+
+@media(max-width:1200px){
+    .emms22__footer{
+        display: block;
+        padding: 78px 20px 33px 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    .emms22__footer__event{
+        margin: 0 0 22px 0;
+    }
+
+    .emms22__footer__social{
+        position: absolute;
+        top: 33px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
