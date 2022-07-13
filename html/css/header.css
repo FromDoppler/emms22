@@ -14,6 +14,8 @@
 .emms22__header__logo a {
   max-width: 100px;
   display: inline-block;
+  position: relative;
+  z-index: 1;
 }
 
 .emms22__header__logo a img {
@@ -37,6 +39,10 @@
   transition-duration: 0.2s;
 }
 
+.emms22__header__nav li a.emms22__header__nav--btn-active{
+    opacity: 1;
+}
+
 .emms22__header__nav li a:hover {
   opacity: 1;
   transition-duration: 0.2s;
@@ -51,6 +57,8 @@
 
 .emms22__header__nav--mb{
     display: none;
+    position: relative;
+    z-index: 1;
 }
 
 .emms22__header.emms22__header-scroll{
@@ -72,8 +80,8 @@
   }
 }
 
-@media(max-width:992px){
-    .emms22__header__nav{
+@media(max-width:800px){
+    .emms22__header__nav--hidden{
         display: none;
     }
 
@@ -83,6 +91,36 @@
 
     .emms22__header__nav--mb{
         display: inline-block;
+        width: 27px;
+        cursor: pointer;
+        background: url(../img/icon-burger.svg) no-repeat;
+        background-size: contain;
+    }
+
+    .emms22__header__nav--mb.emms22__header__nav--mb--active{
+        background: url(../img/icon-close-white.png) no-repeat;
+        background-size: 22px;
+    }
+
+    .emms22__header__nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 120px 30px 30px 30px;
+        box-sizing: border-box;
+    }
+
+    .emms22__header__nav li{
+        display: block;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    .emms22__header__nav li:nth-child(2){
+        margin-left: 0;
     }
 }
 
