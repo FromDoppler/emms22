@@ -41,6 +41,22 @@
     text-decoration: underline;
 }
 
+.emms22__footer__actions #ot-sdk-btn.ot-sdk-show-settings{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 16px;
+    color: #33AD73;
+}
+
+.emms22__footer__actions #ot-sdk-btn.ot-sdk-show-settings:hover{
+    text-decoration: underline;
+    opacity: 1;
+    color: #33ac74;
+}
+
+.emms22__footer__actions #ot-sdk-btn.ot-sdk-show-settings::after{
+    content: ".";
+}
+
 @media(max-width:1200px){
     .emms22__footer{
         display: block;

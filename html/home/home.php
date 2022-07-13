@@ -379,13 +379,19 @@
                             </div>
                     </form>
                 </div>
-            </div>
+            </div> 
 
             <!-- El siguiente div .emms22__hero-home__registered es el que se activa luego del registro en el form -->
 <!--             <div class="emms22__hero-home__registered">
                 <h2>¡Ya eres parte del EMMS 2022!</h2>
-                <p>Te mantendremos informado de las últimas novedades a través de tu Email.</p>
-                <a title="Add to Calendar" class="addeventatc" data-id="Tm14391098" href="https://www.addevent.com/event/Tm14391098" target="_blank">Agrega el evento a tu calendario.</a>
+                <div class="emms22__hero-home__registered__text">
+                    <p>Te mantendremos informado de las últimas novedades a través de tu Email.</p>
+                    <p>Agrega el evento a tu calendario para no perderlo de vista :)</p>
+                </div>
+                <div class="emms22__hero-home__registered__btn-calendar">
+                    <a title="Add to Calendar" class="emms22__button addeventatc" data-id="Tm14391098" href="https://www.addevent.com/event/Tm14391098" target="_blank">EMMS DÍA 1</a>
+                    <a title="Add to Calendar" class="emms22__button addeventatc" data-id="Tm14391098" href="https://www.addevent.com/event/Tm14391098" target="_blank">EMMS DÍA 2</a>
+                </div>
                 <ul class="emms22__hero-home__intro__counter">
                         <li><p>FALTAN</p></li>
                         <li class="emms22__hero-home__intro__counter__number">
@@ -474,7 +480,7 @@
                         <h2>Llega una nueva edición del evento más esperado por la comunidad del Marketing.</h2>
                         <p>Una oportunidad para descubrir las últimas tendencias y estrategias que implementan los líderes del mundo para hacer crecer sus negocios.</p>
                         <p><strong>Inspírate y capacítate desde la comodidad de tu casa.</strong> Súmate ahora al evento que te acercará a los mayores expertos en Marketing Digital.</p>
-                        <a href="#form" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
+                        <a data-scroll="form" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
                     </div>
                     <div class="emms22__description__video emms22__fade-in">
                         <video src="../img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
@@ -532,7 +538,7 @@
                     <div class="emms22__speakers__action">
                         <p class="emms22__fade-in">Próximamente conocerás los Speakers 2022.</p>
                         <p class="emms22__fade-in">Regístrate gratis ahora y descubre antes que nadie las últimas novedades del <strong>EMMS</strong>.</p>
-                        <a href="#form" class="emms22__button emms22__fade-in">APÚNTATE AHORA</a>
+                        <a data-scroll="form" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">APÚNTATE AHORA</a>
                     </div>
                 </div>
             </div>
@@ -896,7 +902,7 @@
                 </ul>
             </div>
             <div class="emms22__footer__actions emms22__fade-in">
-                <a href="#" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
+                <a href="#" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies</a>
                 <a href="https://qa.fromdoppler.com/es/legal/privacidad/?utm_source=direct" target="_blank">Políticas de privacidad y legales</a>
             </div>
         </footer>
