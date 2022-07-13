@@ -463,30 +463,60 @@
     line-height: 59px;
     color: #fff;
     margin: 0 0 51px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s ;
 }
 
-.emms22__hero-home__registered p{
-    font-size: 19px;
+.emms22__hero-home__registered .emms22__hero-home__registered__text{
+    margin: 0 0 40px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s ;
+}
+
+.emms22__hero-home__registered .emms22__hero-home__registered__text p{
+    font-size: 16px;
     line-height: 24px;
     color: #fff;
-    margin: 0 0 40px 0;
+    margin: 0;
+}
+
+.emms22__hero-home__registered__btn-calendar{
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s ;
 }
 
 .emms22__hero-home__registered a.addeventatc{
     font-family: "Proxima-Nova-Bold";
-    font-size: 19px;
-    line-height: 24px;
-    color: #33AD73 !important;
-    background: none;
+    font-size: 18px;
+    line-height: 51px;
+    color: #fff !important;
     padding: 0;
+    width: 164px;
+    height: 51px;
+    background: #33AD73;
+    margin: 0 11px;
 }
 
 .emms22__hero-home__registered a.addeventatc span{
     display: none;
 }
 
-.emms22__hero-home__registered a:hover{
-    text-decoration: underline;
+.emms22__hero-home__registered a.addeventatc:hover{
+    background: #008046;
+    transition: all 0.1s ease-in-out;
+}
+
+.emms22__hero-home__registered .emms22__hero-home__intro__counter{
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
 }
 
 .emms22__hero-home__registered .emms22__hero-home__intro__counter li:nth-child(1){
@@ -500,6 +530,10 @@
 
 .emms22__hero-home__registered .emms22__share{
     margin: 52px 0 0 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
 }
 
 .emms22__hero-home__registered .emms22__share ul{
@@ -620,29 +654,37 @@
     }
 
     .emms22__hero-home__registered{
-        padding: 0 0 120px 0;
+        padding: 0 0 210px 0;
     }
 
     .emms22__hero-home__registered h2{
         font-size: 47px;
         line-height: 52px;
-        margin: 0 0 45px 0;
+        margin: 0 auto 45px auto;
+        max-width: 360px;
     }
 
-    .emms22__hero-home__registered p{
-        font-size: 15px;
-        line-height: 22px;
+    .emms22__hero-home__registered .emms22__hero-home__registered__text{
+        max-width: 280px;
+        margin: 0 auto 50px auto;
+    }
+
+    .emms22__hero-home__registered .emms22__hero-home__registered__text p:nth-child(1){
         margin: 0 0 20px 0;
     }
 
     .emms22__hero-home__registered a.addeventatc{
-        font-size: 15px;
-        line-height: 22px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .emms22__hero-home__registered a.addeventatc:nth-child(1){
+        margin: 0 auto 33px auto;
     }
 
     .emms22__hero-home__registered .emms22__hero-home__intro__counter{
         padding: 0px 0 22px 0;
-        margin: 40px 0 45px 0;
+        margin: 55px 0 45px 0;
     }
 
     .emms22__hero-home__registered .emms22__hero-home__intro__counter li{
@@ -818,6 +860,11 @@
   }
 
   @media(max-width:992px){
+
+    .emms22__numbers{
+        padding: 60px 0 117px 0;
+    }
+
     .emms22__numbers ul{
         display: block;
     }
@@ -830,7 +877,7 @@
 
   @media(max-width:620px){
     .emms22__numbers{
-        padding: 57px 0 30px 0;
+        padding: 0 0 30px 0;
     }
 
     .emms22__numbers .emms22__container--lg .parallax-waves{
@@ -951,7 +998,7 @@
 @media(max-width:620px){
 
     .emms22__description{
-        padding: 45px 0 64px 0;
+        padding: 87px 0 64px 0;
     }
 
     .emms22__description .emms22__description__text{
@@ -1236,7 +1283,7 @@
 @media(max-width:620px){
 
     .emms22__partners{
-        padding: 43px 0 66px 0;
+        padding: 76px 0 66px 0;
     }
 
     .emms22__partners h3{
