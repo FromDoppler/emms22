@@ -1,4 +1,5 @@
 const getLoged = localStorage.getItem('registered');
+
 const utm_source = (document.getElementById("utm_source").value != '' ? document.getElementById("utm_source").value : '');
 const utm_campaign = (document.getElementById("utm_campaign").value != '' ? document.getElementById("utm_campaign").value : '');
 const utm_content = (document.getElementById("utm_content").value != '' ? document.getElementById("utm_content").value : '');
@@ -13,20 +14,20 @@ function addParameterUTms() {
 	let newParamsUrl = '?';
 	let firstParam = true;
 	urlParamsValues.forEach((param, index) => {
-	if (param != null && firstParam && urlParamsValues[index]!="") {
-		newParamsUrl = newParamsUrl + urlParamsNames[index] + '=' + urlParamsValues[index];
-		firstParam = false;
-	} else if (param != null && !firstParam && urlParamsValues[index]!="") {
-		newParamsUrl = newParamsUrl + '&' + urlParamsNames[index] + '=' + urlParamsValues[index];
-	}
+		if (param != null && firstParam && urlParamsValues[index] != "") {
+			newParamsUrl = newParamsUrl + urlParamsNames[index] + '=' + urlParamsValues[index];
+			firstParam = false;
+		} else if (param != null && !firstParam && urlParamsValues[index] != "") {
+			newParamsUrl = newParamsUrl + '&' + urlParamsNames[index] + '=' + urlParamsValues[index];
+		}
 	});
-	return newParamsUrl;
+	return (newParamsUrl === '?' ? '' : newParamsUrl);
 }
 
 
 const checkUserNotLoged = function checkUserNotLoged() {
 	if (getLoged === null) {
-		window.location.href = '/index.php' + addParameterUTms() ;
+		window.location.href = '/index.php' + addParameterUTms();
 	}
 }
 
@@ -40,4 +41,11 @@ const checkUserLoged = function checkUserLoged() {
 
 }
 
-export { checkUserLoged, checkUserNotLoged };
+
+const changeNavLoged = function changeNavLoged() {
+	if (getLoged != null) {
+		document.getElementById('nav-ini').href = "registrado.php" + addParameterUTms();
+	}
+}
+
+export { checkUserLoged, checkUserNotLoged, changeNavLoged };
