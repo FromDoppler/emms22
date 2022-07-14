@@ -119,7 +119,7 @@ require_once('config.php');
 					<div class="emms22__home__container-form parallax-form">
 						<form class="emms22__home__form" id="earlyForm" novalidate autocomplete="off">
 							<ul class="emms22__home__form__field-group">
-								<li class="emms22__home__form__field-item" >
+								<li class="emms22__home__form__field-item">
 									<div class="holder">
 										<label class="required-label" for="name">Nombre *</label>
 										<input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name" autocomplete="off">
@@ -149,7 +149,7 @@ require_once('config.php');
 									<div class="holder">
 										<label class="required-label" for="country">Pa&iacute;s *</label>
 										<span class="dropdown-arrow"></span>
-										<select id="country" name="country" class="required"  autocomplete="off">
+										<select id="country" name="country" class="required" autocomplete="off">
 											<option disabled selected value>Elige un pa&iacute;s</option>
 											<option value="Afghanistan">Afghanistan</option>
 											<option value="Albania">Albania</option>
@@ -582,22 +582,22 @@ require_once('config.php');
 				<form class="emms22__home__form" novalidate autocomplete="off">
 					<div class="emms22__home__container-form__column">
 						<ul class="emms22__home__form__field-group">
-							<li class="emms22__home__form__field-item" >
+							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label class="required-label">Nombre *</label>
-									<input type="text" name="firstname"  placeholder="Tu nombre" class="required error-name" autocomplete="off">
+									<input type="text" name="firstname" placeholder="Tu nombre" class="required error-name" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item ">
 								<div class="holder">
 									<label class="required-label">Apellido *</label>
-									<input type="text" name="lastname"  placeholder="Tu apellido" class="required" autocomplete="off">
+									<input type="text" name="lastname" placeholder="Tu apellido" class="required" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label class="required-label">Email *</label>
-									<input type="email" name="email"  placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
+									<input type="email" name="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
@@ -610,7 +610,7 @@ require_once('config.php');
 								<div class="holder">
 									<label class="required-label">Pa&iacute;s *</label>
 									<span class="dropdown-arrow"></span>
-									<select id="country2" name="country" class="required"  autocomplete="off">
+									<select id="country2" name="country" class="required" autocomplete="off">
 										<option disabled selected value>Elige un pa&iacute;s</option>
 										<option value="Afghanistan">Afghanistan</option>
 										<option value="Albania">Albania</option>
@@ -810,7 +810,7 @@ require_once('config.php');
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label>Industria *</label>
-									<select name="industry-input"   class="required" autocomplete="off">
+									<select name="industry-input" class="required" autocomplete="off">
 										<option disabled selected value>Elige una industria</option>
 										<option value="Agencias-de-Empleo">Agencias de Empleo</option>
 										<option value="Alimentaci&oacute;n-Consumo-Masivo">Alimentaci&oacute;n / Consumo Masivo</option>
@@ -874,10 +874,10 @@ require_once('config.php');
 						</div>
 					</div>
 					<input type="hidden" id="utm_source" name="utm_source" value='<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : "" ?>' />
-                    <input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
-                    <input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
-                    <input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
-                    <input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
+					<input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
+					<input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
+					<input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
+					<input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
 
 				</form>
 			</div>
