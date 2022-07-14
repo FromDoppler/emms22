@@ -94,7 +94,6 @@
 
 .emms22__hero-home{
     position: relative;
-    padding-top: 156px;
 }
 
 .emms22__hero-home .emms22__container--lg{
@@ -169,7 +168,7 @@
 }
 
 .emms22__hero-home__intro__counter{
-    padding: 60px 0 20px 0;
+    padding: 200px 0 20px 0;
     margin: 0 0 50px 0;
 }
 
@@ -306,9 +305,13 @@
     display: block;
 }
 
+#contentEarlyForm{
+    padding: 140px 0 0 0;
+}
+
 .emms22__home__container-form{
     max-width: 425px;
-    width: 50%;
+    width: 100%;
     background: #5E3E94;
     border-radius: 14px;
     padding: 48px 36px;
@@ -573,6 +576,10 @@
         width: 100%;
     }
 
+    #contentEarlyForm{
+        padding: 40px 0 0 0;
+    }
+
     .emms22__home__container-form{
         max-width: initial;
         width: 100%;
@@ -586,6 +593,9 @@
 }
 
 @media(max-width:620px){
+    .emms22__hero-home{
+        padding-top: 136px;
+    }
     .emms22__hero-home__intro__counter{
         text-align: center;
         padding: 0px 0 56px 0;
