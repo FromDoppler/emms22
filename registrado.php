@@ -20,7 +20,7 @@ require_once('config.php');
 	<?php
 	include_once('commonHeader.php');
 	?>
-		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
 
 </head>
@@ -32,10 +32,10 @@ require_once('config.php');
 
 	<main class="emms22__home">
 		<input type="hidden" id="utm_source" name="utm_source" value='<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : "" ?>' />
-        <input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
-        <input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
-        <input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
-        <input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
+		<input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
+		<input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
+		<input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
+		<input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
 
 
 		<!-- Header -->
@@ -93,22 +93,22 @@ require_once('config.php');
 					<ul>
 						<li>¡COMPARTE ESTE EVENTO!</li>
 						<li>
-							<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/share.php?=http://goemms.com', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+							<a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https://goemms.com/', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
 								<img src="../html/<?= VERSION ?>/img/share-facebook.svg" alt="Facebook">
 							</a>
 						</li>
 						<li>
-							<a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://goemms.com', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+							<a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https://goemms.com/&text=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
 								<img src="../html/<?= VERSION ?>/img/share-tw.svg" alt="Twitter">
 							</a>
 						</li>
 						<li>
-							<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://goemms.com', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
+							<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2F&title=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
 								<img src="../html/<?= VERSION ?>/img/share-in.svg" alt="LinkedIn">
 							</a>
 						</li>
 						<li>
-							<a href="https://api.whatsapp.com/send?text=https://goemms.com/" target="_blank">
+							<a href="https://api.whatsapp.com/send?text=%20Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!%20%0Ahttps%3A%2F%2Fgoemms.com%2F" target="_blank">
 								<img src="../html/<?= VERSION ?>/img/share-whats.svg" alt="Whatsapp">
 							</a>
 						</li>
