@@ -48,6 +48,7 @@
   cursor: pointer;
   font-weight: bold;
   width: fit-content;
+  border-radius: 5px;
 }
 
 .emms22__404__button:hover {

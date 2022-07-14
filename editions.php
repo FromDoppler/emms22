@@ -41,7 +41,7 @@ require_once('config.php');
 		</nav>
 		<!-- Hero -->
 		<section class="emms22__hero">
-			<div class="emms22__container--lg emms22__hero__container emms22__hero__container--editions">
+			<div class="emms22__container--editions--lg emms22__hero__container">
 				<div class="emms22__hero__content emms22__fade-in">
 					<h1>Somos Doppler</h1>
 					<p>
@@ -66,7 +66,7 @@ require_once('config.php');
 
 		<!-- Section previous editions -->
 		<section class="emms22__editions">
-			<div class="emms22__container--md emms22__fade-in">
+			<div class="emms22__container--editions--md emms22__fade-in">
 				<div class="emms22__editions__wrapper">
 					<div class="emms22__editions__content emms22__fade-in">
 						<h2>Revive las ediciones anteriores</h2>
@@ -79,15 +79,15 @@ require_once('config.php');
 							<img src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="EMMS 2021">
 						</div>
 						<div class="emms22__editions__first__card__text">
-							<h4>EMMS 2021</h4>
-							<p>A lo largo de 5 días, 18 oradores de primer nivel compartieron su conocimiento sobre Marketing
-								Digital
-								enfocado en 5 industrias clave. ¡Las sesiones virtuales de Networking fueron el complemento
-								perfecto!
-							</p>
-							<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8pcO6n-OHDedWgmicdFuj_p" target="_blank" rel="noopener">Revive
-								el evento</a>
-						</div>
+              <h4>EMMS 2021</h4>
+              <p>Los líderes de la industria se reunieron para dar respuestas y soluciones a los desafíos actuales.
+                Revive esta edición
+                especial, pensada para todos aquellos que toman decisiones de negocio en su día a día y llevan sus
+                empresas al próximo
+                nivel.</p>
+              <a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8oeQSWPozYXCwdC9PKRNPiM" target="_blank"
+                rel="noopener">¡No te la pierdas!</a>
+            </div>
 					</div>
 
 					<div class="emms22__editions__cards__container">

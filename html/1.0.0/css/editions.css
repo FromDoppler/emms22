@@ -81,6 +81,7 @@
   margin: auto;
   width: 90%;
   flex-flow: row wrap;
+  padding-top: 8rem;
 }
 
 .emms22__container--editions--md {
