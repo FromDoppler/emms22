@@ -44,7 +44,9 @@ const checkUserLoged = function checkUserLoged() {
 
 const changeNavLoged = function changeNavLoged() {
 	if (getLoged != null) {
-		document.getElementById('nav-ini').href = "registrado.php" + addParameterUTms();
+		document.querySelectorAll('.nav-ini').forEach(item => {
+			item.href = "registrado.php" + addParameterUTms();
+		})
 	}
 }
 
