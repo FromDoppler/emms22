@@ -20,6 +20,8 @@ require_once('config.php');
 	<?php
 	include_once('commonHeader.php');
 	?>
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
 
 </head>
 
@@ -96,7 +98,7 @@ require_once('config.php');
 						</li>
 						<li>
 							<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
-								<img src="../html/<?= VERSION ?>/img/share-in.svg" alt="Linkedin">
+								<img src="../html/<?= VERSION ?>/img/share-in.svg" alt="LinkedIn">
 							</a>
 						</li>
 						<li>
@@ -119,19 +121,19 @@ require_once('config.php');
 				<h3 class="emms22__fade-in">EDICIONES ANTERIORES</h3>
 				<ul>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count1">+</p>
+						<p class="emms22__numbers__counter-text" id="count1">+200000</p>
 						<span>Inscritos</span>
 					</li>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count2"></p>
+						<p class="emms22__numbers__counter-text" id="count2">14</p>
 						<span>Ediciones</span>
 					</li>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count3">+</p>
+						<p class="emms22__numbers__counter-text" id="count3">+10</p>
 						<span>Países</span>
 					</li>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count4">+</p>
+						<p class="emms22__numbers__counter-text" id="count4">+150</p>
 						<span>Speakers</span>
 					</li>
 				</ul>
@@ -189,7 +191,7 @@ require_once('config.php');
 						</li>
 						<li class="emms22__fade-in">
 							<img src="./html/<?= VERSION ?>/img/speaker-alan-schulte.png" alt="Alan Schulte">
-							<p>Alan Schulte<span>Linkedin</span></p>
+							<p>Alan Schulte<span>LinkedIn</span></p>
 						</li>
 						<li class="emms22__fade-in">
 							<img src="./html/<?= VERSION ?>/img/speaker-ivette-chalela.png" alt="Ivette Chalela Naffah">
@@ -218,24 +220,45 @@ require_once('config.php');
 
 		<div class="emms22__partners">
 			<div class="emms22__container--md">
-				<h3 class="emms22__fade-in">Nos han acompañado en ediciones anteriores</h3>
-				<ul class="emms22__partners_list">
+				<h3 class="emms22__fade-in">Nos han acompa&ntilde;ado en ediciones anteriores</h3>
+				<ul class="emms22__partners_list emms22__partners_list--dk">
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-metricool.png" alt="Metricol"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-wayra.png" alt="Wayra"></li>
-					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-asociacion-marketing-espana.png" alt="Asociación Marketing España"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-asociacion-marketing-espana.png" alt="Asociaci&oacute;n Marketing Espa&ntilde;a"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-camece.png" alt="Camece"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-capece.png" alt="Capece"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-amvo.png" alt="Amvo"></li>
-					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-linkedin.png" alt="Linkedin"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-linkedin.png" alt="LinkedIn"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-bigbox.png" alt="Bigbox"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-semrush.png" alt="Semrush"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-crehana.png" alt="Crehana"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-vtex.png" alt="Vtex"></li>
-					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-banco-frances.png" alt="Banco Francés"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-banco-frances.png" alt="Banco Franc&eacute;s"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-woocommerce.png" alt="Woocommerce"></li>
 				</ul>
+				<div class="emms22__partners_list emms22__partners_list--mb main-carousel" data-flickity='{ "prevNextButtons": false, "autoPlay": true }'>
+					<div class="carousel-cell">
+						<div><img src="../html/<?= VERSION ?>/img/logo-metricool.png" alt="Metricol"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-wayra.png" alt="Wayra"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-asociacion-marketing-espana.png" alt="Asociación Marketing España"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-camece.png" alt="Camece"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-capece.png" alt="Capece"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-amvo.png" alt="Amvo"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-linkedin.png" alt="LinkedIn"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-bigbox.png" alt="Bigbox"></div>
+					</div>
+					<div class="carousel-cell">
+						<div><img src="../html/<?= VERSION ?>/img/logo-semrush.png" alt="Semrush"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-crehana.png" alt="Crehana"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-vtex.png" alt="Vtex"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-banco-frances.png" alt="Banco Francés"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-woocommerce.png" alt="Woocommerce"></div>
+					</div>
+				</div>
 				<p class="emms22__fade-in">¿Quieres ser Media Partner del EMMS 2022? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></p>
 			</div>
 		</div>
@@ -253,7 +276,7 @@ require_once('config.php');
 					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
 					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
 					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a></li>
-					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-linkedin.svg" alt="Linkedin"></a></li>
+					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
 					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
 				</ul>
 			</div>
@@ -264,6 +287,8 @@ require_once('config.php');
 		</footer>
 
 	</main>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 	<script src="/html/<?= VERSION ?>/js/animations.js?version=<?= VERSION ?>"></script>
 	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
 </body>
