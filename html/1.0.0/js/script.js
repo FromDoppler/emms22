@@ -1,9 +1,13 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', () => {
 	const earlyForms = document.querySelectorAll('form');
+	const utm_source = (document.getElementById("utm_source").value != '' ? document.getElementById("utm_source").value : '');
+	const utm_campaign = (document.getElementById("utm_campaign").value != '' ? document.getElementById("utm_campaign").value : '');
+ 	const utm_content = (document.getElementById("utm_content").value != '' ? document.getElementById("utm_content").value : '');
+  	const utm_term = (document.getElementById("utm_term").value != '' ? document.getElementById("utm_term").value : '');
+  	const utm_medium = (document.getElementById("utm_medium").value != '' ? document.getElementById("utm_medium").value : '');
 	const dialCodeContainer = document.querySelector('.iti__selected-dial-code');
 	earlyForms.forEach(form => { form.addEventListener('submit', sendData) });
-
 	function addParameterUTms() {
 
 		const urlParamsValues = [utm_medium, utm_source, utm_campaign, utm_term, utm_content]
