@@ -79,15 +79,14 @@ require_once('config.php');
 							<img src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="EMMS 2021">
 						</div>
 						<div class="emms22__editions__first__card__text">
-              <h4>EMMS 2021</h4>
-              <p>Los líderes de la industria se reunieron para dar respuestas y soluciones a los desafíos actuales.
-                Revive esta edición
-                especial, pensada para todos aquellos que toman decisiones de negocio en su día a día y llevan sus
-                empresas al próximo
-                nivel.</p>
-              <a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8oeQSWPozYXCwdC9PKRNPiM" target="_blank"
-                rel="noopener">¡No te la pierdas!</a>
-            </div>
+							<h4>EMMS 2021</h4>
+							<p>Los líderes de la industria se reunieron para dar respuestas y soluciones a los desafíos actuales.
+								Revive esta edición
+								especial, pensada para todos aquellos que toman decisiones de negocio en su día a día y llevan sus
+								empresas al próximo
+								nivel.</p>
+							<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8oeQSWPozYXCwdC9PKRNPiM" target="_blank" rel="noopener">¡No te la pierdas!</a>
+						</div>
 					</div>
 
 					<div class="emms22__editions__cards__container">
@@ -230,9 +229,9 @@ require_once('config.php');
 	</main>
 
 
-	<script src="/html/<?= VERSION ?>/js/animations.js?version=<?= VERSION ?>"></script>
+	
 	<script src="/html/<?= VERSION ?>/js/modules/jquery.min.js"></script>
-	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
+	<?php include_once('commonFooter.php') ?>
 
 </body>
 
