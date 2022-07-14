@@ -1,4 +1,4 @@
-	<title>EMMS 2021: Conferencias online de Marketing Digital.</title>
+	<title>EMMS 2022: Conferencias online de Marketing Digital.</title>
 	<meta name="robots" content="<?= (PRODUCTION) ? 'index, follow' : 'noindex, nofollow' ?>">
 
 	<meta name="theme-color" content="#3F0453">
