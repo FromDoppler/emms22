@@ -10,7 +10,7 @@ require_once('config.php');
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="module">
-		//	import {checkUserLoged} from './html/1.0.0/js/security.js'
+		//	import {checkUserLoged} from './html/<?= VERSION ?>/js/security.js'
 		//const checkUser = checkUserLoged;
 		//checkUser()
 	</script>
@@ -19,7 +19,7 @@ require_once('config.php');
 	?>
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-	<script type="text/javascript" src="./html/1.0.0/js/script.js?version=<?= VERSION ?>"></script>
+	<script type="text/javascript" src="./html/<?= VERSION ?>/js/script.js?version=<?= VERSION ?>"></script>
 	<link rel="stylesheet" href="..\html\<?= VERSION ?>\css\libs\intl-tel-input\intelInput.css">
 	<link rel="stylesheet" href="..\html\<?= VERSION ?>\css\libs\intl-tel-input\intelInput.min.css">
 </head>
@@ -34,7 +34,7 @@ require_once('config.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href="./index.php"><img src="../html/1.0.0/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./index.php"><img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<div class="emms22__header__warning emms22__fade-top">
 					<a>¡ÚLTIMOS LUGARES DISPONIBLES! REGÍSTRATE GRATIS AHORA</a>
@@ -50,7 +50,7 @@ require_once('config.php');
 		<!-- Hero -->
 		<div class="emms22__hero-home">
 			<div class="emms22__hero-home__back">
-				<video src="./html/1.0.0/img/background-loop-compress.mp4" loop muted autoplay playsinline></video>
+				<video src="./html/<?= VERSION ?>/img/background-loop-compress.mp4" loop muted autoplay playsinline></video>
 			</div>
 
 			<div class="emms22__container--lg">
@@ -91,22 +91,22 @@ require_once('config.php');
 							<li>¡COMPARTE ESTE EVENTO!</li>
 							<li>
 								<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/sharer.php?u=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
-									<img src="../html/1.0.0/img/share-facebook.svg" alt="Facebook">
+									<img src="../html/<?= VERSION ?>/img/share-facebook.svg" alt="Facebook">
 								</a>
 							</li>
 							<li>
 								<a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://URL', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
-									<img src="../html/1.0.0/img/share-tw.svg" alt="Twitter">
+									<img src="../html/<?= VERSION ?>/img/share-tw.svg" alt="Twitter">
 								</a>
 							</li>
 							<li>
 								<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
-									<img src="../html/1.0.0/img/share-in.svg" alt="Linkedin">
+									<img src="../html/<?= VERSION ?>/img/share-in.svg" alt="Linkedin">
 								</a>
 							</li>
 							<li>
 								<a href="https://api.whatsapp.com/send?text=https://goemms.com/" target="_blank">
-									<img src="../html/1.0.0/img/share-whats.svg" alt="Whatsapp">
+									<img src="../html/<?= VERSION ?>/img/share-whats.svg" alt="Whatsapp">
 								</a>
 							</li>
 						</ul>
@@ -457,7 +457,7 @@ require_once('config.php');
 						<a data-scroll="form" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
 					</div>
 					<div class="emms22__description__video emms22__fade-in">
-						<video src="./html/1.0.0/img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
+						<video src="./html/<?= VERSION ?>/img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
 					</div>
 				</div>
 			</div>
@@ -469,43 +469,43 @@ require_once('config.php');
 					<h2 class="emms22__fade-in">Algunos de los conferencistas que han pasado por las &uacute;ltimas ediciones de EMMS:</h2>
 					<ul class="emms22__speakers__list">
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-neil-patel.png" alt="Neil Patel">
+							<img src="./html/<?= VERSION ?>/img/speaker-neil-patel.png" alt="Neil Patel">
 							<p>Neil Patel<span>NP Digital</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-vero-ruiz-del-vizo.png" alt="Vero Ruiz del Vizo">
+							<img src="./html/<?= VERSION ?>/img/speaker-vero-ruiz-del-vizo.png" alt="Vero Ruiz del Vizo">
 							<p>Vero Ruiz del Vizo<span>Amarillo Creative Lab</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-tim-ash.png" alt="Tim Ash">
+							<img src="./html/<?= VERSION ?>/img/speaker-tim-ash.png" alt="Tim Ash">
 							<p>Tim Ash<span>Timash.com</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-pablo-castellano.png" alt="Pablo Castellano">
+							<img src="./html/<?= VERSION ?>/img/speaker-pablo-castellano.png" alt="Pablo Castellano">
 							<p>Pablo Castellano<span>SocialMood</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-marcos-pueyrredon.png" alt="Marcos Pueyrred&oacute;n">
+							<img src="./html/<?= VERSION ?>/img/speaker-marcos-pueyrredon.png" alt="Marcos Pueyrred&oacute;n">
 							<p>Marcos Pueyrred&oacute;n<span>VTEX</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-julia-rayeb.png" alt="Julia Rayeb">
+							<img src="./html/<?= VERSION ?>/img/speaker-julia-rayeb.png" alt="Julia Rayeb">
 							<p>Julia Rayeb<span>Facebook</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-alan-schulte.png" alt="Alan Schulte">
+							<img src="./html/<?= VERSION ?>/img/speaker-alan-schulte.png" alt="Alan Schulte">
 							<p>Alan Schulte<span>Linkedin</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-ivette-chalela.png" alt="Ivette Chalela Naffah">
+							<img src="./html/<?= VERSION ?>/img/speaker-ivette-chalela.png" alt="Ivette Chalela Naffah">
 							<p>Ivette Chalela Naffah<span>Waze Ads</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-lolo-alvarez-diaz.png" alt="Lolo Alvarez D&iacute;az">
+							<img src="./html/<?= VERSION ?>/img/speaker-lolo-alvarez-diaz.png" alt="Lolo Alvarez D&iacute;az">
 							<p>Lolo Alvarez D&iacute;az<span>Arcos Dorados</span></p>
 						</li>
 						<li class="emms22__fade-in">
-							<img src="./html/1.0.0/img/speaker-gustavo-orjuela.png" alt="Gustavo Orjuela">
+							<img src="./html/<?= VERSION ?>/img/speaker-gustavo-orjuela.png" alt="Gustavo Orjuela">
 							<p>Gustavo Orjuela<span>Wayra</span></p>
 						</li>
 					</ul>
@@ -526,41 +526,41 @@ require_once('config.php');
 			<div class="emms22__container--md">
 				<h3 class="emms22__fade-in">Nos han acompa&ntilde;ado en ediciones anteriores</h3>
 				<ul class="emms22__partners_list emms22__partners_list--dk">
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-metricool.png" alt="Metricol"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-wayra.png" alt="Wayra"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-asociacion-marketing-espana.png" alt="Asociaci&oacute;n Marketing Espa&ntilde;a"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-camece.png" alt="Camece"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-capece.png" alt="Capece"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-amvo.png" alt="Amvo"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-linkedin.png" alt="Linkedin"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-bigbox.png" alt="Bigbox"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-semrush.png" alt="Semrush"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-crehana.png" alt="Crehana"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-vtex.png" alt="Vtex"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-banco-frances.png" alt="Banco Franc&eacute;s"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-airbnb.png" alt="Airbnb"></li>
-					<li class="emms22__fade-in"><img src="./html/1.0.0/img/logo-woocommerce.png" alt="Woocommerce"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-metricool.png" alt="Metricol"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-wayra.png" alt="Wayra"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-asociacion-marketing-espana.png" alt="Asociaci&oacute;n Marketing Espa&ntilde;a"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-camece.png" alt="Camece"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-capece.png" alt="Capece"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-amvo.png" alt="Amvo"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-linkedin.png" alt="Linkedin"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-bigbox.png" alt="Bigbox"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-semrush.png" alt="Semrush"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-crehana.png" alt="Crehana"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-vtex.png" alt="Vtex"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-banco-frances.png" alt="Banco Franc&eacute;s"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-woocommerce.png" alt="Woocommerce"></li>
 				</ul>
 				<div class="emms22__partners_list emms22__partners_list--mb main-carousel" data-flickity='{ "prevNextButtons": false, "autoPlay": true }'>
 					<div class="carousel-cell">
-						<div><img src="../html/1.0.0/img/logo-metricool.png" alt="Metricol"></div>
-						<div><img src="../html/1.0.0/img/logo-wayra.png" alt="Wayra"></div>
-						<div><img src="../html/1.0.0/img/logo-asociacion-marketing-espana.png" alt="Asociación Marketing España"></div>
-						<div><img src="../html/1.0.0/img/logo-camece.png" alt="Camece"></div>
-						<div><img src="../html/1.0.0/img/logo-capece.png" alt="Capece"></div>
-						<div><img src="../html/1.0.0/img/logo-amvo.png" alt="Amvo"></div>
-						<div><img src="../html/1.0.0/img/logo-linkedin.png" alt="Linkedin"></div>
-						<div><img src="../html/1.0.0/img/logo-bigbox.png" alt="Bigbox"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-metricool.png" alt="Metricol"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-wayra.png" alt="Wayra"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-asociacion-marketing-espana.png" alt="Asociación Marketing España"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-camece.png" alt="Camece"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-capece.png" alt="Capece"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-amvo.png" alt="Amvo"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-linkedin.png" alt="Linkedin"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-bigbox.png" alt="Bigbox"></div>
 					</div>
 					<div class="carousel-cell">
-						<div><img src="../html/1.0.0/img/logo-semrush.png" alt="Semrush"></div>
-						<div><img src="../html/1.0.0/img/logo-crehana.png" alt="Crehana"></div>
-						<div><img src="../html/1.0.0/img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></div>
-						<div><img src="../html/1.0.0/img/logo-vtex.png" alt="Vtex"></div>
-						<div><img src="../html/1.0.0/img/logo-banco-frances.png" alt="Banco Francés"></div>
-						<div><img src="../html/1.0.0/img/logo-airbnb.png" alt="Airbnb"></div>
-						<div><img src="../html/1.0.0/img/logo-woocommerce.png" alt="Woocommerce"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-semrush.png" alt="Semrush"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-crehana.png" alt="Crehana"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-vtex.png" alt="Vtex"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-banco-frances.png" alt="Banco Francés"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-woocommerce.png" alt="Woocommerce"></div>
 					</div>
 				</div>
 				<p class="emms22__fade-in">¿Quieres ser Media Partner del EMMS 2022? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></p>
@@ -877,15 +877,15 @@ require_once('config.php');
 
 		<footer class="emms22__footer">
 			<div class="emms22__footer__event emms22__fade-in">
-				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img src="./html/1.0.0/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img src="./html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
 			</div>
 			<div class="emms22__footer__social emms22__fade-in">
 				<ul>
-					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="./html/1.0.0/img/icono-instagram.svg" alt="Instagram"></a></li>
-					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="./html/1.0.0/img/icono-facebook.svg" alt="Facebook"></a></li>
-					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="./html/1.0.0/img/icono-youtube.svg" alt="Youtube"></a></li>
-					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/1.0.0/img/icono-linkedin.svg" alt="Linkedin"></a></li>
-					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="./html/1.0.0/img/icono-twitter.svg" alt="Twitter"></a></li>
+					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
+					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
+					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a></li>
+					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-linkedin.svg" alt="Linkedin"></a></li>
+					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
 				</ul>
 			</div>
 			<div class="emms22__footer__actions emms22__fade-in">
@@ -895,11 +895,11 @@ require_once('config.php');
 		</footer>
 
 	</main>
-	<script src="/html/1.0.0/js/animations.js?version=<?= VERSION ?>"></script>
-	<script src="/html/1.0.0/js/modules/jquery.min.js"></script>
-	<script src="/html/1.0.0/js/modules/intlTelInput/intlTelInput.min.js"></script>
-	<script src="/html/1.0.0/js/modules/intlTelInput/intlTelInput.js"></script>
-	<script src="/html/1.0.0/js/modules/intlTelInput/phoneValidation.js"></script>
+	<script src="/html/<?= VERSION ?>/js/animations.js?version=<?= VERSION ?>"></script>
+	<script src="/html/<?= VERSION ?>/js/modules/jquery.min.js"></script>
+	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.min.js"></script>
+	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.js"></script>
+	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/phoneValidation.js"></script>
 	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
 </body>
 
