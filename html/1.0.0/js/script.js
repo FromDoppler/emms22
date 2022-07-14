@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					.then(resp => resp)
 					.then(resp => {
 						localStorage.setItem('registered', true);
-						window.location.href = '/secondIndex.php' + addParameterUTms(); //relative to domain
+						window.location.href = '/registrado.php' + addParameterUTms(); //relative to domain
 					})
 					.catch((error) => {
 						// Tenemos la respuesta de errores

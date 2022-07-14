@@ -29,7 +29,7 @@ const checkUserNotLoged = function checkUserNotLoged() {
 const checkUserLoged = function checkUserLoged() {
 
 	if (getLoged != null) {
-		window.location.href = '/secondIndex.php' + addParameterUTms();
+		window.location.href = '/registrado.php' + addParameterUTms();
 	}
 
 }
