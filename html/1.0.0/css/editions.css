@@ -9,8 +9,8 @@
   display: flex;
 }
 
-.emms22__hero__container.emms22__hero__container--editions{
-	padding-top: 4rem;
+.emms22__hero__container.emms22__hero__container--editions {
+  padding-top: 4rem;
 }
 
 .emms22__hero__content,
@@ -30,6 +30,7 @@
   font-weight: 700;
   line-height: 79px;
   margin: 0;
+  color: #ffffff;
 }
 
 .emms22__hero__content p {
@@ -37,6 +38,7 @@
   font-weight: 400;
   line-height: 24px;
   max-width: 500px;
+  color: #ffffff;
 }
 
 .emms22__hero__content button {
@@ -54,7 +56,6 @@
 
 .emms22__hero__content__video video {
   max-width: 512px;
-  padding: 3rem;
 }
 
 .emms22__hero__button {
@@ -66,11 +67,28 @@
   cursor: pointer;
   font-weight: bold;
   width: fit-content;
+  border-radius: 5px;
 }
 
 .emms22__hero__button:hover {
   background-color: #008046;
   transition: all 0.35s ease;
+}
+
+.emms22__container--editions--lg {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  width: 90%;
+  flex-flow: row wrap;
+}
+
+.emms22__container--editions--md {
+  display: flex;
+  max-width: 990px;
+  margin: auto;
+  width: 90%;
+  justify-content: center;
 }
 
 .emms22__editions__wrapper {
@@ -114,18 +132,40 @@
 .emms22__editions__first__card__content {
   display: flex;
   gap: 3rem;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .emms22__editions__first__card__img {
   display: flex;
   flex: 4;
-  justify-content: end;
+  justify-content: start;
 }
 .emms22__editions__first__card__text {
   display: flex;
   flex: 8;
   flex-direction: column;
+}
+
+.emms22__editions__first__card__text h4 {
+  margin-bottom: 0;
+}
+
+.emms22__editions__first__card__text h4,
+p {
+  color: #333333;
+}
+
+.emms22__editions__cards {
+  display: flex;
+  flex-direction: column;
+}
+.emms22__editions__cards h4,
+p {
+  color: #333333;
+}
+
+.emms22__editions__cards a {
+  margin-top: auto;
 }
 
 .emms22__editions__cards__container {
@@ -140,7 +180,7 @@
 
 .emms22__editions__content__cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 3rem;
 }
@@ -163,38 +203,39 @@
   transition: all 0.35s ease;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .emms22__hero__container {
+    flex-direction: column;
     text-align: center;
+    gap: 3rem;
   }
 
   .emms22__hero__content {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     flex: 1;
   }
+
+  .emms22__hero__content p {
+    max-width: 70vw;
+  }
+  .emms22__header__nav--mb {
+    display: none;
+  }
 }
 
-.emms22__header__nav--mb {
-  display: none;
+@media only screen and (max-width: 1025px) {
+  .emms22__editions__wrapper {
+    width: 80%;
+  }
 }
 
-@media only screen and (max-width: 1222px) {
-  .emms22__hero__content__video {
+@media only screen and (max-width: 898px) {
+  .emms22__editions__wrapper {
+    width: 80%;
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 512px;
+    justify-content: center;
   }
-}
-
-@media only screen and (max-width: 1116px) {
-  .emms22__hero__content__video {
-    display: block;
-    max-width: 512px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
   .emms22__editions__first__card__content {
     display: flex;
     flex-direction: column;
@@ -202,8 +243,19 @@
     width: 100%;
     align-items: center;
     gap: 0rem;
+    max-width: 300px;
   }
+}
 
+@media only screen and (max-width: 874px) {
+  .emms22__editions__content__cards {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .emms22__editions__first__card__img,
   .emms22__editions__first__card__text {
     justify-content: center;
@@ -245,5 +297,28 @@
   }
   .emms22__header__nav li:nth-child(2) {
     margin-left: 0;
+  }
+
+  .emms22__hero__content__video video {
+    max-width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .emms22__hero__button {
+    font-size: 16px;
+    padding: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .emms22__hero__button {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 316px) {
+  .emms22__hero__button {
+    font-size: 14px;
   }
 }
