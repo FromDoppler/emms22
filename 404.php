@@ -26,7 +26,7 @@ require_once('config.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg">
 				<div class="emms22__header__logo">
-					<a href="index.php"><img src="../html/img/logo-emms.png?version=<?= VERSION ?>" alt="Emms 2022" id="logo-emms-404"></a>
+					<a href="index.php"><img src="../html/<?= VERSION ?>/img/logo-emms.png?version=<?= VERSION ?>" alt="Emms 2022" id="logo-emms-404"></a>
 				</div>
 			</div>
 		</nav>
@@ -51,7 +51,7 @@ require_once('config.php');
 		</section>
 
 	</main>
-
+	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
 </body>
 
 </html>

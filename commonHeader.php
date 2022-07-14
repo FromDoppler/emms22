@@ -12,12 +12,12 @@
 
 	<meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:description" content="Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing. Descubre las &uacute;ltimas tendencias y las estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios. Gratis y online. &iexcl;Reserva tu cupo ahora!">
-	<meta property="og:image" content="html/img/img/share.png">
+	<meta property="og:image" content="html/<?= VERSION ?>/img/img/share.png">
 	<meta property="og:url" content="https://goemms.com/">
 	<meta property="og:site_name" content="EMMS 2022: El mayor evento de Marketing Digital">
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="html/img/img/share.png">
+	<meta name="twitter:image" content="html/<?= VERSION ?>/img/img/share.png">
 	<meta name="twitter:image:alt" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -26,11 +26,11 @@
 	<link hreflang="x-default" href="https://goemms.com/" rel="alternate" />
 	<link hreflang="es-ar" href="https://goemms.com/" rel="alternate" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="html/img/apple-touch-icon.png?version=1.0.59">
-	<link rel="icon" type="image/png" sizes="32x32" href="html/img/favicon-32x32.png?version=1.0.59">
-	<link rel="icon" type="image/png" sizes="16x16" href="html/img/favicon-16x16.png?version=1.0.59">
+	<link rel="apple-touch-icon" sizes="180x180" href="html/<?= VERSION ?>/img/apple-touch-icon.png?version=1.0.59">
+	<link rel="icon" type="image/png" sizes="32x32" href="html/<?= VERSION ?>/img/favicon-32x32.png?version=1.0.59">
+	<link rel="icon" type="image/png" sizes="16x16" href="html/<?= VERSION ?>/img/favicon-16x16.png?version=1.0.59">
 
-	<link rel="stylesheet" href="..\html\css\styles.css?version=<?= VERSION ?>">
+	<link rel="stylesheet" href="..\html\<?= VERSION ?>\css\styles.css?version=<?= VERSION ?>">
 
 	<script src='https://www.fromdoppler.com//wp-content/themes/doppler_site/utm/utm.js?version=1.0.109'></script>
 	<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
