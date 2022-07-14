@@ -103,7 +103,7 @@ require_once('config.php');
 							</li>
 							<li>
 								<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
-									<img src="../html/<?= VERSION ?>/img/share-in.svg" alt="Linkedin">
+									<img src="../html/<?= VERSION ?>/img/share-in.svg" alt="LinkedIn">
 								</a>
 							</li>
 							<li>
@@ -496,7 +496,7 @@ require_once('config.php');
 						</li>
 						<li class="emms22__fade-in">
 							<img src="./html/<?= VERSION ?>/img/speaker-alan-schulte.png" alt="Alan Schulte">
-							<p>Alan Schulte<span>Linkedin</span></p>
+							<p>Alan Schulte<span>LinkedIn</span></p>
 						</li>
 						<li class="emms22__fade-in">
 							<img src="./html/<?= VERSION ?>/img/speaker-ivette-chalela.png" alt="Ivette Chalela Naffah">
@@ -534,7 +534,7 @@ require_once('config.php');
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-camece.png" alt="Camece"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-capece.png" alt="Capece"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-amvo.png" alt="Amvo"></li>
-					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-linkedin.png" alt="Linkedin"></li>
+					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-linkedin.png" alt="LinkedIn"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-bigbox.png" alt="Bigbox"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-semrush.png" alt="Semrush"></li>
 					<li class="emms22__fade-in"><img src="./html/<?= VERSION ?>/img/logo-crehana.png" alt="Crehana"></li>
@@ -552,7 +552,7 @@ require_once('config.php');
 						<div><img src="../html/<?= VERSION ?>/img/logo-camece.png" alt="Camece"></div>
 						<div><img src="../html/<?= VERSION ?>/img/logo-capece.png" alt="Capece"></div>
 						<div><img src="../html/<?= VERSION ?>/img/logo-amvo.png" alt="Amvo"></div>
-						<div><img src="../html/<?= VERSION ?>/img/logo-linkedin.png" alt="Linkedin"></div>
+						<div><img src="../html/<?= VERSION ?>/img/logo-linkedin.png" alt="LinkedIn"></div>
 						<div><img src="../html/<?= VERSION ?>/img/logo-bigbox.png" alt="Bigbox"></div>
 					</div>
 					<div class="carousel-cell">
@@ -886,7 +886,7 @@ require_once('config.php');
 					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
 					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
 					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a></li>
-					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-linkedin.svg" alt="Linkedin"></a></li>
+					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
 					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="./html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
 				</ul>
 			</div>
