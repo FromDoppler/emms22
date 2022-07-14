@@ -26,13 +26,13 @@
 	<link hreflang="x-default" href="https://goemms.com/" rel="alternate" />
 	<link hreflang="es-ar" href="https://goemms.com/" rel="alternate" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="html/<?= VERSION ?>/img/apple-touch-icon.png?version=1.0.59">
-	<link rel="icon" type="image/png" sizes="32x32" href="html/<?= VERSION ?>/img/favicon-32x32.png?version=1.0.59">
-	<link rel="icon" type="image/png" sizes="16x16" href="html/<?= VERSION ?>/img/favicon-16x16.png?version=1.0.59">
+	<link rel="apple-touch-icon" sizes="180x180" href="html/<?= VERSION ?>/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="html/<?= VERSION ?>/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="html/<?= VERSION ?>/img/favicon-16x16.png">
 
 	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
 
-	<script src='https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utm.js?version=1.0.10'></script>
+	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utm.js?version=<?= VERSION ?>"></script>
 	<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
 	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97<?= (PRODUCTION) ? '' : '-test' ?>"></script>
 	<script type="text/javascript">
