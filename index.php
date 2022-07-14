@@ -454,7 +454,7 @@ require_once('config.php');
 						<h2>Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing.</h2>
 						<p>Una oportunidad para descubrir las &uacute;ltimas tendencias y estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios.</p>
 						<p><strong>Insp&iacute;rate y capac&iacute;tate desde la comodidad de tu casa.</strong> S&uacute;mate ahora al evento que te acercar&aacute; a los mayores expertos en Marketing Digital.</p>
-						<a data-scroll="form" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
+						<a data-scroll="earlyForm" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
 					</div>
 					<div class="emms22__description__video emms22__fade-in">
 						<video src="./html/<?= VERSION ?>/img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
@@ -512,7 +512,7 @@ require_once('config.php');
 					<div class="emms22__speakers__action">
 						<p class="emms22__fade-in">Pr&oacute;ximamente conocer&aacute;s los Speakers 2022.</p>
 						<p class="emms22__fade-in">Reg&iacute;strate gratis ahora y descubre antes que nadie las &uacute;ltimas novedades del <strong>EMMS</strong>.</p>
-						<a data-scroll="form" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">APÚNTATE AHORA</a>
+						<a data-scroll="earlyForm" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">APÚNTATE AHORA</a>
 					</div>
 				</div>
 			</div>
