@@ -86,9 +86,9 @@ phoneInputField.addEventListener('blur', function () {
 
 // on keyup / change flag: reset
 phoneInputField.addEventListener('change', reset);
-phoneInputField.addEventListener('keyup', reset);
+phoneInputField.addEventListener('keyup', reset2);
 
-var reset = function () {
+var reset2 = function () {
 	$(phoneInputFieldFooter).closest('.holder').removeClass('error');
 };
 

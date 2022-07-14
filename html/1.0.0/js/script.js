@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if (_validateForm(this)) {
 
-			const holderPhone = document.getElementById("holder-phone");
+			const holderPhone = this.querySelector(".holder-phone");
 			const message = "Ouch! Escribe un teléfono válido.";
 
 			if (_checkPrefixPhoneExist(formData.get('phone-input').trim())) {
