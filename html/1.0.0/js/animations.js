@@ -207,14 +207,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	// Scroll to form
-
-	function scrollToElement(event) {
-		const scrollTarget = event.target.getAttribute('data-scroll');
-		const scrollElement = document.querySelector(`[id="${scrollTarget}"]`);
-
-		scrollElement.scrollIntoView({
-			behavior: 'smooth'
-		});
-	}
 });
+
+
+// Scroll to form
+
+function scrollToElement(event) {
+	const scrollTarget = event.target.getAttribute('data-scroll');
+	const scrollElement = document.querySelector(`[id="${scrollTarget}"]`);
+
+	scrollElement.scrollIntoView({
+		behavior: 'smooth'
+	});
+}
