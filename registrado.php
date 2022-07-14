@@ -87,7 +87,7 @@ require_once('config.php');
 					<ul>
 						<li>¡COMPARTE ESTE EVENTO!</li>
 						<li>
-							<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/sharer.php?u=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+							<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/share.php?=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
 								<img src="../html/<?= VERSION ?>/img/share-facebook.svg" alt="Facebook">
 							</a>
 						</li>

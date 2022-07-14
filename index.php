@@ -92,7 +92,7 @@ require_once('config.php');
 						<ul>
 							<li>¡COMPARTE ESTE EVENTO!</li>
 							<li>
-								<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/sharer.php?u=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+								<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/share.php?=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
 									<img src="../html/<?= VERSION ?>/img/share-facebook.svg" alt="Facebook">
 								</a>
 							</li>
@@ -349,7 +349,7 @@ require_once('config.php');
 								<li class="emms22__home__form__field-item">
 									<div class="holder">
 										<label for="industry-input">Industria *</label>
-										<select name="industry-input" type="text" placeholder="Tu industria" class="required" autocomplete="off">
+										<select name="industry-input" class="required" autocomplete="off">
 											<option disabled selected value>Elige una industria</option>
 											<option value="Agencias-de-Empleo">Agencias de Empleo</option>
 											<option value="Alimentaci&oacute;n-Consumo-Masivo">Alimentaci&oacute;n / Consumo Masivo</option>
