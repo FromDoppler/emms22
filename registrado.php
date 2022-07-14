@@ -93,17 +93,17 @@ require_once('config.php');
 					<ul>
 						<li>¡COMPARTE ESTE EVENTO!</li>
 						<li>
-							<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/share.php?=http://URL', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+							<a href="javascript: void(0);" onclick="window.open ('http://www.facebook.com/share.php?=http://goemms.com', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
 								<img src="../html/<?= VERSION ?>/img/share-facebook.svg" alt="Facebook">
 							</a>
 						</li>
 						<li>
-							<a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://URL', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+							<a href="javascript: void(0);" onclick="window.open ('http://www.twitter.com/share?url=http://goemms.com', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
 								<img src="../html/<?= VERSION ?>/img/share-tw.svg" alt="Twitter">
 							</a>
 						</li>
 						<li>
-							<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://URL', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
+							<a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/share?url=http://goemms.com', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
 								<img src="../html/<?= VERSION ?>/img/share-in.svg" alt="LinkedIn">
 							</a>
 						</li>
