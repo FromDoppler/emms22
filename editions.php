@@ -16,7 +16,7 @@ require_once('config.php');
 
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-	<script type="text/javascript" src="./html/js/script.js?version=<?= VERSION ?>"></script>
+	<script type="text/javascript" src="./html/1.0.0/js/script.js?version=<?= VERSION ?>"></script>
 
 </head>
 
@@ -30,7 +30,7 @@ require_once('config.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href="./index.php"><img src="../html/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./index.php"><img src="../html/1.0.0/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -58,7 +58,7 @@ require_once('config.php');
 				</div>
 				<div class="emms22__hero__content__video emms22__fade-in">
 					<video class="padding-top" autoplay muted loop>
-						<source src="../html/img/video-ediciones-anteriores-2022-compress.mp4" type="video/mp4" alt="Video de ediciones anteriores" />
+						<source src="../html/1.0.0/img/video-ediciones-anteriores-2022-compress.mp4" type="video/mp4" alt="Video de ediciones anteriores" />
 					</video>
 				</div>
 			</div>
@@ -76,7 +76,7 @@ require_once('config.php');
 
 					<div class="emms22__editions__first__card__content emms22__fade-in">
 						<div class="emms22__editions__first__card__img">
-							<img src="../html/img/emms/emms2021.png" alt="EMMS 2021">
+							<img src="../html/1.0.0/img/emms/emms2021.png" alt="EMMS 2021">
 						</div>
 						<div class="emms22__editions__first__card__text">
 							<h4>EMMS 2021</h4>
@@ -93,7 +93,7 @@ require_once('config.php');
 					<div class="emms22__editions__cards__container">
 						<div class="emms22__editions__content__cards">
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2020.png" alt="EMMS 2020">
+								<img src="../html/1.0.0/img/emms/emms2020.png" alt="EMMS 2020">
 								<h4>EMMS 2020</h4>
 								<p>A lo largo de 5 días, 18 oradores de primer nivel compartieron su conocimiento sobre Marketing
 									Digital
@@ -104,7 +104,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2019.png" alt="EMMS 2019">
+								<img src="../html/1.0.0/img/emms/emms2019.png" alt="EMMS 2019">
 								<h4>EMMS 2019</h4>
 								<p>Las temáticas más votadas por el público y los especialistas que están cambiando el Marketing
 									Digital
@@ -114,7 +114,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2018.png" alt="EMMS 2018">
+								<img src="../html/1.0.0/img/emms/emms2018.png" alt="EMMS 2018">
 								<h4>EMMS 2018</h4>
 								<p>Las conferencias en inglés con traducción en simultáneo marcaron un antes y un después para los
 									eventos
@@ -123,7 +123,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2017.png" alt="EMMS 2017">
+								<img src="../html/1.0.0/img/emms/emms2017.png" alt="EMMS 2017">
 								<h4>EMMS 2017</h4>
 								<p>¡La décima edición tuvo récord de registros! Fueron 8 conferencias organizadas en nivel inicial y
 									avanzado para que cada uno pudiera capacitarse en base a su experiencia y necesidades.</p>
@@ -131,7 +131,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2016.png" alt="EMMS 2016">
+								<img src="../html/1.0.0/img/emms/emms2016.png" alt="EMMS 2016">
 								<h4>EMMS 2016</h4>
 								<p>Se sumaron novedosos formatos como charlas motivacionales, entrevistas a expertos, debates en vivo
 									y
@@ -141,7 +141,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2015.png" alt="EMMS 2015">
+								<img src="../html/1.0.0/img/emms/emms2015.png" alt="EMMS 2015">
 								<h4>EMMS 2015</h4>
 								<p>Como cada edición, el EMMS se renovó. Las conferencias se convirtieron en un evento de dos días con
 									10
@@ -150,7 +150,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2014.png" alt="EMMS 2014">
+								<img src="../html/1.0.0/img/emms/emms2014.png" alt="EMMS 2014">
 								<h4>EMMS 2014</h4>
 								<p>El evento se transformó volviéndose 100% online, internacional y gratis. Con una duración de 10
 									horas
@@ -159,7 +159,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2013.png" alt="EMMS 2013">
+								<img src="../html/1.0.0/img/emms/emms2013.png" alt="EMMS 2013">
 								<h4>EMMS 2013</h4>
 								<p>Por primera vez el evento viajó por 5 países: Ecuador, España, República Dominicana, México y
 									Argentina,
@@ -167,7 +167,7 @@ require_once('config.php');
 								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8qr7C4nts3AwCXRP3fPi1y1" target="_blank" rel="noopener">Mira los videos</a>
 							</div>
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2012.png" alt="EMMS 2012">
+								<img src="../html/1.0.0/img/emms/emms2012.png" alt="EMMS 2012">
 								<h4>EMMS 2012</h4>
 								<p>Inspirado en el “fin del mundo” volvió el EMMS para salvar a aquellos que no pensaban actualizarse
 									con
@@ -176,7 +176,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2011.png" alt="EMMS 2011">
+								<img src="../html/1.0.0/img/emms/emms2011.png" alt="EMMS 2011">
 								<h4>EMMS 2011</h4>
 								<p>El evento más relevante de Marketing Online llegó a México. Se discutieron temas como el Mobile
 									Marketing, tendencias del mercado y se inauguró el panel de casos de éxito.</p>
@@ -184,7 +184,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2010.png" alt="EMMS 2010">
+								<img src="../html/1.0.0/img/emms/emms2010.png" alt="EMMS 2010">
 								<h4>EMMS 2010</h4>
 								<p>Los asistentes aprendieron sobre análisis de Métricas, Social Email Marketing, Diseño y Conversión,
 									en
@@ -194,7 +194,7 @@ require_once('config.php');
 							</div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
-								<img src="../html/img/emms/emms2009.png" alt="EMMS 2009">
+								<img src="../html/1.0.0/img/emms/emms2009.png" alt="EMMS 2009">
 								<h4>EMMS 2009</h4>
 								<p>Solo 500 personas tuvieron la posibilidad de vivir este evento en Buenos Aires, Argentina.
 									Tendencias
@@ -211,15 +211,15 @@ require_once('config.php');
 
 		<footer class="emms22__footer">
 			<div class="emms22__footer__event emms22__fade-in">
-				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img src="./html/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img src="./html/1.0.0/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
 			</div>
 			<div class="emms22__footer__social emms22__fade-in">
 				<ul>
-					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="./html/img/icono-instagram.svg" alt="Instagram"></a></li>
-					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="./html/img/icono-facebook.svg" alt="Facebook"></a></li>
-					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="./html/img/icono-youtube.svg" alt="Youtube"></a></li>
-					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/img/icono-linkedin.svg" alt="Linkedin"></a></li>
-					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="./html/img/icono-twitter.svg" alt="Twitter"></a></li>
+					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="./html/1.0.0/img/icono-instagram.svg" alt="Instagram"></a></li>
+					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="./html/1.0.0/img/icono-facebook.svg" alt="Facebook"></a></li>
+					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="./html/1.0.0/img/icono-youtube.svg" alt="Youtube"></a></li>
+					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="./html/1.0.0/img/icono-linkedin.svg" alt="Linkedin"></a></li>
+					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="./html/1.0.0/img/icono-twitter.svg" alt="Twitter"></a></li>
 				</ul>
 			</div>
 			<div class="emms22__footer__actions emms22__fade-in">
@@ -230,9 +230,9 @@ require_once('config.php');
 	</main>
 
 
-	<script src="/html/js/animations.js?version=<?= VERSION ?>"></script>
-	<script src="/html/js/modules/jquery.min.js"></script>
-
+	<script src="/html/1.0.0/js/animations.js?version=<?= VERSION ?>"></script>
+	<script src="/html/1.0.0/js/modules/jquery.min.js"></script>
+	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
 
 </body>
 

@@ -15,7 +15,7 @@ var countryName = 'Argentina';
 const phoneInput = window.intlTelInput(phoneInputField, {
 
 	utilsScript:
-		"html/js/modules/intlTelInput/utilScript-intel-input.js",
+		"html/1.0.0/js/modules/intlTelInput/utilScript-intel-input.js",
 	separateDialCode: true,
 	initialCountry: 'auto',
 	hiddenInput: 'full_phone',
@@ -39,7 +39,7 @@ const phoneInput = window.intlTelInput(phoneInputField, {
 const phoneInputFooter = window.intlTelInput(phoneInputFieldFooter, {
 
 	utilsScript:
-		"html/js/modules/intlTelInput/utilScript-intel-input.js",
+		"../../js/modules/intlTelInput/utilScript-intel-input.js",
 	separateDialCode: true,
 	initialCountry: 'auto',
 	hiddenInput: 'full_phone',
