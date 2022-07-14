@@ -784,82 +784,6 @@
     color: #333333;
 }
 
-@property --num1 {
-    syntax: "<integer>";
-    inherits: true;
-    initial-value: 100000;
-  }
-  
-  .emms22__fade-in-animation #count1::after {
-    counter-reset: my-counter1 var(--num1);
-    content: counter(my-counter1);
-    animation: count1 2s linear ;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes count1 {
-    to {
-      --num1: 200000;
-    }
-  }
-
-  @property --num2 {
-    syntax: "<integer>";
-    inherits: true;
-    initial-value: 0;
-  }
-  
-  .emms22__fade-in-animation #count2::after {
-    counter-reset: my-counter2 var(--num2);
-    content: counter(my-counter2);
-    animation: count2 2s linear ;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes count2 {
-    to {
-      --num2: 14;
-    }
-  }
-
-  @property --num3 {
-    syntax: "<integer>";
-    inherits: true;
-    initial-value: 0;
-  }
-  
-  .emms22__fade-in-animation #count3::after {
-    counter-reset: my-counter3 var(--num3);
-    content: counter(my-counter3);
-    animation: count3 2s linear ;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes count3 {
-    to {
-      --num3: 10;
-    }
-  }
-
-  @property --num4 {
-    syntax: "<integer>";
-    inherits: true;
-    initial-value: 0;
-  }
-  
-  .emms22__fade-in-animation #count4::after {
-    counter-reset: my-counter4 var(--num4);
-    content: counter(my-counter4);
-    animation: count4 2s linear ;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes count4 {
-    to {
-      --num4: 150;
-    }
-  }
-
   @media(max-width:992px){
 
     .emms22__numbers{
@@ -878,7 +802,7 @@
 
   @media(max-width:620px){
     .emms22__numbers{
-        padding: 0 0 30px 0;
+        padding: 60px 0 30px 0;
     }
 
     .emms22__numbers .emms22__container--lg .parallax-waves{

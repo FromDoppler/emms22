@@ -423,19 +423,19 @@ require_once('config.php');
 				<h3 class="emms22__fade-in">EDICIONES ANTERIORES</h3>
 				<ul>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count1">+</p>
+						<p class="emms22__numbers__counter-text" id="count1">+200000</p>
 						<span>Inscritos</span>
 					</li>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count2"></p>
+						<p class="emms22__numbers__counter-text" id="count2">14</p>
 						<span>Ediciones</span>
 					</li>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count3">+</p>
+						<p class="emms22__numbers__counter-text" id="count3">+10</p>
 						<span>Pa&iacute;ses</span>
 					</li>
 					<li class="emms22__fade-in">
-						<p class="emms22__numbers__counter-text" id="count4">+</p>
+						<p class="emms22__numbers__counter-text" id="count4">+150</p>
 						<span>Speakers</span>
 					</li>
 				</ul>
@@ -895,6 +895,8 @@ require_once('config.php');
 		</footer>
 
 	</main>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 	<script src="/html/<?= VERSION ?>/js/animations.js?version=<?= VERSION ?>"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/jquery.min.js"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.min.js"></script>
