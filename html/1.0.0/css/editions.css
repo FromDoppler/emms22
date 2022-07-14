@@ -149,10 +149,10 @@
 
 .emms22__editions__first__card__text h4 {
   margin-bottom: 0;
+  color: #333333;
 }
 
-.emms22__editions__first__card__text h4,
-p {
+.emms22__editions__first__card__text p {
   color: #333333;
 }
 
