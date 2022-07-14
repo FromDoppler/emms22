@@ -4,6 +4,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	const dialCodeContainer = document.querySelector('.iti__selected-dial-code');
 	earlyForms.forEach(form => { form.addEventListener('submit', sendData) });
 
+	function addParameterUTms() {
+
+		const urlParamsValues = [utm_medium, utm_source, utm_campaign, utm_term, utm_content]
+		const urlParamsNames = ['utm_medium', 'utm_source', 'utm_campaign', 'utm_term', 'utm_content'];
+		let newParamsUrl = '?';
+		let firstParam = true;
+		urlParamsValues.forEach((param, index) => {
+		if (param != null && firstParam && urlParamsValues[index]!="") {
+			newParamsUrl = newParamsUrl + urlParamsNames[index] + '=' + urlParamsValues[index];
+			firstParam = false;
+		} else if (param != null && !firstParam && urlParamsValues[index]!="") {
+			newParamsUrl = newParamsUrl + '&' + urlParamsNames[index] + '=' + urlParamsValues[index];
+		}
+		});
+
+		return newParamsUrl;
+	}
+
 	function sendData(e) {
 		e.preventDefault();
 		const formBtn = this.querySelector('button');
@@ -52,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					.then(resp => resp)
 					.then(resp => {
 						localStorage.setItem('registered', true);
-						window.location.href = '/secondIndex.php'; //relative to domain
+						window.location.href = '/secondIndex.php' + addParameterUTms(); //relative to domain
 					})
 					.catch((error) => {
 						// Tenemos la respuesta de errores
