@@ -905,14 +905,12 @@ require_once('config.php');
 		</footer>
 
 	</main>
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-	<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
-	<script src="/html/<?= VERSION ?>/js/animations.js?version=<?= VERSION ?>"></script>
+
 	<script src="/html/<?= VERSION ?>/js/modules/jquery.min.js"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.min.js"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.js"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/phoneValidation.js"></script>
-	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
+	<?php include_once('commonFooter.php') ?>
 </body>
 
 </html>
