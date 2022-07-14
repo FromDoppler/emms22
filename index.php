@@ -22,8 +22,8 @@ require_once('config.php');
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
 	<script type="text/javascript" src="./html/<?= VERSION ?>/js/script.js?version=<?= VERSION ?>"></script>
-	<link rel="stylesheet" href="..\html\<?= VERSION ?>\css\libs\intl-tel-input\intelInput.css">
-	<link rel="stylesheet" href="..\html\<?= VERSION ?>\css\libs\intl-tel-input\intelInput.min.css">
+	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/libs/intl-tel-input/intelInput.css">
+	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/libs/intl-tel-input/intelInput.min.css">
 </head>
 
 <body>
@@ -119,7 +119,7 @@ require_once('config.php');
 					<div class="emms22__home__container-form parallax-form">
 						<form class="emms22__home__form" id="earlyForm" novalidate autocomplete="off">
 							<ul class="emms22__home__form__field-group">
-								<li class="emms22__home__form__field-item" id="first-form-item">
+								<li class="emms22__home__form__field-item" >
 									<div class="holder">
 										<label class="required-label" for="name">Nombre *</label>
 										<input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name" autocomplete="off">
@@ -149,7 +149,7 @@ require_once('config.php');
 									<div class="holder">
 										<label class="required-label" for="country">Pa&iacute;s *</label>
 										<span class="dropdown-arrow"></span>
-										<select id="country" name="country" class="required" autocomplete="off" autocomplete="off">
+										<select id="country" name="country" class="required"  autocomplete="off">
 											<option disabled selected value>Elige un pa&iacute;s</option>
 											<option value="Afghanistan">Afghanistan</option>
 											<option value="Albania">Albania</option>
@@ -404,7 +404,7 @@ require_once('config.php');
 									<strong>Finalidad: </strong>Dar de alta esta suscripci&oacute;n para enviar newsletters con informaci&oacute;n y promociones de productos o servicios propios o de nuestros aliados.<br>
 									<strong>Legitimaci&oacute;n: </strong>Consentimiento del interesado. <br>
 									<strong>Destinatarios: </strong>Tus datos ser&aacute;n guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creaci&oacute;n de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integraci&oacute;n de apps.<br>
-									<strong>Informaci&oacute;n adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/?utm_source=goemms&utm_medium=footer&utm_campaign=politicasdeprivacidad" target="_blank" rel="noopener">Pol&iacute;tica de Privacidad</a> de Doppler encontrar&aacute;s informaci&oacute;n adicional
+									<strong>Informaci&oacute;n adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Pol&iacute;tica de Privacidad</a> de Doppler encontrar&aacute;s informaci&oacute;n adicional
 									sobre la recopilaci&oacute;n y el uso de su informaci&oacute;n personal por parte de Doppler, incluida
 									informaci&oacute;n sobre acceso, conservaci&oacute;n, rectificaci&oacute;n, eliminaci&oacute;n, seguridad,
 									transferencias
@@ -582,22 +582,22 @@ require_once('config.php');
 				<form class="emms22__home__form" novalidate autocomplete="off">
 					<div class="emms22__home__container-form__column">
 						<ul class="emms22__home__form__field-group">
-							<li class="emms22__home__form__field-item" id="first-form-item">
+							<li class="emms22__home__form__field-item" >
 								<div class="holder">
 									<label class="required-label">Nombre *</label>
-									<input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name" autocomplete="off">
+									<input type="text" name="firstname"  placeholder="Tu nombre" class="required error-name" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item ">
 								<div class="holder">
 									<label class="required-label">Apellido *</label>
-									<input type="text" name="lastname" id="lastname" placeholder="Tu apellido" class="required" autocomplete="off">
+									<input type="text" name="lastname"  placeholder="Tu apellido" class="required" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label class="required-label">Email *</label>
-									<input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
+									<input type="email" name="email"  placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
@@ -610,7 +610,7 @@ require_once('config.php');
 								<div class="holder">
 									<label class="required-label">Pa&iacute;s *</label>
 									<span class="dropdown-arrow"></span>
-									<select id="country2" name="country" class="required" autocomplete="off" autocomplete="off">
+									<select id="country2" name="country" class="required"  autocomplete="off">
 										<option disabled selected value>Elige un pa&iacute;s</option>
 										<option value="Afghanistan">Afghanistan</option>
 										<option value="Albania">Albania</option>
@@ -810,7 +810,7 @@ require_once('config.php');
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label>Industria *</label>
-									<select name="industry-input" type="text" placeholder="Tu industria" class="required" autocomplete="off">
+									<select name="industry-input"   class="required" autocomplete="off">
 										<option disabled selected value>Elige una industria</option>
 										<option value="Agencias-de-Empleo">Agencias de Empleo</option>
 										<option value="Alimentaci&oacute;n-Consumo-Masivo">Alimentaci&oacute;n / Consumo Masivo</option>
@@ -862,7 +862,7 @@ require_once('config.php');
 								<strong>Finalidad: </strong>Dar de alta esta suscripci&oacute;n para enviar newsletters con informaci&oacute;n y promociones de productos o servicios propios o de nuestros aliados.<br>
 								<strong>Legitimaci&oacute;n: </strong>Consentimiento del interesado. <br>
 								<strong>Destinatarios: </strong>Tus datos serán guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creación de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integración de apps.<br>
-								<strong>Información adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/?utm_source=goemms&utm_medium=footer&utm_campaign=politicasdeprivacidad" target="_blank" rel="noopener">Política de Privacidad</a> de Doppler encontrarás información adicional
+								<strong>Información adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Política de Privacidad</a> de Doppler encontrarás información adicional
 								sobre la recopilación y el uso de su información personal por parte de Doppler, incluida
 								información sobre acceso, conservación, rectificación, eliminación, seguridad,
 								transferencias
@@ -894,7 +894,7 @@ require_once('config.php');
 			</div>
 			<div class="emms22__footer__actions emms22__fade-in">
 				<a onclick="OneTrust.ToggleInfoDisplay()" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
-				<a href="https://qa.fromdoppler.com/es/legal/privacidad/?utm_source=direct" target="_blank">Políticas de privacidad y legales</a>
+				<a href="https://qa.fromdoppler.com/es/legal/privacidad/" target="_blank">Políticas de privacidad y legales</a>
 			</div>
 		</footer>
 
