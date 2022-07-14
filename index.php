@@ -139,7 +139,7 @@ require_once('config.php');
 
 							</li>
 							<li class="emms22__home__form__field-item">
-								<div class="holder">
+								<div class="holder holder-phone">
 									<label class="required-label" for="phone-input">Tel&eacute;fono *</label>
 									<input id="phone-input" name="phone-input" type="tel" class="required phone phone-number" autocomplete="off">
 								</div>
@@ -599,7 +599,7 @@ require_once('config.php');
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
-								<div class="holder">
+								<div class="holder holder-phone">
 									<label class="required-label">Tel&eacute;fono *</label>
 									<input id="phoneInputFooter" name="phone-input" type="tel" class="required phone phone-number" autocomplete="off">
 								</div>
