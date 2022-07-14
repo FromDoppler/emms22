@@ -30,7 +30,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="html/<?= VERSION ?>/img/favicon-32x32.png?version=1.0.59">
 	<link rel="icon" type="image/png" sizes="16x16" href="html/<?= VERSION ?>/img/favicon-16x16.png?version=1.0.59">
 
-	<link rel="stylesheet" href="..\html\<?= VERSION ?>\css\styles.css?version=<?= VERSION ?>">
+	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
 
 	<script src='https://www.fromdoppler.com//wp-content/themes/doppler_site/utm/utm.js?version=1.0.109'></script>
 	<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
