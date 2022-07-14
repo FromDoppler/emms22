@@ -457,7 +457,7 @@
     max-width: 890px;
     width: 90%;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 260px 0;
     text-align: center;
 }
 
@@ -518,6 +518,7 @@
 }
 
 .emms22__hero-home__registered .emms22__hero-home__intro__counter{
+    padding: 70px 0 20px 0;
     opacity: 0;
     animation: fade-in 1s;
     animation-fill-mode: forwards;
