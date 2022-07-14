@@ -32,7 +32,6 @@
 
 	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
 
-	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utm.js?version=<?= VERSION ?>"></script>
 	<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
 	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97<?= (PRODUCTION) ? '' : '-test' ?>"></script>
 	<script type="text/javascript">
