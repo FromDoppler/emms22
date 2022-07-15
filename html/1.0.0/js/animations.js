@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	var current_year = now.getFullYear();
 	var next_year = current_year + 1;
 
-	var target_date = new Date("Nov 9, " + current_year).getTime();
+	var target_date = new Date("November 9, " + current_year + ", 11:00:00").getTime();
 
 	var days, hours, minutes, seconds;
 
