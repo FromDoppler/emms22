@@ -121,7 +121,7 @@ require_once('config.php');
 							<ul class="emms22__home__form__field-group">
 								<li class="emms22__home__form__field-item">
 									<div class="holder">
-										<label class="required-label" for="name">Nombre *</label>
+										<label class="required-label" for="firstname">Nombre *</label>
 										<input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name" autocomplete="off">
 									</div>
 								</li>
