@@ -176,7 +176,7 @@ class Relay {
   </span>
   <center>
     <table width="100%" border="0" cellpadding="0" cellspacing="0"
-      style="background-image:url(https://goemms.com/services/utils/relay-confirmation-email/back.png); background-size: cover; background-position:center top; background-color: #310E44;">
+      style="background-image:url(https://goemms.com/utils/relay-confirmation-email/back.png); background-size: cover; background-position:center top; background-color: #310E44;">
       <tr>
         <td align="center" valign="top">
           <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper">
@@ -192,7 +192,7 @@ class Relay {
                         <tr>
                           <td align="center" valign="middle">
                             <a href="#" style="cursor: default;">
-                              <img src="https://goemms.com/services/utils/relay-confirmation-email/logo-emms.png"
+                              <img src="https://goemms.com/utils/relay-confirmation-email/logo-emms.png"
                                 style="width: 100%; max-width: 101px !important;" width="101" class="img"
                                 alt="Logo de EMMS by Doppler" />
                             </a>
@@ -332,35 +332,35 @@ class Relay {
                           <tr>
                             <td width="37" align="left">
                               <a href="https://twitter.com/fromDoppler" target="_blank">
-                                <img src="https://goemms.com/services/utils/relay-confirmation-email/twitter-icon.png"
+                                <img src="https://goemms.com/utils/relay-confirmation-email/twitter-icon.png"
                                   style="width: 100%; max-width: 32px !important;" width="32" class="img"
                                   alt="Twitter" />
                               </a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank">
-                                <img src="https://goemms.com/services/utils/relay-confirmation-email/facebook-icon.png"
+                                <img src="https://goemms.com/utils/relay-confirmation-email/facebook-icon.png"
                                   style="width: 100%; max-width: 32px !important;" width="32" class="img"
                                   alt="Facebook" />
                               </a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.linkedin.com/company/228261" target="_blank">
-                                <img src="https://goemms.com/services/utils/relay-confirmation-email/linkedin-icon.png"
+                                <img src="https://goemms.com/utils/relay-confirmation-email/linkedin-icon.png"
                                   style="width: 100%; max-width: 32px !important;" width="32" class="img"
                                   alt="Linkedin" />
                               </a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.youtube.com/user/FromDoppler" target="_blank">
-                                <img src="https://goemms.com/services/utils/relay-confirmation-email/youtube-icon.png"
+                                <img src="https://goemms.com/utils/relay-confirmation-email/youtube-icon.png"
                                   style="width: 100%; max-width: 32px !important;" width="32" class="img"
                                   alt="Youtube" />
                               </a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.instagram.com/fromdoppler" target="_blank">
-                                <img src="https://goemms.com/services/utils/relay-confirmation-email/instagram-icon.png"
+                                <img src="https://goemms.com/utils/relay-confirmation-email/instagram-icon.png"
                                   style="width: 100%; max-width: 32px !important;" width="32" class="img"
                                   alt="Instagram" />
                               </a>
