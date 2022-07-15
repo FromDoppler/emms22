@@ -160,7 +160,7 @@ require_once('config.php');
 						<p><strong>Inspírate y capacítate desde la comodidad de tu casa.</strong> Súmate ahora al evento que te acercará a los mayores expertos en Marketing Digital.</p>
 					</div>
 					<div class="emms22__description__video emms22__fade-in">
-						<video src="./html/<?= VERSION ?>/img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
+						<video src="./html/<?= VERSION ?>/img/video-insitucional-site-compress.mp4" controls></video>
 					</div>
 				</div>
 			</div>

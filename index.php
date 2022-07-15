@@ -466,7 +466,7 @@ require_once('config.php');
 						<a data-scroll="contentEarlyForm" onclick="scrollToElement(event)" class="emms22__button emms22__fade-in">PREINSCRIPCIÓN GRATUITA</a>
 					</div>
 					<div class="emms22__description__video emms22__fade-in">
-						<video src="./html/<?= VERSION ?>/img/video-insitucional-site-compress.mp4" controls muted autoplay playsinline class="videoAutoplay"></video>
+						<video src="./html/<?= VERSION ?>/img/video-insitucional-site-compress.mp4" controls></video>
 					</div>
 				</div>
 			</div>
