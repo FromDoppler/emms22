@@ -370,7 +370,7 @@
                                     <strong>Finalidad: </strong>Dar de alta esta suscripción para enviar newsletters con información y promociones de productos o servicios propios o de nuestros aliados.<br>
                                     <strong>Legitimación: </strong>Consentimiento del interesado. <br>
                                     <strong>Destinatarios: </strong>Tus datos serán guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creación de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integración de apps.<br>
-                                    <strong>Información adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/?utm_source=goemms&utm_medium=footer&utm_campaign=politicasdeprivacidad" target="_blank" rel="noopener">Política de Privacidad</a> de Doppler encontrarás información adicional
+                                    <strong>Información adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Política de Privacidad</a> de Doppler encontrarás información adicional
                                     sobre la recopilación y el uso de su información personal por parte de Doppler, incluida
                                     información sobre acceso, conservación, rectificación, eliminación, seguridad,
                                     transferencias
@@ -871,7 +871,7 @@
                                     <strong>Finalidad: </strong>Dar de alta esta suscripción para enviar newsletters con información y promociones de productos o servicios propios o de nuestros aliados.<br>
                                     <strong>Legitimación: </strong>Consentimiento del interesado. <br>
                                     <strong>Destinatarios: </strong>Tus datos serán guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creación de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integración de apps.<br>
-                                    <strong>Información adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/?utm_source=goemms&utm_medium=footer&utm_campaign=politicasdeprivacidad" target="_blank" rel="noopener">Política de Privacidad</a> de Doppler encontrarás información adicional
+                                    <strong>Información adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Política de Privacidad</a> de Doppler encontrarás información adicional
                                     sobre la recopilación y el uso de su información personal por parte de Doppler, incluida
                                     información sobre acceso, conservación, rectificación, eliminación, seguridad,
                                     transferencias
@@ -903,7 +903,7 @@
             </div>
             <div class="emms22__footer__actions emms22__fade-in">
                 <a href="#" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies</a>
-                <a href="https://qa.fromdoppler.com/es/legal/privacidad/?utm_source=direct" target="_blank">Políticas de privacidad y legales</a>
+                <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank">Políticas de privacidad y legales</a>
             </div>
         </footer>
 
