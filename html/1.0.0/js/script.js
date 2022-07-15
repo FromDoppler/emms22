@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					'company': formData.get('company'),
 					'acceptPolicies': (formData.get('privacy') === 'true') ? true : null,
 					'acceptPromotions': (formData.get('promotions') === 'true') ? true : null,
-					'utm_source': formData.get('utm_source'),
+					'utm_source':( formData.get('utm_source')  === '' ) ? 'direct' : formData.get('utm_source'),
 					'utm_campaign': formData.get('utm_campaign'),
 					'utm_content': formData.get('utm_content'),
 					'utm_term': formData.get('utm_term'),
