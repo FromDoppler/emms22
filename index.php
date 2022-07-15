@@ -21,7 +21,6 @@ require_once('config.php');
 	?>
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-	<script type="text/javascript" src="./html/<?= VERSION ?>/js/script.js?version=<?= VERSION ?>"></script>
 	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/libs/intl-tel-input/intelInput.css">
 	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/libs/intl-tel-input/intelInput.min.css">
 </head>
@@ -918,6 +917,8 @@ require_once('config.php');
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.js"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/phoneValidation.js"></script>
 	<?php include_once('commonFooter.php') ?>
+	<script type="text/javascript" src="./html/<?= VERSION ?>/js/script.js?version=<?= VERSION ?>"></script>
+
 </body>
 
 </html>

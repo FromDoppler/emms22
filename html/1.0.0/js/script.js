@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	const earlyForms = document.querySelectorAll('form');
 	const utm_source = (document.getElementById("utm_source").value != '' ? document.getElementById("utm_source").value : '');
 	const utm_campaign = (document.getElementById("utm_campaign").value != '' ? document.getElementById("utm_campaign").value : '');
- 	const utm_content = (document.getElementById("utm_content").value != '' ? document.getElementById("utm_content").value : '');
-  	const utm_term = (document.getElementById("utm_term").value != '' ? document.getElementById("utm_term").value : '');
-  	const utm_medium = (document.getElementById("utm_medium").value != '' ? document.getElementById("utm_medium").value : '');
+	const utm_content = (document.getElementById("utm_content").value != '' ? document.getElementById("utm_content").value : '');
+	const utm_term = (document.getElementById("utm_term").value != '' ? document.getElementById("utm_term").value : '');
+	const utm_medium = (document.getElementById("utm_medium").value != '' ? document.getElementById("utm_medium").value : '');
 	const dialCodeContainer = document.querySelector('.iti__selected-dial-code');
 	earlyForms.forEach(form => { form.addEventListener('submit', sendData) });
 	function addParameterUTms() {
@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		let newParamsUrl = '?';
 		let firstParam = true;
 		urlParamsValues.forEach((param, index) => {
-		if (param != null && firstParam && urlParamsValues[index]!="") {
-			newParamsUrl = newParamsUrl + urlParamsNames[index] + '=' + urlParamsValues[index];
-			firstParam = false;
-		} else if (param != null && !firstParam && urlParamsValues[index]!="") {
-			newParamsUrl = newParamsUrl + '&' + urlParamsNames[index] + '=' + urlParamsValues[index];
-		}
+			if (param != null && firstParam && urlParamsValues[index] != "") {
+				newParamsUrl = newParamsUrl + urlParamsNames[index] + '=' + urlParamsValues[index];
+				firstParam = false;
+			} else if (param != null && !firstParam && urlParamsValues[index] != "") {
+				newParamsUrl = newParamsUrl + '&' + urlParamsNames[index] + '=' + urlParamsValues[index];
+			}
 		});
 
 		return newParamsUrl;
@@ -117,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		form.querySelectorAll('input, textarea, select').forEach(field => {
 			_validateField(field);
 		});
+		console.log(form.querySelectorAll(".error"))
+		console.log(form.querySelectorAll(".error").length)
 
 		return form.querySelectorAll(".error").length === 0 ? true : false;
 	}
@@ -147,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			!field.checked
 		) {
 			parent.classList.add("error");
-
 			parent.setAttribute("data-error", messagePolicy_es);
 		} else if (field.classList.contains("email") && !val.match(emailRegex)) {
 			parent.classList.add("error");
@@ -157,10 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			parent.classList.add("error");
 
 			parent.setAttribute("data-error", messageURL_es);
-		} else if (field.classList.contains("phone-number") && !field.value.match(numberRegex)) {
-			parent.classList.add("error");
-			parent.setAttribute("data-error", messageNumber_es);
-		} else if (!field.checked && !field.classList.contains("phone-number") && field.type != "hidden") {
+		} else if (!field.classList.contains("phone-number") && field.type != "hidden") {
 			if (parent != null) {
 				parent.classList.remove("error");
 			}
