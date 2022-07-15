@@ -117,8 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		form.querySelectorAll('input, textarea, select').forEach(field => {
 			_validateField(field);
 		});
-		console.log(form.querySelectorAll(".error"))
-		console.log(form.querySelectorAll(".error").length)
+
 
 		return form.querySelectorAll(".error").length === 0 ? true : false;
 	}
