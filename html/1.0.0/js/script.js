@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					'industry': formData.get('industry-input'),
 					'company': formData.get('company'),
 					'acceptPolicies': (formData.get('privacy') === 'true') ? true : null,
-					'acceptPromotions': (formData.get('promotions' === 'true')) ? true : null,
+					'acceptPromotions': (formData.get('promotions') === 'true') ? true : null,
 					'utm_source': formData.get('utm_source'),
 					'utm_campaign': formData.get('utm_campaign'),
 					'utm_content': formData.get('utm_content'),
@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					'utm_medium': formData.get('utm_medium'),
 
 				};
+
 				formBtn.innerHTML = "";
 				formBtn.classList.add("button--loading");
 				formBtn.disabled = true;
