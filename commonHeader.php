@@ -12,12 +12,12 @@
 
 	<meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:description" content="Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing. Descubre las &uacute;ltimas tendencias y las estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios. Gratis y online. &iexcl;Reserva tu cupo ahora!">
-	<meta property="og:image" content="html/<?= VERSION ?>/img/img/share.png">
+	<meta property="og:image" content="https://goemms.com/html/<?= VERSION ?>/img/share.png">
 	<meta property="og:url" content="https://goemms.com/">
 	<meta property="og:site_name" content="EMMS 2022: El mayor evento de Marketing Digital">
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="html/<?= VERSION ?>/img/img/share.png">
+	<meta name="twitter:image" content="https://goemms.com/html/<?= VERSION ?>/img/share.png">
 	<meta name="twitter:image:alt" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
