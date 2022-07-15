@@ -90,7 +90,7 @@ catch (Exception $e) {
 
 try {    
     Relay::init($ACCOUNT_RELAY, $API_KEY_RELAY);
-    Relay::sendEmailRegister($user['email'], 'Agrega #EMMS2022 a tu calendario', 'landing');
+    Relay::sendEmailRegister($user['email'], 'Registrado con exito!', 'landing');
 }
 catch (Exception $e) {
     ErrorLog::log($e->getMessage());
