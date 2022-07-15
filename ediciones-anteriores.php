@@ -241,9 +241,9 @@ require_once('config.php');
 
 	<script type="module">
 		import {
-			changeNavLoged
+			changeRedirectLoged
 		} from './html/<?= VERSION ?>/js/security.js'
-		const changeNavIfLoged = changeNavLoged;
+		const changeNavIfLoged = changeRedirectLoged;
 		changeNavIfLoged();
 	</script>
 

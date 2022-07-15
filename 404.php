@@ -41,7 +41,7 @@ require_once('config.php');
 					<div class="emms22__404__error error-404-message">
 						<p>¿Te has perdido? Lo que no puedes perderte es el evento exclusivo que estamos preparando para ti.
 						</p>
-						<button type="button" class="emms22__404__button" id="error-404-btn" onclick="window.location.href='/index.php'">
+						<button type="button" class="emms22__404__button nav-ini" id="error-404-btn" onclick="window.location.href='/index.php'">
 							VOLVER A EMMS2022
 						</button>
 					</div>
@@ -51,7 +51,19 @@ require_once('config.php');
 		</section>
 
 	</main>
+	<input type="hidden" id="utm_source" name="utm_source" value='<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : "" ?>' />
+	<input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
+	<input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
+	<input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
+	<input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
 	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
+	<script type="module">
+		import {
+			changeRedirectLoged
+		} from '../html/<?= VERSION ?>/js/security.js'
+		const changeBtnRedirect = changeRedirectLoged;
+		changeBtnRedirect();
+	</script>
 </body>
 
 </html>

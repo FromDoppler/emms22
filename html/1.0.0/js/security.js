@@ -42,12 +42,16 @@ const checkUserLoged = function checkUserLoged() {
 }
 
 
-const changeNavLoged = function changeNavLoged() {
+const changeRedirectLoged = function changeRedirectLoged() {
 	if (getLoged != null) {
 		document.querySelectorAll('.nav-ini').forEach(item => {
-			item.href = "registrado.php" + addParameterUTms();
+			if (item.tagName === 'BUTTON') {
+				item.setAttribute("onclick", "window.location.href='/registrado.php'")
+			} else {
+				item.href = "registrado.php" + addParameterUTms();
+			}
 		})
 	}
 }
 
-export { checkUserLoged, checkUserNotLoged, changeNavLoged };
+export { checkUserLoged, checkUserNotLoged, changeRedirectLoged };
