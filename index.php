@@ -410,11 +410,7 @@ require_once('config.php');
 									transfronterizas y otros temas. <br>
 								</p>
 							</div>
-							<input type="hidden" id="utm_source" name="utm_source" value='<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : "" ?>' />
-							<input type="hidden" id="utm_campaign" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
-							<input type="hidden" id="utm_content" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
-							<input type="hidden" id="utm_term" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
-							<input type="hidden" id="utm_medium" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
+							<?php include_once('commonUtms.php') ?>
 						</form>
 					</div>
 				</div>
@@ -879,11 +875,7 @@ require_once('config.php');
 							<button class="emms22__button emms22__fade-in">REGISTRARME</button>
 						</div>
 					</div>
-					<input type="hidden" name="utm_source" value='<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : "" ?>' />
-					<input type="hidden" name="utm_campaign" value='<?= isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : "" ?>' />
-					<input type="hidden" name="utm_content" value='<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : "" ?>' />
-					<input type="hidden" name="utm_term" value='<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : "" ?>' />
-					<input type="hidden" name="utm_medium" value='<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : "" ?>' />
+					<?php include_once('commonUtms.php') ?>
 
 				</form>
 			</div>
