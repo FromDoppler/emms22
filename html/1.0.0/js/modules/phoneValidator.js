@@ -8,7 +8,6 @@ const setErrorField = (form, errorCode) => {
 		'¡Ouch! Escribe un teléfono válido.',
 		'¡Ouch! Ingresa solo valores numéricos.',
 	];
-	console.log(form)
 	const holderPhone = form.querySelector(".holder-phone");
 	holderPhone.setAttribute('data-error', errorMap[errorCode]);
 	holderPhone.classList.add("error");
