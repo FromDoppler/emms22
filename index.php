@@ -383,7 +383,7 @@ require_once('config.php');
 							<ul class="emms22__home__form__field-group">
 								<li class="emms22__home__form__field-item emms22__home__form__field-item__checkbox">
 									<div class="holder">
-										<input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check"><span class="checkmark"></span><label for="acepto-politicas">
+										<input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check acept-politic"><span class="checkmark"></span><label for="acepto-politicas">
 											Acepto la Pol&iacute;tica de Privacidad de Doppler *
 										</label>
 									</div>
@@ -579,7 +579,7 @@ require_once('config.php');
 				<p class="emms22__fade-in">Reg&iacute;strate ahora al mayor evento de Marketing Digital y ent&eacute;rate de todas las novedades: Nuevos speakers, tem&aacute;ticas, regalos y mucho m&aacute;s. </p>
 			</div>
 			<div class="emms22__home__container-form emms22__fade-in parallax-bottom-form">
-				<form class="emms22__home__form" novalidate autocomplete="off">
+				<form class="emms22__home__form" novalidate autocomplete="off" id="earlyFormFooter">
 					<div class="emms22__home__container-form__column">
 						<ul class="emms22__home__form__field-group">
 							<li class="emms22__home__form__field-item">
@@ -845,7 +845,7 @@ require_once('config.php');
 						<ul class="emms22__home__form__field-group">
 							<li class="emms22__home__form__field-item emms22__home__form__field-item__checkbox">
 								<div class="holder">
-									<input name="privacy" type="checkbox" value="true" class="required check"><span class="checkmark"></span><label>
+									<input name="privacy" type="checkbox" value="true" class="required check acept-politic"><span class="checkmark"></span><label>
 										Acepto la Pol&iacute;tica de Privacidad de Doppler *
 									</label>
 								</div>
@@ -907,9 +907,16 @@ require_once('config.php');
 	<script src="/html/<?= VERSION ?>/js/modules/jquery.min.js"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.min.js"></script>
 	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.js"></script>
-	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/phoneValidation.js"></script>
+	<script type="module" src="/html/<?= VERSION ?>/js/modules/intlTelInput/phoneValidation.js"></script>
 	<?php include_once('commonFooter.php') ?>
-	<script type="text/javascript" src="./html/<?= VERSION ?>/js/script.js?version=<?= VERSION ?>"></script>
+	<script type="module" src="./html/<?= VERSION ?>/js/script.js?version=<?= VERSION ?>"></script>
+	<?php
+	if (!(PRODUCTION)) {
+	?>
+		<script type="module" src="./html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
+	<?php
+	}
+	?>
 
 </body>
 

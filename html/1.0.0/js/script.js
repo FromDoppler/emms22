@@ -1,4 +1,16 @@
 "use strict";
+import {
+	phoneInput,
+	phoneInputFooter
+} from './modules/intlTelInput/phoneValidation.js'
+import {
+	validatePhoneField
+} from './modules/phoneValidator.js'
+
+import {
+	validateForm, resetErrorField
+} from './modules/formsValidators.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 	const earlyForms = document.querySelectorAll('form');
 	const utm_source = (document.getElementById("utm_source").value != '' ? document.getElementById("utm_source").value : '');
@@ -25,7 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		return newParamsUrl;
 	}
-
+	const activeFieldEventsValidator = (phoneInput) => {
+		document.querySelectorAll("input.required,select.required").forEach((elem) => {
+			elem.addEventListener('change', resetErrorField);
+			elem.addEventListener('keyup', resetErrorField);
+		});
+		document.getElementById("phone-input").addEventListener('blur', function () {
+			validatePhoneField(phoneInput);
+		});
+	}
 	function sendData(e) {
 		e.preventDefault();
 		const formBtn = this.querySelector('button');
@@ -33,8 +53,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		const endPointApi = '../../services/register.php';
 		const dialCode = dialCodeContainer.innerHTML;
 		const fullPhone = (dialCode + formData.get('phone-input')).trim();
+		let isValidForm;
 
-		if (_validateForm(this)) {
+		if (this.id === 'earlyForm') {
+			activeFieldEventsValidator(phoneInput);
+			isValidForm = validateForm(this, phoneInput);
+		} else {
+			activeFieldEventsValidator(phoneInputFooter);
+			isValidForm = validateForm(this, phoneInputFooter);
+		}
+
+
+		if (isValidForm) {
 
 			const holderPhone = this.querySelector(".holder-phone");
 			const message = "Ouch! Escribe un teléfono válido.";
@@ -54,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					'company': formData.get('company'),
 					'acceptPolicies': (formData.get('privacy') === 'true') ? true : null,
 					'acceptPromotions': (formData.get('promotions') === 'true') ? true : null,
-					'utm_source':( formData.get('utm_source')  === '' ) ? 'direct' : formData.get('utm_source'),
+					'utm_source': (formData.get('utm_source') === '') ? 'direct' : formData.get('utm_source'),
 					'utm_campaign': formData.get('utm_campaign'),
 					'utm_content': formData.get('utm_content'),
 					'utm_term': formData.get('utm_term'),
