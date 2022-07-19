@@ -121,13 +121,13 @@ require_once('config.php');
 								<li class="emms22__home__form__field-item">
 									<div class="holder">
 										<label class="required-label" for="firstname">Nombre *</label>
-										<input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name" autocomplete="off">
+										<input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
 									</div>
 								</li>
 								<li class="emms22__home__form__field-item ">
 									<div class="holder">
 										<label class="required-label" for="lastname">Apellido *</label>
-										<input type="text" name="lastname" id="lastname" placeholder="Tu apellido" class="required" autocomplete="off">
+										<input type="text" name="lastname" id="lastname" placeholder="Tu apellido" class="required nameLength" autocomplete="off">
 									</div>
 
 								</li>
@@ -585,13 +585,13 @@ require_once('config.php');
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label class="required-label">Nombre *</label>
-									<input type="text" name="firstname" placeholder="Tu nombre" class="required error-name" autocomplete="off">
+									<input type="text" name="firstname" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item ">
 								<div class="holder">
 									<label class="required-label">Apellido *</label>
-									<input type="text" name="lastname" placeholder="Tu apellido" class="required" autocomplete="off">
+									<input type="text" name="lastname" placeholder="Tu apellido" class="required nameLength" autocomplete="off">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
