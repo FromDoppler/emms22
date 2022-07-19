@@ -7,6 +7,7 @@ const setErrorField = (elem, typeMsg) => {
 
 	const objMessages = {
 		required_es: '¡Ouch! El campo está vacío.',
+		short_es: '¡Ouch! Escribe al menos dos caracteres.',
 		email_es: '¡Ouch! Ingresa un Email válido.',
 		URL_es: '¡Ouch! Ingresa una URL válida.',
 		number_es: '¡Ouch! Ingresa un número válido.',
@@ -41,6 +42,17 @@ const validateEmailField = (inputEmail) => {
 	}
 }
 
+const validateLengthStrings = (inputsString) => {
+	let returnedValueCheck = true;
+	inputsString.forEach(input => {
+		if (input.value.length < 2) {
+			setErrorField(input, "short_es");
+			returnedValueCheck = false;
+		}
+	})
+	return returnedValueCheck;
+}
+
 const validateEmptyField = (requiredField) => {
 	if (!requiredField.value) {
 		setErrorField(requiredField, "required_es");
@@ -68,18 +80,19 @@ const resetErrorField = function (e) {
 const validateForm = (form, phoneInput) => {
 
 	const requiredFields = form.querySelectorAll("input.required,select.required");
+	const nameAndLastname = form.querySelectorAll("input.nameLength");
 	const checkboxPolicyField = form.querySelector(".acept-politic");
 	const emailField = form.querySelector(".email");
+	const hasStringLength = validateLengthStrings(nameAndLastname)
 	const hasRequiredsValidate = validateEmptyFields(form, requiredFields);
 	const hasEmailValidate = validateEmailField(emailField);
 	const hasPolicyValidate = validatePolicyCheckbox(checkboxPolicyField);
 	const hasPhoneValidate = validatePhoneField(form, phoneInput);
 
-
 	if (hasRequiredsValidate &&
 		hasEmailValidate &&
 		hasPolicyValidate &&
-		hasPhoneValidate) {
+		hasPhoneValidate && hasStringLength) {
 		return true
 	} else {
 		return false
