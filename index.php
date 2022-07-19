@@ -134,7 +134,7 @@ require_once('config.php');
 								<li class="emms22__home__form__field-item">
 									<div class="holder">
 										<label class="required-label" for="email">Email *</label>
-										<input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
+										<input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off" value="<?= isset($_GET['email']) ? $_GET['email'] : "" ?>">
 									</div>
 
 								</li>
@@ -597,7 +597,7 @@ require_once('config.php');
 							<li class="emms22__home__form__field-item">
 								<div class="holder">
 									<label class="required-label">Email *</label>
-									<input type="email" name="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
+									<input type="email" name="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off" value="<?= isset($_GET['email']) ? $_GET['email'] : "" ?>">
 								</div>
 							</li>
 							<li class="emms22__home__form__field-item">
