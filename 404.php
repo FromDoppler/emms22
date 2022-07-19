@@ -52,7 +52,6 @@ require_once('config.php');
 
 	</main>
 	<?php include_once('commonUtms.php') ?>
-	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utmCookiesHistory.js" type="text/javascript"></script>
 	<script type="module">
 		import {
 			changeRedirectLoged
