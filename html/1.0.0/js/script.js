@@ -12,6 +12,9 @@ import {
 } from './modules/formsValidators.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+
 	const earlyForms = document.querySelectorAll('form');
 	const utm_source = (document.getElementById("utm_source").value != '' ? document.getElementById("utm_source").value : '');
 	const utm_campaign = (document.getElementById("utm_campaign").value != '' ? document.getElementById("utm_campaign").value : '');
@@ -19,7 +22,47 @@ document.addEventListener('DOMContentLoaded', () => {
 	const utm_term = (document.getElementById("utm_term").value != '' ? document.getElementById("utm_term").value : '');
 	const utm_medium = (document.getElementById("utm_medium").value != '' ? document.getElementById("utm_medium").value : '');
 	const dialCodeContainer = document.querySelector('.iti__selected-dial-code');
+
+	checkEncodeURLEmail()
+
+	function getURLParam(searchedParam) {
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		return urlParams.get(searchedParam);
+
+	}
+
+	// Function to decode email
+	function fromHex(hex) {
+		var str = '';
+		for (var i = 0; i < hex.length; i += 2) {
+			var v = parseInt(hex.substr(i, 2), 16);
+			if (v) str += String.fromCharCode(v);
+		}
+		return str;
+	}
+
+
+
+	function checkEncodeURLEmail() {
+		const urlParamHash = getURLParam('dplrid')
+
+		if (urlParamHash) {
+			let urlEmailDecode = fromHex(urlParamHash);
+			loadEmail(urlEmailDecode);
+		}
+	}
+
+
+	function loadEmail(urlEmailDecode) {
+		document.querySelectorAll('form').forEach( form => {
+			form.querySelector('input[name="email"]').value = urlEmailDecode
+		})
+	}
+
+
 	earlyForms.forEach(form => { form.addEventListener('submit', sendData) });
+
 	function addParameterUTms() {
 
 		const urlParamsValues = [utm_medium, utm_source, utm_campaign, utm_term, utm_content]
@@ -37,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		return newParamsUrl;
 	}
+
 	const activeFieldEventsValidator = (phoneInput) => {
 		document.querySelectorAll("input.required,select.required").forEach((elem) => {
 			elem.addEventListener('change', resetErrorField);
