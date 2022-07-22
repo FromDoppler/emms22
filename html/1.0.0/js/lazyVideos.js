@@ -1,4 +1,4 @@
-const lizyLoadVideos = () => {
+const lazyLoadVideos = () => {
 	var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
 	if ("IntersectionObserver" in window) {
@@ -29,5 +29,5 @@ const lizyLoadVideos = () => {
 
 
 export {
-	lizyLoadVideos,
+	lazyLoadVideos,
 };
