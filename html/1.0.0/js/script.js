@@ -15,9 +15,15 @@ import {
 	getEncodeURLEmail, loadEmail
 } from './modules/decodeEmail.js'
 
+import {
+	lazyLoadVideos
+} from './lazyVideos.js'
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	lazyLoadVideos()
 
 
 	const earlyForms = document.querySelectorAll('form');
@@ -30,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const urlEmail = getEncodeURLEmail();
 	loadEmail(urlEmail);
-
 
 	earlyForms.forEach(form => { form.addEventListener('submit', sendData) });
 
