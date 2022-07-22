@@ -16,14 +16,14 @@ import {
 } from './modules/decodeEmail.js'
 
 import {
-	lizyLoadVideos
-} from './lizyVideos.js'
+	lazyLoadVideos
+} from './lazyVideos.js'
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	lizyLoadVideos()
+	lazyLoadVideos()
 
 
 	const earlyForms = document.querySelectorAll('form');

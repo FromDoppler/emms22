@@ -1,8 +1,8 @@
 import {
-	lizyLoadVideos
-} from './lizyVideos.js'
+	lazyLoadVideos
+} from './lazyVideos.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-	lizyLoadVideos()
+	lazyLoadVideos()
 
 })
