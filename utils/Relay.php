@@ -445,14 +445,14 @@ class Relay {
 		self::$account = $account;
 	}
 
-    public static function sendEmailRegister($emailTo, $subject, $phase) {
+    public static function sendEmailRegister($user, $subject) {
         
-        $html = ($phase === 'landing') ? self::templateEmailLanding() : '';
+        $html = ($user['form_id'] === 'landing') ? self::templateEmailLanding() : '';
         $data = array(
             'from_name' => self::fromName,
             'from_email' => self::fromEmail,
             'reply_to' => array("email" => self::fromEmail),
-            'recipients' => array(array('type' => 'to', 'email' => $emailTo)),
+            'recipients' => array(array('type' => 'to', 'email' => $user['email'])),
             'subject' => $subject,
             'html' => $html
         );
