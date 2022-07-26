@@ -20,25 +20,67 @@ class Doppler {
 		self::$account = $account;
 	}
 
+    private static function getCustomFields($data) {
+        $customFields = array();
+
+        if(isset($data['firstname'])) {
+            array_push($customFields, array('name' => 'FIRSTNAME', 'Value' => $data['firstname']));
+        }
+        if(isset($data['lastname'])) {
+            array_push($customFields, array('name' => 'LASTNAME', 'Value' => $data['lastname']));
+        }
+        if(isset($data['privacy'])) {
+            array_push($customFields, array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])));
+        }
+        if(isset($data['promotions'])) {
+            array_push($customFields, array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])));
+        }
+        if(isset($data['phone'])) {
+            array_push($customFields, array('name' => 'tel', 'Value' => $data['phone']));
+        }
+        if(isset($data['country'])) {
+            array_push($customFields, array('name' => 'pais', 'Value' => $data['country']));
+        }
+        if(isset($data['industry'])) {
+            array_push($customFields, array('name' => 'Industria', 'Value' => $data['industry']));
+        }
+        if(isset($data['company'])) {
+            array_push($customFields, array('name' => 'Company', 'Value' => $data['company']));
+        } 
+        if(isset($data['ip'])) {
+            array_push($customFields, array('name' => 'IP', 'Value' => $data['ip']));
+        }
+        if(isset($data['country'])) {
+            array_push($customFields, array('name' => 'PaisIP', 'Value' => $data['country_ip']));
+        } 
+        if(isset($data['source_utm'])) {
+            array_push($customFields, array('name' => 'utmsource', 'Value' => $data['source_utm']));
+        }
+        if(isset($data['medium_utm'])) {
+            array_push($customFields, array('name' => 'utmmedium', 'Value' => $data['medium_utm']));
+        }
+        if(isset($data['campaign_utm'])) {
+            array_push($customFields, array('name' => 'utmcampaign', 'Value' => $data['campaign_utm']));
+        }
+        if(isset($data['content_utm'])) {
+            array_push($customFields, array('name' => 'utmcontent', 'Value' => $data['content_utm']));
+        }
+        if(isset($data['term_utm'])) {
+            array_push($customFields, array('name' => 'utmterm', 'Value' => $data['term_utm']));
+        }
+        if(isset($data['join_url'])) {
+            array_push($customFields, array('name' => 'academyGTW', 'value' => $data['join_url']));
+        }
+        if(isset($data['origin'])) {
+            array_push($customFields, array('name' => 'DOrigin', 'value' => $data['origin']));
+        }    
+        return $customFields;
+
+    }
+
     public static function subscriber($data) {
         $endPointSubscriber = self::urlBase.urlencode(self::$account).'/lists/'.$data['list'].'/subscribers?api_key='.self::$apiKey;
-        $customFields = array(
-            array('name' => 'FIRSTNAME', 'Value' => $data['firstname']),
-            array('name' => 'LASTNAME', 'Value' => $data['lastname']),
-            array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])),
-            array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])),
-            array('name' => 'tel', 'Value' => $data['phone']),
-            array('name' => 'pais', 'Value' => $data['country']),
-            array('name' => 'Industria', 'Value' => $data['industry']),
-            array('name' => 'Company', 'Value' => $data['company']),
-            array('name' => 'IP', 'Value' => $data['ip']),
-            array('name' => 'PaisIP', 'Value' => $data['country_ip']),
-            array('name' => 'utmsource', 'Value' => $data['source_utm']),
-            array('name' => 'utmmedium', 'Value' => $data['medium_utm']),
-            array('name' => 'utmcampaign', 'Value' => $data['campaign_utm']),
-            array('name' => 'utmcontent', 'Value' => $data['content_utm']),
-            array('name' => 'utmterm', 'Value' => $data['term_utm'])
-        );
+        $customFields = self::getCustomFields($data);
         $dataSubscriber = array(
 		    "email" => $data['email'],
 		    "fields" => $customFields

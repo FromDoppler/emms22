@@ -38,6 +38,7 @@ function setDataRequest($ip, $countryGeo) {
     $campaign_utm = isset($_POST['utm_campaign']) ? $_POST['utm_campaign']	: null;
     $content_utm = isset($_POST['utm_content']) ? $_POST['utm_content'] : null;
     $term_utm = isset($_POST['utm_term']) ? $_POST['utm_term'] : null;
+    $origin = isset($_POST['origin']) ? $_POST['origin'] : null;
     try {
 
         $user = array(
@@ -58,6 +59,7 @@ function setDataRequest($ip, $countryGeo) {
             'campaign_utm' => $campaign_utm,
             'content_utm' => $content_utm,
             'term_utm' => $term_utm,
+            'origin' => $origin,
             'form_id' => 'landing',
             'list' => LIST_LANDING,
         );
