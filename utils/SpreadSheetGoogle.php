@@ -5,7 +5,7 @@ class SpreadSheetGoogle {
 
     public static function write($idSpreadSheet, $user, $db) {
         date_default_timezone_set('America/Argentina/Buenos_Aires');
-        $range = 'A1:P1';
+        $range = 'A1:Q1';
         $values = array( array(
             date('h:i:s A'),
             date('d-m-Y'),
@@ -22,7 +22,8 @@ class SpreadSheetGoogle {
             $user['medium_utm'] . " ",
             $user['campaign_utm'] . " ",
             $user['content_utm'] . " ",
-            $user['term_utm'] . " "
+            $user['term_utm'] . " ",
+            $user['origin'] . " ",
         ));
         write_to_sheet($idSpreadSheet, $range, $values, $db);
     } 

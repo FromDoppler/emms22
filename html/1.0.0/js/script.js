@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				newParamsUrl = newParamsUrl + '&' + urlParamsNames[index] + '=' + urlParamsValues[index];
 			}
 		});
-
 		return newParamsUrl;
 	}
 
@@ -109,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					'utm_content': formData.get('utm_content'),
 					'utm_term': formData.get('utm_term'),
 					'utm_medium': formData.get('utm_medium'),
+					'origin': formData.get('origin'),
 
 				};
 
@@ -125,7 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					.then(resp => resp)
 					.then(resp => {
 						localStorage.setItem('registered', true);
-						window.location.href = '/registrado.php' + addParameterUTms(); //relative to domain
+						const paramsGET = (addParameterUTms().length > 1) ? '/registrado.php' + addParameterUTms() : '/registrado.php';
+						window.location.href = paramsGET; //relative to domain
 					})
 					.catch((error) => {
 						// Tenemos la respuesta de errores

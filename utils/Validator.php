@@ -26,6 +26,13 @@ class Validator {
             throw new Exception('Validator: Error Field is not Boolean '.$key);
         }
         return $value;
+   }
+    
+   public static function validateInteger($key, $value) {
 
-   } 
+        if(!is_int($value)){
+            throw new Exception('Validator: Error Field is not Integer '.$key. '= '.$value);
+        }
+        return $value;
+   }  
 }    
