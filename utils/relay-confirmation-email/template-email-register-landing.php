@@ -181,8 +181,8 @@
                         <tr>
                           <td align="center" valign="middle">
                             <a href="#" style="cursor: default;">
-                              <img src="https://goemms.com/utils/relay-confirmation-email/logo-emms.png"
-                                style="width: 100%; max-width: 101px !important;" width="101" class="img"
+                              <img src="https://goemms.com/utils/relay-confirmation-email/logo-emms.png?version=2"
+                                style="width: 100%; max-width: 103px !important;" width="103" class="img"
                                 alt="Logo de EMMS by Doppler" />
                             </a>
                           </td>
@@ -194,7 +194,7 @@
                           <td align="center" valign="middle">
                             <a href="#" style="cursor: default;">
                               <img src="https://goemms.com/utils/relay-confirmation-email/asset-confirmation.png"
-                                style="width: 100%; max-width: 101px !important;" width="101" class="img"
+                                style="width: 100%; max-width: 123px !important;" width="123" class="img"
                                 alt="Asset de auriculares" />
                             </a>
                           </td>
