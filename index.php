@@ -87,7 +87,7 @@ require_once('config.php');
 							<li>SPEAKERS INTERNACIONALES</li>
 							<li>CAPACITACI&Oacute;N E INSPIRACI&Oacute;N</li>
 						</ul>
-						<span>EARLY BIRDS: Preinscripci&oacute;n hasta el 15 de agosto.</span>
+						<span>EARLY BIRDS: Preinscripci&oacute;n hasta el 22 de agosto.</span>
 					</div>
 					<div class="emms22__share">
 						<ul>
