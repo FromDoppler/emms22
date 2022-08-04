@@ -9,12 +9,12 @@ if(isset($_GET['delete_id']))
  mysqli_query($con,$sql_query);
  header("Location: $_SERVER[PHP_SELF]");
 }
-if(isset($_GET['changestatus_id']))
+/*if(isset($_GET['changestatus_id']))
 {
  $sql_query="UPDATE aliados_pro SET `status`='".$_GET['status']."' WHERE id=".$_GET['changestatus_id'];
  mysqli_query($con,$sql_query);
  header("Location: $_SERVER[PHP_SELF]");
-}
+}*/
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -39,10 +39,10 @@ function delete_id(id)
   window.location.href='index.php?delete_id='+id;
  }
 }
-function changestatus_id(id,status)
+/*function changestatus_id(id,status)
 {
   window.location.href='index.php?changestatus_id='+id+'&status='+status;
-}
+}*/
 </script>
 </head>
 <body>
@@ -58,15 +58,21 @@ function changestatus_id(id,status)
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="5"><a href="add_aliados_pro.php">add aliados_pro.</a></th>
+    <th colspan="9"><a href="add_aliados_pro.php">add aliados_pro.</a></th>
     </tr>
     <th>id</th>
     <th>name</th>
+    <th>image_home</th>
+    <th>orden_home</th>
+    <th>orden_card</th>
+    <th>image_landing</th>
+
+
    
-    <th colspan="3">Actions</th>
+    <th colspan="2">Actions</th>
     </tr>
     <?php
- $sql_query="SELECT * FROM aliados_pro";
+ $sql_query="SELECT * FROM aliados_pro order by orden_home";
  $result_set=mysqli_query($con,$sql_query);
  $i=1;
  while($row=mysqli_fetch_row($result_set))
@@ -75,12 +81,13 @@ function changestatus_id(id,status)
         <tr>
         <td align="center" ><?php echo $i; ?></td>
         <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <?php echo $row[1]; ?> </a> </td>
-        <?php if($row[count($row)-1]==1) { ?>
-        <td align="center"><a href="javascript:changestatus_id('<?php echo $row[0]; ?>',0)">Deactivate</a></td>
-        <?php } else { ?>
-        <td align="center"><a href="javascript:changestatus_id('<?php echo $row[0]; ?>',1)">Activate</a></td>
-        <?php } ?>
-  <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>
+        <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="100" height="100"></td>
+        <td align="center" > <?php echo $row[5]; ?> </td>
+        <td align="center" > <?php echo $row[9]; ?> </td>
+        <td align="center" > <img src="uploads/<?=$row[11]?>" alt="<?=$row[12]?>" width="100" height="100"></td>
+
+
+        <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')">Delete</a></td>
         </tr>
         <?php

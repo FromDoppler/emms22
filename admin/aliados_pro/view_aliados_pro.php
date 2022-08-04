@@ -32,6 +32,13 @@ if(isset($_GET['view_id']))
    </td>
    <th colspan="5"> <?php echo $fetched_row['name'] ?></th>
 </tr>
+<tr>
+    <td>
+   <label for="image" class="form-label">Imagen Home:</label>
+   </td>
+   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200"></th>
+</tr>
+
  <tr>
     <td>
    <label for="alt_image_home" class="form-label">Alt_image_home:</label>
@@ -80,6 +87,12 @@ if(isset($_GET['view_id']))
    </td>
    <th colspan="5"> <?php echo $fetched_row['description'] ?></th>
 </tr>
+<tr>
+    <td>
+   <label for="image" class="form-label">Imagen Home:</label>
+   </td>
+   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_landing']?>" alt="<?=$$fetched_row['alt_image_landing']?>" width="200" height="200"></th>
+</tr>
  <tr>
     <td>
    <label for="alt_image_landing" class="form-label">Alt_image_landing:</label>
@@ -90,7 +103,22 @@ if(isset($_GET['view_id']))
     <td>
    <label for="youtube" class="form-label">Youtube:</label>
    </td>
-   <th colspan="5"> <?php echo $fetched_row['youtube'] ?></th>
+   <th colspan="5"> 
+      <?php 
+      if(!empty($fetched_row['youtube'])) {  ?>
+      <iframe width="420" height="315"
+         src="https://www.youtube.com/embed/<?=$fetched_row['youtube']?>">
+      </iframe>
+   <?php 
+         }
+      ?>   
+ </th>
+</tr>
+<tr>
+    <td>
+   <label for="image" class="form-label">Imagen Home:</label>
+   </td>
+   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200"></th>
 </tr>
  <tr>
     <td>
