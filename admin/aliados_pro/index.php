@@ -36,12 +36,12 @@ function delete_id(id)
 {
  if(confirm('Sure to Delete ?'))
  {
-  window.location.href='indexaliados_pro.php?delete_id='+id;
+  window.location.href='index.php?delete_id='+id;
  }
 }
 function changestatus_id(id,status)
 {
-  window.location.href='indexaliados_pro.php?changestatus_id='+id+'&status='+status;
+  window.location.href='index.php?changestatus_id='+id+'&status='+status;
 }
 </script>
 </head>
@@ -60,15 +60,13 @@ function changestatus_id(id,status)
     <tr>
     <th colspan="5"><a href="add_aliados_pro.php">add aliados_pro.</a></th>
     </tr>
-    <th>ID</th>
+    <th>SL NO</th>
     <th>name</th>
-    <th>Logo</th>
-    <th>Orden</th>
    
-    <th colspan="2">Actions</th>
+    <th colspan="3">Actions</th>
     </tr>
     <?php
- $sql_query="SELECT * FROM aliados_pro order by orden";
+ $sql_query="SELECT * FROM aliados_pro";
  $result_set=mysqli_query($con,$sql_query);
  $i=1;
  while($row=mysqli_fetch_row($result_set))
@@ -77,9 +75,12 @@ function changestatus_id(id,status)
         <tr>
         <td align="center" ><?php echo $i; ?></td>
         <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <?php echo $row[1]; ?> </a> </td>
-        <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <img src="uploads/<?=$row[2]?>" width="70" height="70"> </a> </td>
-        <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <?php echo $row[4]; ?> </a> </td>
-        <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>
+        <?php if($row[count($row)-1]==1) { ?>
+        <td align="center"><a href="javascript:changestatus_id('<?php echo $row[0]; ?>',0)">Deactivate</a></td>
+        <?php } else { ?>
+        <td align="center"><a href="javascript:changestatus_id('<?php echo $row[0]; ?>',1)">Activate</a></td>
+        <?php } ?>
+  <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')">Delete</a></td>
         </tr>
         <?php
