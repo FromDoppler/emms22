@@ -72,7 +72,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Core PHP Crud functions By PHP Code Builder</title>
+<title>ABM Aliados PRO</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
@@ -80,10 +80,10 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
 
 <div id="container"> 
 <div id="table-responsive">
-        <label>Core PHP Crud functions - <a href="http://www.phpcodebuilder.com" target="_blank">By PHP Code Builder</a></label>
+        <label>Alta Aliados Pro</label>
     </div>
 </div>
-<div id="container"> &<div   id="table-responsive">
+<div id="container"><div   id="table-responsive">
     <form method="post" enctype="multipart/form-data" >
     <table  class="table table-striped">
     <tr>
@@ -121,7 +121,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="link_site" class="form-label">Link_site:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="link_site" name="link_site" required placeholder="Link_site">
+    <input type="text" class="form-control" id="link_site" name="link_site" placeholder="Link_site">
     </td>
     </tr>
     <tr>
@@ -193,7 +193,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="youtube" class="form-label">Youtube:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="youtube" name="youtube" required placeholder="Youtube">
+    <input type="text" class="form-control" id="youtube" name="youtube" placeholder="Youtube">
     </td>
     </tr>
     <tr>
@@ -201,7 +201,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="image_youtube" class="form-label">Image_youtube:</label>
    </td>
     <td>
-    <input type="file" class="form-control" id="image_youtube" name="image_youtube" required placeholder="Image_youtube">
+    <input type="file" class="form-control" id="image_youtube" name="image_youtube" placeholder="Image_youtube">
     </td>
     </tr>
     <tr>
@@ -209,7 +209,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="alt_image_youtube" class="form-label">Alt_image_youtube:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="alt_image_youtube" name="alt_image_youtube" required placeholder="Alt_image_youtube">
+    <input type="text" class="form-control" id="alt_image_youtube" name="alt_image_youtube" placeholder="Alt_image_youtube">
     </td>
     </tr>
     <tr>
@@ -217,7 +217,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="title_magnet" class="form-label">Title_magnet:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="title_magnet" name="title_magnet" required placeholder="Title_magnet">
+    <input type="text" class="form-control" id="title_magnet" name="title_magnet" placeholder="Title_magnet">
     </td>
     </tr>
     <tr>
@@ -225,7 +225,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="description_magnet" class="form-label">Description_magnet:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="description_magnet" name="description_magnet" required placeholder="Description_magnet">
+    <input type="text" class="form-control" id="description_magnet" name="description_magnet" placeholder="Description_magnet">
     </td>
     </tr>
     <tr>
@@ -233,7 +233,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="link_magnet" class="form-label">Link_magnet:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="link_magnet" name="link_magnet" required placeholder="Link_magnet">
+    <input type="text" class="form-control" id="link_magnet" name="link_magnet" placeholder="Link_magnet">
     </td>
     </tr>
     <tr>
@@ -241,7 +241,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="title_learnmore" class="form-label">Title_learnmore:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="title_learnmore" name="title_learnmore" required placeholder="Title_learnmore">
+    <input type="text" class="form-control" id="title_learnmore" name="title_learnmore" placeholder="Title_learnmore">
     </td>
     </tr>
     <tr>
@@ -249,7 +249,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="description_learnmore" class="form-label">Description_learnmore:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="description_learnmore" name="description_learnmore" required placeholder="Description_learnmore">
+    <input type="text" class="form-control" id="description_learnmore" name="description_learnmore" placeholder="Description_learnmore">
     </td>
     </tr>
     <tr>
@@ -257,7 +257,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="link_learnmore" class="form-label">Link_learnmore:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="link_learnmore" name="link_learnmore" required placeholder="Link_learnmore">
+    <input type="text" class="form-control" id="link_learnmore" name="link_learnmore" placeholder="Link_learnmore">
     </td>
     </tr>
   

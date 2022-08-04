@@ -21,7 +21,7 @@ if(isset($_GET['changestatus_id']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Core PHP Crud functions By PHP Code Builder</title>
+<title>ABM Aliados PRO</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
 function edt_id(id)
@@ -49,7 +49,7 @@ function changestatus_id(id,status)
 <center>
 
 <div id="container"> <div id="table-responsive">
-    <label>Core PHP Crud functions - <a href="http://www.phpcodebuilder.com" target="_blank">By PHP Code Builder</a></label>
+    <label>Listado Aliados Pro</label>
     </div>
 </div>
 
@@ -60,7 +60,7 @@ function changestatus_id(id,status)
     <tr>
     <th colspan="5"><a href="add_aliados_pro.php">add aliados_pro.</a></th>
     </tr>
-    <th>SL NO</th>
+    <th>id</th>
     <th>name</th>
    
     <th colspan="3">Actions</th>

@@ -118,14 +118,14 @@ if(isset($_POST['btn-cancel']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Core PHP Crud functions By PHP Code Builder</title>
+<title>ABM Aliados PRO</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>
 
 <div id="container"> <div id="table-responsive">
-        <label>Core PHP Crud functions - <a href="http://www.phpcodebuilder.com" target="_blank">By PHP Code Builder</a></label>
+        <label>Edicion Aliados Pro</label>
     </div>
 </div>
 
@@ -209,8 +209,8 @@ if(isset($_POST['btn-cancel']))
    <label for="description" class="form-label">Description:</label>
    </td>
     <td>
-    <input type="text" value="<?php echo $fetched_row['description'] ?>" class="form-control" id="description" name="description">
-</td>
+      <textarea  class="form-control" id="description" name="description">     <?php echo $fetched_row['description'] ?>       </textarea>
+  </td>
     </tr>
   <tr>
    <td>
