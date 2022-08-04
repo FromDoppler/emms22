@@ -58,7 +58,7 @@ function delete_id(id)
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="9"><a href="add_aliados_pro.php">add aliados_pro.</a></th>
+    <th colspan="9"><a href="add_aliados_pro.php">ADD aliados_pro.</a></th>
     </tr>
     <th>id</th>
     <th>name</th>
