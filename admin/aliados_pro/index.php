@@ -54,6 +54,7 @@ function delete_id(id)
 </div>
 
 <div id="container">
+      <a href="/admin/index.php"> Menu Principal</a>
  <div id="table-responsive">
  
     <table  class="table table-striped" > 
