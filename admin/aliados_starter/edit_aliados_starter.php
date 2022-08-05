@@ -116,14 +116,14 @@ if(isset($_POST['btn-cancel']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ABM Aliados PRO</title>
+<title>ABM Aliados Starter</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>
 
 <div id="container"> <div id="table-responsive">
-        <label>Edicion Aliados Pro</label>
+        <label>Edicion Aliados Starter</label>
     </div>
 </div>
 

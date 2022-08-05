@@ -7,7 +7,7 @@ if(isset($_GET['delete_id']))
 {
  $sql_query="DELETE FROM aliados_starter WHERE id=".$_GET['delete_id'];
  mysqli_query($con,$sql_query);
- header("Location: $_SERVER[PHP_SELF]");
+ @header("Location: $_SERVER[PHP_SELF]");
 }
 /*if(isset($_GET['changestatus_id']))
 {
@@ -21,7 +21,7 @@ if(isset($_GET['delete_id']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ABM Aliados PRO</title>
+<title>ABM Aliados STARTER</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
 function edt_id(id)
@@ -49,7 +49,7 @@ function delete_id(id)
 <center>
 
 <div id="container"> <div id="table-responsive">
-    <label>Listado Aliados Pro</label>
+    <label>Listado Aliados Starter</label>
     </div>
 </div>
 
