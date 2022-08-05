@@ -27,8 +27,6 @@ $file_tmp = $_FILES["image_home"]["tmp_name"];
          
    $alt_image_home = $_POST['alt_image_home'];
           
-   $link_site = $_POST['link_site'];
-          
    $orden_home = $_POST['orden_home'];
           
    $title = $_POST['title'];
@@ -85,7 +83,7 @@ $file_tmp = $_FILES["image_youtube"]["tmp_name"];
         // variables for input data
 
  // sql query for update data into database
-  $sql_query="UPDATE aliados_starter SET `name`='$name',`image_home`='$image_home',`alt_image_home`='$alt_image_home',`link_site`='$link_site',`orden_home`='$orden_home',`title`='$title',`description_card`='$description_card',`slug`='$slug',`orden_card`='$orden_card',`description`='$description',`image_landing`='$image_landing',`alt_image_landing`='$alt_image_landing',`youtube`='$youtube',`image_youtube`='$image_youtube',`alt_image_youtube`='$alt_image_youtube',`title_magnet`='$title_magnet',`description_magnet`='$description_magnet',`link_magnet`='$link_magnet',`title_learnmore`='$title_learnmore',`description_learnmore`='$description_learnmore',`link_learnmore`='$link_learnmore' WHERE id=".$_GET['edit_id'];
+  $sql_query="UPDATE aliados_starter SET `name`='$name',`image_home`='$image_home',`alt_image_home`='$alt_image_home',`orden_home`='$orden_home',`title`='$title',`description_card`='$description_card',`slug`='$slug',`orden_card`='$orden_card',`description`='$description',`image_landing`='$image_landing',`alt_image_landing`='$alt_image_landing',`youtube`='$youtube',`image_youtube`='$image_youtube',`alt_image_youtube`='$alt_image_youtube',`title_magnet`='$title_magnet',`description_magnet`='$description_magnet',`link_magnet`='$link_magnet',`title_learnmore`='$title_learnmore',`description_learnmore`='$description_learnmore',`link_learnmore`='$link_learnmore' WHERE id=".$_GET['edit_id'];
 
  // sql query for update data into database
  
@@ -145,6 +143,7 @@ if(isset($_POST['btn-cancel']))
    <label for="image_home" class="form-label">Image_home:</label>
    </td>
     <td>
+    <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200">
     <input type="file" value="<?php echo $fetched_row['image_home'] ?>" class="form-control" id="image_home" name="image_home">
 </td>
     </tr>
@@ -154,14 +153,6 @@ if(isset($_POST['btn-cancel']))
    </td>
     <td>
     <input type="text" value="<?php echo $fetched_row['alt_image_home'] ?>" class="form-control" id="alt_image_home" name="alt_image_home">
-</td>
-    </tr>
-  <tr>
-   <td>
-   <label for="link_site" class="form-label">Link_site:</label>
-   </td>
-    <td>
-    <input type="text" value="<?php echo $fetched_row['link_site'] ?>" class="form-control" id="link_site" name="link_site">
 </td>
     </tr>
   <tr>
@@ -217,6 +208,7 @@ if(isset($_POST['btn-cancel']))
    <label for="image_landing" class="form-label">Image_landing:</label>
    </td>
     <td>
+    <img src="uploads/<?=$fetched_row['image_landing']?>" alt="<?=$$fetched_row['alt_image_landing']?>" width="200" height="200">
     <input type="file" value="<?php echo $fetched_row['image_landing'] ?>" class="form-control" id="image_landing" name="image_landing">
 </td>
     </tr>
@@ -233,6 +225,14 @@ if(isset($_POST['btn-cancel']))
    <label for="youtube" class="form-label">Youtube:</label>
    </td>
     <td>
+    <?php 
+      if(!empty($fetched_row['youtube'])) {  ?>
+      <iframe width="420" height="315"
+         src="https://www.youtube.com/embed/<?=$fetched_row['youtube']?>">
+      </iframe>
+   <?php 
+         }
+      ?>   
     <input type="text" value="<?php echo $fetched_row['youtube'] ?>" class="form-control" id="youtube" name="youtube">
 </td>
     </tr>
@@ -241,6 +241,10 @@ if(isset($_POST['btn-cancel']))
    <label for="image_youtube" class="form-label">Image_youtube:</label>
    </td>
     <td>
+    <?php 
+      if(!empty($fetched_row['image_youtube'])) {  ?>
+    <img src="uploads/<?=$fetched_row['image_youtube']?>" alt="<?=$fetched_row['alt_image_youtube']?>" width="200" height="200">
+    <?php } ?>
     <input type="file" value="<?php echo $fetched_row['image_youtube'] ?>" class="form-control" id="image_youtube" name="image_youtube">
 </td>
     </tr>

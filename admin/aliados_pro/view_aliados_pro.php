@@ -117,9 +117,9 @@ if(isset($_GET['view_id']))
 </tr>
 <tr>
     <td>
-   <label for="image" class="form-label">Imagen Home:</label>
+   <label for="image" class="form-label">Imagen Youtube:</label>
    </td>
-   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200"></th>
+   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_youtube']?>" alt="<?=$fetched_row['alt_image_youtube']?>" width="200" height="200"></th>
 </tr>
  <tr>
     <td>

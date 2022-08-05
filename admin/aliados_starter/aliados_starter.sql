@@ -33,7 +33,6 @@ CREATE TABLE `aliados_starter` (
   `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `image_home` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `alt_image_home` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `link_site` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `orden_home` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `description_card` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,

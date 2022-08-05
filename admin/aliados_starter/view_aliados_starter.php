@@ -48,12 +48,6 @@ if(isset($_GET['view_id']))
 </tr>
  <tr>
     <td>
-   <label for="link_site" class="form-label">Link_site:</label>
-   </td>
-   <th colspan="5"> <?php echo $fetched_row['link_site'] ?></th>
-</tr>
- <tr>
-    <td>
    <label for="orden_home" class="form-label">Orden_home:</label>
    </td>
    <th colspan="5"> <?php echo $fetched_row['orden_home'] ?></th>
@@ -90,7 +84,7 @@ if(isset($_GET['view_id']))
 </tr>
 <tr>
     <td>
-   <label for="image" class="form-label">Imagen Home:</label>
+   <label for="image" class="form-label">Imagen Landing:</label>
    </td>
    <th colspan="5"> <img src="uploads/<?=$fetched_row['image_landing']?>" alt="<?=$$fetched_row['alt_image_landing']?>" width="200" height="200"></th>
 </tr>
@@ -117,9 +111,9 @@ if(isset($_GET['view_id']))
 </tr>
 <tr>
     <td>
-   <label for="image" class="form-label">Imagen Home:</label>
+   <label for="image" class="form-label">Imagen Youtube:</label>
    </td>
-   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200"></th>
+   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_youtube']?>" alt="<?=$fetched_row['alt_image_youtube']?>" width="200" height="200"></th>
 </tr>
  <tr>
     <td>

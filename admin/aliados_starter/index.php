@@ -83,9 +83,9 @@ function delete_id(id)
         <td align="center" ><?php echo $i; ?></td>
         <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <?php echo $row[1]; ?> </a> </td>
         <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="100" height="100"></td>
-        <td align="center" > <?php echo $row[5]; ?> </td>
-        <td align="center" > <?php echo $row[9]; ?> </td>
-        <td align="center" > <img src="uploads/<?=$row[11]?>" alt="<?=$row[12]?>" width="100" height="100"></td>
+        <td align="center" > <?php echo $row[4]; ?> </td>
+        <td align="center" > <?php echo $row[8]; ?> </td>
+        <td align="center" > <img src="uploads/<?=$row[10]?>" alt="<?=$row[11]?>" width="100" height="100"></td>
 
 
         <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>

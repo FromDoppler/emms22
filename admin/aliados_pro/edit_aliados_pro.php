@@ -145,6 +145,7 @@ if(isset($_POST['btn-cancel']))
    <label for="image_home" class="form-label">Image_home:</label>
    </td>
     <td>
+    <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200">
     <input type="file" value="<?php echo $fetched_row['image_home'] ?>" class="form-control" id="image_home" name="image_home">
 </td>
     </tr>
@@ -217,6 +218,7 @@ if(isset($_POST['btn-cancel']))
    <label for="image_landing" class="form-label">Image_landing:</label>
    </td>
     <td>
+    <img src="uploads/<?=$fetched_row['image_landing']?>" alt="<?=$fetched_row['alt_image_landing']?>" width="200" height="200">
     <input type="file" value="<?php echo $fetched_row['image_landing'] ?>" class="form-control" id="image_landing" name="image_landing">
 </td>
     </tr>
@@ -233,6 +235,14 @@ if(isset($_POST['btn-cancel']))
    <label for="youtube" class="form-label">Youtube:</label>
    </td>
     <td>
+    <?php 
+      if(!empty($fetched_row['youtube'])) {  ?>
+      <iframe width="420" height="315"
+         src="https://www.youtube.com/embed/<?=$fetched_row['youtube']?>">
+      </iframe>
+    <?php 
+          }
+        ?>   
     <input type="text" value="<?php echo $fetched_row['youtube'] ?>" class="form-control" id="youtube" name="youtube">
 </td>
     </tr>
@@ -241,6 +251,10 @@ if(isset($_POST['btn-cancel']))
    <label for="image_youtube" class="form-label">Image_youtube:</label>
    </td>
     <td>
+    <?php 
+      if(!empty($fetched_row['image_youtube'])) {  ?>
+    <img src="uploads/<?=$fetched_row['image_youtube']?>" alt="<?=$fetched_row['alt_image_youtube']?>" width="200" height="200">
+    <?php } ?>
     <input type="file" value="<?php echo $fetched_row['image_youtube'] ?>" class="form-control" id="image_youtube" name="image_youtube">
 </td>
     </tr>
