@@ -27,6 +27,10 @@
     <br/>
     <br/>
      <a href="aliados_media_partner/index.php"> ABM Listado Aliados Media Partner</a>
+         <br/>
+    <br/>
+     <a href="speakers/index.php"> ABM Listado Speakers</a>
+     
 
 <div id="container">
 

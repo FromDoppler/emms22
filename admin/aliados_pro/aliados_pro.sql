@@ -46,10 +46,10 @@ CREATE TABLE `aliados_pro` (
   `image_youtube` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `alt_image_youtube` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `title_magnet` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_magnet` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description_magnet` TEXT COLLATE utf8mb4_general_ci DEFAULT NULL,
   `link_magnet` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `title_learnmore` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_learnmore` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description_learnmore` TEXT COLLATE utf8mb4_general_ci DEFAULT NULL,
   `link_learnmore` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` enum('0','1') COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
