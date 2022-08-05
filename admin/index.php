@@ -24,6 +24,9 @@
     <br/>
     <br/>
      <a href="aliados_starter/index.php"> ABM Listado Aliados Starter</a>
+    <br/>
+    <br/>
+     <a href="aliados_media_partner/index.php"> ABM Listado Aliados Media Partner</a>
 
 <div id="container">
 
