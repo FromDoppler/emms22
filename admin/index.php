@@ -15,7 +15,7 @@
 <center>
 
 <div id="container"> <div id="table-responsive">
-    <h2>Listados Entidades</h2>
+    <h2>Listados Entidades Administrables por ABM</h2>
     </div>
 </div>
     <br/>

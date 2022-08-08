@@ -103,7 +103,9 @@ if(isset($_POST['btn-cancel']))
     </div>
 </div>
 
-<div id="container"> &<div   id="table-responsive">
+<div id="container"> 
+  
+<div   id="table-responsive">
     <form method="post" enctype="multipart/form-data">
     <table  class="table table-striped">
     <tr>
@@ -119,6 +121,7 @@ if(isset($_POST['btn-cancel']))
    <label for="image" class="form-label">Image:</label>
    </td>
     <td>
+     <img src="uploads/<?=$fetched_row['image']?>" alt="<?=$fetched_row['alt_image']?>" width="150" height="150"> 
     <input type="file" value="<?php echo $fetched_row['image'] ?>" class="form-control" id="image" name="image">
 </td>
     </tr>
@@ -183,6 +186,7 @@ if(isset($_POST['btn-cancel']))
    <label for="image_company" class="form-label">Image_company:</label>
    </td>
     <td>
+    <img src="uploads/<?=$fetched_row['image_company']?>" alt="<?=$fetched_row['alt_image_company']?>" width="70" height="70"> 
     <input type="file" value="<?php echo $fetched_row['image_company'] ?>" class="form-control" id="image_company" name="image_company">
 </td>
     </tr>
