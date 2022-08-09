@@ -1,5 +1,6 @@
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+isIPAllow($ALLOW_IPS);
 
 if(isset($_POST['btn-save']))
 {
@@ -74,7 +75,7 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
     <form method="post" enctype="multipart/form-data" >
     <table  class="table table-striped">
     <tr>
-    <td align="center"><a href="index.php">back to main page</a></td>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
     </tr>
 
 

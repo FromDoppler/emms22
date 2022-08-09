@@ -1,6 +1,9 @@
 
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+include_once '../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 
 if(isset($_GET['delete_id']))
@@ -24,19 +27,19 @@ if(isset($_GET['delete_id']))
 <title>ABM Aliados MEDIA PARTNER</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
-function edt_id(id)
+function edt_id(id, token)
 {
-  window.location.href='edit_aliados_media_partner.php?edit_id='+id;
+  window.location.href='edit_aliados_media_partner.php?edit_id='+id+"&token="+token;
 }
-function view_id(id)
+function view_id(id, token)
 {
-  window.location.href='view_aliados_media_partner.php?view_id='+id;
+  window.location.href='view_aliados_media_partner.php?view_id='+id+"&token="+token;
 }
-function delete_id(id)
+function delete_id(id, token)
 {
  if(confirm('Sure to Delete ?'))
  {
-  window.location.href='index.php?delete_id='+id;
+  window.location.href='index.php?delete_id='+id+"&token="+token;
  }
 }
 /*function changestatus_id(id,status)
@@ -54,12 +57,12 @@ function delete_id(id)
 </div>
 
 <div id="container">
-      <a href="/admin/index.php"> Menu Principal</a>
+      <a href="/admin/index.php?token=<?=$_GET['token']?>"> Menu Principal</a>
  <div id="table-responsive">
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="7"><a href="add_aliados_media_partner.php">ADD aliados_media_partner.</a></th>
+    <th colspan="7"><a href="add_aliados_media_partner.php?token=<?=$_GET['token']?>">ADD aliados_media_partner.</a></th>
     </tr>
     <th>id</th>
     <th>name</th>

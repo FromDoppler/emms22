@@ -1,5 +1,6 @@
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+isIPAllow($ALLOW_IPS);
 
 if(isset($_GET['view_id']))
 {
@@ -22,7 +23,7 @@ if(isset($_GET['view_id']))
 <body>
 
 <div class="container mt-3">
-  <a href="index.php"><- Back</a>
+  <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
  
   
   <div class="table-responsive">
@@ -106,7 +107,7 @@ if(isset($_GET['view_id']))
    <th colspan="5"> <?php echo $fetched_row['orden'] ?></th>
 </tr>
  </table>
-   <a href="index.php"><- Back</a>
+   <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
  </div>
 </div>
 </body>

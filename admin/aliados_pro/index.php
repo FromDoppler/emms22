@@ -1,6 +1,10 @@
 
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
+
 
 
 if(isset($_GET['delete_id']))
@@ -24,19 +28,19 @@ if(isset($_GET['delete_id']))
 <title>ABM Aliados PRO</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
-function edt_id(id)
+function edt_id(id, token)
 {
-  window.location.href='edit_aliados_pro.php?edit_id='+id;
+  window.location.href='edit_aliados_pro.php?edit_id='+id+"&token="+token;
 }
-function view_id(id)
+function view_id(id, token)
 {
-  window.location.href='view_aliados_pro.php?view_id='+id;
+  window.location.href='view_aliados_pro.php?view_id='+id+"&token="+token;
 }
-function delete_id(id)
+function delete_id(id, token)
 {
  if(confirm('Sure to Delete ?'))
  {
-  window.location.href='index.php?delete_id='+id;
+  window.location.href='index.php?delete_id='+id+"&token="+token;
  }
 }
 /*function changestatus_id(id,status)
@@ -54,12 +58,12 @@ function delete_id(id)
 </div>
 
 <div id="container">
-      <a href="/admin/index.php"> Menu Principal</a>
+      <a href="/admin/index.php?token=<?=$_GET['token']?>"> Menu Principal</a>
  <div id="table-responsive">
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="9"><a href="add_aliados_pro.php">ADD aliados_pro.</a></th>
+    <th colspan="9"><a href="add_aliados_pro.php?token=<?=$_GET['token']?>">ADD aliados_pro.</a></th>
     </tr>
     <th>id</th>
     <th>name</th>
@@ -81,15 +85,15 @@ function delete_id(id)
   ?>
         <tr>
         <td align="center" ><?php echo $i; ?></td>
-        <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <?php echo $row[1]; ?> </a> </td>
+        <td align="center" > <a href="javascript:view_id('<?=$row[0]?>', '<?=$_GET['token']?>')"> <?php echo $row[1]; ?> </a> </td>
         <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="100" height="100"></td>
         <td align="center" > <?php echo $row[5]; ?> </td>
         <td align="center" > <?php echo $row[9]; ?> </td>
         <td align="center" > <img src="uploads/<?=$row[11]?>" alt="<?=$row[12]?>" width="100" height="100"></td>
 
 
-        <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>
-        <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')">Delete</a></td>
+        <td align="center"><a href="javascript:edt_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Edit</a></td>
+        <td align="center"><a href="javascript:delete_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Delete</a></td>
         </tr>
         <?php
        $i++;  

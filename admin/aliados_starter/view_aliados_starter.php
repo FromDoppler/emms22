@@ -1,5 +1,8 @@
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 if(isset($_GET['view_id']))
 {
@@ -22,7 +25,7 @@ if(isset($_GET['view_id']))
 <body>
 
 <div class="container mt-3">
-   <a href="index.php"><- Back</a>
+   <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
   
   
   <div class="table-responsive">
@@ -159,7 +162,7 @@ if(isset($_GET['view_id']))
 </tr>
  </table>
  </div>
- <a href="index.php"><- Back</a>
+ <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
 </div>
 </body>
 </html>

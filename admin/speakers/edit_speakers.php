@@ -1,5 +1,6 @@
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+isIPAllow($ALLOW_IPS);
 
 if(isset($_GET['edit_id']))
 {
@@ -69,7 +70,7 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
   ?>
   <script type="text/javascript">
   alert('speakers updated successfully');
-  window.location.href='index.php';
+  window.location.href='index.php?token=<?=$_GET['token']?>';
   </script>
   <?php
  }
@@ -83,7 +84,7 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
  }
  // sql query execution function
 }
-if(isset($_POST['btn-cancel']))
+ header("Location: index.php?token=".$_GET['token']);
 {
  header("Location: index.php");
 }

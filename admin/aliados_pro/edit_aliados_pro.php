@@ -1,5 +1,8 @@
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 if(isset($_GET['edit_id']))
 {
@@ -95,7 +98,7 @@ $file_tmp = $_FILES["image_youtube"]["tmp_name"];
   ?>
   <script type="text/javascript">
   alert('aliados_pro updated successfully');
-  window.location.href='index.php';
+  window.location.href='index.php?token=<?=$_GET['token']?>';
   </script>
   <?php
  }
@@ -111,7 +114,7 @@ $file_tmp = $_FILES["image_youtube"]["tmp_name"];
 }
 if(isset($_POST['btn-cancel']))
 {
- header("Location: index.php");
+ header("Location: index.php?token=".$_GET['token']);
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

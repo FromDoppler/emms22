@@ -1,4 +1,9 @@
-
+<?php
+include_once 'config.php';
+include_once '../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,16 +25,16 @@
 </div>
     <br/>
     <br/>
-    <a href="aliados_pro/index.php"> ABM Listado Aliados Pro</a>
+    <a href="aliados_pro/index.php?token=<?=$_GET['token']?>"> ABM Listado Aliados Pro</a>
     <br/>
     <br/>
-     <a href="aliados_starter/index.php"> ABM Listado Aliados Starter</a>
+     <a href="aliados_starter/index.php?token=<?=$_GET['token']?>"> ABM Listado Aliados Starter</a>
     <br/>
     <br/>
-     <a href="aliados_media_partner/index.php"> ABM Listado Aliados Media Partner</a>
+     <a href="aliados_media_partner/index.php?token=<?=$_GET['token']?>"> ABM Listado Aliados Media Partner</a>
          <br/>
     <br/>
-     <a href="speakers/index.php"> ABM Listado Speakers</a>
+     <a href="speakers/index.php?token=<?=$_GET['token']?>"> ABM Listado Speakers</a>
      
 
 <div id="container">

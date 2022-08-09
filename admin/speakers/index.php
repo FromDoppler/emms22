@@ -1,6 +1,7 @@
 
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+isIPAllow($ALLOW_IPS);
 
 
 if(isset($_GET['delete_id']))
@@ -24,19 +25,19 @@ if(isset($_GET['changestatus_id']))
 <title>ABM Speakers</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
-function edt_id(id)
+function edt_id(id, token)
 {
-  window.location.href='edit_speakers.php?edit_id='+id;
+  window.location.href='edit_speakers.php?edit_id='+id+"&token="+token;
 }
-function view_id(id)
+function view_id(id, token)
 {
-  window.location.href='view_speakers.php?view_id='+id;
+  window.location.href='view_speakers.php?view_id='+id+"&token="+token;
 }
-function delete_id(id)
+function delete_id(id, token)
 {
  if(confirm('Sure to Delete ?'))
  {
-  window.location.href='index.php?delete_id='+id;
+  window.location.href='index.php?delete_id='+id+"&token="+token;
  }
 }
 function changestatus_id(id,status)
@@ -54,7 +55,7 @@ function changestatus_id(id,status)
 </div>
 
 <div id="container">
-    <a href="/admin/index.php"> Menu Principal</a>
+    <a href="/admin/index.php?token=<?=$_GET['token']?>"> Menu Principal</a>
  <div id="table-responsive">
  
     <table  class="table table-striped" > 
@@ -77,11 +78,11 @@ function changestatus_id(id,status)
   ?>
         <tr>
         <td align="center" ><?php echo $i; ?></td>
-        <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <?php echo $row[1]; ?> </a> </td>
+        <td align="center" > <a href="javascript:view_id('<?=$row[0]?>', '<?=$_GET['token']?>')"> <?php echo $row[1]; ?> </a> </td>
         <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="100" height="100"></td>
         <td align="center" > <?php echo $row[13]; ?> </td>
-        <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>
-        <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')">Delete</a></td>
+        <td align="center"><a href="javascript:edt_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Edit</a></td>
+        <td align="center"><a href="javascript:delete_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Delete</a></td>
         </tr>
         <?php
        $i++;  

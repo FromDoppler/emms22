@@ -1,5 +1,8 @@
 <?php
-include_once 'dbconfig.php';
+include_once '../config.php';
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 if(isset($_POST['btn-save']))
 {
@@ -87,7 +90,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
     <form method="post" enctype="multipart/form-data" >
     <table  class="table table-striped">
     <tr>
-    <td align="center"><a href="index.php">back to main page</a></td>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
     </tr>
 
 
