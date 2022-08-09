@@ -17,7 +17,7 @@ function isSubmitValid($ip) {
         SecurityHelper::isSubmitValid(ALLOW_IPS);
     }    
     catch (Exception $e) {
-        ErrorLog::log($e->getMessage());
+        ErrorLog::log("isSubmitValid ".$e->getMessage());
         exit('submits');
     }
 }
@@ -66,7 +66,7 @@ function setDataRequest($ip, $countryGeo) {
         return $user;    
     }    
     catch (Exception $e) {
-        ErrorLog::log($e->getMessage());
+        ErrorLog::log("setDataRequest ".$e->getMessage());
     }
 
 }
@@ -77,7 +77,7 @@ function saveSubscriptionDoppler($user) {
         Doppler::subscriber($user);
     }    
     catch (Exception $e) {
-        ErrorLog::log($e->getMessage());
+        ErrorLog::log("Doppler saveSubscriptionDoppler ".$e->getMessage());
     }
 }
 function saveSubscriptionDopplerTable($user) {
@@ -89,7 +89,7 @@ function saveSubscriptionDopplerTable($user) {
         $db->close();
     }
     catch (Exception $e) {
-        ErrorLog::log($e->getMessage());
+        ErrorLog::log("DB saveSubscriptionDopplerTable ".$e->getMessage());
     }
 }
 
@@ -100,7 +100,7 @@ function saveSubscriptionSpreadSheet($user) {
         $db->close();
     }
     catch (Exception $e) {
-        ErrorLog::log($e->getMessage());
+        ErrorLog::log("Spread saveSubscriptionSpreadSheet ".$e->getMessage());
     }
 }
 
@@ -111,6 +111,7 @@ function sendEmail($user, $subject) {
     }
     catch (Exception $e) {
         ErrorLog::log($e->getMessage());
+        ErrorLog::log("Relay sendEmail ".$e->getMessage());
     }  
 }
 
