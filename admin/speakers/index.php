@@ -64,7 +64,7 @@ function changestatus_id(id,status)
     <tr>
     <th colspan="5"><br/><a href="add_speakers.php?token=<?=$_GET['token']?>">ADD Speakers.</a></th>
     </tr>
-    <th>id</th>
+    <th>Indice</th>
     <th>Name</th>
     <th>Image</th>
     <th>Orden</th>
@@ -73,7 +73,7 @@ function changestatus_id(id,status)
     <th colspan="2">Actions</th>
     </tr>
     <?php
- $sql_query="SELECT * FROM speakers order by orden";
+ $sql_query="SELECT * FROM speakers ORDER BY cast(orden as unsigned)";
  $result_set=mysqli_query($con,$sql_query);
  $i=1;
  while($row=mysqli_fetch_row($result_set))
