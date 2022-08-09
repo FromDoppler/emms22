@@ -1,6 +1,8 @@
 <?php
 include_once '../config.php';
-isIPAllow($ALLOW_IPS);
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 if(isset($_POST['btn-save']))
 {
@@ -38,12 +40,7 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
  // sql query execution function
  if(mysqli_query($con,$sql_query))
  {
-  ?>
-  <script type="text/javascript">
-  alert('speakers added Successfully ');
-  window.location.href='index.php';
-  </script>
-  <?php
+ @header("Location: /admin/speakers/index.php?token=".$_GET['token']);
  }
  else
  {
@@ -68,10 +65,10 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
 
 <div id="container"> 
 <div id="table-responsive">
-        <label>ABM Speakers</label>
+        <h3>Alta Speakers</h3>
     </div>
 </div>
-<div id="container"> &<div   id="table-responsive">
+<div id="container"> <div   id="table-responsive">
     <form method="post" enctype="multipart/form-data" >
     <table  class="table table-striped">
     <tr>

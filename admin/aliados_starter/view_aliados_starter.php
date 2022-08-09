@@ -25,11 +25,11 @@ if(isset($_GET['view_id']))
 <body>
 
 <div class="container mt-3">
-   <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
-  
-  
   <div class="table-responsive">
     <table class="table table-bordered">
+   <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
    <tr>
     <td>
    <label for="name" class="form-label">Name:</label>
@@ -40,7 +40,7 @@ if(isset($_GET['view_id']))
     <td>
    <label for="image" class="form-label">Imagen Home:</label>
    </td>
-   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200"></th>
+   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="75" height="75"></th>
 </tr>
 
  <tr>
@@ -116,7 +116,11 @@ if(isset($_GET['view_id']))
     <td>
    <label for="image" class="form-label">Imagen Youtube:</label>
    </td>
-   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_youtube']?>" alt="<?=$fetched_row['alt_image_youtube']?>" width="200" height="200"></th>
+   <th colspan="5">
+      <?php if(!empty($fetched_row['image_youtube'])) {?>   
+   <img src="uploads/<?=$fetched_row['image_youtube']?>" alt="<?=$fetched_row['alt_image_youtube']?>" width="200" height="200">
+   <?php } ?>
+</th>
 </tr>
  <tr>
     <td>
@@ -160,9 +164,11 @@ if(isset($_GET['view_id']))
    </td>
    <th colspan="5"> <?php echo $fetched_row['link_learnmore'] ?></th>
 </tr>
+    <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
  </table>
  </div>
- <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
 </div>
 </body>
 </html>

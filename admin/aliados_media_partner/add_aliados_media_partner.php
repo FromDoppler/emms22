@@ -1,6 +1,6 @@
 <?php
 include_once '../config.php';
-include_once '../utils/GeoIp.php';
+include_once '../../utils/GeoIp.php';
 $ip = GeoIp::getIp();
 isIPAllow($ip, $ALLOW_IPS);
 
@@ -27,12 +27,7 @@ $sql_query="INSERT INTO aliados_media_partner (`name`,`image_home`,`alt_image_ho
  // sql query execution function
  if(mysqli_query($con,$sql_query))
  {
-  ?>
-  <script type="text/javascript">
-  alert('aliados_media_partner added Successfully ');
-  window.location.href='index.php';
-  </script>
-  <?php
+ @header("Location: /admin/aliados_media_partner/index.php?token=".$_GET['token']);
  }
  else
  {
@@ -57,7 +52,7 @@ $sql_query="INSERT INTO aliados_media_partner (`name`,`image_home`,`alt_image_ho
 
 <div id="container"> 
 <div id="table-responsive">
-        <label>Alta Aliados Media Partner</label>
+        <h3>Alta Aliados Media Partner</h3>
     </div>
 </div>
 <div id="container"><div   id="table-responsive">

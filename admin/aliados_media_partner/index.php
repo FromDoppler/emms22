@@ -1,9 +1,10 @@
 
 <?php
 include_once '../config.php';
-include_once '../utils/GeoIp.php';
+include_once '../../utils/GeoIp.php';
 $ip = GeoIp::getIp();
 isIPAllow($ip, $ALLOW_IPS);
+
 
 
 if(isset($_GET['delete_id']))
@@ -52,17 +53,17 @@ function delete_id(id, token)
 <center>
 
 <div id="container"> <div id="table-responsive">
-    <label>Listado Aliados Pro</label>
+    <h3>Listado Aliados Pro</h3>
     </div>
 </div>
 
 <div id="container">
-      <a href="/admin/index.php?token=<?=$_GET['token']?>"> Menu Principal</a>
+      <br/><a href="/admin/index.php?token=<?=$_GET['token']?>"> Menu Principal</a>
  <div id="table-responsive">
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="7"><a href="add_aliados_media_partner.php?token=<?=$_GET['token']?>">ADD aliados_media_partner.</a></th>
+    <th colspan="7"><br><a href="add_aliados_media_partner.php?token=<?=$_GET['token']?>">ADD Aliados Media Partner</a></th>
     </tr>
     <th>id</th>
     <th>name</th>
@@ -83,12 +84,12 @@ function delete_id(id, token)
   ?>
         <tr>
         <td align="center" ><?php echo $i; ?></td>
-        <td align="center" > <a href="javascript:view_id('<?php echo $row[0]; ?>')"> <?php echo $row[1]; ?> </a> </td>
-        <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="100" height="100"></td>
+        <td align="center" > <a href="javascript:view_id('<?=$row[0]?>', '<?=$_GET['token']?>')"> <?php echo $row[1]; ?> </a> </td>
+        <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="75" height="75"></td>
         <td align="center" > <?php echo $row[4]; ?> </td>
 
-        <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')">Edit</a></td>
-        <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')">Delete</a></td>
+        <td align="center"><a href="javascript:edt_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Edit</a></td>
+        <td align="center"><a href="javascript:delete_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Delete</a></td>
         </tr>
         <?php
        $i++;  

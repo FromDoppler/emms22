@@ -1,6 +1,8 @@
 <?php
 include_once '../config.php';
-isIPAllow($ALLOW_IPS);
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 if(isset($_GET['edit_id']))
 {
@@ -69,7 +71,7 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
  {
   ?>
   <script type="text/javascript">
-  alert('speakers updated successfully');
+  alert('aliados_speakers updated successfully');
   window.location.href='index.php?token=<?=$_GET['token']?>';
   </script>
   <?php
@@ -84,9 +86,9 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
  }
  // sql query execution function
 }
- header("Location: index.php?token=".$_GET['token']);
+if(isset($_POST['btn-cancel']))
 {
- header("Location: index.php");
+ header("Location: index.php?token=".$_GET['token']);
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -100,7 +102,7 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
 <center>
 
 <div id="container"> <div id="table-responsive">
-        <label>ABM Speakers</label>
+        <h3>ABM Speakers</h3>
     </div>
 </div>
 
@@ -109,6 +111,9 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
 <div   id="table-responsive">
     <form method="post" enctype="multipart/form-data">
     <table  class="table table-striped">
+          <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
     <tr>
    <td>
    <label for="name" class="form-label">Name:</label>

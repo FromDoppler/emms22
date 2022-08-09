@@ -1,7 +1,9 @@
 
 <?php
 include_once '../config.php';
-isIPAllow($ALLOW_IPS);
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 
 if(isset($_GET['delete_id']))
@@ -50,22 +52,23 @@ function changestatus_id(id,status)
 <center>
 
 <div id="container"> <div id="table-responsive">
-    <label>ABM Speakers</label>
+    <h3>ABM Speakers</h3>
     </div>
 </div>
 
 <div id="container">
-    <a href="/admin/index.php?token=<?=$_GET['token']?>"> Menu Principal</a>
+    <br/><a href="/admin/index.php?token=<?=$_GET['token']?>"> Menu Principal</a>
  <div id="table-responsive">
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="5"><a href="add_speakers.php">add speakers.</a></th>
+    <th colspan="5"><br/><a href="add_speakers.php?token=<?=$_GET['token']?>">ADD Speakers.</a></th>
     </tr>
     <th>id</th>
-    <th>name</th>
-    <th>image</th>
-    <th>orden</th>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Orden</th>
+    <th>Image Company</th>
    
     <th colspan="2">Actions</th>
     </tr>
@@ -81,6 +84,7 @@ function changestatus_id(id,status)
         <td align="center" > <a href="javascript:view_id('<?=$row[0]?>', '<?=$_GET['token']?>')"> <?php echo $row[1]; ?> </a> </td>
         <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="100" height="100"></td>
         <td align="center" > <?php echo $row[13]; ?> </td>
+        <td align="center" > <img src="uploads/<?=$row[10]?>" alt="<?=$row[11]?>" width="100" height="100"></td></td>
         <td align="center"><a href="javascript:edt_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Edit</a></td>
         <td align="center"><a href="javascript:delete_id('<?=$row[0]?>', '<?=$_GET['token']?>')">Delete</a></td>
         </tr>

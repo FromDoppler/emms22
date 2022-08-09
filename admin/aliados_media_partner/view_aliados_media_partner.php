@@ -1,8 +1,9 @@
 <?php
 include_once '../config.php';
-include_once '../utils/GeoIp.php';
+include_once '../../utils/GeoIp.php';
 $ip = GeoIp::getIp();
 isIPAllow($ip, $ALLOW_IPS);
+
 
 if(isset($_GET['view_id']))
 {
@@ -25,11 +26,13 @@ if(isset($_GET['view_id']))
 <body>
 
 <div class="container mt-3">
-   <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
-  
+
   
   <div class="table-responsive">
     <table class="table table-bordered">
+       <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
    <tr>
     <td>
    <label for="name" class="form-label">Name:</label>
@@ -40,7 +43,7 @@ if(isset($_GET['view_id']))
     <td>
    <label for="image" class="form-label">Imagen Home:</label>
    </td>
-   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200"></th>
+   <th colspan="5"> <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="75" height="75"></th>
 </tr>
 
  <tr>
@@ -55,9 +58,11 @@ if(isset($_GET['view_id']))
    </td>
    <th colspan="5"> <?php echo $fetched_row['orden_home'] ?></th>
 </tr>
+ <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
  </table>
  </div>
- <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
 </div>
 </body>
 </html>

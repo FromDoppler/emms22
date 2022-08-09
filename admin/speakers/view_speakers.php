@@ -1,6 +1,8 @@
 <?php
 include_once '../config.php';
-isIPAllow($ALLOW_IPS);
+include_once '../../utils/GeoIp.php';
+$ip = GeoIp::getIp();
+isIPAllow($ip, $ALLOW_IPS);
 
 if(isset($_GET['view_id']))
 {
@@ -23,11 +25,13 @@ if(isset($_GET['view_id']))
 <body>
 
 <div class="container mt-3">
-  <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
- 
+
   
   <div class="table-responsive">
     <table class="table table-bordered">
+                <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
    <tr>
     <td>
    <label for="name" class="form-label">Name:</label>
@@ -106,8 +110,11 @@ if(isset($_GET['view_id']))
    </td>
    <th colspan="5"> <?php echo $fetched_row['orden'] ?></th>
 </tr>
+          <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
  </table>
-   <a href="index.php?token=<?=$_GET['token']?>"><- Back</a>
+
  </div>
 </div>
 </body>

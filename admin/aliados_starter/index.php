@@ -52,7 +52,8 @@ function delete_id(id, token)
 <center>
 
 <div id="container"> <div id="table-responsive">
-    <label>Listado Aliados Starter</label>
+  <br/>
+    <h3>Listado Aliados Starter</h3>
     </div>
 </div>
 
@@ -62,7 +63,7 @@ function delete_id(id, token)
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="9"><a href="add_aliados_starter.php">ADD aliados_starter.</a></th>
+    <th colspan="9"><br/><a href="add_aliados_starter.php">ADD Aliados Starter</a><br/></th>
     </tr>
     <th>id</th>
     <th>name</th>
@@ -85,7 +86,7 @@ function delete_id(id, token)
         <tr>
         <td align="center" ><?php echo $i; ?></td>
         <td align="center" > <a href="javascript:view_id('<?=$row[0]?>', '<?=$_GET['token']?>')"> <?php echo $row[1]; ?> </a> </td>
-        <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="100" height="100"></td>
+        <td align="center" > <img src="uploads/<?=$row[2]?>" alt="<?=$row[3]?>" width="75" height="75"></td>
         <td align="center" > <?php echo $row[4]; ?> </td>
         <td align="center" > <?php echo $row[8]; ?> </td>
         <td align="center" > <img src="uploads/<?=$row[10]?>" alt="<?=$row[11]?>" width="100" height="100"></td>

@@ -1,6 +1,6 @@
 <?php
 include_once '../config.php';
-include_once '../utils/GeoIp.php';
+include_once '../../utils/GeoIp.php';
 $ip = GeoIp::getIp();
 isIPAllow($ip, $ALLOW_IPS);
 
@@ -83,6 +83,11 @@ if(isset($_POST['btn-cancel']))
 <div id="container"><div   id="table-responsive">
     <form method="post" enctype="multipart/form-data">
     <table  class="table table-striped">
+          <tr>
+    <td align="center"><a href="index.php?token=<?=$_GET['token']?>">back to main page</a></td>
+    </tr>
+
+      <tr>
     <tr>
    <td>
    <label for="name" class="form-label">Name:</label>
@@ -96,7 +101,7 @@ if(isset($_POST['btn-cancel']))
    <label for="image_home" class="form-label">Image_home:</label>
    </td>
     <td>
-    <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="200" height="200">
+    <img src="uploads/<?=$fetched_row['image_home']?>" alt="<?=$fetched_row['alt_image_home']?>" width="75" height="75">
     <input type="file" value="<?php echo $fetched_row['image_home'] ?>" class="form-control" id="image_home" name="image_home">
 </td>
     </tr>

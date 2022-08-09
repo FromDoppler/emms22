@@ -53,13 +53,9 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
  // sql query execution function
  if(mysqli_query($con,$sql_query))
  {
-  ?>
-  <script type="text/javascript">
-  alert('aliados_pro added Successfully ');
-  window.location.href='index.php';
-  </script>
-  <?php
- }
+
+ @header("Location: /admin/aliados_pro/index.php?token=".$_GET['token']);
+  }
  else
  {
   ?>
@@ -83,7 +79,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
 
 <div id="container"> 
 <div id="table-responsive">
-        <label>Alta Aliados Pro</label>
+        <h3>Alta Aliados Pro</h3>
     </div>
 </div>
 <div id="container"><div   id="table-responsive">
