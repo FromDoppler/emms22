@@ -53,7 +53,7 @@ function delete_id(id, token)
 <center>
 
 <div id="container"> <div id="table-responsive">
-    <h3>Listado Aliados Pro</h3>
+    <h3>Listado Aliados Media Partner</h3>
     </div>
 </div>
 
@@ -65,7 +65,7 @@ function delete_id(id, token)
     <tr>
     <th colspan="7"><br><a href="add_aliados_media_partner.php?token=<?=$_GET['token']?>">ADD Aliados Media Partner</a></th>
     </tr>
-    <th>id</th>
+    <th>Indice</th>
     <th>name</th>
     <th>image_home</th>
     <th>orden_home</th>
@@ -76,7 +76,7 @@ function delete_id(id, token)
     <th colspan="2">Actions</th>
     </tr>
     <?php
- $sql_query="SELECT * FROM aliados_media_partner order by orden_home";
+ $sql_query="SELECT * FROM aliados_media_partner ORDER BY cast(orden_home as unsigned)";
  $result_set=mysqli_query($con,$sql_query);
  $i=1;
  while($row=mysqli_fetch_row($result_set))

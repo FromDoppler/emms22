@@ -65,7 +65,7 @@ function delete_id(id, token)
     <tr>
     <th colspan="9"><br/><a href="add_aliados_starter.php">ADD Aliados Starter</a><br/></th>
     </tr>
-    <th>id</th>
+    <th>Indice</th>
     <th>name</th>
     <th>image_home</th>
     <th>orden_home</th>
@@ -77,7 +77,7 @@ function delete_id(id, token)
     <th colspan="2">Actions</th>
     </tr>
     <?php
- $sql_query="SELECT * FROM aliados_starter order by orden_home";
+ $sql_query="SELECT * FROM aliados_starter ORDER BY cast(orden_home as unsigned)";
  $result_set=mysqli_query($con,$sql_query);
  $i=1;
  while($row=mysqli_fetch_row($result_set))
