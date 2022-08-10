@@ -63,7 +63,7 @@ function delete_id(id, token)
  
     <table  class="table table-striped" > 
     <tr>
-    <th colspan="9"><br/><a href="add_aliados_starter.php">ADD Aliados Starter</a><br/></th>
+    <th colspan="9"><br/><a href="add_aliados_starter.php?token=<?=$_GET['token']?>">ADD Aliados Starter</a><br/></th>
     </tr>
     <th>Indice</th>
     <th>name</th>
