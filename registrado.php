@@ -37,12 +37,12 @@ require_once('config.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href="./registrado.php"  class="utmAnchorPropagation"><img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./registrado.php" ><img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
-					<li><a href="./registrado.php" class="emms22__header__nav--btn-active utmAnchorPropagation">inicio</a></li>
-					<li><a href="./ediciones-anteriores.php" class="utmAnchorPropagation">ediciones anteriores</a></li>
+					<li><a href="./registrado.php" class="emms22__header__nav--btn-active">inicio</a></li>
+					<li><a href="./ediciones-anteriores.php">ediciones anteriores</a></li>
 				</ul>
 			</div>
 		</nav>

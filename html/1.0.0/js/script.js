@@ -13,7 +13,7 @@ import {
 	getEncodeURLEmail, loadEmail
 } from './modules/decodeEmail.js';
 import {
-	searchUrlParam, getUrlWithParams, utmAnchorPropagation
+	searchUrlParam, getUrlWithParams
 } from './modules/utm.js';
 import {
 	lazyLoadVideos
@@ -24,7 +24,6 @@ import {
 document.addEventListener('DOMContentLoaded', () => {
 
 	lazyLoadVideos();
-	utmAnchorPropagation();
 	
 	const earlyForms = document.querySelectorAll('form');
 	const dialCodeContainer = document.querySelector('.iti__selected-dial-code');
