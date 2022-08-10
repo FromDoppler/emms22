@@ -35,15 +35,15 @@ require_once('config.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href="./index.php"><img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./index.php" class="utmAnchorPropagation"><img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<div class="emms22__header__warning emms22__fade-top">
 					<a>¡ÚLTIMOS LUGARES DISPONIBLES! REGÍSTRATE GRATIS AHORA</a>
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
-					<li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
-					<li><a href="./ediciones-anteriores.php">ediciones anteriores</a></li>
+					<li><a href="./index.php" class="emms22__header__nav--btn-active utmAnchorPropagation">inicio</a></li>
+					<li><a href="./ediciones-anteriores.php" class="utmAnchorPropagation">ediciones anteriores</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -412,7 +412,6 @@ require_once('config.php');
 									transfronterizas y otros temas. <br>
 								</p>
 							</div>
-							<?php include_once('commonUtms.php') ?>
 						</form>
 					</div>
 				</div>
@@ -879,7 +878,6 @@ require_once('config.php');
 							<button class="emms22__button emms22__fade-in">REGISTRARME</button>
 						</div>
 					</div>
-					<?php include_once('commonUtms.php') ?>
 
 				</form>
 			</div>
