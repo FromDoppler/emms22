@@ -2,59 +2,36 @@
 import {
 	phoneInput,
 	phoneInputFooter
-} from './modules/intlTelInput/phoneValidation.js'
+} from './modules/intlTelInput/phoneValidation.js';
 import {
 	validatePhoneField
-} from './modules/phoneValidator.js'
-
+} from './modules/phoneValidator.js';
 import {
 	validateForm, resetErrorField
-} from './modules/formsValidators.js'
-
+} from './modules/formsValidators.js';
 import {
 	getEncodeURLEmail, loadEmail
-} from './modules/decodeEmail.js'
-
+} from './modules/decodeEmail.js';
+import {
+	searchUrlParam, getUrlWithParams
+} from './modules/utm.js';
 import {
 	lazyLoadVideos
-} from './lazyVideos.js'
+} from './lazyVideos.js';
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	lazyLoadVideos()
-
-
+	lazyLoadVideos();
+	
 	const earlyForms = document.querySelectorAll('form');
-	const utm_source = (document.getElementById("utm_source").value != '' ? document.getElementById("utm_source").value : '');
-	const utm_campaign = (document.getElementById("utm_campaign").value != '' ? document.getElementById("utm_campaign").value : '');
-	const utm_content = (document.getElementById("utm_content").value != '' ? document.getElementById("utm_content").value : '');
-	const utm_term = (document.getElementById("utm_term").value != '' ? document.getElementById("utm_term").value : '');
-	const utm_medium = (document.getElementById("utm_medium").value != '' ? document.getElementById("utm_medium").value : '');
 	const dialCodeContainer = document.querySelector('.iti__selected-dial-code');
 
 	const urlEmail = getEncodeURLEmail();
 	loadEmail(urlEmail);
 
 	earlyForms.forEach(form => { form.addEventListener('submit', sendData) });
-
-	function addParameterUTms() {
-
-		const urlParamsValues = [utm_medium, utm_source, utm_campaign, utm_term, utm_content]
-		const urlParamsNames = ['utm_medium', 'utm_source', 'utm_campaign', 'utm_term', 'utm_content'];
-		let newParamsUrl = '?';
-		let firstParam = true;
-		urlParamsValues.forEach((param, index) => {
-			if (param != null && firstParam && urlParamsValues[index] != "") {
-				newParamsUrl = newParamsUrl + urlParamsNames[index] + '=' + urlParamsValues[index];
-				firstParam = false;
-			} else if (param != null && !firstParam && urlParamsValues[index] != "") {
-				newParamsUrl = newParamsUrl + '&' + urlParamsNames[index] + '=' + urlParamsValues[index];
-			}
-		});
-		return newParamsUrl;
-	}
 
 	const activeFieldEventsValidator = (phoneInput) => {
 		document.querySelectorAll("input.required,select.required").forEach((elem) => {
@@ -103,13 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
 					'company': formData.get('company'),
 					'acceptPolicies': (formData.get('privacy') === 'true') ? true : null,
 					'acceptPromotions': (formData.get('promotions') === 'true') ? true : null,
-					'utm_source': (formData.get('utm_source') === '') ? 'direct' : formData.get('utm_source'),
-					'utm_campaign': formData.get('utm_campaign'),
-					'utm_content': formData.get('utm_content'),
-					'utm_term': formData.get('utm_term'),
-					'utm_medium': formData.get('utm_medium'),
-					'origin': formData.get('origin'),
-
+					'utm_source': (searchUrlParam('utm_source') === '') ? 'direct' : searchUrlParam('utm_source'),
+					'utm_campaign': searchUrlParam('utm_campaign'),
+					'utm_content': searchUrlParam('utm_content'),
+					'utm_term': searchUrlParam('utm_term'),
+					'utm_medium': searchUrlParam('utm_medium'),
+					'origin': searchUrlParam('origin'),
 				};
 
 				formBtn.innerHTML = "";
@@ -125,8 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					.then(resp => resp)
 					.then(resp => {
 						localStorage.setItem('registered', true);
-						const paramsGET = (addParameterUTms().length > 1) ? '/registrado.php' + addParameterUTms() : '/registrado.php';
-						window.location.href = paramsGET; //relative to domain
+						window.location.href = getUrlWithParams('/registrado.php');
 					})
 					.catch((error) => {
 						// Tenemos la respuesta de errores

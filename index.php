@@ -51,7 +51,7 @@ require_once('config.php');
 		<!-- Hero -->
 		<div class="emms22__hero-home">
 			<div class="emms22__hero-home__back">
-				<video class="lazy" loop muted autoplay playsinline  poster="../html/<?= VERSION ?>/img/thumb.png">
+				<video class="lazy" loop muted autoplay playsinline poster="../html/<?= VERSION ?>/img/thumb.png">
 					<source data-src="../html/<?= VERSION ?>/img/video-background-compress.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -412,7 +412,6 @@ require_once('config.php');
 									transfronterizas y otros temas. <br>
 								</p>
 							</div>
-							<?php include_once('commonUtms.php') ?>
 						</form>
 					</div>
 				</div>
@@ -879,7 +878,6 @@ require_once('config.php');
 							<button class="emms22__button emms22__fade-in">REGISTRARME</button>
 						</div>
 					</div>
-					<?php include_once('commonUtms.php') ?>
 
 				</form>
 			</div>
