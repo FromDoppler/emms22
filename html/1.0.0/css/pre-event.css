@@ -1,0 +1,1882 @@
+.emms22__pre-event{
+    background: #f0f0f0;
+}
+
+
+/* ----------------------------------------------------------- Hero */
+
+.emms22__hero-pre-event{
+    position: relative;
+}
+
+.emms22__hero-pre-event .emms22__container--lg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0 64px 0;
+    opacity: 0;
+    animation: fade-top 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+.emms22__hero-pre-event__back{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.emms22__hero-pre-event__back::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.emms22__hero-pre-event__back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emms22__hero-pre-event__back video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.emms22__hero-pre-event__intro{
+    max-width: 550px;
+    width: 50%;
+    padding: 100px 0 0 0;
+}
+
+.emms22__hero-pre-event__intro__info p{
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 24px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+
+.emms22__hero-pre-event__intro__info h1{
+    font-family: 'Proxima-Nova-Bold';
+    font-size: 67px;
+    line-height: 67px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 45px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+
+.emms22__hero-pre-event__intro__counter{
+    margin: 84px 0 50px 0;
+}
+
+.emms22__hero-pre-event__intro__counter li{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    color: #fff;
+    margin-right: 25px;
+}
+
+.emms22__hero-pre-event__intro__counter li p{
+    font-size: 13px;
+    margin: 0;
+}
+
+.emms22__hero-pre-event__intro__counter li div{
+    width: 58px;
+    height: 60px;
+    background: #474747;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.emms22__hero-pre-event__intro__counter li div span{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    line-height: 60px;
+    z-index: 1;
+    position: relative;
+}
+
+.emms22__hero-pre-event__intro__counter li div::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: #191919;
+}
+
+.emms22__hero-pre-event__intro__counter li .emms22__hero-pre-event__intro__counter__number--data{
+    font-size: 13px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.emms22__hero-pre-event__intro__info ul li{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    position: relative;
+    padding: 0 0 0 36px;
+    margin: 0 0 31px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+.emms22__hero-pre-event__intro__info ul li:nth-child(1){
+    animation-delay: 0.8s;
+}
+.emms22__hero-pre-event__intro__info ul li:nth-child(2){
+    animation-delay: 0.9s;
+}
+.emms22__hero-pre-event__intro__info ul li:nth-child(3){
+    animation-delay: 1s;
+}
+
+.emms22__hero-pre-event__intro__info ul li::before{
+    content: url("../img/check-w.svg");
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background: #BD7AFF;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2px;
+}
+
+.emms22__hero-pre-event__intro__info span{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+    margin: 48px 0 0 0;
+    animation-delay: 1.1s;
+}
+
+#contentEarlyForm{
+    padding: 100px 0 0 0;
+}
+
+.emms22__pre-event__container-form{
+    max-width: 425px;
+    width: 100%;
+    background: #5E3E94;
+    border-radius: 14px;
+    padding: 48px 36px;
+    box-sizing: border-box;
+    color: #fff;
+    box-shadow: 0 1px 88px rgba(0, 0, 0, 0.65);
+}
+
+.emms22__pre-event__form__field-item{
+    margin: 0 0 14px 0;
+}
+
+.emms22__pre-event__form__field-item label{
+    font-family: 'Proxima-Nova-Bold';
+    font-size: 12px;
+    line-height: 14px;
+    display: block;
+    margin: 0 0 5px 0;
+}
+
+.emms22__pre-event__form__field-item input, select{
+    height: 33px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 1px #B4B4B4;
+    background: #F5F2F2;
+    padding: 0 9px;
+    font-size: 14px;
+    color: #000;
+    outline: none;
+}
+
+.emms22__pre-event__form__field-item input:focus{
+    border: solid 2px #FAB221;
+}
+
+.emms22__pre-event__form__field-group{
+    margin: 0 0 37px 0;
+}
+
+.emms22__pre-event__form__field-group li{
+    margin: 0px 0px 20px 0px; 
+}
+
+.emms22__pre-event__form__field-item__checkbox{
+    position: relative;
+}
+
+.emms22__pre-event__form__field-item__checkbox input[type=checkbox]{
+    cursor: pointer;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+}
+
+.emms22__pre-event__form__field-item__checkbox .checkmark{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #5e3e94;
+    pointer-events: none;
+}
+
+.emms22__pre-event__form__field-item__checkbox .checkmark::after{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #5e3e94;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.emms22__pre-event__form__field-item__checkbox input[type=checkbox]:checked~.checkmark{
+    border-color: #33ad73;
+    background-color: #33ad73;
+}
+
+.emms22__pre-event__form__field-item__checkbox input[type=checkbox]:checked~.checkmark::after{
+    display: block;
+    border-color: #fff;
+}
+
+.emms22__pre-event__form__field-item__checkbox label{
+    font-family: 'Proxima-Nova';
+    font-size: 10px;
+    margin: 0 0 0 29px;
+    cursor: pointer;
+}
+
+.emms22__home__btn{
+    margin: 38px 0 0 0;
+}
+
+.emms22__home__btn .emms22__button{
+    height: 51px;
+    color: #fff;
+    box-shadow: none;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+}
+
+.emms22__home__legal {
+    margin: 34px 0 0 0;
+}
+
+.emms22__home__legal p{
+    font-family: 'Proxima-Nova';
+    font-size: 10px;
+    line-height: 17px;
+    margin: 0;
+    color: #fff;
+}
+
+.emms22__home__legal p strong{
+    font-family: 'Proxima-Nova-Bold';
+    font-weight: 400;
+}
+
+.emms22__home__legal p a{
+    font-family: 'Proxima-Nova-Bold';
+    font-weight: 400;
+    color: #33AD73;
+}
+
+.emms22__home__legal p a:hover{
+    text-decoration: underline;
+}
+
+.emms22__hero-pre-event__registered{
+    position: relative;
+    max-width: 890px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 260px 0;
+    text-align: center;
+}
+
+.emms22__hero-pre-event__registered h2{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 59px;
+    line-height: 59px;
+    color: #fff;
+    margin: 0 0 51px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s ;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text{
+    margin: 0 0 40px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s ;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.emms22__hero-pre-event__registered__btn-calendar{
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s ;
+}
+
+.emms22__hero-pre-event__registered a.addeventatc{
+		display: inline-block;
+    font-family: "Proxima-Nova-Bold";
+    font-size: 18px;
+    line-height: 51px;
+    color: #fff !important;
+    padding: 0;
+    width: 164px;
+    height: 51px;
+    background: #33AD73;
+    margin: 0 11px;
+}
+
+.emms22__hero-pre-event__registered a.addeventatc span{
+    display: none;
+}
+
+.emms22__hero-pre-event__registered a.addeventatc:hover{
+    background: #008046;
+    transition: all 0.1s ease-in-out;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter{
+    padding: 70px 0 20px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li:nth-child(1){
+    display: block;
+    margin: 0 0 23px 0;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li{
+    margin: 0 12.5px 0 12.5px;
+}
+
+@media(max-width:1200px){
+    .emms22__hero-pre-event__intro__info h1{
+        font-size: 87px;
+    }
+}
+
+@media(max-width:992px){
+
+    #contentEarlyForm{
+        padding: 10px 0 0 0;
+    }
+
+    .emms22__hero-pre-event .emms22__container--lg{
+        display: block;
+    }
+
+    .emms22__hero-pre-event__intro{
+        max-width: initial;
+        width: 100%;
+        padding: 50px 0 0 0;
+    }
+
+    .emms22__pre-event__container-form{
+        max-width: initial;
+        width: 100%;
+        transform: none !important;
+        margin: 70px 0 0 0;
+    }
+
+    .emms22__hero-pre-event__registered{
+        padding: 80px 0 300px 0;
+    }
+}
+
+@media(max-width:620px){
+    #contentEarlyForm{
+        padding: 80px 0 0 0;
+    }
+
+    .emms22__hero-pre-event__intro{
+        padding: 0;
+    }
+
+    .emms22__hero-pre-event__intro__counter{
+        text-align: center;
+        padding: 0px 0 56px 0;
+    }
+
+    .emms22__hero-pre-event .emms22__container--lg{
+        padding: 135px 0 64px 0;
+    }
+
+    .emms22__hero-pre-event__intro__counter li:nth-child(1){
+        display: block;
+        text-align: center;
+        margin: 0 0 18px 0;
+    }
+
+    .emms22__hero-pre-event__intro__counter li{
+        margin-right: 5px;
+    }
+
+    .emms22__hero-pre-event__intro__info p{
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .emms22__hero-pre-event__intro__info h1{
+        font-size: 47px;
+        line-height: 52px;
+        margin: 0 0 31px 0;
+    }
+
+    .emms22__hero-pre-event__intro__info ul li{
+        font-size: 16px;
+        line-height: 22px;
+        padding: 0 0 0 26px;
+    }
+
+    .emms22__hero-pre-event__intro__info ul li::before{
+        width: 15px;
+        height: 15px;
+    }
+
+    .emms22__hero-pre-event__intro__info span{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .emms22__pre-event__container-form{
+        padding: 30px 25px;
+        margin: 0;
+    }
+
+    .emms22__hero-pre-event__registered{
+        padding: 0 0 210px 0;
+    }
+
+    .emms22__hero-pre-event__registered h2{
+        font-size: 47px;
+        line-height: 52px;
+        margin: 0 auto 45px auto;
+        max-width: 360px;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text{
+        max-width: 280px;
+        margin: 0 auto 50px auto;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text p:nth-child(1){
+        margin: 0 0 20px 0;
+    }
+
+    .emms22__hero-pre-event__registered a.addeventatc{
+        margin: 0 auto;
+        display: block;
+    }
+
+    .emms22__hero-pre-event__registered a.addeventatc:nth-child(1){
+        margin: 0 auto 33px auto;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter{
+        padding: 0px 0 22px 0;
+        margin: 55px 0 45px 0;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li{
+        margin: 0 1.5px 0 1.5px;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li:nth-child(1){
+        margin: 0 0 18px 0;
+    }
+}
+
+
+/* ----------------------------------------------------------- Hero Registered */
+
+.emms22__hero-pre-event__registered{
+    position: relative;
+    max-width: 890px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 260px 0;
+    text-align: center;
+}
+
+.emms22__hero-pre-event__registered h2{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 59px;
+    line-height: 59px;
+    color: #fff;
+    margin: 0 0 51px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s ;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text{
+    margin: 0 0 40px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s ;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.emms22__hero-pre-event__registered__btn-calendar{
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s ;
+}
+
+.emms22__hero-pre-event__registered a.addeventatc{
+		display: inline-block;
+    font-family: "Proxima-Nova-Bold";
+    font-size: 18px;
+    line-height: 51px;
+    color: #fff !important;
+    padding: 0;
+    width: 164px;
+    height: 51px;
+    background: #33AD73;
+    margin: 0 11px;
+}
+
+.emms22__hero-pre-event__registered a.addeventatc span{
+    display: none;
+}
+
+.emms22__hero-pre-event__registered a.addeventatc:hover{
+    background: #008046;
+    transition: all 0.1s ease-in-out;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter{
+    padding: 70px 0 20px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li:nth-child(1){
+    display: block;
+    margin: 0 0 23px 0;
+}
+
+.emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li{
+    margin: 0 12.5px 0 12.5px;
+}
+
+.emms22__hero-pre-event__registered .emms22__share{
+    margin: 52px 0 0 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.emms22__hero-pre-event__registered .emms22__share ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.emms22__hero-pre-event__registered .emms22__share ul li:nth-child(1){
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.emms22__hero-pre-event__registered .emms22__share ul li{
+    margin: 0 8px 0 8px;
+}
+
+@media(max-width:992px){
+    .emms22__hero-pre-event__registered{
+        padding: 200px 0 100px 0;
+    }
+}
+
+@media(max-width:620px){
+    .emms22__hero-pre-event__registered{
+        padding: 155px 0 100px 0;
+    }
+
+    .emms22__hero-pre-event__registered h2{
+        font-size: 47px;
+        line-height: 52px;
+        margin: 0 auto 45px auto;
+        max-width: 360px;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text{
+        max-width: 280px;
+        margin: 0 auto 50px auto;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__registered__text p:nth-child(1){
+        margin: 0 0 20px 0;
+    }
+
+    .emms22__hero-pre-event__registered a.addeventatc{
+        margin: 0 auto;
+        display: block;
+    }
+
+    .emms22__hero-pre-event__registered a.addeventatc:nth-child(1){
+        margin: 0 auto 33px auto;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter{
+        padding: 0px 0 22px 0;
+        margin: 55px 0 45px 0;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li{
+        margin: 0 1.5px 0 1.5px;
+    }
+
+    .emms22__hero-pre-event__registered .emms22__hero-pre-event__intro__counter li:nth-child(1){
+        margin: 0 0 18px 0;
+    }
+}
+
+
+/* ----------------------------------------------------------- Calendar */
+
+
+.emms22__pre-event__calendar{
+    padding: 98px 0 102px 0;
+}
+
+.emms22__pre-event__calendar .emms22__container--lg{
+    display: block;
+}
+
+.emms22__pre-event__calendar h2{
+    font-size: 27px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin: 0 0 106px 0;
+    animation-delay: .1s;
+}
+
+.emms22__pre-event__calendar__date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 10px 0;
+    border-bottom: solid 1px #B4B4B4;
+    margin: 100px 0 48px 0;
+    animation-delay: .2s;
+}
+
+.emms22__pre-event__calendar__date h3{
+    font-size: 27px;
+    font-weight: 300;
+    color: #333333;
+    margin: 0;
+}
+
+.emms22__pre-event__calendar__date h3 strong{
+    font-weight: 400;
+}
+
+.emms22__pre-event__calendar__date__country{
+    text-align: right;
+}
+
+.emms22__pre-event__calendar__date__country span{
+    font-size: 12px;
+    font-weight: 300;
+    color: #333333;
+    display: block;
+}
+
+.emms22__pre-event__calendar__date__country span img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.emms22__pre-event__calendar__date__country a{
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    color: #33AD73;
+    display: block;
+}
+
+.emms22__pre-event__calendar__date__country a:hover{
+    color: #008046;
+    transition-duration: .2s;
+}
+
+.emms22__pre-event__calendar__event-list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(1000px + 4%);
+    margin: 0 auto;
+    animation-delay: .3s;
+}
+
+.emms22__pre-event__calendar__event-list.emms22__show-mb{
+    display: none;
+}
+
+.emms22__pre-event__calendar__event-list__event{
+    width: 33.3%;
+    margin: 0 0 32px 0;
+    padding: 0 2%;
+    box-sizing: border-box;
+}
+
+.emms22__pre-event__calendar__event-list__event__card{
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    padding: 11px 0 0 0;
+    position: relative;
+}
+
+.emms22__pre-event__calendar__event-list__event__card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11px;
+    background: #BD7AFF;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker{
+    display: flex;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__image{
+    width: 30%;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text{
+    padding: 18px 18px 0 18px;
+    box-sizing: border-box;
+    width: 70%;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text h4{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 7px 0;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text h5{
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text ul{
+    margin: 16px 0 0 0;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text ul li{
+    display: inline-block;
+    height: 12px;
+    margin: 0 16px 0 0;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text ul li a{
+    display: block;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text ul li a:hover{
+    opacity: .7;
+    transition-duration: .2s;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__speaker__text ul li a img{
+    height: 100%;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__description{
+    padding: 20px 15px;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__description p{
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__business{
+    height: 28px;
+    padding: 0 0 17px 17px;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__business img{
+    height: 100%;
+}
+
+.emms22__pre-event__calendar__event-list__event__country{
+    margin: 10px 0 0 0;
+}
+
+.emms22__pre-event__calendar__event-list__event__country span{
+    font-size: 11px;
+    font-weight: 300;
+    color: #333;
+}
+
+.emms22__pre-event__calendar__event-list__event__country span img{
+    width: 15px;
+    height: 15px;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+.emms22__pre-event__calendar__event-list__event__country a{
+    font-size: 11px;
+    font-weight: 300;
+    font-style: italic;
+    color: #33AD73;
+}
+
+.emms22__pre-event__calendar__event-list__event__country a:hover{
+    color: #008046;
+    transition-duration: .2s;
+}
+
+@media(max-width:992px){
+    .emms22__pre-event__calendar__event-list__event{
+        width: 50%;
+    }
+}
+
+@media(max-width:620px){
+    .emms22__pre-event__calendar{
+        padding: 55px 0 40px 0;
+    }
+
+    .emms22__pre-event__calendar h2{
+        font-size: 17px;
+        line-height: 19px;
+        max-width: 220px;
+        margin: 0 auto 27px;
+    }
+
+    .emms22__pre-event__calendar__date{
+        display: block;
+        padding: 0;
+        margin: 0 0 28px 0;
+    }
+
+    .emms22__pre-event__calendar__date h3{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .emms22__pre-event__calendar__date__country{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0 0 0;
+    }
+
+    .emms22__pre-event__calendar__date__country span img{
+        width: 26px;
+        height: 26px;
+    }
+
+    .emms22__pre-event__calendar__event-list{
+        margin: 0 auto 20px auto;
+    }
+
+    .emms22__pre-event__calendar__event-list.emms22__show-dk{
+        display: none;
+    }
+    
+    .emms22__pre-event__calendar__event-list.emms22__show-mb{
+        display: block;
+    }
+
+    .emms22__pre-event__calendar__event-list__event{
+        padding: 0;
+        width: 100%;
+    }
+
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-page-dots{
+        display: none;
+    }
+
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button{
+        top: 40%;
+    }
+
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-button{
+        background: transparent;
+    }
+
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.previous{
+        display: none;
+    }
+
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.next{
+        background: url("../img/icons/arrow-right.svg") no-repeat;
+        background-size: contain;
+        background-position-x: center;
+        right: 0;
+        width: 11px;
+        height: 24px;
+    }
+
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.next svg{
+        display: none;
+    }
+
+    .emms22__pre-event__calendar__event-list__event__card{
+        max-width: 222px;
+        margin: 0 auto;
+    }
+
+    .emms22__pre-event__calendar__event-list__event__card__speaker__text{
+        padding: 13px 13px 0 13px;
+    }
+
+    .emms22__pre-event__calendar__event-list__event__card__speaker__text h5{
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .emms22__pre-event__calendar__event-list__event__card__speaker__text ul li{
+        margin: 0 5px 0 0;
+    }
+
+    .emms22__pre-event__calendar__event-list__event__country{
+        max-width: 222px;
+        margin: 10px auto 0;
+    }
+}
+
+
+/* ----------------------------------------------------------- CTA Box */
+
+.emms22__pre-event__ctabox{
+    max-width: 480px;
+    width: 90%;
+    margin: 0 auto 130px auto;
+    text-align: center;
+}
+
+.emms22__pre-event__ctabox h2{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 45px 0;
+    animation-delay: .1s;
+}
+
+.emms22__pre-event__ctabox .emms22__button{
+    max-width: 310px;
+    width: 100%;
+    margin: 0 auto;
+    animation-delay: .2s;
+}
+
+@media(max-width:620px){
+    .emms22__pre-event__ctabox{
+        margin: 0 auto 70px auto;
+    }
+    .emms22__pre-event__ctabox h2{
+        font-size: 17px;
+        line-height: 22px;
+        margin: 0 0 39px 0;
+    }
+}
+
+
+
+/* ----------------------------------------------------------- Premium content */
+
+.emms22__pre-event__premium-content{
+    background: #310E44;
+    padding: 112px 0 66px 0;
+}
+
+.emms22__pre-event__premium-content .emms22__container--lg{
+    justify-content: space-between;
+    position: relative;
+}
+
+.emms22__pre-event__premium-content__text{
+    width: 50%;
+    animation-delay: .1s;
+}
+
+.emms22__pre-event__premium-content__text h2{
+    font-size: 27px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 28px 0;
+}
+
+.emms22__pre-event__premium-content__text p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 50px 0;
+}
+
+.emms22__pre-event__premium-content__text .emms22__button{
+    max-width: 243px;
+    width: 100%;
+}
+
+.emms22__pre-event__premium-content__image{
+    width: 42%;
+    margin-bottom: 0px;
+    position: absolute;
+    right: 0;
+    top: -26%;
+}
+
+.emms22__pre-event__premium-content__image.emms22__fade-in-animation{
+    transform: rotate(-10deg);
+    opacity: 0;
+    animation: fade-in-rotate .7s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-rotate{
+    0%{
+        opacity: 0;
+        transform: rotate(-10deg);
+        transform-origin: top ;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+        transform-origin: top ;
+    }
+}
+
+.emms22__pre-event__premium-content__image img{
+    width: 100%;
+}
+
+@media(max-width:992px){
+    .emms22__pre-event__premium-content__image{
+        top: 6%;
+    }
+}
+
+@media(max-width:620px){
+    .emms22__pre-event__premium-content{
+        padding: 50px 0 66px 0;
+    }
+    .emms22__pre-event__premium-content__text{
+        text-align: center;
+        width: 100%;
+    }
+
+    .emms22__pre-event__premium-content__text h2{
+        font-size: 17px;
+        line-height: 18px;
+        margin: 0 0 23px 0;
+    }
+
+    .emms22__pre-event__premium-content__text p{
+        line-height: 22px;
+        margin: 0 0 40px 0;
+    }
+
+    .emms22__pre-event__premium-content__text .emms22__button{
+        max-width: 310px;
+        margin: 0 auto;
+    }
+
+    .emms22__pre-event__premium-content__image{
+        max-width: 280px;
+        width: 100%;
+        margin: 50px auto -140px auto;
+        position: relative;
+    }
+}
+
+
+
+/* ----------------------------------------------------------- Experiences */
+
+.emms22__pre-event__experiences{
+    background: url("../img/back-purple.png") no-repeat;
+    background-size: cover;
+    padding: 212px 0 93px 0;
+}
+
+.emms22__pre-event__experiences h2{
+    font-size: 27px;
+    line-height: 29px;
+    font-weight: 700;
+    text-align: center;
+    color: #F2F2F2;
+    margin: 0 0 60px 0;
+    width: 100%;
+    animation-delay: .1s;
+}
+
+.emms22__pre-event__experiences__carousel{
+    max-width: 1050px;
+    margin: 0 auto;
+    animation-delay: .2s;
+}
+
+.emms22__pre-event__experiences__carousel .flickity-viewport{
+    padding: 70px 0px 0 0;
+    height: 380px;
+}
+
+.emms22__pre-event__experiences__carousel .flickity-page-dots .dot{
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background: #FFFFFF;
+    border: 1px solid #B38EC1;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+
+.emms22__pre-event__experiences__carousel .flickity-page-dots .dot.is-selected{
+    background: #B58FC1;
+    border: 1px solid #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emms22__pre-event__experiences__carousel__item{
+    /* width: 33%; */
+    width: 350px;
+    height: calc(100% - 110px);
+}
+
+.emms22__pre-event__experiences__carousel__item::before{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 7%;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    border: solid 2px #87E3CE;
+}
+
+.emms22__pre-event__experiences__carousel__item__card{
+    background: #D6FFF6;
+    padding: 40px 35px 40px 35px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 3px #87E3CE;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.emms22__pre-event__experiences__carousel__item__card img{
+    width: 136px;
+    height: 136px;
+    display: block;
+    margin: -110px auto 21px;
+}
+
+.emms22__pre-event__experiences__carousel__item__card h3{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #333333;
+    margin: 0 0 21px 0;
+}
+
+.emms22__pre-event__experiences__carousel__item__card h3 span{
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+}
+
+.emms22__pre-event__experiences__carousel__item__card p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+    margin: 0;
+}
+
+.emms22__pre-event__experiences__carousel__item__card p strong{
+    font-weight: 700;
+}
+
+.emms22__pre-event__experiences__btn{
+    margin: 75px 0 0 0;
+    width: 100%;
+}
+
+.emms22__pre-event__experiences__btn .emms22__button{
+    max-width: 347px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media(max-width:620px){
+
+    .emms22__pre-event__experiences{
+        padding: 165px 0 61px 0;
+    }
+
+    .emms22__pre-event__experiences h2{
+        font-size: 17px;
+        line-height: 19px;
+        max-width: 270px;
+        margin: 0 auto 40px;
+    }
+
+    .emms22__pre-event__experiences__carousel__item{
+        width: 100%;
+    }
+
+    .emms22__pre-event__experiences__carousel__item::before{
+        left: calc(50% + 12px);
+        transform: translateX(-50%);
+        width: 270px;
+    }
+
+    .emms22__pre-event__experiences__carousel__item__card{
+        max-width: 270px;
+        margin: 0 auto;
+    }
+    .emms22__pre-event__experiences__carousel__item__card img{
+        width: 105px;
+        height: 105px;
+    }
+}
+
+
+/* ----------------------------------------------------------- Allies */
+
+.emms22__pre-event__allies{
+    padding: 95px 0 156px 0;
+}
+
+.emms22__pre-event__allies .emms22__container--lg{
+    display: block;
+}
+
+.emms22__pre-event__allies h2{
+    font-size: 27px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin: 0 0 98px 0;
+    animation-delay: .2s;
+}
+
+.emms22__pre-event__allies__group{
+    margin: 0 0 50px 0;
+}
+
+.emms22__pre-event__allies .emms22__pre-event__allies__group h3{
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 700;
+    text-align: center;
+    color: #333333;
+    margin: 0;
+    padding: 0 0 10px 0;
+    border-bottom: solid 1px #B4B4B4;
+    animation-delay: .3s;
+}
+
+.emms22__pre-event__allies .emms22__pre-event__allies__group ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 48px 0 0 0;
+    animation-delay: .4s;
+}
+
+.emms22__pre-event__allies .emms22__pre-event__allies__group ul li{
+    height: 40px;
+    margin: 0 15px 25px 15px;
+}
+
+.emms22__pre-event__allies .emms22__pre-event__allies__group ul li img{
+    height: 100%;
+}
+
+.emms22__pre-event__allies__contact p{
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #333333;
+    margin: 0;
+}
+
+.emms22__pre-event__allies__contact{
+    margin: 70px 0 0 0;
+    animation-delay: .4s;
+}
+
+.emms22__pre-event__allies__contact p a{
+    font-weight: 700;
+    color: #33AD73;
+    transition-duration: .2s;
+}
+
+.emms22__pre-event__allies__contact p a:hover{
+    color: #008046;
+    transition-duration: .2s;
+}
+
+@media(max-width:620px){
+    .emms22__pre-event__allies{
+        padding: 86px 0 114px 0;
+    }
+
+    .emms22__pre-event__allies .emms22__container--lg{
+        width: 100%;
+    }
+
+    .emms22__pre-event__allies h2{
+        font-size: 17px;
+        margin: 0 0 50px 0;
+    }
+
+    .emms22__pre-event__allies__group {
+        margin: 0 0 80px 0;
+    }
+
+    .emms22__pre-event__allies .emms22__pre-event__allies__group h3{
+        font-size: 15px;
+    }
+
+    .emms22__pre-event__allies .emms22__pre-event__allies__group ul{
+        margin: 18px 0 0 0;
+    }
+
+    .emms22__pre-event__allies .emms22__pre-event__allies__group ul li{
+        margin: 0 15px 20px 15px;
+    }
+
+    .emms22__pre-event__allies__contact{
+        max-width: 300px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+/* ----------------------------------------------------------- Bottom form */
+
+.emms22__pre-event__bottom-form{
+    background: url(../img/back-purple.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    padding: 113px 0 60px 0;
+}
+
+.emms22__pre-event__bottom-form .emms22__pre-event__bottom-form__title{
+    text-align: center;
+    max-width: 540px;
+    width: 90%;
+    margin: 0 auto 58px auto;
+}
+
+.emms22__pre-event__bottom-form .emms22__pre-event__bottom-form__title h3{
+    font-family: "Proxima-Nova-Bold";
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    margin: 0 0 20px 0;
+    animation-delay: 0.1s;
+}
+
+.emms22__pre-event__bottom-form .emms22__pre-event__bottom-form__title p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0;
+    animation-delay: 0.2s;
+}
+
+.emms22__pre-event__bottom-form .emms22__home__container-form{
+    max-width: 830px;
+    width: 90%;
+    margin: 0 auto;
+    animation-delay: 0.3s;
+}
+
+.emms22__pre-event__bottom-form .emms22__pre-event__form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.emms22__pre-event__bottom-form .emms22__pre-event__form .emms22__home__container-form__column{
+    width: 47%;
+}
+
+.emms22__pre-event__bottom-form .emms22__pre-event__form__field-group:nth-child(2){
+    margin: 0;
+}
+
+.emms22__pre-event__bottom-form .emms22__pre-event__form__field-item.emms22__pre-event__form__field-item__checkbox:nth-child(2){
+    margin: 0;
+}
+
+.iti__country-list .iti__country{
+    margin: 0;
+}
+
+.emms22__pre-event__bottom-form .emms22__home__legal{
+    margin: 12px 0 0 0;
+}
+
+@media(max-width:992px){
+    .emms22__pre-event__bottom-form{
+        background: #310E44;
+    }
+}
+
+@media(max-width:620px){
+    .emms22__pre-event__bottom-form{
+        padding: 51px 0 77px 0;
+    }
+
+    .emms22__pre-event__bottom-form .emms22__pre-event__form{
+        display: block;
+    }
+
+    .emms22__pre-event__bottom-form .emms22__pre-event__bottom-form__title h3{
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .emms22__pre-event__bottom-form .emms22__pre-event__bottom-form__title p{
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .emms22__pre-event__bottom-form .emms22__pre-event__form .emms22__home__container-form__column{
+        width: 100%;
+    }
+
+    .emms22__pre-event__bottom-form .emms22__pre-event__form .emms22__home__container-form__column:nth-child(2){
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .emms22__pre-event__bottom-form .emms22__pre-event__form .emms22__home__container-form__column:nth-child(2) .emms22__home__btn{
+        margin: 38px 0 0 0;
+        width: 100%;
+    }
+
+    .emms22__pre-event__bottom-form .emms22__pre-event__form .emms22__home__container-form__column:nth-child(2) .emms22__home__legal{
+        margin: 34px 0 0 0;
+    }
+
+}
+
+
+
+/* ----------------------------------------------------------- Registered */
+/* ----------------------------------------------------------- Registered Premium Content */
+
+.emms22__pre-event__registered-premium-content{
+    padding: 54px 0 18px 0;
+}
+
+.emms22__pre-event__registered-premium-content h2{
+    font-size: 27px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #333333;
+    max-width: 540px;
+    margin: 0 auto 90px;
+}
+
+.emms22__pre-event__registered-premium-content .emms22__container--lg{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emms22__pre-event__registered-premium-content__text{
+    width: 45%;
+}
+
+.emms22__pre-event__registered-premium-content__text h3{
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 28px 0;
+}
+
+.emms22__pre-event__registered-premium-content__text h3 span{
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 16px;
+    display: block;
+}
+
+.emms22__pre-event__registered-premium-content__text p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0;
+}
+
+.emms22__pre-event__registered-premium-content__text ul{
+    margin: 24px 0 44px 0;
+}
+
+.emms22__pre-event__registered-premium-content__text ul li{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0 0 16px 0;
+    padding: 0 0 0 27px;
+    position: relative;
+}
+
+.emms22__pre-event__registered-premium-content__text ul li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icons/ok-message.svg") no-repeat;
+    background-size: contain;
+}
+
+.emms22__pre-event__registered-premium-content__text .emms22__button{
+    max-width: 300px;
+    width: 100%;
+}
+
+.emms22__pre-event__registered-premium-content__image{
+    width: 45%;
+}
+
+.emms22__pre-event__registered-premium-content__image img{
+    width: 100%;
+}
+
+@media(max-width:992px){
+    .emms22__pre-event__registered-premium-content__text{
+        width: 50%;
+    }
+
+    .emms22__pre-event__registered-premium-content__image{
+        width: 48%;
+    }
+}
+
+@media(max-width:620px){
+
+    .emms22__pre-event__registered-premium-content h2{
+        font-size: 17px;
+        line-height: 20px;
+        max-width: 280px;
+        margin: 0 auto 38px;
+    }
+
+    .emms22__pre-event__registered-premium-content .emms22__container--lg{
+        flex-direction: column-reverse;
+    }
+
+    .emms22__pre-event__registered-premium-content__text{
+        width: 100%;
+    }
+
+    .emms22__pre-event__registered-premium-content__text h3{
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 0 12px 0;
+    }
+
+    .emms22__pre-event__registered-premium-content__text h3 span{
+        font-size: 13px;
+        margin: 0 0 10px;
+    }
+
+    .emms22__pre-event__registered-premium-content__image{
+        max-width: 360px;
+        width: 100%;
+        margin: 0 0 45px 0;
+    }
+}
+
+
+/* ----------------------------------------------------------- Doppler description */
+
+.emms22__pre-event__doppler{
+    background: #FDE577;
+    padding: 89px 0 45px 0;
+}
+
+.emms22__pre-event__doppler__title{
+    text-align: center;
+    max-width: 714px;
+    margin: 0 auto 48px;
+}
+
+.emms22__pre-event__doppler__title h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 37px 0;
+    animation-delay: .2s;
+}
+
+.emms22__pre-event__doppler__title h2 img{
+    width: 230px;
+    margin: 0 0 0 6px;
+}
+
+.emms22__pre-event__doppler__title h3{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 25px 0;
+    animation-delay: .3s;
+}
+
+.emms22__pre-event__doppler__title p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0;
+    animation-delay: .4s;
+}
+
+.emms22__pre-event__doppler__description{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emms22__pre-event__doppler__description__image{
+    width: 46%;
+    animation-delay: .3s;
+}
+
+.emms22__pre-event__doppler__description__image img{
+    width: 100%;
+}
+
+.emms22__pre-event__doppler__description__text{
+    width: 46%;
+    animation-delay: .4s;
+}
+
+.emms22__pre-event__doppler__description__text h4{
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0 0 20px 0;
+}
+
+.emms22__pre-event__doppler__description__text h4 strong{
+    font-weight: 700;
+    display: block;
+}
+
+.emms22__pre-event__doppler__description__text p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    margin: 0;
+    max-width: 400px;
+}
+
+.emms22__pre-event__doppler__description__text ul{
+    margin: 30px 0 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.emms22__pre-event__doppler__description__text ul li{
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    width: 50%;
+    margin: 0 0 23px 0;
+    padding: 0 0 0 27px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.emms22__pre-event__doppler__description__text ul li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icons/ok-message.svg") no-repeat;
+    background-size: contain;
+}
+
+.emms22__pre-event__doppler__description__text .emms22__button{
+    max-width: 347px;
+    width: 100%;
+}
+
+@media(max-width:1100px){
+    .emms22__pre-event__doppler__description__text ul li{
+        width: 100%;
+    }
+}
+
+@media(max-width:992px){
+
+    .emms22__pre-event__doppler__description{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .emms22__pre-event__doppler__description__image{
+        width: 100%;
+        margin: 0 0 20px ;
+    }
+
+    .emms22__pre-event__doppler__description__text{
+        width: 100%;
+    }
+}
+
+@media(max-width:620px){
+    .emms22__pre-event__doppler{
+        padding: 45px 0 76px 0;
+    }
+
+    .emms22__pre-event__doppler__title{
+        text-align: left;
+    }
+
+    .emms22__pre-event__doppler__title h2{
+        font-size: 20px;
+        margin: 0 0 34px 0;
+    }
+
+    .emms22__pre-event__doppler__title h2 img{
+        width: 114px;
+        margin: 0 0 0 2px;
+    }
+
+    .emms22__pre-event__doppler__title h3{
+        font-size: 16px;
+        margin: 0 0 20px 0;
+    }
+
+    .emms22__pre-event__doppler__description__text h4{
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        margin: 0 0 16px 0;
+    }
+
+    .emms22__pre-event__doppler__description__text p{
+        text-align: center;
+    }
+
+    .emms22__pre-event__doppler__description__text ul{
+        margin: 25px 0 16px 0;
+    }
+}
