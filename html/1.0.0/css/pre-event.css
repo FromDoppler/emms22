@@ -787,6 +787,10 @@
     animation-delay: .3s;
 }
 
+.emms22__pre-event__calendar__event-list.emms22__show-mb{
+    display: none;
+}
+
 .emms22__pre-event__calendar__event-list__event{
     width: 33.3%;
     margin: 0 0 32px 0;
@@ -963,6 +967,14 @@
 
     .emms22__pre-event__calendar__event-list{
         margin: 0 auto 20px auto;
+    }
+
+    .emms22__pre-event__calendar__event-list.emms22__show-dk{
+        display: none;
+    }
+    
+    .emms22__pre-event__calendar__event-list.emms22__show-mb{
+        display: block;
     }
 
     .emms22__pre-event__calendar__event-list__event{

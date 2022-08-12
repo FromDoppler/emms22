@@ -119,16 +119,16 @@ a {
 }
 
 .emms22__show-mb{
-  display: none !important;
+  display: none;
 }
 
 @media(max-width:620px){
   .emms22__show-dk{
-    display: none !important;
+    display: none;
   }
 
   .emms22__show-mb{
-    display: block !important;
+    display: block;
   }
 }
 
