@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Aug 09, 2022 at 04:47 PM
+-- Generation Time: Aug 16, 2022 at 07:32 PM
 -- Server version: 8.0.29
 -- PHP Version: 8.0.19
 
@@ -46,7 +46,7 @@ CREATE TABLE `aliados_media_partner` (
 INSERT INTO `aliados_media_partner` (`id`, `name`, `image_home`, `alt_image_home`, `orden_home`, `status`) VALUES
 (4, 'Green Arrow', 'KLFJ5HOK4NH57HJNKQUMNVRIHA.jpg', 'oliver', '2', NULL),
 (5, 'Reverse Flash', 'download.jfif', 'Eobard Thawne', '9', NULL),
-(13, 'Federico', 'superman.jpg', 'superman classic', '2', NULL);
+(13, 'Federico', 'superman.jpg', 'superman classic', '15', NULL);
 
 -- --------------------------------------------------------
 
@@ -262,7 +262,8 @@ INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
 (114, 'google', '{\"access_token\":\"ya29.A0AVA9y1ul86WIEeLJ457shIR1MSCKBmNoqWhl86vRUp_lxsOVkVj8TB_Mp4NjyGfMbgPuTcNxnI9VSwuWEdtE5ahvBTCA4tywIt61bytC7uSzSKv_vWKAhlUbnZG3PUiuWSDUgo6zDKl_De-3ED7kXkt0YAmYSOwYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4VnFrNUd4Y181SUh2aS1nU2FLTmhNZw0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
 (115, 'google', '{\"access_token\":\"ya29.A0AVA9y1vZlKBcF76_CLwvwHptAWAWQccSS0Olss5DTgar6Nqt9QQ3Z6J6nOK2A-n_1C0ZgWnDbD0rCaBRR8Um4iFiRfT8bLV2ZiqlGhMXDM34FQmDixKsDhhAI26Qwredb0lEZVxx2Cv00VWMEsyw2_mLxJz9IpkYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4ZUxKNDBNbG5DZWlKTzFrRW1YYjY0QQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
 (116, 'google', '{\"access_token\":\"ya29.A0AVA9y1t9JZbT0HcbByB9_CYreo8VB8neUYlWiyus8wJgQhsWhCezbP7-ezrb62GHxj6TruYh4sK-V1TJZ9XzbP71IKwQbIuC5FrdjOFqwbKeD1s0VVe5kDTVo9vnNQXYmzAgXRZFzl9SxkBK8vM1WCZJyDs31JkYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4M3hkRU1ZUGJEcWpMX3JZcVFud3JWQQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(117, 'google', '{\"access_token\":\"ya29.A0AVA9y1vosUmkvPdhHs5U78ClvLffzCWqF5tqJEjcQwZokPSuvFS8PMJO0UgE0-2CCG7ffzQGlQk72WWYvGfBBjMJavdDpckCkWMxuxGJl7xN8IycLH9XW-GPRfxYNq05-E6iOQ1pvV_RlzO3KMRn4jrgzNhXOMoYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4bHZMei1Qd3VUUFZiODZLRWdmSTFzUQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
+(117, 'google', '{\"access_token\":\"ya29.A0AVA9y1vosUmkvPdhHs5U78ClvLffzCWqF5tqJEjcQwZokPSuvFS8PMJO0UgE0-2CCG7ffzQGlQk72WWYvGfBBjMJavdDpckCkWMxuxGJl7xN8IycLH9XW-GPRfxYNq05-E6iOQ1pvV_RlzO3KMRn4jrgzNhXOMoYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4bHZMei1Qd3VUUFZiODZLRWdmSTFzUQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(118, 'google', '{\"access_token\":\"ya29.A0AVA9y1vsJ2XRhgG2M7tSpJAXOcMCcpy65hAbHmNcgEy9Uk-_Xi9L07cKNdBCX4kA33L846szNkWonTUoSHJlN9UwNnVmdhp1W48L_ovmexQa0o4eeW4rKXdl1arfeAEMQbWVkk6W_sFOsczONveZLMrHit8YI1waCgYKATASATASFQE65dr8N-miVoORo4tgwDJsYDXSmA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
 
 -- --------------------------------------------------------
 
@@ -277,11 +278,11 @@ CREATE TABLE `registered` (
   `phase` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
   `firstname` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `lastname` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `country` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `phone` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
+  `lastname` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `country` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `phone` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `industry` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
-  `company` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
+  `company` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `source_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `medium_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `campaign_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -294,21 +295,7 @@ CREATE TABLE `registered` (
 --
 
 INSERT INTO `registered` (`id`, `register`, `phase`, `email`, `firstname`, `lastname`, `country`, `phone`, `industry`, `company`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, '2022-07-25 07:43:09 PM', 'landing', 'hcardoso+local+00@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(2, '2022-07-25 07:47:26 PM', 'landing', 'hcardoso+local+01@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(3, '2022-07-25 07:53:34 PM', 'landing', 'hcardoso+local+04@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(4, '2022-07-25 07:56:40 PM', 'landing', 'hcardoso+local+05@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(5, '2022-07-25 07:59:32 PM', 'landing', 'hcardoso+local+06@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(6, '2022-07-25 08:00:39 PM', 'landing', 'hcardoso+local+07@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(7, '2022-07-26 10:50:13 AM', 'landing', 'hcardoso+local+orogin@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(8, '2022-07-26 10:58:33 AM', 'landing', 'hcardoso+origin+02@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(9, '2022-07-26 11:00:22 AM', 'landing', 'hcardoso+origin+03@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(10, '2022-07-26 11:07:50 AM', 'landing', 'hcardoso+origin+04@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(11, '2022-07-26 11:24:53 AM', 'landing', 'hcardoso+origin+06@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'hernan', '', '', '', ''),
-(12, '2022-07-26 11:38:14 AM', 'landing', 'hcardoso+origin+07@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(13, '2022-07-26 11:44:43 AM', 'landing', 'hcardoso+origin+08@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(14, '2022-07-26 11:50:21 AM', 'landing', 'hcardoso+@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', ''),
-(15, '2022-07-26 11:53:00 AM', 'landing', 'hcardoso+origin+10@makingsense.com', 'loremtext', 'loremtext', 'Argentina', '+542983417387', 'Otros', 'loremtext', 'direct', '', '', '', '');
+(1, '2022-08-16 04:25:45 PM', 'landing', 'hcardoso@fromdoppler.com', 'Mati', '', '', '', 'Mati2', '', 'direct', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -357,10 +344,10 @@ CREATE TABLE `subscriptions_doppler` (
   `form_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `firstname` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `lastname` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `phone` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
-  `country` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `phone` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `country` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `industry` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
-  `company` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
+  `company` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `ip` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
   `country_ip` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
   `privacy` tinyint(1) NOT NULL,
@@ -377,21 +364,9 @@ CREATE TABLE `subscriptions_doppler` (
 --
 
 INSERT INTO `subscriptions_doppler` (`id`, `email`, `list`, `register`, `form_id`, `firstname`, `lastname`, `phone`, `country`, `industry`, `company`, `ip`, `country_ip`, `privacy`, `promotions`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, 'hcardoso+local+00@makingsense.com', '28547158', '2022-07-25 07:43:13 PM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(2, 'hcardoso+local+01@makingsense.com', '28547158', '2022-07-25 07:47:28 PM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(3, 'hcardoso+local+04@makingsense.com', '28547158', '2022-07-25 07:53:36 PM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(4, 'hcardoso+local+05@makingsense.com', '28547158', '2022-07-25 07:56:43 PM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(5, 'hcardoso+local+06@makingsense.com', '28547158', '2022-07-25 07:59:39 PM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(6, 'hcardoso+local+07@makingsense.com', '28547158', '2022-07-25 08:00:46 PM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(7, 'hcardoso+local+orogin@makingsense.com', '28547158', '2022-07-26 10:50:15 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(8, 'hcardoso+origin+02@makingsense.com', '28547158', '2022-07-26 10:58:41 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(9, 'hcardoso+origin+03@makingsense.com', '28547158', '2022-07-26 11:00:26 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(10, 'hcardoso+origin+04@makingsense.com', '28547158', '2022-07-26 11:07:53 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(11, 'hcardoso+origin+06@makingsense.com', '28547158', '2022-07-26 11:24:56 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'hernan', '', '', '', ''),
-(12, 'hcardoso+origin+07@makingsense.com', '28547158', '2022-07-26 11:38:17 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(13, 'hcardoso+origin+08@makingsense.com', '28547158', '2022-07-26 11:44:46 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(14, 'hcardoso+@makingsense.com', '28547158', '2022-07-26 11:50:23 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(15, 'hcardoso+origin+10@makingsense.com', '28547158', '2022-07-26 11:53:03 AM', 'landing', 'loremtext', 'loremtext', '+542983417387', 'Argentina', 'Otros', 'loremtext', '172.30.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', '');
+(1, 'hcardoso@fromdoppler.com', '28547158', '2022-08-16 04:21:32 PM', 'landing', 'Mati', 'Parker', NULL, NULL, 'Mati', NULL, '172.19.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(2, 'hcardoso@fromdoppler.com', '28547158', '2022-08-16 04:23:32 PM', 'landing', 'Mati', NULL, NULL, NULL, 'Mati', NULL, '172.19.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(3, 'hcardoso@fromdoppler.com', '28547158', '2022-08-16 04:25:46 PM', 'landing', 'Mati', NULL, NULL, NULL, 'Mati2', NULL, '172.19.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -465,13 +440,13 @@ ALTER TABLE `aliados_starter`
 -- AUTO_INCREMENT for table `google_oauth`
 --
 ALTER TABLE `google_oauth`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `registered`
 --
 ALTER TABLE `registered`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `speakers`
@@ -483,7 +458,7 @@ ALTER TABLE `speakers`
 -- AUTO_INCREMENT for table `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
