@@ -26,7 +26,7 @@ function setDataRequest($ip, $countryGeo) {
     $_POST = json_decode(file_get_contents('php://input'), true);
     $email = isset($_POST['email']) ? $_POST['email'] : null;
     $firstname = isset($_POST['name']) ? $_POST['name'] : null;
-    $lastname = isset($_POST['lastname']) ? $_POST['lastname']	: 'Parker';
+    $lastname = isset($_POST['lastname']) ? $_POST['lastname']	: null;
     $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
     $privacy 	= isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies'] 	: false;
     $promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : false;
