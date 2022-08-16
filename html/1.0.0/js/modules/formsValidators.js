@@ -99,6 +99,28 @@ const validateForm = (form, phoneInput) => {
 	}
 }
 
+const validateFormPreEvent = (form) => {
+
+	const requiredFields = form.querySelectorAll("input.required,select.required");
+	const nameAndLastname = form.querySelectorAll("input.nameLength");
+	const checkboxPolicyField = form.querySelector(".acept-politic");
+	const emailField = form.querySelector(".email");
+	const hasStringLength = validateLengthStrings(nameAndLastname)
+	const hasRequiredsValidate = validateEmptyFields(form, requiredFields);
+	const hasEmailValidate = validateEmailField(emailField);
+	const hasPolicyValidate = validatePolicyCheckbox(checkboxPolicyField);
+
+	if (hasRequiredsValidate &&
+		hasEmailValidate &&
+		hasPolicyValidate &&
+		hasStringLength) {
+		return true
+	} else {
+		return false
+	}
+}
+
+
 export {
 	validatePhoneField,
 	validateEmailField,
@@ -106,5 +128,6 @@ export {
 	validateEmptyFields,
 	validatePolicyCheckbox,
 	resetErrorField,
-	validateForm
+	validateForm,
+	validateFormPreEvent
 };

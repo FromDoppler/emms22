@@ -14,15 +14,13 @@ require_once('config.php');
 			checkUserLoged
 		} from './html/<?= VERSION ?>/js/security.js'
 		const checkUser = checkUserLoged;
-		checkUser()
+		// checkUser()
 	</script>
 	<?php
 	include_once('commonHeader.php');
 	?>
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/libs/intl-tel-input/intelInput.css">
-	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/libs/intl-tel-input/intelInput.min.css">
 </head>
 
 <body>
@@ -1083,13 +1081,9 @@ require_once('config.php');
 
 	</main>
 
-	<script src="/html/<?= VERSION ?>/js/modules/jquery.min.js"></script>
-	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.min.js"></script>
-	<script src="/html/<?= VERSION ?>/js/modules/intlTelInput/intlTelInput.js"></script>
-	<script type="module" src="/html/<?= VERSION ?>/js/modules/intlTelInput/phoneValidation.js"></script>
 
 	<?php include_once('commonFooter.php') ?>
-	<script type="module" src="./html/<?= VERSION ?>/js/script.js?version=<?= VERSION ?>"></script>
+	<script type="module" src="./html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
 	<?php
 	if (!(PRODUCTION)) {
 	?>
