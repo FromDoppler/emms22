@@ -23,55 +23,55 @@ class Doppler {
     private static function getCustomFields($data) {
         $customFields = array();
 
-        if(isset($data['firstname'])) {
+        if(isset($data['firstname']) && (trim($data['firstname'])===false)) {
             array_push($customFields, array('name' => 'FIRSTNAME', 'Value' => $data['firstname']));
         }
-        if(isset($data['lastname'])) {
+        if(isset($data['lastname']) && (trim($data['lastname'])===false)) {
             array_push($customFields, array('name' => 'LASTNAME', 'Value' => $data['lastname']));
         }
-        if(isset($data['privacy'])) {
+        if(isset($data['privacy']) && (trim($data['privacy'])===false)) {
             array_push($customFields, array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])));
         }
-        if(isset($data['promotions'])) {
+        if(isset($data['promotions']) && (trim($data['promotions'])===false)) {
             array_push($customFields, array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])));
         }
-        if(isset($data['phone'])) {
+        if(isset($data['phone']) && (trim($data['phone'])===false)) {
             array_push($customFields, array('name' => 'tel', 'Value' => $data['phone']));
         }
-        if(isset($data['country'])) {
+        if(isset($data['country']) && (trim($data['country'])===false)) {
             array_push($customFields, array('name' => 'pais', 'Value' => $data['country']));
         }
-        if(isset($data['industry'])) {
+        if(isset($data['industry']) && (trim($data['industry'])===false)) {
             array_push($customFields, array('name' => 'Industria', 'Value' => $data['industry']));
         }
-        if(isset($data['company'])) {
+        if(isset($data['company']) && (trim($data['company'])===false)) {
             array_push($customFields, array('name' => 'Company', 'Value' => $data['company']));
         } 
-        if(isset($data['ip'])) {
+        if(isset($data['ip']) && (trim($data['ip'])===false)) {
             array_push($customFields, array('name' => 'IP', 'Value' => $data['ip']));
         }
-        if(isset($data['country'])) {
+        if(isset($data['country_ip']) && (trim($data['country_ip'])===false)) {
             array_push($customFields, array('name' => 'PaisIP', 'Value' => $data['country_ip']));
         } 
-        if(isset($data['source_utm'])) {
+        if(isset($data['source_utm']) && (trim($data['source_utm'])===false)) {
             array_push($customFields, array('name' => 'utmsource', 'Value' => $data['source_utm']));
         }
-        if(isset($data['medium_utm'])) {
+        if(isset($data['source_utm']) && (trim($data['source_utm'])===false)) {
             array_push($customFields, array('name' => 'utmmedium', 'Value' => $data['medium_utm']));
         }
-        if(isset($data['campaign_utm'])) {
+        if(isset($data['campaign_utm']) && (trim($data['campaign_utm'])===false)) {
             array_push($customFields, array('name' => 'utmcampaign', 'Value' => $data['campaign_utm']));
         }
-        if(isset($data['content_utm'])) {
+        if(isset($data['content_utm']) && (trim($data['content_utm'])===false)) {
             array_push($customFields, array('name' => 'utmcontent', 'Value' => $data['content_utm']));
         }
-        if(isset($data['term_utm'])) {
+        if(isset($data['term_utm']) && (trim($data['term_utm'])===false)) {
             array_push($customFields, array('name' => 'utmterm', 'Value' => $data['term_utm']));
         }
-        if(isset($data['join_url'])) {
+        if(isset($data['join_url']) && (trim($data['join_url'])===false)) {
             array_push($customFields, array('name' => 'academyGTW', 'value' => $data['join_url']));
         }
-        if(isset($data['origin'])) {
+        if(isset($data['origin']) && (trim($data['origin'])===false)) {
             array_push($customFields, array('name' => 'DOrigin', 'value' => $data['origin']));
         }    
         return $customFields;
