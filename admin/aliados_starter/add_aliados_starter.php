@@ -15,6 +15,7 @@ $file_tmp = $_FILES["image_home"]["tmp_name"];
         move_uploaded_file($file_tmp,"uploads/".$file_name);
   }
       $alt_image_home = $_POST['alt_image_home'];
+      $link_site = $_POST['link_site'];
       $orden_home = $_POST['orden_home'];
       $title = $_POST['title'];
       $description_card = $_POST['description_card'];
@@ -46,7 +47,7 @@ $file_tmp = $_FILES["image_youtube"]["tmp_name"];
 
  // sql query for inserting data into database
  
-$sql_query="INSERT INTO aliados_starter (`name`,`image_home`,`alt_image_home`,`orden_home`,`title`,`description_card`,`slug`,`orden_card`,`description`,`image_landing`,`alt_image_landing`,`youtube`,`image_youtube`,`alt_image_youtube`,`title_magnet`,`description_magnet`,`link_magnet`,`title_learnmore`,`description_learnmore`,`link_learnmore`) VALUES('".$name."','".$image_home."','".$alt_image_home."','".$orden_home."','".$title."','".$description_card."','".$slug."','".$orden_card."','".$description."','".$image_landing."','".$alt_image_landing."','".$youtube."','".$image_youtube."','".$alt_image_youtube."','".$title_magnet."','".$description_magnet."','".$link_magnet."','".$title_learnmore."','".$description_learnmore."','".$link_learnmore."')";
+$sql_query="INSERT INTO aliados_starter (`name`,`image_home`,`alt_image_home`,`link_site`,`orden_home`,`title`,`description_card`,`slug`,`orden_card`,`description`,`image_landing`,`alt_image_landing`,`youtube`,`image_youtube`,`alt_image_youtube`,`title_magnet`,`description_magnet`,`link_magnet`,`title_learnmore`,`description_learnmore`,`link_learnmore`) VALUES('".$name."','".$image_home."','".$alt_image_home."','".$link_site."','".$orden_home."','".$title."','".$description_card."','".$slug."','".$orden_card."','".$description."','".$image_landing."','".$alt_image_landing."','".$youtube."','".$image_youtube."','".$alt_image_youtube."','".$title_magnet."','".$description_magnet."','".$link_magnet."','".$title_learnmore."','".$description_learnmore."','".$link_learnmore."')";
  // sql query for inserting data into database
  
  // sql query execution function
@@ -112,6 +113,14 @@ $sql_query="INSERT INTO aliados_starter (`name`,`image_home`,`alt_image_home`,`o
     <td>
     <input type="text" class="form-control" id="alt_image_home" name="alt_image_home" required placeholder="Alt_image_home">
     </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="link_site" class="form-label">Link_site:</label>
+    </td>
+      <td>
+      <input type="text" class="form-control" id="link_site" name="link_site" placeholder="Link_site">
+      </td>
     </tr>
     <tr>
    <td>

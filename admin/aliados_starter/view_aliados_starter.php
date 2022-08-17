@@ -51,6 +51,12 @@ if(isset($_GET['view_id']))
 </tr>
  <tr>
     <td>
+   <label for="link_site" class="form-label">Link_site:</label>
+   </td>
+   <th colspan="5"> <?php echo $fetched_row['link_site'] ?></th>
+</tr>
+ <tr>
+    <td>
    <label for="orden_home" class="form-label">Orden_home:</label>
    </td>
    <th colspan="5"> <?php echo $fetched_row['orden_home'] ?></th>

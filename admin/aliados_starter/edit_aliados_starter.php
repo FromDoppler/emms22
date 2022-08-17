@@ -29,6 +29,8 @@ $file_tmp = $_FILES["image_home"]["tmp_name"];
 }
          
    $alt_image_home = $_POST['alt_image_home'];
+
+  $link_site = $_POST['link_site'];
           
    $orden_home = $_POST['orden_home'];
           
@@ -86,7 +88,7 @@ $file_tmp = $_FILES["image_youtube"]["tmp_name"];
         // variables for input data
 
  // sql query for update data into database
-  $sql_query="UPDATE aliados_starter SET `name`='$name',`image_home`='$image_home',`alt_image_home`='$alt_image_home',`orden_home`='$orden_home',`title`='$title',`description_card`='$description_card',`slug`='$slug',`orden_card`='$orden_card',`description`='$description',`image_landing`='$image_landing',`alt_image_landing`='$alt_image_landing',`youtube`='$youtube',`image_youtube`='$image_youtube',`alt_image_youtube`='$alt_image_youtube',`title_magnet`='$title_magnet',`description_magnet`='$description_magnet',`link_magnet`='$link_magnet',`title_learnmore`='$title_learnmore',`description_learnmore`='$description_learnmore',`link_learnmore`='$link_learnmore' WHERE id=".$_GET['edit_id'];
+  $sql_query="UPDATE aliados_starter SET `name`='$name',`image_home`='$image_home',`alt_image_home`='$alt_image_home',`link_site`='$link_site',`orden_home`='$orden_home',`title`='$title',`description_card`='$description_card',`slug`='$slug',`orden_card`='$orden_card',`description`='$description',`image_landing`='$image_landing',`alt_image_landing`='$alt_image_landing',`youtube`='$youtube',`image_youtube`='$image_youtube',`alt_image_youtube`='$alt_image_youtube',`title_magnet`='$title_magnet',`description_magnet`='$description_magnet',`link_magnet`='$link_magnet',`title_learnmore`='$title_learnmore',`description_learnmore`='$description_learnmore',`link_learnmore`='$link_learnmore' WHERE id=".$_GET['edit_id'];
 
  // sql query for update data into database
  
@@ -159,6 +161,14 @@ if(isset($_POST['btn-cancel']))
    </td>
     <td>
     <input type="text" value="<?php echo $fetched_row['alt_image_home'] ?>" class="form-control" id="alt_image_home" name="alt_image_home">
+</td>
+    </tr>
+      <tr>
+   <td>
+   <label for="link_site" class="form-label">Link_site:</label>
+   </td>
+    <td>
+    <input type="text" value="<?php echo $fetched_row['link_site'] ?>" class="form-control" id="link_site" name="link_site">
 </td>
     </tr>
   <tr>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Aug 16, 2022 at 07:32 PM
+-- Generation Time: Aug 17, 2022 at 01:54 PM
 -- Server version: 8.0.29
 -- PHP Version: 8.0.19
 
@@ -100,6 +100,7 @@ CREATE TABLE `aliados_starter` (
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `image_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `alt_image_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `link_site` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `orden_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `description_card` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -124,8 +125,8 @@ CREATE TABLE `aliados_starter` (
 -- Dumping data for table `aliados_starter`
 --
 
-INSERT INTO `aliados_starter` (`id`, `name`, `image_home`, `alt_image_home`, `orden_home`, `title`, `description_card`, `slug`, `orden_card`, `description`, `image_landing`, `alt_image_landing`, `youtube`, `image_youtube`, `alt_image_youtube`, `title_magnet`, `description_magnet`, `link_magnet`, `title_learnmore`, `description_learnmore`, `link_learnmore`, `status`) VALUES
-(1, 'Superman', 'superman.jpg', 'superman classic', '1', 'Man of Steel', 'From Warner Bros. and Legendary Pictures comes ', 'superman', '2', '          From Warner Bros. and Legendary Pictures comes \"Man of Steel\", starring Henry Cavill, directed by Zach Snyder. The film also stars Amy Adams, Diane Lane, Kevin Costner, Michael Shannon, Russell Crowe, Antje Traue, Ayelet Zurer, Henry Lennix, Christopher Meloni and Laurence Fishburne.                                                 ', 'superman-white.png', 'superman white', 'T6DJcgm3wNY', '', '', 'title', 'descrip             2                      ', 'http://manofsteel.com', 'titulo', 'desc                                   ', 'http://manofsteel.com/index.php', NULL);
+INSERT INTO `aliados_starter` (`id`, `name`, `image_home`, `alt_image_home`, `link_site`, `orden_home`, `title`, `description_card`, `slug`, `orden_card`, `description`, `image_landing`, `alt_image_landing`, `youtube`, `image_youtube`, `alt_image_youtube`, `title_magnet`, `description_magnet`, `link_magnet`, `title_learnmore`, `description_learnmore`, `link_learnmore`, `status`) VALUES
+(1, 'Superman', 'superman.jpg', 'superman classic', '', '1', 'Man of Steel', 'From Warner Bros. and Legendary Pictures comes ', 'superman', '2', '               From Warner Bros. and Legendary Pictures comes \"Man of Steel\", starring Henry Cavill, directed by Zach Snyder. The film also stars Amy Adams, Diane Lane, Kevin Costner, Michael Shannon, Russell Crowe, Antje Traue, Ayelet Zurer, Henry Lennix, Christopher Meloni and Laurence Fishburne.                                                        ', 'superman-white.png', 'superman white', 'T6DJcgm3wNY', '', '', 'title', '     descrip             2                             ', 'http://manofsteel.com', 'titulo', '     desc                                          ', 'http://manofsteel.com/index.php', NULL);
 
 -- --------------------------------------------------------
 
@@ -290,13 +291,6 @@ CREATE TABLE `registered` (
   `term_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `registered`
---
-
-INSERT INTO `registered` (`id`, `register`, `phase`, `email`, `firstname`, `lastname`, `country`, `phone`, `industry`, `company`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, '2022-08-16 04:25:45 PM', 'landing', 'hcardoso@fromdoppler.com', 'Mati', '', '', '', 'Mati2', '', 'direct', '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -358,15 +352,6 @@ CREATE TABLE `subscriptions_doppler` (
   `content_utm` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `term_utm` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `subscriptions_doppler`
---
-
-INSERT INTO `subscriptions_doppler` (`id`, `email`, `list`, `register`, `form_id`, `firstname`, `lastname`, `phone`, `country`, `industry`, `company`, `ip`, `country_ip`, `privacy`, `promotions`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, 'hcardoso@fromdoppler.com', '28547158', '2022-08-16 04:21:32 PM', 'landing', 'Mati', 'Parker', NULL, NULL, 'Mati', NULL, '172.19.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(2, 'hcardoso@fromdoppler.com', '28547158', '2022-08-16 04:23:32 PM', 'landing', 'Mati', NULL, NULL, NULL, 'Mati', NULL, '172.19.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(3, 'hcardoso@fromdoppler.com', '28547158', '2022-08-16 04:25:46 PM', 'landing', 'Mati', NULL, NULL, NULL, 'Mati2', NULL, '172.19.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -446,7 +431,7 @@ ALTER TABLE `google_oauth`
 -- AUTO_INCREMENT for table `registered`
 --
 ALTER TABLE `registered`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `speakers`
@@ -458,7 +443,7 @@ ALTER TABLE `speakers`
 -- AUTO_INCREMENT for table `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
