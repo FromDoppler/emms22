@@ -995,7 +995,13 @@
     }
 
     .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.previous{
-        display: none;
+        background: url("../img/icons/arrow-right.svg") no-repeat;
+        background-size: contain;
+        background-position-x: center;
+        right: 0;
+        width: 11px;
+        height: 24px;
+        transform: rotateY(180deg);
     }
 
     .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.next{
@@ -1007,7 +1013,8 @@
         height: 24px;
     }
 
-    .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.next svg{
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.next svg,
+    .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.previous svg{
         display: none;
     }
 
@@ -1321,6 +1328,7 @@
 
     .emms22__pre-event__experiences__carousel__item{
         width: 100%;
+        height: calc(100% - 100px);
     }
 
     .emms22__pre-event__experiences__carousel__item::before{

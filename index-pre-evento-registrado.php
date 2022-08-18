@@ -725,7 +725,7 @@ require_once('config.php');
 							<li>Cursas a tu ritmo</li>
 							<li>Clases teóricas y prácticas</li>
 						</ul>
-						<button class="emms22__button emms22__fade-in">INSCRÍBETE AHORA</button>
+						<a href="https://academy.fromdoppler.com/bootcamp/" target="_blank" class="emms22__button emms22__fade-in">INSCRÍBETE AHORA</a>
 					</div>
 				</div>
 			</div>
