@@ -41,7 +41,7 @@ require_once('config.php');
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
 					<li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
-					<li><a href="">agenda</a></li>
+					<li><a href="#agenda">agenda</a></li>
 					<li><a href="">contenido exclusivo</a></li>
 					<li><a href="">aliados</a></li>
 				</ul>
@@ -66,7 +66,7 @@ require_once('config.php');
 							<li>SPEAKERS INTERNACIONALES</li>
 							<li>CAPACITACI&Oacute;N E INSPIRACI&Oacute;N</li>
 						</ul>
-						<span>Súmate al EMMS y accede a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</span>
+						<span>Súmate al EMMS y accede además, a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</span>
 					</div>
 					<ul class="emms22__hero-pre-event__intro__counter emms22__show-dk">
 						<li>
@@ -194,12 +194,13 @@ require_once('config.php');
 						</li>
 					</ul>
 			</div>
-
+			<div id="agenda"></div>
 		</div>
 
 
 		<!-- Calendar -->
 
+		
 		<div class="emms22__pre-event__calendar">
 			<div class="emms22__container--lg">
 				<h2 class="emms22__fade-in">Descubre la agenda del EMMS 2022</h2>
@@ -505,7 +506,7 @@ require_once('config.php');
 					</li>
 				</ul>
 				<div class="emms22__pre-event__calendar__date emms22__fade-in">
-					<h3><strong>MIÉRCOLES</strong> 9 DE NOVIEMBRE</h3>
+					<h3><strong>JUEVES</strong> 10 DE NOVIEMBRE</h3>
 					<div class="emms22__pre-event__calendar__date__country">
 						<span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
 						<a href="">Mira el horario de tu país</a>
@@ -847,37 +848,30 @@ require_once('config.php');
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
-							<h3>Tim Ash <span>Speaker en el EMMS 2018</span></h3>
-							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfruté mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
+							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-purna-virji.png" alt="Tim Ash">
+							<h3>Purna Virji <span>Speaker en el EMMS 2018</span></h3>
+							<p>“<strong>¡Me ha encantado formar parte del EMMS!</strong>Nuevamente gracias por haberme tenido en consideración.”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
-							<h3>Tim Ash <span>Speaker en el EMMS 2018</span></h3>
-							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfruté mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
+							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-andres-silva.png" alt="Tim Ash">
+							<h3>Andrés Silva Arancibia <span>Speaker en el EMMS 2017</span></h3>
+							<p>“Ser speaker en el EMMS 2017 fue una experiencia notable. En menos de 45 minutos recibí más de 2500 menciones positivas en Twitter. ¡Lo recomiendo mucho!”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
-							<h3>Tim Ash <span>Speaker en el EMMS 2018</span></h3>
-							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfruté mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
+							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-nico-leoni.png" alt="Tim Ash">
+							<h3>Nico Leoni <span>Speaker en el EMMS 2019</span></h3>
+							<p>“Llevo varios años participando en conferencias  y eventos internacionales. Sin lugar a dudas, el EMMS es <strong>el mejor encuentro del mundo digital.</strong>”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
-							<h3>Tim Ash <span>Speaker en el EMMS 2018</span></h3>
-							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfruté mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
-						</div>
-					</li>
-					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
-						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
-							<h3>Tim Ash <span>Speaker en el EMMS 2018</span></h3>
-							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfruté mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
+							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-sebastian-cuenca.png" alt="Tim Ash">
+							<h3>Sebastián Cuenca <span>Moderador en el EMMS 2019</span></h3>
+							<p>“El EMMS fue un gran paso en mi carrera que  me permitió llegar a <strong>nuevas audiencias</strong> y dar cursos en otros países. Es un evento que brinda información de valor y que recomiendo por la  excelencia del equipo y la organización.” </p>
 						</div>
 					</li>
 				</ul>
