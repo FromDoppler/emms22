@@ -30,6 +30,7 @@ require_once('config.php');
 	<main class="emms22__pre-event">
 
 		<!-- Header -->
+		<div id="inicio"></div>
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
@@ -40,10 +41,10 @@ require_once('config.php');
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
-					<li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
-					<li><a href="#agenda">agenda</a></li>
-					<li><a href="">contenido exclusivo</a></li>
-					<li><a href="">aliados</a></li>
+					<li class="link" data-link="link1"><a href="#inicio">inicio</a></li>
+					<li class="link"><a href="#agenda">agenda</a></li>
+					<li class="link"><a href="#contenido-exclusivo">contenido exclusivo</a></li>
+					<li class="link"><a href="#aliados">aliados</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -68,7 +69,7 @@ require_once('config.php');
 						</ul>
 						<span>Súmate al EMMS y accede además, a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</span>
 					</div>
-					<ul class="emms22__hero-pre-event__intro__counter emms22__show-dk">
+					<ul class="emms22__hero-pre-event__intro__counter">
 						<li>
 							<p>FALTAN</p>
 						</li>
@@ -171,28 +172,6 @@ require_once('config.php');
 						</form>
 					</div>
 				</div>
-
-				<ul class="emms22__hero-pre-event__intro__counter emms22__show-mb">
-						<li>
-							<p>FALTAN</p>
-						</li>
-						<li class="emms22__hero-pre-event__intro__counter__number">
-							<div><span id="d"></span></div>
-							<span class="emms22__hero-pre-event__intro__counter__number--data">d&iacute;as</span>
-						</li>
-						<li class="emms22__hero-pre-event__intro__counter__number">
-							<div><span id="h"></span></div>
-							<span class="emms22__hero-pre-event__intro__counter__number--data">horas</span>
-						</li>
-						<li class="emms22__hero-pre-event__intro__counter__number">
-							<div><span id="m"></span></div>
-							<span class="emms22__hero-pre-event__intro__counter__number--data">minutos</span>
-						</li>
-						<li class="emms22__hero-pre-event__intro__counter__number">
-							<div><span id="s"></span></div>
-							<span class="emms22__hero-pre-event__intro__counter__number--data">segundos</span>
-						</li>
-					</ul>
 			</div>
 			<div id="agenda"></div>
 		</div>
@@ -200,7 +179,7 @@ require_once('config.php');
 
 		<!-- Calendar -->
 
-		
+
 		<div class="emms22__pre-event__calendar">
 			<div class="emms22__container--lg">
 				<h2 class="emms22__fade-in">Descubre la agenda del EMMS 2022</h2>
@@ -815,6 +794,7 @@ require_once('config.php');
 		<div class="emms22__pre-event__ctabox">
 			<h2 class="emms22__fade-in">En breve confirmaremos nuevos Speakers. ¡Conócelos antes que nadie!</h2>
 			<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">APÚNTATE GRATIS</button>
+			<div id="contenido-exclusivo"></div>
 		</div>
 
 
@@ -829,7 +809,7 @@ require_once('config.php');
 				</div>
 				<div class="emms22__pre-event__premium-content__image emms22__fade-in">
 					<img src="../html/<?= VERSION ?>/img/handset.png" alt="Handset">
-				</div>				
+				</div>
 			</div>
 		</div>
 
@@ -883,6 +863,7 @@ require_once('config.php');
 
 		<!-- Allies -->
 
+		<div id="aliados"></div>
 		<div class="emms22__pre-event__allies">
 			<div class="emms22__container--lg">
 				<h2 class="emms22__fade-in">Estos son nuestros aliados</h2>

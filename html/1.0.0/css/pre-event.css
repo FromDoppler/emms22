@@ -231,7 +231,7 @@
 }
 
 .emms22__pre-event__form__field-group li{
-    margin: 0px 0px 20px 0px; 
+    margin: 0px 0px 20px 0px;
 }
 
 .emms22__pre-event__form__field-item__checkbox{
@@ -456,11 +456,14 @@
 
     .emms22__hero-pre-event__intro__counter{
         text-align: center;
-        padding: 0px 0 56px 0;
+        padding: 0px 0 46px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     .emms22__hero-pre-event .emms22__container--lg{
-        padding: 135px 0 64px 0;
+        padding: 135px 0 250px 0;
     }
 
     .emms22__hero-pre-event__intro__counter li:nth-child(1){
@@ -932,7 +935,7 @@
 
 @media(max-width:620px){
     .emms22__pre-event__calendar{
-        padding: 55px 0 40px 0;
+        padding: 90px 0 40px 0;
     }
 
     .emms22__pre-event__calendar h2{
@@ -972,7 +975,7 @@
     .emms22__pre-event__calendar__event-list.emms22__show-dk{
         display: none;
     }
-    
+
     .emms22__pre-event__calendar__event-list.emms22__show-mb{
         display: block;
     }
