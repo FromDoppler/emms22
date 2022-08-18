@@ -138,6 +138,7 @@
 }
 
 .emms22__hero-home__intro{
+    margin-bottom: 20px;
     max-width: 550px;
     width: 50%;
 }
@@ -354,7 +355,7 @@
 }
 
 .emms22__home__form__field-group li{
-    margin: 0px 0px 20px 0px; 
+    margin: 0px 0px 20px 0px;
 }
 
 .emms22__home__form__field-item__checkbox{
@@ -1073,7 +1074,7 @@
 
 @media(max-width:992px){
     .emms22__speakers .emms22__speakers__list{
-        justify-content: center;    
+        justify-content: center;
     }
 
     .emms22__speakers .emms22__speakers__list li{

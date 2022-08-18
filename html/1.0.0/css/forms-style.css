@@ -1,8 +1,8 @@
-.emms22__home__form__field-item .error {
+.emms22__home__form__field-item .error,  .emms22__pre-event__form__field-item .error{
   display: block;
 }
 
-.emms22__home__form__field-item .error:after {
+.emms22__home__form__field-item .error:after, .emms22__pre-event__form__field-item  .error:after{
   left: 0;
   top: 100%;
   color: #befb15;
@@ -16,7 +16,7 @@
   z-index: 1;
 }
 
-.emms22__home__form__field-item .input-error {
+.emms22__home__form__field-item .input-error, .emms22__pre-event__form__field-item .input-error{
   border: 1px solid #befb15;
 }
 
