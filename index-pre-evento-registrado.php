@@ -30,6 +30,8 @@ require_once('config.php');
 	<main class="emms22__pre-event">
 
 		<!-- Header -->
+
+        <div id="inicio"></div>
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
@@ -37,10 +39,9 @@ require_once('config.php');
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
-					<li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
-					<li><a href="">agenda</a></li>
-					<li><a href="">contenido exclusivo</a></li>
-					<li><a href="">aliados</a></li>
+                    <li><a href="#inicio">inicio</a></li>
+                    <li><a href="#contenido-exclusivo">contenido exclusivo</a></li>
+					<li><a href="#agenda">agenda</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -66,6 +67,7 @@ require_once('config.php');
 					<a title="Add to Calendar" class="emms22__button addeventatc" data-id="pl14402520" rel="noopener" href="https://www.addevent.com/event/pl14402520" target="_blank">EMMS DÍA 2</a>
 				</div>
 			</div>
+            <div id="contenido-exclusivo"></div>
 		</div>
 
 
@@ -87,8 +89,9 @@ require_once('config.php');
 				</div>
 				<div class="emms22__pre-event__registered-premium-content__image emms22__fade-in">
 					<img src="../html/<?= VERSION ?>/img/registered-content-premium.png" alt="Contenido Premium">
-				</div>				
+				</div>
 			</div>
+            <div id="agenda"></div>
 		</div>
 
 

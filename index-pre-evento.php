@@ -41,10 +41,10 @@ require_once('config.php');
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
-					<li class="link" data-link="link1"><a href="#inicio">inicio</a></li>
-					<li class="link"><a href="#agenda">agenda</a></li>
-					<li class="link"><a href="#contenido-exclusivo">contenido exclusivo</a></li>
-					<li class="link"><a href="#aliados">aliados</a></li>
+					<li><a href="#inicio">inicio</a></li>
+					<li><a href="#agenda">agenda</a></li>
+					<li><a href="#contenido-exclusivo">contenido exclusivo</a></li>
+					<li><a href="#aliados">aliados</a></li>
 				</ul>
 			</div>
 		</nav>

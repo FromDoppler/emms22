@@ -101,6 +101,7 @@ a {
   border: none;
   background: #33ad73;
   padding: 0 20px;
+  box-sizing: border-box;
   display: block;
 	position: relative;
   cursor: pointer;

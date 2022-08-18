@@ -1582,7 +1582,7 @@
 /* ----------------------------------------------------------- Registered Premium Content */
 
 .emms22__pre-event__registered-premium-content{
-    padding: 54px 0 18px 0;
+    padding: 100px 0 18px 0;
 }
 
 .emms22__pre-event__registered-premium-content h2{
@@ -1889,5 +1889,11 @@
 
     .emms22__pre-event__doppler__description__text ul{
         margin: 25px 0 16px 0;
+    }
+
+    .emms22__pre-event__doppler__description__text .emms22__button {
+        max-width: 280px;
+        width: 100%;
+        margin: 0 auto;
     }
 }
