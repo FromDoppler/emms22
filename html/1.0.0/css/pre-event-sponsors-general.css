@@ -1,12 +1,8 @@
-.emms22__pre-event {
+.emms22__pre-event__sponsors__main {
     background: #f0f0f0;
 }
 
 /* ----------------------------------------------------------- Hero */
-
-.emms22__hero-pre-event {
-    position: relative;
-}
 
 .emms22__hero-pre-event .emms22__container--lg {
     display: flex;
@@ -17,38 +13,6 @@
     animation: fade-top 1s;
     animation-fill-mode: forwards;
     animation-delay: 0.4s;
-}
-
-.emms22__hero-pre-event__back {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-
-.emms22__hero-pre-event__back::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.emms22__hero-pre-event__back img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.emms22__hero-pre-event__back video {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 #contentEarlyForm {
@@ -100,8 +64,12 @@
     max-width: 700px;
     width: 90%;
     margin: 0 auto;
-    padding: 260px 0 90px;
+    padding: 200px 0 80px 0;
     text-align: center;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
 }
 
 .emms22__hero-pre-event__sponsors h2 {
@@ -157,14 +125,6 @@
 .emms22__hero-pre-event__sponsors a.addeventatc:hover {
     background: #008046;
     transition: all 0.1s ease-in-out;
-}
-
-.emms22__hero-pre-event__sponsors {
-    padding: 70px 0 20px 0;
-    opacity: 0;
-    animation: fade-in 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.4s;
 }
 
 .emms22__hero-pre-event__sponsors li:nth-child(1) {
@@ -242,10 +202,6 @@
         line-height: 22px;
     }
 
-    .emms22__hero-pre-event__sponsors {
-        padding: 200px 0 80px 0;
-    }
-
     .emms22__hero-pre-event__sponsors h2 {
         font-size: 47px;
         line-height: 52px;
@@ -271,11 +227,6 @@
         margin: 0 auto 33px auto;
     }
 
-    .emms22__hero-pre-event__sponsors {
-        padding: 0px 0 22px 0;
-        margin: 55px 0 45px 0;
-    }
-
     .emms22__hero-pre-event__sponsors li {
         margin: 0 1.5px 0 1.5px;
     }
@@ -287,182 +238,331 @@
 
 /* ----------------------------------------------------------- Capsule sponsors section */
 
-/* ----------------------------------------------------------- Doppler description */
-
-.emms22__pre-event__doppler {
-    background: #fde577;
-    padding: 89px 0 45px 0;
+.emms22__pre-event__sponsors {
+    display: flex;
+    color: #333333;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
-.emms22__pre-event__doppler__title {
+.emms22__pre-event__sponsors__capsule-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.emms22__pre-event__sponsors__capsule-list__card {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.emms22__pre-event__sponsors__capsule-list__card__logo img {
+    max-width: 200px;
+    height: 50px;
+}
+
+.emms22__pre-event__sponsors__capsule-list__card__logo {
+    padding-bottom: 11px;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.emms22__pre-event__sponsors__capsule-list__card__logo,
+.emms22__pre-event__sponsors__capsule-list__card__description {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    max-width: 714px;
-    margin: 0 auto 48px;
 }
 
-.emms22__pre-event__doppler__title h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #333333;
-    margin: 0 0 37px 0;
-    animation-delay: 0.2s;
+.emms22__pre-event__sponsors__capsule-list__card__description {
+    flex-direction: column;
+    padding: 0 1rem;
 }
 
-.emms22__pre-event__doppler__title h2 img {
-    width: 230px;
-    margin: 0 0 0 6px;
-}
-
-.emms22__pre-event__doppler__title h3 {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #333333;
-    margin: 0 0 25px 0;
-    animation-delay: 0.3s;
-}
-
-.emms22__pre-event__doppler__title p {
+.emms22__pre-event__sponsors__capsule-list__card__description h4 p {
     font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #333333;
-    margin: 0;
-    animation-delay: 0.4s;
+    line-height: 20px;
+    max-width: 292px;
+    margin: 0 auto;
 }
 
-.emms22__pre-event__doppler__description {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.emms22__pre-event__doppler__description__image {
-    width: 46%;
-    animation-delay: 0.3s;
-}
-
-.emms22__pre-event__doppler__description__image img {
-    width: 100%;
-}
-
-.emms22__pre-event__doppler__description__text {
-    width: 46%;
-    animation-delay: 0.4s;
-}
-
-.emms22__pre-event__doppler__description__text h4 {
-    font-size: 26px;
-    line-height: 34px;
-    font-weight: 400;
-    color: #333333;
-    margin: 0 0 20px 0;
-}
-
-.emms22__pre-event__doppler__description__text h4 strong {
+.emms22__pre-event__sponsors__capsule-list__card__description a {
     font-weight: 700;
-    display: block;
+    color: #33ad73;
+    padding-top: 1rem;
 }
 
-.emms22__pre-event__doppler__description__text p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #333333;
-    margin: 0;
-    max-width: 400px;
+.emms22__pre-event__sponsors__capsule-list__card__description a:hover {
+    color: #008046;
+    transition: all 0.35s ease;
 }
 
-.emms22__pre-event__doppler__description__text ul {
-    margin: 30px 0 25px 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.emms22__pre-event__doppler__description__text ul li {
-    font-size: 16px;
-    line-height: 24px;
-    color: #333333;
-    width: 50%;
-    margin: 0 0 23px 0;
-    padding: 0 0 0 27px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.emms22__pre-event__doppler__description__text ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 20px;
-    height: 20px;
-    background: url("../img/icons/ok-message.svg") no-repeat;
-    background-size: contain;
-}
-
-.emms22__pre-event__doppler__description__text .emms22__button {
-    max-width: 347px;
-    width: 100%;
-}
-
-@media (max-width: 1100px) {
-    .emms22__pre-event__doppler__description__text ul li {
-        width: 100%;
+@media (max-width: 1200px) {
+    .emms22__pre-event__sponsors__capsule-list {
+        justify-content: center;
     }
 }
 
 @media (max-width: 992px) {
-    .emms22__pre-event__doppler__description {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    .emms22__pre-event__doppler__description__image {
-        width: 100%;
-        margin: 0 0 20px;
-    }
-
-    .emms22__pre-event__doppler__description__text {
-        width: 100%;
-    }
 }
 
 @media (max-width: 620px) {
-    .emms22__pre-event__doppler {
-        padding: 45px 0 76px 0;
+}
+
+/* ----------------------------------------------------------- Conferences section */
+
+.emms22__pre-event__conferences {
+    background: #310e44;
+}
+.emms22__container--conferences--lg {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    width: 90%;
+    flex-flow: row wrap;
+    padding-top: 8rem;
+}
+
+.emms22__container--conferences--md {
+    display: flex;
+    max-width: 990px;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+}
+
+.emms22__conferences__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.emms22__conferences__content {
+    text-align: center;
+    margin: auto;
+}
+.emms22__conferences__content h2 {
+    font-size: 59px;
+    line-height: 59px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 0 6rem;
+}
+
+.emms22__conferences__content p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 0 11rem;
+}
+
+.emms22__conferences__first__card__img img,
+.emms22__conferences__cards img {
+    width: 362px;
+    height: 208px;
+}
+
+.emms22__conferences__first__card h4 {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.emms22__conferences__first__card__content {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.emms22__conferences__first__card__img {
+    display: flex;
+    flex: 4;
+    justify-content: start;
+}
+.emms22__conferences__first__card__text {
+    display: flex;
+    flex: 8;
+    flex-direction: column;
+}
+
+.emms22__conferences__first__card__text h4 {
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+.emms22__conferences__first__card__text p {
+    color: #ffffff;
+}
+
+.emms22__conferences__cards {
+    display: flex;
+    flex-direction: column;
+}
+.emms22__conferences__cards h4 {
+    color: #ffffff;
+}
+.emms22__conferences__cards p {
+    color: #ffffff;
+}
+
+.emms22__conferences__cards a {
+    margin-top: auto;
+}
+
+.emms22__conferences__cards__container {
+    display: flex;
+    align-items: center;
+}
+
+.emms22__conferences__first__card__container {
+    display: flex;
+    align-items: center;
+}
+
+.emms22__conferences__content__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+}
+
+.emms22__conferences__cards {
+    max-width: 300px;
+}
+
+.emms22__conferences__cards a,
+.emms22__conferences__first__card__text a {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    color: #33ad73;
+}
+
+.emms22__conferences__cards a:hover,
+.emms22__conferences__first__card__text a:hover {
+    color: #008046;
+    transition: all 0.35s ease;
+}
+
+@media only screen and (max-width: 1200px) {
+    .emms22__hero__container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .emms22__pre-event__doppler__title {
-        text-align: left;
+    .emms22__hero__content {
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
     }
 
-    .emms22__pre-event__doppler__title h2 {
-        font-size: 20px;
-        margin: 0 0 34px 0;
+    .emms22__hero__content p {
+        max-width: 70vw;
+    }
+    .emms22__header__nav--mb {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .emms22__conferences__wrapper .emms22__pre-event__sponsors__capsule-list {
+        width: 80%;
     }
 
-    .emms22__pre-event__doppler__title h2 img {
-        width: 114px;
-        margin: 0 0 0 2px;
+    .emms22__conferences__content h2 {
+        padding: 0 2rem;
     }
 
-    .emms22__pre-event__doppler__title h3 {
+    .emms22__conferences__content p {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 898px) {
+    .emms22__conferences__wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .emms22__conferences__first__card__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        gap: 0rem;
+        max-width: 300px;
+    }
+
+    .emms22__conferences__content h2 {
+        padding: 0rem;
+    }
+
+    .emms22__conferences__content p {
+        padding: 0rem;
+    }
+}
+
+@media only screen and (max-width: 874px) {
+    .emms22__conferences__content__cards {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .emms22__conferences__first__card__img,
+    .emms22__conferences__first__card__text {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+
+    .emms22__header__nav--hidden {
+        display: none;
+    }
+    .emms22__header {
+        padding: 30px 0;
+    }
+    .emms22__header__nav--mb {
+        display: inline-block;
+        width: 27px;
+        cursor: pointer;
+        background: url(../img/icon-burger.svg) no-repeat;
+        background-size: contain;
+    }
+    .emms22__header__nav--mb.emms22__header__nav--mb--active {
+        background: url(../img/icon-close-white.png) no-repeat;
+        background-size: 22px;
+    }
+
+    .emms22__hero__content__video video {
+        max-width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .emms22__hero__button {
         font-size: 16px;
-        margin: 0 0 20px 0;
+        padding: 1rem 1rem;
     }
+}
 
-    .emms22__pre-event__doppler__description__text h4 {
-        font-size: 20px;
-        line-height: 25px;
-        text-align: center;
-        margin: 0 0 16px 0;
+@media only screen and (max-width: 350px) {
+    .emms22__hero__button {
+        font-size: 15px;
     }
+}
 
-    .emms22__pre-event__doppler__description__text p {
-        text-align: center;
-    }
-
-    .emms22__pre-event__doppler__description__text ul {
-        margin: 25px 0 16px 0;
+@media only screen and (max-width: 316px) {
+    .emms22__hero__button {
+        font-size: 14px;
     }
 }
