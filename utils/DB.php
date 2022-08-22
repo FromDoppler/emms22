@@ -220,5 +220,13 @@ class DB {
             $this->query("UPDATE google_oauth SET provider_value = '$token' WHERE provider = 'google'");
         }
     }
+
+	/********DATA ABMS*************/
+	
+	public function getSpeakersByDay($day) {
+        $sql = $this->query("SELECT * FROM speakers WHERE day = ".$day." order by orden");
+        $result = $sql->fetchAll();
+        return $result;
+    }
 }
 ?>
