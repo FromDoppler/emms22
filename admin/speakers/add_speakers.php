@@ -30,11 +30,12 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
       $alt_image_company = $_POST['alt_image_company'];
       $time = $_POST['time'];
       $orden = $_POST['orden'];
+      $day = $_POST['day'];
     // variables for input data
 
  // sql query for inserting data into database
  
-$sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`image_company`,`alt_image_company`,`time`,`orden`) VALUES('".$name."','".$image."','".$alt_image."','".$job."','".$sm_twitter."','".$sm_linkedin."','".$sm_instagram."','".$sm_facebook."','".$description."','".$image_company."','".$alt_image_company."','".$time."','".$orden."')";
+$sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`image_company`,`alt_image_company`,`time`,`orden`,`day`) VALUES('".$name."','".$image."','".$alt_image."','".$job."','".$sm_twitter."','".$sm_linkedin."','".$sm_instagram."','".$sm_facebook."','".$description."','".$image_company."','".$alt_image_company."','".$time."','".$orden."','".$day."')";
  // sql query for inserting data into database
  
  // sql query execution function
@@ -171,6 +172,17 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
    </td>
     <td>
     <input type="text" class="form-control" id="time" name="time" required placeholder="Time">
+    </td>
+    </tr>
+    <tr>
+   <td>
+   <label for="day" class="form-label">Day:</label>
+   </td>
+    <td>
+    <select name="day" class="form-select">
+      <option selected value="1">Miercoles</option>
+      <option value="2">Jueves</option>
+    </select>
     </td>
     </tr>
     <tr>
