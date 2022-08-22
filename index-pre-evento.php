@@ -503,7 +503,9 @@ require_once('utils/DB.php');
 							<img src="/admin/aliados_media_partner/uploads/<?=$media['image_home']?>" alt="<?=$media['alt_image_home']?>">
 						</li>
 
-						<?php endforeach;?>
+						<?php endforeach;
+						$db->close();
+						?>
 						
 					</ul>
 				</div>
