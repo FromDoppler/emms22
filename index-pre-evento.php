@@ -461,70 +461,50 @@ require_once('utils/DB.php');
 				<div class="emms22__pre-event__allies__group">
 					<h3 class="emms22__fade-in">SPONSORS PRO</h3>
 					<ul class="emms22__fade-in">
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
+					<?php $pro_sponsors = $db->getAliadosPro('orden_home');
+						foreach($pro_sponsors as $pro ) : ?>	
+						<li>
+							<?php if($pro['link_site']) :?>
+								<a href="<?=$pro['link_site']?>"  target="_blank">
+							<?php endif?>	
+							<img src="/admin/aliados_pro/uploads/<?=$pro['image_home']?>" alt="<?=$pro['alt_image_home']?>">
+							<?php if($pro['link_site']) :?>
+								</a>
+							<?php endif?>	
+						</li>
+
+						<?php endforeach;?>
 					</ul>
 				</div>
 				<div class="emms22__pre-event__allies__group">
 					<h3 class="emms22__fade-in">SPONSORS STARTER</h3>
 					<ul class="emms22__fade-in">
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
+				<?php $starter_sponsors = $db->getAliadosStarter('orden_home');
+						foreach($starter_sponsors as $starter ) : ?>	
+						<li>
+							<?php if($starter['link_site']) :?>
+								<a href="<?=$starter['link_site']?>"  target="_blank">
+							<?php endif?>	
+							<img src="/admin/aliados_starter/uploads/<?=$starter['image_home']?>" alt="<?=$starter['alt_image_home']?>">
+							<?php if($starter['link_site']) :?>
+								</a>
+							<?php endif?>	
+						</li>
+
+						<?php endforeach;?>
 					</ul>
 				</div>
 				<div class="emms22__pre-event__allies__group">
 					<h3 class="emms22__fade-in">MEDIA PARTNERS</h3>
 					<ul class="emms22__fade-in">
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
-						<li><img src="../html/<?= VERSION ?>/img/logo-airbnb.png" alt="Airbnb"></li>
+					<?php $media_sponsors = $db->getAliadosMedia('orden_home');
+						foreach($media_sponsors as $media ) : ?>	
+						<li>
+							<img src="/admin/aliados_media_partner/uploads/<?=$media['image_home']?>" alt="<?=$media['alt_image_home']?>">
+						</li>
+
+						<?php endforeach;?>
+						
 					</ul>
 				</div>
 				<div class="emms22__pre-event__allies__contact emms22__fade-in">
