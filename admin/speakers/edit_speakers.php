@@ -186,7 +186,7 @@ if(isset($_POST['btn-cancel']))
    <label for="description" class="form-label">Description:</label>
    </td>
     <td>
-     <textarea  class="form-control" id="description" name="description">     <?php echo $fetched_row['description'] ?>       </textarea>
+     <textarea  class="form-control" id="description" name="description"><?=$fetched_row['description']?></textarea>
 </td>
     </tr>
   <tr>

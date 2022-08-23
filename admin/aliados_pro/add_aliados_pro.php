@@ -224,7 +224,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="description_magnet" class="form-label">Description_magnet:</label>
    </td>
     <td>
-    <textarea  class="form-control" id="description_magnet" name="description_magnet">     <?php echo $fetched_row['description_magnet'] ?>       </textarea>
+    <textarea  class="form-control" id="description_magnet" name="description_magnet"><?=$fetched_row['description_magnet']?></textarea>
     </td>
     </tr>
     <tr>
@@ -248,7 +248,7 @@ $sql_query="INSERT INTO aliados_pro (`name`,`image_home`,`alt_image_home`,`link_
    <label for="description_learnmore" class="form-label">Description_learnmore:</label>
    </td>
     <td>
-    <textarea  class="form-control" id="description_learnmore" name="description_learnmore">     <?php echo $fetched_row['description_learnmore'] ?>       </textarea>
+    <textarea  class="form-control" id="description_learnmore" name="description_learnmore"><?=$fetched_row['description_learnmore'] ?></textarea>
     </td>
     </tr>
     <tr>
