@@ -98,44 +98,6 @@
     margin: 0 30px;
 }
 
-.emms22__hero-pre-event__sponsors__btn-calendar {
-    opacity: 0;
-    animation: fade-in 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
-}
-
-.emms22__hero-pre-event__sponsors a.addeventatc {
-    display: inline-block;
-    font-family: "Proxima-Nova-Bold";
-    font-size: 18px;
-    line-height: 51px;
-    color: #fff !important;
-    padding: 0;
-    width: 164px;
-    height: 51px;
-    background: #33ad73;
-    margin: 0 11px;
-}
-
-.emms22__hero-pre-event__sponsors a.addeventatc span {
-    display: none;
-}
-
-.emms22__hero-pre-event__sponsors a.addeventatc:hover {
-    background: #008046;
-    transition: all 0.1s ease-in-out;
-}
-
-.emms22__hero-pre-event__sponsors li:nth-child(1) {
-    display: block;
-    margin: 0 0 23px 0;
-}
-
-.emms22__hero-pre-event__sponsors li {
-    margin: 0 12.5px 0 12.5px;
-}
-
 @media (max-width: 1200px) {
     .emms22__hero-pre-event__intro__info h1 {
         font-size: 87px;
@@ -143,10 +105,6 @@
 }
 
 @media (max-width: 992px) {
-    #contentEarlyForm {
-        padding: 10px 0 0 0;
-    }
-
     .emms22__hero-pre-event .emms22__container--lg {
         display: block;
     }
@@ -163,43 +121,8 @@
 }
 
 @media (max-width: 620px) {
-    #contentEarlyForm {
-        padding: 80px 0 0 0;
-    }
-
-    .emms22__hero-pre-event__intro {
-        padding: 0;
-    }
-
     .emms22__hero-pre-event .emms22__container--lg {
         padding: 135px 0 64px 0;
-    }
-
-    .emms22__hero-pre-event__intro__info p {
-        font-size: 15px;
-        line-height: 22px;
-    }
-
-    .emms22__hero-pre-event__intro__info h1 {
-        font-size: 47px;
-        line-height: 52px;
-        margin: 0 0 31px 0;
-    }
-
-    .emms22__hero-pre-event__intro__info ul li {
-        font-size: 16px;
-        line-height: 22px;
-        padding: 0 0 0 26px;
-    }
-
-    .emms22__hero-pre-event__intro__info ul li::before {
-        width: 15px;
-        height: 15px;
-    }
-
-    .emms22__hero-pre-event__intro__info span {
-        font-size: 16px;
-        line-height: 22px;
     }
 
     .emms22__hero-pre-event__sponsors h2 {
@@ -216,23 +139,6 @@
 
     .emms22__hero-pre-event__sponsors .emms22__hero-pre-event__sponsors__text p:nth-child(1) {
         margin: 0 0 20px 0;
-    }
-
-    .emms22__hero-pre-event__sponsors a.addeventatc {
-        margin: 0 auto;
-        display: block;
-    }
-
-    .emms22__hero-pre-event__sponsors a.addeventatc:nth-child(1) {
-        margin: 0 auto 33px auto;
-    }
-
-    .emms22__hero-pre-event__sponsors li {
-        margin: 0 1.5px 0 1.5px;
-    }
-
-    .emms22__hero-pre-event__sponsors li:nth-child(1) {
-        margin: 0 0 18px 0;
     }
 }
 
@@ -267,7 +173,7 @@
 }
 
 .emms22__pre-event__sponsors__capsule-list__card__logo {
-    padding-bottom: 11px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #b4b4b4;
 }
 
@@ -290,6 +196,10 @@
     margin: 0 auto;
 }
 
+.emms22__pre-event__sponsors__capsule-list__card__description p {
+    margin: 0;
+}
+
 .emms22__pre-event__sponsors__capsule-list__card__description a {
     font-weight: 700;
     color: #33ad73;
@@ -307,17 +217,13 @@
     }
 }
 
-@media (max-width: 992px) {
-}
-
-@media (max-width: 620px) {
-}
-
 /* ----------------------------------------------------------- Conferences section */
 
 .emms22__pre-event__conferences {
     background: #310e44;
+    padding-bottom: 4rem;
 }
+
 .emms22__container--conferences--lg {
     display: flex;
     max-width: 1200px;
@@ -362,42 +268,9 @@
     padding: 0 11rem;
 }
 
-.emms22__conferences__first__card__img img,
 .emms22__conferences__cards img {
-    width: 362px;
-    height: 208px;
-}
-
-.emms22__conferences__first__card h4 {
-    font-size: 17px;
-    line-height: 22px;
-    font-weight: 700;
-}
-
-.emms22__conferences__first__card__content {
-    display: flex;
-    gap: 3rem;
-    justify-content: space-between;
-}
-
-.emms22__conferences__first__card__img {
-    display: flex;
-    flex: 4;
-    justify-content: start;
-}
-.emms22__conferences__first__card__text {
-    display: flex;
-    flex: 8;
-    flex-direction: column;
-}
-
-.emms22__conferences__first__card__text h4 {
-    margin-bottom: 0;
-    color: #ffffff;
-}
-
-.emms22__conferences__first__card__text p {
-    color: #ffffff;
+    width: 300px;
+    height: 200px;
 }
 
 .emms22__conferences__cards {
@@ -405,6 +278,7 @@
     flex-direction: column;
 }
 .emms22__conferences__cards h4 {
+    padding-top: 1rem;
     color: #ffffff;
 }
 .emms22__conferences__cards p {
@@ -545,6 +419,12 @@
 
     .emms22__hero__content__video video {
         max-width: 80vw;
+    }
+}
+
+@media (max-width: 620px) {
+    .emms22__pre-event__conferences {
+        padding-bottom: 1rem;
     }
 }
 
