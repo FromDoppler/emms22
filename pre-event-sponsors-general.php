@@ -1,5 +1,6 @@
 <?php
 require_once('config.php');
+require_once('utils/DB.php');
 ?>
 
 <!DOCTYPE html>
@@ -66,125 +67,40 @@ require_once('config.php');
         <section class="emms22__pre-event__sponsors">
             <div class="emms22__container--lg">
                 <div class="emms22__pre-event__sponsors__capsule-list emms22__fade-in">
+                <?php $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        			$pro_sponsors=$db->getAliadosPro('orden_card');
+					foreach($pro_sponsors as $pro) : ?>
                     <div class="emms22__pre-event__sponsors__capsule-list__card">
                         <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
+                            <img src="/admin/aliados_pro/uploads/<?=$pro['image_home']?>" alt="<?=$pro['alt_image_home']?>">
                         </div>
                         <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                            <h4><?=$pro['title']?></h4>
+                            <p><?=$pro['description_card']?></p>
+                            <?php if(!empty($pro['slug'])) : ?>
+                            <a href="interna.php?id=<?=$pro['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                            <?php endif ?>
                         </div>
                     </div>
+                    <?php endforeach;?>
+                    <?php $starter_sponsors=$db->getAliadosStarter('orden_card');
+					foreach($starter_sponsors as $starter) : ?>
                     <div class="emms22__pre-event__sponsors__capsule-list__card">
                         <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
+                            <img src="/admin/aliados_starter/uploads/<?=$starter['image_home']?>" alt="<?=$starter['alt_image_home']?>">
                         </div>
                         <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                            <h4><?=$starter['title']?></h4>
+                            <p><?=$starter['description_card']?></p>
+                            <?php if(!empty($starter['slug'])) : ?>
+                            <a href="interna.php?id=<?=$starter['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                            <?php endif ?>
                         </div>
                     </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
-                    </div>
-                    <div class="emms22__pre-event__sponsors__capsule-list__card">
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                            <img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Logo del sponsor">
-                        </div>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                            <h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
-                            <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                        </div>
+                    <?php 
+                    endforeach;
+                    $db->close();
+                    ?>
                     </div>
                 </div>
             </div>

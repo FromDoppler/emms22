@@ -220,5 +220,29 @@ class DB {
             $this->query("UPDATE google_oauth SET provider_value = '$token' WHERE provider = 'google'");
         }
     }
+
+	/********DATA ABMS*************/
+	
+	public function getSpeakersByDay($day) {
+        $sql = $this->query("SELECT * FROM speakers WHERE day = ".$day." order by orden");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
+	public function getAliadosPro($orden) {
+        $sql = $this->query("SELECT * FROM aliados_pro order by ".$orden);
+        $result = $sql->fetchAll();
+        return $result;
+    }
+	public function getAliadosStarter($orden) {
+        $sql = $this->query("SELECT * FROM aliados_starter order by ".$orden);
+        $result = $sql->fetchAll();
+        return $result;
+    }
+	public function getAliadosMedia($orden) {
+        $sql = $this->query("SELECT * FROM aliados_media_partner order by ".$orden);
+        $result = $sql->fetchAll();
+        return $result;
+    }
 }
 ?>

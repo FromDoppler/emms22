@@ -59,10 +59,12 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
    $time = $_POST['time'];
           
    $orden = $_POST['orden'];
+   $day = $_POST['day'];
+   //print_r($_POST); exit;
         // variables for input data
 
  // sql query for update data into database
-  $sql_query="UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`orden`='$orden' WHERE id=".$_GET['edit_id'];
+  $sql_query="UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`orden`='$orden',`day`='$day' WHERE id=".$_GET['edit_id'];
 
  // sql query for update data into database
  
@@ -212,11 +214,26 @@ if(isset($_POST['btn-cancel']))
     <input type="text" value="<?php echo $fetched_row['time'] ?>" class="form-control" id="time" name="time">
 </td>
     </tr>
+      <tr>
+   <td>
+   <label for="day" class="form-label">Day:</label>
+   </td>
+    <td>
+      <?php
+      //print_r($fetched_row); exit;
+      ?>
+    <select name="day" class="form-select" >
+      <option <?= ($fetched_row['day']=== '1') ? 'selected ' : '' ?>value="1">Miercoles</option>
+      <option <?= ($fetched_row['day']=== '2') ? 'selected ' : '' ?>value="2">Jueves</option>
+    </select>
+</td>
+    </tr>
   <tr>
    <td>
    <label for="orden" class="form-label">Orden:</label>
    </td>
     <td>
+
     <input type="text" value="<?php echo $fetched_row['orden'] ?>" class="form-control" id="orden" name="orden">
 </td>
     </tr>

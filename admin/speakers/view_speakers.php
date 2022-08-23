@@ -100,6 +100,21 @@ if(isset($_GET['view_id']))
 </tr>
  <tr>
     <td>
+   <label for="day" class="form-label">Day:</label>
+   </td>
+   <?php
+   $day = '--';
+   if($fetched_row['day'] === '1') {
+      $day = 'Miercoles';
+   }
+   else {
+      $day = 'Jueves';
+   }
+   ?>
+   <th colspan="5"> <?=$day?></th>
+</tr>
+ <tr>
+    <td>
    <label for="time" class="form-label">Time:</label>
    </td>
    <th colspan="5"> <?php echo $fetched_row['time'] ?></th>
@@ -119,3 +134,4 @@ if(isset($_GET['view_id']))
 </div>
 </body>
 </html>
+ 
