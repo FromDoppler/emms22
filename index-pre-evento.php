@@ -181,203 +181,7 @@ require_once('utils/DB.php');
 		<!-- Calendar -->
 
 
-		<div class="emms22__pre-event__calendar">
-			<div class="emms22__container--lg">
-				<h2 class="emms22__fade-in">Descubre la agenda del EMMS 2022</h2>
-				<div class="emms22__pre-event__calendar__date emms22__fade-in">
-					<h3><strong>MIÉRCOLES</strong> 9 DE NOVIEMBRE</h3>
-					<div class="emms22__pre-event__calendar__date__country">
-						<span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
-						<a href="">Mira el horario de tu país</a>
-					</div>
-				</div>
-				<ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
-					<?php
-					    $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        				$speakers=$db->getSpeakersByDay(1);
-						
-						foreach($speakers as $speaker) :?>
-						<li class="emms22__pre-event__calendar__event-list__event">
-							<div class="emms22__pre-event__calendar__event-list__event__card">
-								<div class="emms22__pre-event__calendar__event-list__event__card__speaker">
-									<div class="emms22__pre-event__calendar__event-list__event__card__speaker__image">
-										<img src="/admin/speakers/uploads/<?=$speaker['image']?>" alt="<?=$speaker['alt_image']?>">
-									</div>
-									<div class="emms22__pre-event__calendar__event-list__event__card__speaker__text">
-										<h4><?=$speaker['name']?></h4>
-										<h5><?=$speaker['job']?></h5>
-										<ul>
-										<?php if(!empty($speaker['sm_twitter'])) : ?> 
-											<li><a href="<?=$speaker['sm_twitter']?>"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_linkedin'])) : ?> 	
-											<li><a href="<?=$speaker['sm_linkedin']?>"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_instagram'])) : ?> 	
-											<li><a href="<?=$speaker['sm_instagram']?>"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_facebook'])) : ?> 		
-											<li><a href="<?=$speaker['sm_facebook']?>"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
-										<?php endif;?>	
-										</ul>
-									</div>
-								</div>
-								<div class="emms22__pre-event__calendar__event-list__event__card__description">
-									<p><?=$speaker['description']?></p>
-								</div>
-								<div class="emms22__pre-event__calendar__event-list__event__card__business">
-									<img src="/admin/speakers/uploads/<?=$speaker['image_company']?>" alt="<?=$speaker['alt_image_company']?>">
-								</div>
-							</div>
-							<div class="emms22__pre-event__calendar__event-list__event__country">
-								<span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG) <?=$speaker['image_company']?>?> p.m</span>
-								<a href="">Mira el horario de tu país</a>
-							</div>
-						</li>
-				
-					<?php endforeach; ?>
-				</ul>
-				<ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-							
-						
-				<?php foreach($speakers as $speaker) :?>	
-				<li class="emms22__pre-event__calendar__event-list__event carousel-cell">
-						<div class="emms22__pre-event__calendar__event-list__event__card">
-							<div class="emms22__pre-event__calendar__event-list__event__card__speaker">
-								<div class="emms22__pre-event__calendar__event-list__event__card__speaker__image">
-									<img src="/admin/speakers/uploads/<?=$speaker['image']?>" alt="<?=$speaker['alt_image']?>">
-								</div>
-								<div class="emms22__pre-event__calendar__event-list__event__card__speaker__text">
-									<h4><?=$speaker['name']?></h4>
-									<h5><?=$speaker['job']?></h5>
-									<ul>
-										<?php if(!empty($speaker['sm_twitter'])) : ?> 
-										<li><a href="<?=$speaker['sm_twitter']?>"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_linkedin'])) : ?> 	
-											<li><a href="<?=$speaker['sm_linkedin']?>"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_instagram'])) : ?> 	
-											<li><a href="<?=$speaker['sm_instagram']?>"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_facebook'])) : ?> 		
-											<li><a href="<?=$speaker['sm_facebook']?>"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
-										<?php endif;?>	
-										</ul>
-								</div>
-							</div>
-							<div class="emms22__pre-event__calendar__event-list__event__card__description">
-								<p><?=$speaker['description']?></p>
-							</div>
-							<div class="emms22__pre-event__calendar__event-list__event__card__business">
-								<img src="/admin/speakers/uploads/<?=$speaker['image_company']?>" alt="<?=$speaker['alt_image_company']?>">
-							</div>
-						</div>
-						<div class="emms22__pre-event__calendar__event-list__event__country">
-							<span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG) <?=$speaker['image_company']?>?> p.m</span>
-							<a href="">Mira el horario de tu país</a>
-						</div>
-					</li>
-					<?php endforeach;?>
-					
-				</ul>
-				<div class="emms22__pre-event__calendar__date emms22__fade-in">
-					<h3><strong>JUEVES</strong> 10 DE NOVIEMBRE</h3>
-					<div class="emms22__pre-event__calendar__date__country">
-						<span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
-						<a href="">Mira el horario de tu país</a>
-					</div>
-				</div>
-				<ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
-					<?php	
-					$speakers=$db->getSpeakersByDay(2);
-					foreach($speakers as $speaker) :?>
-						<li class="emms22__pre-event__calendar__event-list__event">
-							<div class="emms22__pre-event__calendar__event-list__event__card">
-								<div class="emms22__pre-event__calendar__event-list__event__card__speaker">
-									<div class="emms22__pre-event__calendar__event-list__event__card__speaker__image">
-										<img src="/admin/speakers/uploads/<?=$speaker['image']?>" alt="<?=$speaker['alt_image']?>">
-									</div>
-									<div class="emms22__pre-event__calendar__event-list__event__card__speaker__text">
-										<h4><?=$speaker['name']?></h4>
-										<h5><?=$speaker['job']?></h5>
-										<ul>
-										<?php if(!empty($speaker['sm_twitter'])) : ?> 
-											<li><a href="<?=$speaker['sm_twitter']?>"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_linkedin'])) : ?> 	
-											<li><a href="<?=$speaker['sm_linkedin']?>"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_instagram'])) : ?> 	
-											<li><a href="<?=$speaker['sm_instagram']?>"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_facebook'])) : ?> 		
-											<li><a href="<?=$speaker['sm_facebook']?>"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
-										<?php endif;?>	
-										</ul>
-									</div>
-								</div>
-								<div class="emms22__pre-event__calendar__event-list__event__card__description">
-									<p><?=$speaker['description']?></p>
-								</div>
-								<div class="emms22__pre-event__calendar__event-list__event__card__business">
-									<img src="/admin/speakers/uploads/<?=$speaker['image_company']?>" alt="<?=$speaker['alt_image_company']?>">
-								</div>
-							</div>
-							<div class="emms22__pre-event__calendar__event-list__event__country">
-								<span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG) <?=$speaker['image_company']?>?> p.m</span>
-								<a href="">Mira el horario de tu país</a>
-							</div>
-						</li>
-				
-					<?php endforeach; ?>
-									
-				</ul>
-				<ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-					<?php foreach($speakers as $speaker) :?>	
-				<li class="emms22__pre-event__calendar__event-list__event carousel-cell">
-						<div class="emms22__pre-event__calendar__event-list__event__card">
-							<div class="emms22__pre-event__calendar__event-list__event__card__speaker">
-								<div class="emms22__pre-event__calendar__event-list__event__card__speaker__image">
-									<img src="/admin/speakers/uploads/<?=$speaker['image']?>" alt="<?=$speaker['alt_image']?>">
-								</div>
-								<div class="emms22__pre-event__calendar__event-list__event__card__speaker__text">
-									<h4><?=$speaker['name']?></h4>
-									<h5><?=$speaker['job']?></h5>
-									<ul>
-										<?php if(!empty($speaker['sm_twitter'])) : ?> 
-										<li><a href="<?=$speaker['sm_twitter']?>"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_linkedin'])) : ?> 	
-											<li><a href="<?=$speaker['sm_linkedin']?>"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_instagram'])) : ?> 	
-											<li><a href="<?=$speaker['sm_instagram']?>"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
-										<?php endif;?>
-										<?php if(!empty($speaker['sm_facebook'])) : ?> 		
-											<li><a href="<?=$speaker['sm_facebook']?>"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
-										<?php endif;?>	
-										</ul>
-								</div>
-							</div>
-							<div class="emms22__pre-event__calendar__event-list__event__card__description">
-								<p><?=$speaker['description']?></p>
-							</div>
-							<div class="emms22__pre-event__calendar__event-list__event__card__business">
-								<img src="/admin/speakers/uploads/<?=$speaker['image_company']?>" alt="<?=$speaker['alt_image_company']?>">
-							</div>
-						</div>
-						<div class="emms22__pre-event__calendar__event-list__event__country">
-							<span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG) <?=$speaker['image_company']?>?> p.m</span>
-							<a href="">Mira el horario de tu país</a>
-						</div>
-					</li>
-					<?php endforeach;?>
-				
-					
-				</ul>
-			</div>
-		</div>
+        <?php include_once('commonCalendar.php') ?>
 
 
 		<!-- CTA Box -->
@@ -462,15 +266,15 @@ require_once('utils/DB.php');
 					<h3 class="emms22__fade-in">SPONSORS PRO</h3>
 					<ul class="emms22__fade-in">
 					<?php $pro_sponsors = $db->getAliadosPro('orden_home');
-						foreach($pro_sponsors as $pro ) : ?>	
+						foreach($pro_sponsors as $pro ) : ?>
 						<li>
 							<?php if($pro['link_site']) :?>
 								<a href="<?=$pro['link_site']?>"  target="_blank">
-							<?php endif?>	
+							<?php endif?>
 							<img src="/admin/aliados_pro/uploads/<?=$pro['image_home']?>" alt="<?=$pro['alt_image_home']?>">
 							<?php if($pro['link_site']) :?>
 								</a>
-							<?php endif?>	
+							<?php endif?>
 						</li>
 
 						<?php endforeach;?>
@@ -480,15 +284,15 @@ require_once('utils/DB.php');
 					<h3 class="emms22__fade-in">SPONSORS STARTER</h3>
 					<ul class="emms22__fade-in">
 				<?php $starter_sponsors = $db->getAliadosStarter('orden_home');
-						foreach($starter_sponsors as $starter ) : ?>	
+						foreach($starter_sponsors as $starter ) : ?>
 						<li>
 							<?php if($starter['link_site']) :?>
 								<a href="<?=$starter['link_site']?>"  target="_blank">
-							<?php endif?>	
+							<?php endif?>
 							<img src="/admin/aliados_starter/uploads/<?=$starter['image_home']?>" alt="<?=$starter['alt_image_home']?>">
 							<?php if($starter['link_site']) :?>
 								</a>
-							<?php endif?>	
+							<?php endif?>
 						</li>
 
 						<?php endforeach;?>
@@ -498,7 +302,7 @@ require_once('utils/DB.php');
 					<h3 class="emms22__fade-in">MEDIA PARTNERS</h3>
 					<ul class="emms22__fade-in">
 					<?php $media_sponsors = $db->getAliadosMedia('orden_home');
-						foreach($media_sponsors as $media ) : ?>	
+						foreach($media_sponsors as $media ) : ?>
 						<li>
 							<img src="/admin/aliados_media_partner/uploads/<?=$media['image_home']?>" alt="<?=$media['alt_image_home']?>">
 						</li>
@@ -506,7 +310,7 @@ require_once('utils/DB.php');
 						<?php endforeach;
 						$db->close();
 						?>
-						
+
 					</ul>
 				</div>
 				<div class="emms22__pre-event__allies__contact emms22__fade-in">
