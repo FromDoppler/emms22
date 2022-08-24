@@ -40,7 +40,7 @@ require_once('utils/DB.php');
                 <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
                     <li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
-                    <li><a href="">contenido exclusivo</a></li>
+                    <li><a href="./pre-event-sponsors-general.php">contenido exclusivo</a></li>
                 </ul>
             </div>
         </nav>
