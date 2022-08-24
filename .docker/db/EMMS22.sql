@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Aug 17, 2022 at 01:54 PM
+-- Generation Time: Aug 24, 2022 at 06:21 PM
 -- Server version: 8.0.29
 -- PHP Version: 8.0.19
 
@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `EMMS22`
 --
-CREATE DATABASE IF NOT EXISTS `EMMS22` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `EMMS22` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 USE `EMMS22`;
 
 -- --------------------------------------------------------
@@ -45,8 +45,7 @@ CREATE TABLE `aliados_media_partner` (
 
 INSERT INTO `aliados_media_partner` (`id`, `name`, `image_home`, `alt_image_home`, `orden_home`, `status`) VALUES
 (4, 'Green Arrow', 'KLFJ5HOK4NH57HJNKQUMNVRIHA.jpg', 'oliver', '2', NULL),
-(5, 'Reverse Flash', 'download.jfif', 'Eobard Thawne', '9', NULL),
-(13, 'Federico', 'superman.jpg', 'superman classic', '15', NULL);
+(5, 'Reverse Flash', 'download.jfif', 'Eobard Thawne', '9', NULL);
 
 -- --------------------------------------------------------
 
@@ -57,28 +56,28 @@ INSERT INTO `aliados_media_partner` (`id`, `name`, `image_home`, `alt_image_home
 DROP TABLE IF EXISTS `aliados_pro`;
 CREATE TABLE `aliados_pro` (
   `id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `image_home` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `alt_image_home` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `link_site` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `orden_home` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_card` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `orden_card` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `image_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alt_image_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `link_site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `orden_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description_card` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `orden_card` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
-  `image_landing` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `alt_image_landing` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `youtube` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `image_youtube` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `alt_image_youtube` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `title_magnet` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_magnet` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `link_magnet` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `title_learnmore` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_learnmore` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `link_learnmore` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `status` enum('0','1') COLLATE utf8mb4_general_ci DEFAULT NULL
+  `image_landing` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alt_image_landing` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `image_youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alt_image_youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `link_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `link_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `status` enum('0','1') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -100,7 +99,7 @@ CREATE TABLE `aliados_starter` (
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `image_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `alt_image_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `link_site` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `link_site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `orden_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `description_card` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -275,14 +274,14 @@ INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
 DROP TABLE IF EXISTS `registered`;
 CREATE TABLE `registered` (
   `id` bigint NOT NULL,
-  `register` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `phase` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `firstname` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `register` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `phase` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `firstname` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `lastname` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `country` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `phone` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `industry` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
+  `industry` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `company` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `source_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `medium_utm` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -300,28 +299,29 @@ CREATE TABLE `registered` (
 DROP TABLE IF EXISTS `speakers`;
 CREATE TABLE `speakers` (
   `id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `alt_image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `job` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `sm_twitter` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `sm_linkedin` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `sm_instagram` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `sm_facebook` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_general_ci,
-  `image_company` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `alt_image_company` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `time` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `orden` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `status` enum('0','1') COLLATE utf8mb4_general_ci DEFAULT NULL
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alt_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `job` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `sm_twitter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `sm_linkedin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `sm_instagram` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `sm_facebook` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `image_company` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alt_image_company` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `day` varchar(1) COLLATE utf8mb4_general_ci NOT NULL,
+  `time` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `orden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `status` enum('0','1') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `speakers`
 --
 
-INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `image_company`, `alt_image_company`, `time`, `orden`, `status`) VALUES
-(1, 'Ben Afleck', 'bafleck.jfif', 'ben-afleck', 'Actor & Productor in Warner Media Bross,', 'benaffleck', 'linkdin', 'instagram', 'facebook', 'Entiendo que estos son los más bajo y no deberían llevar link a su sitio', 'batman-logo.png', 'batman company', '13', '1', NULL);
+INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `image_company`, `alt_image_company`, `day`, `time`, `orden`, `status`) VALUES
+(1, 'Ben Afleck', 'bafleck.jfif', 'ben-afleck', 'Actor & Productor in Warner Media Bross,', 'benaffleck', 'linkdin', 'instagram', 'facebook', 'Entiendo que estos son los más bajo y no deberían llevar link a su sitio', 'batman-logo.png', 'batman company', '1', '13', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -332,25 +332,25 @@ INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`,
 DROP TABLE IF EXISTS `subscriptions_doppler`;
 CREATE TABLE `subscriptions_doppler` (
   `id` int NOT NULL,
-  `email` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `list` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `register` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `form_id` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `firstname` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `lastname` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `email` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `list` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `register` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `form_id` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `firstname` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `lastname` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `phone` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `country` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `industry` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
+  `industry` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `company` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `ip` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `country_ip` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `ip` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `country_ip` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `privacy` tinyint(1) NOT NULL,
   `promotions` tinyint(1) DEFAULT NULL,
-  `source_utm` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `medium_utm` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `campaign_utm` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `content_utm` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `term_utm` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `source_utm` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `medium_utm` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `campaign_utm` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `content_utm` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `term_utm` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

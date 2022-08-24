@@ -73,7 +73,7 @@ $file_tmp = $_FILES["image_company"]["tmp_name"];
  {
   ?>
   <script type="text/javascript">
-  alert('aliados_speakers updated successfully');
+  alert('speakers updated successfully');
   window.location.href='index.php?token=<?=$_GET['token']?>';
   </script>
   <?php

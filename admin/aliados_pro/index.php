@@ -11,7 +11,7 @@ if(isset($_GET['delete_id']))
 {
  $sql_query="DELETE FROM aliados_pro WHERE id=".$_GET['delete_id'];
  mysqli_query($con,$sql_query);
- @header("Location: $_SERVER[PHP_SELF]");
+ @header("Location: $_SERVER[PHP_SELF]?token=".$_GET['token']);
 }
 /*if(isset($_GET['changestatus_id']))
 {
