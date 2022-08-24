@@ -97,7 +97,7 @@ require_once('utils/DB.php');
                             <?php endif ?>
                         </div>
                     </div>
-                    <?php 
+                    <?php
                     endforeach;
                     $db->close();
                     ?>
@@ -118,42 +118,42 @@ require_once('utils/DB.php');
 					<div class="emms22__conferences__cards__container">
 						<div class="emms22__conferences__content__cards">
 							<div class="emms22__conferences__cards emms22__fade-in">
-								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/img-video-capsulas-sponsors.png" alt="Conferencias exclusivas">
+								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="Conferencias exclusivas">
 								<h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
 								<p>Duración: 00:00:00</p>
 								<a href="#" target="_blank" rel="noopener">¡No te lo pierdas!</a>
 							</div>
 
 							<div class="emms22__conferences__cards emms22__fade-in">
-								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/img-video-capsulas-sponsors.png" alt="Conferencias exclusivas">
+								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="Conferencias exclusivas">
 								<h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
 								<p>Duración: 00:00:00</p>
 								<a href="#" target="_blank" rel="noopener">¡No te lo pierdas!</a>
 							</div>
 
 							<div class="emms22__conferences__cards emms22__fade-in">
-								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/img-video-capsulas-sponsors.png" alt="Conferencias exclusivas">
+								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="Conferencias exclusivas">
 								<h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
 								<p>Duración: 00:00:00</p>
 								<a href="#" target="_blank" rel="noopener">¡No te lo pierdas!</a>
 							</div>
 
 							<div class="emms22__conferences__cards emms22__fade-in">
-								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/img-video-capsulas-sponsors.png" alt="Conferencias exclusivas">
+								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="Conferencias exclusivas">
 								<h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
 								<p>Duración: 00:00:00</p>
 								<a href="#" target="_blank" rel="noopener">¡No te lo pierdas!</a>
 							</div>
 
 							<div class="emms22__conferences__cards emms22__fade-in">
-								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/img-video-capsulas-sponsors.png" alt="Conferencias exclusivas">
+								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="Conferencias exclusivas">
 								<h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
 								<p>Duración: 00:00:00</p>
 								<a href="#" target="_blank" rel="noopener">¡No te lo pierdas!</a>
 							</div>
 
 							<div class="emms22__conferences__cards emms22__fade-in">
-								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/img-video-capsulas-sponsors.png" alt="Conferencias exclusivas">
+								<img class="lazyload" loading="lazy" data-src="../html/<?= VERSION ?>/img/emms/emms2021.png" alt="Conferencias exclusivas">
 								<h4>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h4>
 								<p>Duración: 00:00:00</p>
 								<a href="#" target="_blank" rel="noopener">¡No te lo pierdas!</a>
