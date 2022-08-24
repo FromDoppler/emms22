@@ -112,7 +112,7 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
     </tr>
     <tr>
    <td>
-   <label for="sm_twitter" class="form-label">Sm_twitter:</label>
+   <label for="sm_twitter" class="form-label">Sm_twitter: <br><small><em>ej: https://twitter.com/fromDoppler</em></small></label>
    </td>
     <td>
     <input type="text" class="form-control" id="sm_twitter" name="sm_twitter" placeholder="Sm_twitter">
@@ -120,7 +120,7 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
     </tr>
     <tr>
    <td>
-   <label for="sm_linkedin" class="form-label">Sm_linkedin:</label>
+   <label for="sm_linkedin" class="form-label">Sm_linkedin: <br><small><em>ej: https://www.linkedin.com/company/doppler/mycompany/</em></small></label>
    </td>
     <td>
     <input type="text" class="form-control" id="sm_linkedin" name="sm_linkedin" placeholder="Sm_linkedin">
@@ -128,7 +128,7 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
     </tr>
     <tr>
    <td>
-   <label for="sm_instagram" class="form-label">Sm_instagram:</label>
+   <label for="sm_instagram" class="form-label">Sm_instagram: <br><small><em>ej: https://www.instagram.com/fromdoppler/</em></small></label>
    </td>
     <td>
     <input type="text" class="form-control" id="sm_instagram" name="sm_instagram" placeholder="Sm_instagram">
@@ -136,7 +136,7 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
     </tr>
     <tr>
    <td>
-   <label for="sm_facebook" class="form-label">Sm_facebook:</label>
+   <label for="sm_facebook" class="form-label">Sm_facebook: <br><small><em>ej: https://www.facebook.com/DopplerEmailMarketing</em></small></label>
    </td>
     <td>
     <input type="text" class="form-control" id="sm_facebook" name="sm_facebook" placeholder="Sm_facebook">
