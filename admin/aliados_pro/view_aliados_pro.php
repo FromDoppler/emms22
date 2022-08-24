@@ -95,7 +95,7 @@ if(isset($_GET['view_id']))
 </tr>
 <tr>
     <td>
-   <label for="image" class="form-label">Imagen Home:</label>
+   <label for="image" class="form-label">Imagen Landing:</label>
    </td>
    <th colspan="5"> <img src="uploads/<?=$fetched_row['image_landing']?>" alt="<?=$$fetched_row['alt_image_landing']?>" width="200" height="200"></th>
 </tr>
