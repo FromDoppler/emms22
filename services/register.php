@@ -95,7 +95,7 @@ function saveSubscriptionDopplerTable($user) {
         $db->close();
     }
     catch (Exception $e) {
-        ErrorLog::log("saveSubscriptionDopplerTable (Guarda en la BD subscriptions_doppler and 	registered)", $e->getMessage(), ['user' => $user]);
+        ErrorLog::log("saveSubscriptionDopplerTable (Guarda en la BD subscriptions_doppler and registered)", $e->getMessage(), ['user' => $user]);
     }
 }
 
