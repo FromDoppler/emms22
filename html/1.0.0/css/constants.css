@@ -64,6 +64,10 @@ a {
   text-decoration: none;
 }
 
+.emms22--vh{
+    visibility: hidden;
+}
+
 .emms22__container--lg {
   display: flex;
   max-width: 1200px;

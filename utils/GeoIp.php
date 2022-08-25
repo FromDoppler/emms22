@@ -14,7 +14,7 @@ class GeoIp
 		'AI' => 'Anguilla',
 		'AQ' => 'Antarctica',
 		'AG' => 'Antigua And Barbuda',
-		'AR' => 'Argentina',
+		'ARG' => 'Argentina',
 		'AM' => 'Armenia',
 		'AW' => 'Aruba',
 		'AU' => 'Australia',
@@ -268,7 +268,7 @@ class GeoIp
 	public static function getGeoLocalitationCountryNameAndCode()
 	{
 		$countryName = (self::getCountryName() === "Not Recognized") ? 'Argentina' : self::getCountryName();
-		$countryCode = "AR";
+		$countryCode = "ARG";
 		if (isset($_SERVER["HTTP_CF_IPCOUNTRY"])) {
 			$countryCode = $_SERVER["HTTP_CF_IPCOUNTRY"];
 		}
