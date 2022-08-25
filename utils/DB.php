@@ -244,5 +244,16 @@ class DB {
         $result = $sql->fetchAll();
         return $result;
     }
+	
+	public function getAliadoProBySlug($slug) {
+        $sql = $this->query("SELECT * FROM aliados_pro where slug='".$slug."'");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+	public function getAliadoStarterBySlug($slug) {
+        $sql = $this->query("SELECT * FROM aliados_starter where slug='".$slug."'");
+        $result = $sql->fetchAll();
+        return $result;
+    }
 }
 ?>
