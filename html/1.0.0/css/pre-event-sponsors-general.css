@@ -157,6 +157,48 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
+    width: 100%;
+}
+
+.emms22__pre-event__sponsors__capsule-list.emms22__show-mb{
+    display: none;
+  }
+
+.emms22__pre-event__sponsors__capsule-list .flickity-viewport{
+    width: 100%;
+}
+
+.emms22__pre-event__sponsors__capsule-list .flickity-page-dots .dot{
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background: #FFFFFF;
+    border: 1px solid #B38EC1;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+
+.emms22__pre-event__sponsors__capsule-list .flickity-page-dots .dot.is-selected{
+    background: #FFFFFF;
+    border: 1px solid #B38EC1;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.emms22__pre-event__sponsors__capsule-list .flickity-page-dots .dot.is-selected::after{
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 7.5px;
+    height: 7.5px;
+    background: #B38EC1;
+    border-radius: 100%;
+}
+
+.emms22__pre-event__sponsors__capsule-list .flickity-viewport .carousel-cell{
+    width: 100%;
+    display: flex;
 }
 
 .emms22__pre-event__sponsors__capsule-list__card {
@@ -165,6 +207,7 @@
     flex-direction: column;
     justify-content: center;
     padding-bottom: 4rem;
+    margin: 0 20px;
 }
 
 .emms22__pre-event__sponsors__capsule-list__card__logo img {
@@ -214,6 +257,22 @@
 @media (max-width: 1200px) {
     .emms22__pre-event__sponsors__capsule-list {
         justify-content: center;
+    }
+}
+
+@media(max-width:768px){
+    .emms22__pre-event__sponsors__capsule-list.emms22__show-mb{
+        display: block;
+      }
+
+    .emms22__pre-event__sponsors__capsule-list.emms22__show-dk{
+        display: none;
+    }
+
+    .emms22__pre-event__sponsors__capsule-list__card{
+        max-width: initial;
+        width: 100%;
+        margin: 0;
     }
 }
 
@@ -305,6 +364,10 @@
     flex-wrap: wrap;
 }
 
+.emms22__conferences__content__cards.emms22__show-mb{
+    display: none;
+  }
+
 .emms22__conferences__cards {
     max-width: 300px;
 }
@@ -382,13 +445,12 @@
     }
 }
 
-@media only screen and (max-width: 874px) {
-    .emms22__conferences__content__cards {
-        flex-direction: column;
-        display: flex;
+@media only screen and (max-width: 850px){
+    .emms22__conferences__content__cards{
         justify-content: center;
     }
 }
+
 
 @media only screen and (max-width: 768px) {
     .emms22__conferences__first__card__img,
@@ -418,6 +480,52 @@
 
     .emms22__hero__content__video video {
         max-width: 80vw;
+    }
+
+    .emms22__conferences__content__cards.emms22__show-dk {
+        display: none;
+    }
+
+    .emms22__conferences__content__cards.emms22__show-mb{
+        display: block;
+        width: 100%;
+    }
+
+    .emms22__conferences__cards__container{
+        width: 100%;
+        padding: 0 0 80px 0;
+    }
+
+    .emms22__conferences__cards{
+        max-width: initial;
+        width: 100%;
+    }
+
+    .emms22__conferences__cards img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .emms22__conferences__cards__container .flickity-page-dots{
+        bottom: -65px;
+    }
+
+    .emms22__conferences__cards__container .flickity-page-dots .dot{
+        width: 12px;
+        height: 12px;
+        margin: 0 4px;
+        background: #FFFFFF;
+        border: 1px solid #B38EC1;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        opacity: 1;
+    }
+
+    .emms22__conferences__cards__container .flickity-page-dots .dot.is-selected{
+        background: #B58FC1;
+        border: 1px solid #fff;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     }
 }
 
