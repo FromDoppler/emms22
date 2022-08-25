@@ -12,12 +12,13 @@
 
 	<meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:description" content="Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing. Descubre las &uacute;ltimas tendencias y las estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios. Gratis y online. &iexcl;Reserva tu cupo ahora!">
-	<meta property="og:image" content="https://goemms.com/html/<?= VERSION ?>/img/share.png">
+	<meta property="og:image" content="https://goemms.com/share.png">
 	<meta property="og:url" content="https://goemms.com/">
 	<meta property="og:site_name" content="EMMS 2022: El mayor evento de Marketing Digital">
+	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://goemms.com/html/<?= VERSION ?>/img/share.png">
+	<meta name="twitter:image" content="https://goemms.com/share.png">
 	<meta name="twitter:image:alt" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -38,26 +39,26 @@
 	<!-- El aviso de consentimiento de cookies de OneTrust comienza para goemms.com. -->
 	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="02d37671-cb77-4e6a-804f-9955eb1f7c97<?= (PRODUCTION) ? '' : '-test' ?>"></script>
 	<script type="text/javascript">
-		function OptanonWrapper() {}
+	    function OptanonWrapper() {}
 	</script>
 	<!-- El aviso de consentimiento de cookies de OneTrust finaliza para goemms.com. -->
 
 
 	<!-- Google Tag Manager -->
 	<script>
-		(function(w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src =
-				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-M768WZR');
+	    (function(w, d, s, l, i) {
+	        w[l] = w[l] || [];
+	        w[l].push({
+	            'gtm.start': new Date().getTime(),
+	            event: 'gtm.js'
+	        });
+	        var f = d.getElementsByTagName(s)[0],
+	            j = d.createElement(s),
+	            dl = l != 'dataLayer' ? '&l=' + l : '';
+	        j.async = true;
+	        j.src =
+	            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	        f.parentNode.insertBefore(j, f);
+	    })(window, document, 'script', 'dataLayer', 'GTM-M768WZR');
 	</script>
 	<!-- End Google Tag Manager -->
