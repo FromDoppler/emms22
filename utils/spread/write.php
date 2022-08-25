@@ -41,7 +41,9 @@ function write_to_sheet($spreadsheetId, $range, $values, $db) {
             $db->google_oauth_update_access_token(json_encode($data));
             write_to_sheet($spreadsheetId, $range, $values, $db);
         } else {
-            echo $e->getMessage(); //print the error just in case your data is not added.
+            $error = json_decode($e->getMessage()); //print the error just in case your data is not added.
+            throw new Exception($error->error->message);
+
         }
     }
 }

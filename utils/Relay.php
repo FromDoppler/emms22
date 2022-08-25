@@ -45,7 +45,7 @@ class Relay {
         $endPointSendEmail = self::urlBase . self::$account . "/messages";
         $response = json_decode(self::executeCurl($endPointSendEmail, $dataJson, $headers, 'POST'));
         if(isset($response->errorCode)) :
-            throw new Exception('Relay: Error '. $response->detail);
+            throw new Exception(json_encode($response->errors));
         endif;
     }
 }
