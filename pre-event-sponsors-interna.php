@@ -1,6 +1,30 @@
 <?php
 require_once('config.php');
-?>
+require_once('utils/DB.php');
+
+if(!isset($_GET['slug']) or (trim($_GET['slug'])==='')) {
+ 	header("HTTP/1.0 404 Not Found");
+	include '404.php';
+	exit;
+}
+$db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$premium = $db->getAliadoProBySlug($_GET['slug']);
+if(count($premium) === 0) : 
+	$premium = $db->getAliadoStarterBySlug($_GET['slug']);
+	if(count($premium) === 0) {
+		header("HTTP/1.0 404 Not Found");
+		include '404.php';
+		exit;
+	}
+	else{
+		$source = 'aliados_starter';
+	}
+
+else:
+	$source = 'aliados_pro';
+endif;
+$premium = $premium[0];
+  ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -36,9 +60,13 @@ require_once('config.php');
 					<a href="./index.php" >
                         <img class="lazyload emms22__header__sponsors__interna__logo__doppler" loading="lazy" data-src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022" />
                     </a>
-                    <a href="./index.php" >
-                        <img class="lazyload emms22__header__sponsors__interna__logo__sponsor" loading="lazy" data-src="../html/<?= VERSION ?>/img/logo-metricool.png" alt="Emms 2022" />
-                    </a>
+					<?php if(!empty($premium['link_site'])) : ?>
+                    <a href="<?=$premium['link_site']?>" target="_blank" >
+					<?php endif;?>	
+						<img class="lazyload emms22__header__sponsors__interna__logo__sponsor" loading="lazy" data-src="/admin/<?=$source?>/uploads/<?=$premium['image_landing']?>" alt="<?=$premium['alt_image_landing']?>" />
+                	<?php if(!empty($premium['link_site'])) : ?>    
+					</a>
+					<?php endif;?>	
 				</div>
 			</div>
 		</nav>
@@ -46,44 +74,53 @@ require_once('config.php');
 		<section class="emms22__hero">
 			<div class="emms22__container--editions--lg emms22__hero__container">
 				<div class="emms22__hero__content__sponsors__interna emms22__fade-in">
-					<h1>Aquí va el Título de la cápsula.</h1>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque id, repellat quidem fuga magni fugiat molestias aut maxime temporibus sint? Nisi, veniam itaque accusantium alias minima ipsa illum vitae quod.</p>
+					<h1><?=$premium['title']?></h1>
+					<p><?=$premium['description']?></p>
 				</div>
 				<div class="emms22__hero__content__sponsors__interna__video emms22__fade-in">
-					<video class="padding-top" autoplay muted loop>
-						<source src="../html/<?= VERSION ?>/img/video-ediciones-anteriores-2022-compress.mp4" type="video/mp4" alt="Video de ediciones anteriores" />
-					</video>
+				<?php if(!empty($premium['youtube'])) :  ?>
+					<iframe width="420" height="315"
+						src="https://www.youtube.com/embed/<?=$premium['youtube']?>">
+					</iframe>
+				<?php else : ?>
+					<img src="/admin/<?=$source?>/uploads/<?=$premium['image_youtube']?>" alt="<?=$premium['alt_image_youtube']?>" />
+
+   				<?php endif; ?>   
+
 				</div>
 			</div>
 		</section>
 
+		<?php if(!empty($premium['title_magnet'])) : ?>
 		<!-- Section Sponsors -->
 		<section class="emms22__sponsors__interna">
 			<div class="emms22__container--editions--md emms22__fade-in">
 				<div class="emms22__sponsors__interna__wrapper">
 					<div class="emms22__sponsors__interna__content emms22__fade-in">
-						<h2>Aquí va el título del Lead Magnet del Sponsor</h2>
-						<p>Aquí va una descripción del Recurso. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-					    <button class="emms22__sponsors__interna__button"><a href="https://www.fromdoppler.com/?origin=emms-edicionesanteriores" target="_blank" rel="noopener">ACCEDER</a>
+						<h2><?=$premium['title_magnet']?></h2>
+						<p><?=$premium['description_magnet']?></p>
+					    <button class="emms22__sponsors__interna__button"><a href="<?=$premium['link_magnet']?>" target="_blank" rel="noopener">ACCEDER</a>
 					    </button>
                     </div>
 				</div>
 			</div>
 		</section>
-
+		<?php endif;?>
+		<?php if(!empty($premium['title_learn_more'])) : ?>
         <!-- Section Sponsors - Conoce más -->
         <section class="emms22__sponsors__interna emms22__sponsors__interna__wrapper__color">
 			<div class="emms22__container--editions--md emms22__fade-in">
 				<div class="emms22__sponsors__interna__wrapper">
 					<div class="emms22__sponsors__interna__content__color emms22__fade-in">
-						<h2>Conoce más sobre “Nombre del Sponsor”</h2>
-						<p>Aquí va una descripción del Sponsor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-					    <button class="emms22__sponsors__interna__button"><a href="https://www.fromdoppler.com/?origin=emms-edicionesanteriores" target="_blank" rel="noopener">MÁS INFORMACIÓN</a>
+						<h2><?=$premium['title_learnmore']?></h2>
+						<p><?=$premium['description_learnmore']?></p>
+					    <button class="emms22__sponsors__interna__button"><a href="<?=$premium['link_learnmore']?>" target="_blank" rel="noopener">MÁS INFORMACIÓN</a>
 					    </button>
                     </div>
 				</div>
 			</div>
 		</section>
+		<?php endif;?>		
 
 		<footer class="emms22__footer">
 			<div class="emms22__footer__event emms22__fade-in">
