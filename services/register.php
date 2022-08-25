@@ -17,7 +17,7 @@ function isSubmitValid($ip) {
         SecurityHelper::isSubmitValid(ALLOW_IPS);
     }    
     catch (Exception $e) {
-        ErrorLog::log("isSubmitValid ".$e->getMessage());
+        ErrorLog::log("isSubmitValid", $e->getMessage(), ['ip'=> $ip]);
         exit('submits');
     }
 }
@@ -39,18 +39,16 @@ function setDataRequest($ip, $countryGeo) {
     $content_utm = isset($_POST['utm_content']) ? $_POST['utm_content'] : null;
     $term_utm = isset($_POST['utm_term']) ? $_POST['utm_term'] : null;
     $origin = isset($_POST['origin']) ? $_POST['origin'] : null;
-    try {
-
-        $user = array(
+    $user = array(
             'register' => date("Y-m-d h:i:s A"),
-            'firstname' => Validator::validateRequired('firstname', $firstname),
+            'firstname' => $firstname,
             'lastname' => $lastname,
-            'email' => Validator::validateEmail($email),
-            'privacy' => Validator::validateBool('privacy', $privacy),
-            'promotions' => Validator::validateBool('promotions', $promotions),
+            'email' => $email,
+            'privacy' => $privacy,
+            'promotions' => $promotions,
             'phone' => $phone,
             'country' =>  $country,
-            'industry' =>  Validator::validateRequired('industry', $industry),
+            'industry' =>  $industry,
             'company' =>  $company,
             'ip' => $ip,
             'country_ip' => $countryGeo,
@@ -63,21 +61,29 @@ function setDataRequest($ip, $countryGeo) {
             'form_id' => 'landing',
             'list' => LIST_LANDING,
         );
+    try {
+
+        Validator::validateRequired('firstname', $firstname);
+        Validator::validateEmail($email);
+        Validator::validateBool('privacy', $privacy);
+        Validator::validateBool('promotions', $promotions);
+        Validator::validateRequired('industry', $industry);
         return $user;    
     }    
     catch (Exception $e) {
-        ErrorLog::log("setDataRequest ".$e->getMessage());
+        ErrorLog::log("setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
     }
 
 }
 
 function saveSubscriptionDoppler($user) {
+    
    try {
         Doppler::init(ACCOUNT_DOPPLER, API_KEY_DOPPLER);
         Doppler::subscriber($user);
     }    
     catch (Exception $e) {
-        ErrorLog::log("Doppler saveSubscriptionDoppler ".$e->getMessage());
+        ErrorLog::log("saveSubscriptionDoppler (Almacena en Lista)", $e->getMessage(), ['user' => $user]);
     }
 }
 function saveSubscriptionDopplerTable($user) {
@@ -89,7 +95,7 @@ function saveSubscriptionDopplerTable($user) {
         $db->close();
     }
     catch (Exception $e) {
-        ErrorLog::log("DB saveSubscriptionDopplerTable ".$e->getMessage());
+        ErrorLog::log("saveSubscriptionDopplerTable (Guarda en la BD subscriptions_doppler and 	registered)", $e->getMessage(), ['user' => $user]);
     }
 }
 
@@ -100,30 +106,52 @@ function saveSubscriptionSpreadSheet($user) {
         $db->close();
     }
     catch (Exception $e) {
-        ErrorLog::log("Spread saveSubscriptionSpreadSheet ".$e->getMessage());
+        ErrorLog::log("saveSubscriptionSpreadSheet (Guarda en SpreadSheet)", $e->getMessage(), ['user' => $user]);
+        
     }
 }
 
 function sendEmail($user, $subject) {
     try {    
-    Relay::init(ACCOUNT_RELAY, API_KEY_RELAY);
-    Relay::sendEmailRegister($user, $subject);
+        Relay::init(ACCOUNT_RELAY, API_KEY_RELAY);
+        Relay::sendEmailRegister($user, $subject);
     }
     catch (Exception $e) {
-        ErrorLog::log($e->getMessage());
-        ErrorLog::log("Relay sendEmail ".$e->getMessage());
+        ErrorLog::log("sendEmail (Envia mail por Relay)", $e->getMessage(), ['user' => $user, 'subject' => $subject]);
+    }  
+}
+
+function getIp() {
+    try {
+        $ip = GeoIp::getIp();
+        return $ip;
+    }
+    catch (Exception $e) {
+        ErrorLog::log("getIp (Obtiene la IP)", $e->getMessage(), []);
+    }  
+}
+
+function getCountryName() {
+    try {
+        $countryGeo = GeoIp::getCountryName();
+        return $countryGeo;
+    }
+    catch (Exception $e) {
+        ErrorLog::log("getCountryName (Obtiene el nombre del pais por geoIp de Cloudflare)", $e->getMessage(), []);
     }  
 }
 
 
 //MAIN
-$ip = GeoIp::getIp();
-$countryGeo = GeoIp::getCountryName();
+$ip = getIp();
+$countryGeo = getCountryName();
 isSubmitValid($ip);
 $user = setDataRequest($ip, $countryGeo);
 saveSubscriptionDoppler($user);
 saveSubscriptionDopplerTable($user);
 saveSubscriptionSpreadSheet($user);
 sendEmail($user, 'Agrega #EMMS2022 a tu calendario');
+
+
 
  

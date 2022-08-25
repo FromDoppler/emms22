@@ -3,7 +3,7 @@ class SecurityHelper {
 	
 	const CAPTCHA_TIME =  86400; // 60*60*24 seconds (24 hours)
 	const SUBMISSIONS_TIME = 86400; // 60*60*24 seconds (24 hours)
-	const ALLOWED_SUBMISSIONS = 3;
+	const ALLOWED_SUBMISSIONS = 75;
 	
 	private static $ip;
 	private static $memcached;
