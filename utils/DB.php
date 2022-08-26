@@ -172,7 +172,7 @@ class DB {
 			//insert
 			$fields = "(email, phase, register, firstname, lastname, country, phone, industry , company, ";
 			$fields .= "source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
-		
+
 			$values = array(
 				$subscription['email'],
 				$subscription['form_id'],
@@ -190,13 +190,13 @@ class DB {
 				$subscription['term_utm']
 			);
 			$this->query("INSERT INTO registered $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
-		}	
+        }
 	}
 
-	
+
     public function google_oauth_is_table_empty() {
         $result = $this->query("SELECT id FROM google_oauth WHERE provider = 'google'");
-        if ($result->num_rows) {
+        if ($result->numRows()) {
             return false;
         }
         return true;
@@ -222,7 +222,7 @@ class DB {
     }
 
 	/********DATA ABMS*************/
-	
+
 	public function getSpeakersByDay($day) {
         $sql = $this->query("SELECT * FROM speakers WHERE day = ".$day." order by orden");
         $result = $sql->fetchAll();
@@ -244,7 +244,7 @@ class DB {
         $result = $sql->fetchAll();
         return $result;
     }
-	
+
 	public function getAliadoProBySlug($slug) {
         $sql = $this->query("SELECT * FROM aliados_pro where slug='".$slug."'");
         $result = $sql->fetchAll();
@@ -256,4 +256,3 @@ class DB {
         return $result;
     }
 }
-?>
