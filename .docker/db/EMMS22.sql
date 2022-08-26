@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Aug 24, 2022 at 06:21 PM
+-- Generation Time: Aug 26, 2022 at 05:02 PM
 -- Server version: 8.0.29
 -- PHP Version: 8.0.19
 
@@ -72,10 +72,10 @@ CREATE TABLE `aliados_pro` (
   `image_youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `alt_image_youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `title_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description_magnet` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `link_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `title_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description_learnmore` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `link_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` enum('0','1') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -111,11 +111,11 @@ CREATE TABLE `aliados_starter` (
   `youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `image_youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `alt_image_youtube` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `title_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title_magnet` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `description_magnet` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `link_magnet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `title_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title_learnmore` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `description_learnmore` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `link_learnmore` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` enum('0','1') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -125,7 +125,8 @@ CREATE TABLE `aliados_starter` (
 --
 
 INSERT INTO `aliados_starter` (`id`, `name`, `image_home`, `alt_image_home`, `link_site`, `orden_home`, `title`, `description_card`, `slug`, `orden_card`, `description`, `image_landing`, `alt_image_landing`, `youtube`, `image_youtube`, `alt_image_youtube`, `title_magnet`, `description_magnet`, `link_magnet`, `title_learnmore`, `description_learnmore`, `link_learnmore`, `status`) VALUES
-(1, 'Superman', 'superman.jpg', 'superman classic', '', '1', 'Man of Steel', 'From Warner Bros. and Legendary Pictures comes ', 'superman', '2', '               From Warner Bros. and Legendary Pictures comes \"Man of Steel\", starring Henry Cavill, directed by Zach Snyder. The film also stars Amy Adams, Diane Lane, Kevin Costner, Michael Shannon, Russell Crowe, Antje Traue, Ayelet Zurer, Henry Lennix, Christopher Meloni and Laurence Fishburne.                                                        ', 'superman-white.png', 'superman white', 'T6DJcgm3wNY', '', '', 'title', '     descrip             2                             ', 'http://manofsteel.com', 'titulo', '     desc                                          ', 'http://manofsteel.com/index.php', NULL);
+(1, 'Superman', 'superman.jpg', 'superman classic', '', '1', 'Man of Steel', 'From Warner Bros. and Legendary Pictures comes ', 'superman', '2', '               From Warner Bros. and Legendary Pictures comes \"Man of Steel\", starring Henry Cavill, directed by Zach Snyder. The film also stars Amy Adams, Diane Lane, Kevin Costner, Michael Shannon, Russell Crowe, Antje Traue, Ayelet Zurer, Henry Lennix, Christopher Meloni and Laurence Fishburne.                                                        ', 'superman-white.png', 'superman white', 'RWnXuePjXAU', 'Man_of_Steel.webp', 'sups', 'title', ' descrip             2                             ', 'http://manofsteel.com', 'titulo', 'desc                                          ', 'http://manofsteel.com/index.php', NULL),
+(2, 'Federico', 'Henry_Cavill_by_Gage_Skidmore.jpg.webp', 'superman classic', 'https://www.dc.com/characters/batman', '1', 'titulo capsula', 'Batman (conocido inicialmente como Bat-Man', 'aaa', '2', 'descrpcion', 'download.jfif', 'batman white', '7EmboKQH8lM', '', '', '', '', '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -263,7 +264,9 @@ INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
 (115, 'google', '{\"access_token\":\"ya29.A0AVA9y1vZlKBcF76_CLwvwHptAWAWQccSS0Olss5DTgar6Nqt9QQ3Z6J6nOK2A-n_1C0ZgWnDbD0rCaBRR8Um4iFiRfT8bLV2ZiqlGhMXDM34FQmDixKsDhhAI26Qwredb0lEZVxx2Cv00VWMEsyw2_mLxJz9IpkYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4ZUxKNDBNbG5DZWlKTzFrRW1YYjY0QQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
 (116, 'google', '{\"access_token\":\"ya29.A0AVA9y1t9JZbT0HcbByB9_CYreo8VB8neUYlWiyus8wJgQhsWhCezbP7-ezrb62GHxj6TruYh4sK-V1TJZ9XzbP71IKwQbIuC5FrdjOFqwbKeD1s0VVe5kDTVo9vnNQXYmzAgXRZFzl9SxkBK8vM1WCZJyDs31JkYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4M3hkRU1ZUGJEcWpMX3JZcVFud3JWQQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
 (117, 'google', '{\"access_token\":\"ya29.A0AVA9y1vosUmkvPdhHs5U78ClvLffzCWqF5tqJEjcQwZokPSuvFS8PMJO0UgE0-2CCG7ffzQGlQk72WWYvGfBBjMJavdDpckCkWMxuxGJl7xN8IycLH9XW-GPRfxYNq05-E6iOQ1pvV_RlzO3KMRn4jrgzNhXOMoYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4bHZMei1Qd3VUUFZiODZLRWdmSTFzUQ0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(118, 'google', '{\"access_token\":\"ya29.A0AVA9y1vsJ2XRhgG2M7tSpJAXOcMCcpy65hAbHmNcgEy9Uk-_Xi9L07cKNdBCX4kA33L846szNkWonTUoSHJlN9UwNnVmdhp1W48L_ovmexQa0o4eeW4rKXdl1arfeAEMQbWVkk6W_sFOsczONveZLMrHit8YI1waCgYKATASATASFQE65dr8N-miVoORo4tgwDJsYDXSmA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
+(118, 'google', '{\"access_token\":\"ya29.A0AVA9y1vsJ2XRhgG2M7tSpJAXOcMCcpy65hAbHmNcgEy9Uk-_Xi9L07cKNdBCX4kA33L846szNkWonTUoSHJlN9UwNnVmdhp1W48L_ovmexQa0o4eeW4rKXdl1arfeAEMQbWVkk6W_sFOsczONveZLMrHit8YI1waCgYKATASATASFQE65dr8N-miVoORo4tgwDJsYDXSmA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(119, 'google', '{\"access_token\":\"ya29.a0AVA9y1vaarLRO08-Qnvm-8Q9rM88jxwFp3QFE_DIDzcYHSHq21OmUEKRt0vC3PwKO1oSIx5WvGJadQUFPYyGD7s5ifTLTkUPAI4ZmCMHZSzNl5Y9BXEdEmvWuKXaK34sMnVPw3ce0bqy7BTKl65Qtt_ttQI4PoUaCgYKATASAQASFQE65dr8Wptff4c97CMU3WZMLuHXlA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(120, 'google', '{\"access_token\":\"ya29.a0AVA9y1ukC3cXh4FPREY569Sf5wLVQ2JkA2Jh_EbKmavzut7jP-PcqU6CEWqjOEaHwaMSZXOmZYhrBH4eu1vqYvVhzSpjKKIWCvj4OBrqlEnYjazVB2G_m4_YG1YNOpvIpSxH-Tg-_Xkp84OCu9WIEDcibuFYtTUaCgYKATASAQASFQE65dr8upTWT8LR_7tOy3oV-TdGKw0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
 
 -- --------------------------------------------------------
 
@@ -419,13 +422,13 @@ ALTER TABLE `aliados_pro`
 -- AUTO_INCREMENT for table `aliados_starter`
 --
 ALTER TABLE `aliados_starter`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `google_oauth`
 --
 ALTER TABLE `google_oauth`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT for table `registered`
