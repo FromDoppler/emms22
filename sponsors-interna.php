@@ -33,13 +33,13 @@ $premium = $premium[0];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module">
-        import {
-            checkUserLoged
-        } from './html/<?= VERSION ?>/js/security.js'
-        const checkUser = checkUserLoged;
-		// checkUser()
-    </script>
+   <script type="module">
+		import {
+			checkUserNotLoged
+		} from './html/<?= VERSION ?>/js/security.js'
+		const checkUserNotLogedF = checkUserNotLoged;
+		checkUserNotLogedF()
+	</script>
     <?php
 	include_once('commonHeader.php');
 	?>

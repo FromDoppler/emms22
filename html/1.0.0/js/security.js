@@ -10,9 +10,11 @@ const getLoged = localStorage.getItem('registered');
 
 
 const checkUserNotLoged = function checkUserNotLoged() {
+
 	if (getLoged === null) {
 		window.location.href = getUrlWithParams('/index.php');
 	}
+
 }
 
 
