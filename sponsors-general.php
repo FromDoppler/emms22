@@ -40,7 +40,7 @@ require_once('utils/DB.php');
                 <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
                     <li><a href="./index.php" class="emms22__header__nav--btn-active nav-ini">inicio</a></li>
-                    <li><a href="./sponsors-general.php">contenido exclusivo</a></li>
+                    <li><a href="#contenido-exclusivo">contenido exclusivo</a></li>
                 </ul>
             </div>
         </nav>
@@ -59,6 +59,7 @@ require_once('utils/DB.php');
                 <div class="emms22__hero-pre-event__sponsors__text">
                     <p>Descubre los materiales que han preparado para ti nuestros Sponsors. Encontrarás conferencias, recursos descargables ¡y mucho más!</p>
                 </div>
+                <div id="contenido-exclusivo"></div>
             </div>
         </header>
 
@@ -78,7 +79,7 @@ require_once('utils/DB.php');
                                 <h4><?=$pro['title']?></h4>
                                 <p><?=$pro['description_card']?></p>
                                 <?php if(!empty($pro['slug'])) : ?>
-                                <a href="sponsors-interna.php?id=<?=$pro['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                                <a href="sponsors-interna.php?slug=<?=$pro['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
                                 <?php endif ?>
                             </div>
                         </div>
@@ -93,7 +94,7 @@ require_once('utils/DB.php');
                                 <h4><?=$starter['title']?></h4>
                                 <p><?=$starter['description_card']?></p>
                                 <?php if(!empty($starter['slug'])) : ?>
-                                <a href="sponsors-interna.php?id=<?=$starter['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                                <a href="sponsors-interna.php?slug=<?=$starter['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
                                 <?php endif ?>
                             </div>
                         </div>
@@ -233,7 +234,7 @@ require_once('utils/DB.php');
                             <li>Cursas a tu ritmo</li>
                             <li>Clases teóricas y prácticas</li>
                         </ul>
-                        <button class="emms22__button emms22__fade-in">INSCRÍBETE AHORA</button>
+                        <a href="https://academy.fromdoppler.com/bootcamp/" target="_blank" class="emms22__button emms22__fade-in">INSCRÍBETE AHORA</a>
                     </div>
                 </div>
             </div>

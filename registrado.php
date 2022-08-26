@@ -86,7 +86,7 @@ require_once('utils/DB.php');
 						<li>Descuentos de todo tipo</li>
 						<li>¡Y mucho más! </li>
 					</ul>
-					<button class="emms22__button emms22__fade-in">ACCEDE AHORA</button>
+					<a href="./sponsors-general.php" class="emms22__button emms22__fade-in" target="_blank">ACCEDE AHORA</a>
 				</div>
 				<div class="emms22__pre-event__registered-premium-content__image emms22__fade-in">
 					<img src="../html/<?= VERSION ?>/img/registered-content-premium.png" alt="Contenido Premium">
