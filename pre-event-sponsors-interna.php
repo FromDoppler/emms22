@@ -106,7 +106,7 @@ $premium = $premium[0];
 			</div>
 		</section>
 		<?php endif;?>
-		<?php if(!empty($premium['title_learn_more'])) : ?>
+		<?php if(!empty($premium['title_learnmore'])) : ?>
         <!-- Section Sponsors - Conoce más -->
         <section class="emms22__sponsors__interna emms22__sponsors__interna__wrapper__color">
 			<div class="emms22__container--editions--md emms22__fade-in">
