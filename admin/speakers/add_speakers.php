@@ -171,7 +171,7 @@ $sql_query="INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,
    <label for="time" class="form-label">Time:</label>
    </td>
     <td>
-    <input type="text" class="form-control" id="time" name="time" required placeholder="Time">
+    <input type="text" class="form-control" id="time" name="time" placeholder="Time">
     </td>
     </tr>
     <tr>
