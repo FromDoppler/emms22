@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     function checkTargetCountry({ countryName, countryCode }) {
-        const targetCountries = ['ARG', 'AR','BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'ES', 'GD', 'GF', 'GY', 'HN', 'HT', 'JM', 'MX', 'NI', 'PA', 'PE', 'PR', 'PY', 'SR', 'SV', 'UY', 'VE'];
+        const targetCountries = ['AR', 'BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'ES', 'GD', 'GF', 'GY', 'HN', 'HT', 'JM', 'MX', 'NI', 'PA', 'PE', 'PR', 'PY', 'SR', 'SV', 'UY', 'VE'];
         if (!targetCountries.includes(countryCode)) {
             eventDate = new Date(dateStr);
             return false;
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const flagContainers = document.querySelectorAll('.emms22__pre-event__calendar__date__country span');
         const version = document.getElementById("version").innerHTML;
         if (!target) {
-            countryCode = 'ARG';
+            countryCode = 'AR';
             countryName = 'Argentina';
         }
         const img = createImgElement(countryName, countryCode, version);
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         flagContainers.forEach(flagContainer => {
             flagContainer.innerHTML = '';
             flagContainer.appendChild(img);
-            flagContainer.innerHTML += '(' + countryCode + ') ' + hours + ':00';
+            flagContainer.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ') ' + hours + ':00';
         })
 
 
