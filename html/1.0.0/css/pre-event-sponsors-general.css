@@ -203,11 +203,11 @@
 
 .emms22__pre-event__sponsors__capsule-list__card {
     max-width: 350px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 4rem;
-    margin: 0 20px;
 }
 
 .emms22__pre-event__sponsors__capsule-list__card__logo img {

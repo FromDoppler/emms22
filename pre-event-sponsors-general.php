@@ -66,88 +66,11 @@ require_once('utils/DB.php');
 
         <section class="emms22__pre-event__sponsors">
             <div class="emms22__container--lg">
-                <div class="emms22__pre-event__sponsors__capsule-list emms22__fade-in emms22__show-dk main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "prevNextButtons": false }'>
-                    <div class="carousel-cell">
+                <div class="emms22__pre-event__sponsors__capsule-list emms22__fade-in">
                         <?php $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                         $pro_sponsors=$db->getAliadosPro('orden_card');
                         foreach($pro_sponsors as $pro) : ?>
                         <div class="emms22__pre-event__sponsors__capsule-list__card">
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                                <img src="/admin/aliados_pro/uploads/<?=$pro['image_home']?>" alt="<?=$pro['alt_image_home']?>">
-                            </div>
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                                <h4><?=$pro['title']?></h4>
-                                <p><?=$pro['description_card']?></p>
-                                <?php if(!empty($pro['slug'])) : ?>
-                                <a href="interna.php?id=<?=$pro['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                        <?php endforeach;?>
-                        <?php $starter_sponsors=$db->getAliadosStarter('orden_card');
-                        foreach($starter_sponsors as $starter) : ?>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card">
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                                <img src="/admin/aliados_starter/uploads/<?=$starter['image_home']?>" alt="<?=$starter['alt_image_home']?>">
-                            </div>
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                                <h4><?=$starter['title']?></h4>
-                                <p><?=$starter['description_card']?></p>
-                                <?php if(!empty($starter['slug'])) : ?>
-                                <a href="interna.php?id=<?=$starter['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                        <?php
-                        endforeach;
-
-                        $db->close();
-                        ?>
-                    </div>
-                    <div class="carousel-cell">
-                        <?php $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                        $pro_sponsors=$db->getAliadosPro('orden_card');
-                        foreach($pro_sponsors as $pro) : ?>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card carousel-cell">
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                                <img src="/admin/aliados_pro/uploads/<?=$pro['image_home']?>" alt="<?=$pro['alt_image_home']?>">
-                            </div>
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                                <h4><?=$pro['title']?></h4>
-                                <p><?=$pro['description_card']?></p>
-                                <?php if(!empty($pro['slug'])) : ?>
-                                <a href="interna.php?id=<?=$pro['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                        <?php endforeach;?>
-                        <?php $starter_sponsors=$db->getAliadosStarter('orden_card');
-                        foreach($starter_sponsors as $starter) : ?>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card">
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
-                                <img src="/admin/aliados_starter/uploads/<?=$starter['image_home']?>" alt="<?=$starter['alt_image_home']?>">
-                            </div>
-                            <div class="emms22__pre-event__sponsors__capsule-list__card__description">
-                                <h4><?=$starter['title']?></h4>
-                                <p><?=$starter['description_card']?></p>
-                                <?php if(!empty($starter['slug'])) : ?>
-                                <a href="interna.php?id=<?=$starter['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                        <?php
-                        endforeach;
-
-                        $db->close();
-                        ?>
-                    </div>
-                </div>
-
-                <div class="emms22__pre-event__sponsors__capsule-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "prevNextButtons": false }'>
-                        <?php $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                        $pro_sponsors=$db->getAliadosPro('orden_card');
-                        foreach($pro_sponsors as $pro) : ?>
-                        <div class="emms22__pre-event__sponsors__capsule-list__card carousel-cell">
                             <div class="emms22__pre-event__sponsors__capsule-list__card__logo">
                                 <img src="/admin/aliados_pro/uploads/<?=$pro['image_home']?>" alt="<?=$pro['alt_image_home']?>">
                             </div>
@@ -184,7 +107,7 @@ require_once('utils/DB.php');
         </section>
 
         <!-- Section conferences -->
-		<section class="emms22__pre-event__conferences">
+		<section class="emms22__pre-event__conferences emms22--none">
 			<div class="emms22__container--conferences--md emms22__fade-in">
 				<div class="emms22__conferences__wrapper">
 					<div class="emms22__conferences__content emms22__fade-in">
