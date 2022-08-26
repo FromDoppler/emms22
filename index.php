@@ -228,7 +228,7 @@ require_once('utils/DB.php');
 						<div class="emms22__pre-event__experiences__carousel__item__card">
 							<img src="../html/<?= VERSION ?>/img/speaker-experiences/speaker-purna-virji.png" alt="Tim Ash">
 							<h3>Purna Virji <span>Speaker en el EMMS 2018</span></h3>
-							<p>“<strong>¡Me ha encantado formar parte del EMMS!</strong>Nuevamente gracias por haberme tenido en consideración.”</p>
+							<p>“<strong>¡Me ha encantado formar parte del EMMS!</strong> Nuevamente gracias por haberme tenido en consideración.”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
