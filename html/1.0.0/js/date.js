@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     function checkTargetCountry({ countryName, countryCode }) {
-        console.log(countryCode)
-        const targetCountries = ['ARG', 'BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'ES', 'GD', 'GF', 'GY', 'HN', 'HT', 'JM', 'MX', 'NI', 'PA', 'PE', 'PR', 'PY', 'SR', 'SV', 'UY', 'VE'];
+        const targetCountries = ['ARG', 'AR','BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'ES', 'GD', 'GF', 'GY', 'HN', 'HT', 'JM', 'MX', 'NI', 'PA', 'PE', 'PR', 'PY', 'SR', 'SV', 'UY', 'VE'];
         if (!targetCountries.includes(countryCode)) {
             eventDate = new Date(dateStr);
             return false;

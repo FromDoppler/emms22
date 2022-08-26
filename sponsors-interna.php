@@ -57,7 +57,7 @@ $premium = $premium[0];
 		<nav class="emms22__header emms22__header__sponsors__interna emms22__header__sponsors__interna__logos">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__sponsors__interna__logos">
-					<a href="./index.php" >
+					<a href="./index.php" class="nav-ini">
                         <img class="lazyload emms22__header__sponsors__interna__logo__doppler" loading="lazy" data-src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022" />
                     </a>
 					<?php if(!empty($premium['link_site'])) : ?>

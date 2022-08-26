@@ -4,3 +4,10 @@
 	<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 	<script src="/html/<?= VERSION ?>/js/animations.js?version=<?= VERSION ?>"></script>
 	<script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utm.js?version=<?= VERSION ?>"></script>
+	<script type="module">
+	    import {
+	        changeRedirectLoged
+	    } from './html/<?= VERSION ?>/js/security.js'
+	    const changeNavIfLoged = changeRedirectLoged;
+	    changeNavIfLoged();
+	</script>
