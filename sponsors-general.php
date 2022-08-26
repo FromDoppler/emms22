@@ -11,12 +11,12 @@ require_once('utils/DB.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module">
-        import {
-            checkUserLoged
-        } from './html/<?= VERSION ?>/js/security.js'
-        const checkUser = checkUserLoged;
-		// checkUser()
-    </script>
+		import {
+			checkUserNotLoged
+		} from './html/<?= VERSION ?>/js/security.js'
+		const checkUserNotLogedF = checkUserNotLoged;
+		checkUserNotLogedF()
+	</script>
     <?php
 	include_once('commonHeader.php');
 	?>
@@ -40,7 +40,7 @@ require_once('utils/DB.php');
                 <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
                     <li><a href="./index.php" class="emms22__header__nav--btn-active">inicio</a></li>
-                    <li><a href="./pre-event-sponsors-general.php">contenido exclusivo</a></li>
+                    <li><a href="./sponsors-general.php">contenido exclusivo</a></li>
                 </ul>
             </div>
         </nav>
@@ -78,7 +78,7 @@ require_once('utils/DB.php');
                                 <h4><?=$pro['title']?></h4>
                                 <p><?=$pro['description_card']?></p>
                                 <?php if(!empty($pro['slug'])) : ?>
-                                <a href="interna.php?id=<?=$pro['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                                <a href="sponsors-interna.php?id=<?=$pro['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
                                 <?php endif ?>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ require_once('utils/DB.php');
                                 <h4><?=$starter['title']?></h4>
                                 <p><?=$starter['description_card']?></p>
                                 <?php if(!empty($starter['slug'])) : ?>
-                                <a href="interna.php?id=<?=$starter['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
+                                <a href="sponsors-interna.php?id=<?=$starter['slug']?>" target="_blank" rel="noopener noreferrer">¡No te lo pierdas!</a>
                                 <?php endif ?>
                             </div>
                         </div>
