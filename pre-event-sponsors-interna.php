@@ -9,7 +9,7 @@ if(!isset($_GET['slug']) or (trim($_GET['slug'])==='')) {
 }
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $premium = $db->getAliadoProBySlug($_GET['slug']);
-if(count($premium) === 0) : 
+if(count($premium) === 0) :
 	$premium = $db->getAliadoStarterBySlug($_GET['slug']);
 	if(count($premium) === 0) {
 		header("HTTP/1.0 404 Not Found");
@@ -62,11 +62,11 @@ $premium = $premium[0];
                     </a>
 					<?php if(!empty($premium['link_site'])) : ?>
                     <a href="<?=$premium['link_site']?>" target="_blank" >
-					<?php endif;?>	
+					<?php endif;?>
 						<img class="lazyload emms22__header__sponsors__interna__logo__sponsor" loading="lazy" data-src="/admin/<?=$source?>/uploads/<?=$premium['image_landing']?>" alt="<?=$premium['alt_image_landing']?>" />
-                	<?php if(!empty($premium['link_site'])) : ?>    
+                	<?php if(!empty($premium['link_site'])) : ?>
 					</a>
-					<?php endif;?>	
+					<?php endif;?>
 				</div>
 			</div>
 		</nav>
@@ -79,14 +79,16 @@ $premium = $premium[0];
 				</div>
 				<div class="emms22__hero__content__sponsors__interna__video emms22__fade-in">
 				<?php if(!empty($premium['youtube'])) :  ?>
-					<iframe width="420" height="315"
-						src="https://www.youtube.com/embed/<?=$premium['youtube']?>">
-					</iframe>
+                    <div class="cropper-cont-16-9">
+                        <div class="cropper-cont ">
+                            <div class="cropper-cont-interno">
+                                <iframe src="https://www.youtube.com/embed/<?=$premium['youtube']?>"></iframe>
+                            </div>
+                        </div>
+                    </div>
 				<?php else : ?>
 					<img src="/admin/<?=$source?>/uploads/<?=$premium['image_youtube']?>" alt="<?=$premium['alt_image_youtube']?>" />
-
-   				<?php endif; ?>   
-
+   				<?php endif; ?>
 				</div>
 			</div>
 		</section>
@@ -120,7 +122,7 @@ $premium = $premium[0];
 				</div>
 			</div>
 		</section>
-		<?php endif;?>		
+		<?php endif;?>
 
 		<footer class="emms22__footer">
 			<div class="emms22__footer__event emms22__fade-in">
