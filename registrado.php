@@ -95,7 +95,7 @@ require_once('utils/DB.php');
             <div id="agenda"></div>
 		</div>
 
-
+        <span id="version" class="emms22--vh"><?= VERSION ?></span>
 		<!-- Calendar -->
 
 		<?php include_once('commonCalendar.php') ?>
