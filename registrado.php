@@ -164,6 +164,7 @@ require_once('utils/DB.php');
 	<?php
 	}
 	?>
+    <script src="./html/<?= VERSION ?>/js/date.js?version=<?= VERSION ?>"></script>
 
 </body>
 
