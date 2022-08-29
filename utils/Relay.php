@@ -2,7 +2,7 @@
 class Relay {
     private static $apiKey;
     private static $account;
- 
+
     private const urlBase = 'https://api.dopplerrelay.com/accounts/';
     private const fromName = 'EMMS 2022';
     private const fromEmail = 'info@goemms.com';
@@ -28,8 +28,9 @@ class Relay {
     }
 
     public static function sendEmailRegister($user, $subject) {
-        
-        $html = ($user['form_id'] === 'landing') ? self::templateEmailLanding() : '';
+
+        //$html = ($user['form_id'] === 'landing') ? self::templateEmailLanding() : '';
+        $html =  self::templateEmailLanding();
         $data = array(
             'from_name' => self::fromName,
             'from_email' => self::fromEmail,
