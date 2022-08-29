@@ -5,7 +5,7 @@
             <h3><strong>MIÉRCOLES</strong> 9 DE NOVIEMBRE</h3>
             <div class="emms22__pre-event__calendar__date__country">
                 <span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
-                <a href="">Mira el horario de tu país</a>
+                <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
             </div>
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
@@ -48,7 +48,7 @@
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
                         <span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)p.m</span>
-                        <a href="">Mira el horario de tu país</a>
+                        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
 
@@ -92,7 +92,7 @@
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
                         <span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)  p.m</span>
-                        <a href="">Mira el horario de tu país</a>
+                        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
             <?php endforeach; ?>
@@ -102,7 +102,7 @@
             <h3><strong>JUEVES</strong> 10 DE NOVIEMBRE</h3>
             <div class="emms22__pre-event__calendar__date__country">
                 <span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
-                <a href="">Mira el horario de tu país</a>
+                <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
             </div>
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
@@ -143,7 +143,7 @@
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
                         <span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)  p.m</span>
-                        <a href="">Mira el horario de tu país</a>
+                        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
 
@@ -186,7 +186,7 @@
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
                         <span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)  p.m</span>
-                        <a href="">Mira el horario de tu país</a>
+                        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
             <?php endforeach; ?>
