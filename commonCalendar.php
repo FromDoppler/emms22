@@ -25,16 +25,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -69,16 +69,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -120,16 +120,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -163,16 +163,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt=""></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
