@@ -36,7 +36,7 @@ require_once('utils/DB.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href="./index.php"><img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./index.php" class="nav-ini"><img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
