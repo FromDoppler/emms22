@@ -255,4 +255,13 @@ class DB {
         $result = $sql->fetchAll();
         return $result;
     }
+
+    /******* log errors */
+    public function getLogErrors()
+    {
+        $sql = $this->query("SELECT * FROM log_errors order by id DESC");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
 }
