@@ -46,7 +46,7 @@ $errors = $db->getLogErrors();
                             <td style="width: 200px;"><?= $error['date'] ?></td>
                             <td style="width: 300px;"><?= $error['function_name'] ?></td>
                             <td><?= $error['description'] ?></td>
-                            <td><? print_r(json_decode($error['data'])) ?></td>
+                            <td><?php print_r(json_decode($error['data'])) ?></td>
 
                         </tr>
                     <?php endforeach ?>
