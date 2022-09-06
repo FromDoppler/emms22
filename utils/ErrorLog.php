@@ -22,7 +22,7 @@ class ErrorLog {
     {
         $text = "\n\tMetodo: " . $from . "\n\tDescripcion: " . $error . "\n\tData: " . json_encode($data) . "\n";
         error_log($text);
-        self::saveErrorDataBase($from, $error, json_encode($data));
+        self::saveErrorDataBase($from, addslashes($error), addslashes(json_encode($data)));
         if(self::debugger)
             print_r($text);
     }
