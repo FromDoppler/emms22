@@ -62,7 +62,7 @@ require_once('utils/DB.php');
 			<div class="emms22__container--lg">
 				<div class="emms22__hero-pre-event__intro">
 					<div class="emms22__hero-pre-event__intro__info">
-						<p>EVENTO ONLINE Y GRATUITO - 9 Y 10 DE NOVIEMBRE</p>
+						<p>EVENTO ONLINE Y GRATUITO - DEL 8 AL 10 DE NOVIEMBRE</p>
 						<h1>&iexcl;Vuelve el EMMS!</h1>
 						<ul>
 							<li>EL FUTURO DEL MARKETING DIGITAL</li>
@@ -266,7 +266,7 @@ require_once('utils/DB.php');
 			<div class="emms22__container--lg">
 				<h2 class="emms22__fade-in">Estos son nuestros aliados</h2>
 				<div class="emms22__pre-event__allies__group">
-					<h3 class="emms22__fade-in">SPONSORS PRO</h3>
+					<h3 class="emms22__fade-in">SPONSORS</h3>
 					<ul class="emms22__fade-in">
 					<?php $pro_sponsors = $db->getAliadosPro('orden_home');
 						foreach($pro_sponsors as $pro ) : ?>
@@ -283,24 +283,7 @@ require_once('utils/DB.php');
 						<?php endforeach;?>
 					</ul>
 				</div>
-				<div class="emms22__pre-event__allies__group">
-					<h3 class="emms22__fade-in">SPONSORS STARTER</h3>
-					<ul class="emms22__fade-in">
-				<?php $starter_sponsors = $db->getAliadosStarter('orden_home');
-						foreach($starter_sponsors as $starter ) : ?>
-						<li>
-							<?php if($starter['link_site']) :?>
-								<a href="<?=$starter['link_site']?>"  target="_blank">
-							<?php endif?>
-							<img src="/admin/aliados_starter/uploads/<?=$starter['image_home']?>" alt="<?=$starter['alt_image_home']?>">
-							<?php if($starter['link_site']) :?>
-								</a>
-							<?php endif?>
-						</li>
 
-						<?php endforeach;?>
-					</ul>
-				</div>
 				<div class="emms22__pre-event__allies__group">
 					<h3 class="emms22__fade-in">MEDIA PARTNERS</h3>
 					<ul class="emms22__fade-in">

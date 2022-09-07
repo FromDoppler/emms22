@@ -663,6 +663,10 @@
     .emms22__hero-pre-event__registered{
         padding: 200px 0 100px 0;
     }
+
+    .emms22__hero-pre-event__registered a.addeventatc{
+        margin: 0 4px;
+    }
 }
 
 @media(max-width:620px){
@@ -691,7 +695,8 @@
         display: block;
     }
 
-    .emms22__hero-pre-event__registered a.addeventatc:nth-child(1){
+    .emms22__hero-pre-event__registered a.addeventatc:nth-child(1),
+    .emms22__hero-pre-event__registered a.addeventatc:nth-child(2){
         margin: 0 auto 33px auto;
     }
 
