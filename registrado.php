@@ -64,8 +64,9 @@ require_once('utils/DB.php');
 					<p>Agrega el evento a tu calendario para no perderlo de vista :)</p>
 				</div>
 				<div class="emms22__hero-pre-event__registered__btn-calendar">
-					<a title="Add to Calendar" class="emms22__button addeventatc" data-id="iS14401775" rel="noopener" href="https://www.addevent.com/event/iS14401775" target="_blank">EMMS DÍA 1</a>
-					<a title="Add to Calendar" class="emms22__button addeventatc" data-id="pl14402520" rel="noopener" href="https://www.addevent.com/event/pl14402520" target="_blank">EMMS DÍA 2</a>
+                    <a title="Add to Calendar" class="emms22__button addeventatc" data-id="iI14884549" rel="noopener" href="https://www.addevent.com/event/iI14884549" target="_blank">EMMS DÍA 1</a>
+					<a title="Add to Calendar" class="emms22__button addeventatc" data-id="iS14401775" rel="noopener" href="https://www.addevent.com/event/iS14401775" target="_blank">EMMS DÍA 2</a>
+					<a title="Add to Calendar" class="emms22__button addeventatc" data-id="pl14402520" rel="noopener" href="https://www.addevent.com/event/pl14402520" target="_blank">EMMS DÍA 3</a>
 				</div>
 			</div>
             <div id="contenido-exclusivo"></div>
