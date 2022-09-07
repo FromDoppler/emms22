@@ -26,7 +26,7 @@ $errors = $db->getLogErrors();
 
 <body>
     <div class="row">
-        <h2>Listado errores</h2><br /></br>
+        <h2>Last 100 errors</h2><br /></br>
     </div>
     <div class="container-xxl d-flex align-items-md-center">
 
@@ -34,6 +34,7 @@ $errors = $db->getLogErrors();
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
+                        <th scope="col">#</th>
                         <th scope="col">Date</th>
                         <th scope="col">Function</th>
                         <th scope="col">Description</th>
@@ -41,8 +42,11 @@ $errors = $db->getLogErrors();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($errors as $error) : ?>
+                    <?php
+                    $count = 1;
+                    foreach ($errors as $error) : ?>
                         <tr>
+                            <td><?= $count++ ?></td>
                             <td style="width: 200px;"><?= $error['date'] ?></td>
                             <td style="width: 300px;"><?= $error['function_name'] ?></td>
                             <td><?= $error['description'] ?></td>

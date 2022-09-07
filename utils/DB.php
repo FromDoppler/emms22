@@ -259,7 +259,7 @@ class DB {
     /******* log errors */
     public function getLogErrors()
     {
-        $sql = $this->query("SELECT * FROM log_errors order by id DESC");
+        $sql = $this->query("SELECT * FROM log_errors order by id DESC LIMIT 100");
         $result = $sql->fetchAll();
         return $result;
     }
