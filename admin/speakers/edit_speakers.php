@@ -223,7 +223,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <select name="day" class="form-select">
                                     <option <?= ($fetched_row['day'] === '1') ? 'selected ' : '' ?>value="1">Martes</option>
                                     <option <?= ($fetched_row['day'] === '2') ? 'selected ' : '' ?>value="2">Miercoles</option>
-                                    <option <?= ($fetched_row['day'] === '3') ? 'selected ' : '' ?>value="2">Jueves</option>
+                                    <option <?= ($fetched_row['day'] === '3') ? 'selected ' : '' ?>value="3">Jueves</option>
                                 </select>
                             </td>
                         </tr>
