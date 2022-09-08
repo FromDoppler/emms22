@@ -205,7 +205,7 @@
                         <tr>
                           <td align="center" valign="middle" class="container"
                             style=" font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 21px;font-weight: 400;">
-                            <span style="color:#333333;">EMMS - 9 y 10 de Noviembre</span>
+                            <span style="color:#333333;">EMMS - DEL 8 AL 10 DE NOVIEMBRE</span>
                           </td>
                         </tr>
                         <tr>
@@ -272,7 +272,7 @@
                                   <td align="center" width="152" height="51" bgcolor="#33AD73"
                                     style="-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #FFFFFF; display: block;"
                                     class="button--td cta--width">
-                                    <a href="https://www.addevent.com/event/iS14401775"
+                                    <a href="https://www.addevent.com/event/iI14884549"
                                       style="font-size: 14px; font-weight: bold; font-family: sans-serif; text-decoration: none; line-height: 50px; width: 100%; display: inline-block;"
                                       target="_blank">
                                       <span style="color: #FFFFFF;"> EMMS DÍA 1 </span>
@@ -283,7 +283,23 @@
                             </table>
                           </th>
                           <th width="170" align="center" valign="top" class="mobile mobile-pt">
-
+                            <table cellspacing="0" cellpadding="0">
+                              <tbody>
+                                <tr>
+                                  <td align="center" width="152" height="51" bgcolor="#33AD73"
+                                    style="-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #FFFFFF; display: block;"
+                                    class="button--td cta--width">
+                                    <a href="https://www.addevent.com/event/iS14401775"
+                                      style="font-size: 14px; font-weight: bold; font-family: sans-serif; text-decoration: none; line-height: 50px; width: 100%; display: inline-block;"
+                                      target="_blank">
+                                      <span style="color: #FFFFFF;"> EMMS DÍA 2 </span>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </th>
+                          <th width="170" align="center" valign="top" class="mobile mobile-pt">
                             <table cellspacing="0" cellpadding="0">
                               <tbody>
                                 <tr>
@@ -293,7 +309,7 @@
                                     <a href="https://www.addevent.com/event/pl14402520"
                                       style="font-size: 14px; font-weight: bold; font-family: sans-serif; text-decoration: none; line-height: 50px; width: 100%; display: inline-block;"
                                       target="_blank">
-                                      <span style="color: #FFFFFF;"> EMMS DÍA 2 </span>
+                                      <span style="color: #FFFFFF;"> EMMS DÍA 3 </span>
                                     </a>
                                   </td>
                                 </tr>
