@@ -2,7 +2,7 @@
     <div class="emms22__container--lg">
         <h2 class="emms22__fade-in">Descubre la agenda del EMMS 2022</h2>
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
-            <h3><strong>Martes</strong> 8 DE NOVIEMBRE</h3>
+            <h3><strong>MARTES</strong> 8 DE NOVIEMBRE</h3>
             <div class="emms22__pre-event__calendar__date__country">
                 <span><img src="../html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
                 <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
