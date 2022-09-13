@@ -8,7 +8,9 @@
     <title>Settings</title>
     <meta name="robots" content="noindex, nofollow">
     <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
 </head>
 
@@ -27,7 +29,37 @@
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    formulario fase
+                    <fieldset>
+                        <legend class="mb-10">Fases</legend>
+                        <div id="alert-success" class="alert alert-success d-none">
+                            <strong>Success!</strong> Fase Updated .
+                        </div>
+                        <div id="alert-danger" class="alert alert-danger d-none">
+                            <strong>Danger!</strong> Error.
+                        </div>
+                        <form id="current_phase">
+                            <div class=" form-check mt-5">
+                                <input class="form-check-input" type="radio" name="phase" id="pre">
+                                <label class="form-check-label" for="pre">
+                                    PRE
+                                </label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="phase" id="during">
+                                <label class="form-check-label" for="during">
+                                    DURING
+                                </label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="phase" id="post">
+                                <label class="form-check-label" for="post">
+                                    POST
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                        </form>
+                        <fieldset>
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     Simulador

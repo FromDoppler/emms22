@@ -256,6 +256,14 @@ class DB {
         return $result;
     }
 
+    public function updateCurrentPhase($phase)
+    {
+        $phases = array("pre" => 0, "during" => 0, "post" => 0);
+        $phases[$phase] = 1;
+
+        $this->query("UPDATE settings_phase SET pre =" . $phases['pre'] . ", during =" . $phases['during'] . ", post=" . $phases['post'] . " where 1=1");
+    }
+
     /******* log errors */
     public function getLogErrors()
     {
