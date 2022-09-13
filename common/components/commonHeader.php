@@ -31,7 +31,9 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="html/<?= VERSION ?>/img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="html/<?= VERSION ?>/img/favicon-16x16.png">
 
-	<link rel="stylesheet" href="../html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
+	<link rel="stylesheet" href="./stages/pre/html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
+    <link rel="stylesheet" href="./stages/during/html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
+    <link rel="stylesheet" href="./stages/post/html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
 
 	<!-- Font Proxima Nova -->
 	<link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />

@@ -1,6 +1,6 @@
 <?php
-require_once('config.php');
-require_once('utils/DB.php');
+require_once('././config.php');
+require_once('././utils/DB.php');
 
 if(!isset($_GET['slug']) or (trim($_GET['slug'])==='')) {
  	header("HTTP/1.0 404 Not Found");
@@ -41,7 +41,7 @@ $premium = $premium[0];
 		checkUserNotLogedF()
 	</script>
     <?php
-	include_once('commonHeader.php');
+	include_once('././common/components/commonHeader.php');
 	?>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
@@ -145,7 +145,7 @@ $premium = $premium[0];
 	</main>
 
 
-	<?php include_once('commonFooter.php') ?>
+	<?php include_once('././common/components/commonFooter.php') ?>
     <script type="module" src="./html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
     <?php
 	if (!(PRODUCTION)) {

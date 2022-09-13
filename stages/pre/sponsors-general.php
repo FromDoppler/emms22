@@ -1,6 +1,6 @@
 <?php
-require_once('config.php');
-require_once('utils/DB.php');
+require_once('././config.php');
+require_once('././utils/DB.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +13,12 @@ require_once('utils/DB.php');
     <script type="module">
 		import {
 			checkUserNotLoged
-		} from './html/<?= VERSION ?>/js/security.js'
+		} from './../html/<?= VERSION ?>/js/security.js'
 		const checkUserNotLogedF = checkUserNotLoged;
 		checkUserNotLogedF()
 	</script>
     <?php
-	include_once('commonHeader.php');
+	include_once('././common/components/commonHeader.php');
 	?>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
@@ -35,7 +35,7 @@ require_once('utils/DB.php');
         <nav class="emms22__header">
             <div class="emms22__container--lg emms22__fade-in">
                 <div class="emms22__header__logo">
-                    <a href="./index.php" class="nav-ini"><img src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+                    <a href="./index.php" class="nav-ini"><img src="/stages/pre/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
                 </div>
                 <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -49,8 +49,8 @@ require_once('utils/DB.php');
 
         <header class="emms22__hero-pre-event">
             <div class="emms22__hero-pre-event__back">
-                <video class="lazy" loop muted autoplay playsinline poster="../html/<?= VERSION ?>/img/thumb.png">
-                    <source data-src="../html/<?= VERSION ?>/img/video-background-compress.mp4" type="video/mp4">
+                <video class="lazy" loop muted autoplay playsinline poster="/stages/pre/html/<?= VERSION ?>/img/thumb.png">
+                    <source data-src="/stages/pre/html/<?= VERSION ?>/img/video-background-compress.mp4" type="video/mp4">
                 </video>
             </div>
 
@@ -213,7 +213,7 @@ require_once('utils/DB.php');
         <section class="emms22__pre-event__doppler">
             <div class="emms22__container--lg">
                 <div class="emms22__pre-event__doppler__title">
-                    <h2 class="emms22__fade-in">SOMOS <img src="../html/<?= VERSION ?>/img/logo-doppler-black.svg"
+                    <h2 class="emms22__fade-in">SOMOS <img src="/stages/pre/html/<?= VERSION ?>/img/logo-doppler-black.svg"
                             alt="Doppler"></h2>
                     <h3 class="emms22__fade-in">La herramienta líder en Marketing Automation en español.</h3>
                     <p class="emms22__fade-in">Desde hace 15 años organizamos el EMMS y formamos a profesionales de
@@ -222,7 +222,7 @@ require_once('utils/DB.php');
                 </div>
                 <div class="emms22__pre-event__doppler__description">
                     <div class="emms22__pre-event__doppler__description__image emms22__fade-in">
-                        <img src="../html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
+                        <img src="/stages/pre/html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
                     </div>
                     <div class="emms22__pre-event__doppler__description__text emms22__fade-in">
                         <h4><strong>¿Quieres capacitarte gratis?</strong> ¡Esto te va a interesar! </h4>
@@ -279,7 +279,7 @@ require_once('utils/DB.php');
 
 
 
-    <?php include_once('commonFooter.php') ?>
+    <?php include_once('././common/components/commonFooter.php') ?>
     <script type="module" src="./html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
     <?php
 	if (!(PRODUCTION)) {
