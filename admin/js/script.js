@@ -50,17 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(resp => resp.json())
             .then(resp => {
-                const phases = resp[0];
-                if (phases.pre) {
-                    document.getElementById('pre').checked = true;
-                }
-                if (phases.during) {
-                    document.getElementById('during').checked = true;
-                }
-                if (phases.post) {
-                    document.getElementById('post').checked = true;
-                }
-
+                const phase = resp;
+                document.getElementById(phase).checked = true;
             })
             .catch((error) => {
                 // Tenemos la respuesta de errores
@@ -68,6 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
             });
     }
-
-
 });
