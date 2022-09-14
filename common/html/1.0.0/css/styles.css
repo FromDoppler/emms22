@@ -1,9 +1,15 @@
+/* Common */
+
 @import "constants.css";
 @import "header.css";
-@import "home.css";
-@import "editions.css";
 @import "footer.css";
 @import "404.css";
+
+
+/* Pre */
+
+@import "home.css";
+@import "editions.css";
 @import "forms-style.css";
 @import "pre-event.css";
 @import "pre-event-sponsors-general.css";

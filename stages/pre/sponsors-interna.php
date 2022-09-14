@@ -4,7 +4,7 @@ require_once('././utils/DB.php');
 
 if(!isset($_GET['slug']) or (trim($_GET['slug'])==='')) {
  	header("HTTP/1.0 404 Not Found");
-	include '404.php';
+	include '././common/components/404.php';
 	exit;
 }
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -13,7 +13,7 @@ if(count($premium) === 0) :
 	$premium = $db->getAliadoStarterBySlug($_GET['slug']);
 	if(count($premium) === 0) {
 		header("HTTP/1.0 404 Not Found");
-		include '404.php';
+		include '././common/components/404.php';
 		exit;
 	}
 	else{
@@ -58,7 +58,7 @@ $premium = $premium[0];
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__sponsors__interna__logos">
 					<a href="./index.php" class="nav-ini">
-                        <img class="lazyload emms22__header__sponsors__interna__logo__doppler" loading="lazy" data-src="../html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022" />
+                        <img class="lazyload emms22__header__sponsors__interna__logo__doppler" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022" />
                     </a>
 					<?php if(!empty($premium['link_site'])) : ?>
                     <a href="<?=$premium['link_site']?>" target="_blank" >
@@ -126,15 +126,15 @@ $premium = $premium[0];
 
 		<footer class="emms22__footer">
 			<div class="emms22__footer__event emms22__fade-in">
-				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="./html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
 			</div>
 			<div class="emms22__footer__social emms22__fade-in">
 				<ul>
-					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
-					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
-					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a></li>
-					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-linkedin.svg" alt="Linkedin"></a></li>
-					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
+					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
+					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
+					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a></li>
+					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-linkedin.svg" alt="Linkedin"></a></li>
+					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
 				</ul>
 			</div>
 			<div class="emms22__footer__actions emms22__fade-in">

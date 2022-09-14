@@ -35,7 +35,7 @@ require_once('././utils/DB.php');
         <nav class="emms22__header">
             <div class="emms22__container--lg emms22__fade-in">
                 <div class="emms22__header__logo">
-                    <a href="./index.php" class="nav-ini"><img src="/stages/pre/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+                    <a href="./index.php" class="nav-ini"><img src="../../common/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
                 </div>
                 <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -49,8 +49,8 @@ require_once('././utils/DB.php');
 
         <header class="emms22__hero-pre-event">
             <div class="emms22__hero-pre-event__back">
-                <video class="lazy" loop muted autoplay playsinline poster="/stages/pre/html/<?= VERSION ?>/img/thumb.png">
-                    <source data-src="/stages/pre/html/<?= VERSION ?>/img/video-background-compress.mp4" type="video/mp4">
+                <video class="lazy" loop muted autoplay playsinline poster="../../common/html/<?= VERSION ?>/img/thumb.png">
+                    <source data-src="../../common/html/<?= VERSION ?>/img/video-background-compress.mp4" type="video/mp4">
                 </video>
             </div>
 
@@ -213,7 +213,7 @@ require_once('././utils/DB.php');
         <section class="emms22__pre-event__doppler">
             <div class="emms22__container--lg">
                 <div class="emms22__pre-event__doppler__title">
-                    <h2 class="emms22__fade-in">SOMOS <img src="/stages/pre/html/<?= VERSION ?>/img/logo-doppler-black.svg"
+                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/<?= VERSION ?>/img/logo-doppler-black.svg"
                             alt="Doppler"></h2>
                     <h3 class="emms22__fade-in">La herramienta líder en Marketing Automation en español.</h3>
                     <p class="emms22__fade-in">Desde hace 15 años organizamos el EMMS y formamos a profesionales de
@@ -222,7 +222,7 @@ require_once('././utils/DB.php');
                 </div>
                 <div class="emms22__pre-event__doppler__description">
                     <div class="emms22__pre-event__doppler__description__image emms22__fade-in">
-                        <img src="/stages/pre/html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
+                        <img src="../../common/html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
                     </div>
                     <div class="emms22__pre-event__doppler__description__text emms22__fade-in">
                         <h4><strong>¿Quieres capacitarte gratis?</strong> ¡Esto te va a interesar! </h4>
@@ -247,24 +247,24 @@ require_once('././utils/DB.php');
             <div class="emms22__footer__event emms22__fade-in">
                 <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/"
                         target="_blank"><img class="lazyload" loading="lazy"
-                            data-src="./html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+                            data-src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
             </div>
             <div class="emms22__footer__social emms22__fade-in">
                 <ul>
                     <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-instagram.svg"
+                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-instagram.svg"
                                 alt="Instagram"></a></li>
                     <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-facebook.svg"
+                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-facebook.svg"
                                 alt="Facebook"></a></li>
                     <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a>
+                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a>
                     </li>
                     <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="./html/<?= VERSION ?>/img/icono-linkedin.svg"
+                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-linkedin.svg"
                                 alt="LinkedIn"></a></li>
                     <li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy"
-                                data-src="./html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
+                                data-src="../../common/html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
                 </ul>
             </div>
             <div class="emms22__footer__actions emms22__fade-in">
