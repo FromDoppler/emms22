@@ -89,6 +89,12 @@ if (isset($_GET['view_id'])) {
                 </tr>
                 <tr>
                     <td>
+                        <label for="bio" class="form-label">Bio:</label>
+                    </td>
+                    <th colspan="5"> <?php echo $fetched_row['bio'] ?></th>
+                </tr>
+                <tr>
+                    <td>
                         <label for="image_company" class="form-label">Imagen Company:</label>
                     </td>
                     <th colspan="5"> <img src="uploads/<?= $fetched_row['image_company'] ?>" alt="<?= $fetched_row['alt_image_company'] ?>" width="70" height="70"></th>

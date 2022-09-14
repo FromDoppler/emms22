@@ -20,6 +20,7 @@ if (isset($_POST['btn-save'])) {
     $sm_instagram = $_POST['sm_instagram'];
     $sm_facebook = $_POST['sm_facebook'];
     $description = $_POST['description'];
+    $bio = $_POST['bio'];
     $image_company =  $_FILES["image_company"]["name"];
     $file_name = $_FILES["image_company"]["name"];
     $file_tmp = $_FILES["image_company"]["tmp_name"];
@@ -34,7 +35,7 @@ if (isset($_POST['btn-save'])) {
 
     // sql query for inserting data into database
 
-    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`image_company`,`alt_image_company`,`time`,`orden`,`day`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $orden . "','" . $day . "')";
+    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`orden`,`day`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $orden . "','" . $day . "')";
     // sql query for inserting data into database
 
     // sql query execution function
@@ -150,6 +151,14 @@ if (isset($_POST['btn-save'])) {
                             </td>
                             <td>
                                 <textarea id="description" name="description" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="bio" class="form-label">Bio:</label>
+                            </td>
+                            <td>
+                                <textarea id="bio" name="bio" required></textarea>
                             </td>
                         </tr>
                         <tr>
