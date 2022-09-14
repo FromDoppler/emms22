@@ -39,6 +39,8 @@ if (isset($_POST['btn-update'])) {
 
     $description = $_POST['description'];
 
+    $bio = $_POST['bio'];
+
     if ($_FILES["image_company"]["name"] == '') {
         $image_company =  $fetched_row['image_company'];
     } else {
@@ -60,7 +62,7 @@ if (isset($_POST['btn-update'])) {
     // variables for input data
 
     // sql query for update data into database
-    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`orden`='$orden',`day`='$day' WHERE id=" . $_GET['edit_id'];
+    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`orden`='$orden',`day`='$day' WHERE id=" . $_GET['edit_id'];
 
     // sql query for update data into database
 
@@ -185,6 +187,14 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <textarea class="form-control" id="description" name="description"><?= $fetched_row['description'] ?></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="bio" class="form-label">Bio:</label>
+                            </td>
+                            <td>
+                                <textarea class="form-control" id="bio" name="bio"><?= $fetched_row['bio'] ?></textarea>
                             </td>
                         </tr>
                         <tr>
