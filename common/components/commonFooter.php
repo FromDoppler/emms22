@@ -7,7 +7,7 @@
 	<script type="module">
 	    import {
 	        changeRedirectLoged
-	    } from '../html/<?= VERSION ?>/js/security.js'
+	    } from '/common/html/<?= VERSION ?>/js/security.js'
 	    const changeNavIfLoged = changeRedirectLoged;
 	    changeNavIfLoged();
 	</script>

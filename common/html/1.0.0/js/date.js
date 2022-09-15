@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createImgElement(countryName, countryCode, version) {
         const img = document.createElement("img");
-        img.src = `../html/${version}/img/flags/${countryCode}.png`;
+        img.src = `common/html/${version}/img/flags/${countryCode}.png`;
         img.alt = countryName;
         img.title = countryName;
 

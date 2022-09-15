@@ -27,14 +27,10 @@
 	<link hreflang="x-default" href="https://goemms.com/" rel="alternate" />
 	<link hreflang="es-ar" href="https://goemms.com/" rel="alternate" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="html/<?= VERSION ?>/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="html/<?= VERSION ?>/img/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="html/<?= VERSION ?>/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../html/<?= VERSION ?>/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../html/<?= VERSION ?>/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../html/<?= VERSION ?>/img/favicon-16x16.png">
 
-<!-- 	<link rel="stylesheet" href="./stages/pre/html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
-    <link rel="stylesheet" href="./stages/during/html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
-    <link rel="stylesheet" href="./stages/post/html/<?= VERSION ?>/css/styles.css?version=<?= VERSION ?>">
- -->
     <link rel="stylesheet" href="common/html/<?= VERSION ?>/css/styles.css">
 
 	<!-- Font Proxima Nova -->

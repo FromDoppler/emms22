@@ -146,11 +146,11 @@ $premium = $premium[0];
 
 
 	<?php include_once('././common/components/commonFooter.php') ?>
-    <script type="module" src="./html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
+    <script type="module" src="../../common/html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
     <?php
 	if (!(PRODUCTION)) {
 	?>
-    <script type="module" src="./html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
+    <script type="module" src="../../common/html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
     <?php
 	}
 	?>
