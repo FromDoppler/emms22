@@ -13,7 +13,7 @@ require_once('././utils/DB.php');
     <script type="module">
 		import {
 			checkUserNotLoged
-		} from './../html/<?= VERSION ?>/js/security.js'
+		} from '../../common/html/<?= VERSION ?>/js/security.js'
 		const checkUserNotLogedF = checkUserNotLoged;
 		checkUserNotLogedF()
 	</script>
@@ -280,11 +280,11 @@ require_once('././utils/DB.php');
 
 
     <?php include_once('././common/components/commonFooter.php') ?>
-    <script type="module" src="./html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
+    <script type="module" src="../../common/html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
     <?php
 	if (!(PRODUCTION)) {
 	?>
-    <script type="module" src="./html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
+    <script type="module" src="../../common/html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
     <?php
 	}
 	?>
