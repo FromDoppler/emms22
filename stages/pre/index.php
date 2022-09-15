@@ -286,16 +286,7 @@ require_once('././utils/DB.php');
 
 				<div class="emms22__pre-event__allies__group">
 					<h3 class="emms22__fade-in">MEDIA PARTNERS</h3>
-					<ul class="emms22__fade-in">
-					<?php $media_sponsors = $db->getAliadosMedia('orden_home');
-						foreach($media_sponsors as $media ) : ?>
-						<li>
-							<img src="../../admin/aliados_media_partner/uploads/<?=$media['image_home']?>" alt="<?=$media['alt_image_home']?>">
-						</li>
-
-						<?php endforeach;
-						$db->close();
-						?>
+					<ul class="emms22__fade-in" id="alliesUl">
 
 					</ul>
 				</div>

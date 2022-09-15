@@ -1,5 +1,6 @@
 	<script type="module" src="common/html/<?= VERSION ?>/js/lazyVideos.js"></script>
 	<script type="module" src="common/html/<?= VERSION ?>/js/lazysizes.min.js"></script>
+	<script src="common/html/<?= VERSION ?>/js/allies.js"></script>
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 	<script src="common/html/<?= VERSION ?>/js/animations.js?version=<?= VERSION ?>"></script>
