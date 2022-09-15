@@ -21,9 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function printAllies(allies) {
+
             let groupLength;
-            let arrays = [];
-            if (allies % 2 === 0) {
+            let groupOfAllies = [];
+            let flag = 0;
+            let arrayOfAlies = [];
+
+            if (allies.length % 2 === 0) {
                 groupLength = Math.ceil((allies.length) / 6)
             } else {
                 groupLength = Math.ceil((allies.length) / 5);
@@ -32,20 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-            let flag = 0;
-            let array = [];
+
             allies.forEach((allie, index) => {
                 if (flag === groupLength || (index === (allies.length - 1))) {
                     flag = 0;
-                    arrays.push(array);
-                    array = [];
+                    groupOfAllies.push(arrayOfAlies);
+                    arrayOfAlies = [];
                 }
-                array.push(allie);
+                arrayOfAlies.push(allie);
                 flag++;
             });
 
 
-            arrays.forEach((array, index) => {
+            groupOfAllies.forEach((array, index) => {
 
                 setTimeout(() => {
                     array.forEach(allie => {
