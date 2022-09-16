@@ -44,7 +44,14 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
+                                <h4><?= $speaker['name'] ?></h4>
+                                <p><?= $speaker['bio'] ?></p>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio-hide"> ← VOLVER</a>
+                            </div>
                         </div>
+
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
                         <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)p.m</span>
@@ -88,6 +95,12 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
+                                <h4><?= $speaker['name'] ?></h4>
+                                <p><?= $speaker['bio'] ?></p>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio-hide"> ← VOLVER</a>
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
@@ -141,6 +154,12 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
+                                <h4><?= $speaker['name'] ?></h4>
+                                <p><?= $speaker['bio'] ?></p>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio-hide"> ← VOLVER</a>
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
@@ -185,6 +204,12 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
+                                <h4><?= $speaker['name'] ?></h4>
+                                <p><?= $speaker['bio'] ?></p>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio-hide"> ← VOLVER</a>
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
@@ -236,6 +261,12 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
+                                <h4><?= $speaker['name'] ?></h4>
+                                <p><?= $speaker['bio'] ?></p>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio-hide"> ← VOLVER</a>
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
@@ -279,6 +310,12 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
+                                <h4><?= $speaker['name'] ?></h4>
+                                <p><?= $speaker['bio'] ?></p>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio-hide"> ← VOLVER</a>
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
