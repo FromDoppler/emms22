@@ -11,13 +11,18 @@ require_once('../config.php');
 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
+function getDataConnection()
+{
+    return array('dbHost' => DB_HOST, 'dbName' => DB_NAME, 'dbPass' => DB_PASSWORD, 'dbUser' => DB_USER);
+}
+
 function isSubmitValid($ip)
 {
     try {
         SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
         SecurityHelper::isSubmitValid(ALLOW_IPS);
     } catch (Exception $e) {
-        ErrorLog::log("isSubmitValid", $e->getMessage(), ['ip' => $ip]);
+        ErrorLog::log(getDataConnection(), "isSubmitValid", $e->getMessage(), ['ip' => $ip]);
         exit('submits');
     }
 }
@@ -71,7 +76,7 @@ function setDataRequest($ip, $countryGeo)
         Validator::validateRequired('industry', $industry);
         return $user;
     } catch (Exception $e) {
-        ErrorLog::log("setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
+        ErrorLog::log(getDataConnection(), "setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
     }
 }
 
@@ -82,7 +87,7 @@ function saveSubscriptionDoppler($user)
         Doppler::init(ACCOUNT_DOPPLER, API_KEY_DOPPLER);
         Doppler::subscriber($user);
     } catch (Exception $e) {
-        ErrorLog::log("saveSubscriptionDoppler (Almacena en Lista)", $e->getMessage(), ['user' => $user]);
+        ErrorLog::log(getDataConnection(), "saveSubscriptionDoppler (Almacena en Lista)", $e->getMessage(), ['user' => $user]);
     }
 }
 function saveSubscriptionDopplerTable($user)
@@ -94,7 +99,7 @@ function saveSubscriptionDopplerTable($user)
         $db->saveRegistered($user);
         $db->close();
     } catch (Exception $e) {
-        ErrorLog::log("saveSubscriptionDopplerTable (Guarda en la BD subscriptions_doppler and registered)", $e->getMessage(), ['user' => $user]);
+        ErrorLog::log(getDataConnection(), "saveSubscriptionDopplerTable (Guarda en la BD subscriptions_doppler and registered)", $e->getMessage(), ['user' => $user]);
     }
 }
 
@@ -105,7 +110,7 @@ function saveSubscriptionSpreadSheet($user)
         SpreadSheetGoogle::write(ID_SPREADSHEET, $user, $db);
         $db->close();
     } catch (Exception $e) {
-        ErrorLog::log("saveSubscriptionSpreadSheet (Guarda en SpreadSheet)", $e->getMessage(), ['user' => $user]);
+        ErrorLog::log(getDataConnection(), "saveSubscriptionSpreadSheet (Guarda en SpreadSheet)", $e->getMessage(), ['user' => $user]);
     }
 }
 
@@ -115,7 +120,7 @@ function sendEmail($user, $subject)
         Relay::init(ACCOUNT_RELAY, API_KEY_RELAY);
         Relay::sendEmailRegister($user, $subject);
     } catch (Exception $e) {
-        ErrorLog::log("sendEmail (Envia mail por Relay)", $e->getMessage(), ['user' => $user, 'subject' => $subject]);
+        ErrorLog::log(getDataConnection(), "sendEmail (Envia mail por Relay)", $e->getMessage(), ['user' => $user, 'subject' => $subject]);
     }
 }
 
@@ -125,7 +130,7 @@ function getIp()
         $ip = GeoIp::getIp();
         return $ip;
     } catch (Exception $e) {
-        ErrorLog::log("getIp (Obtiene la IP)", $e->getMessage(), []);
+        ErrorLog::log(getDataConnection(), "getIp (Obtiene la IP)", $e->getMessage(), []);
     }
 }
 
@@ -135,7 +140,7 @@ function getCountryName()
         $countryGeo = GeoIp::getCountryName();
         return $countryGeo;
     } catch (Exception $e) {
-        ErrorLog::log("getCountryName (Obtiene el nombre del pais por geoIp de Cloudflare)", $e->getMessage(), []);
+        ErrorLog::log(getDataConnection(), "getCountryName (Obtiene el nombre del pais por geoIp de Cloudflare)", $e->getMessage(), []);
     }
 }
 

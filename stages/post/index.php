@@ -1,3 +1,3 @@
 <?php
-echo 'hola mundo';
+echo "<h1>Layout POST</h1>";
 ?>

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 14, 2022 at 04:26 PM
--- Server version: 10.3.34-MariaDB-0+deb10u1
--- PHP Version: 7.3.31-1+0~20210923.88+debian10~1.gbpac4058
+-- Host: db
+-- Generation Time: Sep 19, 2022 at 06:19 PM
+-- Server version: 8.0.29
+-- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `EMMS22`
 --
-CREATE DATABASE IF NOT EXISTS `EMMS22` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `EMMS22` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 USE `EMMS22`;
 
 -- --------------------------------------------------------
@@ -32,13 +31,13 @@ USE `EMMS22`;
 
 DROP TABLE IF EXISTS `aliados_media_partner`;
 CREATE TABLE `aliados_media_partner` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `image_home` varchar(255) DEFAULT NULL,
   `alt_image_home` varchar(255) DEFAULT NULL,
   `orden_home` varchar(255) DEFAULT NULL,
   `status` enum('0','1') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `aliados_media_partner`
@@ -99,7 +98,7 @@ INSERT INTO `aliados_media_partner` (`id`, `name`, `image_home`, `alt_image_home
 
 DROP TABLE IF EXISTS `aliados_pro`;
 CREATE TABLE `aliados_pro` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `image_home` varchar(255) DEFAULT NULL,
   `alt_image_home` varchar(255) DEFAULT NULL,
@@ -109,20 +108,20 @@ CREATE TABLE `aliados_pro` (
   `description_card` varchar(255) DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
   `orden_card` varchar(255) DEFAULT NULL,
-  `description` text DEFAULT NULL,
+  `description` text,
   `image_landing` varchar(255) DEFAULT NULL,
   `alt_image_landing` varchar(255) DEFAULT NULL,
   `youtube` varchar(255) DEFAULT NULL,
   `image_youtube` varchar(255) DEFAULT NULL,
   `alt_image_youtube` varchar(255) DEFAULT NULL,
-  `title_magnet` text DEFAULT NULL,
-  `description_magnet` text DEFAULT NULL,
+  `title_magnet` text,
+  `description_magnet` text,
   `link_magnet` varchar(255) DEFAULT NULL,
-  `title_learnmore` text DEFAULT NULL,
-  `description_learnmore` text DEFAULT NULL,
+  `title_learnmore` text,
+  `description_learnmore` text,
   `link_learnmore` varchar(255) DEFAULT NULL,
   `status` enum('0','1') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `aliados_pro`
@@ -144,7 +143,7 @@ INSERT INTO `aliados_pro` (`id`, `name`, `image_home`, `alt_image_home`, `link_s
 
 DROP TABLE IF EXISTS `aliados_starter`;
 CREATE TABLE `aliados_starter` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `image_home` varchar(255) DEFAULT NULL,
   `alt_image_home` varchar(255) DEFAULT NULL,
@@ -154,20 +153,20 @@ CREATE TABLE `aliados_starter` (
   `description_card` varchar(255) DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
   `orden_card` varchar(255) DEFAULT NULL,
-  `description` text DEFAULT NULL,
+  `description` text,
   `image_landing` varchar(255) DEFAULT NULL,
   `alt_image_landing` varchar(255) DEFAULT NULL,
   `youtube` varchar(255) DEFAULT NULL,
   `image_youtube` varchar(255) DEFAULT NULL,
   `alt_image_youtube` varchar(255) DEFAULT NULL,
-  `title_magnet` text DEFAULT NULL,
-  `description_magnet` text DEFAULT NULL,
+  `title_magnet` text,
+  `description_magnet` text,
   `link_magnet` varchar(255) DEFAULT NULL,
-  `title_learnmore` text DEFAULT NULL,
-  `description_learnmore` text DEFAULT NULL,
+  `title_learnmore` text,
+  `description_learnmore` text,
   `link_learnmore` varchar(255) DEFAULT NULL,
   `status` enum('0','1') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -177,10 +176,10 @@ CREATE TABLE `aliados_starter` (
 
 DROP TABLE IF EXISTS `google_oauth`;
 CREATE TABLE `google_oauth` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `provider` varchar(255) NOT NULL,
   `provider_value` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `google_oauth`
@@ -246,12 +245,12 @@ INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
 
 DROP TABLE IF EXISTS `log_errors`;
 CREATE TABLE `log_errors` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `date` varchar(150) NOT NULL,
   `function_name` varchar(300) NOT NULL,
   `description` text NOT NULL,
   `data` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `log_errors`
@@ -497,7 +496,12 @@ INSERT INTO `log_errors` (`id`, `date`, `function_name`, `description`, `data`) 
 (241, '2022-09-14 02:51:33 PM', 'saveSubscriptionDoppler (Almacena en Lista)', 'Doppler: Error Cannot subscribe slgarro@conesi.com.ar to List Id : 28545023. Reason: Subscriber Already Unsubscribed', '{\"user\":{\"register\":\"2022-09-14 02:51:32 PM\",\"firstname\":\"Sergio\",\"lastname\":null,\"email\":\"slgarro@conesi.com.ar\",\"privacy\":true,\"promotions\":true,\"phone\":null,\"country\":null,\"industry\":\"Servicios\",\"company\":null,\"ip\":\"190.247.199.95\",\"country_ip\":\"Argentina\",\"source_utm\":\"amdar\",\"medium_utm\":\"partners\",\"campaign_utm\":\"social-emms2022\",\"content_utm\":\"\",\"term_utm\":\"\",\"origin\":\"\",\"form_id\":\"preevento\",\"list\":28545023}}'),
 (242, '2022-09-14 03:16:45 PM', 'saveSubscriptionDoppler (Almacena en Lista)', 'Doppler: Error Cannot subscribe rodrigo@g1-estudio.com to List Id : 28545023. Reason: Subscriber Already Unsubscribed', '{\"user\":{\"register\":\"2022-09-14 03:16:37 PM\",\"firstname\":\"Rodrigo\",\"lastname\":null,\"email\":\"rodrigo@g1-estudio.com\",\"privacy\":true,\"promotions\":true,\"phone\":null,\"country\":null,\"industry\":\"Inform\\u00e1tica-Electr\\u00f3nica\",\"company\":null,\"ip\":\"190.57.158.118\",\"country_ip\":\"Ecuador\",\"source_utm\":\"facebook\",\"medium_utm\":\"cpc\",\"campaign_utm\":\"cuenta_prospecting_fb_goemmsspeakers\",\"content_utm\":\"individual_speakers\",\"term_utm\":\"intereses_marketing\",\"origin\":\"\",\"form_id\":\"preevento\",\"list\":28545023}}'),
 (243, '2022-09-14 03:22:23 PM', 'saveSubscriptionDoppler (Almacena en Lista)', 'Doppler: Error Cannot subscribe rodrigo@g1-estudio.com to List Id : 28545023. Reason: Subscriber Already Unsubscribed', '{\"user\":{\"register\":\"2022-09-14 03:22:20 PM\",\"firstname\":\"Rodrigo\",\"lastname\":null,\"email\":\"rodrigo@g1-estudio.com\",\"privacy\":true,\"promotions\":true,\"phone\":null,\"country\":null,\"industry\":\"Inform\\u00e1tica-Electr\\u00f3nica\",\"company\":null,\"ip\":\"200.105.230.14\",\"country_ip\":\"Ecuador\",\"source_utm\":\"facebook\",\"medium_utm\":\"cpc\",\"campaign_utm\":\"cuenta_prospecting_fb_goemmsspeakers\",\"content_utm\":\"individual_speakers\",\"term_utm\":\"intereses_marketing\",\"origin\":\"\",\"form_id\":\"preevento\",\"list\":28545023}}'),
-(244, '2022-09-14 03:51:02 PM', 'saveSubscriptionDoppler (Almacena en Lista)', 'Doppler: Error Cannot subscribe cciapa@hotmail.com to List Id : 28545023. Reason: Subscriber Already Unsubscribed', '{\"user\":{\"register\":\"2022-09-14 03:51:01 PM\",\"firstname\":\"Claudia\",\"lastname\":null,\"email\":\"cciapa@hotmail.com\",\"privacy\":true,\"promotions\":true,\"phone\":null,\"country\":null,\"industry\":\"Medios-de-Comunicaci\\u00f3n\",\"company\":null,\"ip\":\"201.220.180.204\",\"country_ip\":\"Argentina\",\"source_utm\":\"amdar\",\"medium_utm\":\"partners\",\"campaign_utm\":\"social-emms2022\",\"content_utm\":\"\",\"term_utm\":\"\",\"origin\":\"\",\"form_id\":\"preevento\",\"list\":28545023}}');
+(244, '2022-09-14 03:51:02 PM', 'saveSubscriptionDoppler (Almacena en Lista)', 'Doppler: Error Cannot subscribe cciapa@hotmail.com to List Id : 28545023. Reason: Subscriber Already Unsubscribed', '{\"user\":{\"register\":\"2022-09-14 03:51:01 PM\",\"firstname\":\"Claudia\",\"lastname\":null,\"email\":\"cciapa@hotmail.com\",\"privacy\":true,\"promotions\":true,\"phone\":null,\"country\":null,\"industry\":\"Medios-de-Comunicaci\\u00f3n\",\"company\":null,\"ip\":\"201.220.180.204\",\"country_ip\":\"Argentina\",\"source_utm\":\"amdar\",\"medium_utm\":\"partners\",\"campaign_utm\":\"social-emms2022\",\"content_utm\":\"\",\"term_utm\":\"\",\"origin\":\"\",\"form_id\":\"preevento\",\"list\":28545023}}'),
+(245, '2022-09-16 10:18:43 AM', 'setPhase', 'DB: Error Unable to prepare MySQL statement (check your syntax) - Table \'emms22.settings_phase\' doesn\'t exist', '[]'),
+(246, '2022-09-16 10:19:06 AM', 'setPhase', 'DB: Error Unable to prepare MySQL statement (check your syntax) - Table \'emms22.settings_phase\' doesn\'t exist', '[]'),
+(247, '2022-09-16 10:19:23 AM', 'setPhase', 'DB: Error Unable to prepare MySQL statement (check your syntax) - Table \'emms22.settings_phase\' doesn\'t exist', '[]'),
+(248, '2022-09-19 02:33:34 PM', 'Main', 'DB: Error Failed to connect to MySQL - php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution', '[]'),
+(249, '2022-09-19 02:34:49 PM', 'Main', 'DB: Error Unable to prepare MySQL statement (check your syntax) - Table \'emms22.settings_phase1\' doesn\'t exist', '[]');
 
 -- --------------------------------------------------------
 
@@ -507,7 +511,7 @@ INSERT INTO `log_errors` (`id`, `date`, `function_name`, `description`, `data`) 
 
 DROP TABLE IF EXISTS `registered`;
 CREATE TABLE `registered` (
-  `id` bigint(20) NOT NULL,
+  `id` bigint NOT NULL,
   `register` varchar(50) NOT NULL,
   `phase` varchar(150) NOT NULL,
   `email` varchar(250) NOT NULL,
@@ -517,12 +521,12 @@ CREATE TABLE `registered` (
   `phone` varchar(300) DEFAULT NULL,
   `industry` varchar(300) NOT NULL,
   `company` varchar(300) DEFAULT NULL,
-  `source_utm` text DEFAULT NULL,
-  `medium_utm` text DEFAULT NULL,
-  `campaign_utm` text DEFAULT NULL,
-  `content_utm` text DEFAULT NULL,
-  `term_utm` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `source_utm` text,
+  `medium_utm` text,
+  `campaign_utm` text,
+  `content_utm` text,
+  `term_utm` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `registered`
@@ -6345,12 +6349,32 @@ INSERT INTO `registered` (`id`, `register`, `phase`, `email`, `firstname`, `last
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `settings_phase`
+--
+
+DROP TABLE IF EXISTS `settings_phase`;
+CREATE TABLE `settings_phase` (
+  `pre` tinyint NOT NULL,
+  `during` tinyint NOT NULL,
+  `post` tinyint NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `settings_phase`
+--
+
+INSERT INTO `settings_phase` (`pre`, `during`, `post`) VALUES
+(1, 0, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `speakers`
 --
 
 DROP TABLE IF EXISTS `speakers`;
 CREATE TABLE `speakers` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `alt_image` varchar(255) DEFAULT NULL,
@@ -6359,31 +6383,32 @@ CREATE TABLE `speakers` (
   `sm_linkedin` varchar(255) DEFAULT NULL,
   `sm_instagram` varchar(255) DEFAULT NULL,
   `sm_facebook` varchar(255) DEFAULT NULL,
-  `description` text DEFAULT NULL,
+  `description` text,
+  `bio` text,
   `image_company` varchar(255) DEFAULT NULL,
   `alt_image_company` varchar(255) DEFAULT NULL,
   `time` varchar(255) DEFAULT NULL,
   `orden` varchar(255) DEFAULT NULL,
   `day` varchar(1) NOT NULL,
   `status` enum('0','1') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `speakers`
 --
 
-INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `image_company`, `alt_image_company`, `time`, `orden`, `day`, `status`) VALUES
-(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', 'hepc-speaker.png', 'Hep!c Marketing', '1', '3', '1', NULL),
-(6, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', 'aws-speaker.png', 'Amazon Web Services', '1', '2', '1', NULL),
-(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', 'google-speaker.png', 'Google', '1', '10', '2', NULL),
-(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', 'metricool-speaker.png', 'Metricool', '1', '4', '1', NULL),
-(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', 'raiola-speaker.png', 'Raiola Networks', '1', '5', '1', NULL),
-(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', 'tiendup-speaker.png', 'Tiendup', '1', '6', '1', NULL),
-(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', 'doofinder-speaker.png', 'Doofinder', '1', '30', '2', NULL),
-(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', 'on-translation-speaker.png', 'Ontranslation', '1', '30', '2', NULL),
-(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', 'mercatitlan-speaker.png', 'Mercatitlan', '1', '10', '1', NULL),
-(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', 'ab-speaker.png', 'Angela Blones', '1', '20', '2', NULL),
-(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', 'brainwave-site.png', 'Brainwave', '1', '25', '2', NULL);
+INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `bio`, `image_company`, `alt_image_company`, `time`, `orden`, `day`, `status`) VALUES
+(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', NULL, 'hepc-speaker.png', 'Hep!c Marketing', '1', '3', '1', NULL),
+(6, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', NULL, 'aws-speaker.png', 'Amazon Web Services', '1', '2', '1', NULL),
+(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', NULL, 'google-speaker.png', 'Google', '1', '10', '2', NULL),
+(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', NULL, 'metricool-speaker.png', 'Metricool', '1', '4', '1', NULL),
+(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', NULL, 'raiola-speaker.png', 'Raiola Networks', '1', '5', '1', NULL),
+(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', NULL, 'tiendup-speaker.png', 'Tiendup', '1', '6', '1', NULL),
+(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', NULL, 'doofinder-speaker.png', 'Doofinder', '1', '30', '2', NULL),
+(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', NULL, 'on-translation-speaker.png', 'Ontranslation', '1', '30', '2', NULL),
+(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', NULL, 'mercatitlan-speaker.png', 'Mercatitlan', '1', '10', '1', NULL),
+(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', NULL, 'ab-speaker.png', 'Angela Blones', '1', '20', '2', NULL),
+(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', NULL, 'brainwave-site.png', 'Brainwave', '1', '25', '2', NULL);
 
 -- --------------------------------------------------------
 
@@ -6393,7 +6418,7 @@ INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`,
 
 DROP TABLE IF EXISTS `subscriptions_doppler`;
 CREATE TABLE `subscriptions_doppler` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `email` varchar(250) NOT NULL,
   `list` varchar(50) NOT NULL,
   `register` varchar(50) NOT NULL,
@@ -6408,12 +6433,12 @@ CREATE TABLE `subscriptions_doppler` (
   `country_ip` varchar(150) NOT NULL,
   `privacy` tinyint(1) NOT NULL,
   `promotions` tinyint(1) DEFAULT NULL,
-  `source_utm` text DEFAULT NULL,
-  `medium_utm` text DEFAULT NULL,
-  `campaign_utm` text DEFAULT NULL,
-  `content_utm` text DEFAULT NULL,
-  `term_utm` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `source_utm` text,
+  `medium_utm` text,
+  `campaign_utm` text,
+  `content_utm` text,
+  `term_utm` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `subscriptions_doppler`
@@ -12488,49 +12513,49 @@ ALTER TABLE `subscriptions_doppler`
 -- AUTO_INCREMENT for table `aliados_media_partner`
 --
 ALTER TABLE `aliados_media_partner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `aliados_pro`
 --
 ALTER TABLE `aliados_pro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `aliados_starter`
 --
 ALTER TABLE `aliados_starter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `google_oauth`
 --
 ALTER TABLE `google_oauth`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `log_errors`
 --
 ALTER TABLE `log_errors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=245;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
 
 --
 -- AUTO_INCREMENT for table `registered`
 --
 ALTER TABLE `registered`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5789;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5789;
 
 --
 -- AUTO_INCREMENT for table `speakers`
 --
 ALTER TABLE `speakers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5977;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5977;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
