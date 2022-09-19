@@ -1,12 +1,17 @@
 <?php
-require_once('../config.php');
+
 class ErrorLog {
-     private const debugger = 0;
+    private const debugger = 0;
+
+    private $dbHost;
+    private $dbName;
+    private $dbPass;
+    private $dbUser;
 
 
     private static function saveErrorDataBase($function, $error, $data)
     {
-        $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $connection = new mysqli(self::$dbHost, self::$dbUser, self::$dbPass, self::$dbName);
         if ($connection->connect_error) {
             error_log('LOG ERRORS - Failed to connect to MySQL - ' . $connection->connect_error);
         }
@@ -18,8 +23,13 @@ class ErrorLog {
     }
 
 
-    public static function log($from, $error, $data)
+    public static function log($obj_con, $from, $error, $data)
     {
+
+        self::$dbHost = $obj_con['dbHost'];
+        self::$dbName = $obj_con['dbName'];
+        self::$dbPass = $obj_con['dbPass'];
+        self::$dbUser = $obj_con['dbUser'];
         $text = "\n\tMetodo: " . $from . "\n\tDescripcion: " . $error . "\n\tData: " . json_encode($data) . "\n";
         error_log($text);
         self::saveErrorDataBase($from, addslashes($error), addslashes(json_encode($data)));
