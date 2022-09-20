@@ -20,15 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(resp => resp)
                 .then(resp => {
                     if (resp.ok) {
-                        console.log(resp.ok);
-                        console.log("correcto");
-                        const sucess = document.getElementById('alert-success');
-                        sucess.classList.remove("d-none")
+                        const sucess = document.getElementById('current-alert-success');
+                        sucess.classList.remove("d-none");
+                        setTimeout(function () {
+                            sucess.classList.add("d-none")
+                        }, 5000);
                     }
                     else {
                         console.log("error");
-                        const sucess = document.getElementById('alert-danger');
+                        const sucess = document.getElementById('current-alert-danger');
                         sucess.classList.remove("d-none")
+                        setTimeout(function () {
+                            sucess.classList.add("d-none")
+                        }, 5000);
                     }
                 })
                 .catch((error) => {
