@@ -271,6 +271,14 @@ class DB {
         return $result;
     }
 
+    public function getSimulator()
+    {
+
+        $sql = $this->query("SELECT * from settings_simulator where 1=1");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     /******* log errors */
     public function getLogErrors()
     {
