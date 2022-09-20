@@ -36,12 +36,12 @@ $premium = $premium[0];
    <script type="module">
 		import {
 			checkUserNotLoged
-		} from './html/<?= VERSION ?>/js/security.js'
+		} from './common/html/<?= VERSION ?>/js/security.js'
 		const checkUserNotLogedF = checkUserNotLoged;
 		checkUserNotLogedF()
 	</script>
     <?php
-	include_once('././common/components/commonHeader.php');
+	include_once('./common/components/commonHeader.php');
 	?>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
