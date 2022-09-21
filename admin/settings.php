@@ -68,10 +68,10 @@
 
             </div>
             <div class="col">
-                <div id="alert-success" class="alert alert-success d-none">
-                    <strong>Success!</strong> Fase Updated .
+                <div id="simulator-alert-success" class="alert alert-success d-none">
+                    <strong>Success!</strong> Simulator Updated .
                 </div>
-                <div id="alert-danger" class="alert alert-danger d-none">
+                <div id="simulator-alert-danger" class="alert alert-danger d-none">
                     <strong>Danger!</strong> Error.
                 </div>
                 <div class="col-md-8 mx-auto">
@@ -83,24 +83,24 @@
                             <form id="simulator" method="post">
                                 <div class="form-check mb-2">
                                     <input class="form-check-input" type="checkbox" id="simulatorEnabled" name="enabled">
-                                    <label class="form-check-label" for="pre">
+                                    <label class="form-check-label" for="simulatorEnabled">
                                         ENABLED <small>(Only VPN users will see the simulated phase.)</small> </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
                                     <input class="form-check-input" type="radio" name="simulator_phase" id="simulator_pre">
-                                    <label class="form-check-label" for="pre">
+                                    <label class="form-check-label" for="simulator_pre">
                                         PRE
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
                                     <input class="form-check-input" type="radio" name="simulator_phase" id="simulator_during">
-                                    <label class="form-check-label" for="during">
+                                    <label class="form-check-label" for="simulator_during">
                                         DURING
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
                                     <input class="form-check-input" type="radio" name="simulator_phase" id="simulator_post">
-                                    <label class="form-check-label" for="post">
+                                    <label class="form-check-label" for="simulator_post">
                                         POST
                                     </label>
                                 </div>

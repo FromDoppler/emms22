@@ -10,13 +10,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function sendDataSimulator(e) {
         e.preventDefault();
-        alert("send data..");
+        let selectedPhase = document.querySelector('input[name="simulator_phase"]:checked').id;
+        const enabled = (document.getElementById('simulatorEnabled').checked) ? 1 : 0;
+        selectedPhase = selectedPhase.replace('simulator_', '');
+
+        try {
+
+            const data = { enabled: enabled, phase: selectedPhase };
+            fetch('./../../services/setSimulator.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+                .then(resp => resp)
+                .then(resp => {
+                    if (resp.ok) {
+                        const success = document.getElementById('simulator-alert-success');
+                        success.classList.remove("d-none");
+                        setTimeout(function () {
+                            success.classList.add("d-none")
+                        }, 5000);
+                    }
+                    else {
+                        console.log("error");
+                        const success = document.getElementById('simulator-alert-danger');
+                        success.classList.remove("d-none")
+                        setTimeout(function () {
+                            success.classList.add("d-none")
+                        }, 5000);
+                    }
+                })
+                .catch((error) => {
+                    // Tenemos la respuesta de errores
+                    console.log('Algo salio mal: ', error)
+                });
+        }
+        catch (e) {
+            console.log("No values");
+        }
     }
 
     function sendDataCurrentPhase(e) {
+        const selectedPhase = document.querySelector('input[name="phase"]:checked').id;
         e.preventDefault();
         try {
-            const selectedPhase = document.querySelector('input[name="phase"]:checked').id;
+
             const data = { phase: selectedPhase };
             fetch('./../../services/setPhase.php', {
                 method: 'POST',
@@ -28,18 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(resp => resp)
                 .then(resp => {
                     if (resp.ok) {
-                        const sucess = document.getElementById('current-alert-success');
-                        sucess.classList.remove("d-none");
+                        const success = document.getElementById('current-alert-success');
+                        success.classList.remove("d-none");
                         setTimeout(function () {
-                            sucess.classList.add("d-none")
+                            success.classList.add("d-none")
                         }, 5000);
                     }
                     else {
                         console.log("error");
-                        const sucess = document.getElementById('current-alert-danger');
-                        sucess.classList.remove("d-none")
+                        const success = document.getElementById('current-alert-danger');
+                        success.classList.remove("d-none")
                         setTimeout(function () {
-                            sucess.classList.add("d-none")
+                            success.classList.add("d-none")
                         }, 5000);
                     }
                 })
@@ -81,9 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(resp => resp.json())
             .then(resp => {
-
                 if (resp.enabled == 1) {
-
                     document.getElementById('simulatorEnabled').checked = true;
                 }
                 document.getElementById('simulator_' + resp.phase).checked = true;

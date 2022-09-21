@@ -1,15 +1,11 @@
 <?php
 
-require_once('../utils/GeoIp.php');
-require_once('../utils/SecurityHelper.php');
-require_once('../utils/ErrorLog.php');
-require_once('../utils/DB.php');
-require_once('../config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/GeoIp.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/SecurityHelper.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/DB.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
 
-require_once('functions.php');
-
-
-
+require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
 
 try {
     $_POST = json_decode(file_get_contents('php://input'), true);
