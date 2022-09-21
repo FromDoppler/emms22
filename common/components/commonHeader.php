@@ -1,4 +1,4 @@
-	<title>EMMS 2022: Conferencias online de Marketing Digital.</title>
+	<title>EMMS 2022: Conferencias online de Marketing Digital. <?= ($simulated) ? "SIMULADO" : "" ?></title>
 	<meta name="robots" content="<?= (PRODUCTION) ? 'index, follow' : 'noindex, nofollow' ?>">
 
 	<meta name="theme-color" content="#3F0453">
@@ -31,7 +31,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="common/html/<?= VERSION ?>/img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="common/html/<?= VERSION ?>/img/favicon-16x16.png">
 
-    <link rel="stylesheet" href="common/html/<?= VERSION ?>/css/styles.css">
+	<link rel="stylesheet" href="common/html/<?= VERSION ?>/css/styles.css">
 
 	<!-- Font Proxima Nova -->
 	<link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />
