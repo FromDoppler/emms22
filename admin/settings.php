@@ -21,11 +21,8 @@
 <body>
     <main class="container">
         <header class="mt-2">
-            <div class="p-5 text-center bg-light img-back" style="
-    background-image: url('/admin/css/settings.jpg');
-    height: 275px;
-  ">
-            </div>
+
+
             <a class="btn btn-primary mt-2" href="/admin/index.php?token=<?= $_GET['token'] ?>"> Menu Principal</a>
 
         </header>
