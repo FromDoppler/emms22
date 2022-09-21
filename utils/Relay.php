@@ -29,7 +29,6 @@ class Relay {
 
     public static function sendEmailRegister($user, $subject) {
 
-        //$html = ($user['form_id'] === 'landing') ? self::templateEmailLanding() : '';
         $html =  self::templateEmailLanding();
         $data = array(
             'from_name' => self::fromName,

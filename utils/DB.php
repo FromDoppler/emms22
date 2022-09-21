@@ -280,6 +280,13 @@ class DB {
     }
 
     /******* log errors */
+    public function insertLogErrors($date, $functionName, $description, $data)
+    {
+        $sql = "INSERT INTO log_errors (date, function_name, description, data) values ('" . $date . "', '" . $functionName . "', '" . $description . "', '" . $data . "')";
+
+        $this->query($sql);
+    }
+
     public function getLogErrors()
     {
         $sql = $this->query("SELECT * FROM log_errors order by id DESC LIMIT 100");

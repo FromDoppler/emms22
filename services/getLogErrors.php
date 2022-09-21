@@ -1,10 +1,10 @@
 <?php
-require_once('../config.php');
-require_once('../utils/GeoIp.php');
-require_once('../utils/DB.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/GeoIp.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/DB.php');
 $ip = GeoIp::getIp();
 if (!in_array($ip, ALLOW_IPS)) {
-    echo "No tienes permisos";
+    echo "$ip No tienes permisos";
     exit();
 }
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);

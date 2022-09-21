@@ -1,9 +1,10 @@
 <?php
-require_once('./utils/GeoIp.php');
-require_once('./utils/SecurityHelper.php');
-require_once('./utils/DB.php');
-require_once('./utils/ErrorLog.php');
-require_once('config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/GeoIp.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/SecurityHelper.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/DB.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
 
 try {
 
@@ -15,8 +16,8 @@ try {
     $current_phase = array_search(1, $phases);
     require_once("./stages/$current_phase/index.php");
 } catch (Exception $e) {
+    processError("main", $e->getMessage(), []);
 
-    echo "error Main";
 }
 
 ?>
