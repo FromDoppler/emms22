@@ -4,16 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateStr = '2022-11-09 11:00:00';
     const utcDate = '2022-11-09T14:00:00.000Z';
     var eventDate = new Date(utcDate);
-    var today = new Date();
+    const today = new Date();
 
+    // Este código utiliza el hecho de que getTimezoneOffsetdevuelve un valor mayor durante la hora estándar frente al horario de verano (DST).
+    // Por lo tanto, determina la salida esperada durante la hora estándar y compara si la salida de la fecha dada es igual (estándar) o menor (DST).
     // Tener en cuenta que getTimezoneOffset devuelve números positivos de minutos para las zonas al oeste de UTC,
     // que generalmente se indican como horas negativas (ya que están "detrás" de UTC). Por ejemplo, Los Ángeles es UTC–8h estándar, UTC-7h DST.
     // getTimezoneOffset regresa 480(480 minutos positivos) en diciembre (invierno, hora estándar), en lugar de -480. Devuelve números negativos
     // para el hemisferio oriental (como -600 Sydney en invierno, a pesar de estar "adelante" ( UTC+10h ).
 
     Date.prototype.stdTimezoneOffset = function () {
-        var jan = new Date(this.getFullYear(), 0, 1);
-        var jul = new Date(this.getFullYear(), 6, 1);
+        const jan = new Date(this.getFullYear(), 0, 1);
+        const jul = new Date(this.getFullYear(), 6, 1);
         return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
     }
 
@@ -55,23 +57,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setCountryAndDate({ countryName, countryCode }, date, target) {
+
         const flagContainers = document.querySelectorAll('.emms22__pre-event__calendar__date__country span');
         const version = document.getElementById("version").innerHTML;
+
         if (!target) {
             countryCode = 'AR';
             countryName = 'Argentina';
         }
+
         const img = createImgElement(countryName, countryCode, version);
         let hours = date.getHours().toString();
         hours = (hours.length < 2) ? '0' + hours : hours;
 
-
-        flagContainers.forEach(flagContainer => {
-            flagContainer.innerHTML = '';
-            flagContainer.appendChild(img);
-            flagContainer.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ') ' + hours + ':00';
-        })
-
+        if (countryCode === "MX") {
+            flagContainers.forEach(flagContainer => {
+                flagContainer.innerHTML = '';
+                flagContainer.appendChild(img);
+                flagContainer.innerHTML += '(' + countryCode + ') ' + '08' + ':00 (CDMX)';
+            });
+        } else {
+            flagContainers.forEach(flagContainer => {
+                flagContainer.innerHTML = '';
+                flagContainer.appendChild(img);
+                flagContainer.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ') ' + hours + ':00';
+            });
+        }
 
     }
 
