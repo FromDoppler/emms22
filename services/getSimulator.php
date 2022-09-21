@@ -13,11 +13,12 @@ try {
     SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
     SecurityHelper::isSubmitValid(ALLOW_IPS);
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    $phases = $db->getCurrentPhase()[0];
-    $current_phase = array_search(1, $phases);
-    echo json_encode($current_phase);
+    $data = $db->getSimulator()[0];
+    $enabled = array_shift($data);
+    $simultedPhase = array_search(1, $data);
+    echo json_encode(array("enabled" => $enabled, "phase" => $simultedPhase));
 } catch (Exception $e) {
-    processError("getPhase", $e->getMessage(), []);
+    processError("getSimulator", $e->getMessage(), []);
     header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
     exit();
 }

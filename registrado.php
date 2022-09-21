@@ -1,20 +1,19 @@
 <?php
-require_once('./utils/GeoIp.php');
-require_once('./utils/SecurityHelper.php');
-require_once('./utils/DB.php');
-require_once('./utils/ErrorLog.php');
-require_once('config.php');
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/GeoIp.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/SecurityHelper.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
 
 try {
 
     $ip = GeoIp::getIp();
     SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
     SecurityHelper::isSubmitValid(ALLOW_IPS);
-    $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    $phases = $db->getCurrentPhase()[0];
-    $current_phase = array_search(1, $phases);
-    require_once("./stages/$current_phase/registrado.php");
+    $response = processPhaseToShow($ip);
+    $simulated = $response['simulated'];
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/stages/$response[phaseToShow]/registrado.php");
 } catch (Exception $e) {
-
-    echo "error Main";
+    processError("Index main", $e->getMessage(), []);
 }

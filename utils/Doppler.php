@@ -3,7 +3,7 @@ class Doppler {
 
     private static $apiKey;
     private static $account;
- 
+
     private const urlBase = 'https://restapi.fromdoppler.com/accounts/';
 
     private static function executeCurl($url, $data, $headers, $method) {
@@ -14,7 +14,7 @@ class Doppler {
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         return curl_exec($ch);
     }
-	
+
 	public static function init($account, $apiKey) {
 	    self::$apiKey = $apiKey;
 		self::$account = $account;
@@ -46,13 +46,13 @@ class Doppler {
         }
         if(isset($data['company']) && (trim($data['company']) != '')) {
             array_push($customFields, array('name' => 'Company', 'Value' => $data['company']));
-        } 
+        }
         if(isset($data['ip']) && (trim($data['ip']) != '')) {
             array_push($customFields, array('name' => 'IP', 'Value' => $data['ip']));
         }
         if(isset($data['country_ip']) && (trim($data['country_ip']) != '')) {
             array_push($customFields, array('name' => 'PaisIP', 'Value' => $data['country_ip']));
-        } 
+        }
         if(isset($data['source_utm']) && (trim($data['source_utm']) != '')) {
             array_push($customFields, array('name' => 'utmsource', 'Value' => $data['source_utm']));
         }
@@ -73,7 +73,7 @@ class Doppler {
         }
         if(isset($data['origin']) && (trim($data['origin']) != '')) {
             array_push($customFields, array('name' => 'DOrigin', 'value' => $data['origin']));
-        }    
+        }
         return $customFields;
 
     }
@@ -91,6 +91,7 @@ class Doppler {
             'Content: '.strlen($dataJson)
         );
         $response = json_decode(self::executeCurl($endPointSubscriber, $dataJson, $headers, 'POST'));
+        print_r($response);
         if(isset($response->errors)) :
             foreach($response->errors as $error) :
                 throw new Exception('Doppler: Error '.$error->key. '->'.$error->detail);
@@ -98,7 +99,7 @@ class Doppler {
         endif;
         if(isset($response->errorCode)) :
             throw new Exception('Doppler: Error '.$response->detail);
-        endif;    
+        endif;
     }
 }
 
