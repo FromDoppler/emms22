@@ -9,9 +9,12 @@
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="http://local-goemms.com/admin/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</head>
 
 
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 
 </head>
 
@@ -27,12 +30,22 @@
 
         <div class="mt-5 row">
             <div class="col">
-                <div id="current-alert-success" class="alert alert-success d-none">
-                    <strong>Success!</strong> Fase Updated .
+
+
+                <div id="current-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                    <strong>Success!</strong> Fase Updated
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div id="current-alert-danger" class="alert alert-danger d-none">
-                    <strong>Danger!</strong> Error.
+                <div id="current-alert-danger" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                    <strong>Error!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
+
+
                 <div class="col-md-8 mx-auto">
                     <div class="card">
                         <div class="card-header">
@@ -68,11 +81,18 @@
 
             </div>
             <div class="col">
-                <div id="simulator-alert-success" class="alert alert-success d-none">
+
+                <div id="simulator-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
                     <strong>Success!</strong> Simulator Updated .
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div id="simulator-alert-danger" class="alert alert-danger d-none">
-                    <strong>Danger!</strong> Error.
+                <div id="simulator-alert-danger" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                    <strong>Error!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="col-md-8 mx-auto">
                     <div class="card">

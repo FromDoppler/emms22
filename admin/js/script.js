@@ -29,17 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (resp.ok) {
                         const success = document.getElementById('simulator-alert-success');
                         success.classList.remove("d-none");
-                        setTimeout(function () {
-                            success.classList.add("d-none")
-                        }, 5000);
                     }
                     else {
                         console.log("error");
                         const success = document.getElementById('simulator-alert-danger');
                         success.classList.remove("d-none")
-                        setTimeout(function () {
-                            success.classList.add("d-none")
-                        }, 5000);
+
                     }
                 })
                 .catch((error) => {
@@ -70,17 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (resp.ok) {
                         const success = document.getElementById('current-alert-success');
                         success.classList.remove("d-none");
-                        setTimeout(function () {
-                            success.classList.add("d-none")
-                        }, 5000);
+
                     }
                     else {
                         console.log("error");
                         const success = document.getElementById('current-alert-danger');
                         success.classList.remove("d-none")
-                        setTimeout(function () {
-                            success.classList.add("d-none")
-                        }, 5000);
+
                     }
                 })
                 .catch((error) => {
