@@ -56,6 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
 
+    const changeCountryHour = (countryCode, flagContainers, img) => {
+        if (countryCode === "MX") {
+            flagContainers.forEach(flagContainer => {
+                flagContainer.innerHTML = '';
+                flagContainer.appendChild(img);
+                flagContainer.innerHTML += '(' + countryCode + ') ' + '08' + ':00 (CDMX)';
+            });
+        } else if (countryCode === "ES") {
+            flagContainers.forEach(flagContainer => {
+                flagContainer.innerHTML = '';
+                flagContainer.appendChild(img);
+                flagContainer.innerHTML += '(' + countryCode + ') ' + '15' + ':00 (Madrid)';
+            });
+        }
+
+    }
+
     function setCountryAndDate({ countryName, countryCode }, date, target) {
 
         const flagContainers = document.querySelectorAll('.emms22__pre-event__calendar__date__country span');
@@ -70,12 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let hours = date.getHours().toString();
         hours = (hours.length < 2) ? '0' + hours : hours;
 
-        if (countryCode === "MX") {
-            flagContainers.forEach(flagContainer => {
-                flagContainer.innerHTML = '';
-                flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + countryCode + ') ' + '08' + ':00 (CDMX)';
-            });
+        if (countryCode === "MX" || countryCode === "ES") {
+            changeCountryHour(countryCode, flagContainers, img)
         } else {
             flagContainers.forEach(flagContainer => {
                 flagContainer.innerHTML = '';
