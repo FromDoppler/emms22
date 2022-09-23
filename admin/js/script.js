@@ -2,9 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const phasesForm = document.getElementById('current_phase');
-    const simulatorForm = document.getElementById('simulator');
     phasesForm.addEventListener('submit', sendDataCurrentPhase);
+    const simulatorForm = document.getElementById('simulator');
     simulatorForm.addEventListener('submit', sendDataSimulator);
+    const duringDaysForm = document.getElementById('duringCurrentDays');
+    duringDaysForm.addEventListener('submit', sendDataDuringDay);
     const duringDays = document.querySelectorAll('input[name="duringCurrentDay"]');
     duringDays.forEach(currentDay => currentDay.addEventListener('change', () => clickDuringDays(currentDay.id)));
     const radioPhases = document.querySelectorAll('input[name="phase"]');
@@ -22,6 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const statesLive = document.querySelectorAll('.stateLive');
         statesLive.forEach(sl => sl.classList.add('d-none'));
         document.getElementById(dayNumber + 'Row').classList.remove('d-none');
+    }
+    function sendDataDuringDay(e) {
+        e.preventDefault();
+
+        let selectedDay = document.querySelector('input[name="duringCurrentDay"]:checked').id;
+        const stateLive = document.querySelector("input[name='" + selectedDay + "Radios']:checked").value;
+        selectedDay = selectedDay.slice(-1);
+        console.log(selectedDay);
+        console.log(stateLive);
+        //send data fecth
     }
 
     function sendDataSimulator(e) {
@@ -108,6 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(resp => {
                 const phase = resp;
                 document.getElementById(phase).checked = true;
+                if (phase === 'during') {
+                    document.getElementById('cardCurrentDay').classList.remove('d-none');
+                }
             })
             .catch((error) => {
                 // Tenemos la respuesta de errores

@@ -103,7 +103,9 @@
                                 <div class="form-check mb-2">
                                     <input class="form-check-input" type="checkbox" id="simulatorEnabled" name="enabled">
                                     <label class="form-check-label" for="simulatorEnabled">
-                                        ENABLED <small>(Only VPN users will see the simulated phase.)</small> </label>
+                                        ENABLED </label>
+
+                                    <label><small class="text-muted">(Only VPN users will see the simulated phase.)</small></label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
                                     <input class="form-check-input" type="radio" name="simulator_phase" id="simulator_pre">
@@ -162,16 +164,16 @@
                                 </div>
                                 <div class="form-check mb-2 mx-3">
                                     <div id="day1Row" class="d-none row stateLive">
-                                        <div class="col mx-5">
-                                            <input class="form-check-input" type="radio" name="first" id="day1Live" checked>
-                                            <label class="form-check-label" for="day1Live">
-                                                Live
-                                            </label>
-                                        </div>
                                         <div class="col">
-                                            <input class="form-check-input" type="radio" name="first" id="day1NoLive">
+                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1NoLive" value="0">
                                             <label class="form-check-label" for="day1NoLive">
                                                 No Live
+                                            </label>
+                                        </div>
+                                        <div class="col mx-5">
+                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1Live" value="1">
+                                            <label class="form-check-label" for="day1Live">
+                                                Live
                                             </label>
                                         </div>
                                     </div>
@@ -185,13 +187,13 @@
                                 <div class="form-check mb-2 mx-3">
                                     <div id="day2Row" class="d-none row stateLive">
                                         <div class="col mx-5">
-                                            <input class="form-check-input" type="radio" name="second" id="day2Live" checked>
+                                            <input class="form-check-input" type="radio" name="day2Radios" id="day2Live" value="1">
                                             <label class="form-check-label" for="day2Live">
                                                 Live
                                             </label>
                                         </div>
                                         <div class="col">
-                                            <input class="form-check-input" type="radio" name="second" id="day2NoLive">
+                                            <input class="form-check-input" type="radio" name="day2Radios" id="day2NoLive" value="0">
                                             <label class="form-check-label" for="day2NoLive">
                                                 No Live
                                             </label>
@@ -207,13 +209,13 @@
                                 <div class="form-check mb-2 mx-3">
                                     <div id="day3Row" class="d-none row stateLive">
                                         <div class="col mx-5">
-                                            <input class="form-check-input" type="radio" name="third" id="day3Live" checked>
+                                            <input class="form-check-input" type="radio" name="day3Radios" id="day3Live" value="1">
                                             <label class="form-check-label" for="day3Live">
                                                 Live
                                             </label>
                                         </div>
                                         <div class="col">
-                                            <input class="form-check-input" type="radio" name="third" id="day3NoLive">
+                                            <input class="form-check-input" type="radio" name="day3Radios" id="day3NoLive" value="0">
                                             <label class="form-check-label" for="day3NoLive">
                                                 No Live
                                             </label>
