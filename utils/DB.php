@@ -287,6 +287,11 @@ class DB {
         $this->query("UPDATE settings_simulator SET enabled =" . $enabled . ", pre =" . $phases['pre'] . ", during =" . $phases['during'] . ", post=" . $phases['post'] . " where 1=1");
     }
 
+    public function updateDuringDays($day, $live)
+    {
+        $this->query("UPDATE settings_during_days SET day =" . $day . ", live =" . $live . " where 1=1");
+    }
+
     /******* log errors */
     public function insertLogErrors($date, $functionName, $description, $data)
     {

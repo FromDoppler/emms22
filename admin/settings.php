@@ -137,13 +137,13 @@
         </div>
         <div class="mt-5 row">
             <div class="col">
-                <div id="current-days-alert-success" class="alert alert-success alert-dismissible fade show" role="alert">
+                <div id="current-days-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
                     <strong>Success!</strong> Current Days Updated .
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div id="current-days-alert-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <div id="current-days-alert-danger" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
                     <strong>Error!</strong>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>

@@ -31,8 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
         let selectedDay = document.querySelector('input[name="duringCurrentDay"]:checked').id;
         const stateLive = document.querySelector("input[name='" + selectedDay + "Radios']:checked").value;
         selectedDay = selectedDay.slice(-1);
-        console.log(selectedDay);
-        console.log(stateLive);
+        try {
+            const data = { day: selectedDay, live: stateLive }
+            fetch('../../services/setDuringDays.php', {
+                method: "post",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+                .then(resp => resp)
+                .then(resp => {
+                    if (resp.ok) {
+                        const success = document.getElementById('current-days-alert-success');
+                        success.classList.remove("d-none");
+                    }
+                    else {
+                        console.log("error");
+                        const success = document.getElementById('current-days-alert-danger');
+                        success.classList.remove("d-none")
+                    }
+                })
+
+        } catch (error) {
+            console.log(error);
+        }
         //send data fecth
     }
 
