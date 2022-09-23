@@ -164,13 +164,13 @@
                                 </div>
                                 <div class="form-check mb-2 mx-3">
                                     <div id="day1Row" class="d-none row stateLive">
-                                        <div class="col">
+                                        <div class="col mx-5">
                                             <input class="form-check-input" type="radio" name="day1Radios" id="day1NoLive" value="0">
                                             <label class="form-check-label" for="day1NoLive">
                                                 No Live
                                             </label>
                                         </div>
-                                        <div class="col mx-5">
+                                        <div class="col">
                                             <input class="form-check-input" type="radio" name="day1Radios" id="day1Live" value="1">
                                             <label class="form-check-label" for="day1Live">
                                                 Live
