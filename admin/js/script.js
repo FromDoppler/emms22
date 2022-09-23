@@ -8,6 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
     checkRadiosPhase();
     getDataSimulator();
 
+
+    const duringDays = document.querySelectorAll('input[name="duringCurrentDay"]');
+    duringDays.forEach(currentDay => currentDay.addEventListener('change', () => clickDuringDays(currentDay.id)));
+
+
+    function clickDuringDays(dayNumber) {
+        const statesLive = document.querySelectorAll('.stateLive');
+        statesLive.forEach(sl => sl.classList.add('d-none'));
+        document.getElementById(dayNumber + 'Row').classList.remove('d-none');
+    }
+
     function sendDataSimulator(e) {
         e.preventDefault();
         let selectedPhase = document.querySelector('input[name="simulator_phase"]:checked').id;

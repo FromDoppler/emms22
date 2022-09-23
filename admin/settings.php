@@ -133,6 +133,131 @@
 
             </div>
         </div>
+        <div class="mt-5 row">
+            <div class="col">
+                <div id="current-days-alert-success" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong> Current Days Updated .
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="current-days-alert-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="col-md-8 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Current Days</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="duringCurrentDays">
+                                <div class="form-check mb-2 mx-3">
+                                    <input class="form-check-input" type="radio" name="duringCurrentDay" id="day1">
+                                    <label class="form-check-label" for="day1">
+                                        Martes 8
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <div id="day1Row" class="d-none row stateLive">
+                                        <div class="col mx-5">
+                                            <input class="form-check-input" type="radio" name="first" id="day1Live" checked>
+                                            <label class="form-check-label" for="day1Live">
+                                                Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="first" id="day1NoLive">
+                                            <label class="form-check-label" for="day1NoLive">
+                                                No Live
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <input class="form-check-input" type="radio" name="duringCurrentDay" id="day2">
+                                    <label class="form-check-label" for="day2">
+                                        Miercoles 9
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <div id="day2Row" class="d-none row stateLive">
+                                        <div class="col mx-5">
+                                            <input class="form-check-input" type="radio" name="second" id="day2Live" checked>
+                                            <label class="form-check-label" for="day2Live">
+                                                Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="second" id="day2NoLive">
+                                            <label class="form-check-label" for="day2NoLive">
+                                                No Live
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <input class="form-check-input" type="radio" name="duringCurrentDay" id="day3">
+                                    <label class="form-check-label" for="day3">
+                                        Jueves 10
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <div id="day3Row" class="d-none row stateLive">
+                                        <div class="col mx-5">
+                                            <input class="form-check-input" type="radio" name="third" id="day3Live" checked>
+                                            <label class="form-check-label" for="day3Live">
+                                                Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="third" id="day3NoLive">
+                                            <label class="form-check-label" for="day3NoLive">
+                                                No Live
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-5">
+                                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                                </div>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div id="simulator-days-alert-success" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong> Simulator Days Updated .
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="simulator-days-alert-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="col-md-8 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Simulator Days</h3>
+                        </div>
+                        <div class="card-body">
+
+
+                            <p>form</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 
