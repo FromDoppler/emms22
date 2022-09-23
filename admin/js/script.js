@@ -5,13 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const simulatorForm = document.getElementById('simulator');
     phasesForm.addEventListener('submit', sendDataCurrentPhase);
     simulatorForm.addEventListener('submit', sendDataSimulator);
+    const duringDays = document.querySelectorAll('input[name="duringCurrentDay"]');
+    duringDays.forEach(currentDay => currentDay.addEventListener('change', () => clickDuringDays(currentDay.id)));
+    const radioPhases = document.querySelectorAll('input[name="phase"]');
+    radioPhases.forEach(currentRadioPhase => currentRadioPhase.addEventListener('change', () => clickRadiosPhase(currentRadioPhase.id)));
     checkRadiosPhase();
     getDataSimulator();
 
-
-    const duringDays = document.querySelectorAll('input[name="duringCurrentDay"]');
-    duringDays.forEach(currentDay => currentDay.addEventListener('change', () => clickDuringDays(currentDay.id)));
-
+    function clickRadiosPhase(phase) {
+        document.getElementById('cardCurrentDay').classList.add('d-none');
+        if (phase === "during")
+            document.getElementById('cardCurrentDay').classList.remove('d-none');
+    }
 
     function clickDuringDays(dayNumber) {
         const statesLive = document.querySelectorAll('.stateLive');
@@ -24,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let selectedPhase = document.querySelector('input[name="simulator_phase"]:checked').id;
         const enabled = (document.getElementById('simulatorEnabled').checked) ? 1 : 0;
         selectedPhase = selectedPhase.replace('simulator_', '');
-
         try {
-
             const data = { enabled: enabled, phase: selectedPhase };
             fetch('./../../services/setSimulator.php', {
                 method: 'POST',
@@ -45,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         console.log("error");
                         const success = document.getElementById('simulator-alert-danger');
                         success.classList.remove("d-none")
-
                     }
                 })
                 .catch((error) => {

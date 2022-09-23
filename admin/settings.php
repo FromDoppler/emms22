@@ -147,7 +147,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="col-md-8 mx-auto">
+                <div id="cardCurrentDay" class="col-md-8 mx-auto d-none">
                     <div class="card">
                         <div class="card-header">
                             <h3>Current Days</h3>
