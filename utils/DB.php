@@ -279,6 +279,14 @@ class DB {
         return $result;
     }
 
+    public function getDuringDay()
+    {
+
+        $sql = $this->query("SELECT * from settings_during_days where 1=1");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function updateSimulator($enabled, $phase)
     {
         $phases = array("pre" => 0, "during" => 0, "post" => 0);

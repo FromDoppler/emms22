@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const radioPhases = document.querySelectorAll('input[name="phase"]');
     radioPhases.forEach(currentRadioPhase => currentRadioPhase.addEventListener('change', () => clickRadiosPhase(currentRadioPhase.id)));
     checkRadiosPhase();
+    checkRadiosDuringDays();
     getDataSimulator();
 
     function clickRadiosPhase(phase) {
@@ -52,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         success.classList.remove("d-none")
                     }
                 })
-
         } catch (error) {
             console.log(error);
         }
@@ -113,13 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (resp.ok) {
                         const success = document.getElementById('current-alert-success');
                         success.classList.remove("d-none");
-
                     }
                     else {
                         console.log("error");
                         const success = document.getElementById('current-alert-danger');
                         success.classList.remove("d-none")
-
                     }
                 })
                 .catch((error) => {
@@ -130,6 +128,26 @@ document.addEventListener('DOMContentLoaded', () => {
         catch (e) {
             console.log("No values");
         }
+    }
+
+    function checkRadiosDuringDays() {
+        fetch('../../services/getDuringDays.php', {
+            method: "get",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(resp => resp.json())
+            .then(resp => {
+                document.getElementById('day' + resp.day).checked = true;
+                document.getElementById('day' + resp.day + 'Row').classList.remove('d-none');
+                if (resp.live) {
+                    document.getElementById('day' + resp.day + 'Live').checked = true;
+
+                } else {
+                    document.getElementById('day' + resp.day + 'NoLive').checked = true;
+                }
+            })
     }
 
     function checkRadiosPhase() {
@@ -150,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch((error) => {
                 // Tenemos la respuesta de errores
                 console.log('Algo salio mal: ', error)
-
             });
     }
 
@@ -171,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch((error) => {
                 // Tenemos la respuesta de errores
                 console.log('Algo salio mal: ', error)
-
             });
     }
 });
