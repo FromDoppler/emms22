@@ -7,13 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
     simulatorForm.addEventListener('submit', sendDataSimulator);
     const duringDaysForm = document.getElementById('duringCurrentDays');
     duringDaysForm.addEventListener('submit', sendDataDuringDay);
+    const duringDaysSimulatorForm = document.getElementById('duringSimulatorDays');
+    duringDaysSimulatorForm.addEventListener('submit', sendDataDuringDaySimulator);
     const duringDays = document.querySelectorAll('input[name="duringCurrentDay"]');
     duringDays.forEach(currentDay => currentDay.addEventListener('change', () => clickDuringDays(currentDay.id)));
+    const duringDaysSimulator = document.querySelectorAll('input[name="duringSimulatorDay"]');
+    duringDaysSimulator.forEach(simulatorDay => simulatorDay.addEventListener('change', () => clickDuringDaysSimulator(simulatorDay.id)));
     const radioPhases = document.querySelectorAll('input[name="phase"]');
     radioPhases.forEach(currentRadioPhase => currentRadioPhase.addEventListener('change', () => clickRadiosPhase(currentRadioPhase.id)));
+    const radioPhasesSimulator = document.querySelectorAll('input[name="simulator_phase"]');
+    radioPhasesSimulator.forEach(simulatorRadioPhase => simulatorRadioPhase.addEventListener('change', () => clickRadiosPhaseSimulator(simulatorRadioPhase.id)));
+
+
     checkRadiosPhase();
     checkRadiosDuringDays();
-    getDataSimulator();
+    checkRadiosSimulator();
+    checkRadiosSimulatorDuringDays();
 
     function clickRadiosPhase(phase) {
         document.getElementById('cardCurrentDay').classList.add('d-none');
@@ -21,10 +30,59 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('cardCurrentDay').classList.remove('d-none');
     }
 
+    function clickRadiosPhaseSimulator(phase) {
+        console.log(phase);
+        document.getElementById('cardSimulatorDay').classList.add('d-none');
+        if (phase === "simulator_during")
+            document.getElementById('cardSimulatorDay').classList.remove('d-none');
+    }
+
     function clickDuringDays(dayNumber) {
         const statesLive = document.querySelectorAll('.stateLive');
         statesLive.forEach(sl => sl.classList.add('d-none'));
         document.getElementById(dayNumber + 'Row').classList.remove('d-none');
+    }
+
+
+    function clickDuringDaysSimulator(day) {
+        const dayNumber = day.replace('Simulator', '');
+        const statesLive = document.querySelectorAll('.stateLiveSimulator');
+        statesLive.forEach(sl => sl.classList.add('d-none'));
+        document.getElementById(dayNumber + 'RowSimulator').classList.remove('d-none');
+    }
+
+    function sendDataDuringDaySimulator(e) {
+        e.preventDefault();
+        let selectedDay = document.querySelector('input[name="duringSimulatorDay"]:checked').id;
+        selectedDay = selectedDay.replace('Simulator', '');
+        const stateLive = document.querySelector("input[name='" + selectedDay + "RadiosSimulator']:checked").value;
+        selectedDay = selectedDay.slice(-1);
+        try {
+            const data = { day: selectedDay, live: stateLive }
+            fetch('./../../services/setSimulatorDuringDays.php', {
+                method: "post",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+                .then(resp => resp)
+                .then(resp => {
+                    if (resp.ok) {
+                        const success = document.getElementById('simulator-days-alert-success');
+                        success.classList.remove("d-none");
+                    }
+                    else {
+                        console.log("error");
+                        const success = document.getElementById('simulator-days-alert-danger');
+                        success.classList.remove("d-none")
+                    }
+                })
+        } catch (error) {
+            console.log(error);
+        }
+        //send data fecth
+
     }
     function sendDataDuringDay(e) {
         e.preventDefault();
@@ -150,6 +208,26 @@ document.addEventListener('DOMContentLoaded', () => {
             })
     }
 
+    function checkRadiosSimulatorDuringDays() {
+        fetch('./../../services/getSimulatorDuringDays.php', {
+            method: "get",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(resp => resp.json())
+            .then(resp => {
+                document.getElementById('day' + resp.day + 'Simulator').checked = true;
+                document.getElementById('day' + resp.day + 'RowSimulator').classList.remove('d-none');
+                if (resp.live) {
+                    document.getElementById('day' + resp.day + 'LiveSimulator').checked = true;
+
+                } else {
+                    document.getElementById('day' + resp.day + 'NoLiveSimulator').checked = true;
+                }
+            })
+    }
+
     function checkRadiosPhase() {
         fetch('./../../services/getPhase.php', {
             method: 'GET',
@@ -171,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    function getDataSimulator() {
+    function checkRadiosSimulator() {
         fetch('./../../services/getSimulator.php', {
             method: 'GET',
             headers: {
@@ -184,6 +262,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('simulatorEnabled').checked = true;
                 }
                 document.getElementById('simulator_' + resp.phase).checked = true;
+                if (resp.phase === 'during') {
+                    document.getElementById('cardSimulatorDay').classList.remove('d-none');
+                }
             })
             .catch((error) => {
                 // Tenemos la respuesta de errores

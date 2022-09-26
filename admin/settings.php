@@ -234,31 +234,105 @@
                 </div>
             </div>
             <div class="col">
-                <div id="simulator-days-alert-success" class="alert alert-success alert-dismissible fade show" role="alert">
+                <div id="simulator-days-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
                     <strong>Success!</strong> Simulator Days Updated .
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div id="simulator-days-alert-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <div id="simulator-days-alert-danger" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
                     <strong>Error!</strong>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="col-md-8 mx-auto">
+                <div id="cardSimulatorDay" class="col-md-8 mx-auto d-none">
                     <div class="card">
                         <div class="card-header">
                             <h3>Simulator Days</h3>
                         </div>
                         <div class="card-body">
+                            <form id="duringSimulatorDays">
+                                <div class="form-check mb-2 mx-3">
+                                    <input class="form-check-input" type="radio" name="duringSimulatorDay" id="day1Simulator">
+                                    <label class="form-check-label" for="day1Simulator">
+                                        Martes 8
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <div id="day1RowSimulator" class="d-none row stateLiveSimulator">
+                                        <div class="col mx-5">
+                                            <input class="form-check-input" type="radio" name="day1RadiosSimulator" id="day1NoLiveSimulator" value="0">
+                                            <label class="form-check-label" for="day1NoLiveSimulator">
+                                                No Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day1RadiosSimulator" id="day1LiveSimulator" value="1">
+                                            <label class="form-check-label" for="day1LiveSimulator">
+                                                Live
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <input class="form-check-input" type="radio" name="duringSimulatorDay" id="day2Simulator">
+                                    <label class="form-check-label" for="day2Simulator">
+                                        Miercoles 9
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <div id="day2RowSimulator" class="d-none row stateLiveSimulator">
+                                        <div class="col mx-5">
+                                            <input class="form-check-input" type="radio" name="day2RadiosSimulator" id="day2LiveSimulator" value="1">
+                                            <label class="form-check-label" for="day2LiveSimulator">
+                                                Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day2RadiosSimulator" id="day2NoLiveSimulator" value="0">
+                                            <label class="form-check-label" for="day2NoLiveSimulator">
+                                                No Live
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <input class="form-check-input" type="radio" name="duringSimulatorDay" id="day3Simulator">
+                                    <label class="form-check-label" for="day3Simulator">
+                                        Jueves 10
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2 mx-3">
+                                    <div id="day3RowSimulator" class="d-none row stateLiveSimulator">
+                                        <div class="col mx-5">
+                                            <input class="form-check-input" type="radio" name="day3RadiosSimulator" id="day3LiveSimulator" value="1">
+                                            <label class="form-check-label" for="day3LiveSimulator">
+                                                Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day3RadiosSimulator" id="day3NoLiveSimulator" value="0">
+                                            <label class="form-check-label" for="day3NoLiveSimulator">
+                                                No Live
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-5">
+                                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                                </div>
+                            </form>
 
 
-                            <p>form</p>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
     </main>
 </body>
