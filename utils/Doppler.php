@@ -91,14 +91,13 @@ class Doppler {
             'Content: '.strlen($dataJson)
         );
         $response = json_decode(self::executeCurl($endPointSubscriber, $dataJson, $headers, 'POST'));
-        print_r($response);
         if(isset($response->errors)) :
             foreach($response->errors as $error) :
                 throw new Exception('Doppler: Error '.$error->key. '->'.$error->detail);
             endforeach;
         endif;
         if(isset($response->errorCode)) :
-            throw new Exception('Doppler: Error '.$response->detail);
+            throw new Exception('Doppler: Error ' . $response->detail . ' | errorCode= ' . $response->errorCode);
         endif;
     }
 }

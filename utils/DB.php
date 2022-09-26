@@ -279,12 +279,25 @@ class DB {
         return $result;
     }
 
+    public function getDuringDay()
+    {
+
+        $sql = $this->query("SELECT * from settings_during_days where 1=1");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function updateSimulator($enabled, $phase)
     {
         $phases = array("pre" => 0, "during" => 0, "post" => 0);
         $phases[$phase] = 1;
 
         $this->query("UPDATE settings_simulator SET enabled =" . $enabled . ", pre =" . $phases['pre'] . ", during =" . $phases['during'] . ", post=" . $phases['post'] . " where 1=1");
+    }
+
+    public function updateDuringDays($day, $live)
+    {
+        $this->query("UPDATE settings_during_days SET day =" . $day . ", live =" . $live . " where 1=1");
     }
 
     /******* log errors */
