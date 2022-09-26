@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function clickRadiosPhaseSimulator(phase) {
-        console.log(phase);
         document.getElementById('cardSimulatorDay').classList.add('d-none');
         if (phase === "simulator_during")
             document.getElementById('cardSimulatorDay').classList.remove('d-none');
