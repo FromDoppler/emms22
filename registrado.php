@@ -13,6 +13,8 @@ try {
     SecurityHelper::isSubmitValid(ALLOW_IPS);
     $response = processPhaseToShow($ip);
     $simulated = $response['simulated'];
+    $dayDuring  = $response['day'];
+    $liveDayDuring  = $response['live'];
     require_once($_SERVER['DOCUMENT_ROOT'] . "/stages/$response[phaseToShow]/registrado.php");
 } catch (Exception $e) {
     processError("Index main", $e->getMessage(), []);

@@ -23,5 +23,6 @@ function processPhaseToShow($ip)
     $simulator = $db->getSimulator()[0];
     $enabled = array_shift($simulator);
     $phaseToShow =  ($enabled && in_array($ip, ALLOW_IPS)) ? array_search(1, $simulator) : array_search(1, $phases);
-    return array('phaseToShow' => $phaseToShow, 'simulated' => $enabled);
+    $duringDaySistem = ($enabled && in_array($ip, ALLOW_IPS)) ? $db->getSimulatorDuringDay()[0] : $db->getDuringDay()[0];
+    return array('phaseToShow' => $phaseToShow, 'simulated' => $enabled, 'day' => $duringDaySistem['day'], 'live' => $duringDaySistem['live']);
 }
