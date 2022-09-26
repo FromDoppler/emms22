@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedDay = selectedDay.slice(-1);
         try {
             const data = { day: selectedDay, live: stateLive }
-            fetch('../../services/setDuringDays.php', {
+            fetch('./../../services/setDuringDays.php', {
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function checkRadiosDuringDays() {
-        fetch('../../services/getDuringDays.php', {
+        fetch('./../../services/getDuringDays.php', {
             method: "get",
             headers: {
                 'Content-Type': 'application/json'
