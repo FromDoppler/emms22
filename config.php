@@ -1,6 +1,6 @@
 <?php
 
-$ALLOW_IPS = array('::1', '200.5.229.58', '200.5.253.210', '127.0.0.1');
+$ALLOW_IPS = array('::1', '200.5.229.58', '200.5.253.210', '127.0.0.1', '172.23.0.1');
 $ACCOUNT_DOPPLER = getenv("ACCOUNT_DOPPLER");
 $API_KEY_DOPPLER = getenv("API_KEY_DOPPLER");
 $ACCOUNT_RELAY = getenv("ACCOUNT_RELAY");
@@ -46,5 +46,22 @@ if (!defined('DB_NAME')) define('DB_NAME', $DB_NAME);
 if (!defined('DB_USER')) define('DB_USER', $DB_USER);
 if (!defined('DB_PASSWORD')) define('DB_PASSWORD', $DB_PASSWORD);
 if (!defined('DB_HOST')) define('DB_HOST', $DB_HOST);
+
+#During Days System
+$duringDaysArray = array(
+    "d1" => array(
+        "title" => "Charla dia 1",
+        "video" => "video1"
+    ),
+    "d2" => array(
+        "title" => "Charla dia 2",
+        "video" => "video2"
+    ),
+    "d3" => array(
+        "title" => "Charla dia 3",
+        "video" => "video3"
+    ),
+);
+
 
 
