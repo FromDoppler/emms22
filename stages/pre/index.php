@@ -69,7 +69,11 @@ require_once('././utils/DB.php');
 							<li>SPEAKERS INTERNACIONALES</li>
 							<li>CAPACITACI&Oacute;N E INSPIRACI&Oacute;N</li>
 						</ul>
-						<span>Súmate al EMMS y accede además, a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</span>
+						<span><strong>Súmate al EMMS y accede además, a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</strong></span>
+                        <p class="emms22__hero-pre-event__intro__info__add">
+                            <img src="../../common/html/<?= VERSION ?>/img/icon-hotel.png" alt="icon-hotel">
+                            <img src="../../common/html/<?= VERSION ?>/img/icon-bell.png" alt="icon-bell">
+                            <strong>Con tu registro, estás participando por una estadía de fin de semana para 2 personas.</strong> Válido en México, Argentina, Uruguay, Chile, Perú, Colombia, Ecuador y España. Mira Términos y Condiciones en <a href="../../common/html/<?= VERSION ?>/img/Sorteo-Doppler-Terminos-Condiciones.pdf" download="Sorteo Doppler Terminos y Condiciones.pdf">link</a>.</p>
 					</div>
 					<ul class="emms22__hero-pre-event__intro__counter">
 						<li>

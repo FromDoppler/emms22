@@ -84,7 +84,7 @@
 }
 
 .emms22__hero-pre-event__intro__counter{
-    margin: 84px 0 50px 0;
+    margin: 54px 0 50px 0;
 }
 
 .emms22__hero-pre-event__intro__counter li{
@@ -181,6 +181,33 @@
     display: block;
     margin: 48px 0 0 0;
     animation-delay: 1.1s;
+}
+
+p.emms22__hero-pre-event__intro__info__add{
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #fff;
+    margin: 26px 0 0 0;
+    max-width: 500px;
+}
+
+p.emms22__hero-pre-event__intro__info__add img{
+    width: 15px;
+    margin: 0 4px 0 0;
+}
+
+p.emms22__hero-pre-event__intro__info__add strong{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+p.emms22__hero-pre-event__intro__info__add a{
+    color: #33AD73;
+}
+
+p.emms22__hero-pre-event__intro__info__add a:hover{
+    text-decoration: underline;
 }
 
 #contentEarlyForm{
@@ -501,6 +528,11 @@
     .emms22__hero-pre-event__intro__info span{
         font-size: 16px;
         line-height: 22px;
+    }
+
+    p.emms22__hero-pre-event__intro__info__add{
+        font-size: 13px;
+        margin: 47px 0 0 0;
     }
 
     .emms22__pre-event__container-form{
