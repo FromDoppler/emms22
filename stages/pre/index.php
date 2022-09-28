@@ -120,16 +120,19 @@ require_once('././utils/DB.php');
 										<label for="industry-input">Industria *</label>
 										<select name="industry-input" class="required" autocomplete="off">
 											<option disabled selected value>Elige una industria</option>
+											<option value="Agencias-de-comunicacion">Agencia de Comunicación</option>
 											<option value="Agencias-de-Empleo">Agencias de Empleo</option>
 											<option value="Alimentaci&oacute;n-Consumo-Masivo">Alimentaci&oacute;n / Consumo Masivo</option>
 											<option value="Autom&oacute;viles">Autom&oacute;viles</option>
 											<option value="Banca-Finanzas-Seguros">Banca / Finanzas / Seguros</option>
 											<option value="Belleza-Cosm&eacute;tica">Belleza / Cosm&eacute;tica</option>
+											<option value="Consultor">Consultor</option>
 											<option value="Educaci&oacute;n">Educaci&oacute;n</option>
 											<option value="Entretenimiento">Entretenimiento</option>
 											<option value="Industria-Fabricaci&oacute;n">Industria / Fabricaci&oacute;n</option>
 											<option value="Inform&aacute;tica-Electr&oacute;nica">Inform&aacute;tica / Electr&oacute;nica</option>
 											<option value="Medios-de-Comunicaci&oacute;n">Medios de Comunicaci&oacute;n</option>
+											<option value="Publicidad">Publicidad </option>
 											<option value="Real-Estate">Real Estate</option>
 											<option value="Retail">Retail</option>
 											<option value="Ropa-Accesorios-Art&iacute;culos Deportivos">Ropa / Accesorios / Art&iacute;culos Deportivos</option>
