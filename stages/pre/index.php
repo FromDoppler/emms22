@@ -39,7 +39,7 @@ require_once('././utils/DB.php');
 					<a href="./index.php"><img src="../../common/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<div class="emms22__header__warning emms22__fade-top">
-					<a>¡ASEGURA TU CUPO! REGÍSTRATE GRATIS AHORA</a>
+					<a>&iexcl;ASEGURA TU CUPO! REG&Iacute;STRATE GRATIS AHORA</a>
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -69,11 +69,11 @@ require_once('././utils/DB.php');
 							<li>SPEAKERS INTERNACIONALES</li>
 							<li>CAPACITACI&Oacute;N E INSPIRACI&Oacute;N</li>
 						</ul>
-						<span><strong>Súmate al EMMS y accede además, a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</strong></span>
+						<span><strong>S&uacute;mate al EMMS y accede adem&aacute;s, a E-books, C&aacute;psulas educativas, descuentos en herramientas &iexcl;y mucho m&aacute;s!</strong></span>
                         <p class="emms22__hero-pre-event__intro__info__add">
                             <img src="../../common/html/<?= VERSION ?>/img/icon-hotel.png" alt="icon-hotel">
                             <img src="../../common/html/<?= VERSION ?>/img/icon-bell.png" alt="icon-bell">
-                            <strong>Con tu registro, estás participando por una estadía de fin de semana para 2 personas.</strong> Válido en México, Argentina, Uruguay, Chile, Perú, Colombia, Ecuador y España. Mira Términos y Condiciones en <a href="../../common/html/<?= VERSION ?>/img/Sorteo-Doppler-Terminos-Condiciones.pdf" download="Sorteo Doppler Terminos y Condiciones.pdf">link</a>.</p>
+                            <strong>Con tu registro, est&aacute;s participando por una estad&iacute;a de fin de semana para 2 personas.</strong> V&aacute;lido en M&eacute;xico, Argentina, Uruguay, Chile, Per&uacute;, Colombia, Ecuador y Espa&ntilde;a. Mira T&eacute;rminos y Condiciones en <a href="../../common/html/<?= VERSION ?>/img/Sorteo-Doppler-Terminos-Condiciones.pdf" download="Sorteo Doppler Terminos y Condiciones.pdf">link</a>.</p>
 					</div>
 					<ul class="emms22__hero-pre-event__intro__counter">
 						<li>
@@ -120,19 +120,17 @@ require_once('././utils/DB.php');
 										<label for="industry-input">Industria *</label>
 										<select name="industry-input" class="required" autocomplete="off">
 											<option disabled selected value>Elige una industria</option>
-											<option value="Agencias-de-comunicacion">Agencia de Comunicación</option>
+											<option value="Agencias-de-comunicacion-Publicidad-Consultor">Agencia de Comunicaci&oacute;n / Publicidad / Consultor</option>
 											<option value="Agencias-de-Empleo">Agencias de Empleo</option>
 											<option value="Alimentaci&oacute;n-Consumo-Masivo">Alimentaci&oacute;n / Consumo Masivo</option>
 											<option value="Autom&oacute;viles">Autom&oacute;viles</option>
 											<option value="Banca-Finanzas-Seguros">Banca / Finanzas / Seguros</option>
 											<option value="Belleza-Cosm&eacute;tica">Belleza / Cosm&eacute;tica</option>
-											<option value="Consultor">Consultor</option>
 											<option value="Educaci&oacute;n">Educaci&oacute;n</option>
 											<option value="Entretenimiento">Entretenimiento</option>
 											<option value="Industria-Fabricaci&oacute;n">Industria / Fabricaci&oacute;n</option>
 											<option value="Inform&aacute;tica-Electr&oacute;nica">Inform&aacute;tica / Electr&oacute;nica</option>
 											<option value="Medios-de-Comunicaci&oacute;n">Medios de Comunicaci&oacute;n</option>
-											<option value="Publicidad">Publicidad </option>
 											<option value="Real-Estate">Real Estate</option>
 											<option value="Retail">Retail</option>
 											<option value="Ropa-Accesorios-Art&iacute;culos Deportivos">Ropa / Accesorios / Art&iacute;culos Deportivos</option>
@@ -197,8 +195,8 @@ require_once('././utils/DB.php');
 		<!-- CTA Box -->
 
 		<div class="emms22__pre-event__ctabox">
-			<h2 class="emms22__fade-in">En breve confirmaremos nuevos Speakers. ¡Conócelos antes que nadie!</h2>
-			<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">APÚNTATE GRATIS</button>
+			<h2 class="emms22__fade-in">En breve confirmaremos nuevos Speakers. &iexcl;Con&oacute;celos antes que nadie!</h2>
+			<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">AP&Uacute;NTATE GRATIS</button>
 			<div id="contenido-exclusivo"></div>
 		</div>
 
@@ -208,8 +206,8 @@ require_once('././utils/DB.php');
 		<div class="emms22__pre-event__premium-content">
 			<div class="emms22__container--lg">
 				<div class="emms22__pre-event__premium-content__text emms22__fade-in">
-					<h2>Súmate al EMMS y desbloquea contenido Premium</h2>
-					<p>Descubre todo lo que nuestros Sponsors han preparado para ti y potencia tu negocio con capacitaciones audiovisuales, contenidos descargables, certificaciones y mucho más.</p>
+					<h2>S&uacute;mate al EMMS y desbloquea contenido Premium</h2>
+					<p>Descubre todo lo que nuestros Sponsors han preparado para ti y potencia tu negocio con capacitaciones audiovisuales, contenidos descargables, certificaciones y mucho m&aacute;s.</p>
 					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">ACCEDE AHORA</button>
 				</div>
 				<div class="emms22__pre-event__premium-content__image emms22__fade-in">
@@ -228,40 +226,40 @@ require_once('././utils/DB.php');
 						<div class="emms22__pre-event__experiences__carousel__item__card">
 							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
 							<h3>Tim Ash <span>Speaker en el EMMS 2018</span></h3>
-							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfruté mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
+							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfrut&eacute; mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
 							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-purna-virji.png" alt="Tim Ash">
 							<h3>Purna Virji <span>Speaker en el EMMS 2018</span></h3>
-							<p>“<strong>¡Me ha encantado formar parte del EMMS!</strong> Nuevamente gracias por haberme tenido en consideración.”</p>
+							<p>“<strong>&iexcl;Me ha encantado formar parte del EMMS!</strong> Nuevamente gracias por haberme tenido en consideraci&oacute;n.”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
 							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-andres-silva.png" alt="Tim Ash">
-							<h3>Andrés Silva Arancibia <span>Speaker en el EMMS 2017</span></h3>
-							<p>“Ser speaker en el EMMS 2017 fue una experiencia notable. En menos de 45 minutos recibí más de 2500 menciones positivas en Twitter. ¡Lo recomiendo mucho!”</p>
+							<h3>Andr&eacute;s Silva Arancibia <span>Speaker en el EMMS 2017</span></h3>
+							<p>“Ser speaker en el EMMS 2017 fue una experiencia notable. En menos de 45 minutos recib&iacute; m&aacute;s de 2500 menciones positivas en Twitter. &iexcl;Lo recomiendo mucho!”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
 							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-nico-leoni.png" alt="Tim Ash">
 							<h3>Nico Leoni <span>Speaker en el EMMS 2019</span></h3>
-							<p>“Llevo varios años participando en conferencias  y eventos internacionales. Sin lugar a dudas, el EMMS es <strong>el mejor encuentro del mundo digital.</strong>”</p>
+							<p>“Llevo varios a&ntilde;os participando en conferencias  y eventos internacionales. Sin lugar a dudas, el EMMS es <strong>el mejor encuentro del mundo digital.</strong>”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
 							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-sebastian-cuenca.png" alt="Tim Ash">
-							<h3>Sebastián Cuenca <span>Moderador en el EMMS 2019</span></h3>
-							<p>“El EMMS fue un gran paso en mi carrera que  me permitió llegar a <strong>nuevas audiencias</strong> y dar cursos en otros países. Es un evento que brinda información de valor y que recomiendo por la  excelencia del equipo y la organización.” </p>
+							<h3>Sebasti&aacute;n Cuenca <span>Moderador en el EMMS 2019</span></h3>
+							<p>“El EMMS fue un gran paso en mi carrera que  me permiti&oacute; llegar a <strong>nuevas audiencias</strong> y dar cursos en otros pa&iacute;ses. Es un evento que brinda informaci&oacute;n de valor y que recomiendo por la  excelencia del equipo y la organizaci&oacute;n.” </p>
 						</div>
 					</li>
 				</ul>
 				<div class="emms22__pre-event__experiences__btn">
-					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">INSCRÍBETE HOY</button>
+					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">INSCR&Iacute;BETE HOY</button>
 				</div>
 		</div>
 
@@ -298,7 +296,7 @@ require_once('././utils/DB.php');
 					</ul>
 				</div>
 				<div class="emms22__pre-event__allies__contact emms22__fade-in">
-					<p>¿Quieres ser aliado del EMMS 2022? Escríbenos a <a href="mailto:partners@fromdoppler.com" target="_blank">partners@fromdoppler.com</a></p>
+					<p>&iquest;Quieres ser aliado del EMMS 2022? Escr&iacute;benos a <a href="mailto:partners@fromdoppler.com" target="_blank">partners@fromdoppler.com</a></p>
 				</div>
 			</div>
 		</div>
@@ -376,16 +374,16 @@ require_once('././utils/DB.php');
 							<p>Doppler te informa que los datos de car&aacute;cter personal que nos proporciones al rellenar el presente formulario ser&aacute;n tratados por Doppler LLC como responsable de esta Web.<br>
 								<strong>Finalidad: </strong>Dar de alta esta suscripci&oacute;n para enviar newsletters con informaci&oacute;n y promociones de productos o servicios propios o de nuestros aliados.<br>
 								<strong>Legitimaci&oacute;n: </strong>Consentimiento del interesado. <br>
-								<strong>Destinatarios: </strong>Tus datos serán guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creación de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integración de apps.<br>
-								<strong>Información adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Política de Privacidad</a> de Doppler encontrarás información adicional
-								sobre la recopilación y el uso de su información personal por parte de Doppler, incluida
-								información sobre acceso, conservación, rectificación, eliminación, seguridad,
+								<strong>Destinatarios: </strong>Tus datos ser&aacute;n guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creaci&oacute;n de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integraci&oacute;n de apps.<br>
+								<strong>Informaci&oacute;n adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Pol&iacute;tica de Privacidad</a> de Doppler encontrar&aacute;s informaci&oacute;n adicional
+								sobre la recopilaci&oacute;n y el uso de su informaci&oacute;n personal por parte de Doppler, incluida
+								informaci&oacute;n sobre acceso, conservaci&oacute;n, rectificaci&oacute;n, eliminaci&oacute;n, seguridad,
 								transferencias
 								transfronterizas y otros temas. <br>
 							</p>
 						</div>
 						<div class="emms22__home__btn">
-							<button class="emms22__button emms22__fade-in">SÚMATE AHORA</button>
+							<button class="emms22__button emms22__fade-in">S&Uacute;MATE AHORA</button>
 						</div>
 					</div>
 					<?php include_once('././common/components/commonUtms.php') ?>
@@ -410,8 +408,8 @@ require_once('././utils/DB.php');
 				</ul>
 			</div>
 			<div class="emms22__footer__actions emms22__fade-in">
-				<a onclick="OneTrust.ToggleInfoDisplay()" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
-				<a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank">Políticas de privacidad y legales</a>
+				<a onclick="OneTrust.ToggleInfoDisplay()" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuraci&oacute;n de Cookies.</a>
+				<a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank">Pol&iacute;ticas de privacidad y legales</a>
 			</div>
 		</footer>
 
