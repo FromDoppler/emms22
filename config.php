@@ -51,15 +51,18 @@ if (!defined('DB_HOST')) define('DB_HOST', $DB_HOST);
 $duringDaysArray = array(
     "d1" => array(
         "title" => "Charla dia 1",
-        "video" => "video1"
+        "video" => "Fxn-toxKKIQ",
+        "hashtag" => "#EMMS22DIA1"
     ),
     "d2" => array(
         "title" => "Charla dia 2",
-        "video" => "video2"
+        "video" => "video2",
+        "hashtag" => "#EMMS22DIA2"
     ),
     "d3" => array(
         "title" => "Charla dia 3",
-        "video" => "video3"
+        "video" => "video3",
+        "hashtag" => "#EMMS22DIA3"
     ),
 );
 
