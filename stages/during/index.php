@@ -62,9 +62,15 @@ require_once('././utils/DB.php');
 			<div class="emms22__container--lg">
 				<div class="emms22__hero-pre-event__intro">
 					<div class="emms22__hero-pre-event__intro__info">
+                    <?php
+                    if ($liveDayDuring == 2) :
+                    ?>
                         <div class="emms22__hero-during__streaming-live emms22__hero-during__streaming-live--animated">
                             <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO</p>
                         </div>
+                    <?php
+                    endif;
+                    ?>
 						<p>EVENTO ONLINE Y GRATUITO - DEL 8 AL 10 DE NOVIEMBRE</p>
 						<h1>&iexcl;Vuelve el EMMS!</h1>
 						<ul>

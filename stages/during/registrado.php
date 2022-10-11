@@ -52,9 +52,15 @@ require_once('././utils/DB.php');
 
 		<div class="emms22__hero-during">
             <div class="emms22__container--lg">
-                <div class="emms22__hero-during__streaming-live">
-                    <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO</p>
-                </div>
+                <?php
+                if ($liveDayDuring == 2) :
+                ?>
+                    <div class="emms22__hero-during__streaming-live">
+                        <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO</p>
+                    </div>
+                <?php
+                endif;
+                ?>
                 <div class="emms22__hero-during__streaming-container">
                     <div class="emms22__hero-during__streaming">
                         <div class="emms22__cropper-cont-16-9">
