@@ -198,11 +198,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(resp => {
                 document.getElementById('day' + resp.day).checked = true;
                 document.getElementById('day' + resp.day + 'Row').classList.remove('d-none');
-                if (resp.live) {
+                if (resp.live == 2) {
                     document.getElementById('day' + resp.day + 'Live').checked = true;
-
-                } else {
+                }
+                else if (resp.live == 0) {
                     document.getElementById('day' + resp.day + 'NoLive').checked = true;
+                } else {
+                    document.getElementById('day' + resp.day + 'Transition').checked = true;
                 }
             })
     }
@@ -218,11 +220,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(resp => {
                 document.getElementById('day' + resp.day + 'Simulator').checked = true;
                 document.getElementById('day' + resp.day + 'RowSimulator').classList.remove('d-none');
-                if (resp.live) {
+                if (resp.live == 2) {
                     document.getElementById('day' + resp.day + 'LiveSimulator').checked = true;
 
-                } else {
+                } else if (resp.live == 0) {
                     document.getElementById('day' + resp.day + 'NoLiveSimulator').checked = true;
+                } else {
+                    document.getElementById('day' + resp.day + 'TransitionSimulator').checked = true;
                 }
             })
     }
