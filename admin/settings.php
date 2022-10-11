@@ -96,7 +96,7 @@
                 <div class="col-md-8 mx-auto">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Simulador</h3>
+                            <h3>Simulador Phase</h3>
                         </div>
                         <div class="card-body">
                             <form id="simulator" method="post">
@@ -153,6 +153,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Current Days</h3>
+                            <label>(Phase During)</label>
                         </div>
                         <div class="card-body">
                             <form id="duringCurrentDays">
@@ -163,15 +164,21 @@
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
-                                    <div id="day1Row" class="d-none row stateLive">
-                                        <div class="col mx-5">
+                                    <div id="day1Row" class="d-none row stateLive mx-5">
+                                        <div class="col">
                                             <input class="form-check-input" type="radio" name="day1Radios" id="day1NoLive" value="0">
                                             <label class="form-check-label" for="day1NoLive">
                                                 No Live
                                             </label>
                                         </div>
                                         <div class="col">
-                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1Live" value="1">
+                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1Transition" value="1">
+                                            <label class="form-check-label" for="day1Transition">
+                                                Transition
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1Live" value="2">
                                             <label class="form-check-label" for="day1Live">
                                                 Live
                                             </label>
@@ -185,11 +192,17 @@
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
-                                    <div id="day2Row" class="d-none row stateLive">
-                                        <div class="col mx-5">
-                                            <input class="form-check-input" type="radio" name="day2Radios" id="day2Live" value="1">
+                                    <div id="day2Row" class="d-none row stateLive mx-5">
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day2Radios" id="day2Live" value="2">
                                             <label class="form-check-label" for="day2Live">
                                                 Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day2Radios" id="day2Transition" value="1">
+                                            <label class="form-check-label" for="day2Transition">
+                                                Transition
                                             </label>
                                         </div>
                                         <div class="col">
@@ -207,11 +220,17 @@
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
-                                    <div id="day3Row" class="d-none row stateLive">
-                                        <div class="col mx-5">
-                                            <input class="form-check-input" type="radio" name="day3Radios" id="day3Live" value="1">
+                                    <div id="day3Row" class="d-none row stateLive mx-5">
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day3Radios" id="day3Live" value="2">
                                             <label class="form-check-label" for="day3Live">
                                                 Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day3Radios" id="day3Transition" value="1">
+                                            <label class="form-check-label" for="day3Transition">
+                                                Transition
                                             </label>
                                         </div>
                                         <div class="col">
@@ -250,6 +269,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Simulator Days</h3>
+                            <label>(Phase During)</label>
                         </div>
                         <div class="card-body">
                             <form id="duringSimulatorDays">
@@ -260,15 +280,21 @@
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
-                                    <div id="day1RowSimulator" class="d-none row stateLiveSimulator">
-                                        <div class="col mx-5">
+                                    <div id="day1RowSimulator" class="d-none row stateLiveSimulator mx-5">
+                                        <div class="col">
                                             <input class="form-check-input" type="radio" name="day1RadiosSimulator" id="day1NoLiveSimulator" value="0">
                                             <label class="form-check-label" for="day1NoLiveSimulator">
                                                 No Live
                                             </label>
                                         </div>
                                         <div class="col">
-                                            <input class="form-check-input" type="radio" name="day1RadiosSimulator" id="day1LiveSimulator" value="1">
+                                            <input class="form-check-input" type="radio" name="day1RadiosSimulator" id="day1TransitionSimulator" value="1">
+                                            <label class="form-check-label" for="day1TransitionSimulator">
+                                                Transition
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day1RadiosSimulator" id="day1LiveSimulator" value="2">
                                             <label class="form-check-label" for="day1LiveSimulator">
                                                 Live
                                             </label>
@@ -282,11 +308,17 @@
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
-                                    <div id="day2RowSimulator" class="d-none row stateLiveSimulator">
-                                        <div class="col mx-5">
-                                            <input class="form-check-input" type="radio" name="day2RadiosSimulator" id="day2LiveSimulator" value="1">
+                                    <div id="day2RowSimulator" class="d-none row stateLiveSimulator mx-5">
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day2RadiosSimulator" id="day2LiveSimulator" value="2">
                                             <label class="form-check-label" for="day2LiveSimulator">
                                                 Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day2RadiosSimulator" id="day2TransitionSimulator" value="1">
+                                            <label class="form-check-label" for="day2TransitionSimulator">
+                                                Transition
                                             </label>
                                         </div>
                                         <div class="col">
@@ -304,11 +336,17 @@
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 mx-3">
-                                    <div id="day3RowSimulator" class="d-none row stateLiveSimulator">
-                                        <div class="col mx-5">
-                                            <input class="form-check-input" type="radio" name="day3RadiosSimulator" id="day3LiveSimulator" value="1">
+                                    <div id="day3RowSimulator" class="d-none row stateLiveSimulator mx-5">
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day3RadiosSimulator" id="day3LiveSimulator" value="2">
                                             <label class="form-check-label" for="day3LiveSimulator">
                                                 Live
+                                            </label>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-check-input" type="radio" name="day3RadiosSimulator" id="day3TransitionSimulator" value="1">
+                                            <label class="form-check-label" for="day3TransitionSimulator">
+                                                Transition
                                             </label>
                                         </div>
                                         <div class="col">

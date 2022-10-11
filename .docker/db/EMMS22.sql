@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Sep 26, 2022 at 06:15 PM
+-- Generation Time: Oct 11, 2022 at 02:54 PM
 -- Server version: 8.0.29
 -- PHP Version: 8.0.19
 
@@ -286,7 +286,7 @@ CREATE TABLE `registered` (
 DROP TABLE IF EXISTS `settings_during_days`;
 CREATE TABLE `settings_during_days` (
   `day` int NOT NULL,
-  `live` tinyint NOT NULL
+  `live` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
@@ -294,7 +294,7 @@ CREATE TABLE `settings_during_days` (
 --
 
 INSERT INTO `settings_during_days` (`day`, `live`) VALUES
-(1, 1);
+(3, 1);
 
 -- --------------------------------------------------------
 
@@ -335,7 +335,7 @@ CREATE TABLE `settings_simulator` (
 --
 
 INSERT INTO `settings_simulator` (`enabled`, `pre`, `during`, `post`) VALUES
-(1, 0, 1, 0);
+(0, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -346,7 +346,7 @@ INSERT INTO `settings_simulator` (`enabled`, `pre`, `during`, `post`) VALUES
 DROP TABLE IF EXISTS `settings_simulator_during_days`;
 CREATE TABLE `settings_simulator_during_days` (
   `day` int NOT NULL,
-  `live` tinyint NOT NULL
+  `live` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
@@ -354,7 +354,7 @@ CREATE TABLE `settings_simulator_during_days` (
 --
 
 INSERT INTO `settings_simulator_during_days` (`day`, `live`) VALUES
-(3, 1);
+(1, 1);
 
 -- --------------------------------------------------------
 
