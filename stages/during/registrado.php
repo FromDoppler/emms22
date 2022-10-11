@@ -96,6 +96,7 @@ require_once('././utils/DB.php');
 
 		<!-- Registered Premium content -->
 
+        <div id="contenido-exclusivo"></div>
 		<div class="emms22__pre-event__registered-premium-content">
 			<h2>Ya puedes acceder a material exclusivo para potenciar su estrategia de Marketing Digital</h2>
 			<div class="emms22__container--lg">

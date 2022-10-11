@@ -172,6 +172,7 @@ require_once('././utils/DB.php');
 
 		<!-- Premium content -->
 
+        <div id="contenido-exclusivo"></div>
 		<div class="emms22__pre-event__premium-content">
 			<div class="emms22__container--lg">
 				<div class="emms22__pre-event__premium-content__text emms22__fade-in">
