@@ -276,7 +276,7 @@
 
 .emms22__pre-event__conferences {
     background: #310e44;
-    padding-bottom: 4rem;
+    padding: 114px 0;
 }
 
 .emms22__container--conferences--lg {
@@ -299,54 +299,74 @@
 .emms22__conferences__wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 }
 
 .emms22__conferences__content {
     text-align: center;
-    margin: auto;
+    margin: 0 auto 50px auto;
 }
 .emms22__conferences__content h2 {
     font-size: 59px;
     line-height: 59px;
     font-weight: 700;
     color: #ffffff;
-    padding: 0 6rem;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .emms22__conferences__content p {
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
-    padding: 0 11rem;
+    margin: 30px auto 0 auto;
+    max-width: 620px;
 }
 
 .emms22__conferences__cards img {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    transition-duration: .3s;
 }
 
 .emms22__conferences__cards {
     display: flex;
     flex-direction: column;
-    padding-top: 3rem;
+    max-width: 300px;
+    padding: 0 18px;
 }
 .emms22__conferences__cards h4 {
-    padding-top: 1rem;
     color: #ffffff;
+    margin: 35px 0;
 }
 .emms22__conferences__cards p {
     color: #ffffff;
+    margin: 0;
 }
 
-.emms22__conferences__cards a {
-    margin-top: auto;
+.emms22__conferences__cards span {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    color: #33ad73;
+    margin: 35px 0 0 0;
+    display: block;
+    transition-duration: .3s;
+}
+
+.emms22__conferences__cards a:hover img {
+    opacity: .8;
+    transition-duration: .3s;
+}
+
+.emms22__conferences__cards a:hover span{
+    text-decoration: underline;
+    transition-duration: .3s;
 }
 
 .emms22__conferences__cards__container {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .emms22__conferences__first__card__container {
@@ -363,18 +383,6 @@
 .emms22__conferences__content__cards.emms22__show-mb{
     display: none;
   }
-
-.emms22__conferences__cards {
-    max-width: 300px;
-}
-
-.emms22__conferences__cards a,
-.emms22__conferences__first__card__text a {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 22px;
-    color: #33ad73;
-}
 
 .emms22__conferences__cards a:hover,
 .emms22__conferences__first__card__text a:hover {
@@ -417,11 +425,7 @@
 }
 
 @media only screen and (max-width: 898px) {
-    .emms22__conferences__wrapper {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-    }
+
     .emms22__conferences__first__card__content {
         display: flex;
         flex-direction: column;
@@ -487,14 +491,14 @@
         width: 100%;
     }
 
-    .emms22__conferences__cards__container{
-        width: 100%;
-        padding: 0 0 80px 0;
-    }
-
     .emms22__conferences__cards{
         max-width: initial;
         width: 100%;
+        margin: 0 0 60px;
+    }
+
+    .emms22__conferences__cards:last-child{
+        margin: 0;
     }
 
     .emms22__conferences__cards img{
@@ -527,7 +531,7 @@
 
 @media (max-width: 620px) {
     .emms22__pre-event__conferences {
-        padding-bottom: 1rem;
+        padding: 60px 0;
     }
     .emms22__conferences__content h2 {
         font-size: 32px;
