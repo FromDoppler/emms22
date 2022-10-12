@@ -241,6 +241,40 @@ require_once('././utils/DB.php');
         </section>
 
 
+        <!-- Section conferences -->
+		<section class="emms22__pre-event__conferences">
+			<div class="emms22__container--conferences--md emms22__fade-in">
+				<div class="emms22__conferences__wrapper">
+					<div class="emms22__conferences__content emms22__fade-in">
+						<h2>Conferencias exclusivas de nuestros Media Partners</h2>
+						<p>Los siguientes expertos comparten contigo las últimas tendencias y estrategias en Marketing Digital para que pongas en práctica ahora mismo en tu negocio.</p>
+                        <p>¡Capacítate con EMMS 2022!</p>
+					</div>
+					<div class="emms22__conferences__cards__container">
+						<div class="emms22__conferences__content__cards">
+							<div class="emms22__conferences__cards emms22__fade-in">
+                                <a href="https://youtu.be/vvNaes-2Hic" target="_blank" rel="noopener">
+                                    <img class="lazyload" loading="lazy" data-src="common/html/<?= VERSION ?>/img/capsules/portada-capsula-todoluminosos.png" alt="Conferencias exclusivas">
+                                    <h4>CRO: La metodología que optimiza la rentabilidad de tu negocio</h4>
+                                    <p>Duración: 00:14:45</p>
+                                    <span>¡No te lo pierdas!</span>
+                                </a>
+							</div>
+							<div class="emms22__conferences__cards emms22__fade-in">
+                                <a href="https://youtu.be/N_8Gu28K6hQ" target="_blank" rel="noopener">
+                                    <img class="lazyload" loading="lazy" data-src="common/html/<?= VERSION ?>/img/capsules/portada-capsula-mujeresqueemprenden.png" alt="Conferencias exclusivas">
+                                    <h4>Cómo armar la estrategia comercial de tu emprendimiento</h4>
+                                    <p>Duración: 00:07:57</p>
+                                    <span>¡No te lo pierdas!</span>
+                                </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
         <!-- Footer -->
 
         <footer class="emms22__footer">
