@@ -93,6 +93,9 @@ a {
   }
 }
 
+
+/* Button */
+
 .emms22__button {
   font-family: Proxima-Nova;
   font-size: 18px;
@@ -123,6 +126,9 @@ a {
     }
 }
 
+
+/* Show / Hide */
+
 .emms22__show-mb{
   display: none;
 }
@@ -142,6 +148,7 @@ a {
 }
 
 
+/* fadeInJs */
 
 .fadeInJs {
     animation: fadeInAnimation ease 3s;
@@ -159,6 +166,7 @@ a {
 }
 
 
+/* Proportional divs */
 
 .emms22__cropper-cont-16-9 {
 	width: 100%;
@@ -184,4 +192,94 @@ a {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+
+/* Share networks */
+
+.emms22__share{
+    position: fixed;
+    right: 0;
+    top: 300px;
+    z-index: 1;
+}
+
+.emms22__share a{
+    width: 47px;
+    height: 42px;
+    background: #BD7AFF;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.emms22__share a.emms22__share__open-list{
+    position: relative;
+    z-index: 2;
+}
+
+.emms22__share a.emms22__share--active,
+.emms22__share a.emms22__share--active:hover{
+    background: #8C6698;
+}
+
+.emms22__share a:hover{
+    background: #9E69DC;
+    transition-duration: .2s;
+}
+
+.emms22__share__list{
+    display: none;
+    border-top: solid 1px #550871;
+}
+
+.emms22__share__list li{
+    opacity: 0;
+    animation: share-list .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes share-list{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emms22__share__list li:nth-child(1){
+    animation-delay: .1s;
+}
+
+.emms22__share__list li:nth-child(2){
+    animation-delay: .2s;
+}
+
+.emms22__share__list li:nth-child(3){
+    animation-delay: .3s;
+}
+
+.emms22__share__list li a{
+    border-bottom: solid 1px #9E69DC;
+}
+
+.emms22__share__list li:last-child a{
+    border-bottom: none;
+}
+
+.emms22__share__list.emms22__share__list--active{
+    display: block;
+}
+
+@media(max-width:620px){
+    .emms22__share{
+        top: 140px;
+    }
 }

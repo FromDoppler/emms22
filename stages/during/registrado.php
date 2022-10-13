@@ -46,6 +46,26 @@ require_once('././utils/DB.php');
 				</ul>
 			</div>
 		</nav>
+        <div class="emms22__share">
+            <a id="btn-share" class="emms22__share__open-list"><img src="../../common/html/<?= VERSION ?>/img/icons/icon-share.svg" alt="Share"></a>
+            <ul id="list-share" class="emms22__share__list">
+                <li>
+                    <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https://goemms.com/', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+                        <img src="../../common/html/<?= VERSION ?>/img/icons/Facebook-w.svg" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https://goemms.com/&text=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                        <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2F&title=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
+                        <img src="../../common/html/<?= VERSION ?>/img/icons/LinkedIn-w.svg" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+        </div>
 
 
 		<!-- Hero -->
@@ -125,6 +145,7 @@ require_once('././utils/DB.php');
 		</div>
 
         <span id="version" class="emms22--vh"><?= VERSION ?></span>
+
 		<!-- Calendar -->
 
 		<?php include_once('././common/components/commonCalendar.php') ?>
@@ -195,8 +216,6 @@ require_once('././utils/DB.php');
 	?>
     <script src="../../common/html/<?= VERSION ?>/js/date.js?version=<?= VERSION ?>"></script>
 
-    <script src="../../common/html/<?= VERSION ?>/js/twitter/src/jquery.getTweets.js?version=<?= VERSION ?>"></script>
-    <script src="../../common/html/<?= VERSION ?>/js/twitter/vendor/jquery-2.1.3.min.js?version=<?= VERSION ?>"></script>
 
 </body>
 
