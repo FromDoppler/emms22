@@ -668,29 +668,6 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     margin: 0 12.5px 0 12.5px;
 }
 
-.emms22__hero-pre-event__registered .emms22__share{
-    margin: 52px 0 0 0;
-    opacity: 0;
-    animation: fade-in 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-}
-
-.emms22__hero-pre-event__registered .emms22__share ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.emms22__hero-pre-event__registered .emms22__share ul li:nth-child(1){
-    width: 100%;
-    margin: 0 0 20px 0;
-}
-
-.emms22__hero-pre-event__registered .emms22__share ul li{
-    margin: 0 8px 0 8px;
-}
-
 @media(max-width:992px){
     .emms22__hero-pre-event__registered{
         padding: 200px 0 100px 0;

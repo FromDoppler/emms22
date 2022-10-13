@@ -247,3 +247,15 @@ document.addEventListener('click', function (e) {
         e.preventDefault();
     }
 }, false);
+
+
+// Share social network
+
+const shareList = document.getElementById('list-share');
+const share = document.getElementById('btn-share');
+if (share != undefined && share != null) {
+    share.addEventListener('click', (e) => {
+        shareList.classList.toggle('emms22__share__list--active');
+        share.classList.toggle('emms22__share--active');
+    });
+}
