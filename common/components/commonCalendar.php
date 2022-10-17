@@ -1,12 +1,27 @@
 <div class="emms22__pre-event__calendar">
     <div class="emms22__container--lg">
+
+
+        <!--------------------- Día 1 ----------------------->
+
+
         <h2 class="emms22__fade-in">Descubre la agenda del EMMS 2022</h2>
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
             <h3><strong>MARTES</strong> 8 DE NOVIEMBRE</h3>
+            <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                <div class="emms22__post-event__calendar__conferences-add">
+                    <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
+                </div>
+            <?php elseif ($dayDuring == 2 || $dayDuring == 3) : ?>
+                <div class="emms22__post-event__calendar__conferences-add">
+                    <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
+                </div>
+            <?php else : ?>
             <div class="emms22__pre-event__calendar__date__country">
                 <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
                 <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
             </div>
+            <?php endif; ?>
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
             <?php
@@ -44,7 +59,13 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php elseif ($dayDuring == 2 || $dayDuring == 3) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php else : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php endif; ?>
                             <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
                                 <h4><?= $speaker['name'] ?></h4>
                                 <p><?= $speaker['bio'] ?></p>
@@ -62,8 +83,6 @@
             <?php endforeach; ?>
         </ul>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-
-
             <?php foreach ($speakers as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event carousel-cell">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
@@ -95,7 +114,13 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php elseif ($dayDuring == 2 || $dayDuring == 3) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php else : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php endif; ?>
                             <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
                                 <h4><?= $speaker['name'] ?></h4>
                                 <p><?= $speaker['bio'] ?></p>
@@ -109,14 +134,29 @@
                     </div> -->
                 </li>
             <?php endforeach; ?>
-
         </ul>
+
+
+
+        <!--------------------- Día 2 ----------------------->
+
+
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
             <h3><strong>MIÉRCOLES</strong> 9 DE NOVIEMBRE</h3>
-            <div class="emms22__pre-event__calendar__date__country">
+            <?php if ( ($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                <div class="emms22__post-event__calendar__conferences-add">
+                    <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
+                </div>
+            <?php elseif ($dayDuring == 3) : ?>
+                <div class="emms22__post-event__calendar__conferences-add">
+                    <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
+                </div>
+            <?php else : ?>
+                <div class="emms22__pre-event__calendar__date__country">
                 <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
                 <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
             </div>
+            <?php endif; ?>
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
             <?php
@@ -154,7 +194,13 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php if ( ($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php elseif ($dayDuring == 3) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php else : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php endif; ?>
                             <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
                                 <h4><?= $speaker['name'] ?></h4>
                                 <p><?= $speaker['bio'] ?></p>
@@ -167,12 +213,9 @@
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
-
             <?php endforeach; ?>
         </ul>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-
-
             <?php foreach ($speakers as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event carousel-cell">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
@@ -204,7 +247,13 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php if ( ($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php elseif ($dayDuring == 3) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php else : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php endif; ?>
                             <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
                                 <h4><?= $speaker['name'] ?></h4>
                                 <p><?= $speaker['bio'] ?></p>
@@ -218,14 +267,25 @@
                     </div> -->
                 </li>
             <?php endforeach; ?>
-
         </ul>
+
+
+
+        <!--------------------- Día 3 ----------------------->
+
+
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
             <h3><strong>JUEVES</strong> 10 DE NOVIEMBRE</h3>
-            <div class="emms22__pre-event__calendar__date__country">
-                <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
-                <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
-            </div>
+            <?php if ( ($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                <div class="emms22__post-event__calendar__conferences-add">
+                    <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
+                </div>
+            <?php else : ?>
+                <div class="emms22__pre-event__calendar__date__country">
+                    <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
+                    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
+                </div>
+            <?php endif; ?>
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
             <?php
@@ -261,7 +321,11 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php if ( ($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php else : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php endif; ?>
                             <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
                                 <h4><?= $speaker['name'] ?></h4>
                                 <p><?= $speaker['bio'] ?></p>
@@ -274,9 +338,7 @@
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
-
             <?php endforeach; ?>
-
         </ul>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
             <?php foreach ($speakers as $speaker) : ?>
@@ -310,7 +372,11 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php if ( ($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Revive la conferencia</a>
+                            <?php else : ?>
+                                <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
+                            <?php endif; ?>
                             <div class="emms22__pre-event__calendar__event-list__event__card__bio emms22__pre-event__calendar__event-list__event__card__bio--hide bio-speaker">
                                 <h4><?= $speaker['name'] ?></h4>
                                 <p><?= $speaker['bio'] ?></p>
@@ -324,8 +390,9 @@
                     </div> -->
                 </li>
             <?php endforeach; ?>
-
-
         </ul>
+
+
+
     </div>
 </div>

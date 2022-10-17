@@ -52,17 +52,20 @@ $duringDaysArray = array(
     "d1" => array(
         "title" => "Charla dia 1",
         "video" => "Fxn-toxKKIQ",
-        "hashtag" => "#EMMS22DIA1"
+        "hashtag" => "#EMMS22DIA1",
+        "banner" => "placa-dia01"
     ),
     "d2" => array(
         "title" => "Charla dia 2",
         "video" => "video2",
-        "hashtag" => "#EMMS22DIA2"
+        "hashtag" => "#EMMS22DIA2",
+        "banner" => "placa-dia02"
     ),
     "d3" => array(
         "title" => "Charla dia 3",
         "video" => "video3",
-        "hashtag" => "#EMMS22DIA3"
+        "hashtag" => "#EMMS22DIA3",
+        "banner" => "placa-dia03"
     ),
 );
 

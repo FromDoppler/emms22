@@ -237,6 +237,7 @@ document.addEventListener('click', function (e) {
         if (target.hasAttribute('data-target')) {
             var m_ID = target.getAttribute('data-target');
             document.getElementById(m_ID).classList.add('emms22__modal--open');
+            document.body.style.overflowY = 'hidden';
             e.preventDefault();
         }
     }
@@ -244,6 +245,7 @@ document.addEventListener('click', function (e) {
     if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'emms22__modal') || target.classList.contains('emms22__modal')) {
         var modal = document.querySelector('[class="emms22__modal emms22__modal--open"]');
         modal.classList.remove('emms22__modal--open');
+        document.body.style.overflowY = 'scroll';
         e.preventDefault();
     }
 }, false);
@@ -259,3 +261,4 @@ if (share != undefined && share != null) {
         share.classList.toggle('emms22__share--active');
     });
 }
+
