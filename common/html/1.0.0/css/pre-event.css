@@ -796,12 +796,11 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     transition-duration: .2s;
 }
 
-.emms22__pre-event__calendar__event-list{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: calc(1000px + 4%);
-    margin: 0 auto;
-    animation-delay: .3s;
+.emms22__post-event__calendar__conferences-add p{
+    font-size: 16px;
+    font-weight: 700;
+    color: #BD7AFF;
+    margin: 0;
 }
 
 .emms22__pre-event__calendar__event-list.emms22__show-mb{
@@ -925,6 +924,20 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
 }
 
 .emms22__pre-event__calendar__event-list__event__card__btn-bio:hover{
+    color: #008046;
+    transition-duration: .2s;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__btn-conference{
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #33AD73;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.emms22__pre-event__calendar__event-list__event__card__btn-conference:hover{
     color: #008046;
     transition-duration: .2s;
 }

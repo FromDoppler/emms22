@@ -72,40 +72,74 @@ require_once('././utils/DB.php');
 
 		<div class="emms22__hero-during">
             <div class="emms22__container--lg">
-                <?php
-                if ($liveDayDuring == 2) :
-                ?>
+                <?php if ($liveDayDuring == 2) : ?>
                     <div class="emms22__hero-during__streaming-live">
                         <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO</p>
                     </div>
-                <?php
-                endif;
-                ?>
+                <?php endif; ?>
                 <div class="emms22__hero-during__streaming-container">
                     <div class="emms22__hero-during__streaming">
                         <div class="emms22__cropper-cont-16-9">
                             <div class="emms22__cropper-cont">
                                 <div class="emms22__cropper-cont-interno">
-                                    <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <?php
+                                    if ($liveDayDuring == 2) :
+                                    ?>
+                                        <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <?php
+                                    else :
+                                    ?>
+                                        <img src="../../common/html/<?= VERSION ?>/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner'] ?>.png" alt="Banner">
+                                    <?php
+                                    endif;
+                                    ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="emms22__hero-during__aside">
-                        <div class="emms22__hero-during__aside__title">
-                            <h3>TWEET CHAT <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
-                        </div>
-                        <div class="emms22__hero-during__aside__timeline">
-                            <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/MakingSenseApps/lists/making-sense-twitting?ref_src=twsrc%5Etfw">A Twitter List by MakingSenseApps</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        </div>
-                        <div class="emms22__hero-during__aside__input">
-                            <input type="text" value="<?= $duringDaysArray['d' . $dayDuring]['hashtag'] ?> " placeholder="127">
-                        </div>
+                        <?php
+                        if ($liveDayDuring == 0) :
+                        ?>
+                            <div class="emms22__hero-during__aside__promotion">
+                                <img src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler">
+                                <p>Mientras tanto... si quieres comenzar o afianzar tu estrategia de Marketing Digital, te presentamos lo que Doppler tiene para ti...</p>
+                                <ul>
+                                    <li><p><span>DEMO DAY:</span> Capacitaciones de dos días, inicial y avanzado, donde podrás aprender a aplicar todas las herramientas que tiene Doppler</p></li>
+                                    <li><p><span>DOPPLER TRAINNING SESSION:</span> Capacitaciones de dos días, inicial y avanzado, donde podrás aprender a aplicar todas las herramientas que tiene Doppler</p></li>
+                                    <li><p><span>DOPPLER ACADEMY:</span> Capacitaciones de dos días, inicial y avanzado, donde podrás aprender a aplicar todas las herramientas que tiene Doppler</p></li>
+                                </ul>
+                            </div>
+                        <?php
+                        else :
+                        ?>
+                            <div class="emms22__hero-during__aside__chat">
+                                <div class="emms22__hero-during__aside__chat__title">
+                                    <h3>TWEET CHAT <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
+                                </div>
+                                <div class="emms22__hero-during__aside__chat__timeline">
+                                    <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/MakingSenseApps/lists/making-sense-twitting?ref_src=twsrc%5Etfw">A Twitter List by MakingSenseApps</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </div>
+                                <div class="emms22__hero-during__aside__chat__input">
+                                    <input type="text" value="<?= $duringDaysArray['d' . $dayDuring]['hashtag'] ?> " placeholder="127">
+                                </div>
+                            </div>
+                        <?php
+                        endif;
+                        ?>
                     </div>
                 </div>
-                <div class="emms22__hero-during__certificate">
-                    <p><img src="../../common/html/<?= VERSION ?>/img/icons/cup-icon.svg" alt="cup-icon"> Accede a tu Certificado de Asistencia haciendo click en el <button data-target="emms22__download-certificate" data-toggle="emms22__modal">siguiente enlace</button> y compártelo en tus Redes Sociales :)</p>
-                </div>
+                <!-- CTA Certificate -->
+                <?php
+                    if ($liveDayDuring == 1 || $liveDayDuring == 2) :
+                ?>
+                    <div class="emms22__hero-during__certificate">
+                        <p><img src="../../common/html/<?= VERSION ?>/img/icons/cup-icon.svg" alt="cup-icon"> Accede a tu Certificado de Asistencia haciendo click en el <button data-target="emms22__download-certificate" data-toggle="emms22__modal">siguiente enlace</button> y compártelo en tus Redes Sociales :)</p>
+                    </div>
+                <?php
+                    endif;
+                ?>
+                <!-- End CTA Certificate -->
             </div>
 		</div>
         <div id="emms22__download-certificate" class="emms22__modal">
@@ -146,9 +180,10 @@ require_once('././utils/DB.php');
 
         <span id="version" class="emms22--vh"><?= VERSION ?></span>
 
+
 		<!-- Calendar -->
 
-		<?php include_once('././common/components/commonCalendar.php') ?>
+        <?php include_once('././common/components/commonCalendar.php') ?>
 
 
 		<!-- Doppler -->

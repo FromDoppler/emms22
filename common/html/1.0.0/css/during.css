@@ -18,6 +18,9 @@
     animation-delay: 0.4s;
 }
 
+
+/* --- Live --- */
+
 .emms22__hero-during__streaming-live{
     margin: 0 0 14px 0;
 }
@@ -55,6 +58,9 @@
     }
 }
 
+
+/* --- Streaming --- */
+
 .emms22__hero-during__streaming-container{
     display: flex;
     justify-content: space-between;
@@ -67,35 +73,60 @@
     width: 68%;
 }
 
+.emms22__hero-during__streaming img{
+    width: 100%;
+}
+
+@media(max-width:992px){
+    .emms22__hero-during__streaming{
+        width: 100%;
+    }
+}
+
+
+/* --- Aside --- */
+
 .emms22__hero-during__aside{
-    padding-top: 38%;
     width: 30%;
+}
+
+@media(max-width:992px){
+    .emms22__hero-during__aside{
+        display: none;
+    }
+}
+
+
+/* --- Chat --- */
+
+.emms22__hero-during__aside__chat{
+    padding-top: 126%;
     position: relative;
     background: #3F0453;
     border-radius: 5px;
     border: solid 1px #BD7AFF;
 }
 
-.emms22__hero-during__aside__title{
+.emms22__hero-during__aside__chat__title{
     position: absolute;
     top: 25px;
     left: 10px;
 }
 
-.emms22__hero-during__aside__title h3{
+.emms22__hero-during__aside__chat__title h3{
     font-size: 14px;
     font-weight: 300;
     color: #FFFFFF;
     margin: 0;
 }
 
-.emms22__hero-during__aside__title h3 img{
+.emms22__hero-during__aside__chat__title h3 img{
     width: 14px;
     vertical-align: text-top;
     margin: 0 0 0 6px;
 }
 
-.emms22__hero-during__aside__timeline{
+.emms22__hero-during__aside__chat__timeline{
     position: absolute;
     top: 55px;
     bottom: 96px;
@@ -107,7 +138,7 @@
     border: solid 1px #BD7AFF;
 }
 
-.emms22__hero-during__aside__input{
+.emms22__hero-during__aside__chat__input{
     position: absolute;
     bottom: 20px;
     left: 10px;
@@ -118,7 +149,7 @@
     border: solid 1px #BD7AFF;
 }
 
-.emms22__hero-during__aside__input::before{
+.emms22__hero-during__aside__chat__input::before{
     content: "127";
     position: absolute;
     top: 24px;
@@ -129,7 +160,7 @@
     font-size: 14px;
 }
 
-.emms22__hero-during__aside__input input{
+.emms22__hero-during__aside__chat__input input{
     width: 100%;
     height: 100%;
     border: 0;
@@ -143,9 +174,64 @@
 }
 
 
-.emms22__hero-during__aside__input input:focus-visible{
+.emms22__hero-during__aside__chat__input input:focus-visible{
     background: #20002b;
 }
+
+
+/* --- Promotion --- */
+
+.emms22__hero-during__aside__promotion{
+    padding: 0 0 0 6%;
+}
+
+.emms22__hero-during__aside__promotion img{
+    width: 144px;
+    margin: 0 0 16px;
+}
+
+.emms22__hero-during__aside__promotion p{
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #F2F2F2;
+    margin: 0;
+}
+
+.emms22__hero-during__aside__promotion ul{
+    margin: 27px 0 0 0;
+}
+
+.emms22__hero-during__aside__promotion ul li{
+    margin: 0 0 27px 0;
+    padding: 0 0 0 30px;
+    position: relative;
+}
+
+.emms22__hero-during__aside__promotion ul li:last-child{
+    margin: 0;
+}
+
+.emms22__hero-during__aside__promotion ul li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: #BD7AFF url("../img/check-w.svg") no-repeat;
+    background-position: center;
+    background-size: 9px;
+    border-radius: 100%;
+}
+
+.emms22__hero-during__aside__promotion ul li p span{
+    font-weight: 700;
+    color: #33AD73;
+}
+
+
+/* --- Certificate --- */
 
 .emms22__hero-during__certificate{
     margin: 90px 0 0 0;
@@ -180,6 +266,15 @@
 .emms22__hero-during__certificate p button:hover{
     text-decoration: underline;
 }
+
+@media(max-width:992px){
+    .emms22__hero-during__certificate {
+        margin: 30px 0 0 0;
+    }
+}
+
+
+/* --- Modal --- */
 
 .emms22__modal{
     position: fixed;
@@ -263,14 +358,24 @@
     cursor: pointer;
 }
 
-@media(max-width:992px){
-    .emms22__hero-during__streaming{
-        width: 100%;
-    }
-    .emms22__hero-during__aside{
-        display: none;
-    }
-    .emms22__hero-during__certificate {
-        margin: 30px 0 0 0;
-    }
+
+/* ----------------------------------------------------------- Calendar */
+
+
+.emms22__loged .emms22__post-event__calendar__conferences-add p::after{
+    content: "Para poder acceder, debes estar registrado al evento :)";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #333333;
+    display: block;
+    text-align: right;
+}
+
+.emms22__pre-event__calendar__event-list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(1000px + 4%);
+    margin: 0 auto;
+    animation-delay: .3s;
 }
