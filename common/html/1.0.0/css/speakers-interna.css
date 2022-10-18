@@ -1,0 +1,183 @@
+
+/* ----------------------------------------------------------- Hero */
+
+.emms22__hero-speakers{
+    position: relative;
+    background: #170520;
+}
+
+.emms22__hero-speakers .emms22__container--lg{
+    padding: 200px 0 98px 0;
+    opacity: 0;
+    animation: fade-top 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+.emms22__hero-speakers__title{
+    max-width: 68%;
+    width: 100%;
+    margin: 0 0 34px 0;
+}
+
+.emms22__hero-speakers__title h2{
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #FAB221;
+    margin: 0;
+}
+
+.emms22__hero-speakers__conference-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.emms22__hero-speakers__conference{
+    width: 68%;
+}
+
+.emms22__hero-speakers__conference .emms22__home__container-form{
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    animation-delay: .3s;
+}
+
+.emms22__hero-speakers__conference .emms22__home__container-form .emms22__pre-event__form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.emms22__hero-speakers__conference .emms22__home__container-form .emms22__pre-event__form .emms22__home__container-form__column{
+    width: 47%;
+}
+
+.emms22__hero-speakers__conference .emms22__home__container-form .emms22__home__legal{
+    margin: 0;
+}
+
+.emms22__hero-speakers__aside{
+    width: 30%;
+    padding: 0 0 0 5%;
+    box-sizing: border-box;
+}
+
+.emms22__hero-speakers__aside h3{
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.emms22__hero-speakers__aside p{
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.emms22__hero-speakers__aside ul{
+    margin: 31px 0 0 0;
+}
+
+.emms22__hero-speakers__aside ul li{
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.emms22__hero-speakers__aside ul li a{
+    width: 25px;
+    height: 25px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+.emms22__hero-speakers__aside ul li a:hover{
+    opacity: .8;
+    transition-duration: .2s;
+}
+
+.emms22__hero-speakers__aside ul li a img{
+    height: 100%;
+}
+
+.emms22__hero-speakers__btn-back {
+    margin: 40px 0 0 0;
+}
+
+.emms22__hero-speakers__btn-back a{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #33AD73;
+    transition-duration: .2s;
+}
+
+.emms22__hero-speakers__btn-back a:hover{
+    color: #008046;
+    transition-duration: .2s;
+}
+
+@media (max-width: 992px){
+
+    .emms22__hero-speakers__title{
+        max-width: 100%;
+    }
+
+    .emms22__hero-speakers__conference{
+        width: 100%;
+    }
+
+    .emms22__hero-speakers__aside{
+        width: 100%;
+        padding: 0;
+        margin: 40px 0 0 0;
+    }
+}
+
+@media (max-width: 620px){
+
+    .emms22__hero-speakers .emms22__container--lg{
+        padding: 150px 0 60px 0;
+    }
+
+    .emms22__hero-speakers__conference .emms22__home__container-form .emms22__pre-event__form .emms22__home__container-form__column{
+        width: 100%;
+    }
+
+    .emms22__hero-speakers__title{
+        margin: 0 0 20px 0;
+    }
+
+    .emms22__hero-speakers__title h2{
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .emms22__hero-speakers__aside p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+
+
+/* ----------------------------------------------------------- Registered Premium content */
+
+
+.emms22__page-speakers .emms22__pre-event__registered-premium-content{
+    padding: 100px 0 130px 0;
+}
