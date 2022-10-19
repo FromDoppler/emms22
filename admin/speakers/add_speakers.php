@@ -31,11 +31,14 @@ if (isset($_POST['btn-save'])) {
     $time = $_POST['time'];
     $orden = $_POST['orden'];
     $day = $_POST['day'];
+    $slug = $_POST['slug'];
+    $youtube = $_POST['youtube'];
+
     // variables for input data
 
     // sql query for inserting data into database
 
-    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`orden`,`day`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $orden . "','" . $day . "')";
+    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`orden`,`day`,`slug`,`youtube`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $orden . "','" . $day . "' ,'" . $slug . "','" . $youtube . "')";
     // sql query for inserting data into database
 
     // sql query execution function
@@ -78,9 +81,6 @@ if (isset($_POST['btn-save'])) {
                         <tr>
                             <td align="center"><a href="index.php?token=<?= $_GET['token'] ?>">back to main page</a></td>
                         </tr>
-
-
-
                         <tr>
                             <td>
                                 <label for="name" class="form-label">Name:</label>
@@ -203,6 +203,22 @@ if (isset($_POST['btn-save'])) {
                             </td>
                             <td>
                                 <input type="text" class="form-control" id="orden" name="orden" required placeholder="Orden">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="slug" class="form-label">Slug:</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="slug" name="slug" required placeholder="Slug">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="youtube" class="form-label">Youtube:</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="youtube" name="youtube" placeholder="Youtube">
                             </td>
                         </tr>
 

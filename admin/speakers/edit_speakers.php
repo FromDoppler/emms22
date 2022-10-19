@@ -3,7 +3,6 @@ include_once '../config.php';
 include_once '../../utils/GeoIp.php';
 $ip = GeoIp::getIp();
 isIPAllow($ip, $ALLOW_IPS);
-
 if (isset($_GET['edit_id'])) {
     $sql_query = "SELECT * FROM speakers WHERE id=" . $_GET['edit_id'];
     $result_set = mysqli_query($con, $sql_query);
@@ -11,9 +10,7 @@ if (isset($_GET['edit_id'])) {
 }
 if (isset($_POST['btn-update'])) {
     // variables for input data
-
     $name = $_POST['name'];
-
     if ($_FILES["image"]["name"] == '') {
         $image =  $fetched_row['image'];
     } else {
@@ -24,23 +21,14 @@ if (isset($_POST['btn-update'])) {
             move_uploaded_file($file_tmp, "uploads/" . $file_name);
         }
     }
-
     $alt_image = $_POST['alt_image'];
-
     $job = $_POST['job'];
-
     $sm_twitter = $_POST['sm_twitter'];
-
     $sm_linkedin = $_POST['sm_linkedin'];
-
     $sm_instagram = $_POST['sm_instagram'];
-
     $sm_facebook = $_POST['sm_facebook'];
-
     $description = $_POST['description'];
-
     $bio = $_POST['bio'];
-
     if ($_FILES["image_company"]["name"] == '') {
         $image_company =  $fetched_row['image_company'];
     } else {
@@ -51,21 +39,18 @@ if (isset($_POST['btn-update'])) {
             move_uploaded_file($file_tmp, "uploads/" . $file_name);
         }
     }
-
     $alt_image_company = $_POST['alt_image_company'];
-
     $time = $_POST['time'];
-
     $orden = $_POST['orden'];
     $day = $_POST['day'];
-    //print_r($_POST); exit;
+    $slug = strtolower($_POST['slug']);
+    $youtube = $_POST['youtube'];
+
     // variables for input data
 
     // sql query for update data into database
-    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`orden`='$orden',`day`='$day' WHERE id=" . $_GET['edit_id'];
-
+    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`orden`='$orden',`day`='$day', `slug`='$slug' , `youtube`='$youtube' WHERE id=" . $_GET['edit_id'];
     // sql query for update data into database
-
     // sql query execution function
     if (mysqli_query($con, $sql_query)) {
 ?>
@@ -101,7 +86,6 @@ if (isset($_POST['btn-cancel'])) {
 
 <body>
     <center>
-
         <div id="container">
             <div id="table-responsive">
                 <h3>ABM Speakers</h3>
@@ -121,7 +105,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="name" class="form-label">Name:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['name'] ?>" class="form-control" id="name" name="name">
+                                <input type="text" value="<?= $fetched_row['name'] ?>" class="form-control" id="name" name="name">
                             </td>
                         </tr>
                         <tr>
@@ -130,7 +114,7 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <img src="uploads/<?= $fetched_row['image'] ?>" alt="<?= $fetched_row['alt_image'] ?>" width="150" height="150">
-                                <input type="file" value="<?php echo $fetched_row['image'] ?>" class="form-control" id="image" name="image">
+                                <input type="file" value="<?= $fetched_row['image'] ?>" class="form-control" id="image" name="image">
                             </td>
                         </tr>
                         <tr>
@@ -138,7 +122,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="alt_image" class="form-label">Alt_image:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['alt_image'] ?>" class="form-control" id="alt_image" name="alt_image">
+                                <input type="text" value="<?= $fetched_row['alt_image'] ?>" class="form-control" id="alt_image" name="alt_image">
                             </td>
                         </tr>
                         <tr>
@@ -146,7 +130,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="job" class="form-label">Job:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['job'] ?>" class="form-control" id="job" name="job">
+                                <input type="text" value="<?= $fetched_row['job'] ?>" class="form-control" id="job" name="job">
                             </td>
                         </tr>
                         <tr>
@@ -154,7 +138,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="sm_twitter" class="form-label">Sm_twitter:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['sm_twitter'] ?>" class="form-control" id="sm_twitter" name="sm_twitter">
+                                <input type="text" value="<?= $fetched_row['sm_twitter'] ?>" class="form-control" id="sm_twitter" name="sm_twitter">
                             </td>
                         </tr>
                         <tr>
@@ -162,7 +146,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="sm_linkedin" class="form-label">Sm_linkedin:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['sm_linkedin'] ?>" class="form-control" id="sm_linkedin" name="sm_linkedin">
+                                <input type="text" value="<?= $fetched_row['sm_linkedin'] ?>" class="form-control" id="sm_linkedin" name="sm_linkedin">
                             </td>
                         </tr>
                         <tr>
@@ -170,7 +154,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="sm_instagram" class="form-label">Sm_instagram:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['sm_instagram'] ?>" class="form-control" id="sm_instagram" name="sm_instagram">
+                                <input type="text" value="<?= $fetched_row['sm_instagram'] ?>" class="form-control" id="sm_instagram" name="sm_instagram">
                             </td>
                         </tr>
                         <tr>
@@ -178,7 +162,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="sm_facebook" class="form-label">Sm_facebook:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['sm_facebook'] ?>" class="form-control" id="sm_facebook" name="sm_facebook">
+                                <input type="text" value="<?= $fetched_row['sm_facebook'] ?>" class="form-control" id="sm_facebook" name="sm_facebook">
                             </td>
                         </tr>
                         <tr>
@@ -203,7 +187,7 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <img src="uploads/<?= $fetched_row['image_company'] ?>" alt="<?= $fetched_row['alt_image_company'] ?>" width="70" height="70">
-                                <input type="file" value="<?php echo $fetched_row['image_company'] ?>" class="form-control" id="image_company" name="image_company">
+                                <input type="file" value="<?= $fetched_row['image_company'] ?>" class="form-control" id="image_company" name="image_company">
                             </td>
                         </tr>
                         <tr>
@@ -211,7 +195,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="alt_image_company" class="form-label">Alt_image_company:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['alt_image_company'] ?>" class="form-control" id="alt_image_company" name="alt_image_company">
+                                <input type="text" value="<?= $fetched_row['alt_image_company'] ?>" class="form-control" id="alt_image_company" name="alt_image_company">
                             </td>
                         </tr>
                         <tr>
@@ -219,7 +203,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="time" class="form-label">Time:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $fetched_row['time'] ?>" class="form-control" id="time" name="time">
+                                <input type="text" value="<?= $fetched_row['time'] ?>" class="form-control" id="time" name="time">
                             </td>
                         </tr>
                         <tr>
@@ -227,9 +211,6 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="day" class="form-label">Day:</label>
                             </td>
                             <td>
-                                <?php
-                                //print_r($fetched_row); exit;
-                                ?>
                                 <select name="day" class="form-select">
                                     <option <?= ($fetched_row['day'] === '1') ? 'selected ' : '' ?>value="1">Martes</option>
                                     <option <?= ($fetched_row['day'] === '2') ? 'selected ' : '' ?>value="2">Miercoles</option>
@@ -242,10 +223,33 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="orden" class="form-label">Orden:</label>
                             </td>
                             <td>
-
-                                <input type="text" value="<?php echo $fetched_row['orden'] ?>" class="form-control" id="orden" name="orden">
+                                <input type="text" value="<?= $fetched_row['orden'] ?>" class="form-control" id="orden" name="orden">
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <label for="slug" class="form-label">Slug:</label>
+                            </td>
+                            <td>
+                                <input type="text" value="<?= $fetched_row['slug'] ?>" class="form-control" id="slug" name="slug">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="youtube" class="form-label">Youtube:</label>
+                            </td>
+                            <td>
+                                <?php
+                                if (!empty($fetched_row['youtube'])) {  ?>
+                                    <iframe width="420" height="315" src="https://www.youtube.com/embed/<?= $fetched_row['youtube'] ?>">
+                                    </iframe>
+                                <?php
+                                }
+                                ?>
+                                <input type="text" value="<?= $fetched_row['youtube'] ?>" class="form-control" id="youtube" name="youtube">
+                            </td>
+                        </tr>
+
                         <tr>
                             <td>
                                 <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
@@ -256,7 +260,6 @@ if (isset($_POST['btn-cancel'])) {
                 </form>
             </div>
         </div>
-
     </center>
 </body>
 

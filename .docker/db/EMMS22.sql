@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Oct 11, 2022 at 02:54 PM
+-- Generation Time: Oct 19, 2022 at 02:13 PM
 -- Server version: 8.0.29
 -- PHP Version: 8.0.19
 
@@ -380,6 +380,8 @@ CREATE TABLE `speakers` (
   `time` varchar(255) DEFAULT NULL,
   `orden` varchar(255) DEFAULT NULL,
   `day` varchar(1) NOT NULL,
+  `youtube` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
+  `slug` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
   `status` enum('0','1') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -387,18 +389,18 @@ CREATE TABLE `speakers` (
 -- Dumping data for table `speakers`
 --
 
-INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `bio`, `image_company`, `alt_image_company`, `time`, `orden`, `day`, `status`) VALUES
-(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', NULL, 'hepc-speaker.png', 'Hep!c Marketing', '1', '3', '1', NULL),
-(6, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', NULL, 'aws-speaker.png', 'Amazon Web Services', '1', '2', '1', NULL),
-(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', NULL, 'google-speaker.png', 'Google', '1', '10', '2', NULL),
-(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', NULL, 'metricool-speaker.png', 'Metricool', '1', '4', '1', NULL),
-(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', NULL, 'raiola-speaker.png', 'Raiola Networks', '1', '5', '1', NULL),
-(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', NULL, 'tiendup-speaker.png', 'Tiendup', '1', '6', '1', NULL),
-(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', NULL, 'doofinder-speaker.png', 'Doofinder', '1', '30', '2', NULL),
-(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', NULL, 'on-translation-speaker.png', 'Ontranslation', '1', '30', '2', NULL),
-(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', NULL, 'mercatitlan-speaker.png', 'Mercatitlan', '1', '10', '1', NULL),
-(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', NULL, 'ab-speaker.png', 'Angela Blones', '1', '20', '2', NULL),
-(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', NULL, 'brainwave-site.png', 'Brainwave', '1', '25', '2', NULL);
+INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `bio`, `image_company`, `alt_image_company`, `time`, `orden`, `day`, `youtube`, `slug`, `status`) VALUES
+(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', NULL, 'hepc-speaker.png', 'Hep!c Marketing', '1', '3', '1', '', '', NULL),
+(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', NULL, 'google-speaker.png', 'Google', '1', '10', '2', '', '', NULL),
+(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', NULL, 'metricool-speaker.png', 'Metricool', '1', '4', '1', '', '', NULL),
+(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', NULL, 'raiola-speaker.png', 'Raiola Networks', '1', '5', '1', '', '', NULL),
+(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', NULL, 'tiendup-speaker.png', 'Tiendup', '1', '6', '1', '', '', NULL),
+(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', NULL, 'doofinder-speaker.png', 'Doofinder', '1', '30', '2', '', '', NULL),
+(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', NULL, 'on-translation-speaker.png', 'Ontranslation', '1', '30', '2', '', '', NULL),
+(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', NULL, 'mercatitlan-speaker.png', 'Mercatitlan', '1', '10', '1', '', '', NULL),
+(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', NULL, 'ab-speaker.png', 'Angela Blones', '1', '20', '2', '', '', NULL),
+(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', NULL, 'brainwave-site.png', 'Brainwave', '1', '25', '2', '', '', NULL),
+(17, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', 'El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de \"de Finibus Bonorum et Malorum\" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.', 'aws-speaker.png', 'Amazon Web Services', '1', '2', '1', 'Ef9QnZVpVd8', 'albert-esplugas', NULL);
 
 -- --------------------------------------------------------
 
@@ -526,7 +528,7 @@ ALTER TABLE `registered`
 -- AUTO_INCREMENT for table `speakers`
 --
 ALTER TABLE `speakers`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `subscriptions_doppler`

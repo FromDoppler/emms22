@@ -24,10 +24,7 @@ if (isset($_GET['view_id'])) {
 </head>
 
 <body>
-
     <div class="container mt-3">
-
-
         <div class="table-responsive">
             <table class="table table-bordered">
                 <tr>
@@ -37,7 +34,7 @@ if (isset($_GET['view_id'])) {
                     <td>
                         <label for="name" class="form-label">Name:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['name'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['name'] ?></th>
                 </tr>
                 <tr>
                     <td>
@@ -49,49 +46,49 @@ if (isset($_GET['view_id'])) {
                     <td>
                         <label for="alt_image" class="form-label">Alt_image:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['alt_image'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['alt_image'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="job" class="form-label">Job:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['job'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['job'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="sm_twitter" class="form-label">Sm_twitter:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['sm_twitter'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['sm_twitter'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="sm_linkedin" class="form-label">Sm_linkedin:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['sm_linkedin'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['sm_linkedin'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="sm_instagram" class="form-label">Sm_instagram:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['sm_instagram'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['sm_instagram'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="sm_facebook" class="form-label">Sm_facebook:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['sm_facebook'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['sm_facebook'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="description" class="form-label">Description:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['description'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['description'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="bio" class="form-label">Bio:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['bio'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['bio'] ?></th>
                 </tr>
                 <tr>
                     <td>
@@ -103,7 +100,7 @@ if (isset($_GET['view_id'])) {
                     <td>
                         <label for="alt_image_company" class="form-label">Alt_image_company:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['alt_image_company'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['alt_image_company'] ?></th>
                 </tr>
                 <tr>
                     <td>
@@ -125,13 +122,33 @@ if (isset($_GET['view_id'])) {
                     <td>
                         <label for="time" class="form-label">Time:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['time'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['time'] ?></th>
                 </tr>
                 <tr>
                     <td>
                         <label for="orden" class="form-label">Orden:</label>
                     </td>
-                    <th colspan="5"> <?php echo $fetched_row['orden'] ?></th>
+                    <th colspan="5"> <?= $fetched_row['orden'] ?></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="slug" class="form-label">Slug:</label>
+                    </td>
+                    <th colspan="5"> <?= $fetched_row['slug'] ?></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="youtube" class="form-label">Youtube:</label>
+                    </td>
+                    <th colspan="5">
+                        <?php
+                        if (!empty($fetched_row['youtube'])) {  ?>
+                            <iframe width="420" height="315" src="https://www.youtube.com/embed/<?= $fetched_row['youtube'] ?>">
+                            </iframe>
+                        <?php
+                        }
+                        ?>
+                    </th>
                 </tr>
                 <tr>
                     <td align="center"><a href="index.php?token=<?= $_GET['token'] ?>">back to main page</a></td>
