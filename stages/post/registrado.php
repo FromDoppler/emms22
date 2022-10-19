@@ -28,7 +28,7 @@ require_once('././utils/DB.php');
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<main class="emms22__pre-event">
+	<main class="emms22__pre-event emms22__post">
 
 		<!-- Header -->
 
