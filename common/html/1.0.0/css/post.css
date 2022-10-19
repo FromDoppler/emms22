@@ -1,0 +1,67 @@
+
+/* ----------------------------------------------------------- Hero */
+
+.emms22__post .emms22__hero-pre-event__intro__info h1{
+    font-size: 47px;
+}
+
+.emms22__post .emms22__hero-pre-event__intro{
+    padding: 0;
+}
+
+.emms22__hero-post{
+    background: #1C0329;
+    padding: 280px 0 120px 0;
+}
+
+.emms22__hero-post .emms22__hero-post__title{
+    max-width: 780px;
+    width: 90%;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.emms22__hero-post .emms22__hero-post__title h1{
+    font-size: 47px;
+    line-height: 54px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+}
+
+.emms22__hero-post .emms22__hero-post__title p{
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+@media (max-width: 620px){
+
+    .emms22__post .emms22__hero-pre-event .emms22__container--lg {
+        padding: 135px 0 80px 0;
+    }
+
+    .emms22__post .emms22__hero-pre-event__intro__info h1{
+        max-width: 300px;
+    }
+
+    .emms22__post .emms22__hero-pre-event__intro{
+        padding: 50px 0 0 0;
+    }
+
+    .emms22__hero-post{
+        padding: 200px 0 100px 0;
+    }
+
+    .emms22__hero-post .emms22__hero-post__title h1 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .emms22__hero-post .emms22__hero-post__title p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
