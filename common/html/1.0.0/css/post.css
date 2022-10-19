@@ -31,7 +31,7 @@
 
 .emms22__hero-post .emms22__hero-post__title p{
     font-size: 20px;
-    line-height: 32px;
+    line-height: 28px;
     font-weight: 400;
     color: #FFFFFF;
     margin: 0;
@@ -65,3 +65,26 @@
         line-height: 24px;
     }
 }
+
+
+
+/* ----------------------------------------------------------- Registered Premium content */
+
+.emms22__post .emms22__pre-event__registered-premium-content h2{
+    font-size: 23px;
+    max-width: 620px;
+}
+
+
+/* ----------------------------------------------------------- Allies */
+
+.emms22__post .emms22__pre-event__allies{
+    padding: 95px 0 60px 0;
+}
+
+@media (max-width: 620px){
+    .emms22__post .emms22__pre-event__allies{
+        padding: 86px 0 0 0;
+    }
+}
+

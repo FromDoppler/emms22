@@ -162,9 +162,8 @@ require_once('././utils/DB.php');
 
         <span id="version" class="emms22--vh"><?= VERSION ?></span>
 
-        <div class="emms22__loged">
-		    <?php include_once('././common/components/commonCalendar.php') ?>
-        </div>
+		<?php include_once('././common/components/commonCalendar.php') ?>
+
 
 
 		<!-- Premium content -->
@@ -258,12 +257,7 @@ require_once('././utils/DB.php');
 
 				<div class="emms22__pre-event__allies__group">
 					<h3 class="emms22__fade-in">MEDIA PARTNERS</h3>
-					<ul class="emms22__fade-in" id="alliesUl">
-
-					</ul>
-				</div>
-				<div class="emms22__pre-event__allies__contact emms22__fade-in">
-					<p>&iquest;Quieres ser aliado del EMMS 2022? Escr&iacute;benos a <a href="mailto:partners@fromdoppler.com" target="_blank">partners@fromdoppler.com</a></p>
+					<ul class="emms22__fade-in" id="alliesUl"></ul>
 				</div>
 			</div>
 		</div>
