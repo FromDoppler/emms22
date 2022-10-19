@@ -168,6 +168,13 @@ class DB
         $this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
     }
 
+    public function getSubscriptionsDoppler()
+    {
+        $sql = $this->query("SELECT * FROM subscriptions_doppler order by id DESC LIMIT 100");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function saveRegistered($subscription)
     {
         $registered = $this->query("SELECT id FROM registered WHERE email='" . $subscription['email'] . "'");
