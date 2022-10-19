@@ -138,7 +138,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="title" class="form-label">Title:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="title" name="title" required placeholder="Title">
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
                             </td>
                         </tr>
                         <tr>
@@ -146,7 +146,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="description_card" class="form-label">Description_card:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="description_card" name="description_card" required placeholder="Description_card">
+                                <input type="text" class="form-control" id="description_card" name="description_card" placeholder="Description_card">
                             </td>
                         </tr>
                         <tr>
@@ -154,7 +154,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="slug" class="form-label">Slug:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="slug" name="slug" required placeholder="Slug">
+                                <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug">
                             </td>
                         </tr>
                         <tr>
@@ -162,7 +162,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="orden_card" class="form-label">Orden_card:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="orden_card" name="orden_card" required placeholder="Orden_card">
+                                <input type="text" class="form-control" id="orden_card" name="orden_card" placeholder="Orden_card">
                             </td>
                         </tr>
                         <tr>
@@ -170,7 +170,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="description" class="form-label">Description:</label>
                             </td>
                             <td>
-                                <textarea id="description" name="description" required></textarea>
+                                <textarea id="description" name="description"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -178,7 +178,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="image_landing" class="form-label">Image_landing:</label>
                             </td>
                             <td>
-                                <input type="file" class="form-control" id="image_landing" name="image_landing" required placeholder="Image_landing">
+                                <input type="file" class="form-control" id="image_landing" name="image_landing" placeholder="Image_landing">
                             </td>
                         </tr>
                         <tr>
@@ -186,7 +186,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="alt_image_landing" class="form-label">Alt_image_landing:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="alt_image_landing" name="alt_image_landing" required placeholder="Alt_image_landing">
+                                <input type="text" class="form-control" id="alt_image_landing" name="alt_image_landing" placeholder="Alt_image_landing">
                             </td>
                         </tr>
                         <tr>
