@@ -1042,18 +1042,25 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
         font-size: 17px;
         line-height: 19px;
         max-width: 220px;
-        margin: 0 auto 27px;
+        margin: 0 auto 50px;
     }
 
     .emms22__pre-event__calendar__date{
         display: block;
         padding: 0;
-        margin: 0 0 28px 0;
+        margin: 20px 0 28px 0;
     }
 
     .emms22__pre-event__calendar__date h3{
         font-size: 16px;
         text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    .emms22__post-event__calendar__conferences-add p{
+        text-align: center;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
     }
 
     .emms22__pre-event__calendar__date__country{
@@ -1083,6 +1090,17 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     .emms22__pre-event__calendar__event-list__event{
         padding: 0;
         width: 100%;
+    }
+
+    .emms22__pre-event__calendar__event-list__event__card__business{
+        height: 24px;
+    }
+
+    .emms22__pre-event__calendar__event-list__event__card__btn-conference{
+        font-size: 12px;
+        line-height: 13px;
+        text-align: right;
+        width: 80px;
     }
 
     .emms22__pre-event__calendar__event-list.main-carousel .flickity-page-dots{
@@ -1801,6 +1819,10 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     .emms22__pre-event__registered-premium-content__text h3 span{
         font-size: 13px;
         margin: 0 0 10px;
+    }
+
+    .emms22__pre-event__registered-premium-content__text .emms22__button{
+        max-width: initial;
     }
 
     .emms22__pre-event__registered-premium-content__image{
