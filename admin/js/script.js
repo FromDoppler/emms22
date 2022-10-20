@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     radioPhases.forEach(currentRadioPhase => currentRadioPhase.addEventListener('change', () => clickRadiosPhase(currentRadioPhase.id)));
     const radioPhasesSimulator = document.querySelectorAll('input[name="simulator_phase"]');
     radioPhasesSimulator.forEach(simulatorRadioPhase => simulatorRadioPhase.addEventListener('change', () => clickRadiosPhaseSimulator(simulatorRadioPhase.id)));
-
+    const buttonRefreshAllBrowsers = document.getElementById('refreshBrowsers');
+    buttonRefreshAllBrowsers.addEventListener('click', refreshAllBrowsers, false);
 
     checkRadiosPhase();
     checkRadiosDuringDays();
@@ -274,4 +275,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Algo salio mal: ', error)
             });
     }
+
+
 });
+function refreshAllBrowsers(event) {
+    event.preventDefault();
+    try {
+        const socket = io("ws://apisint.fromdoppler.net/emms-socket/");
+        console.log("emmit");
+        socket.emit('state', "refresh");
+        const success = document.getElementById('refresh-alert-success');
+        if (success.classList.contains("d-none")) {
+            success.classList.remove("d-none");
+        }
+        else {
+            success.classList.add("d-block");
+        }
+
+    } catch (error) {
+        console.log(error);
+    }
+    /*
+
+        const socket = io("ws://localhost:3000");
+        console.log("emmit");
+        socket.emit('state', "fede");
+    */
+
+
+
+
+}
