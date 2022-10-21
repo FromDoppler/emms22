@@ -132,7 +132,7 @@ require_once('././utils/DB.php');
             <div class="emms22__modal__window">
                 <h3>Estás a un paso de obtener tu Certificado</h3>
                 <p>Ingresa tu Nombre y Apellido y descárgalo ahora</p>
-                <input type="text" placeholder="Ingresa aquí tu Nombre y Apellido">
+                <input type="text" placeholder="Nombre y Apellido">
                 <a class="emms22__button">DESCARGAR</a>
                 <button data-dismiss="emms22__modal"></button>
             </div>

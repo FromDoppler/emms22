@@ -194,9 +194,7 @@ require_once('././utils/DB.php');
 
         <span id="version" class="emms22--vh"><?= VERSION ?></span>
 
-        <div class="emms22__loged">
-		    <?php include_once('././common/components/commonCalendar.php') ?>
-        </div>
+		<?php include_once('././common/components/commonCalendar.php') ?>
 
 
 		<!-- Premium content -->
