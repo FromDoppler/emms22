@@ -431,16 +431,6 @@
 /* ----------------------------------------------------------- Calendar */
 
 
-.emms22__loged .emms22__post-event__calendar__conferences-add p::after{
-    content: "Para poder acceder, debes estar registrado al evento :)";
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #333333;
-    display: block;
-    text-align: right;
-}
-
 .emms22__pre-event__calendar__event-list{
     display: flex;
     flex-wrap: wrap;
