@@ -3,6 +3,8 @@
 
 .emms22__during .emms22__hero-pre-event__intro{
     padding: 0;
+    max-width: 650px;
+    width: 60%;
 }
 
 .emms22__hero-during{
@@ -18,11 +20,56 @@
     animation-delay: 0.4s;
 }
 
+.emms22__during .emms22__hero-pre-event__intro__info h1{
+    font-size: 52px;
+    line-height: 56px;
+}
+
+.emms22__during .emms22__hero-pre-event__intro__info ul{
+    margin: 0 0 60px 0;
+}
+
+.emms22__during .emms22__hero-pre-event__intro__info span{
+    font-weight: 400;
+    margin: 40px 0 0 0;
+    max-width: 520px;
+}
+
+.emms22__during .emms22__hero-pre-event__intro__info span strong{
+    font-weight: 700;
+}
+
+.emms22__during .emms22__hero-pre-event__intro__info span img{
+    width: 15px;
+    margin: 0 5px 0 0;
+}
+
+.emms22__during .emms22__hero-pre-event__intro__info span a{
+    color: #33AD73;
+}
+
+.emms22__during .emms22__hero-pre-event__intro__info span a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:1250px){
+    .emms22__during .emms22__hero-pre-event__intro{
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px){
+    .emms22__during .emms22__hero-pre-event__intro{
+        max-width: initial;
+        width: 100%;
+    }
+}
+
 
 /* --- Live --- */
 
 .emms22__hero-during__streaming-live{
-    margin: 0 0 14px 0;
+    margin: 0 0 20px 0;
 }
 
 .emms22__hero-during__streaming-live p{
@@ -192,10 +239,21 @@
 
 .emms22__hero-during__aside__promotion p{
     font-size: 15px;
-    line-height: 19px;
+    line-height: 22px;
     font-weight: 400;
     color: #F2F2F2;
-    margin: 0;
+    margin: 0 0 50px 0;
+}
+
+.emms22__hero-during__aside__promotion p a{
+    font-weight: 700;
+    color: #33AD73;
+    transition-duration: .2s;
+}
+
+.emms22__hero-during__aside__promotion p a:hover{
+    color: #008046;
+    transition-duration: .2s;
 }
 
 .emms22__hero-during__aside__promotion ul{
@@ -356,6 +414,17 @@
     padding: 0;
     border: none;
     cursor: pointer;
+}
+
+
+/* ----------------------------------------------------------- Registered Premium content */
+
+
+.emms22__during .emms22__pre-event__registered-premium-content h2{
+    font-size: 22px;
+    line-height: 28px;
+    max-width: 620px;
+    margin: 0 auto 72px;
 }
 
 

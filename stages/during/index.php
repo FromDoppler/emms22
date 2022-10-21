@@ -39,7 +39,13 @@ require_once('././utils/DB.php');
 					<a href="./index.php"><img src="../../common/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<div class="emms22__header__warning emms22__fade-top">
-					<a>&iexcl;ASEGURA TU CUPO! REG&Iacute;STRATE GRATIS AHORA</a>
+                    <?php if ($liveDayDuring == 2) : ?>
+					<a>¡ESTAMOS EN VIVO! REGÍSTRATE GRATIS AHORA Y SÚMATE AL EMMS 2022</a>
+                    <?php elseif (($dayDuring == 1 || $dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                    <a>¡YA COMENZÓ! REGÍSTRATE GRATIS AHORA Y SÚMATE AL EMMS 2022</a>
+                    <?php elseif ( ($dayDuring == 3) && ($liveDayDuring == 1) ) : ?>
+                    <a>REGÍSTRATE GRATIS AHORA Y REVIVE EL EMMS 2022</a>
+                    <?php endif; ?>
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -66,20 +72,36 @@ require_once('././utils/DB.php');
                     if ($liveDayDuring == 2) :
                     ?>
                         <div class="emms22__hero-during__streaming-live emms22__hero-during__streaming-live--animated">
-                            <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO</p>
+                            <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO AHORA</p>
                         </div>
                     <?php
                     endif;
                     ?>
 						<p>EVENTO ONLINE Y GRATUITO - DEL 8 AL 10 DE NOVIEMBRE</p>
-						<h1>&iexcl;Vuelve el EMMS!</h1>
+                        <?php if ($liveDayDuring == 2) : ?>
+						    <h1>¡Regístrate y súmate ahora mismo al EMMS 2022!</h1>
+                        <?php elseif (($dayDuring == 1 || $dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                            <h1>Aún estás a tiempo ¡Súmate al EMMS!</h1>
+                        <?php elseif ( ($dayDuring == 3) && ($liveDayDuring == 1) ) : ?>
+                            <h1>¡Revive el EMMS 2022!</h1>
+                        <?php endif; ?>
+                        <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                            <p class="emms22__hero-pre-event__intro__info__subtitle">Inscríbete ahora y vive en directo los días 2 y 3. También podrás acceder luego a todas las Conferencias del evento. </p>
+                        <?php elseif ( ($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+                            <p class="emms22__hero-pre-event__intro__info__subtitle">Inscríbete ahora y vive en directo el día 3. También podrás acceder luego a todas las Conferencias del evento.  </p>
+                        <?php
+                        endif;
+                        ?>
 						<ul>
 							<li>EL FUTURO DEL MARKETING DIGITAL</li>
 							<li>SPEAKERS INTERNACIONALES</li>
 							<li>CAPACITACI&Oacute;N E INSPIRACI&Oacute;N</li>
 						</ul>
-						<span><strong>S&uacute;mate al EMMS y accede adem&aacute;s, a E-books, C&aacute;psulas educativas, descuentos en herramientas &iexcl;y mucho m&aacute;s!</strong></span>
-					</div>
+                        <span><strong>Regístrate al EMMS y accede, además, a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</strong></span>
+                        <span><img src="../../common/html/<?= VERSION ?>/img/icon-hotel.png" alt="icon"><img src="../../common/html/<?= VERSION ?>/img/icon-bell.png" alt="icon">
+                        <strong>Con tu registro, estás participando por una estadía de fin de semana para 2 personas. Mira términos y condiciones </strong><a href="https://goemms.com/common/html/<?= VERSION ?>/img/Sorteo-Doppler-Terminos-Condiciones.pdf" target="_blank">aquí</a>.</span>
+
+                    </div>
 				</div>
 
 				<div id="contentEarlyForm">
@@ -185,7 +207,7 @@ require_once('././utils/DB.php');
 				<div class="emms22__pre-event__premium-content__text emms22__fade-in">
 					<h2>S&uacute;mate al EMMS y desbloquea contenido Premium</h2>
 					<p>Descubre todo lo que nuestros Sponsors han preparado para ti y potencia tu negocio con capacitaciones audiovisuales, contenidos descargables, certificaciones y mucho m&aacute;s.</p>
-					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">ACCEDE AHORA</button>
+					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">REGÍSTRATE AHORA</button>
 				</div>
 				<div class="emms22__pre-event__premium-content__image emms22__fade-in">
 					<img src="../../common/html/<?= VERSION ?>/img/handset.png" alt="Handset">

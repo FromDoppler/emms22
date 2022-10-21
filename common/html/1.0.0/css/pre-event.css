@@ -70,6 +70,18 @@
     animation-delay: 0.6s;
 }
 
+.emms22__hero-pre-event__intro__info p.emms22__hero-pre-event__intro__info__subtitle{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 40px 0;
+    opacity: 0;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+
 .emms22__hero-pre-event__intro__info h1{
     font-family: 'Proxima-Nova-Bold';
     font-size: 67px;

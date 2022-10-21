@@ -4,8 +4,11 @@
 
         <!--------------------- Día 1 ----------------------->
 
-
-        <h2 class="emms22__fade-in">Descubre la agenda del EMMS 2022</h2>
+        <?php if ($liveDayDuring == 2 || $liveDayDuring == 0) : ?>
+            <h2 class="emms22__fade-in">Explora la agenda del EMMS 2022</h2>
+        <?php else : ?>
+            <h2 class="emms22__fade-in">Descubre la agenda del EMMS 2022</h2>
+        <?php endif; ?>
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
             <h3><strong>MARTES</strong> 8 DE NOVIEMBRE</h3>
             <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
