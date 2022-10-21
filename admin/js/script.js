@@ -280,29 +280,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function refreshAllBrowsers(event) {
     event.preventDefault();
-    try {
-        const socket = io("ws://apisint.fromdoppler.net/emms-socket/");
-        console.log("emmit");
-        socket.emit('state', "refresh");
-        const success = document.getElementById('refresh-alert-success');
-        if (success.classList.contains("d-none")) {
-            success.classList.remove("d-none");
-        }
-        else {
-            success.classList.add("d-block");
-        }
-
-    } catch (error) {
-        console.log(error);
-    }
-    /*
-
-        const socket = io("ws://localhost:3000");
-        console.log("emmit");
-        socket.emit('state', "fede");
-    */
-
-
-
-
+    fetch('./../../services/sendRefresh.php', {
+        method: 'POST',
+        body: JSON.stringify({ "msg": "refresh" }),
+    })
+        .then(resp => {
+            console.log("refresh success");
+        })
+        .catch((error) => {
+            // Tenemos la respuesta de errores
+            console.log('Algo salio mal: ', error)
+        });
 }
