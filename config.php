@@ -1,6 +1,6 @@
 <?php
 
-$ALLOW_IPS = array('::1', '200.5.229.58', '200.5.253.210', '127.0.0.1', '172.23.0.1');
+$ALLOW_IPS = array('::1', '200.5.229.58', '200.5.253.210', '127.0.0.1', '172.18.0.1');
 $ACCOUNT_DOPPLER = getenv("ACCOUNT_DOPPLER");
 $API_KEY_DOPPLER = getenv("API_KEY_DOPPLER");
 $ACCOUNT_RELAY = getenv("ACCOUNT_RELAY");
@@ -12,6 +12,7 @@ $DB_NAME = getenv("MYSQL_DATABASE");
 $DB_USER = getenv("MYSQL_USER");
 $DB_PASSWORD = getenv("MYSQL_PASSWORD");
 $DB_HOST = getenv("MYSQL_HOST");
+$SECRET_REFRESH = getenv("SECRET_REFRESH");
 
 
 if (!defined('VERSION')) define('VERSION', '1.0.0');
@@ -46,6 +47,12 @@ if (!defined('DB_NAME')) define('DB_NAME', $DB_NAME);
 if (!defined('DB_USER')) define('DB_USER', $DB_USER);
 if (!defined('DB_PASSWORD')) define('DB_PASSWORD', $DB_PASSWORD);
 if (!defined('DB_HOST')) define('DB_HOST', $DB_HOST);
+
+#SERVER NODE SOCKET
+
+if (!defined('URL_REFRESH')) define('URL_REFRESH', 'apisqa.fromdoppler.net');
+if (!defined('PATH_REFRESH')) define('PATH_REFRESH', 'emms-socket');
+if (!defined('SECRET_REFRESH')) define('SECRET_REFRESH', $SECRET_REFRESH);
 
 #During Days System
 $duringDaysArray = array(

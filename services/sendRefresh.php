@@ -16,8 +16,7 @@ try {
     $headers = array(
         'Content-Type: application/json'
     );
-
-    $ch = curl_init(ENDPOINT_REFRESH);
+    $ch = curl_init("https://".URL_REFRESH."/".PATH_REFRESH."/".SECRET_REFRESH);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
