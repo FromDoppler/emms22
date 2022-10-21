@@ -28,7 +28,7 @@ require_once('././utils/DB.php');
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<main class="emms22__pre-event">
+	<main class="emms22__pre-event emms22__during">
 
 		<!-- Header -->
 
@@ -41,7 +41,7 @@ require_once('././utils/DB.php');
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
                     <li><a href="#inicio">inicio</a></li>
-                    <li><a href="#contenido-exclusivo">contenido exclusivo</a></li>
+                    <li><a href="./sponsors-general.php" target="_blank">contenido exclusivo</a></li>
 					<li><a href="#agenda">agenda</a></li>
 				</ul>
 			</div>
@@ -82,37 +82,25 @@ require_once('././utils/DB.php');
                         <div class="emms22__cropper-cont-16-9">
                             <div class="emms22__cropper-cont">
                                 <div class="emms22__cropper-cont-interno">
-                                    <?php
-                                    if ($liveDayDuring == 2) :
-                                    ?>
+                                    <?php if ($liveDayDuring == 2) : ?>
                                         <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <?php
-                                    else :
-                                    ?>
-                                        <img src="../../common/html/<?= VERSION ?>/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner'] ?>.png" alt="Banner">
-                                    <?php
-                                    endif;
-                                    ?>
+                                    <?php elseif ($liveDayDuring == 1) : ?>
+                                        <img src="../../common/html/<?= VERSION ?>/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner-transition'] ?>.png" alt="Banner">
+                                    <?php elseif ($liveDayDuring == 0) : ?>
+                                        <img src="../../common/html/<?= VERSION ?>/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner-nolive'] ?>.png" alt="Banner">
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="emms22__hero-during__aside">
-                        <?php
-                        if ($liveDayDuring == 0) :
-                        ?>
+                        <?php if ($liveDayDuring == 0) : ?>
                             <div class="emms22__hero-during__aside__promotion">
-                                <img src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler">
-                                <p>Mientras tanto... si quieres comenzar o afianzar tu estrategia de Marketing Digital, te presentamos lo que Doppler tiene para ti...</p>
-                                <ul>
-                                    <li><p><span>DEMO DAY:</span> Capacitaciones de dos días, inicial y avanzado, donde podrás aprender a aplicar todas las herramientas que tiene Doppler</p></li>
-                                    <li><p><span>DOPPLER TRAINNING SESSION:</span> Capacitaciones de dos días, inicial y avanzado, donde podrás aprender a aplicar todas las herramientas que tiene Doppler</p></li>
-                                    <li><p><span>DOPPLER ACADEMY:</span> Capacitaciones de dos días, inicial y avanzado, donde podrás aprender a aplicar todas las herramientas que tiene Doppler</p></li>
-                                </ul>
+                                <p>Mientras tanto, puedes escuchar las conferencias <?php if ($dayDuring == 2)  : ?> de los días anteriores<?php endif; ?> desde la <a href="#agenda">Agenda</a>, o acceder a todos los contenidos exclusivos que prepararon nuestros Sponsors para ti, por ser parte del EMMS 2022. </p>
+                                <p>Descubrirás E-books gratuitos, conferencias, Guías, Plantillas, descuentos, ¡y mucho más!</p>
+                                <a href="https://goemms.com/sponsors-general.php" target="_blank" class="emms22__button emms22__fade-in-animation">ACCEDER AHORA</a>
                             </div>
-                        <?php
-                        else :
-                        ?>
+                        <?php else : ?>
                             <div class="emms22__hero-during__aside__chat">
                                 <div class="emms22__hero-during__aside__chat__title">
                                     <h3>TWEET CHAT <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
@@ -121,12 +109,10 @@ require_once('././utils/DB.php');
                                     <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/MakingSenseApps/lists/making-sense-twitting?ref_src=twsrc%5Etfw">A Twitter List by MakingSenseApps</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                 </div>
                                 <div class="emms22__hero-during__aside__chat__input">
-                                    <input type="text" value="<?= $duringDaysArray['d' . $dayDuring]['hashtag'] ?> " placeholder="127">
+                                    <input type="text" value="<?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?> " placeholder="127">
                                 </div>
                             </div>
-                        <?php
-                        endif;
-                        ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <!-- CTA Certificate -->
@@ -134,7 +120,7 @@ require_once('././utils/DB.php');
                     if ($liveDayDuring == 1 || $liveDayDuring == 2) :
                 ?>
                     <div class="emms22__hero-during__certificate">
-                        <p><img src="../../common/html/<?= VERSION ?>/img/icons/cup-icon.svg" alt="cup-icon"> Accede a tu Certificado de Asistencia haciendo click en el <button data-target="emms22__download-certificate" data-toggle="emms22__modal">siguiente enlace</button> y compártelo en tus Redes Sociales :)</p>
+                        <p><img src="../../common/html/<?= VERSION ?>/img/icons/cup-icon.svg" alt="cup-icon"> Descarga <button data-target="emms22__download-certificate" data-toggle="emms22__modal">aquí</button> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag <?= $duringDaysArray['d' . $dayDuring]['hashtag-gral'] ?> :)</p>
                     </div>
                 <?php
                     endif;
@@ -144,9 +130,9 @@ require_once('././utils/DB.php');
 		</div>
         <div id="emms22__download-certificate" class="emms22__modal">
             <div class="emms22__modal__window">
-                <h3>Estás a un paso de generar tu Certificado</h3>
+                <h3>Estás a un paso de obtener tu Certificado</h3>
                 <p>Ingresa tu Nombre y Apellido y descárgalo ahora</p>
-                <input type="text" placeholder="Ingresa tu Nombre y Apellido">
+                <input type="text" placeholder="Ingresa aquí tu Nombre y Apellido">
                 <a class="emms22__button">DESCARGAR</a>
                 <button data-dismiss="emms22__modal"></button>
             </div>
@@ -158,11 +144,10 @@ require_once('././utils/DB.php');
 
         <div id="contenido-exclusivo"></div>
 		<div class="emms22__pre-event__registered-premium-content">
-			<h2>Ya puedes acceder a material exclusivo para potenciar su estrategia de Marketing Digital</h2>
+			<h2>Accede al contenido exclusivo que prepararon nuestros Sponsors para optimizar tu estrategia de Marketing Digital</h2>
 			<div class="emms22__container--lg">
 				<div class="emms22__pre-event__registered-premium-content__text emms22__fade-in">
-					<h3><span>CONTENIDO PREMIUM EMMS 2022</span>Descubre todo lo que nuestros Sponsors han preparado para ti.</h3>
-					<p>Por ser parte del EMMS accedes a material exclusivo para potenciar tus resultados: </p>
+					<h3>Potencia lo aprendido en las Conferencias con muchos más conocimientos: </h3>
 					<ul>
 						<li>Capacitaciones audiovisuales</li>
 						<li>Contenidos descargables</li>

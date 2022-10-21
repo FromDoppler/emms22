@@ -50,22 +50,25 @@ if (!defined('DB_HOST')) define('DB_HOST', $DB_HOST);
 #During Days System
 $duringDaysArray = array(
     "d1" => array(
-        "title" => "Charla dia 1",
         "video" => "Fxn-toxKKIQ",
-        "hashtag" => "#EMMS22DIA1",
-        "banner" => "placa-dia01"
+        "hashtag-chat" => "#EMMS22DIA1",
+        "hashtag-gral" => "#EMMS2022",
+        "banner-transition" => "placa-dia01-transition",
+        "banner-nolive" => "placa-dia01-nolive"
     ),
     "d2" => array(
-        "title" => "Charla dia 2",
         "video" => "video2",
-        "hashtag" => "#EMMS22DIA2",
-        "banner" => "placa-dia02"
+        "hashtag-chat" => "#EMMS22DIA2",
+        "hashtag-gral" => "#GOEMMS",
+        "banner-transition" => "placa-dia02-transition",
+        "banner-nolive" => "placa-dia02-nolive"
     ),
     "d3" => array(
-        "title" => "Charla dia 3",
         "video" => "video3",
-        "hashtag" => "#EMMS22DIA3",
-        "banner" => "placa-dia03"
+        "hashtag-chat" => "#EMMS22DIA3",
+        "hashtag-gral" => "#EMMSBYDOPPLER",
+        "banner-transition" => "placa-dia03-transition",
+        "banner-nolive" => "placa-dia03-nolive"
     ),
 );
 

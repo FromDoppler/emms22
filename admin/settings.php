@@ -233,7 +233,7 @@
                                                 Transition
                                             </label>
                                         </div>
-                                        <div class="col">
+                                        <div class="col d-none">
                                             <input class="form-check-input" type="radio" name="day3Radios" id="day3NoLive" value="0">
                                             <label class="form-check-label" for="day3NoLive">
                                                 No Live
@@ -349,7 +349,7 @@
                                                 Transition
                                             </label>
                                         </div>
-                                        <div class="col">
+                                        <div class="col d-none">
                                             <input class="form-check-input" type="radio" name="day3RadiosSimulator" id="day3NoLiveSimulator" value="0">
                                             <label class="form-check-label" for="day3NoLiveSimulator">
                                                 No Live
