@@ -208,38 +208,6 @@ require_once('././utils/DB.php');
 			</div>
 		</section>
 
-        <!-- Doppler -->
-
-        <section class="emms22__pre-event__doppler">
-            <div class="emms22__container--lg">
-                <div class="emms22__pre-event__doppler__title">
-                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/<?= VERSION ?>/img/logo-doppler-black.svg"
-                            alt="Doppler"></h2>
-                    <h3 class="emms22__fade-in">La herramienta líder en Marketing Automation en español.</h3>
-                    <p class="emms22__fade-in">Desde hace 15 años organizamos el EMMS y formamos a profesionales de
-                        Marketing a lo largo de todo el mundo, a través de cursos, entrenamientos y recursos 100%
-                        gratuitos. </p>
-                </div>
-                <div class="emms22__pre-event__doppler__description">
-                    <div class="emms22__pre-event__doppler__description__image emms22__fade-in">
-                        <img src="../../common/html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
-                    </div>
-                    <div class="emms22__pre-event__doppler__description__text emms22__fade-in">
-                        <h4><strong>¿Quieres capacitarte gratis?</strong> ¡Esto te va a interesar! </h4>
-                        <p>En esta ocasión, queremos invitarte a completar nuestra Certificación en Automation Marketing
-                            gratuita.</p>
-                        <ul>
-                            <li>Online y en español</li>
-                            <li>20 lecciones de 15 minutos</li>
-                            <li>Cursas a tu ritmo</li>
-                            <li>Clases teóricas y prácticas</li>
-                        </ul>
-                        <a href="https://academy.fromdoppler.com/bootcamp/?origin=emms-2022" target="_blank" class="emms22__button emms22__fade-in">INSCRÍBETE AHORA</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
 
         <!-- Section conferences -->
 		<section class="emms22__pre-event__conferences">
@@ -268,11 +236,52 @@ require_once('././utils/DB.php');
                                     <span>¡No te lo pierdas!</span>
                                 </a>
 							</div>
+                            <div class="emms22__conferences__cards emms22__fade-in">
+                                <a href="https://youtu.be/09IBnkZ3NRk" target="_blank" rel="noopener">
+                                    <img class="lazyload" loading="lazy" data-src="common/html/<?= VERSION ?>/img/capsules/portada-capsula-eude-digital.png" alt="Conferencias exclusivas">
+                                    <h4>Mediatech, transición tecnológica en los medios de comunicación</h4>
+                                    <p>Duración: 00:21:33</p>
+                                    <span>¡No te lo pierdas!</span>
+                                </a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+
+                <!-- Doppler -->
+
+                <section class="emms22__pre-event__doppler">
+            <div class="emms22__container--lg">
+                <div class="emms22__pre-event__doppler__title">
+                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/<?= VERSION ?>/img/logo-doppler-black.svg"
+                            alt="Doppler"></h2>
+                    <h3 class="emms22__fade-in">La herramienta líder en Marketing Automation en español.</h3>
+                    <p class="emms22__fade-in">Desde hace 15 años organizamos el EMMS y formamos a profesionales de
+                        Marketing a lo largo de todo el mundo, a través de cursos, entrenamientos y recursos 100%
+                        gratuitos. </p>
+                </div>
+                <div class="emms22__pre-event__doppler__description">
+                    <div class="emms22__pre-event__doppler__description__image emms22__fade-in">
+                        <img src="../../common/html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
+                    </div>
+                    <div class="emms22__pre-event__doppler__description__text emms22__fade-in">
+                        <h4><strong>¿Quieres capacitarte gratis?</strong> ¡Esto te va a interesar! </h4>
+                        <p>En esta ocasión, queremos invitarte a completar nuestra Certificación en Automation Marketing
+                            gratuita.</p>
+                        <ul>
+                            <li>Online y en español</li>
+                            <li>20 lecciones de 15 minutos</li>
+                            <li>Cursas a tu ritmo</li>
+                            <li>Clases teóricas y prácticas</li>
+                        </ul>
+                        <a href="https://academy.fromdoppler.com/bootcamp/?origin=emms-2022" target="_blank" class="emms22__button emms22__fade-in">INSCRÍBETE AHORA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- Footer -->
