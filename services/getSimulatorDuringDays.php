@@ -13,6 +13,7 @@ SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
 SecurityHelper::isSubmitValid(ALLOW_IPS);
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $data = $db->getSimulatorDuringDay()[0];
+    $db->close();
 echo json_encode(array("day" => $data['day'], "live" => $data['live']));
 } catch (Exception $e) {
 processError("getSimulatorDuringDay", $e->getMessage(), []);

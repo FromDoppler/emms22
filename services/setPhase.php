@@ -14,6 +14,7 @@ try {
     SecurityHelper::isSubmitValid(ALLOW_IPS);
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $db->updateCurrentPhase($_POST['phase']);
+    $db->close();
 } catch (Exception $e) {
     processError("setPhase", $e->getMessage(), ['POST' => $_POST]);
     header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);

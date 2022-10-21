@@ -13,6 +13,7 @@ if (!in_array($ip, ALLOW_IPS)) {
 }
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $subscriptions = $db->getSubscriptionsDoppler();
+$db->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
