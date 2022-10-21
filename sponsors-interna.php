@@ -79,9 +79,9 @@ $premium = $premium[0];
 				</div>
 				<div class="emms22__hero__content__sponsors__interna__video emms22__fade-in">
 				<?php if(!empty($premium['youtube'])) :  ?>
-                    <div class="cropper-cont-16-9">
-                        <div class="cropper-cont ">
-                            <div class="cropper-cont-interno">
+                    <div class="emms22__cropper-cont-16-9">
+                        <div class="emms22__cropper-cont ">
+                            <div class="emms22__cropper-cont-interno">
                                 <iframe src="https://www.youtube.com/embed/<?=$premium['youtube']?>"></iframe>
                             </div>
                         </div>
