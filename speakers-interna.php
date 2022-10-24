@@ -8,7 +8,7 @@ if (!isset($_GET['slug']) or (trim($_GET['slug']) === '')) {
     exit;
 }
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-$speaker = $db->getSpeakerBySlug($_GET['slug']);
+$speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug']);
             <div class="emms22__container--lg">
 
                 <div class="emms22__hero-speakers__title">
-                    <h2>Branding Vs Performance: Cómo terminar una guerra donde todos ganan</h2>
+                    <h2><?= $speaker['description'] ?></h2>
                 </div>
                 <div class="emms22__hero-speakers__conference-container">
                     <div class="emms22__hero-speakers__conference">
@@ -59,7 +59,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug']);
                             <div class="emms22__cropper-cont-16-9">
                                 <div class="emms22__cropper-cont">
                                     <div class="emms22__cropper-cont-interno">
-                                        <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe src="https://www.youtube.com/embed/<?= $speaker['youtube'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -148,11 +148,35 @@ $speaker = $db->getSpeakerBySlug($_GET['slug']);
                         <?php endif; ?>
                     </div>
                     <div class="emms22__hero-speakers__aside">
-                        <h3>Tim Ash</h3>
-                        <p>Speaker internacional sobre psicología evolutiva y Marketing Digital, consultor, formador y emprendedor. Autor de bestsellers. Estos son sólo algunos de los títulos que podrían describir a uno de los líderes de pen samiento de la industria actual. </p>
+                        <h3><?= $speaker['name'] ?></h3>
+                        <p><?= $speaker['bio'] ?></p>
                         <ul>
-                            <li><a><img src="../../common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
-                            <li><a><img src="../../common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
+                            <?php if ($speaker['sm_facebook']) : ?>
+                                <li>
+                                    <a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../../common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a>
+                                </li>
+                            <?php endif; ?>
+                            <?php if ($speaker['sm_twitter']) : ?>
+                                <li>
+                                    <a href="<?= $speaker['sm_twitter'] ?>" target="_blank">
+                                        <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter">
+                                    </a>
+                                </li>
+                            <?php endif ?>
+                            <?php if ($speaker['sm_linkedin']) : ?>
+                                <li>
+                                    <a href="<?= $speaker['sm_linkedin'] ?>" target="_blank">
+                                        <img src="../../common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn">
+                                    </a>
+                                </li>
+                            <?php endif ?>
+                            <?php if ($speaker['sm_instagram']) : ?>
+                                <li>
+                                    <a href="<?= $speaker['sm_instagram'] ?>" target="_blank">
+                                        <img src="../../common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram">
+                                    </a>
+                                </li>
+                            <?php endif ?>
                         </ul>
                     </div>
                 </div>

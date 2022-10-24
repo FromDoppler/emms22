@@ -11,7 +11,7 @@
         <?php endif; ?>
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
             <h3><strong>MARTES</strong> 8 DE NOVIEMBRE</h3>
-            <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+            <?php if (($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
                 <div class="emms22__post-event__calendar__conferences-add">
                     <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
                 </div>
@@ -20,10 +20,10 @@
                     <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
                 </div>
             <?php else : ?>
-            <div class="emms22__pre-event__calendar__date__country">
-                <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
-                <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
-            </div>
+                <div class="emms22__pre-event__calendar__date__country">
+                    <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
+                    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
+                </div>
             <?php endif; ?>
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
@@ -62,10 +62,10 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                            <?php if (($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php elseif ($dayDuring == 2 || $dayDuring == 3) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php else : ?>
                                 <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
                             <?php endif; ?>
@@ -117,10 +117,10 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <?php if ( ($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                            <?php if (($dayDuring == 1) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php elseif ($dayDuring == 2 || $dayDuring == 3) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php else : ?>
                                 <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
                             <?php endif; ?>
@@ -146,7 +146,7 @@
 
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
             <h3><strong>MIÉRCOLES</strong> 9 DE NOVIEMBRE</h3>
-            <?php if ( ($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+            <?php if (($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
                 <div class="emms22__post-event__calendar__conferences-add">
                     <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
                 </div>
@@ -156,9 +156,9 @@
                 </div>
             <?php else : ?>
                 <div class="emms22__pre-event__calendar__date__country">
-                <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
-                <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
-            </div>
+                    <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
+                    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
+                </div>
             <?php endif; ?>
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
@@ -197,10 +197,10 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <?php if ( ($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                            <?php if (($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php elseif ($dayDuring == 3) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php else : ?>
                                 <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
                             <?php endif; ?>
@@ -250,10 +250,10 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <?php if ( ($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                            <?php if (($dayDuring == 2) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php elseif ($dayDuring == 3) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php else : ?>
                                 <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
                             <?php endif; ?>
@@ -279,7 +279,7 @@
 
         <div class="emms22__pre-event__calendar__date emms22__fade-in">
             <h3><strong>JUEVES</strong> 10 DE NOVIEMBRE</h3>
-            <?php if ( ($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
+            <?php if (($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
                 <div class="emms22__post-event__calendar__conferences-add">
                     <p>¡YA ESTÁN DISPONIBLES LAS CONFERENCIAS!</p>
                 </div>
@@ -324,8 +324,8 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <?php if ( ($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                            <?php if (($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php else : ?>
                                 <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
                             <?php endif; ?>
@@ -375,8 +375,8 @@
                         </div>
                         <div class="emms22__pre-event__calendar__event-list__event__card__business">
                             <img src="../../admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                            <?php if ( ($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1) ) : ?>
-                                <a href="../../speakers-interna.php" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
+                            <?php if (($dayDuring == 3) && ($liveDayDuring == 0 || $liveDayDuring == 1)) : ?>
+                                <a href="../../speakers-interna.php?slug=<?= $speaker['slug'] ?>" class="emms22__pre-event__calendar__event-list__event__card__btn-conference">Ver conferencia</a>
                             <?php else : ?>
                                 <a class="emms22__pre-event__calendar__event-list__event__card__btn-bio">Ver bio</a>
                             <?php endif; ?>
