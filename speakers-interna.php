@@ -1,6 +1,14 @@
 <?php
 require_once('././config.php');
 require_once('././utils/DB.php');
+
+if (!isset($_GET['slug']) or (trim($_GET['slug']) === '')) {
+    header("HTTP/1.0 404 Not Found");
+    include '././common/components/404.php';
+    exit;
+}
+$db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$speaker = $db->getSpeakerBySlug($_GET['slug']);
 ?>
 
 <!DOCTYPE html>
@@ -10,24 +18,15 @@ require_once('././utils/DB.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module">
-		import {
-			checkUserNotLoged
-		} from '../../common/html/<?= VERSION ?>/js/security.js'
-		const checkUserNotLogedF = checkUserNotLoged;
-		checkUserNotLogedF()
 
-        console.log("hola", checkUserNotLoged)
-	</script>
     <?php
-	include_once('././common/components/commonHeader.php');
-	?>
+    include_once('././common/components/commonHeader.php');
+    ?>
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <main class="emms22__page-speakers">
 
@@ -150,7 +149,7 @@ require_once('././utils/DB.php');
                     </div>
                     <div class="emms22__hero-speakers__aside">
                         <h3>Tim Ash</h3>
-                        <p>Speaker internacional sobre psicología evolutiva y Marketing Digital, consultor, formador y emprendedor. Autor de bestsellers. Estos son sólo algunos de los títulos que podrían describir a uno de los líderes de pen   samiento de la industria actual. </p>
+                        <p>Speaker internacional sobre psicología evolutiva y Marketing Digital, consultor, formador y emprendedor. Autor de bestsellers. Estos son sólo algunos de los títulos que podrían describir a uno de los líderes de pen samiento de la industria actual. </p>
                         <ul>
                             <li><a><img src="../../common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
                             <li><a><img src="../../common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
@@ -168,26 +167,26 @@ require_once('././utils/DB.php');
         <!-- Registered Premium content -->
 
         <div id="contenido-exclusivo"></div>
-		<div class="emms22__pre-event__registered-premium-content">
-			<h2>Ya puedes acceder a material exclusivo para potenciar su estrategia de Marketing Digital</h2>
-			<div class="emms22__container--lg">
-				<div class="emms22__pre-event__registered-premium-content__text emms22__fade-in">
-					<h3><span>CONTENIDO PREMIUM EMMS 2022</span>Descubre todo lo que nuestros Sponsors han preparado para ti.</h3>
-					<p>Por ser parte del EMMS accedes a material exclusivo para potenciar tus resultados: </p>
-					<ul>
-						<li>Capacitaciones audiovisuales</li>
-						<li>Contenidos descargables</li>
-						<li>Descuentos de todo tipo</li>
-						<li>¡Y mucho más! </li>
-					</ul>
-					<a href="./sponsors-general.php" class="emms22__button emms22__fade-in" target="_blank">ACCEDE AHORA</a>
-				</div>
-				<div class="emms22__pre-event__registered-premium-content__image emms22__fade-in">
-					<img src="../../common/html/<?= VERSION ?>/img/registered-content-premium.png" alt="Contenido Premium">
-				</div>
-			</div>
+        <div class="emms22__pre-event__registered-premium-content">
+            <h2>Ya puedes acceder a material exclusivo para potenciar su estrategia de Marketing Digital</h2>
+            <div class="emms22__container--lg">
+                <div class="emms22__pre-event__registered-premium-content__text emms22__fade-in">
+                    <h3><span>CONTENIDO PREMIUM EMMS 2022</span>Descubre todo lo que nuestros Sponsors han preparado para ti.</h3>
+                    <p>Por ser parte del EMMS accedes a material exclusivo para potenciar tus resultados: </p>
+                    <ul>
+                        <li>Capacitaciones audiovisuales</li>
+                        <li>Contenidos descargables</li>
+                        <li>Descuentos de todo tipo</li>
+                        <li>¡Y mucho más! </li>
+                    </ul>
+                    <a href="./sponsors-general.php" class="emms22__button emms22__fade-in" target="_blank">ACCEDE AHORA</a>
+                </div>
+                <div class="emms22__pre-event__registered-premium-content__image emms22__fade-in">
+                    <img src="../../common/html/<?= VERSION ?>/img/registered-content-premium.png" alt="Contenido Premium">
+                </div>
+            </div>
             <div id="agenda"></div>
-		</div>
+        </div>
 
 
         <!-- Doppler -->
@@ -195,8 +194,7 @@ require_once('././utils/DB.php');
         <section class="emms22__pre-event__doppler">
             <div class="emms22__container--lg">
                 <div class="emms22__pre-event__doppler__title">
-                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/<?= VERSION ?>/img/logo-doppler-black.svg"
-                            alt="Doppler"></h2>
+                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/<?= VERSION ?>/img/logo-doppler-black.svg" alt="Doppler"></h2>
                     <h3 class="emms22__fade-in">La herramienta líder en Marketing Automation en español.</h3>
                     <p class="emms22__fade-in">Desde hace 15 años organizamos el EMMS y formamos a profesionales de
                         Marketing a lo largo de todo el mundo, a través de cursos, entrenamientos y recursos 100%
@@ -227,26 +225,16 @@ require_once('././utils/DB.php');
 
         <footer class="emms22__footer">
             <div class="emms22__footer__event emms22__fade-in">
-                <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/"
-                        target="_blank"><img class="lazyload" loading="lazy"
-                            data-src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+                <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
             </div>
             <div class="emms22__footer__social emms22__fade-in">
                 <ul>
-                    <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-instagram.svg"
-                                alt="Instagram"></a></li>
-                    <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-facebook.svg"
-                                alt="Facebook"></a></li>
-                    <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a>
+                    <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
+                    <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a>
                     </li>
-                    <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload"
-                                loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-linkedin.svg"
-                                alt="LinkedIn"></a></li>
-                    <li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy"
-                                data-src="../../common/html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
+                    <li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
                 </ul>
             </div>
             <div class="emms22__footer__actions emms22__fade-in">
@@ -264,12 +252,12 @@ require_once('././utils/DB.php');
     <?php include_once('././common/components/commonFooter.php') ?>
     <script type="module" src="../../common/html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
     <?php
-	if (!(PRODUCTION)) {
-	?>
-    <script type="module" src="../../common/html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
+    if (!(PRODUCTION)) {
+    ?>
+        <script type="module" src="../../common/html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
     <?php
-	}
-	?>
+    }
+    ?>
 
 </body>
 
