@@ -221,7 +221,7 @@ require_once('././utils/DB.php');
 					<div class="emms22__conferences__cards__container">
 						<div class="emms22__conferences__content__cards">
 							<div class="emms22__conferences__cards emms22__fade-in">
-                                <a href="https://youtu.be/vvNaes-2Hic" target="_blank" rel="noopener">
+                                <a href="https://youtu.be/vvNaes-2Hic" target="_blank">
                                     <img class="lazyload" loading="lazy" data-src="common/html/<?= VERSION ?>/img/capsules/portada-capsula-todoluminosos.png" alt="Conferencias exclusivas">
                                     <h4>CRO: La metodología que optimiza la rentabilidad de tu negocio</h4>
                                     <p>Duración: 00:14:45</p>
@@ -229,7 +229,7 @@ require_once('././utils/DB.php');
                                 </a>
 							</div>
 							<div class="emms22__conferences__cards emms22__fade-in">
-                                <a href="https://youtu.be/N_8Gu28K6hQ" target="_blank" rel="noopener">
+                                <a href="https://youtu.be/N_8Gu28K6hQ" target="_blank">
                                     <img class="lazyload" loading="lazy" data-src="common/html/<?= VERSION ?>/img/capsules/portada-capsula-mujeresqueemprenden.png" alt="Conferencias exclusivas">
                                     <h4>Cómo armar la estrategia comercial de tu emprendimiento</h4>
                                     <p>Duración: 00:07:57</p>
@@ -237,10 +237,18 @@ require_once('././utils/DB.php');
                                 </a>
 							</div>
                             <div class="emms22__conferences__cards emms22__fade-in">
-                                <a href="https://youtu.be/09IBnkZ3NRk" target="_blank" rel="noopener">
+                                <a href="https://youtu.be/09IBnkZ3NRk" target="_blank">
                                     <img class="lazyload" loading="lazy" data-src="common/html/<?= VERSION ?>/img/capsules/portada-capsula-eude-digital.png" alt="Conferencias exclusivas">
                                     <h4>Mediatech, transición tecnológica en los medios de comunicación</h4>
                                     <p>Duración: 00:21:33</p>
+                                    <span>¡No te lo pierdas!</span>
+                                </a>
+							</div>
+                            <div class="emms22__conferences__cards emms22__fade-in">
+                                <a href="https://youtu.be/gBD9InwnH3g" target="_blank">
+                                    <img class="lazyload" loading="lazy" data-src="common/html/<?= VERSION ?>/img/capsules/portada-capsula-china-rodriguez.png" alt="Conferencias exclusivas">
+                                    <h4>Contenido estratégico para tus Redes Sociales</h4>
+                                    <p>Duración: 00:14:10</p>
                                     <span>¡No te lo pierdas!</span>
                                 </a>
 							</div>
