@@ -13,6 +13,7 @@ try {
     SecurityHelper::isSubmitValid(ALLOW_IPS);
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $data = $db->getDuringDay()[0];
+    $db->close();
     echo json_encode(array("day" => $data['day'], "live" => $data['live']));
 } catch (Exception $e) {
     processError("getDuringDay", $e->getMessage(), []);

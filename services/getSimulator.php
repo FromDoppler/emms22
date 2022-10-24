@@ -14,6 +14,7 @@ try {
     SecurityHelper::isSubmitValid(ALLOW_IPS);
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $data = $db->getSimulator()[0];
+    $db->close();
     $enabled = array_shift($data);
     $simultedPhase = array_search(1, $data);
     echo json_encode(array("enabled" => $enabled, "phase" => $simultedPhase));

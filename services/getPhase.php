@@ -14,6 +14,7 @@ try {
     SecurityHelper::isSubmitValid(ALLOW_IPS);
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $phases = $db->getCurrentPhase()[0];
+    $db->close();
     $current_phase = array_search(1, $phases);
     echo json_encode($current_phase);
 } catch (Exception $e) {

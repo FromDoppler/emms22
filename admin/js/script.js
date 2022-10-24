@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     radioPhases.forEach(currentRadioPhase => currentRadioPhase.addEventListener('change', () => clickRadiosPhase(currentRadioPhase.id)));
     const radioPhasesSimulator = document.querySelectorAll('input[name="simulator_phase"]');
     radioPhasesSimulator.forEach(simulatorRadioPhase => simulatorRadioPhase.addEventListener('change', () => clickRadiosPhaseSimulator(simulatorRadioPhase.id)));
-
+    const buttonRefreshAllBrowsers = document.getElementById('refreshBrowsers');
+    buttonRefreshAllBrowsers.addEventListener('click', refreshAllBrowsers, false);
 
     checkRadiosPhase();
     checkRadiosDuringDays();
@@ -274,4 +275,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Algo salio mal: ', error)
             });
     }
+
+
 });
+function refreshAllBrowsers(event) {
+    event.preventDefault();
+    fetch('./../../services/sendRefresh.php', {
+        method: 'POST',
+        body: JSON.stringify({ "msg": "refresh" }),
+    })
+        .then(resp => {
+            console.log("refresh success");
+        })
+        .catch((error) => {
+            // Tenemos la respuesta de errores
+            console.log('Algo salio mal: ', error)
+        });
+}

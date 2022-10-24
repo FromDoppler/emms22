@@ -17,10 +17,11 @@ services:
       API_KEY_DOPPLER: ${API_KEY_DOPPLER}
       ACCOUNT_RELAY: ${ACCOUNT_RELAY}
       API_KEY_RELAY: ${API_KEY_RELAY}
+      SECRET_REFRESH: ${SECRET_REFRESH}
 
     volumes:
       - ${REPO}:/var/www/html
-    restart: always  
+    restart: always
     depends_on:
       - db
 
@@ -50,7 +51,7 @@ services:
       - db
 
   nginx:
-    build: 
+    build:
       context: ./config/nginx
       args:
         WEB_PORT: ${WEB_PORT}

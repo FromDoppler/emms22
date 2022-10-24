@@ -14,6 +14,7 @@ try {
     SecurityHelper::isSubmitValid(ALLOW_IPS);
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $allies = $db->getAliadosMedia("orden_home");
+    $db->close();
     echo json_encode($allies);
 } catch (Exception $e) {
     processError("getAliadosMedia", $e->getMessage(), []);

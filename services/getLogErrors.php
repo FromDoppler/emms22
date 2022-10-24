@@ -9,6 +9,7 @@ if (!in_array($ip, ALLOW_IPS)) {
 }
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $errors = $db->getLogErrors();
+$db->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
