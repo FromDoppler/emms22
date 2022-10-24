@@ -73,7 +73,7 @@ require_once('././utils/DB.php');
                         <p class="emms22__hero-pre-event__intro__info__add">
                             <img src="../../common/html/<?= VERSION ?>/img/icon-hotel.png" alt="icon-hotel">
                             <img src="../../common/html/<?= VERSION ?>/img/icon-bell.png" alt="icon-bell">
-                            <strong>Con tu registro, est&aacute;s participando por una estad&iacute;a de fin de semana para 2 personas.</strong> V&aacute;lido en M&eacute;xico, Argentina, Uruguay, Chile, Per&uacute;, Colombia, Ecuador y Espa&ntilde;a. Mira T&eacute;rminos y Condiciones en <a href="../../common/html/<?= VERSION ?>/img/Sorteo-Doppler-Terminos-Condiciones.pdf" download="Sorteo Doppler Terminos y Condiciones.pdf">link</a>.</p>
+                            <strong>Con tu registro, estás participando por una estadía de fin de semana para 2 personas. Mira términos y condiciones <a href="../../common/html/<?= VERSION ?>/img/Sorteo-Doppler-Terminos-Condiciones.pdf" download="Sorteo Doppler Terminos y Condiciones.pdf">aquí</a>.</strong></p>
 					</div>
 					<ul class="emms22__hero-pre-event__intro__counter">
 						<li>
@@ -208,7 +208,7 @@ require_once('././utils/DB.php');
 				<div class="emms22__pre-event__premium-content__text emms22__fade-in">
 					<h2>S&uacute;mate al EMMS y desbloquea contenido Premium</h2>
 					<p>Descubre todo lo que nuestros Sponsors han preparado para ti y potencia tu negocio con capacitaciones audiovisuales, contenidos descargables, certificaciones y mucho m&aacute;s.</p>
-					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">ACCEDE AHORA</button>
+					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">REGÍSTRATE AHORA</button>
 				</div>
 				<div class="emms22__pre-event__premium-content__image emms22__fade-in">
 					<img src="../../common/html/<?= VERSION ?>/img/handset.png" alt="Handset">
