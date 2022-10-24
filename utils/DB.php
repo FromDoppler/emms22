@@ -284,6 +284,13 @@ class DB
         return $result;
     }
 
+    public function getSpeakerBySlug($slug)
+    {
+        $sql = $this->query("SELECT * FROM speakers where slug='" . $slug . "'");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function updateCurrentPhase($phase)
     {
         $phases = array("pre" => 0, "during" => 0, "post" => 0);
