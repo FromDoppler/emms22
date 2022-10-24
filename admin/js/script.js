@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     phasesForm.addEventListener('submit', sendDataCurrentPhase);
     const simulatorForm = document.getElementById('simulator');
     simulatorForm.addEventListener('submit', sendDataSimulator);
+    const transmissionForm = document.getElementById('transmission');
+    transmissionForm.addEventListener('submit', sendDataTransmission);
     const duringDaysForm = document.getElementById('duringCurrentDays');
     duringDaysForm.addEventListener('submit', sendDataDuringDay);
     const duringDaysSimulatorForm = document.getElementById('duringSimulatorDays');
@@ -83,6 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         //send data fecth
 
+    }
+
+    function sendDataTransmission(e) {
+        e.preventDefault();
+        alert("send")
     }
     function sendDataDuringDay(e) {
         e.preventDefault();
@@ -285,7 +292,14 @@ function refreshAllBrowsers(event) {
         body: JSON.stringify({ "msg": "refresh" }),
     })
         .then(resp => {
-            console.log("refresh success");
+            let success = document.getElementById('refresh-alert-success');
+            console.log(success);
+            if (success.classList.contains('d-none')) {
+                console.log("contiene");
+                success.classList.remove('d-none');
+            }
+
+
         })
         .catch((error) => {
             // Tenemos la respuesta de errores
