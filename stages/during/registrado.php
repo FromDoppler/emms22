@@ -83,12 +83,15 @@ require_once('././utils/DB.php');
                             <div class="emms22__cropper-cont">
                                 <div class="emms22__cropper-cont-interno">
                                     <?php if ($liveDayDuring == 2) : ?>
-                                        <?php if ($isTransmissionYoutube) : ?>
-                                            <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <?php if ($problemsTransmission) : ?>
+                                            <img src="../../common/html/<?= VERSION ?>/img/technical-problems.png" alt="technical-problems">
+                                        <?php elseif ($isTransmissionYoutube) : ?>
+                                            <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <?php else : ?>
                                             <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray['d' . $dayDuring]['twitch'] ?>&parent=<?= $_SERVER['SERVER_NAME'] ?>">
                                             </iframe>
                                         <?php endif; ?>
+
                                     <?php elseif ($liveDayDuring == 1) : ?>
                                         <img src="../../common/html/<?= VERSION ?>/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner-transition'] ?>.png" alt="Banner">
                                     <?php elseif ($liveDayDuring == 0) : ?>
