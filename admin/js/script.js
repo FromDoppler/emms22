@@ -220,7 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(resp => resp.json())
             .then(resp => {
-                console.log(resp);
                 if (resp.problems == 1) {
                     document.getElementById('transmissionProblems').checked = true;
                 }
