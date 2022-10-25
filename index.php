@@ -27,6 +27,8 @@ try {
     $simulated = $response['simulated'];
     $dayDuring  = $response['day'];
     $liveDayDuring  = $response['live'];
+    $problemsTransmission = $response['problemsTransmission'];
+    $isTransmissionYoutube = $response['isTransmissionYoutube'];
     require_once($_SERVER['DOCUMENT_ROOT'] . "/stages/$response[phaseToShow]/index.php");
 } catch (Exception $e) {
     processError("Index main", $e->getMessage(), []);
