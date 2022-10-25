@@ -313,6 +313,13 @@ class DB
         return $result;
     }
 
+    function getSettingsTransmission()
+    {
+        $sql = $this->query("SELECT * from settings_transmission where 1=1");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function getDuringDay()
     {
         $sql = $this->query("SELECT * from settings_during_days where 1=1");
@@ -343,6 +350,11 @@ class DB
     public function updateSimulatorDuringDays($day, $live)
     {
         $this->query("UPDATE settings_simulator_during_days SET day =" . $day . ", live =" . $live . " where 1=1");
+    }
+
+    public function updateSettingsTransmission($problems, $youtube)
+    {
+        $this->query("UPDATE settings_transmission SET problems =" . $problems . ", youtube =" . $youtube . " where 1=1");
     }
 
     /******* log errors */

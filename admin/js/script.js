@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     phasesForm.addEventListener('submit', sendDataCurrentPhase);
     const simulatorForm = document.getElementById('simulator');
     simulatorForm.addEventListener('submit', sendDataSimulator);
+    const transmissionForm = document.getElementById('transmission');
+    transmissionForm.addEventListener('submit', sendDataTransmission);
     const duringDaysForm = document.getElementById('duringCurrentDays');
     duringDaysForm.addEventListener('submit', sendDataDuringDay);
     const duringDaysSimulatorForm = document.getElementById('duringSimulatorDays');
@@ -20,10 +22,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonRefreshAllBrowsers = document.getElementById('refreshBrowsers');
     buttonRefreshAllBrowsers.addEventListener('click', refreshAllBrowsers, false);
 
-    checkRadiosPhase();
-    checkRadiosDuringDays();
-    checkRadiosSimulator();
-    checkRadiosSimulatorDuringDays();
+    init();
+
+    function init() {
+        hideAlerts();
+        checkRadiosPhase();
+        checkRadiosDuringDays();
+        checkRadiosSimulator();
+        checkRadiosSimulatorDuringDays();
+        checkRadiosTransmission();
+    }
+
+    function hideAlerts() {
+        $("#refresh-alert-success").hide();
+        $("#current-alert-success").hide();
+        $("#simulator-alert-success").hide();
+        $("#transmission-alert-success").hide();
+        $("#current-days-alert-success").hide();
+        $("#simulator-days-alert-success").hide();
+    }
+
+    function showAlert(id) {
+        $("#" + id).show()
+        setTimeout(() => {
+            $("#" + id).hide()
+        }, 2000)
+    }
 
     function clickRadiosPhase(phase) {
         document.getElementById('cardCurrentDay').classList.add('d-none');
@@ -69,24 +93,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(resp => resp)
                 .then(resp => {
                     if (resp.ok) {
-                        const success = document.getElementById('simulator-days-alert-success');
-                        success.classList.remove("d-none");
-                    }
-                    else {
-                        console.log("error");
-                        const success = document.getElementById('simulator-days-alert-danger');
-                        success.classList.remove("d-none")
+                        showAlert('simulator-days-alert-success');
                     }
                 })
         } catch (error) {
             console.log(error);
         }
-        //send data fecth
 
+    }
+
+    function sendDataTransmission(e) {
+        e.preventDefault();
+        try {
+            const problems = (document.getElementById('transmissionProblems').checked) ? 1 : 0;
+            let youtube = document.querySelector("input[name='sourceTransmission']:checked").id;
+            youtube = (youtube === 'youtube') ? 1 : 0;
+            const data = { problems: problems, youtube: youtube }
+            fetch('./../../services/setTransmission.php', {
+                method: "post",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+                .then(resp => resp)
+                .then(resp => {
+                    if (resp.ok) {
+                        showAlert('transmission-alert-success');
+                    }
+                })
+        } catch (error) {
+            console.log(error);
+        }
     }
     function sendDataDuringDay(e) {
         e.preventDefault();
-
         let selectedDay = document.querySelector('input[name="duringCurrentDay"]:checked').id;
         const stateLive = document.querySelector("input[name='" + selectedDay + "Radios']:checked").value;
         selectedDay = selectedDay.slice(-1);
@@ -102,13 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(resp => resp)
                 .then(resp => {
                     if (resp.ok) {
-                        const success = document.getElementById('current-days-alert-success');
-                        success.classList.remove("d-none");
-                    }
-                    else {
-                        console.log("error");
-                        const success = document.getElementById('current-days-alert-danger');
-                        success.classList.remove("d-none")
+                        showAlert('current-days-alert-success');
                     }
                 })
         } catch (error) {
@@ -134,13 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(resp => resp)
                 .then(resp => {
                     if (resp.ok) {
-                        const success = document.getElementById('simulator-alert-success');
-                        success.classList.remove("d-none");
-                    }
-                    else {
-                        console.log("error");
-                        const success = document.getElementById('simulator-alert-danger');
-                        success.classList.remove("d-none")
+                        showAlert('simulator-alert-success');
                     }
                 })
                 .catch((error) => {
@@ -169,13 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(resp => resp)
                 .then(resp => {
                     if (resp.ok) {
-                        const success = document.getElementById('current-alert-success');
-                        success.classList.remove("d-none");
-                    }
-                    else {
-                        console.log("error");
-                        const success = document.getElementById('current-alert-danger');
-                        success.classList.remove("d-none")
+                        showAlert('current-alert-success');
                     }
                 })
                 .catch((error) => {
@@ -186,6 +209,27 @@ document.addEventListener('DOMContentLoaded', () => {
         catch (e) {
             console.log("No values");
         }
+    }
+
+    function checkRadiosTransmission() {
+        fetch('./../../services/getSettingsTransmission.php', {
+            method: "get",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(resp => resp.json())
+            .then(resp => {
+                console.log(resp);
+                if (resp.problems == 1) {
+                    document.getElementById('transmissionProblems').checked = true;
+                }
+                if (resp.youtube == 1) {
+                    document.getElementById('youtube').checked = true;
+                } else {
+                    document.getElementById('twitch').checked = true;
+                }
+            })
     }
 
     function checkRadiosDuringDays() {
@@ -276,19 +320,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function refreshAllBrowsers(event) {
+        event.preventDefault();
+        fetch('./../../services/sendRefresh.php', {
+            method: 'POST',
+            body: JSON.stringify({ "msg": "refresh" }),
+        })
+            .then(resp => {
+                showAlert('refresh-alert-success');
+            })
+            .catch((error) => {
+                // Tenemos la respuesta de errores
+                console.log('Algo salio mal: ', error)
+            });
+    }
+
 
 });
-function refreshAllBrowsers(event) {
-    event.preventDefault();
-    fetch('./../../services/sendRefresh.php', {
-        method: 'POST',
-        body: JSON.stringify({ "msg": "refresh" }),
-    })
-        .then(resp => {
-            console.log("refresh success");
-        })
-        .catch((error) => {
-            // Tenemos la respuesta de errores
-            console.log('Algo salio mal: ', error)
-        });
-}
+

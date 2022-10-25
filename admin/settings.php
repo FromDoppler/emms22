@@ -11,53 +11,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-</head>
-
-<script src="https://cdn.socket.io/4.5.3/socket.io.min.js" integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
+    <script src="https://cdn.socket.io/4.5.3/socket.io.min.js" integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 
 </head>
 
 <body>
     <main class="container">
-        <header class="mt-2">
+        <div class="mt-5 row">
+            <div class="col-3">
+                <a class=" btn btn-primary mt-2" href="/admin/index.php?token=<?= $_GET['token'] ?>"> Menu Principal</a>
+            </div>
 
-
-            <a class="btn btn-primary mt-2" href="/admin/index.php?token=<?= $_GET['token'] ?>"> Menu Principal</a>
-            <div class="text-center">
-
-
-                <div id="refresh-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+            <div class="col text-center">
+                <div id="refresh-alert-success" class="alert alert-success" role="alert">
                     <strong>Success!</strong> refreshed browser
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <a id="refreshBrowsers" class=" btn btn-warning mt-2 btn-lg" href="#"> Refresh All Browsers</a>
             </div>
+            <div class="col-3">
 
+            </div>
 
-        </header>
-
-        <div class="mt-5 row">
+        </div>
+        <div class="mt-5 row uno">
             <div class="col">
-
-
-                <div id="current-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                <div id="current-alert-success" class="alert alert-success" role="alert">
                     <strong>Success!</strong> Fase Updated
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
-                <div id="current-alert-danger" class="alert alert-success alert-dismissible fade show d-none" role="alert">
-                    <strong>Error!</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-
-                <div class="col-md-8 mx-auto">
+                <div class="mx-auto">
                     <div class="card">
                         <div class="card-header">
                             <h3>Current Phase</h3>
@@ -92,20 +74,10 @@
 
             </div>
             <div class="col">
-
-                <div id="simulator-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                <div id="simulator-alert-success" class="alert alert-success" role="alert">
                     <strong>Success!</strong> Simulator Updated .
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
-                <div id="simulator-alert-danger" class="alert alert-success alert-dismissible fade show d-none" role="alert">
-                    <strong>Error!</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="col-md-8 mx-auto">
+                <div class="mx-auto">
                     <div class="card">
                         <div class="card-header">
                             <h3>Simulador Phase</h3>
@@ -146,22 +118,53 @@
                 </div>
 
             </div>
-        </div>
-        <div class="mt-5 row">
             <div class="col">
-                <div id="current-days-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                <div id="transmission-alert-success" class="alert alert-success" role="alert">
+                    <strong>Success!</strong> Transmission Updated .
+                </div>
+                <div class="mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Transmission</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="transmission" method="post">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="transmissionProblems" name="problems">
+                                    <label class="form-check-label" for="transmissionProblems">
+                                        Technical Problems </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" name="sourceTransmission" id="youtube" checked>
+                                    <label class="form-check-label" for="youtube">
+                                        Youtube
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" name="sourceTransmission" id="twitch">
+                                    <label class="form-check-label" for="twitch">
+                                        Twitch
+                                    </label>
+                                </div>
+
+                                <div class="form-group mt-5">
+                                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="mt-5 row dos">
+            <div class="col">
+                <div id="current-days-alert-success" class="alert alert-success" role="alert">
                     <strong>Success!</strong> Current Days Updated .
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
-                <div id="current-days-alert-danger" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
-                    <strong>Error!</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div id="cardCurrentDay" class="col-md-8 mx-auto d-none">
+                <div id="cardCurrentDay" class="mx-auto d-none">
                     <div class="card">
                         <div class="card-header">
                             <h3>Current Days</h3>
@@ -257,27 +260,15 @@
                                     <button class="btn btn-primary btn-block" type="submit">Save</button>
                                 </div>
                             </form>
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div id="simulator-days-alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                <div id="simulator-days-alert-success" class="alert alert-success" role="alert">
                     <strong>Success!</strong> Simulator Days Updated .
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
-                <div id="simulator-days-alert-danger" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
-                    <strong>Error!</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div id="cardSimulatorDay" class="col-md-8 mx-auto d-none">
+                <div id="cardSimulatorDay" class="mx-auto d-none">
                     <div class="card">
                         <div class="card-header">
                             <h3>Simulator Days</h3>
@@ -380,8 +371,6 @@
                     </div>
                 </div>
             </div>
-
-
 
         </div>
     </main>
