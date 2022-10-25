@@ -57,21 +57,24 @@ if (!defined('SECRET_REFRESH')) define('SECRET_REFRESH', $SECRET_REFRESH);
 #During Days System
 $duringDaysArray = array(
     "d1" => array(
-        "video" => "Fxn-toxKKIQ",
+        "youtube" => "wHn1_QVoXGM",
+        "twitch" => "duckvilleusa",
         "hashtag-chat" => "#EMMS22DIA1",
         "hashtag-gral" => "#EMMS2022",
         "banner-transition" => "placa-dia01-transition",
         "banner-nolive" => "placa-dia01-nolive"
     ),
     "d2" => array(
-        "video" => "video2",
+        "youtube" => "InSydaLSSlw",
+        "twitch" => "hoothouselivestream",
         "hashtag-chat" => "#EMMS22DIA2",
         "hashtag-gral" => "#GOEMMS",
         "banner-transition" => "placa-dia02-transition",
         "banner-nolive" => "placa-dia02-nolive"
     ),
     "d3" => array(
-        "video" => "video3",
+        "youtube" => "XDJPzMznAjU",
+        "twitch" => "livekittytv",
         "hashtag-chat" => "#EMMS22DIA3",
         "hashtag-gral" => "#EMMSBYDOPPLER",
         "banner-transition" => "placa-dia03-transition",
