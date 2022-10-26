@@ -1,4 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php
+$html = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="es">
 
 <head>
@@ -162,7 +163,10 @@
       <![endif]-->
 </head>
 
-<body style="margin:0; padding:0;">
+<body style="margin:0; padding:0;"><span class="preheader"
+    style="display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">Ya puedes asistir al evento más esperado por la Comunidad del Marketing
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </span>
   <center>
     <table width="100%" border="0" cellpadding="0" cellspacing="0">
       <tr>
@@ -177,7 +181,7 @@
                 <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
                   <tr>
                     <td align="center" valign="top">
-                      <img src="logo-emms-doppler.png" alt="Logo de Doppler" width="144"
+                      <img src="https://goemms.com/relay-confirmation-email/template-email-register-during/logo-emms-doppler.png" alt="Logo de Doppler" width="144"
                         style="width:100%;max-width:100px !important;">
                     </td>
                   </tr>
@@ -190,7 +194,7 @@
                       <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
                         <tr>
                           <th width="180" class="mobile" align="center" valign="middle">
-                            <img src="microphone.png" alt="microphone" width="108" style="width:100%;" class="img-mb">
+                            <img src="https://goemms.com/relay-confirmation-email/template-email-register-during/microphone.png" alt="microphone" width="108" style="width:100%;" class="img-mb">
                           </th>
                           <th width="420" class="mobile mobile-pt mobile-center" align="left" valign="middle"
                             style="font-family:  Helvetica, Arial, sans-serif;font-size: 15px;line-height: 27px;color:#333333;font-weight: 400;">
@@ -233,7 +237,7 @@
                       </table>
                     </td>
                   </tr>
-                  
+
 
                   <tr>
                     <td height="56" style="font-size:56px; line-height:40px;">&nbsp;</td>
@@ -261,28 +265,28 @@
 
                           <tr>
                             <td width="37" align="left">
-                              <a href="https://twitter.com/fromDoppler" target="_blank"><img src="twitter-icon.png"
+                              <a href="https://twitter.com/fromDoppler" target="_blank"><img src="https://goemms.com/relay-confirmation-email/template-email-register-during/twitter-icon.png"
                                   style="width: 100%; max-width: 32px !important;" width="32" class="img"
                                   alt="Twitter" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img
-                                  src="facebook-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-during/facebook-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Facebook" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.linkedin.com/company/228261" target="_blank"><img
-                                  src="linkedin-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-during/linkedin-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Linkedin" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img
-                                  src="youtube-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-during/youtube-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Youtube" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.instagram.com/fromdoppler" target="_blank"><img
-                                  src="instagram-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-during/instagram-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Instagram" /></a>
                             </td>
                           </tr>
@@ -374,4 +378,4 @@
   </center>
 </body>
 
-</html>
+</html>';

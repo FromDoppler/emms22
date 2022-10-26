@@ -86,7 +86,7 @@ require_once('././utils/DB.php');
                                         <?php if ($problemsTransmission) : ?>
                                             <img src="../../common/html/<?= VERSION ?>/img/technical-problems.png" alt="technical-problems">
                                         <?php elseif ($isTransmissionYoutube) : ?>
-                                            <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>??autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <?php else : ?>
                                             <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray['d' . $dayDuring]['twitch'] ?>&parent=<?= $_SERVER['SERVER_NAME'] ?>">
                                             </iframe>

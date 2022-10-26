@@ -7,8 +7,16 @@ class Relay {
     private const fromName = 'EMMS 2022';
     private const fromEmail = 'info@goemms.com';
 
-    private static function templateEmailLanding() {
-      $templateFile = dirname(__FILE__) . "/relay-confirmation-email/template-email-register-landing.php";
+    private static function templateEmail($phase)
+    {
+        $pathEmailsTemplate = $_SERVER['DOCUMENT_ROOT'] . "/relay-confirmation-email";
+        if ($phase === 'pre') {
+            $templateFile = $pathEmailsTemplate . "/template-email-register-landing/template-email-register.php";
+        } elseif ($phase === 'during') {
+            $templateFile = $pathEmailsTemplate . "/template-email-register-during/template-email-register.php";
+        } else {
+            $templateFile = $pathEmailsTemplate . "/template-email-register-post/template-email-register.php";
+        }
       include($templateFile);
       return $html;
     }
@@ -29,7 +37,7 @@ class Relay {
 
     public static function sendEmailRegister($user, $subject) {
 
-        $html =  self::templateEmailLanding();
+        $html =  self::templateEmail($user['form_id']);
         $data = array(
             'from_name' => self::fromName,
             'from_email' => self::fromEmail,
