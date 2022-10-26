@@ -55,16 +55,14 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                 </div>
                 <div class="emms22__hero-speakers__conference-container">
                     <div class="emms22__hero-speakers__conference">
-                        <?php if ($getLoged === null) : ?>
-                            <div class="emms22__cropper-cont-16-9">
+                            <div class="emms22__cropper-cont-16-9" id="streaming">
                                 <div class="emms22__cropper-cont">
                                     <div class="emms22__cropper-cont-interno">
                                         <iframe src="https://www.youtube.com/embed/<?= $speaker['youtube'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
-                        <?php else : ?>
-                            <div class="emms22__home__container-form emms22__fade-in">
+                            <div class="emms22__home__container-form emms22__fade-in" id="registerForm">
                                 <form class="emms22__pre-event__form" novalidate autocomplete="off" id="earlyFormFooter">
                                     <div class="emms22__home__container-form__column">
                                         <ul class="emms22__pre-event__form__field-group">
@@ -145,7 +143,6 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 
                                 </form>
                             </div>
-                        <?php endif; ?>
                     </div>
                     <div class="emms22__hero-speakers__aside">
                         <h3><?= $speaker['name'] ?></h3>
@@ -272,13 +269,14 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
     </main>
 
 
-
     <?php include_once('././common/components/commonFooter.php') ?>
     <script type="module" src="../../common/html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
     <?php
     if (!(PRODUCTION)) {
     ?>
         <script type="module" src="../../common/html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
+
+        <script type="module" src="../../common/html/<?= VERSION ?>/js/speakers-interna.js?version=<?= VERSION ?>"></script>
     <?php
     }
     ?>
