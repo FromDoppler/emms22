@@ -63,7 +63,7 @@ function setDataRequest($ip, $countryGeo)
         'content_utm' => $content_utm,
         'term_utm' => $term_utm,
         'origin' => $origin,
-        'form_id' => 'preevento',
+        'form_id' => getCurrentPhase(),
         'list' => LIST_LANDING,
     );
     try {
@@ -77,6 +77,24 @@ function setDataRequest($ip, $countryGeo)
     } catch (Exception $e) {
         processError("setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
 
+    }
+}
+
+function getCurrentPhase()
+{
+    try {
+        $ip = GeoIp::getIp();
+        $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $phases = $db->getCurrentPhase()[0];
+        $simulator = $db->getSimulator()[0];
+        $enabled = array_shift($simulator);
+        $phaseToShow =  ($enabled && in_array($ip, ALLOW_IPS)) ? array_search(1, $simulator) : array_search(1, $phases);
+        $db->close();
+        return $phaseToShow;
+    } catch (Exception $e) {
+        processError("getCurrentPhase", $e->getMessage(), []);
+        header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
+        exit();
     }
 }
 

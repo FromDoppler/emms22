@@ -1,4 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php
+$html = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="es">
 
 <head>
@@ -166,7 +167,7 @@
                 <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
                   <tr>
                     <td align="center" valign="top">
-                      <img src="logo-emms-doppler.png" alt="Logo de Doppler" width="144"
+                      <img src="https://goemms.com/relay-confirmation-email/template-email-register-post/logo-emms-doppler.png" alt="Logo de Doppler" width="144"
                         style="width:100%;max-width:100px !important;">
                     </td>
                   </tr>
@@ -175,7 +176,7 @@
                   </tr>
                   <tr>
                     <td align="center" valign="top">
-                      <img src="headphone.png" alt="headphone" width="144"
+                      <img src="https://goemms.com/relay-confirmation-email/template-email-register-post/headphone.png" alt="headphone" width="144"
                         style="width:100%;max-width:140px !important;">
                     </td>
                   </tr>
@@ -205,7 +206,7 @@
                     <td align="center" valign="top"
                     style="font-family: Helvetica, Arial,sans-serif;font-size: 15px;line-height: 20px;color:#555845;font-weight: 400;"
                     class="dm-text-light">
-                    <p class="paragraph" style="margin:0; font-size: 14px; line-height: 19px; color: #333333;">El Evento más esperado por la Comunidad del Marketing fue el 8, 9 y 10 de Noviembre. Asistieron más de 50.000 personas y ahora tú eres parte. <strong>¡Puedes revivirlo cuando quieras!</strong>                       
+                    <p class="paragraph" style="margin:0; font-size: 14px; line-height: 19px; color: #333333;">El Evento más esperado por la Comunidad del Marketing fue el 8, 9 y 10 de Noviembre. Asistieron más de 50.000 personas y ahora tú eres parte. <strong>¡Puedes revivirlo cuando quieras!</strong>
                       </p>
                       <p style="margin:0;font-size: 20px;">&nbsp;</p>
                       <p class="paragraph" style="margin:0; font-size: 14px; line-height: 19px; color: #333333;">En el #EMMS2022 encontrarás charlas y conferencias sobre novedades, tendencias y el futuro del Marketing Digital.</p>
@@ -263,28 +264,28 @@
 
                           <tr>
                             <td width="37" align="left">
-                              <a href="https://twitter.com/fromDoppler" target="_blank"><img src="twitter-icon.png"
+                              <a href="https://twitter.com/fromDoppler" target="_blank"><img src="https://goemms.com/relay-confirmation-email/template-email-register-post/twitter-icon.png"
                                   style="width: 100%; max-width: 32px !important;" width="32" class="img"
                                   alt="Twitter" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img
-                                  src="facebook-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-post/facebook-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Facebook" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.linkedin.com/company/228261" target="_blank"><img
-                                  src="linkedin-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-post/linkedin-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Linkedin" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img
-                                  src="youtube-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-post/youtube-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Youtube" /></a>
                             </td>
                             <td width="37" align="left">
                               <a href="https://www.instagram.com/fromdoppler" target="_blank"><img
-                                  src="instagram-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
+                                  src="https://goemms.com/relay-confirmation-email/template-email-register-post/instagram-icon.png" style="width: 100%; max-width: 32px !important;" width="32"
                                   class="img" alt="Instagram" /></a>
                             </td>
                           </tr>
@@ -376,4 +377,4 @@
   </center>
 </body>
 
-</html>
+</html>';
