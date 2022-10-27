@@ -136,7 +136,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                                             </p>
                                         </div>
                                         <div class="emms22__home__btn">
-                                            <button class="emms22__button emms22__fade-in">S&Uacute;MATE AHORA</button>
+                                            <button class="emms22__button">S&Uacute;MATE AHORA</button>
                                         </div>
                                     </div>
                                     <?php include_once('././common/components/commonUtms.php') ?>
@@ -276,7 +276,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
     ?>
         <script type="module" src="../../common/html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
 
-        <script type="module" src="../../common/html/<?= VERSION ?>/js/speakers-interna.js?version=<?= VERSION ?>"></script>
+        <script type="module" src="../../common/html/<?= VERSION ?>/js/speakersInterna.js?version=<?= VERSION ?>"></script>
     <?php
     }
     ?>

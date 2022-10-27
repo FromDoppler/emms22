@@ -1,4 +1,10 @@
 
+"use strict";
+
+import {
+	getUrlWithParams
+} from './modules/utm.js';
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const registerValue = localStorage.getItem("registered");

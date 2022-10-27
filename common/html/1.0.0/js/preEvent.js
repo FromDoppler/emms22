@@ -76,7 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(resp => resp)
                 .then(resp => {
                     localStorage.setItem('registered', true);
-                    window.location.href = getUrlWithParams('/registrado.php');
+                    if(window.location.href.includes('speakers-interna.php')){
+                        document.getElementById('streaming').style.display = "block";
+                        document.getElementById('registerForm').style.display = "none";
+                    }
+                    else{
+                        window.location.href = getUrlWithParams('/registrado.php');
+                    }
                 })
                 .catch((error) => {
                     // Tenemos la respuesta de errores
