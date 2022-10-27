@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const userTextInput = document.getElementById('userText');
     if (userTextInput) {
         const currentHashtag = userTextInput.value;
+        const validateInput = (event) => {
+
+            if (event.keyCode == 8 || event.keyCode == 46 || event.type === 'cut') {   //backspace pressed or delete key pressed and cut event
+
+                if (userTextInput.selectionStart <= currentHashtag.length) {
+                    event.preventDefault();
+                } return false;
+            }
+            return true;
+        }
+
+
+        userTextInput.addEventListener('keydown', validateInput);
+        userTextInput.addEventListener('cut', validateInput);
     }
 
     let newestId = '';
@@ -142,19 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
         getTweetsRequest();
     }, 20000);
 
-    const validateInput = (event) => {
 
-        if (event.keyCode == 8 || event.keyCode == 46 || event.type === 'cut') {   //backspace pressed or delete key pressed and cut event
-
-            if (userTextInput.selectionStart <= currentHashtag.length) {
-                event.preventDefault();
-            } return false;
-        }
-        return true;
-    }
-
-
-    userTextInput.addEventListener('keydown', validateInput);
-    userTextInput.addEventListener('cut', validateInput);
 
 });
