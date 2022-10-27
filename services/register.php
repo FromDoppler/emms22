@@ -44,6 +44,7 @@ function setDataRequest($ip, $countryGeo)
     $content_utm = isset($_POST['utm_content']) ? $_POST['utm_content'] : null;
     $term_utm = isset($_POST['utm_term']) ? $_POST['utm_term'] : null;
     $origin = isset($_POST['origin']) ? $_POST['origin'] : null;
+    $phase = getCurrentPhase();
     $user = array(
         'register' => date("Y-m-d h:i:s A"),
         'firstname' => $firstname,
@@ -63,8 +64,9 @@ function setDataRequest($ip, $countryGeo)
         'content_utm' => $content_utm,
         'term_utm' => $term_utm,
         'origin' => $origin,
-        'form_id' => getCurrentPhase(),
+        'form_id' => $phase,
         'list' => LIST_LANDING,
+        'subject' => getSubjectEmail($phase)
     );
     try {
 
@@ -78,6 +80,19 @@ function setDataRequest($ip, $countryGeo)
         processError("setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
 
     }
+}
+
+function getSubjectEmail($phase)
+{
+    $subject = "";
+    if ($phase === 'pre') {
+        $subject = SUBJECT_PRE;
+    } elseif ($phase === 'during') {
+        $subject = SUBJECT_DURING;
+    } else {
+        $subject = SUBJECT_POST;
+    }
+    return $subject;
 }
 
 function getCurrentPhase()
@@ -171,4 +186,4 @@ $user = setDataRequest($ip, $countryGeo);
 saveSubscriptionDoppler($user);
 saveSubscriptionDopplerTable($user);
 saveSubscriptionSpreadSheet($user);
-sendEmail($user, 'Agrega #EMMS2022 a tu calendario');
+sendEmail($user, $user['subject']);
