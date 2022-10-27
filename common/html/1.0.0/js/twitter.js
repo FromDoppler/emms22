@@ -4,24 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = "../../../../twitterController.php";
     const url2 = "../../../../twitterPost.php";
     const tweetForm = document.getElementById('tweetForm');
-    const userTextInput = document.getElementById('userText');
-    if (userTextInput) {
-        const currentHashtag = userTextInput.value;
-        const validateInput = (event) => {
-
-            if (event.keyCode == 8 || event.keyCode == 46 || event.type === 'cut') {   //backspace pressed or delete key pressed and cut event
-
-                if (userTextInput.selectionStart <= currentHashtag.length) {
-                    event.preventDefault();
-                } return false;
-            }
-            return true;
-        }
-
-
-        userTextInput.addEventListener('keydown', validateInput);
-        userTextInput.addEventListener('cut', validateInput);
-    }
+    const hashtag = document.getElementById('hashtag').innerHTML;
 
     let newestId = '';
 
@@ -55,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = {
             method: 'sendTweet',
-            text: userTweet,
+            text: hashtag + userTweet,
             id: ''
         }
         const settings = {
@@ -152,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         getTweetsRequest();
     }
     firstLoad();
+
     setInterval(() => {
         getTweetsRequest();
     }, 20000);

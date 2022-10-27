@@ -118,7 +118,8 @@ require_once('././utils/DB.php');
                                 <?php if (isset($_SESSION['access_token'])) : ?>
                                     <div class="emms22__hero-during__aside__chat__input">
                                         <form id="tweetForm" class="tweet__form">
-                                            <input type="text" value="<?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?> " name="userTweet" id="userText">
+                                            <span id="hashtag"><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
+                                            <input type="text" name="userTweet" id="userText">
                                             <button type="button">ENVIAR</button>
                                         </form>
                                     </div>
