@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const url2 = "../../../../twitterPost.php";
     const tweetForm = document.getElementById('tweetForm');
     const userTextInput = document.getElementById('userText');
-    const currentHashtag = userTextInput.value;
+    if (userTextInput) {
+        const currentHashtag = userTextInput.value;
+    }
 
     let newestId = '';
 
