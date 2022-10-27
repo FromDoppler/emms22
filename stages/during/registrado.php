@@ -113,13 +113,19 @@ require_once('././utils/DB.php');
                                 <div class="emms22__hero-during__aside__chat__title">
                                     <h3>TWEET CHAT <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
                                 </div>
-                                <div class="emms22__hero-during__aside__chat__timeline">
-                                    <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/MakingSenseApps/lists/making-sense-twitting?ref_src=twsrc%5Etfw">A Twitter List by MakingSenseApps</a>
-                                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <div class="emms22__hero-during__aside__chat__timeline" id="chatId">
                                 </div>
-                                <div class="emms22__hero-during__aside__chat__input">
-                                    <input type="text" value="<?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?> " placeholder="127">
-                                </div>
+                                <?php if (isset($_SESSION['access_token'])) : ?>
+                                    <div class="emms22__hero-during__aside__chat__input">
+                                        <form id="tweetForm" class="tweet__form">
+                                            <span id="hashtag"><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
+                                            <input type="text" name="userTweet" id="userText">
+                                            <button type="button">ENVIAR</button>
+                                        </form>
+                                    </div>
+                                <?php else : ?>
+                                    <button onclick="window.location='./twitteroauth/redirect.php'" class="twitter__login">INICIA SESIÓN EN TWITTER</button>
+                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -235,7 +241,7 @@ require_once('././utils/DB.php');
 
 
     <?php include_once('././common/components/commonFooter.php') ?>
-    <script type="module" src="../../common/html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
+    <script src="./common/html/<?= VERSION ?>/js/twitter.js?version=<?= VERSION ?>"></script>
     <?php
     if (!(PRODUCTION)) {
     ?>

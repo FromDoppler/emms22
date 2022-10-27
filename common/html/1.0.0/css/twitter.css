@@ -1,0 +1,88 @@
+.userTweet__container {
+    padding-top: 20px;
+    display: flex;
+    animation: fade-in 0.5s;
+    animation-fill-mode: forwards;
+}
+.userTweet__container img {
+    width: 31px;
+    height: 31px;
+    border: 2px solid white;
+    border-radius: 25%;
+    margin-left: 10px;
+    display: inline-block;
+}
+.userTweet__container .userTweet {
+    color: white;
+    margin-top: 0px;
+    max-width: 250px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.userTweet__container .userTweet p {
+    margin-top: 0px;
+}
+
+.twitter__login {
+    width: 305px;
+    height: 49px;
+    background-color: #33ad73;
+    border: 1px solid #bd7aff;
+    border-radius: 5px;
+    font-family: "Proxima Nova", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+    left: 28px;
+}
+
+.twitter__login:hover {
+    opacity: 0.8;
+}
+.tweet__form input {
+    padding-right: 108px;
+}
+.tweet__form button {
+    position: absolute;
+    right: 0;
+    width: 91px;
+    height: 66px;
+    background: #20002b;
+    border: 1px solid #bd7aff;
+    border-radius: 5px;
+    font-family: "Proxima Nova", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.tweet__form button:hover {
+    opacity: 0.5;
+}
+@media (min-width: 992px) {
+    .twitter__login {
+        width: 209px;
+        font-size: 13px;
+    }
+}
+@media (min-width: 1100px) {
+    .twitter__login {
+        width: 261px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .twitter__login {
+        width: 305px;
+        font-size: 14px;
+    }
+}

@@ -197,7 +197,6 @@
 }
 
 .emms22__hero-during__aside__chat__input::before{
-    content: "127";
     position: absolute;
     top: 24px;
     right: 10px;

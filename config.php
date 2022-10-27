@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $ALLOW_IPS = array('::1', '200.5.229.58', '200.5.253.210', '127.0.0.1', '172.18.0.1');
 $ACCOUNT_DOPPLER = getenv("ACCOUNT_DOPPLER");
@@ -18,8 +19,26 @@ $SECRET_REFRESH = getenv("SECRET_REFRESH");
 if (!defined('VERSION')) define('VERSION', '1.0.0');
 if (!defined('PRODUCTION')) define('PRODUCTION', false);
 if (!defined('SECURITYHELPER_ENABLE')) define('SECURITYHELPER_ENABLE', false);
+if (!defined('SITE_URL')) define('SITE_URL', 'http://localhost/');
+
+#TWITTER
+
+$CONSUMER_KEY = getenv('CONSUMER_KEY');
+$CONSUMER_SECRET = getenv('CONSUMER_SECRET');
+$OATH_TOKEN = getenv('OATH_TOKEN');
+$OATH_TOKEN_SECRET = getenv('OATH_TOKEN_SECRET');
+$BEARER_TOKEN = getenv('BEARER_TOKEN');
+
+if (!defined('CONSUMER_KEY')) define('CONSUMER_KEY', $CONSUMER_KEY);
+if (!defined('CONSUMER_SECRET')) define('CONSUMER_SECRET', $CONSUMER_SECRET);
+if (!defined('OATH_TOKEN')) define('OATH_TOKEN', $OATH_TOKEN);
+if (!defined('OATH_TOKEN_SECRET')) define('OATH_TOKEN_SECRET', $OATH_TOKEN_SECRET);
+if (!defined('BEARER_TOKEN')) define('BEARER_TOKEN', $BEARER_TOKEN);
+if (!defined('OAUTH_CALLBACK')) define('OAUTH_CALLBACK', SITE_URL . 'callback.php');
+if (!defined('HASHTAG')) define('HASHTAG', 'EMMS2022');
 
 #IPS WHITE LIST
+
 if (!defined('ALLOW_IPS')) define('ALLOW_IPS', $ALLOW_IPS);
 
 #API DOPPLER
@@ -85,6 +104,3 @@ $duringDaysArray = array(
         "banner-nolive" => "placa-dia03-nolive"
     ),
 );
-
-
-
