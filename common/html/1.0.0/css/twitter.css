@@ -26,6 +26,13 @@
     visibility: hidden;
     position: absolute;
 }
+.tweet__form__hashtag {
+    color: white;
+    position: absolute;
+    top: 24px;
+    z-index: 100;
+    left: 10px;
+}
 .twitter__login {
     width: 305px;
     height: 49px;
@@ -50,6 +57,7 @@
 }
 .tweet__form input {
     padding-right: 108px;
+    padding-left: 123px;
 }
 .tweet__form button {
     position: absolute;
