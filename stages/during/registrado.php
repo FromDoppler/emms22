@@ -28,6 +28,9 @@ require_once('././utils/DB.php');
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <span id="hashtag" class="hashtag--hidden "><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
+
+
     <main class="emms22__pre-event emms22__during">
 
         <!-- Header -->
@@ -86,7 +89,7 @@ require_once('././utils/DB.php');
                                         <?php if ($problemsTransmission) : ?>
                                             <img src="../../common/html/<?= VERSION ?>/img/technical-problems.png" alt="technical-problems">
                                         <?php elseif ($isTransmissionYoutube) : ?>
-                                            <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>??rel=0&autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>?rel=0&autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <?php else : ?>
                                             <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray['d' . $dayDuring]['twitch'] ?>&parent=<?= $_SERVER['SERVER_NAME'] ?>">
                                             </iframe>
@@ -113,13 +116,20 @@ require_once('././utils/DB.php');
                                 <div class="emms22__hero-during__aside__chat__title">
                                     <h3>TWEET CHAT <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
                                 </div>
-                                <div class="emms22__hero-during__aside__chat__timeline">
-                                    <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/MakingSenseApps/lists/making-sense-twitting?ref_src=twsrc%5Etfw">A Twitter List by MakingSenseApps</a>
-                                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <div class="emms22__hero-during__aside__chat__timeline" id="chatId">
+
                                 </div>
-                                <div class="emms22__hero-during__aside__chat__input">
-                                    <input type="text" value="<?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?> " placeholder="127">
-                                </div>
+                                <?php if (isset($_SESSION['access_token'])) : ?>
+                                    <div class="emms22__hero-during__aside__chat__input">
+                                        <form id="tweetForm" class="tweet__form">
+                                            <span id="hashtag"><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
+                                            <input type="text" name="userTweet" id="userText">
+                                            <button type="button">ENVIAR</button>
+                                        </form>
+                                    </div>
+                                <?php else : ?>
+                                    <button onclick="window.location='./twitteroauth/redirect.php'" class="twitter__login">INICIA SESIÓN EN TWITTER</button>
+                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -141,9 +151,12 @@ require_once('././utils/DB.php');
             <div class="emms22__modal__window">
                 <h3>Estás a un paso de obtener tu Certificado</h3>
                 <p>Ingresa tu Nombre y Apellido y descárgalo ahora</p>
-                <input type="text" placeholder="Nombre y Apellido">
-                <a class="emms22__button">DESCARGAR</a>
-                <button data-dismiss="emms22__modal"></button>
+                <form id="certificateForm">
+                    <input type="text" placeholder="Nombre y Apellido" name="fullname">
+                    <span>¡Ouch! Debes ingresar al menos 2 caracteres.</span>
+                    <button class="emms22__button">DESCARGAR</button>
+                </form>
+                <a data-dismiss="emms22__modal"></a>
             </div>
         </div>
 
@@ -235,7 +248,6 @@ require_once('././utils/DB.php');
 
 
     <?php include_once('././common/components/commonFooter.php') ?>
-    <script type="module" src="../../common/html/<?= VERSION ?>/js/preEvent.js?version=<?= VERSION ?>"></script>
     <?php
     if (!(PRODUCTION)) {
     ?>
@@ -244,6 +256,8 @@ require_once('././utils/DB.php');
     }
     ?>
     <script src="../../common/html/<?= VERSION ?>/js/date.js?version=<?= VERSION ?>"></script>
+    <script src="../../common/html/<?= VERSION ?>/js/twitter.js?version=<?= VERSION ?>"></script>
+    <script src="../../common/html/<?= VERSION ?>/js/certificate.js?version=<?= VERSION ?>"></script>
 
 
 </body>

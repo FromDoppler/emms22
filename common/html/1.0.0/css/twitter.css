@@ -22,7 +22,10 @@
 .userTweet__container .userTweet p {
     margin-top: 0px;
 }
-
+.hashtag--hidden {
+    visibility: hidden;
+    position: absolute;
+}
 .twitter__login {
     width: 305px;
     height: 49px;

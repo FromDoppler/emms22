@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = createImageTag(userImage, userName);
         const divUserTweet = document.createElement('div')
         const userTweetText = document.createElement('p')
-        userTweetText.innerText = userName + userTweet;
+        userTweetText.innerText = userName + '' + userTweet;
         divUserTweet.appendChild(userTweetText);
         divUserTweet.classList.add('userTweet');
         divContainer.appendChild(img);
