@@ -286,6 +286,8 @@ require_once('././utils/DB.php');
 						</li>
 
 						<?php endforeach;?>
+                        <li><img src="../../common/html/<?= VERSION ?>/img/mercadoshops-milbrands.png" alt="Mercado Shops y Milbrands"></li>
+                        <li><img src="../../common/html/<?= VERSION ?>/img/milenium-pro.png" alt="Milenium Group"></li>
 					</ul>
 				</div>
 

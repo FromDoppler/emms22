@@ -283,13 +283,14 @@ require_once('././utils/DB.php');
 						</li>
 
 						<?php endforeach;?>
+                        <li><img src="../../common/html/<?= VERSION ?>/img/mercadoshops-milbrands.png" alt="Mercado Shops y Milbrands"></li>
+                        <li><img src="../../common/html/<?= VERSION ?>/img/milenium-pro.png" alt="Milenium Group"></li>
 					</ul>
 				</div>
 
 				<div class="emms22__pre-event__allies__group">
 					<h3 class="emms22__fade-in">MEDIA PARTNERS</h3>
 					<ul class="emms22__fade-in" id="alliesUl">
-
 					</ul>
 				</div>
 				<div class="emms22__pre-event__allies__contact emms22__fade-in">
