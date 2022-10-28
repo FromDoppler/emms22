@@ -21,7 +21,7 @@ require_once('././utils/DB.php');
 	<?php
 	include_once('././common/components/commonHeader.php');
 	?>
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link rel="stylesheet" href="../../common/html/<?= VERSION ?>/flickity/flickity.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
 </head>
 
