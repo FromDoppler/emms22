@@ -27,7 +27,7 @@
 .tweet__form__hashtag {
     color: white;
     position: absolute;
-    top: 24px;
+    top: 25px;
     z-index: 100;
     left: 10px;
     font-size: 14px;
@@ -56,7 +56,7 @@
 }
 .tweet__form input {
     padding-right: 108px;
-    padding-left: 123px;
+    padding-left: 108px;
 }
 .tweet__form button {
     position: absolute;
