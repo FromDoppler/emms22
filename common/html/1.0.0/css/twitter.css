@@ -1,8 +1,6 @@
 .userTweet__container {
     padding-top: 20px;
     display: flex;
-    animation: fade-in 0.5s;
-    animation-fill-mode: forwards;
 }
 .userTweet__container img {
     width: 31px;
@@ -32,6 +30,7 @@
     top: 24px;
     z-index: 100;
     left: 10px;
+    font-size: 14px;
 }
 .twitter__login {
     width: 305px;
