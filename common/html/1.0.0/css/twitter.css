@@ -31,6 +31,7 @@
     z-index: 100;
     left: 10px;
     font-size: 14px;
+    font-style: italic;
 }
 .twitter__login {
     width: 305px;
