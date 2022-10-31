@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const printFormCharacters = (userChars = 0) => {
         const tweetLengthAvailable = formCharacters - userChars;
         const formCharacterSpan = document.getElementById('formCharacters');
-        formCharacterSpan.innerHTML = tweetLengthAvailable;
-        if (tweetLengthAvailable < 0) {
-            showError(1);
+        if (formCharacterSpan) {
+            formCharacterSpan.innerHTML = tweetLengthAvailable;
+            if (tweetLengthAvailable < 0) {
+                showError(1);
+            }
         }
     }
     printFormCharacters();
