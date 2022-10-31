@@ -124,8 +124,10 @@ require_once('././utils/DB.php');
                                         <form id="tweetForm" class="tweet__form">
                                             <span id="hashtag" class="tweet__form__hashtag"><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
                                             <input type="text" name="userTweet" id="userText">
-                                            <button type="button">ENVIAR</button>
+                                            <button type="button"> <span class="button__text">ENVIAR</span></button>
                                         </form>
+                                        <small class="tweet__form__error"></small>
+                                        <small class="tweet_form_characters" id="formCharacters">280</small>
                                     </div>
                                 <?php else : ?>
                                     <button onclick="window.location='./twitteroauth/redirect.php'" class="twitter__login">INICIA SESIÓN EN TWITTER</button>
