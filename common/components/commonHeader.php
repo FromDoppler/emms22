@@ -17,8 +17,14 @@
 	<meta name="author" content="Doppler">
 
 	<meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
-	<meta property="og:description" content="Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing. Descubre las &uacute;ltimas tendencias y las estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios. Gratis y online. &iexcl;Reserva tu cupo ahora!">
-	<meta property="og:image" content="https://goemms.com/share.png">
+    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+        <meta property="og:description" content="¡Gratis y Online! Llega una nueva edición del evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Reserva tu cupo ahora!">
+    <?php elseif ( $response['phaseToShow'] == 'during' ) :?>
+        <meta property="og:description" content="¡Ya estamos en vivo! Ha comenzado el evento gratis y online más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Súmate ahora!">
+    <?php elseif ( $response['phaseToShow'] == 'post' ) :?>
+        <meta property="og:description" content="¡Gratis y Online! Revive el evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Accede ahora a todas las Conferencias!">
+    <?php endif; ?>
+    <meta property="og:image" content="https://goemms.com/share.png">
 	<meta property="og:url" content="https://goemms.com/">
 	<meta property="og:site_name" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:type" content="website" />
