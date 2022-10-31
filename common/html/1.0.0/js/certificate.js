@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     certificateForm.addEventListener('submit', submitCertificate);
 
     const checkQADomain = () => {
-        return (window.location.host === 'qa.goemms.com' || 'localhost') ? true : false;
+        return (window.location.host === 'qa.goemms.com' || window.location.host === 'localhost') ? true : false;
     }
 
     function submitCertificate(e) {
