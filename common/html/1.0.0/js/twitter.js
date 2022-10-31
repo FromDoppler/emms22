@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tweetFormError.classList.add('showError');
     }
 
+    const clearInput = () => {
+        inputTweetText.value = '';
+    }
+
     const validateTweet = (userTweet) => {
         if (userTweet.length < 3) showError(0);
         if (userTweet.length > formCharacters) showError(1);
@@ -112,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const fetchResponse = await fetch(url2, settings);
                 const data = await fetchResponse.json();
-                console.log(data)
+                clearInput();
                 return data;
             } catch (e) {
                 return e;
