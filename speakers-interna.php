@@ -276,10 +276,10 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
     ?>
         <script type="module" src="../../common/html/<?= VERSION ?>/js/devMode.js?version=<?= VERSION ?>"></script>
 
-        <script type="module" src="../../common/html/<?= VERSION ?>/js/speakersInterna.js?version=<?= VERSION ?>"></script>
-    <?php
+        <?php
     }
     ?>
+    <script type="module" src="../../common/html/<?= VERSION ?>/js/speakersInterna.js?version=<?= VERSION ?>"></script>
 
 </body>
 
