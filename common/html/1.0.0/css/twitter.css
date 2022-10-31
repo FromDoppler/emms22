@@ -72,9 +72,24 @@
     top: 66px;
     display: none;
 }
+
 .tweet__form__error.showError {
     display: block;
 }
+
+.tweet_form_characters {
+    font-family: "Proxima Nova", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 67px;
+}
+
 .tweet__form button {
     position: absolute;
     right: 0;
