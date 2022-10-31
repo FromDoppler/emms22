@@ -5,8 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const url2 = "../../../../twitterPost.php";
     const tweetForm = document.getElementById('tweetForm');
     const hashtag = document.getElementById('hashtag').innerHTML;
-
+    const inputTweetText = document.getElementById('userText');
     let newestId = '';
+
+    inputTweetText.addEventListener('keydown', () => {
+        clearError();
+    });
+
+    const clearError = () => {
+        document.querySelector('.tweet__form__error').classList.remove('showError');
+    }
+
+    const showError = () => {
+        document.querySelector('.tweet__form__error').classList.add('showError');
+    }
+
+    const validateTweet = (userTweet) => {
+        if (userTweet.length < 3) showError();
+        return userTweet.length >= 3;
+    }
 
     const getTweets = async () => {
         const data = {
@@ -36,40 +53,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(tweetForm);
         const userTweet = formData.get('userTweet')
 
-        const data = {
-            method: 'sendTweet',
-            text: hashtag + userTweet,
-            id: ''
+        if (validateTweet(userTweet)) {
+            const data = {
+                method: 'sendTweet',
+                text: hashtag + userTweet,
+                id: ''
+            }
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            };
+            try {
+                const fetchResponse = await fetch(url2, settings);
+                const data = await fetchResponse.json();
+                console.log(data)
+                return data;
+            } catch (e) {
+                return e;
+            }
         }
-        const settings = {
-            method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        };
-        try {
-            const fetchResponse = await fetch(url2, settings);
-            const data = await fetchResponse.json();
-            console.log(data)
-            return data;
-        } catch (e) {
-            return e;
-        }
-
     }
 
     if (tweetForm != null && tweetForm != undefined) {
         const tweetFormBtn = document.getElementById('tweetForm').querySelector('button');
         tweetFormBtn.addEventListener('click', sendTweet);
     }
-
-
-
-
-
-
 
 
     const printUsers = (users) => {

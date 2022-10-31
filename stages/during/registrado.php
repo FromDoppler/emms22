@@ -126,6 +126,7 @@ require_once('././utils/DB.php');
                                             <input type="text" name="userTweet" id="userText">
                                             <button type="button">ENVIAR</button>
                                         </form>
+                                        <small class="tweet__form__error">¡Ouch! Debes ingresar al menos dos caracteres</small>
                                     </div>
                                 <?php else : ?>
                                     <button onclick="window.location='./twitteroauth/redirect.php'" class="twitter__login">INICIA SESIÓN EN TWITTER</button>
