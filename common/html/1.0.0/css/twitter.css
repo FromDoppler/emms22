@@ -94,9 +94,12 @@
     position: absolute;
     right: 0;
     width: 91px;
-    height: 66px;
+    height: 65px;
     background: #20002b;
     border: 1px solid #bd7aff;
+    border-top: unset;
+    border-bottom: unset;
+    border-right: unset;
     border-radius: 5px;
     font-family: "Proxima Nova", Helvetica, sans-serif;
     font-style: normal;
@@ -105,6 +108,7 @@
     line-height: 20px;
     text-align: center;
     color: #ffffff;
+    cursor: pointer;
 }
 .tweet__form button:hover {
     opacity: 0.5;
@@ -126,5 +130,36 @@
     .twitter__login {
         width: 305px;
         font-size: 14px;
+    }
+}
+
+.button--loading .button__text {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.button--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
     }
 }

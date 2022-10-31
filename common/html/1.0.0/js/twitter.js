@@ -71,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return ((userTweet.length >= 3) && (userTweet.length < formCharacters));
     }
 
+    const toggleSpinner = () => {
+        const btn = document.getElementById('tweetForm').querySelector('button');
+        btn.classList.toggle('button--loading');
+    }
+
     const getTweets = async () => {
         const data = {
             method: 'getAllTweets',
@@ -100,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const userTweet = formData.get('userTweet')
 
         if (validateTweet(userTweet)) {
+            toggleSpinner();
             const data = {
                 method: 'sendTweet',
                 text: hashtag + userTweet,
@@ -117,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const fetchResponse = await fetch(url2, settings);
                 const data = await fetchResponse.json();
                 clearInput();
+                toggleSpinner();
                 return data;
             } catch (e) {
                 return e;
