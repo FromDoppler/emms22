@@ -4,7 +4,13 @@
 	<meta name="theme-color" content="#3F0453">
 
 	<meta name="title" content="EMMS 2022: El mayor evento de Marketing Digital">
-	<meta name="description" content="Llega una nueva edici&oacute;n del evento m&aacute;s esperado por la comunidad del Marketing. Descubre las &uacute;ltimas tendencias y las estrategias que implementan los l&iacute;deres del mundo para hacer crecer sus negocios. Gratis y online. &iexcl;Reserva tu cupo ahora!">
+    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+        <meta name="description" content="¡Gratis y Online! Llega una nueva edición del evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Reserva tu cupo ahora!">
+    <?php elseif ( $response['phaseToShow'] == 'during' ) :?>
+        <meta name="description" content="¡Ya estamos en vivo! Ha comenzado el evento gratis y online más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Súmate ahora!">
+    <?php elseif ( $response['phaseToShow'] == 'post' ) :?>
+        <meta name="description" content="¡Gratis y Online! Revive el evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Accede ahora a todas las Conferencias!">
+    <?php endif; ?>
 	<meta name="keywords" content="">
 	<meta name="language" content="Spanish">
 	<meta name="revisit-after" content="15 days">
