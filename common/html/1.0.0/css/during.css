@@ -1,18 +1,17 @@
-
 /* ----------------------------------------------------------- Hero */
 
-.emms22__during .emms22__hero-pre-event__intro{
+.emms22__during .emms22__hero-pre-event__intro {
     padding: 0;
     max-width: 650px;
     width: 60%;
 }
 
-.emms22__hero-during{
+.emms22__hero-during {
     position: relative;
-    background: #20002B;
+    background: #20002b;
 }
 
-.emms22__hero-during .emms22__container--lg{
+.emms22__hero-during .emms22__container--lg {
     padding: 200px 0 98px 0;
     opacity: 0;
     animation: fade-top 1s;
@@ -20,95 +19,93 @@
     animation-delay: 0.4s;
 }
 
-.emms22__during .emms22__hero-pre-event__intro__info h1{
+.emms22__during .emms22__hero-pre-event__intro__info h1 {
     font-size: 52px;
     line-height: 56px;
 }
 
-.emms22__during .emms22__hero-pre-event__intro__info ul{
+.emms22__during .emms22__hero-pre-event__intro__info ul {
     margin: 0 0 60px 0;
 }
 
-.emms22__during .emms22__hero-pre-event__intro__info span{
+.emms22__during .emms22__hero-pre-event__intro__info span {
     font-weight: 400;
     margin: 40px 0 0 0;
     max-width: 520px;
 }
 
-.emms22__during .emms22__hero-pre-event__intro__info span strong{
+.emms22__during .emms22__hero-pre-event__intro__info span strong {
     font-weight: 700;
 }
 
-.emms22__during .emms22__hero-pre-event__intro__info span img{
+.emms22__during .emms22__hero-pre-event__intro__info span img {
     width: 15px;
     margin: 0 5px 0 0;
 }
 
-.emms22__during .emms22__hero-pre-event__intro__info span a{
-    color: #33AD73;
+.emms22__during .emms22__hero-pre-event__intro__info span a {
+    color: #33ad73;
 }
 
-.emms22__during .emms22__hero-pre-event__intro__info span a:hover{
+.emms22__during .emms22__hero-pre-event__intro__info span a:hover {
     text-decoration: underline;
 }
 
-@media(max-width:1250px){
-    .emms22__during .emms22__hero-pre-event__intro{
+@media (max-width: 1250px) {
+    .emms22__during .emms22__hero-pre-event__intro {
         width: 50%;
     }
 }
 
-@media (max-width: 992px){
-    .emms22__during .emms22__hero-pre-event__intro{
+@media (max-width: 992px) {
+    .emms22__during .emms22__hero-pre-event__intro {
         max-width: initial;
         width: 100%;
     }
 }
 
-
 /* --- Live --- */
 
-.emms22__hero-during__streaming-live{
+.emms22__hero-during__streaming-live {
     margin: 0 0 20px 0;
 }
 
-.emms22__hero-during__streaming-live p{
+.emms22__hero-during__streaming-live p {
     font-size: 16px;
     line-height: 33px;
     font-weight: 700;
-    color: #ED1E79;
+    color: #ed1e79;
     margin: 0;
 }
 
-.emms22__hero-during__streaming-live p img{
+.emms22__hero-during__streaming-live p img {
     margin: 0 7px 0 0;
 }
 
-.emms22__hero-during__streaming-live.emms22__hero-during__streaming-live--animated{
+.emms22__hero-during__streaming-live.emms22__hero-during__streaming-live--animated {
     animation: live-animation 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes live-animation{
-    0%{
+@keyframes live-animation {
+    0% {
         opacity: 0;
     }
-    49%{
+    49% {
         opacity: 0;
     }
-    50%{
+    50% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-
 /* --- Streaming --- */
 
-.emms22__hero-during__streaming-container{
+.emms22__hero-during__streaming-container {
     display: flex;
     justify-content: space-between;
     align-items: inherit;
@@ -116,64 +113,62 @@
     width: 100%;
 }
 
-.emms22__hero-during__streaming{
+.emms22__hero-during__streaming {
     width: 68%;
 }
 
-.emms22__hero-during__streaming img{
+.emms22__hero-during__streaming img {
     width: 100%;
 }
 
-@media(max-width:992px){
-    .emms22__hero-during__streaming{
+@media (max-width: 992px) {
+    .emms22__hero-during__streaming {
         width: 100%;
     }
 }
 
-
 /* --- Aside --- */
 
-.emms22__hero-during__aside{
+.emms22__hero-during__aside {
     width: 30%;
 }
 
-@media(max-width:992px){
-    .emms22__hero-during__aside{
+@media (max-width: 992px) {
+    .emms22__hero-during__aside {
         display: none;
     }
 }
 
-
 /* --- Chat --- */
 
-.emms22__hero-during__aside__chat{
+.emms22__hero-during__aside__chat {
     padding-top: 126%;
     position: relative;
-    background: #3F0453;
+    background: #3f0453;
     border-radius: 5px;
-    border: solid 1px #BD7AFF;
+    border: solid 1px #bd7aff;
 }
 
-.emms22__hero-during__aside__chat__title{
+.emms22__hero-during__aside__chat__title {
     position: absolute;
     top: 25px;
     left: 10px;
 }
 
-.emms22__hero-during__aside__chat__title h3{
+.emms22__hero-during__aside__chat__title h3 {
     font-size: 14px;
     font-weight: 300;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
 }
 
-.emms22__hero-during__aside__chat__title h3 img{
+.emms22__hero-during__aside__chat__title h3 img {
     width: 14px;
     vertical-align: text-top;
     margin: 0 0 0 6px;
 }
 
-.emms22__hero-during__aside__chat__timeline{
+.emms22__hero-during__aside__chat__timeline {
     position: absolute;
     top: 55px;
     bottom: 96px;
@@ -182,21 +177,21 @@
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 5px;
-    border: solid 1px #BD7AFF;
+    border: solid 1px #bd7aff;
 }
 
-.emms22__hero-during__aside__chat__input{
+.emms22__hero-during__aside__chat__input {
     position: absolute;
     bottom: 20px;
     left: 10px;
     right: 10px;
     height: 65px;
-    background: #20002B;
+    background: #20002b;
     border-radius: 5px;
-    border: solid 1px #BD7AFF;
+    border: solid 1px #bd7aff;
 }
 
-.emms22__hero-during__aside__chat__input::before{
+.emms22__hero-during__aside__chat__input::before {
     position: absolute;
     top: 24px;
     right: 10px;
@@ -206,7 +201,7 @@
     font-size: 14px;
 }
 
-.emms22__hero-during__aside__chat__input input{
+.emms22__hero-during__aside__chat__input input {
     width: 100%;
     height: 100%;
     border: 0;
@@ -219,82 +214,79 @@
     font-size: 14px;
 }
 
-
-.emms22__hero-during__aside__chat__input input:focus-visible{
+.emms22__hero-during__aside__chat__input input:focus-visible {
     background: #20002b;
 }
 
-
 /* --- Promotion --- */
 
-.emms22__hero-during__aside__promotion{
+.emms22__hero-during__aside__promotion {
     padding: 0 0 0 6%;
 }
 
-.emms22__hero-during__aside__promotion img{
+.emms22__hero-during__aside__promotion img {
     width: 144px;
     margin: 0 0 16px;
 }
 
-.emms22__hero-during__aside__promotion p{
+.emms22__hero-during__aside__promotion p {
     font-size: 15px;
     line-height: 22px;
     font-weight: 400;
-    color: #F2F2F2;
+    color: #f2f2f2;
     margin: 0 0 50px 0;
 }
 
-.emms22__hero-during__aside__promotion p a{
+.emms22__hero-during__aside__promotion p a {
     font-weight: 700;
-    color: #33AD73;
-    transition-duration: .2s;
+    color: #33ad73;
+    transition-duration: 0.2s;
 }
 
-.emms22__hero-during__aside__promotion p a:hover{
+.emms22__hero-during__aside__promotion p a:hover {
     color: #008046;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
 }
 
-.emms22__hero-during__aside__promotion ul{
+.emms22__hero-during__aside__promotion ul {
     margin: 27px 0 0 0;
 }
 
-.emms22__hero-during__aside__promotion ul li{
+.emms22__hero-during__aside__promotion ul li {
     margin: 0 0 27px 0;
     padding: 0 0 0 30px;
     position: relative;
 }
 
-.emms22__hero-during__aside__promotion ul li:last-child{
+.emms22__hero-during__aside__promotion ul li:last-child {
     margin: 0;
 }
 
-.emms22__hero-during__aside__promotion ul li::before{
+.emms22__hero-during__aside__promotion ul li::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 18px;
     height: 18px;
-    background: #BD7AFF url("../img/check-w.svg") no-repeat;
+    background: #bd7aff url("../img/check-w.svg") no-repeat;
     background-position: center;
     background-size: 9px;
     border-radius: 100%;
 }
 
-.emms22__hero-during__aside__promotion ul li p span{
+.emms22__hero-during__aside__promotion ul li p span {
     font-weight: 700;
-    color: #33AD73;
+    color: #33ad73;
 }
-
 
 /* --- Certificate --- */
 
-.emms22__hero-during__certificate{
+.emms22__hero-during__certificate {
     margin: 90px 0 0 0;
 }
 
-.emms22__hero-during__certificate p{
+.emms22__hero-during__certificate p {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
@@ -302,38 +294,37 @@
     margin: 0;
 }
 
-.emms22__hero-during__certificate p img{
+.emms22__hero-during__certificate p img {
     width: 16px;
     margin: 0 4px 0 0;
     vertical-align: text-top;
 }
 
-.emms22__hero-during__certificate p button{
+.emms22__hero-during__certificate p button {
     font-family: "Proxima-Nova", "helvetica", "sans-serif";
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    color: #33AD73;
+    color: #33ad73;
     background: transparent;
     border: none;
     padding: 0;
     cursor: pointer;
 }
 
-.emms22__hero-during__certificate p button:hover{
+.emms22__hero-during__certificate p button:hover {
     text-decoration: underline;
 }
 
-@media(max-width:992px){
+@media (max-width: 992px) {
     .emms22__hero-during__certificate {
         margin: 30px 0 0 0;
     }
 }
 
-
 /* --- Modal --- */
 
-.emms22__modal{
+.emms22__modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -349,11 +340,11 @@
     display: none;
 }
 
-.emms22__modal.emms22__modal--open{
+.emms22__modal.emms22__modal--open {
     display: flex;
 }
 
-.emms22__modal .emms22__modal__window{
+.emms22__modal .emms22__modal__window {
     text-align: center;
     background: #fff;
     max-width: 775px;
@@ -364,7 +355,7 @@
     position: relative;
 }
 
-.emms22__modal .emms22__modal__window h3{
+.emms22__modal .emms22__modal__window h3 {
     font-size: 30px;
     line-height: 32px;
     font-weight: 700;
@@ -372,7 +363,7 @@
     margin: 0 0 20px 0;
 }
 
-.emms22__modal .emms22__modal__window p{
+.emms22__modal .emms22__modal__window p {
     font-size: 18px;
     line-height: 22px;
     font-weight: 400;
@@ -380,29 +371,39 @@
     margin: 0;
 }
 
-.emms22__modal .emms22__modal__window input{
+.emms22__modal .emms22__modal__window input {
     max-width: 450px;
     width: 100%;
     height: 40px;
     border: solid 1px #838370;
     border-radius: 3px;
-    margin: 40px 0 57px 0;
+    margin: 40px 0 0 0;
     padding: 0 16px;
     box-sizing: border-box;
 }
-
-.emms22__modal .emms22__modal__window input::placeholder{
+.emms22__modal .emms22__modal__window span {
+    display: block;
+    margin: 10px 0 47px 0;
+    color: red;
+    font-size: 14px;
+    line-height: 20px;
+    visibility: hidden;
+}
+.emms22__modal .emms22__modal__window span.showError {
+    visibility: visible;
+}
+.emms22__modal .emms22__modal__window input::placeholder {
     font-style: italic;
 }
 
-.emms22__modal .emms22__modal__window .emms22__button{
+.emms22__modal .emms22__modal__window .emms22__button {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
     box-shadow: none;
 }
 
-.emms22__modal .emms22__modal__window button{
+.emms22__modal .emms22__modal__window a {
     position: absolute;
     top: 23px;
     right: 22px;
@@ -415,25 +416,21 @@
     cursor: pointer;
 }
 
-
 /* ----------------------------------------------------------- Registered Premium content */
 
-
-.emms22__during .emms22__pre-event__registered-premium-content h2{
+.emms22__during .emms22__pre-event__registered-premium-content h2 {
     font-size: 22px;
     line-height: 28px;
     max-width: 620px;
     margin: 0 auto 72px;
 }
 
-
 /* ----------------------------------------------------------- Calendar */
 
-
-.emms22__pre-event__calendar__event-list{
+.emms22__pre-event__calendar__event-list {
     display: flex;
     flex-wrap: wrap;
     max-width: calc(1000px + 4%);
     margin: 0 auto;
-    animation-delay: .3s;
+    animation-delay: 0.3s;
 }

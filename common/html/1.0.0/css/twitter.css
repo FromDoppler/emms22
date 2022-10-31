@@ -1,8 +1,6 @@
 .userTweet__container {
     padding-top: 20px;
     display: flex;
-    animation: fade-in 0.5s;
-    animation-fill-mode: forwards;
 }
 .userTweet__container img {
     width: 31px;
@@ -22,7 +20,19 @@
 .userTweet__container .userTweet p {
     margin-top: 0px;
 }
-
+.hashtag--hidden {
+    visibility: hidden;
+    position: absolute;
+}
+.tweet__form__hashtag {
+    color: white;
+    position: absolute;
+    top: 25px;
+    z-index: 100;
+    left: 10px;
+    font-size: 14px;
+    font-style: italic;
+}
 .twitter__login {
     width: 305px;
     height: 49px;
@@ -47,6 +57,7 @@
 }
 .tweet__form input {
     padding-right: 108px;
+    padding-left: 108px;
 }
 .tweet__form button {
     position: absolute;
