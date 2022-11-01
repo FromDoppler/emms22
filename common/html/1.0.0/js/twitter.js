@@ -1,13 +1,12 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', () => {
     const chatId = document.getElementById('chatId');
-    const url = "../../../../twitterController.php";
+    const url = "https://qa.goemms.com/services/getCache.php";
     const url2 = "../../../../twitterPost.php";
     const tweetForm = document.getElementById('tweetForm');
     const tweetFormError = document.querySelector('.tweet__form__error');
     const hashtag = document.getElementById('hashtag').innerHTML;
     const inputTweetText = document.getElementById('userText');
-    const maxTweetLength = 280;
     const formCharacters = 280 - hashtag.length;
     let newestId = '';
 
@@ -81,8 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const getTweets = async () => {
         const data = {
             method: 'getAllTweets',
-            id: '',
-            sinceId: newestId
         }
         const settings = {
             method: 'POST',
@@ -188,12 +185,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getTweetsRequest = () => {
         getTweets().then(({ data, includes: usersData, meta }) => {
-            if (meta.result_count > 0) {
-                newestId = meta.newest_id;
-                const users = getUsers(data.reverse(), usersData);
-                printUsers(users);
-            } else {
-                console.log('No hay tweets nuevos')
+            if (meta) {
+                if (newestId != meta.newest_id) {
+                    newestId = meta.newest_id;
+                    const users = getUsers(data.reverse(), usersData);
+                    printUsers(users);
+                } else {
+                    console.log('No hay 30 tweets nuevos');
+                }
             }
         });
     }
@@ -205,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(() => {
         getTweetsRequest();
-    }, 20000);
+    }, 30000);
 
 
 

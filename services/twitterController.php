@@ -1,6 +1,7 @@
 <?php
 require_once('./twitterModel.php');
-require_once('./config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
+
 
 
 class twitterController
@@ -30,18 +31,3 @@ class twitterController
 
 }
 
-$twitterController = new twitterController(HASHTAG);
-
-
-$json = file_get_contents('php://input');
-$data = json_decode($json);
-
-if ($data->method === 'getAllTweets') {
-    if ($data->sinceId != '') {
-        echo $twitterController->getAllTweetsByNewestedId($data->sinceId );
-    } else {
-        echo $twitterController->getAllTweets();
-    }
-} else {
-    echo json_encode('otraCosa');
-}
