@@ -14,7 +14,8 @@
     color: white;
     margin-top: 0px;
     max-width: 250px;
-    margin-left: 20px;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
     display: inline-block;
 }
 .userTweet__container .userTweet p {
@@ -34,7 +35,7 @@
     font-style: italic;
 }
 .twitter__login {
-    width: 305px;
+    width: calc(100% - 20px);
     height: 49px;
     background-color: #33ad73;
     border: 1px solid #bd7aff;
@@ -48,8 +49,9 @@
     text-transform: uppercase;
     color: #ffffff;
     position: absolute;
-    bottom: 20px;
-    left: 28px;
+    bottom: 23px;
+    left: 10px;
+    cursor: pointer;
 }
 
 .twitter__login:hover {
@@ -112,25 +114,6 @@
 }
 .tweet__form button:hover {
     opacity: 0.5;
-}
-@media (min-width: 992px) {
-    .twitter__login {
-        width: 209px;
-        font-size: 13px;
-    }
-}
-@media (min-width: 1100px) {
-    .twitter__login {
-        width: 261px;
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1350px) {
-    .twitter__login {
-        width: 305px;
-        font-size: 14px;
-    }
 }
 
 .button--loading .button__text {
