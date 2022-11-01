@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         xhr.send();
         document.getElementById('emms22__download-certificate').classList.toggle('emms22__modal--open');
+        document.body.style.overflowY = 'scroll';
     }
 
 });
