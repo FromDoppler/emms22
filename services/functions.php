@@ -25,5 +25,5 @@ function processPhaseToShow($ip)
     $enabled = array_shift($simulator);
     $phaseToShow =  ($enabled && in_array($ip, ALLOW_IPS)) ? array_search(1, $simulator) : array_search(1, $phases);
     $duringDaySistem = ($enabled && in_array($ip, ALLOW_IPS)) ? $db->getSimulatorDuringDay()[0] : $db->getDuringDay()[0];
-    return array('phaseToShow' => $phaseToShow, 'simulated' => $enabled, 'day' => $duringDaySistem['day'], 'live' => $duringDaySistem['live'], 'problemsTransmission' => $transmission['problems'], 'isTransmissionYoutube' => $transmission['youtube']);
+    return array('phaseToShow' => $phaseToShow, 'simulated' => ($enabled && in_array($ip, ALLOW_IPS)), 'day' => $duringDaySistem['day'], 'live' => $duringDaySistem['live'], 'problemsTransmission' => $transmission['problems'], 'isTransmissionYoutube' => $transmission['youtube']);
 }
