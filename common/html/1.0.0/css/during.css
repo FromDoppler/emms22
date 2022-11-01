@@ -180,6 +180,17 @@
     border: solid 1px #bd7aff;
 }
 
+.emms22__hero-during__aside__chat__timeline::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  .emms22__hero-during__aside__chat__timeline::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .emms22__hero-during__aside__chat__timeline::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  }
+
 .emms22__hero-during__aside__chat__input {
     position: absolute;
     bottom: 20px;
