@@ -19,6 +19,11 @@
 <body>
     <main class="container">
         <div class="mt-5 row">
+            <div class="col text-center">
+                <h1 class="text-center text-light"><?= ($_SERVER['SERVER_NAME'] == 'goemms.com') ? 'PRODUCCION' : 'Ambiente de TEST' ?></h1>
+            </div>
+        </div>
+        <div class="mt-5 row">
             <div class="col-3">
                 <a class=" btn btn-primary mt-2" href="/admin/index.php?token=<?= $_GET['token'] ?>"> Menu Principal</a>
             </div>
@@ -181,9 +186,9 @@
                                 <div class="form-check mb-2 mx-3">
                                     <div id="day1Row" class="d-none row stateLive mx-5">
                                         <div class="col">
-                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1NoLive" value="0">
-                                            <label class="form-check-label" for="day1NoLive">
-                                                No Live
+                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1Live" value="2">
+                                            <label class="form-check-label" for="day1Live">
+                                                Live
                                             </label>
                                         </div>
                                         <div class="col">
@@ -193,9 +198,9 @@
                                             </label>
                                         </div>
                                         <div class="col">
-                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1Live" value="2">
-                                            <label class="form-check-label" for="day1Live">
-                                                Live
+                                            <input class="form-check-input" type="radio" name="day1Radios" id="day1NoLive" value="0">
+                                            <label class="form-check-label" for="day1NoLive">
+                                                No Live
                                             </label>
                                         </div>
                                     </div>
