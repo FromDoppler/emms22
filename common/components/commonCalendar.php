@@ -21,7 +21,7 @@
                 </div>
             <?php else : ?>
                 <div class="emms22__pre-event__calendar__date__country">
-                    <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
+                    <span><img src="common/html/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
                     <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                 </div>
             <?php endif; ?>
@@ -43,16 +43,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -78,7 +78,7 @@
 
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
-                        <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)p.m</span>
+                        <span><img src="common/html/img/flags/arg.png" alt="">(ARG)p.m</span>
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
@@ -98,16 +98,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
-                        <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)  p.m</span>
+                        <span><img src="common/html/img/flags/arg.png" alt="">(ARG)  p.m</span>
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
@@ -156,7 +156,7 @@
                 </div>
             <?php else : ?>
                 <div class="emms22__pre-event__calendar__date__country">
-                    <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
+                    <span><img src="common/html/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
                     <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                 </div>
             <?php endif; ?>
@@ -178,16 +178,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
-                        <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)p.m</span>
+                        <span><img src="common/html/img/flags/arg.png" alt="">(ARG)p.m</span>
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
@@ -231,16 +231,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -265,7 +265,7 @@
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
-                        <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)  p.m</span>
+                        <span><img src="common/html/img/flags/arg.png" alt="">(ARG)  p.m</span>
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
@@ -285,7 +285,7 @@
                 </div>
             <?php else : ?>
                 <div class="emms22__pre-event__calendar__date__country">
-                    <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
+                    <span><img src="common/html/img/flags/arg.png" alt="Argentina">(ARG) 02:00 p.m</span>
                     <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                 </div>
             <?php endif; ?>
@@ -305,16 +305,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -337,7 +337,7 @@
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
-                        <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)  p.m</span>
+                        <span><img src="common/html/img/flags/arg.png" alt="">(ARG)  p.m</span>
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>
@@ -356,16 +356,16 @@
                                 <h5><?= $speaker['job'] ?></h5>
                                 <ul>
                                     <?php if (!empty($speaker['sm_twitter'])) : ?>
-                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter"></a></li>
+                                        <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="common/html/img/icons/Twitter.svg" alt="Twitter"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_linkedin'])) : ?>
-                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
+                                        <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="common/html/img/icons/LinkedIn.svg" alt="LinkedIn"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_instagram'])) : ?>
-                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram"></a></li>
+                                        <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="common/html/img/icons/Instagram.svg" alt="Instagram"></a></li>
                                     <?php endif; ?>
                                     <?php if (!empty($speaker['sm_facebook'])) : ?>
-                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a></li>
+                                        <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="common/html/img/icons/Facebook.svg" alt="Facebook"></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>
@@ -388,7 +388,7 @@
                         </div>
                     </div>
                     <!-- <div class="emms22__pre-event__calendar__event-list__event__country">
-                        <span><img src="common/html/<?= VERSION ?>/img/flags/arg.png" alt="">(ARG)  p.m</span>
+                        <span><img src="common/html/img/flags/arg.png" alt="">(ARG)  p.m</span>
                         <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
                     </div> -->
                 </li>

@@ -39,7 +39,7 @@ require_once('././utils/DB.php');
         <nav class="emms22__header">
             <div class="emms22__container--lg emms22__fade-in">
                 <div class="emms22__header__logo">
-                    <a href="./index.php" class="nav-ini"><img src="../../common/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+                    <a href="./index.php" class="nav-ini"><img src="../../common/html/img/logo-emms.png" alt="Emms 2022"></a>
                 </div>
                 <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -50,21 +50,21 @@ require_once('././utils/DB.php');
             </div>
         </nav>
         <div class="emms22__share">
-            <a id="btn-share" class="emms22__share__open-list"><img src="../../common/html/<?= VERSION ?>/img/icons/icon-share.svg" alt="Share"></a>
+            <a id="btn-share" class="emms22__share__open-list"><img src="../../common/html/img/icons/icon-share.svg" alt="Share"></a>
             <ul id="list-share" class="emms22__share__list">
                 <li>
                     <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https://goemms.com/', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
-                        <img src="../../common/html/<?= VERSION ?>/img/icons/Facebook-w.svg" alt="Facebook">
+                        <img src="../../common/html/img/icons/Facebook-w.svg" alt="Facebook">
                     </a>
                 </li>
                 <li>
                     <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https://goemms.com/&text=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
-                        <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter">
+                        <img src="../../common/html/img/icons/Twitter-w.svg" alt="Twitter">
                     </a>
                 </li>
                 <li>
                     <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2F&title=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
-                        <img src="../../common/html/<?= VERSION ?>/img/icons/LinkedIn-w.svg" alt="LinkedIn">
+                        <img src="../../common/html/img/icons/LinkedIn-w.svg" alt="LinkedIn">
                     </a>
                 </li>
             </ul>
@@ -77,7 +77,7 @@ require_once('././utils/DB.php');
             <div class="emms22__container--lg">
                 <?php if ($liveDayDuring == 2) : ?>
                     <div class="emms22__hero-during__streaming-live">
-                        <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO</p>
+                        <p><img src="../../common/html/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO</p>
                     </div>
                 <?php endif; ?>
                 <div class="emms22__hero-during__streaming-container">
@@ -87,7 +87,7 @@ require_once('././utils/DB.php');
                                 <div class="emms22__cropper-cont-interno">
                                     <?php if ($liveDayDuring == 2) : ?>
                                         <?php if ($problemsTransmission) : ?>
-                                            <img src="../../common/html/<?= VERSION ?>/img/technical-problems.png" alt="technical-problems">
+                                            <img src="../../common/html/img/technical-problems.png" alt="technical-problems">
                                         <?php elseif ($isTransmissionYoutube) : ?>
                                             <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>?rel=0&autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <?php else : ?>
@@ -96,9 +96,9 @@ require_once('././utils/DB.php');
                                         <?php endif; ?>
 
                                     <?php elseif ($liveDayDuring == 1) : ?>
-                                        <img src="../../common/html/<?= VERSION ?>/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner-transition'] ?>.png" alt="Banner">
+                                        <img src="../../common/html/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner-transition'] ?>.png" alt="Banner">
                                     <?php elseif ($liveDayDuring == 0) : ?>
-                                        <img src="../../common/html/<?= VERSION ?>/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner-nolive'] ?>.png" alt="Banner">
+                                        <img src="../../common/html/img/during-banners/<?= $duringDaysArray['d' . $dayDuring]['banner-nolive'] ?>.png" alt="Banner">
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ require_once('././utils/DB.php');
                         <?php else : ?>
                             <div class="emms22__hero-during__aside__chat">
                                 <div class="emms22__hero-during__aside__chat__title">
-                                    <h3>TWEET CHAT <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
+                                    <h3>TWEET CHAT <img src="../../common/html/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
                                 </div>
                                 <div class="emms22__hero-during__aside__chat__timeline" id="chatId">
 
@@ -141,7 +141,7 @@ require_once('././utils/DB.php');
                 if ($liveDayDuring == 1 || $liveDayDuring == 2) :
                 ?>
                     <div class="emms22__hero-during__certificate">
-                        <p><img src="../../common/html/<?= VERSION ?>/img/icons/cup-icon.svg" alt="cup-icon"> Descarga <button data-target="emms22__download-certificate" data-toggle="emms22__modal">aquí</button> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag <?= $duringDaysArray['d' . $dayDuring]['hashtag-gral'] ?> :)</p>
+                        <p><img src="../../common/html/img/icons/cup-icon.svg" alt="cup-icon"> Descarga <button data-target="emms22__download-certificate" data-toggle="emms22__modal">aquí</button> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag <?= $duringDaysArray['d' . $dayDuring]['hashtag-gral'] ?> :)</p>
                     </div>
                 <?php
                 endif;
@@ -181,7 +181,7 @@ require_once('././utils/DB.php');
                     <a href="./sponsors-general.php" class="emms22__button emms22__fade-in" target="_blank">ACCEDE AHORA</a>
                 </div>
                 <div class="emms22__pre-event__registered-premium-content__image emms22__fade-in">
-                    <img src="../../common/html/<?= VERSION ?>/img/registered-content-premium.png" alt="Contenido Premium">
+                    <img src="../../common/html/img/registered-content-premium.png" alt="Contenido Premium">
                 </div>
             </div>
             <div id="agenda"></div>
@@ -200,13 +200,13 @@ require_once('././utils/DB.php');
         <div class="emms22__pre-event__doppler">
             <div class="emms22__container--lg">
                 <div class="emms22__pre-event__doppler__title">
-                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/<?= VERSION ?>/img/logo-doppler-black.svg" alt="Doppler"></h2>
+                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/img/logo-doppler-black.svg" alt="Doppler"></h2>
                     <h3 class="emms22__fade-in">La herramienta líder en Marketing Automation en español.</h3>
                     <p class="emms22__fade-in">Desde hace 15 años organizamos el EMMS y formamos a profesionales de Marketing a lo largo de todo el mundo, a través de cursos, entrenamientos y recursos 100% gratuitos. </p>
                 </div>
                 <div class="emms22__pre-event__doppler__description">
                     <div class="emms22__pre-event__doppler__description__image emms22__fade-in">
-                        <img src="../../common/html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
+                        <img src="../../common/html/img/pre-event-doppler.png" alt="Doppler">
                     </div>
                     <div class="emms22__pre-event__doppler__description__text emms22__fade-in">
                         <h4><strong>¿Quieres capacitarte gratis?</strong> ¡Esto te va a interesar! </h4>
@@ -228,15 +228,15 @@ require_once('././utils/DB.php');
 
         <footer class="emms22__footer">
             <div class="emms22__footer__event emms22__fade-in">
-                <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+                <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
             </div>
             <div class="emms22__footer__social emms22__fade-in">
                 <ul>
-                    <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
-                    <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
-                    <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a></li>
-                    <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
-                    <li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-facebook.svg" alt="Facebook"></a></li>
+                    <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-youtube.svg" alt="Youtube"></a></li>
+                    <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
+                    <li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-twitter.svg" alt="Twitter"></a></li>
                 </ul>
             </div>
             <div class="emms22__footer__actions emms22__fade-in">

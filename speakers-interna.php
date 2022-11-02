@@ -34,7 +34,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
         <nav class="emms22__header">
             <div class="emms22__container--lg emms22__fade-in">
                 <div class="emms22__header__logo">
-                    <a href="./index.php" class="nav-ini"><img src="../../common/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+                    <a href="./index.php" class="nav-ini"><img src="../../common/html/img/logo-emms.png" alt="Emms 2022"></a>
                 </div>
                 <a class="emms22__header__nav--mb" id="btn-burger"></a>
                 <ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -150,27 +150,27 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                         <ul>
                             <?php if ($speaker['sm_facebook']) : ?>
                                 <li>
-                                    <a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../../common/html/<?= VERSION ?>/img/icons/Facebook.svg" alt="Facebook"></a>
+                                    <a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="../../common/html/img/icons/Facebook.svg" alt="Facebook"></a>
                                 </li>
                             <?php endif; ?>
                             <?php if ($speaker['sm_twitter']) : ?>
                                 <li>
                                     <a href="<?= $speaker['sm_twitter'] ?>" target="_blank">
-                                        <img src="../../common/html/<?= VERSION ?>/img/icons/Twitter.svg" alt="Twitter">
+                                        <img src="../../common/html/img/icons/Twitter.svg" alt="Twitter">
                                     </a>
                                 </li>
                             <?php endif ?>
                             <?php if ($speaker['sm_linkedin']) : ?>
                                 <li>
                                     <a href="<?= $speaker['sm_linkedin'] ?>" target="_blank">
-                                        <img src="../../common/html/<?= VERSION ?>/img/icons/LinkedIn.svg" alt="LinkedIn">
+                                        <img src="../../common/html/img/icons/LinkedIn.svg" alt="LinkedIn">
                                     </a>
                                 </li>
                             <?php endif ?>
                             <?php if ($speaker['sm_instagram']) : ?>
                                 <li>
                                     <a href="<?= $speaker['sm_instagram'] ?>" target="_blank">
-                                        <img src="../../common/html/<?= VERSION ?>/img/icons/Instagram.svg" alt="Instagram">
+                                        <img src="../../common/html/img/icons/Instagram.svg" alt="Instagram">
                                     </a>
                                 </li>
                             <?php endif ?>
@@ -203,7 +203,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                     <a href="./sponsors-general.php" class="emms22__button emms22__fade-in" target="_blank">ACCEDE AHORA</a>
                 </div>
                 <div class="emms22__pre-event__registered-premium-content__image emms22__fade-in">
-                    <img src="../../common/html/<?= VERSION ?>/img/registered-content-premium.png" alt="Contenido Premium">
+                    <img src="../../common/html/img/registered-content-premium.png" alt="Contenido Premium">
                 </div>
             </div>
             <div id="agenda"></div>
@@ -215,7 +215,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
         <section class="emms22__pre-event__doppler">
             <div class="emms22__container--lg">
                 <div class="emms22__pre-event__doppler__title">
-                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/<?= VERSION ?>/img/logo-doppler-black.svg" alt="Doppler"></h2>
+                    <h2 class="emms22__fade-in">SOMOS <img src="../../common/html/img/logo-doppler-black.svg" alt="Doppler"></h2>
                     <h3 class="emms22__fade-in">La herramienta líder en Marketing Automation en español.</h3>
                     <p class="emms22__fade-in">Desde hace 15 años organizamos el EMMS y formamos a profesionales de
                         Marketing a lo largo de todo el mundo, a través de cursos, entrenamientos y recursos 100%
@@ -223,7 +223,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                 </div>
                 <div class="emms22__pre-event__doppler__description">
                     <div class="emms22__pre-event__doppler__description__image emms22__fade-in">
-                        <img src="../../common/html/<?= VERSION ?>/img/pre-event-doppler.png" alt="Doppler">
+                        <img src="../../common/html/img/pre-event-doppler.png" alt="Doppler">
                     </div>
                     <div class="emms22__pre-event__doppler__description__text emms22__fade-in">
                         <h4><strong>¿Quieres capacitarte gratis?</strong> ¡Esto te va a interesar! </h4>
@@ -246,16 +246,16 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 
         <footer class="emms22__footer">
             <div class="emms22__footer__event emms22__fade-in">
-                <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+                <p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
             </div>
             <div class="emms22__footer__social emms22__fade-in">
                 <ul>
-                    <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
-                    <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
-                    <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a>
+                    <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-facebook.svg" alt="Facebook"></a></li>
+                    <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-youtube.svg" alt="Youtube"></a>
                     </li>
-                    <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
-                    <li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
+                    <li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-twitter.svg" alt="Twitter"></a></li>
                 </ul>
             </div>
             <div class="emms22__footer__actions emms22__fade-in">
