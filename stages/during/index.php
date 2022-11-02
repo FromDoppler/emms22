@@ -36,7 +36,7 @@ require_once('././utils/DB.php');
 		<nav class="emms22__header">
 			<div class="emms22__container--lg emms22__fade-in">
 				<div class="emms22__header__logo">
-					<a href="./index.php"><img src="../../common/html/<?= VERSION ?>/img/logo-emms.png" alt="Emms 2022"></a>
+					<a href="./index.php"><img src="../../common/html/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<div class="emms22__header__warning emms22__fade-top">
                     <?php if ($liveDayDuring == 2) : ?>
@@ -60,8 +60,8 @@ require_once('././utils/DB.php');
 		<!-- Hero -->
 		<div class="emms22__hero-pre-event">
 			<div class="emms22__hero-pre-event__back">
-				<video class="lazy" loop muted autoplay playsinline  poster="../../common/html/<?= VERSION ?>/img/thumb.png">
-					<source data-src="../../common/html/<?= VERSION ?>/img/video-background-compress.mp4" type="video/mp4">
+				<video class="lazy" loop muted autoplay playsinline  poster="../../common/html/img/thumb.png">
+					<source data-src="../../common/html/img/video-background-compress.mp4" type="video/mp4">
 				</video>
 			</div>
 
@@ -72,7 +72,7 @@ require_once('././utils/DB.php');
                     if ($liveDayDuring == 2) :
                     ?>
                         <div class="emms22__hero-during__streaming-live emms22__hero-during__streaming-live--animated">
-                            <p><img src="../../common/html/<?= VERSION ?>/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO AHORA</p>
+                            <p><img src="../../common/html/img/icons/live-icon.svg" alt="Twitter Icon"> EN VIVO AHORA</p>
                         </div>
                     <?php
                     endif;
@@ -98,8 +98,8 @@ require_once('././utils/DB.php');
 							<li>CAPACITACI&Oacute;N E INSPIRACI&Oacute;N</li>
 						</ul>
                         <span><strong>Regístrate al EMMS y accede, además, a E-books, Cápsulas educativas, descuentos en herramientas ¡y mucho más!</strong></span>
-                        <span><img src="../../common/html/<?= VERSION ?>/img/icon-hotel.png" alt="icon"><img src="../../common/html/<?= VERSION ?>/img/icon-bell.png" alt="icon">
-                        <strong>Con tu registro, estás participando por una estadía de fin de semana para 2 personas. Mira términos y condiciones </strong><a href="https://goemms.com/common/html/<?= VERSION ?>/img/Sorteo-Doppler-Terminos-Condiciones.pdf" target="_blank">aquí</a>.</span>
+                        <span><img src="../../common/html/img/icon-hotel.png" alt="icon"><img src="../../common/html/img/icon-bell.png" alt="icon">
+                        <strong>Con tu registro, estás participando por una estadía de fin de semana para 2 personas. Mira términos y condiciones </strong><a href="https://goemms.com/common/html/img/Sorteo-Doppler-Terminos-Condiciones.pdf" target="_blank">aquí</a>.</span>
 
                     </div>
 				</div>
@@ -208,7 +208,7 @@ require_once('././utils/DB.php');
 					<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">REGÍSTRATE AHORA</button>
 				</div>
 				<div class="emms22__pre-event__premium-content__image emms22__fade-in">
-					<img src="../../common/html/<?= VERSION ?>/img/handset.png" alt="Handset">
+					<img src="../../common/html/img/handset.png" alt="Handset">
 				</div>
 			</div>
 		</div>
@@ -221,35 +221,35 @@ require_once('././utils/DB.php');
 				<ul class="emms22__pre-event__experiences__carousel emms22__fade-in main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "prevNextButtons": false, "setGallerySize": false }'>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
+							<img src="../../common/html/img/speaker-experiences/speaker-tim-ash.png" alt="Tim Ash">
 							<h3>Tim Ash <span>Speaker en el EMMS 2018</span></h3>
 							<p>“Ser orador principal del EMMS 2018 fue un  verdadero honor. Disfrut&eacute; mucho compartir conceptos de Marketing Digital con una audiencia <strong>tan entusiasta y receptiva</strong>.”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-purna-virji.png" alt="Tim Ash">
+							<img src="../../common/html/img/speaker-experiences/speaker-purna-virji.png" alt="Tim Ash">
 							<h3>Purna Virji <span>Speaker en el EMMS 2018</span></h3>
 							<p>“<strong>&iexcl;Me ha encantado formar parte del EMMS!</strong> Nuevamente gracias por haberme tenido en consideraci&oacute;n.”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-andres-silva.png" alt="Tim Ash">
+							<img src="../../common/html/img/speaker-experiences/speaker-andres-silva.png" alt="Tim Ash">
 							<h3>Andr&eacute;s Silva Arancibia <span>Speaker en el EMMS 2017</span></h3>
 							<p>“Ser speaker en el EMMS 2017 fue una experiencia notable. En menos de 45 minutos recib&iacute; m&aacute;s de 2500 menciones positivas en Twitter. &iexcl;Lo recomiendo mucho!”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-nico-leoni.png" alt="Tim Ash">
+							<img src="../../common/html/img/speaker-experiences/speaker-nico-leoni.png" alt="Tim Ash">
 							<h3>Nico Leoni <span>Speaker en el EMMS 2019</span></h3>
 							<p>“Llevo varios a&ntilde;os participando en conferencias  y eventos internacionales. Sin lugar a dudas, el EMMS es <strong>el mejor encuentro del mundo digital.</strong>”</p>
 						</div>
 					</li>
 					<li class="emms22__pre-event__experiences__carousel__item carousel-cell">
 						<div class="emms22__pre-event__experiences__carousel__item__card">
-							<img src="../../common/html/<?= VERSION ?>/img/speaker-experiences/speaker-sebastian-cuenca.png" alt="Tim Ash">
+							<img src="../../common/html/img/speaker-experiences/speaker-sebastian-cuenca.png" alt="Tim Ash">
 							<h3>Sebasti&aacute;n Cuenca <span>Moderador en el EMMS 2019</span></h3>
 							<p>“El EMMS fue un gran paso en mi carrera que  me permiti&oacute; llegar a <strong>nuevas audiencias</strong> y dar cursos en otros pa&iacute;ses. Es un evento que brinda informaci&oacute;n de valor y que recomiendo por la  excelencia del equipo y la organizaci&oacute;n.” </p>
 						</div>
@@ -283,8 +283,8 @@ require_once('././utils/DB.php');
 						</li>
 
 						<?php endforeach;?>
-                        <li><img src="../../common/html/<?= VERSION ?>/img/mercadoshops-milbrands.png" alt="Mercado Shops y Milbrands"></li>
-                        <li><img src="../../common/html/<?= VERSION ?>/img/milenium-pro.png" alt="Milenium Group"></li>
+                        <li><img src="../../common/html/img/mercadoshops-milbrands.png" alt="Mercado Shops y Milbrands"></li>
+                        <li><img src="../../common/html/img/milenium-pro.png" alt="Milenium Group"></li>
 					</ul>
 				</div>
 
@@ -394,15 +394,15 @@ require_once('././utils/DB.php');
 
 		<footer class="emms22__footer">
 			<div class="emms22__footer__event emms22__fade-in">
-				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
+				<p><strong>EMMS 2022</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/logo-doppler--neg.svg" alt="Doppler"></a></p>
 			</div>
 			<div class="emms22__footer__social emms22__fade-in">
 				<ul>
-					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-instagram.svg" alt="Instagram"></a></li>
-					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-facebook.svg" alt="Facebook"></a></li>
-					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-youtube.svg" alt="Youtube"></a></li>
-					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
-					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/<?= VERSION ?>/img/icono-twitter.svg" alt="Twitter"></a></li>
+					<li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-instagram.svg" alt="Instagram"></a></li>
+					<li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-facebook.svg" alt="Facebook"></a></li>
+					<li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-youtube.svg" alt="Youtube"></a></li>
+					<li><a href="https://www.linkedin.com/company/228261" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-linkedin.svg" alt="LinkedIn"></a></li>
+					<li><a href="https://twitter.com/fromDoppler" target="_blank"><img class="lazyload" loading="lazy" data-src="../../common/html/img/icono-twitter.svg" alt="Twitter"></a></li>
 				</ul>
 			</div>
 			<div class="emms22__footer__actions emms22__fade-in">

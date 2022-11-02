@@ -245,7 +245,7 @@
 }
 
 .emms22__hero-home__intro__info ul li::before{
-    content: url("../../../../../common/html/<?= VERSION ?>/img/check-w.svg");
+    content: url("../../../../../common/html/img/check-w.svg");
     position: absolute;
     top: 3px;
     left: 0;
@@ -644,7 +644,7 @@
     left: -4%;
     width: 42px;
     height: 430px;
-    background: url("../../../../../common/html/<?= VERSION ?>/img/back-waves.svg") no-repeat;
+    background: url("../../../../../common/html/img/back-waves.svg") no-repeat;
     background-size: contain;
 }
 
@@ -698,7 +698,7 @@
     transform: translateX(-50%);
     width: 21px;
     height: 17px;
-    background: url("../../../../../common/html/<?= VERSION ?>/img/icon-triangle.svg") no-repeat;
+    background: url("../../../../../common/html/img/icon-triangle.svg") no-repeat;
     background-size: contain;
 }
 
@@ -768,7 +768,7 @@
 /* ----------------------------------------------------------- Description */
 
 .emms22__back-purple{
-    background: url("../../../../../common/html/<?= VERSION ?>/img/back-purple.png") no-repeat;
+    background: url("../../../../../common/html/img/back-purple.png") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
@@ -1210,7 +1210,7 @@
 /* ----------------------------------------------------------- Bottom form */
 
 .emms22__bottom-form{
-    background: url("../../../../../common/html/<?= VERSION ?>/img/back-purple.png") no-repeat;
+    background: url("../../../../../common/html/img/back-purple.png") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
