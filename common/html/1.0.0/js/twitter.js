@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         users.forEach(({ username: userName, profile_image_url: userImage, tweet: userTweet }, index) => {
             setTimeout(() => {
                 generateUserBlock(userName, userImage, userTweet);
-            }, 1500 * index);
+            }, 3000 * index);
         });
     }
 
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = createImageTag(userImage, userName);
         const divUserTweet = document.createElement('div')
         const userTweetText = document.createElement('p')
-        userTweetText.innerText = userName + '' + userTweet;
+        userTweetText.innerText = userName + ' ' + userTweet;
         divUserTweet.appendChild(userTweetText);
         divUserTweet.classList.add('userTweet');
         divContainer.appendChild(img);
@@ -169,9 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getUsers = (data, { users }) => {
         const usersData = [];
-        let user;
         data.forEach(({ author_id: userId, text: tweet }) => {
+            let user = {};
             user = getUser(userId, users)[0];
+            user = structuredClone(user);
             user.tweet = tweet;
             usersData.push(user);
         });
