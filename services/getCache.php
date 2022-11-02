@@ -37,20 +37,22 @@ if ($data->method === 'getAllTweets') {
 
         $tweetObj = json_decode($tweetResponse);
 
-        if ($tweetResponse) {
-            $latestId = $tweetObj->meta->newest_id;
+        if ($tweetResponse && isset($tweetObj->meta->newest_id)) {
             $tweetAmount = $tweetObj->meta->result_count;
             $tweets->allTweets = $tweetObj->data;
+            $latestId = $tweetObj->meta->newest_id;
             $tweets->latestId = $latestId;
         }
 
         if ($tweets->latestId && intval($tweetAmount) === 30) {
             //Respuesta de nuevos tweets
-            $mem_var->set("tweets", $tweetResponse, 60);
-            //Backup de la respuesta de nuevos tweets
-            $mem_var->set("tweetBackup", $tweetResponse, 9999999);
+            $mem_var->set("tweets", $tweetResponse, CACHE_TIME);
+            $mem_var->set("cacheDateTweets",  date("Y-m-d h:i:s A"), CACHE_TIME);
+            $mem_var->set("tweetBackup", $tweetResponse, CACHE_BACKUP_TIME);
             //Guardamos el id del ultimo tweet del ultimo request
-            $mem_var->set("latestId", $tweets->latestId, 120);
+            $mem_var->set("latestId",  $tweets->latestId, CACHE_TIME_ID);
+            $mem_var->set("cacheDateId",  date("Y-m-d h:i:s A"), CACHE_TIME_ID);
+
             echo $tweetResponse;
         } else {
             // Al no tener un nuevo request de tweets, mandamos el backup

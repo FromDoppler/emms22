@@ -35,7 +35,11 @@ if (!defined('OATH_TOKEN')) define('OATH_TOKEN', $OATH_TOKEN);
 if (!defined('OATH_TOKEN_SECRET')) define('OATH_TOKEN_SECRET', $OATH_TOKEN_SECRET);
 if (!defined('BEARER_TOKEN')) define('BEARER_TOKEN', $BEARER_TOKEN);
 if (!defined('OAUTH_CALLBACK')) define('OAUTH_CALLBACK', SITE_URL . 'callback.php');
-if (!defined('HASHTAG')) define('HASHTAG', 'EMMS2022');
+if (!defined('HASHTAG')) define('HASHTAG', 'TESTAVERQUEONDA');
+if (!defined('CACHE_TIME')) define('CACHE_TIME', 120); // En segundos(120) (2 minutos)
+if (!defined('CACHE_TIME')) define('CACHE_TIME_ID', 180); // En segundos(180) (3 minutos)
+if (!defined('CACHE_TIME')) define('CACHE_BACKUP_TIME', 3600); // En segundos (1 Hora)
+
 
 #IPS WHITE LIST
 
