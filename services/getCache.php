@@ -14,12 +14,17 @@ if (in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
 header("Access-Control-Allow-Origin: $http_origin");
 
 require_once('./twitterController.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
 
 $mem_var = new Memcached();
 $mem_var->addServer("127.0.0.1", 11211);
 $response = $mem_var->get("tweets");
+$responseD = processPhaseToShow($ip);
 
-$twitterController = new twitterController(HASHTAG);
+$dayDuring  = $responseD['day'];
+
+$hashtag =$duringDaysArray['d' . $dayDuring]['hashtag-gral'];
+$twitterController = new twitterController($hashtag);
 
 $json = file_get_contents('php://input');
 $data = json_decode($json);

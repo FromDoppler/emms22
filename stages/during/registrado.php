@@ -141,7 +141,7 @@ require_once('././utils/DB.php');
                 if ($liveDayDuring == 1 || $liveDayDuring == 2) :
                 ?>
                     <div class="emms22__hero-during__certificate">
-                        <p><img src="../../common/html/img/icons/cup-icon.svg" alt="cup-icon"> Descarga <button data-target="emms22__download-certificate" data-toggle="emms22__modal">aquí</button> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag <?= $duringDaysArray['d' . $dayDuring]['hashtag-gral'] ?> :)</p>
+                        <p><img src="../../common/html/img/icons/cup-icon.svg" alt="cup-icon"> Descarga <button data-target="emms22__download-certificate" data-toggle="emms22__modal">aquí</button> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #<?= $duringDaysArray['d' . $dayDuring]['hashtag-gral'] ?> :)</p>
                     </div>
                 <?php
                 endif;

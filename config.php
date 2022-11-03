@@ -87,7 +87,7 @@ $duringDaysArray = array(
         "youtube" => "wHn1_QVoXGM",
         "twitch" => "duckvilleusa",
         "hashtag-chat" => "#EMMS2022 ",
-        "hashtag-gral" => "#EMMS2022",
+        "hashtag-gral" => "EMMS2022",
         "banner-transition" => "placa-dia01-transition",
         "banner-nolive" => "placa-dia01-nolive"
     ),
@@ -95,7 +95,7 @@ $duringDaysArray = array(
         "youtube" => "InSydaLSSlw",
         "twitch" => "hoothouselivestream",
         "hashtag-chat" => "#GOEMMS ",
-        "hashtag-gral" => "#GOEMMS",
+        "hashtag-gral" => "GOEMMS",
         "banner-transition" => "placa-dia02-transition",
         "banner-nolive" => "placa-dia02-nolive"
     ),
@@ -103,7 +103,7 @@ $duringDaysArray = array(
         "youtube" => "XDJPzMznAjU",
         "twitch" => "livekittytv",
         "hashtag-chat" => "#EMMSBYDOPPLER ",
-        "hashtag-gral" => "#EMMSBYDOPPLER",
+        "hashtag-gral" => "EMMSBYDOPPLER",
         "banner-transition" => "placa-dia03-transition",
         "banner-nolive" => "placa-dia03-nolive"
     ),
