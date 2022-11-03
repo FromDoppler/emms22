@@ -121,9 +121,31 @@
     width: 100%;
 }
 
+.emms22__hero-during__streaming__activate-sound{
+    width: 100%;
+}
+
+.emms22__hero-during__streaming__activate-sound{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+    color: #fff;
+    margin: 16px 0 0 0;
+}
+
+.emms22__hero-during__streaming__activate-sound span{
+    font-style: normal;
+}
+
 @media (max-width: 992px) {
     .emms22__hero-during__streaming {
         width: 100%;
+    }
+
+    .emms22__hero-during__streaming__activate-sound{
+        display: none;
     }
 }
 
