@@ -1129,7 +1129,7 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     }
 
     .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.previous{
-        background: url("../img/icons/arrow-right.svg") no-repeat;
+        background: url("../../img/icons/arrow-right.svg") no-repeat;
         background-size: contain;
         background-position-x: center;
         right: 0;
@@ -1139,7 +1139,7 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     }
 
     .emms22__pre-event__calendar__event-list.main-carousel .flickity-prev-next-button.next{
-        background: url("../img/icons/arrow-right.svg") no-repeat;
+        background: url("../../img/icons/arrow-right.svg") no-repeat;
         background-size: contain;
         background-position-x: center;
         right: 0;
@@ -1334,7 +1334,7 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
 /* ----------------------------------------------------------- Experiences */
 
 .emms22__pre-event__experiences{
-    background: url("../img/back-purple.png") no-repeat;
+    background: url("../../img/back-purple.png") no-repeat;
     background-size: cover;
     padding: 212px 0 93px 0;
 }
@@ -1603,7 +1603,7 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
 /* ----------------------------------------------------------- Bottom form */
 
 .emms22__pre-event__bottom-form{
-    background: url("../img/back-purple.png") no-repeat;
+    background: url("../../img/back-purple.png") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
@@ -1783,7 +1783,7 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     top: 2px;
     width: 20px;
     height: 20px;
-    background: url("../img/icons/ok-message.svg") no-repeat;
+    background: url("../../img/icons/ok-message.svg") no-repeat;
     background-size: contain;
 }
 
@@ -1960,7 +1960,7 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     top: 1px;
     width: 20px;
     height: 20px;
-    background: url("../img/icons/ok-message.svg") no-repeat;
+    background: url("../../img/icons/ok-message.svg") no-repeat;
     background-size: contain;
 }
 

@@ -96,12 +96,12 @@
         display: inline-block;
         width: 27px;
         cursor: pointer;
-        background: url(../img/icon-burger.svg) no-repeat;
+        background: url("../../img/icon-burger.svg") no-repeat;
         background-size: contain;
     }
 
     .emms22__header__nav--mb.emms22__header__nav--mb--active{
-        background: url(../img/icon-close-white.png) no-repeat;
+        background: url("../../img/icon-close-white.png") no-repeat;
         background-size: 22px;
     }
 
