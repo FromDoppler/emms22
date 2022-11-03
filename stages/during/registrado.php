@@ -90,6 +90,7 @@ require_once('././utils/DB.php');
                                             <img src="../../common/html/img/technical-problems.png" alt="technical-problems">
                                         <?php elseif ($isTransmissionYoutube) : ?>
                                             <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray['d' . $dayDuring]['youtube'] ?>?rel=0&autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p class="emms22__hero-during__streaming__activate-sound">Recuerda activar el sonido <span>🔉</span></p>
                                         <?php else : ?>
                                             <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray['d' . $dayDuring]['twitch'] ?>&parent=<?= $_SERVER['SERVER_NAME'] ?>">
                                             </iframe>
