@@ -197,16 +197,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    if (chatId) {
+        const firstLoad = () => {
+            getTweetsRequest();
+        }
+        firstLoad();
 
-    const firstLoad = () => {
-        getTweetsRequest();
+        setInterval(() => {
+            getTweetsRequest();
+        }, 30000);
     }
-    firstLoad();
-
-    setInterval(() => {
-        getTweetsRequest();
-    }, 30000);
-
 
 
 });
