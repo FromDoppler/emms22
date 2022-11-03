@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Oct 25, 2022 at 03:09 PM
+-- Generation Time: Nov 03, 2022 at 05:31 PM
 -- Server version: 8.0.29
 -- PHP Version: 8.0.19
 
@@ -44,6 +44,91 @@ CREATE TABLE `aliados_media_partner` (
 --
 
 INSERT INTO `aliados_media_partner` (`id`, `name`, `image_home`, `alt_image_home`, `orden_home`, `status`) VALUES
+(20, 'Girls in Tech', 'girls-in-tech-mediapartner-V2.png', 'Girls in Tech', '1', NULL),
+(21, 'Chiletec', 'chiletec-mediapartner.png', 'Chiletec', '2', NULL),
+(22, 'My Pyme no para', 'mi-pyme-no-para-mediapartner-V3.png', 'My Pyme no Para', '3', NULL),
+(23, 'Revista NEO', 'revista-neo-mediapartner-V2.png', 'Revista Neo', '4', NULL),
+(24, 'Infonegocios', 'infonegocios-mediapartner-V2.png', 'Infonegocios', '5', NULL),
+(25, 'China Rodriguez', 'china-rodriguez-mediapartner-V4.png', 'China Rodriguez', '6', NULL),
+(26, 'Girls in Tech Ec', 'girls-in-tech-ecuador-mediapartner-V2.png', 'Girls in Tech Ec', '7', NULL),
+(27, 'Sofi Alicio', 'sofia-alicio-mediapartner-V2.png', 'Sofi Alicio', '8', NULL),
+(29, 'Jacuna', 'jacuna-mediapartner-V2.png', 'Jacuna', '10', NULL),
+(30, 'Digitalizadas', 'digitalizadas-mediapartner-V2.png', 'Digitalizadas', '11', NULL),
+(31, 'Rampa Publicidad', 'rampa-digital-mediapartner-V2.png', 'Rampa Publicidad', '12', NULL),
+(32, 'Mica Sabja', 'micaela-sab-mediapartner.png', 'Mica Sabja', '13', NULL),
+(33, 'Ultravioleta', 'ultravioleta-mediapartner-V2.png', 'Ultravioleta', '14', NULL),
+(34, 'Luis Maram', 'luis-maram-mediapartner-V3.png', 'Luis Maram', '15', NULL),
+(35, 'Mkt Digital Experience', 'marketing-digital-experience-mediapartner-V3.png', 'Mkt Digital Experience', '16', NULL),
+(36, 'Club de las Emprendedoras', 'club-emprendedoras-mediapartner-V3.png', 'Club de las Emprendedoras', '17', NULL),
+(37, 'Ignacio Santiago', 'ignacio-santiago-mediapartner-V3.png', 'Ignacio Santiago', '18', NULL),
+(38, 'AVE', 'alianza-valor-estrategico-mediapartner-V2.png', 'AVE', '19', NULL),
+(39, 'Epico', 'epico-mediapartner-V2.png', 'Epico', '20', NULL),
+(40, 'Angie Sanmartino', 'angie-mediapartner-V2.png', 'Angie Sanmartino', '21', NULL),
+(41, 'Mamá Emprende', 'mama-emprende-V3.png', 'Mamá Emprende', '22', NULL),
+(42, 'Consejo de la Comunicación', 'consejo-comunicacion-mediapartner-V2.png', 'Consejo de la Comunicación', '23', NULL),
+(43, 'Red de Vendedores', 'red-vendedores-mediapartner-V2.png', 'Red de Vendedores', '24', NULL),
+(44, 'Mimec', 'mimec-mediapartner-V3.png', 'Mimec', '25', NULL),
+(45, 'Cam Fintech AR', 'camara-argentina-fintech-mediapartner-V3.png', 'Cam Fintech AR', '26', NULL),
+(46, 'Camcocba', 'camara-comercio-cordoba-mediapartner-V2.png', 'Camcocba', '27', NULL),
+(47, 'Benomad', 'benomad-mediapartner-V3.png', 'Benomad', '28', NULL),
+(48, 'Growby', 'growby-mediaparner-V2.png', 'Growby', '29', NULL),
+(49, 'Del querer al hacer', 'del-querer-al-hacer-mediapartner-V2.png', 'Del querer al hacer', '30', NULL),
+(50, 'IT Ahora', 'it-ahora-mediapartner-V2.png', 'IT Ahora', '31', NULL),
+(51, 'Emprendedores News', 'emprendedores-news-mediapartner-V2.png', 'Emprendedores News', '32', NULL),
+(52, 'Grandes Pymes', 'grandes-pymes-mediapartner-V2.png', 'Grandes Pymes', '33', NULL),
+(53, 'Mundo Contact', 'mundo-contact-mediapartner-V2.png', 'Mundo Contact', '34', NULL),
+(54, 'Mkt al día', 'marketing-al-dia-mediapartner-V3.png', 'Mkt al día', '35', NULL),
+(55, 'Bulb', 'bulb-mediapartner-V2.png', 'Bulb', '36', NULL),
+(56, 'Moni en la Web', 'moni-en-la-web-mediapartner-V2.png', 'Moni en la Web', '37', NULL),
+(57, 'Entre Emp WS', 'entreemprendedores-mediapartner-V2.png', 'Entre Emp WS', '38', NULL),
+(58, 'Disruptivo TV', 'disruptivo-mediapartner-V3.png', 'Disruptivo TV', '39', NULL),
+(59, 'Caro Siri', 'caro-siri-mediapartner.png', 'Uffa Studio', '40', NULL),
+(60, 'Sed Emprendedor', 'sed-emprendedor-mediapartner-V2.png', 'Sed Emprendedor', '41', NULL),
+(61, 'Mis eventos online', 'mis-eventos-online-mediapartner-V2.png', 'Mis eventos online', '42', NULL),
+(62, 'Factor Humano', 'factor-humano-mediapartner-V3.png', 'Factor Humano', '43', NULL),
+(63, 'E-mkt Chile', 'e-marketing-mediapartner-V2.png', 'E-mkt Chile', '44', NULL),
+(64, 'Partners Academy', 'partners-academy-mediapartner-V3.png', 'Partners Academy', '45', NULL),
+(65, 'Flor Lamas', 'flor-lamas-mediapartner.png', 'Flor Lamas', '40', NULL),
+(66, 'Ad Media Rock', 'admediarock-mediapartner.png', 'Ad media Rock', '70', NULL),
+(67, 'We Connect', 'weconnect-mediapartner.png', 'WeConnect', '80', NULL),
+(68, 'AMDAR', 'amdar-mediapartner (1).png', 'AMDAR', '30', NULL),
+(69, 'Partner Press', 'partner-press-mediapartner.png', 'Partner-press', '60', NULL),
+(70, 'Mujeres que Emprenden ', 'mujeres-que-emprenden-mediapartner-V2.png', 'Mujeres que Emprenden', '5', NULL),
+(72, 'Cooltabs', 'cooltabs-mediapartner.png', 'Cooltabs', '100', NULL),
+(73, 'Educación IT', 'educacion-it-mediapartner.png', 'Educación IT', '110', NULL),
+(74, 'EUDE', 'eude-mediapartner.png', 'Eude', '120', NULL),
+(75, 'Asociación Internet Mx', 'asociacion-internet-mx.png', 'Asociación Internet Mx', '120', NULL),
+(76, 'Pulsión Digital', 'pulsion-digital-mediapartner.png', 'Pulsión Digital', '10', NULL),
+(77, 'Aleti', 'aleti-media-partner.png', 'Aleti', '20', NULL),
+(78, 'Cessi', 'cessi-media-partner.png', 'Cessi', '30', NULL),
+(79, 'Adity', 'adity-media-partner.png', 'Adity', '92', NULL),
+(80, 'Cyberclick', 'cyberclick-mediapartner.png', 'Cyberclick', '40', NULL),
+(81, 'Pymes Power Hub', 'powehub-network-mediapartner.png', 'Pymes Power Hub', '90', NULL),
+(82, 'América Retail', 'america-retail-mediapartner.png', 'América Retail', '46', NULL),
+(83, 'Genwords', 'genwords-media-partner.png', 'Genwords', '47', NULL),
+(84, 'Webescuela', 'webescuela-media-partner.png', 'Webescuela', '62', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aliados_media_partner_bk`
+--
+
+DROP TABLE IF EXISTS `aliados_media_partner_bk`;
+CREATE TABLE `aliados_media_partner_bk` (
+  `id` int NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `image_home` varchar(255) DEFAULT NULL,
+  `alt_image_home` varchar(255) DEFAULT NULL,
+  `orden_home` varchar(255) DEFAULT NULL,
+  `status` enum('0','1') DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `aliados_media_partner_bk`
+--
+
+INSERT INTO `aliados_media_partner_bk` (`id`, `name`, `image_home`, `alt_image_home`, `orden_home`, `status`) VALUES
 (20, 'Girls in Tech', 'girls-in-tech-mediapartner-V2.png', 'Girls in Tech', '1', NULL),
 (21, 'Chiletec', 'chiletec-mediapartner.png', 'Chiletec', '2', NULL),
 (22, 'My Pyme no para', 'mi-pyme-no-para-mediapartner-V3.png', 'My Pyme no Para', '3', NULL),
@@ -187,56 +272,56 @@ CREATE TABLE `google_oauth` (
 --
 
 INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
-(1, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(2, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(3, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(4, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(5, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(6, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(7, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(8, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(9, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(10, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(11, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(12, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(13, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(14, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(15, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(16, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(17, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(18, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(19, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(20, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(21, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(22, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(23, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(24, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(25, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(26, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(27, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(28, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(29, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(30, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(31, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(32, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(33, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(34, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(35, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(36, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(37, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(38, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(39, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(40, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(41, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(42, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(43, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(44, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(45, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(46, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(47, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(48, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(49, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
-(50, 'google', '{\"access_token\":\"ya29.a0Aa4xrXMa4ECk3QB8jboZGOR3r0QTeUbH9yWkLnC0GM00rS4xbodXCtVB0Q6RbL1oStbOAjkyR96OZ7cKOfUkGH0nMU_d9RCFdR0IVdtWlKTbI-CUA9brpDQkD2gWDAMniSY-f44JsQoR4JWTRQaZXftEgKpv0HAaCgYKATASARISFQEjDvL9ShFDB9-p4Wt-Gc_f7IfK-w0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
+(1, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(2, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(3, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(4, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(5, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(6, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(7, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(8, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(9, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(10, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(11, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(12, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(13, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(14, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(15, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(16, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(17, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(18, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(19, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(20, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(21, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(22, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(23, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(24, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(25, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(26, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(27, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(28, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(29, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(30, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(31, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(32, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(33, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(34, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(35, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(36, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(37, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(38, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(39, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(40, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(41, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(42, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(43, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(44, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(45, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(46, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(47, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(48, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(49, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}'),
+(50, 'google', '{\"access_token\":\"ya29.a0Aa4xrXOfoLNoFHQFjR87K1f2ZOJa9GZu3x5rIq1lloeqPf05s6LfwpfjVc_YwRIL9eGQzDG_gjgvBaNb0OBTPukPwJxQ6SEpH7mMHzGJgUwIaM51eD5iQRTa0YYgP4S9Re_jJRTGoBaMstyFHBfPnunzoYPWiiQaCgYKATASARISFQEjDvL9Pxm0fzQP_BUBI8Uz1VdXsA0166\",\"expires_in\":3599,\"scope\":\"https://www.googleapis.com/auth/spreadsheets\",\"token_type\":\"Bearer\",\"refresh_token\":\"1//0hxOIS9W4oqXZCgYIARAAGBESNwF-L9Irgwst8lyC5Bae8RyYuX6y3U-m1_wZdZYDIPoZSIJKyl1xdEcXlke10sDSBblQAPcWMfs\"}');
 
 -- --------------------------------------------------------
 
@@ -299,7 +384,17 @@ CREATE TABLE `registered` (
 --
 
 INSERT INTO `registered` (`id`, `register`, `phase`, `email`, `firstname`, `lastname`, `country`, `phone`, `industry`, `company`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, '2022-10-19 11:26:36 AM', 'preevento', 'hcardoso+new+fields@fromdoppler.com', 'Fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, 'direct', '', '', '', '');
+(1, '2022-10-19 11:26:36 AM', 'preevento', 'hcardoso+new+fields@fromdoppler.com', 'Fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, 'direct', '', '', '', ''),
+(2, '2022-10-31 02:27:44 PM', 'during', 'hernan.f.cardoso@gmail.com', 'fede', '', '', '', 'Servicios', '', 'direct', '', '', '', ''),
+(3, '2022-10-26 12:54:36 PM', 'pre', 'hcardoso+pre@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, 'direct', '', '', '', ''),
+(4, '2022-10-26 01:00:27 PM', 'during', 'hcardoso+during@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, 'direct', '', '', '', ''),
+(5, '2022-10-26 01:04:21 PM', 'post', 'hcardoso+post@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Belleza-Cosmética', NULL, 'direct', '', '', '', ''),
+(6, '2022-10-26 01:13:57 PM', 'during', 'hcardoso+simulador+during@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Salud', NULL, 'direct', '', '', '', ''),
+(7, '2022-10-26 01:29:38 PM', 'post', 'hcardoso+post+1@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, 'direct', '', '', '', ''),
+(8, '2022-10-26 01:30:43 PM', 'during', 'hcardoso+during+1@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Educación', NULL, 'direct', '', '', '', ''),
+(9, '2022-10-26 01:31:57 PM', 'pre', 'hcardoso+simulador+pre@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Agencias-de-Empleo', NULL, 'direct', '', '', '', ''),
+(10, '2022-10-27 10:48:35 AM', 'pre', 'hcardoso+during+local@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Supermercado', NULL, 'direct', '', '', '', ''),
+(11, '2022-10-27 10:53:34 AM', 'during', 'hcardoso+during+local+2@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Servicios', NULL, 'direct', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -318,7 +413,7 @@ CREATE TABLE `settings_during_days` (
 --
 
 INSERT INTO `settings_during_days` (`day`, `live`) VALUES
-(3, 2);
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -338,7 +433,7 @@ CREATE TABLE `settings_phase` (
 --
 
 INSERT INTO `settings_phase` (`pre`, `during`, `post`) VALUES
-(1, 0, 0);
+(0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -359,7 +454,7 @@ CREATE TABLE `settings_simulator` (
 --
 
 INSERT INTO `settings_simulator` (`enabled`, `pre`, `during`, `post`) VALUES
-(0, 0, 1, 0);
+(0, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -390,14 +485,14 @@ DROP TABLE IF EXISTS `settings_transmission`;
 CREATE TABLE `settings_transmission` (
   `problems` tinyint(1) NOT NULL,
   `youtube` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `settings_transmission`
 --
 
 INSERT INTO `settings_transmission` (`problems`, `youtube`) VALUES
-(1, 0);
+(0, 1);
 
 -- --------------------------------------------------------
 
@@ -421,6 +516,7 @@ CREATE TABLE `speakers` (
   `image_company` varchar(255) DEFAULT NULL,
   `alt_image_company` varchar(255) DEFAULT NULL,
   `time` varchar(255) DEFAULT NULL,
+  `link_time` varchar(500) NOT NULL,
   `orden` varchar(255) DEFAULT NULL,
   `day` varchar(1) NOT NULL,
   `youtube` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
@@ -432,18 +528,18 @@ CREATE TABLE `speakers` (
 -- Dumping data for table `speakers`
 --
 
-INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `bio`, `image_company`, `alt_image_company`, `time`, `orden`, `day`, `youtube`, `slug`, `status`) VALUES
-(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', NULL, 'hepc-speaker.png', 'Hep!c Marketing', '1', '3', '1', '', '', NULL),
-(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', NULL, 'google-speaker.png', 'Google', '1', '10', '2', '', '', NULL),
-(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', NULL, 'metricool-speaker.png', 'Metricool', '1', '4', '1', '', '', NULL),
-(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', NULL, 'raiola-speaker.png', 'Raiola Networks', '1', '5', '1', '', '', NULL),
-(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', NULL, 'tiendup-speaker.png', 'Tiendup', '1', '6', '1', '', '', NULL),
-(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', NULL, 'doofinder-speaker.png', 'Doofinder', '1', '30', '2', '', '', NULL),
-(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', NULL, 'on-translation-speaker.png', 'Ontranslation', '1', '30', '2', '', '', NULL),
-(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', NULL, 'mercatitlan-speaker.png', 'Mercatitlan', '1', '10', '1', '', '', NULL),
-(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', NULL, 'ab-speaker.png', 'Angela Blones', '1', '20', '2', '', '', NULL),
-(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', NULL, 'brainwave-site.png', 'Brainwave', '1', '25', '2', '', '', NULL),
-(17, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', 'El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de \"de Finibus Bonorum et Malorum\" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.', 'aws-speaker.png', 'Amazon Web Services', '1', '2', '1', 'Ef9QnZVpVd8', 'albert-esplugas', NULL);
+INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `bio`, `image_company`, `alt_image_company`, `time`, `link_time`, `orden`, `day`, `youtube`, `slug`, `status`) VALUES
+(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', NULL, 'hepc-speaker.png', 'Hep!c Marketing', '1', '', '3', '1', '', '', NULL),
+(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', NULL, 'google-speaker.png', 'Google', '1', '', '10', '2', '', '', NULL),
+(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', NULL, 'metricool-speaker.png', 'Metricool', '1', '', '4', '1', '', '', NULL),
+(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', NULL, 'raiola-speaker.png', 'Raiola Networks', '1', '', '5', '1', '', '', NULL),
+(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', NULL, 'tiendup-speaker.png', 'Tiendup', '1', '', '6', '1', '', '', NULL),
+(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', NULL, 'doofinder-speaker.png', 'Doofinder', '1', '', '30', '2', '', '', NULL),
+(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', NULL, 'on-translation-speaker.png', 'Ontranslation', '1', '', '30', '2', '', '', NULL),
+(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', NULL, 'mercatitlan-speaker.png', 'Mercatitlan', '1', '', '10', '1', '', '', NULL),
+(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', NULL, 'ab-speaker.png', 'Angela Blones', '1', '', '20', '2', '', '', NULL),
+(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', NULL, 'brainwave-site.png', 'Brainwave', '1', '', '25', '2', '', '', NULL),
+(17, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', 'El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de \"de Finibus Bonorum et Malorum\" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.', 'aws-speaker.png', 'Amazon Web Services', '1', 'https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2022&iso=20221109T11&p1=51&ah=5', '2', '1', 'Ef9QnZVpVd8', 'albert-esplugas', NULL);
 
 -- --------------------------------------------------------
 
@@ -480,7 +576,18 @@ CREATE TABLE `subscriptions_doppler` (
 --
 
 INSERT INTO `subscriptions_doppler` (`id`, `email`, `list`, `register`, `form_id`, `firstname`, `lastname`, `phone`, `country`, `industry`, `company`, `ip`, `country_ip`, `privacy`, `promotions`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, 'hcardoso+new+fields@fromdoppler.com', '28547158', '2022-10-19 11:26:38 AM', 'preevento', 'Fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', '');
+(1, 'hcardoso+new+fields@fromdoppler.com', '28547158', '2022-10-19 11:26:38 AM', 'preevento', 'Fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(2, 'hernan.f.cardoso@gmail.com', '28547158', '2022-10-25 02:11:08 PM', 'preevento', 'fede', NULL, NULL, NULL, 'Supermercado', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(3, 'hcardoso+pre@fromdoppler.com', '28547158', '2022-10-26 12:54:39 PM', 'pre', 'fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(4, 'hcardoso+during@fromdoppler.com', '28547158', '2022-10-26 01:00:29 PM', 'during', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(5, 'hcardoso+post@fromdoppler.com', '28547158', '2022-10-26 01:04:27 PM', 'post', 'fede', NULL, NULL, NULL, 'Belleza-Cosmética', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(6, 'hcardoso+simulador+during@fromdoppler.com', '28547158', '2022-10-26 01:13:59 PM', 'during', 'fede', NULL, NULL, NULL, 'Salud', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(7, 'hcardoso+post+1@fromdoppler.com', '28547158', '2022-10-26 01:29:41 PM', 'post', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(8, 'hcardoso+during+1@fromdoppler.com', '28547158', '2022-10-26 01:30:45 PM', 'during', 'fede', NULL, NULL, NULL, 'Educación', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(9, 'hcardoso+simulador+pre@fromdoppler.com', '28547158', '2022-10-26 01:32:11 PM', 'pre', 'fede', NULL, NULL, NULL, 'Agencias-de-Empleo', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(10, 'hcardoso+during+local@fromdoppler.com', '28547158', '2022-10-27 10:48:37 AM', 'pre', 'fede', NULL, NULL, NULL, 'Supermercado', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(11, 'hcardoso+during+local+2@fromdoppler.com', '28547158', '2022-10-27 10:53:36 AM', 'during', 'fede', NULL, NULL, NULL, 'Servicios', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(12, 'hernan.f.cardoso@gmail.com', '28547158', '2022-10-31 02:27:49 PM', 'during', 'fede', NULL, NULL, NULL, 'Servicios', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -490,6 +597,12 @@ INSERT INTO `subscriptions_doppler` (`id`, `email`, `list`, `register`, `form_id
 -- Indexes for table `aliados_media_partner`
 --
 ALTER TABLE `aliados_media_partner`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `aliados_media_partner_bk`
+--
+ALTER TABLE `aliados_media_partner_bk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -542,6 +655,12 @@ ALTER TABLE `subscriptions_doppler`
 -- AUTO_INCREMENT for table `aliados_media_partner`
 --
 ALTER TABLE `aliados_media_partner`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+
+--
+-- AUTO_INCREMENT for table `aliados_media_partner_bk`
+--
+ALTER TABLE `aliados_media_partner_bk`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
@@ -572,7 +691,7 @@ ALTER TABLE `log_errors`
 -- AUTO_INCREMENT for table `registered`
 --
 ALTER TABLE `registered`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `speakers`
@@ -584,7 +703,7 @@ ALTER TABLE `speakers`
 -- AUTO_INCREMENT for table `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

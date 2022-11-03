@@ -29,6 +29,7 @@ if (isset($_POST['btn-save'])) {
     }
     $alt_image_company = $_POST['alt_image_company'];
     $time = $_POST['time'];
+    $link_time = $_POST['link_time'];
     $orden = $_POST['orden'];
     $day = $_POST['day'];
     $slug = $_POST['slug'];
@@ -38,7 +39,7 @@ if (isset($_POST['btn-save'])) {
 
     // sql query for inserting data into database
 
-    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`orden`,`day`,`slug`,`youtube`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $orden . "','" . $day . "' ,'" . $slug . "','" . $youtube . "')";
+    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`link_time`,`orden`,`day`,`slug`,`youtube`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $link_time . "','" . $orden . "','" . $day . "' ,'" . $slug . "','" . $youtube . "')";
     // sql query for inserting data into database
 
     // sql query execution function
@@ -183,6 +184,14 @@ if (isset($_POST['btn-save'])) {
                             </td>
                             <td>
                                 <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="link_time" class="form-label">URL Time Zona Horaria:</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="link_time" name="link_time" placeholder="URL Time Zona Horaria">
                             </td>
                         </tr>
                         <tr>

@@ -41,6 +41,7 @@ if (isset($_POST['btn-update'])) {
     }
     $alt_image_company = $_POST['alt_image_company'];
     $time = $_POST['time'];
+    $link_time = $_POST['link_time'];
     $orden = $_POST['orden'];
     $day = $_POST['day'];
     $slug = strtolower($_POST['slug']);
@@ -49,7 +50,7 @@ if (isset($_POST['btn-update'])) {
     // variables for input data
 
     // sql query for update data into database
-    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`orden`='$orden',`day`='$day', `slug`='$slug' , `youtube`='$youtube' WHERE id=" . $_GET['edit_id'];
+    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`link_time`='$link_time',`orden`='$orden',`day`='$day', `slug`='$slug' , `youtube`='$youtube' WHERE id=" . $_GET['edit_id'];
     // sql query for update data into database
     // sql query execution function
     if (mysqli_query($con, $sql_query)) {
@@ -204,6 +205,14 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <input type="text" value="<?= $fetched_row['time'] ?>" class="form-control" id="time" name="time">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="link_time" class="form-label">URL Time Zona Horaria:</label>
+                            </td>
+                            <td>
+                                <input type="text" value="<?= $fetched_row['link_time'] ?>" class="form-control" id="link_time" name="link_time">
                             </td>
                         </tr>
                         <tr>

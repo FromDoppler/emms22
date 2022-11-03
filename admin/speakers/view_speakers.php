@@ -126,6 +126,12 @@ if (isset($_GET['view_id'])) {
                 </tr>
                 <tr>
                     <td>
+                        <label for="link_time" class="form-label">URL Time Zona Horaria:</label>
+                    </td>
+                    <th colspan="5"> <?= $fetched_row['link_time'] ?></th>
+                </tr>
+                <tr>
+                    <td>
                         <label for="orden" class="form-label">Orden:</label>
                     </td>
                     <th colspan="5"> <?= $fetched_row['orden'] ?></th>
