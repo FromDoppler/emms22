@@ -280,7 +280,7 @@
     top: 0;
     width: 18px;
     height: 18px;
-    background: #bd7aff url("../img/check-w.svg") no-repeat;
+    background: #bd7aff url("../../img/check-w.svg") no-repeat;
     background-position: center;
     background-size: 9px;
     border-radius: 100%;
@@ -420,7 +420,7 @@
     right: 22px;
     width: 16px;
     height: 13px;
-    background: url(../img/icon-close-black.png) no-repeat;
+    background: url("../../img/icon-close-black.png") no-repeat;
     background-size: contain;
     padding: 0;
     border: none;

@@ -10,7 +10,7 @@
 
 .error-404 {
   height: 169px;
-  background: url(../img/404.png) no-repeat center center;
+  background: url("../../img/404.png") no-repeat center center;
   background-size: contain;
   transform: scale(1.1);
 }
