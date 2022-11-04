@@ -122,7 +122,7 @@ require_once('././utils/DB.php');
 
                                 </div>
                                 <?php if (TWITTER_API_OK) : ?>
-                                    <?php if (!isset($_SESSION['access_token'])) : ?>
+                                    <?php if (isset($_SESSION['access_token'])) : ?>
                                         <div class="emms22__hero-during__aside__chat__input">
                                             <form id="tweetForm" class="tweet__form">
                                                 <input type="text" name="userTweet" id="userText" placeholder="¡Twittea aquí! El # saldrá automáticamente">
