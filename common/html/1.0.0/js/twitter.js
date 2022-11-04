@@ -22,9 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     printFormCharacters();
 
+    const displayBtn = () => {
+        const formBtn = document.getElementById('formBtn');
+        formBtn.classList.add('formBtn--dp');
+        inputTweetText.classList.add('tweet__form--pr');
+    }
+
 
     const activeInputListeners = () => {
         inputTweetText.addEventListener('keypress', () => {
+            displayBtn();
             clearError();
             setTimeout(() => {
                 const userChars = inputTweetText.value.length;
@@ -34,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         inputTweetText.addEventListener('keydown', (event) => {
+            displayBtn();
             const key = event.key;
             if (key === 'Delete' || key === 'Backspace') {
                 setTimeout(() => {
@@ -98,6 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
+
+    tweetForm.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        sendTweet();
+    });
 
     const sendTweet = async () => {
         const formData = new FormData(tweetForm);

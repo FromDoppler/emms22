@@ -122,11 +122,11 @@
     width: 100%;
 }
 
-.emms22__hero-during__streaming__activate-sound{
+.emms22__hero-during__streaming__activate-sound {
     width: 100%;
 }
 
-.emms22__hero-during__streaming__activate-sound{
+.emms22__hero-during__streaming__activate-sound {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -136,7 +136,7 @@
     margin: 16px 0 0 0;
 }
 
-.emms22__hero-during__streaming__activate-sound span{
+.emms22__hero-during__streaming__activate-sound span {
     font-style: normal;
 }
 
@@ -145,7 +145,7 @@
         width: 100%;
     }
 
-    .emms22__hero-during__streaming__activate-sound{
+    .emms22__hero-during__streaming__activate-sound {
         display: none;
     }
 }
@@ -207,13 +207,13 @@
 .emms22__hero-during__aside__chat__timeline::-webkit-scrollbar {
     width: 3px;
     height: 3px;
-  }
-  .emms22__hero-during__aside__chat__timeline::-webkit-scrollbar-track {
+}
+.emms22__hero-during__aside__chat__timeline::-webkit-scrollbar-track {
     background-color: transparent;
-  }
-  .emms22__hero-during__aside__chat__timeline::-webkit-scrollbar-thumb {
+}
+.emms22__hero-during__aside__chat__timeline::-webkit-scrollbar-thumb {
     background-color: #fff;
-  }
+}
 
 .emms22__hero-during__aside__chat__input {
     position: absolute;
@@ -246,27 +246,31 @@
     box-sizing: border-box;
     border-radius: 5px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 15px;
+    font-style: italic;
+    font-weight: 400;
+    font-family: "Proxima-Nova", "helvetica", "sans-serif";
 }
 
 .emms22__hero-during__aside__chat__input input:focus-visible {
     background: #20002b;
 }
 
-@media(max-width:992px){
-    .emms22__hero-during__aside__chat{
+@media (max-width: 992px) {
+    .emms22__hero-during__aside__chat {
         padding-top: 56%;
     }
 }
 
-@media(max-width:720px){
-    .emms22__hero-during__aside__chat{
+@media (max-width: 720px) {
+    .emms22__hero-during__aside__chat {
         padding-top: 70%;
     }
 }
 
-@media(max-width:620px){
-    .emms22__hero-during__aside__chat{
+@media (max-width: 620px) {
+    .emms22__hero-during__aside__chat {
         padding-top: 100%;
     }
 }
