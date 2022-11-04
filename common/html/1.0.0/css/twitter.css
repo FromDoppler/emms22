@@ -53,6 +53,13 @@
     left: 10px;
     cursor: pointer;
 }
+.twitter__backup_btn{
+    position: absolute;
+    bottom: 35px;
+    left: calc(20% - 5px);
+    width: 300px;
+}
+
 
 .twitter__login:hover {
     opacity: 0.8;
