@@ -55,7 +55,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
 	<script type="module">
 		import {
 			changeRedirectLoged
-		} from '../html/<?= VERSION ?>/js/security.js'
+		} from '../../common/html/<?= VERSION ?>/js/security.js'
 		const changeBtnRedirect = changeRedirectLoged;
 		changeBtnRedirect();
 	</script>

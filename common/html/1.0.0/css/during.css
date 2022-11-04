@@ -107,6 +107,7 @@
 
 .emms22__hero-during__streaming-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: inherit;
     align-items: center;
@@ -157,7 +158,8 @@
 
 @media (max-width: 992px) {
     .emms22__hero-during__aside {
-        display: none;
+        width: 100%;
+        margin: 30px 0 0 0;
     }
 }
 
@@ -249,6 +251,24 @@
 
 .emms22__hero-during__aside__chat__input input:focus-visible {
     background: #20002b;
+}
+
+@media(max-width:992px){
+    .emms22__hero-during__aside__chat{
+        padding-top: 56%;
+    }
+}
+
+@media(max-width:720px){
+    .emms22__hero-during__aside__chat{
+        padding-top: 70%;
+    }
+}
+
+@media(max-width:620px){
+    .emms22__hero-during__aside__chat{
+        padding-top: 100%;
+    }
 }
 
 /* --- Promotion --- */

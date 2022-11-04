@@ -171,7 +171,7 @@
 }
 
 .emms22__hero-pre-event__intro__info ul li::before{
-    content: url("../img/check-w.svg");
+    content: url("../../img/check-w.svg");
     position: absolute;
     top: 1px;
     left: 0;
