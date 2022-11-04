@@ -79,12 +79,12 @@
                     </div>
                     <?php if ( $response['phaseToShow'] == 'pre' ) :?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php elseif (($dayDuring == 1) && ($liveDayDuring == 2)) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php endif; ?>
@@ -140,12 +140,12 @@
                     </div>
                     <?php if ( $response['phaseToShow'] == 'pre' ) :?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php elseif (($dayDuring == 1) && ($liveDayDuring == 2)) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php endif; ?>
@@ -227,12 +227,12 @@
                     </div>
                     <?php if ( $response['phaseToShow'] == 'pre' ) :?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php elseif ( ($dayDuring == 1) || (($dayDuring == 2) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php endif; ?>
@@ -287,12 +287,12 @@
                     </div>
                     <?php if ( $response['phaseToShow'] == 'pre' ) :?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php elseif ( ($dayDuring == 1) || (($dayDuring == 2) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php endif; ?>
@@ -366,12 +366,12 @@
                     </div>
                     <?php if ( $response['phaseToShow'] == 'pre' ) :?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php elseif ( ($dayDuring == 1) || ($dayDuring == 2) || (($dayDuring == 3) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php endif; ?>
@@ -424,12 +424,12 @@
                     </div>
                     <?php if ( $response['phaseToShow'] == 'pre' ) :?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php elseif ( ($dayDuring == 1) || ($dayDuring == 2) || (($dayDuring == 3) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
-                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?> p.m</span>
+                            <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
                     <?php endif; ?>
