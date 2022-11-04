@@ -1,8 +1,7 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
 ?>
-<script src="https://cdn.socket.io/4.5.3/socket.io.min.js" integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous">
-</script>
+<script src="../../common/html/<?= VERSION ?>/js/vendors/socket.io.min.js?version=<?= VERSION ?>"></script>
 <script>
     const socket = io("wss://<?= URL_REFRESH ?>", {
         path: "/<?= PATH_REFRESH ?>/socket.io"
