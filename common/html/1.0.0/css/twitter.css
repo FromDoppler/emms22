@@ -160,3 +160,7 @@
         transform: rotate(1turn);
     }
 }
+
+.userNameSpan {
+    font-weight: bold;
+}

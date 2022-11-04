@@ -55,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (inputTweetText) {
         activeInputListeners();
+
+        tweetForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            sendTweet();
+        });
     }
 
     const clearError = () => {
@@ -107,10 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    tweetForm.addEventListener('submit', (e) =>{
-        e.preventDefault();
-        sendTweet();
-    });
 
     const sendTweet = async () => {
         const formData = new FormData(tweetForm);
@@ -159,11 +160,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generateUserBlock = (userName, userImage, userTweet) => {
         const divContainer = document.createElement('div');
+        const userNameSpan = document.createElement('span');
+        const userTextSpan = document.createElement('span');
+        userNameSpan.classList.add('userNameSpan');
+        userNameSpan.innerHTML = userName + ': ';
+        userTextSpan.innerHTML = userTweet;
         divContainer.classList.add('userTweet__container');
         const img = createImageTag(userImage, userName);
         const divUserTweet = document.createElement('div')
-        const userTweetText = document.createElement('p')
-        userTweetText.innerText = userName + ' ' + userTweet;
+        const userTweetText = document.createElement('p');
+
+        userTweetText.appendChild(userNameSpan);
+        userTweetText.appendChild(userTextSpan);
+
+
         divUserTweet.appendChild(userTweetText);
         divUserTweet.classList.add('userTweet');
         divContainer.appendChild(img);
