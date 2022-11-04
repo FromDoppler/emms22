@@ -411,6 +411,11 @@ p.emms22__hero-pre-event__intro__info__add a:hover{
     animation-delay: 0.3s ;
 }
 
+.emms22__hero-pre-event__registered__btn-calendar a{
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 .emms22__hero-pre-event__registered a.addeventatc{
 		display: inline-block;
     font-family: "Proxima-Nova-Bold";
