@@ -28,10 +28,10 @@
 .tweet__form__hashtag {
     color: white;
     position: absolute;
-    top: 25px;
+    top: 26px;
     z-index: 100;
-    left: 10px;
-    font-size: 14px;
+    right: 15px;
+    font-size: 12px;
     font-style: italic;
 }
 .twitter__login {
@@ -53,20 +53,27 @@
     left: 10px;
     cursor: pointer;
 }
-.twitter__backup_btn{
+.twitter__backup_btn {
     position: absolute;
     bottom: 35px;
     left: calc(20% - 5px);
     width: 300px;
 }
 
-
 .twitter__login:hover {
     opacity: 0.8;
 }
 .tweet__form input {
+    padding-left: 17px;
+}
+.tweet__form input.tweet__form--pr {
     padding-right: 108px;
-    padding-left: 108px;
+}
+#formBtn {
+    display: none;
+}
+#formBtn.formBtn--dp {
+    display: inline;
 }
 
 .tweet__form__error {
@@ -152,4 +159,8 @@
     to {
         transform: rotate(1turn);
     }
+}
+
+.userNameSpan {
+    font-weight: bold;
 }

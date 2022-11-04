@@ -22,9 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     printFormCharacters();
 
+    const displayBtn = () => {
+        const formBtn = document.getElementById('formBtn');
+        formBtn.classList.add('formBtn--dp');
+        inputTweetText.classList.add('tweet__form--pr');
+    }
+
 
     const activeInputListeners = () => {
         inputTweetText.addEventListener('keypress', () => {
+            displayBtn();
             clearError();
             setTimeout(() => {
                 const userChars = inputTweetText.value.length;
@@ -34,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         inputTweetText.addEventListener('keydown', (event) => {
+            displayBtn();
             const key = event.key;
             if (key === 'Delete' || key === 'Backspace') {
                 setTimeout(() => {
@@ -47,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (inputTweetText) {
         activeInputListeners();
+
+        tweetForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            sendTweet();
+        });
     }
 
     const clearError = () => {
@@ -99,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+
     const sendTweet = async () => {
         const formData = new FormData(tweetForm);
         const userTweet = formData.get('userTweet')
@@ -146,11 +160,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generateUserBlock = (userName, userImage, userTweet) => {
         const divContainer = document.createElement('div');
+        const userNameSpan = document.createElement('span');
+        const userTextSpan = document.createElement('span');
+        userNameSpan.classList.add('userNameSpan');
+        userNameSpan.innerHTML = userName + ': ';
+        userTextSpan.innerHTML = userTweet;
         divContainer.classList.add('userTweet__container');
         const img = createImageTag(userImage, userName);
         const divUserTweet = document.createElement('div')
-        const userTweetText = document.createElement('p')
-        userTweetText.innerText = userName + ' ' + userTweet;
+        const userTweetText = document.createElement('p');
+
+        userTweetText.appendChild(userNameSpan);
+        userTweetText.appendChild(userTextSpan);
+
+
         divUserTweet.appendChild(userTweetText);
         divUserTweet.classList.add('userTweet');
         divContainer.appendChild(img);

@@ -114,8 +114,9 @@ require_once('././utils/DB.php');
                             </div>
                         <?php else : ?>
                             <div class="emms22__hero-during__aside__chat">
+                                <span id="hashtag" class="tweet__form__hashtag"><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
                                 <div class="emms22__hero-during__aside__chat__title">
-                                    <h3>TWEET CHAT <img src="../../common/html/img/icons/Twitter-w.svg" alt="Twitter Icon"></h3>
+                                    <h3>¡Participa en Twitter!</h3>
                                 </div>
                                 <div class="emms22__hero-during__aside__chat__timeline" id="chatId">
 
@@ -124,9 +125,8 @@ require_once('././utils/DB.php');
                                     <?php if (isset($_SESSION['access_token'])) : ?>
                                         <div class="emms22__hero-during__aside__chat__input">
                                             <form id="tweetForm" class="tweet__form">
-                                                <span id="hashtag" class="tweet__form__hashtag"><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
-                                                <input type="text" name="userTweet" id="userText">
-                                                <button type="button"> <span class="button__text">ENVIAR</span></button>
+                                                <input type="text" name="userTweet" id="userText" placeholder="¡Twittea aquí! El # saldrá automáticamente">
+                                                <button type="button" id="formBtn"> <span class="button__text">ENVIAR</span></button>
                                             </form>
                                             <small class="tweet__form__error"></small>
                                             <small class="tweet_form_characters" id="formCharacters">280</small>
