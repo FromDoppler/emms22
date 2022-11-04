@@ -109,6 +109,7 @@
 .tweet__form button {
     position: absolute;
     right: 0;
+    top: 0;
     width: 91px;
     height: 65px;
     background: #20002b;
