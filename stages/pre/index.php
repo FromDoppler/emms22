@@ -39,7 +39,7 @@ require_once('././utils/DB.php');
 					<a href="./index.php"><img src="../../common/html/img/logo-emms.png" alt="Emms 2022"></a>
 				</div>
 				<div class="emms22__header__warning emms22__fade-top">
-					<a>&iexcl;ASEGURA TU CUPO! REG&Iacute;STRATE GRATIS AHORA</a>
+					<a>¡FALTAN HORAS! ASEGURA TU CUPO GRATIS</a>
 				</div>
 				<a class="emms22__header__nav--mb" id="btn-burger"></a>
 				<ul class="emms22__header__nav emms22__header__nav--hidden" id="nav-mb">
@@ -194,11 +194,11 @@ require_once('././utils/DB.php');
 
 		<!-- CTA Box -->
 
-		<div class="emms22__pre-event__ctabox">
+<!-- 		<div class="emms22__pre-event__ctabox">
 			<h2 class="emms22__fade-in">En breve confirmaremos nuevos Speakers. &iexcl;Con&oacute;celos antes que nadie!</h2>
 			<button class="emms22__button emms22__fade-in" data-scroll="contentEarlyForm" onclick="scrollToElement(event)">AP&Uacute;NTATE GRATIS</button>
 			<div id="contenido-exclusivo"></div>
-		</div>
+		</div> -->
 
 
 		<!-- Premium content -->
@@ -297,9 +297,9 @@ require_once('././utils/DB.php');
 
 					</ul>
 				</div>
-				<div class="emms22__pre-event__allies__contact emms22__fade-in">
+<!-- 				<div class="emms22__pre-event__allies__contact emms22__fade-in">
 					<p>&iquest;Quieres ser aliado del EMMS 2022? Escr&iacute;benos a <a href="mailto:partners@fromdoppler.com" target="_blank">partners@fromdoppler.com</a></p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
