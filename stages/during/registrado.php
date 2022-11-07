@@ -58,7 +58,7 @@ require_once('././utils/DB.php');
                     </a>
                 </li>
                 <li>
-                    <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https://goemms.com/&text=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                    <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2F&text=%20%C2%A1Ya%20comenz%C3%B3%20el%20EMMS!%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20Accede%20y%20vive%20todas%20las%20conferencias%20desde%20donde%20est%C3%A9s.%20', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
                         <img src="../../common/html/img/icons/Twitter-w.svg" alt="Twitter">
                     </a>
                 </li>
