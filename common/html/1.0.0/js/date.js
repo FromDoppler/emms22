@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
             eventDate = addHoursToDate(eventDate, 1);
         }
     }
+    function checkUserDtsSpeakers(date) {
+        if (today.isDstObserved()) {
+            date = addHoursToDate(eventDate, 1);
+            return date;
+        }
+        return date;
+    }
 
     // Checkeamos si pertenece a Daylight saving time (DST) (horario de verano)
     checkUserDts();
@@ -76,14 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function setCountryAndDate({ countryName, countryCode }, date, target) {
 
         const flagContainers = document.querySelectorAll('.emms22__pre-event__calendar__date__country span');
-        const version = document.getElementById("version").innerHTML;
+
 
         if (!target) {
             countryCode = 'AR';
             countryName = 'Argentina';
         }
 
-        const img = createImgElement(countryName, countryCode, version);
+        const img = createImgElement(countryName, countryCode);
         let hours = date.getHours().toString();
         hours = (hours.length < 2) ? '0' + hours : hours;
 
@@ -96,10 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 flagContainer.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ') ' + hours + ':00';
             });
         }
-
+        changeSpeakerHours(countryName, countryCode);
     }
 
-    function createImgElement(countryName, countryCode, version) {
+    function createImgElement(countryName, countryCode) {
         const img = document.createElement("img");
         img.src = `common/html/img/flags/${countryCode}.png`;
         img.alt = countryName;
@@ -107,4 +114,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return img;
     }
+
+
+
+    const printCountryHourSpeakers = (eventHours, countryName, countryCode) => {
+
+        const eventDateContainer = document.querySelectorAll('.emms22__pre-event__calendar__event-list__event__country');
+        eventDateContainer.forEach((container, index) => {
+            const span = container.querySelector('span');
+            span.innerHTML = '';
+            const img = createImgElement(countryName, countryCode);
+            span.appendChild(img)
+            let hour = eventHours[index].getHours().toString();
+            hour = (hour.length < 2) ? '0' + hour : hour;
+
+            let min = eventHours[index].getMinutes().toString();;
+            min = (min.length < 2) ? min + '0' : min;
+
+            span.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ')' + ' ' + hour + ':' + min;
+        });
+    }
+
+    const changeSpeakerHours = (countryName, countryCode) => {
+
+        const eventDateContainer = document.querySelectorAll('.emms22__pre-event__calendar__event-list__event__country');
+        let eventHours = [];
+
+        eventDateContainer.forEach(container => {
+            const txt = container.querySelector('span').innerHTML;
+            let numb = txt.match(/\d/g);
+            numb = numb.join("");
+            let hourAndMin = numb.match(/.{1,2}/g);
+            let newDate = new Date(`2022-11-09T${hourAndMin[0]}:${hourAndMin[1]}:00.000-03:00`);
+            eventHours.push(structuredClone(newDate));
+        });
+
+        eventHours.forEach(date => { date = checkUserDtsSpeakers(date) });
+        printCountryHourSpeakers(eventHours, countryName, countryCode);
+
+    }
+
+
 });
