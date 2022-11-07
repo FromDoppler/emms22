@@ -1,6 +1,10 @@
 <?php
 require_once('././config.php');
 require_once('././utils/DB.php');
+
+if (CHANGE_TWITTER_API === true) {
+    session_destroy();
+}
 ?>
 
 <!DOCTYPE html>

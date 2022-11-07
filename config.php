@@ -36,6 +36,10 @@ if (!defined('OATH_TOKEN_SECRET')) define('OATH_TOKEN_SECRET', $OATH_TOKEN_SECRE
 if (!defined('BEARER_TOKEN')) define('BEARER_TOKEN', $BEARER_TOKEN);
 if (!defined('OAUTH_CALLBACK')) define('OAUTH_CALLBACK', SITE_URL . 'callback.php');
 if (!defined('TWITTER_API_OK')) define('TWITTER_API_OK', true);
+
+// Caution with the next line!
+if (!defined('CHANGE_TWITTER_API')) define('CHANGE_TWITTER_API', false);
+
 if (!defined('CACHE_TIME')) define('CACHE_TIME', 120); // En segundos(120) (2 minutos)
 if (!defined('CACHE_TIME_ID')) define('CACHE_TIME_ID', 1800); // En segundos(1800) (30 minutos)
 if (!defined('CACHE_BACKUP_TIME')) define('CACHE_BACKUP_TIME', 3600); // En segundos (1 Hora)
