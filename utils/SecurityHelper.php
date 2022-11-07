@@ -1,17 +1,17 @@
 <?php
 class SecurityHelper {
-	
+
 	const CAPTCHA_TIME =  86400; // 60*60*24 seconds (24 hours)
 	const SUBMISSIONS_TIME = 86400; // 60*60*24 seconds (24 hours)
-	const ALLOWED_SUBMISSIONS = 75;
-	
+	const ALLOWED_SUBMISSIONS = 200;
+
 	private static $ip;
 	private static $memcached;
 	private static $submissionsKey;
 	private static $bannedKey;
 	private static $enabled;
 
-	
+
 	public static function init($ipAddress, $enabled) {
 		if($ipAddress != '::1' && $ipAddress != '127.0.0.1') {
 			self::$memcached = new Memcached();
@@ -22,7 +22,7 @@ class SecurityHelper {
 			self::$bannedKey = 'banned'.self::$ip;
 		}
 	}
-	
+
 	public static function incrementSubmissions() {
 		if(self::$enabled) {
 
@@ -48,7 +48,7 @@ class SecurityHelper {
 			else {
 				throw new Exception('SecurityHelper: error submision');
 			}
-	}	
+	}
 }
 
 ?>

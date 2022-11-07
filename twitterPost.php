@@ -2,19 +2,14 @@
 session_start();
 require "vendor/autoload.php";
 require 'twitteroauth/config.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/SecurityHelper.php');
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-// $access_token = $_GET['oauth_token'];
-// $access_token_secret = $_GET['oauth_verifier'];
 
-
-// $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
-// $content = $connection->get("account/verify_credentials");
-
-// // $statues = $connection->post("statuses/update", ["status" => "hello world"]);
-
-// print_r($content);
+$ip = GeoIp::getIp();
+SecurityHelper::init($ip, SECURITYHELPER_ENABLE);
+SecurityHelper::isSubmitValid(ALLOW_IPS);
 
 if (!isset($_SESSION['access_token'])) {
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
@@ -39,7 +34,7 @@ if (!isset($_SESSION['access_token'])) {
 
     // posting tweet on user profile
     $post = $connection->post('statuses/update', array('status' => $userText));
-    // displaying response of $post object
+
     $response = new stdClass;
     $response->id = $post->id;
     $response->text = $post->text;
