@@ -5,6 +5,16 @@ require_once('././utils/DB.php');
 if (CHANGE_TWITTER_API === true) {
     session_destroy();
 }
+
+if (isset($_SESSION['access_token'])) { // si esta logueado
+    if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 28800)) {
+        // Si estuvo inactivo por 8 horas (28800)
+        session_unset();
+        session_destroy();
+    }
+}
+$_SESSION['LAST_ACTIVITY'] = time();
+
 ?>
 
 <!DOCTYPE html>
