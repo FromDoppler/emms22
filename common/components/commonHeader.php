@@ -19,18 +19,22 @@
 	<meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
     <?php if ( $response['phaseToShow'] == 'pre' ) :?>
         <meta property="og:description" content="¡Gratis y Online! Llega una nueva edición del evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Reserva tu cupo ahora!">
+        <meta property="og:image" content="https://goemms.com/share.png">
+        <meta name="twitter:image" content="https://goemms.com/share.png">
     <?php elseif ( $response['phaseToShow'] == 'during' ) :?>
         <meta property="og:description" content="¡Ya estamos en vivo! Ha comenzado el evento gratis y online más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Súmate ahora!">
+        <meta property="og:image" content="https://goemms.com/share-during.png">
+        <meta name="twitter:image" content="https://goemms.com/share-during.png">
     <?php elseif ( $response['phaseToShow'] == 'post' ) :?>
         <meta property="og:description" content="¡Gratis y Online! Revive el evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Accede ahora a todas las Conferencias!">
+        <meta property="og:image" content="https://goemms.com/share.png">
+        <meta name="twitter:image" content="https://goemms.com/share.png">
     <?php endif; ?>
-    <meta property="og:image" content="https://goemms.com/share.png">
 	<meta property="og:url" content="https://goemms.com/">
 	<meta property="og:site_name" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://goemms.com/share.png">
 	<meta name="twitter:image:alt" content="EMMS 2022: El mayor evento de Marketing Digital">
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
