@@ -125,7 +125,7 @@ require_once('././utils/DB.php');
                                     <?php if (isset($_SESSION['access_token'])) : ?>
                                         <div class="emms22__hero-during__aside__chat__input">
                                             <form id="tweetForm" class="tweet__form">
-                                                <input type="text" name="userTweet" id="userText" placeholder="¡Twittea aquí! El # saldrá automáticamente">
+                                                <input type="text" name="userTweet" id="userText" placeholder="Tu Tweet saldrá con el # de hoy">
                                                 <button type="button" id="formBtn"> <span class="button__text">ENVIAR</span></button>
                                             </form>
                                             <small class="tweet__form__error"></small>
