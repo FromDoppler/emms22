@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var now = new Date();
     var current_year = now.getFullYear();
     var next_year = current_year + 1;
-
-    var target_date = new Date("November 9, " + current_year + ", 11:00:00").getTime();
+    const utcDate = '2022-11-08T14:00:00.000Z';
+    var target_date = new Date(utcDate).getTime();
 
     var days, hours, minutes, seconds;
 
