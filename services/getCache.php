@@ -14,7 +14,7 @@ $ip = GeoIp::getIp();
 $responseD = processPhaseToShow($ip);
 $dayDuring  = $responseD['day'];
 
-$hashtag ='EMMS2022';
+$hashtag = $duringDaysArray['d' . $dayDuring]['hashtag-gral'];
 $twitterController = new twitterController($hashtag);
 
 $json = file_get_contents('php://input');
