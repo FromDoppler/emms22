@@ -1,17 +1,6 @@
 <?php
 
-$allowedOrigins = [
-    'https://qa.goemms.com/',
-    'https://goemms.com/',
-
-];
-if (in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
-    $http_origin = $_SERVER['HTTP_ORIGIN'];
-} else {
-    $http_origin = "https://qa.goemms.com/";
-}
-
-header("Access-Control-Allow-Origin: $http_origin");
+header("Access-Control-Allow-Origin: https://goemms.com ");
 
 require_once('./twitterController.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
