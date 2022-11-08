@@ -96,10 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const settings = {
             method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-            },
+            mode: 'cors',
             body: JSON.stringify(data)
         };
         try {
