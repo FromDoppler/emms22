@@ -1,5 +1,4 @@
 <?php
-session_start();
 require "vendor/autoload.php";
 require 'twitteroauth/config.php';
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/SecurityHelper.php');

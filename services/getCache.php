@@ -48,7 +48,7 @@ if ($cachedTweets) {
     }
 
     // Verificamos que la cantidad de datos en la respuesta sea igual a 30
-    if ($tweets->latestId && intval($tweetAmount) === 30) {
+    if ($tweets->latestId && intval($tweetAmount) === TWEETS_AMOUNT) {
 
         //Respuesta de nuevos tweets
         $mem_var->set("tweets", $tweetResponse, CACHE_TIME);
