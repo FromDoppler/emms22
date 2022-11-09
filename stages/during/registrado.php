@@ -1,7 +1,4 @@
 <?php
-require_once('././config.php');
-require_once('././utils/DB.php');
-
 if (CHANGE_TWITTER_API === true) {
     session_destroy();
 }
@@ -32,7 +29,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
         checkUserNotLogedF()
     </script>
     <?php
-    include_once('././common/components/commonHeader.php');
+                                                                            require_once('././common/components/commonHeader.php');
     ?>
     <link rel="stylesheet" href="../../common/html/<?= VERSION ?>/flickity/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
