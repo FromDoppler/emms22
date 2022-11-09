@@ -28,7 +28,7 @@ class twitterModel
     {
         $context = stream_context_create($this->getOpts);
         try {
-            $file = file_get_contents('https://api.twitter.com/2/tweets/search/recent?query=' . $this->hashtag . '&user.fields=profile_image_url&expansions=author_id&max_results=30', false, $context);
+            $file = file_get_contents('https://api.twitter.com/2/tweets/search/recent?query=' . $this->hashtag . '&user.fields=profile_image_url&expansions=author_id&max_results=' . TWEETS_AMOUNT, false, $context);
         } catch (Exception $e) {
             print_r($e);
         }
@@ -40,7 +40,7 @@ class twitterModel
     {
         $context = stream_context_create($this->getOpts);
         try {
-            $file = file_get_contents('https://api.twitter.com/2/tweets/search/recent?query=' . $this->hashtag . '&since_id=' . $sinceId . '&user.fields=profile_image_url&expansions=author_id&max_results=30', false, $context);
+            $file = file_get_contents('https://api.twitter.com/2/tweets/search/recent?query=' . $this->hashtag . '&since_id=' . $sinceId . '&user.fields=profile_image_url&expansions=author_id&max_results=' . TWEETS_AMOUNT, false, $context);
         } catch (Exception $e) {
             print_r($e);
         }
