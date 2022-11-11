@@ -265,8 +265,8 @@
                 <div class="emms22__pre-event__allies__group">
                     <h3 class="emms22__fade-in">SPONSORS</h3>
                     <ul class="emms22__fade-in">
-                        <?php $pro_sponsors = $db->getAliadosPro('orden_home');
-                        foreach ($pro_sponsors as $pro) : ?>
+                        <?php
+                        foreach ($aliadosPro as $pro) : ?>
                             <li>
                                 <?php if ($pro['link_site']) : ?>
                                     <a href="<?= $pro['link_site'] ?>" target="_blank">

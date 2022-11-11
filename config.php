@@ -113,3 +113,22 @@ $duringDaysArray = array(
         "banner-nolive" => "placa-dia03-nolive"
     ),
 );
+
+
+##### FIX REFRESH
+# DURING = during
+#POST = post
+if (!defined('PHASE')) define('PHASE', 'during');
+if (!defined('SIMULATED')) define('SIMULATED', false);
+if (!defined('DURING_DAY')) define('DURING_DAY', 2);
+# LIVE 2
+#TRANSISION 1
+# NOLIVE 0
+if (!defined('DURING_STATE')) define('DURING_STATE', 0);
+if (!defined('ERROR_TRANSMISSION')) define('ERROR_TRANSMISSION', 0);
+#TRANSMISSION_YOUTUBE = 0 ---> twitch
+#TRANSMISSION_YOUTUBE = 1 ---> youtube
+if (!defined('TRANSMISSION_YOUTUBE')) define('TRANSMISSION_YOUTUBE', 1);
+if (!defined('CACHE_TIME_SPEAKERS')) define('CACHE_TIME_SPEAKERS', 2592000);
+
+

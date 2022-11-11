@@ -1,3 +1,5 @@
+
+
 <div class="emms22__pre-event__calendar">
     <div class="emms22__container--lg">
 
@@ -28,10 +30,7 @@
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
             <?php
-            $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-            $speakers = $db->getSpeakersByDay(1);
-
-            foreach ($speakers as $speaker) : ?>
+            foreach ($speakersDay1 as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
                         <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -77,7 +76,7 @@
                         </div>
 
                     </div>
-                    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+                    <?php if ($response['phaseToShow'] == 'pre') : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
@@ -93,7 +92,7 @@
             <?php endforeach; ?>
         </ul>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-            <?php foreach ($speakers as $speaker) : ?>
+            <?php foreach ($speakersDay1 as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event carousel-cell">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
                         <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -138,7 +137,7 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+                    <?php if ($response['phaseToShow'] == 'pre') : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
@@ -177,10 +176,7 @@
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
             <?php
-            $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-            $speakers = $db->getSpeakersByDay(2);
-
-            foreach ($speakers as $speaker) : ?>
+            foreach ($speakersDay2 as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
                         <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -225,12 +221,12 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+                    <?php if ($response['phaseToShow'] == 'pre') : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
-                    <?php elseif ( ($dayDuring == 1) || (($dayDuring == 2) && ($liveDayDuring == 2))) : ?>
+                    <?php elseif (($dayDuring == 1) || (($dayDuring == 2) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
@@ -240,7 +236,7 @@
             <?php endforeach; ?>
         </ul>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-            <?php foreach ($speakers as $speaker) : ?>
+            <?php foreach ($speakersDay2 as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event carousel-cell">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
                         <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -285,12 +281,12 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+                    <?php if ($response['phaseToShow'] == 'pre') : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
-                    <?php elseif ( ($dayDuring == 1) || (($dayDuring == 2) && ($liveDayDuring == 2))) : ?>
+                    <?php elseif (($dayDuring == 1) || (($dayDuring == 2) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
@@ -320,8 +316,7 @@
         </div>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-dk">
             <?php
-            $speakers = $db->getSpeakersByDay(3);
-            foreach ($speakers as $speaker) : ?>
+            foreach ($speakersDay3 as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
                         <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -364,12 +359,12 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+                    <?php if ($response['phaseToShow'] == 'pre') : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
-                    <?php elseif ( ($dayDuring == 1) || ($dayDuring == 2) || (($dayDuring == 3) && ($liveDayDuring == 2))) : ?>
+                    <?php elseif (($dayDuring == 1) || ($dayDuring == 2) || (($dayDuring == 3) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
@@ -379,7 +374,7 @@
             <?php endforeach; ?>
         </ul>
         <ul class="emms22__pre-event__calendar__event-list emms22__fade-in emms22__show-mb main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-            <?php foreach ($speakers as $speaker) : ?>
+            <?php foreach ($speakersDay3 as $speaker) : ?>
                 <li class="emms22__pre-event__calendar__event-list__event carousel-cell">
                     <div class="emms22__pre-event__calendar__event-list__event__card">
                         <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -422,12 +417,12 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ( $response['phaseToShow'] == 'pre' ) :?>
+                    <?php if ($response['phaseToShow'] == 'pre') : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
-                    <?php elseif ( ($dayDuring == 1) || ($dayDuring == 2) || (($dayDuring == 3) && ($liveDayDuring == 2))) : ?>
+                    <?php elseif (($dayDuring == 1) || ($dayDuring == 2) || (($dayDuring == 3) && ($liveDayDuring == 2))) : ?>
                         <div class="emms22__pre-event__calendar__event-list__event__country">
                             <span><img src="common/html/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>

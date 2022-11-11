@@ -77,10 +77,7 @@ require_once('././utils/DB.php');
 
             <ul class="emms22__pre-event__calendar__event-list emms22__fade-in">
                 <?php
-                $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                $speakers = $db->getSpeakersByDay(1);
-
-                foreach ($speakers as $speaker) : ?>
+                foreach ($speakersDay1 as $speaker) : ?>
                     <li class="emms22__pre-event__calendar__event-list__event emms22__fade-in">
                         <div class="emms22__pre-event__calendar__event-list__event__card">
                             <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -129,10 +126,7 @@ require_once('././utils/DB.php');
                 <?php endforeach; ?>
 
                 <?php
-                $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                $speakers = $db->getSpeakersByDay(2);
-
-                foreach ($speakers as $speaker) : ?>
+                foreach ($speakersDay2 as $speaker) : ?>
                     <li class="emms22__pre-event__calendar__event-list__event emms22__fade-in">
                         <div class="emms22__pre-event__calendar__event-list__event__card">
                             <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
@@ -181,10 +175,7 @@ require_once('././utils/DB.php');
                 <?php endforeach; ?>
 
                 <?php
-                $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                $speakers = $db->getSpeakersByDay(3);
-
-                foreach ($speakers as $speaker) : ?>
+                foreach ($speakersDay3 as $speaker) : ?>
                     <li class="emms22__pre-event__calendar__event-list__event emms22__fade-in">
                         <div class="emms22__pre-event__calendar__event-list__event__card">
                             <div class="emms22__pre-event__calendar__event-list__event__card__speaker">
