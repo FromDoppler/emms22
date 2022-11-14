@@ -250,6 +250,22 @@ require_once('././utils/DB.php');
                                     <span>¡No te lo pierdas!</span>
                                 </a>
 							</div>
+                            <div class="emms22__conferences__cards emms22__fade-in">
+                                <a href="https://youtu.be/TR2BL60dGrE" target="_blank">
+                                    <img class="lazyload" loading="lazy" data-src="common/html/img/capsules/portada-ezequiel-golub.png" alt="Conferencias exclusivas">
+                                    <h4>Coderhouse: Cómo llegamos a ser exponenter tecnológicos en LATAM</h4>
+                                    <p>Duración: 00:14:29</p>
+                                    <span>¡No te lo pierdas!</span>
+                                </a>
+							</div>
+                            <div class="emms22__conferences__cards emms22__fade-in">
+                                <a href="https://youtu.be/GLhE_x6n_d0" target="_blank">
+                                    <img class="lazyload" loading="lazy" data-src="common/html/img/capsules/portada-david-tomas.png" alt="Conferencias exclusivas">
+                                    <h4>Cómo se está aplicando el Big Data en las empresas: Casos de éxito de marcas reconocidas</h4>
+                                    <p>Duración: 00:15:24</p>
+                                    <span>¡No te lo pierdas!</span>
+                                </a>
+							</div>
 						</div>
 					</div>
 				</div>
