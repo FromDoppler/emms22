@@ -1,152 +1,155 @@
-
 @font-face {
-  font-family: "Proxima-Nova";
-  src: url("../fonts/proxima-nova.eot");
-  src: url("../fonts/proxima-nova.eot") format("ttf"), url("../fonts/proxima-nova.woff2") format("woff2"),
-    url("../fonts/proxima-nova.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Proxima-Nova";
+    src: url("../fonts/proxima-nova.eot");
+    src: url("../fonts/proxima-nova.eot") format("ttf"), url("../fonts/proxima-nova.woff2") format("woff2"),
+        url("../fonts/proxima-nova.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Proxima-Nova-Italic";
-  src: url("../fonts/proxima-nova-italic.eot");
-  src: url("../fonts/proxima-nova-italic.eot") format("ttf"), url("../fonts/proxima-nova-italic.woff2") format("woff2"),
-    url("../fonts/proxima-nova-italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
+    font-family: "Proxima-Nova-Italic";
+    src: url("../fonts/proxima-nova-italic.eot");
+    src: url("../fonts/proxima-nova-italic.eot") format("ttf"),
+        url("../fonts/proxima-nova-italic.woff2") format("woff2"),
+        url("../fonts/proxima-nova-italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Proxima-Nova-Bold";
-  src: url("../fonts/proxima-nova-bold.eot");
-  src: url("../fonts/proxima-nova-bold.eot") format("ttf"), url("../fonts/proxima-nova-bold.woff2") format("woff2"),
-    url("../fonts/proxima-nova-bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
+    font-family: "Proxima-Nova-Bold";
+    src: url("../fonts/proxima-nova-bold.eot");
+    src: url("../fonts/proxima-nova-bold.eot") format("ttf"),
+        url("../fonts/proxima-nova-bold.woff2") format("woff2"),
+        url("../fonts/proxima-nova-bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Proxima-Nova-Bold-Italic";
-  src: url("../fonts/proxima-nova-bold-italic.eot");
-  src: url("../fonts/proxima-nova-bold-italic.eot") format("ttf"), url("../fonts/proxima-nova-bold-italic.woff2") format("woff2"),
-    url("../fonts/proxima-nova-bold-italic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
+    font-family: "Proxima-Nova-Bold-Italic";
+    src: url("../fonts/proxima-nova-bold-italic.eot");
+    src: url("../fonts/proxima-nova-bold-italic.eot") format("ttf"),
+        url("../fonts/proxima-nova-bold-italic.woff2") format("woff2"),
+        url("../fonts/proxima-nova-bold-italic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
 }
 
 * {
-  text-rendering: optimizeLegibility;
-  font-kerning: normal !important;
-  -moz-font-feature-settings: "kern";
-  -ms-font-feature-settings: "kern";
-  -webkit-font-feature-settings: "kern";
-  font-feature-settings: "kern";
+    text-rendering: optimizeLegibility;
+    font-kerning: normal !important;
+    -moz-font-feature-settings: "kern";
+    -ms-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    font-feature-settings: "kern";
 }
 
 html,
 body {
-  font-family: "Proxima-Nova", "helvetica", "sans-serif";
-  margin: 0;
-  scroll-behavior: smooth;
+    font-family: "Proxima-Nova", "helvetica", "sans-serif";
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ul li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-.emms22--vh{
+.emms22--vh {
     visibility: hidden;
 }
 
 .emms22__container--lg {
-  display: flex;
-  max-width: 1200px;
-  margin: auto;
-  width: 90%;
-  flex-flow: row wrap;
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    width: 90%;
+    flex-flow: row wrap;
 }
 
 .emms22__container--md {
-  display: flex;
-  max-width: 990px;
-  margin: auto;
-  width: 90%;
+    display: flex;
+    max-width: 990px;
+    margin: auto;
+    width: 90%;
 }
 
 @media only screen and (min-width: 600px) {
-  .display-none-mobile {
-    display: none;
-  }
+    .display-none-mobile {
+        display: none;
+    }
 
-  .dispolay-on-mobile {
-    display: block;
-  }
+    .dispolay-on-mobile {
+        display: block;
+    }
 }
-
 
 /* Button */
 
 .emms22__button {
-  font-family: Proxima-Nova;
-  font-size: 18px;
-  line-height: 48px;
-  font-weight: 700;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  border-radius: 5px;
-  border: none;
-  background: #33ad73;
-  padding: 0 20px;
-  box-sizing: border-box;
-  display: block;
-	position: relative;
-  cursor: pointer;
+    font-family: Proxima-Nova;
+    font-size: 18px;
+    line-height: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    border: none;
+    background: #33ad73;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    cursor: pointer;
 }
 
 .emms22__button:hover {
-  background: #008046;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+    background: #008046;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
-@media(max-width:620px){
-    .emms22__button{
+@media (max-width: 620px) {
+    .emms22__button {
         font-size: 15px;
     }
 }
 
-
 /* Show / Hide */
 
-.emms22__show-mb{
-  display: none;
-}
-
-@media(max-width:620px){
-  .emms22__show-dk{
-    display: none;
-  }
-
-  .emms22__show-mb{
-    display: block;
-  }
-}
-
-.emms22--none{
+.emms22__show-mb {
     display: none;
 }
 
+@media (max-width: 620px) {
+    .emms22__show-dk {
+        display: none;
+    }
+
+    .emms22__show-mb {
+        display: block;
+    }
+}
+
+.emms22--none {
+    display: none;
+}
 
 /* fadeInJs */
 
@@ -162,124 +165,122 @@ a {
     }
     100% {
         opacity: 1;
-     }
+    }
 }
-
 
 /* Proportional divs */
 
 .emms22__cropper-cont-16-9 {
-	width: 100%;
-	padding-top: 56.25%;
-	text-align: center;
-	position:relative;
+    width: 100%;
+    padding-top: 56.25%;
+    text-align: center;
+    position: relative;
 }
 
 .emms22__cropper-cont {
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .emms22__cropper-cont-interno {
-	width:100%;
-	height:100%;
+    width: 100%;
+    height: 100%;
 }
 
-.emms22__cropper-cont-interno iframe{
+.emms22__cropper-cont-interno iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
-
 /* Share networks */
 
-.emms22__share{
+.emms22__share {
     position: fixed;
     right: 0;
     top: 300px;
     z-index: 1;
 }
 
-.emms22__share a{
+.emms22__share a {
     width: 47px;
     height: 42px;
-    background: #BD7AFF;
+    background: #bd7aff;
     display: flex;
     justify-content: center;
     padding: 10px;
     box-sizing: border-box;
     cursor: pointer;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
 }
 
-.emms22__share a.emms22__share__open-list{
+.emms22__share a.emms22__share__open-list {
     position: relative;
     z-index: 2;
 }
 
 .emms22__share a.emms22__share--active,
-.emms22__share a.emms22__share--active:hover{
-    background: #8C6698;
+.emms22__share a.emms22__share--active:hover {
+    background: #8c6698;
 }
 
-.emms22__share a:hover{
-    background: #9E69DC;
-    transition-duration: .2s;
+.emms22__share a:hover {
+    background: #9e69dc;
+    transition-duration: 0.2s;
 }
 
-.emms22__share__list{
+.emms22__share__list {
     display: none;
     border-top: solid 1px #550871;
 }
 
-.emms22__share__list li{
+.emms22__share__list li {
     opacity: 0;
-    animation: share-list .2s;
+    animation: share-list 0.2s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 }
 
-@keyframes share-list{
-    0%{
+@keyframes share-list {
+    0% {
         opacity: 0;
         transform: translateY(-20px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.emms22__share__list li:nth-child(1){
-    animation-delay: .1s;
+.emms22__share__list li:nth-child(1) {
+    animation-delay: 0.1s;
 }
 
-.emms22__share__list li:nth-child(2){
-    animation-delay: .2s;
+.emms22__share__list li:nth-child(2) {
+    animation-delay: 0.2s;
 }
 
-.emms22__share__list li:nth-child(3){
-    animation-delay: .3s;
+.emms22__share__list li:nth-child(3) {
+    animation-delay: 0.3s;
 }
 
-.emms22__share__list li a{
-    border-bottom: solid 1px #9E69DC;
+.emms22__share__list li a {
+    border-bottom: solid 1px #9e69dc;
 }
 
-.emms22__share__list li:last-child a{
+.emms22__share__list li:last-child a {
     border-bottom: none;
 }
 
-.emms22__share__list.emms22__share__list--active{
+.emms22__share__list.emms22__share__list--active {
     display: block;
 }
 
-@media(max-width:620px){
-    .emms22__share{
+@media (max-width: 620px) {
+    .emms22__share {
         top: 140px;
     }
 }
