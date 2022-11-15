@@ -53,12 +53,12 @@ require_once('././utils/DB.php');
                     </a>
                 </li>
                 <li>
-                    <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https://goemms.com/&text=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                    <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2F&text=%C2%A1Revive%20el%20EMMS!%20Descubre%20las%20mejores%20Conferencias%20sobre%20Marketing%20Digital%2C%20de%20la%20mano%20de%20los%20expertos%20m%C3%A1s%20destacados%20del%20mundo.%20Es%20gratis%20y%20online.%20%C2%A1Accede%20ahora!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
                         <img src="../../common/html/img/icons/Twitter-w.svg" alt="Twitter">
                     </a>
                 </li>
                 <li>
-                    <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2F&title=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=350');">
+                    <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2F&title=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
                         <img src="../../common/html/img/icons/LinkedIn-w.svg" alt="LinkedIn">
                     </a>
                 </li>
