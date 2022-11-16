@@ -42,6 +42,26 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                 </ul>
             </div>
         </nav>
+        <div class="emms22__share">
+            <a id="btn-share" class="emms22__share__open-list"><img src="../../common/html/img/icons/icon-share.svg" alt="Share"></a>
+            <ul id="list-share" class="emms22__share__list">
+                <li>
+                    <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoemms.com%2Fspeakers-interna.php%3Futm_source%3Ddirect%26slug%3D<?= $speaker['slug'] ?>', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+                        <img src="../../common/html/img/icons/Facebook-w.svg" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Fspeakers-interna.php%3Futm_source%3Ddirect%26slug%3D<?= $speaker['slug'] ?>&text=<?= $speaker['meta_twitter'] ?>', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                        <img src="../../common/html/img/icons/Twitter-w.svg" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Fspeakers-interna.php%3Futm_source%3Ddirect%26slug%3D<?= $speaker['slug'] ?>', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
+                        <img src="../../common/html/img/icons/LinkedIn-w.svg" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+        </div>
 
 
         <!-- Hero -->
