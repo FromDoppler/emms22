@@ -10,11 +10,11 @@ $mem_var = new Memcached();
 $mem_var->addServer("127.0.0.1", 11211);
 $cachedTweets = $mem_var->get("tweets");
 
-$ip = GeoIp::getIp();
-$responseD = processPhaseToShow($ip);
-$dayDuring  = $responseD['day'];
+// $ip = GeoIp::getIp();
+// $responseD = processPhaseToShow($ip);
+// $dayDuring  = $responseD['day'];
 
-$hashtag = $duringDaysArray['d' . $dayDuring]['hashtag-gral'];
+$hashtag = 'GOEMMS';
 $twitterController = new twitterController($hashtag);
 
 $json = file_get_contents('php://input');
@@ -37,7 +37,7 @@ if ($cachedTweets) {
 
     // Transformamos la respuesta de los tweets a JSON
     $tweetObj = json_decode($tweetResponse);
-
+    $tweets =  new stdClass();
     // Verificamos que la respuesta no este vacia
     if ($tweetResponse && isset($tweetObj->meta->newest_id)) {
 

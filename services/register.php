@@ -6,7 +6,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/Validator.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/DB.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/SpreadSheetGoogle.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/Relay.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/configRegister.php');
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
 

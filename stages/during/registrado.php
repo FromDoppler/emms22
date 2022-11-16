@@ -36,9 +36,9 @@ $_SESSION['LAST_ACTIVITY'] = time();
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <?php
+	include_once('././common/components/commonGTMBody.php');
+	?>
     <span id="hashtag" class="hashtag--hidden "><?= $duringDaysArray['d' . $dayDuring]['hashtag-chat'] ?></span>
 
 

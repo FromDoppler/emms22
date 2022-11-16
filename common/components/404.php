@@ -17,9 +17,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
 </head>
 
 <body class="emms22__wrapper__404">
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M768WZR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+    <?php
+	include_once('././common/components/commonGTMBody.php');
+	?>
 
 	<main>
 		<!-- Header -->
