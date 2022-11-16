@@ -303,7 +303,7 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <?php if ($fetched_row['meta_image']) : ?>
-                                    <img src="uploads/<?= $fetched_row['meta_image'] ?>" width="70" height="70">
+                                    <img src="uploads/<?= $fetched_row['meta_image'] ?>">
                                 <?php endif; ?>
                                 <input type="file" value="<?= $fetched_row['meta_image'] ?>" class="form-control" id="meta_image" name="meta_image">
                             </td>

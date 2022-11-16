@@ -180,7 +180,7 @@ if (isset($_GET['view_id'])) {
                     </td>
                     <th colspan="5">
                         <?php if ($fetched_row['meta_image']) : ?>
-                            <img src="uploads/<?= $fetched_row['meta_image'] ?>" width="70" height="70">
+                            <img src="uploads/<?= $fetched_row['meta_image'] ?>">
                         <?php endif; ?>
                     </th>
                 </tr>
