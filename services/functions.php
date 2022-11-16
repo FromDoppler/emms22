@@ -2,7 +2,7 @@
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/ErrorLog.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/DB.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/configRegister.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/config.php');
 
 
 
