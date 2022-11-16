@@ -51,8 +51,7 @@ table,td,th
 }
 table td input,table td select,table td textarea
 {
- width:97%;
- height:35px;
+width: 97%;
  border:dashed #A0D8B1 1px;
  padding-left:15px;
  font-family:Verdana, Geneva, sans-serif;

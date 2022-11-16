@@ -39,6 +39,17 @@ if (isset($_POST['btn-update'])) {
             move_uploaded_file($file_tmp, "uploads/" . $file_name);
         }
     }
+
+    if ($_FILES["meta_image"]["name"] == '') {
+        $meta_image =  $fetched_row['meta_image'];
+    } else {
+        $meta_image =  $_FILES["meta_image"]["name"];
+        $file_name = $_FILES["meta_image"]["name"];
+        $file_tmp = $_FILES["meta_image"]["tmp_name"];
+        if ($file_name != '') {
+            move_uploaded_file($file_tmp, "uploads/" . $file_name);
+        }
+    }
     $alt_image_company = $_POST['alt_image_company'];
     $time = $_POST['time'];
     $link_time = $_POST['link_time'];
@@ -46,11 +57,15 @@ if (isset($_POST['btn-update'])) {
     $day = $_POST['day'];
     $slug = strtolower($_POST['slug']);
     $youtube = $_POST['youtube'];
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_twitter = $_POST['meta_twitter'];
+
 
     // variables for input data
 
     // sql query for update data into database
-    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`link_time`='$link_time',`orden`='$orden',`day`='$day', `slug`='$slug' , `youtube`='$youtube' WHERE id=" . $_GET['edit_id'];
+    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`link_time`='$link_time',`orden`='$orden',`day`='$day', `slug`='$slug' , `youtube`='$youtube', `meta_title`='$meta_title', `meta_description`='$meta_description', `meta_twitter`='$meta_twitter', `meta_image`='$meta_image' WHERE id=" . $_GET['edit_id'];
     // sql query for update data into database
     // sql query execution function
     if (mysqli_query($con, $sql_query)) {
@@ -82,7 +97,7 @@ if (isset($_POST['btn-cancel'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style.css?v=1" type="text/css" />
 </head>
 
 <body>
@@ -171,7 +186,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="description" class="form-label">Description:</label>
                             </td>
                             <td>
-                                <textarea class="form-control" id="description" name="description"><?= $fetched_row['description'] ?></textarea>
+                                <textarea rows="5" class="form-control" id="description" name="description"><?= $fetched_row['description'] ?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -179,7 +194,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="bio" class="form-label">Bio:</label>
                             </td>
                             <td>
-                                <textarea class="form-control" id="bio" name="bio"><?= $fetched_row['bio'] ?></textarea>
+                                <textarea rows="5" class="form-control" id="bio" name="bio"><?= $fetched_row['bio'] ?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -256,6 +271,41 @@ if (isset($_POST['btn-cancel'])) {
                                 }
                                 ?>
                                 <input type="text" value="<?= $fetched_row['youtube'] ?>" class="form-control" id="youtube" name="youtube">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_title" class="form-label">Title SEO:</label>
+                            </td>
+                            <td>
+                                <input type="text" value="<?= $fetched_row['meta_title'] ?>" class="form-control" id="meta_title" name="meta_title">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_description" class="form-label">Description SEO:</label>
+                            </td>
+                            <td>
+                                <textarea rows="5" class="form-control" id="meta_description" name="meta_description"><?= $fetched_row['meta_description'] ?></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_twitter" class="form-label">Twitter SEO:</label>
+                            </td>
+                            <td>
+                                <textarea rows="5" class="form-control" id="meta_twitter" name="meta_twitter"><?= $fetched_row['meta_twitter'] ?></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_image" class="form-label">Image SEO:</label>
+                            </td>
+                            <td>
+                                <?php if ($fetched_row['meta_image']) : ?>
+                                    <img src="uploads/<?= $fetched_row['meta_image'] ?>">
+                                <?php endif; ?>
+                                <input type="file" value="<?= $fetched_row['meta_image'] ?>" class="form-control" id="meta_image" name="meta_image">
                             </td>
                         </tr>
 

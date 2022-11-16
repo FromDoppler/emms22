@@ -157,8 +157,37 @@ if (isset($_GET['view_id'])) {
                     </th>
                 </tr>
                 <tr>
+                    <td>
+                        <label for="meta_title" class="form-label">Title SEO:</label>
+                    </td>
+                    <th colspan="5"> <?= $fetched_row['meta_title'] ?></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="meta_description" class="form-label">Description SEO:</label>
+                    </td>
+                    <th colspan="5"> <?= $fetched_row['meta_description'] ?></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="meta_twitter" class="form-label">Twitter SEO:</label>
+                    </td>
+                    <th colspan="5"> <?= $fetched_row['meta_twitter'] ?></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="meta_image" class="form-label">Image SEO:</label>
+                    </td>
+                    <th colspan="5">
+                        <?php if ($fetched_row['meta_image']) : ?>
+                            <img src="uploads/<?= $fetched_row['meta_image'] ?>">
+                        <?php endif; ?>
+                    </th>
+                </tr>
+                <tr>
                     <td align="center"><a href="index.php?token=<?= $_GET['token'] ?>">back to main page</a></td>
                 </tr>
+
             </table>
 
         </div>

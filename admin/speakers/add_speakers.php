@@ -34,12 +34,21 @@ if (isset($_POST['btn-save'])) {
     $day = $_POST['day'];
     $slug = $_POST['slug'];
     $youtube = $_POST['youtube'];
+    $meta_title = $_POST['meta_title'];
+    $meta_description = $_POST['meta_description'];
+    $meta_twitter = $_POST['meta_twitter'];
+    $meta_image =  $_FILES["meta_image"]["name"];
+    $file_name = $_FILES["meta_image"]["name"];
+    $file_tmp = $_FILES["meta_image"]["tmp_name"];
+    if ($file_name != '') {
+        move_uploaded_file($file_tmp, "uploads/" . $file_name);
+    }
 
     // variables for input data
 
     // sql query for inserting data into database
 
-    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`link_time`,`orden`,`day`,`slug`,`youtube`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $link_time . "','" . $orden . "','" . $day . "' ,'" . $slug . "','" . $youtube . "')";
+    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`link_time`,`orden`,`day`,`slug`,`youtube`,`meta_title`,`meta_description`,`meta_twitter`,`meta_image`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $link_time . "','" . $orden . "','" . $day . "' ,'" . $slug . "','" . $youtube . "','" . $meta_title . "','" . $meta_description . "','" . $meta_twitter . "','" . $meta_image . "')";
     // sql query for inserting data into database
 
     // sql query execution function
@@ -64,7 +73,7 @@ if (isset($_POST['btn-save'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style.css?v=1" type="text/css" />
 </head>
 
 <body>
@@ -151,7 +160,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="description" class="form-label">Description:</label>
                             </td>
                             <td>
-                                <textarea id="description" name="description" required></textarea>
+                                <textarea rows="5" id="description" name="description" required></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -159,7 +168,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="bio" class="form-label">Bio:</label>
                             </td>
                             <td>
-                                <textarea id="bio" name="bio" required></textarea>
+                                <textarea rows="5" id="bio" name="bio" required></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -228,6 +237,38 @@ if (isset($_POST['btn-save'])) {
                             </td>
                             <td>
                                 <input type="text" class="form-control" id="youtube" name="youtube" placeholder="Youtube">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_title" class="form-label">SEO Title:</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="meta_title" name="meta_title" placeholder="SEO Title">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_description" class="form-label">SEO Description:</label>
+                            </td>
+                            <td>
+                                <textarea rows="5" id="meta_description" name="meta_description" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_twitter" class="form-label">SEO Twitter:</label>
+                            </td>
+                            <td>
+                                <textarea rows="5" id="meta_twitter" name="meta_twitter" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="meta_image" class="form-label">Image Share:</label>
+                            </td>
+                            <td>
+                                <input type="file" class="form-control" id="meta_image" name="meta_image" required placeholder="Image Share">
                             </td>
                         </tr>
 
