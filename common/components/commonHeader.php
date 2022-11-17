@@ -10,34 +10,54 @@ $simulated = $response['simulated'];
 
 <meta name="theme-color" content="#3F0453">
 
-<meta name="title" content="EMMS 2022: El mayor evento de Marketing Digital">
 <?php if ($response['phaseToShow'] == 'pre') : ?>
+    <meta name="title" content="EMMS 2022: El mayor evento de Marketing Digital">
     <meta name="description" content="¡Gratis y Online! Llega una nueva edición del evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Reserva tu cupo ahora!">
 <?php elseif ($response['phaseToShow'] == 'during') : ?>
+    <meta name="title" content="EMMS 2022: El mayor evento de Marketing Digital">
     <meta name="description" content="¡Ya estamos en vivo! Ha comenzado el evento gratis y online más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Súmate ahora!">
 <?php elseif ($response['phaseToShow'] == 'post') : ?>
+    <?php if ($_SERVER['DOCUMENT_URI'] == '/speakers-interna.php') : ?>
+    <meta name="title" content="<?= $speaker['meta_title'] ?>">
+    <meta name="description" content="<?= $speaker['meta_description'] ?>">
+    <?php else : ?>
+    <meta name="title" content="EMMS 2022: El mayor evento de Marketing Digital">
     <meta name="description" content="¡Gratis y Online! Revive el evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Accede ahora a todas las Conferencias!">
+    <?php endif; ?>
 <?php endif; ?>
 <meta name="keywords" content="">
 <meta name="language" content="Spanish">
 <meta name="revisit-after" content="15 days">
 <meta name="author" content="Doppler">
 
-<meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
 <?php if ($response['phaseToShow'] == 'pre') : ?>
+    <meta property="og:url" content="https://goemms.com/">
+    <meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
     <meta property="og:description" content="¡Gratis y Online! Llega una nueva edición del evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Reserva tu cupo ahora!">
     <meta property="og:image" content="https://goemms.com/share.png">
     <meta name="twitter:image" content="https://goemms.com/share.png">
 <?php elseif ($response['phaseToShow'] == 'during') : ?>
+    <meta property="og:url" content="https://goemms.com/">
+    <meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
     <meta property="og:description" content="¡Ya estamos en vivo! Ha comenzado el evento gratis y online más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Súmate ahora!">
     <meta property="og:image" content="https://goemms.com/share-during.png">
     <meta name="twitter:image" content="https://goemms.com/share-during.png">
 <?php elseif ($response['phaseToShow'] == 'post') : ?>
+    <?php if ($_SERVER['DOCUMENT_URI'] == '/speakers-interna.php') : ?>
+    <meta property="og:url" content="https://goemms.com/speakers-interna.php?utm_source=direct&slug=<?= $speaker['slug'] ?>">
+    <meta property="og:title" content="<?= $speaker['meta_title'] ?>">
+    <meta property="og:description" content="<?= $speaker['meta_description'] ?>">
+    <meta property="og:image" content="<?= $speaker['meta_image'] ?>">
+    <meta name="twitter:image" content="<?= $speaker['meta_image'] ?>">
+    <?php else : ?>
+    <meta property="og:url" content="https://goemms.com/">
+    <meta property="og:title" content="EMMS 2022: El mayor evento de Marketing Digital">
     <meta property="og:description" content="¡Gratis y Online! Revive el evento más esperado por la comunidad del Marketing. Descubre las últimas tendencias y las estrategias que implementan los líderes del mundo para hacer crecer sus negocios. ¡Accede ahora a todas las Conferencias!">
     <meta property="og:image" content="https://goemms.com/share.png">
     <meta name="twitter:image" content="https://goemms.com/share.png">
+    <?php endif; ?>
 <?php endif; ?>
-<meta property="og:url" content="https://goemms.com/">
+
 <meta property="og:site_name" content="EMMS 2022: El mayor evento de Marketing Digital">
 <meta property="og:type" content="website" />
 
