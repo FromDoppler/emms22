@@ -26,10 +26,10 @@
 }
 
 .emms22__hero__content h1 {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 79px;
-  margin: 0;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 0 0 20px 0;
   color: #ffffff;
 }
 
@@ -47,6 +47,7 @@
 
 .emms22__hero__content button a {
   color: #ffffff;
+  font-family: proxima-nova,helvetica,"sans-serif";
 }
 
 .emms22__hero__content__video {
@@ -56,6 +57,7 @@
 
 .emms22__hero__content__video video {
   max-width: 512px;
+  margin-top: -20px;
 }
 
 .emms22__hero__button {
@@ -282,6 +284,7 @@
 
   .emms22__hero__content__video video {
     max-width: 80vw;
+    margin-top: 0;
   }
 }
 
