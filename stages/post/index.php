@@ -43,6 +43,7 @@ require_once('././utils/DB.php');
 					<li><a href="#inicio">inicio</a></li>
 					<li><a href="#contenido-exclusivo">contenido exclusivo</a></li>
 					<li><a href="#aliados">aliados</a></li>
+                    <li><a href="./ediciones-anteriores.php">ediciones anteriores</a></li>
 				</ul>
 			</div>
 		</nav>

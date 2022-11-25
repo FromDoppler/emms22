@@ -82,8 +82,9 @@ require_once('././config.php');
 								especial, pensada para todos aquellos que toman decisiones de negocio en su día a día y llevan sus
 								empresas al próximo
 								nivel.</p>
-							<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8oeQSWPozYXCwdC9PKRNPiM" target="_blank" rel="noopener">¡No te la pierdas!</a>
-						</div>
+							<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8oeQSWPozYXCwdC9PKRNPiM" target="_blank" rel="noopener">¡No te la pierdas!</a>
+                            <a class="btn-register" id="playlist?list=PLHE_SVtQOB8oeQSWPozYXCwdC9PKRNPiM" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                        </div>
 					</div>
 
 					<div class="emms22__editions__cards__container">
@@ -96,8 +97,9 @@ require_once('././config.php');
 									enfocado en 5 industrias clave. ¡Las sesiones virtuales de Networking fueron el complemento
 									perfecto!
 								</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8pcO6n-OHDedWgmicdFuj_p" target="_blank" rel="noopener">Revive el evento</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8pcO6n-OHDedWgmicdFuj_p" target="_blank" rel="noopener">Revive el evento</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8pcO6n-OHDedWgmicdFuj_p" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2019.png" alt="EMMS 2019">
@@ -106,8 +108,9 @@ require_once('././config.php');
 									Digital
 									en
 									el mundo. ¡Revive la jornada que se convirtió en el evento online del año!</p>
-								<a href="https://www.youtube.com/watch?v=Fxn-toxKKIQ&list=PLHE_SVtQOB8qoW8HGYDWUF1V6c0taJGJk&index=11&t=0s" target="_blank" rel="noopener">Mira las conferencias</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/watch?v=Fxn-toxKKIQ&list=PLHE_SVtQOB8qoW8HGYDWUF1V6c0taJGJk&index=11&t=0s" target="_blank" rel="noopener">Mira las conferencias</a>
+                                <a class="btn-register" id="watch?v=Fxn-toxKKIQ&list=PLHE_SVtQOB8qoW8HGYDWUF1V6c0taJGJk&index=11&t=0s" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2018.png" alt="EMMS 2018">
@@ -115,16 +118,18 @@ require_once('././config.php');
 								<p>Las conferencias en inglés con traducción en simultáneo marcaron un antes y un después para los
 									eventos
 									de Marketing del mercado hispano. Hubo speakers de primer nivel y miles de asistentes.</p>
-								<a href="https://www.youtube.com/watch?v=kmV1HFlSce4&list=PLHE_SVtQOB8qJGZdZ8UiUZA9N0BqQ_ePf" target="_blank" rel="noopener">Mira las conferencias</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/watch?v=kmV1HFlSce4&list=PLHE_SVtQOB8qJGZdZ8UiUZA9N0BqQ_ePf" target="_blank" rel="noopener">Mira las conferencias</a>
+                                <a class="btn-register" id="watch?v=kmV1HFlSce4&list=PLHE_SVtQOB8qJGZdZ8UiUZA9N0BqQ_ePf" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2017.png" alt="EMMS 2017">
 								<h4>EMMS 2017</h4>
 								<p>¡La décima edición tuvo récord de registros! Fueron 8 conferencias organizadas en nivel inicial y
 									avanzado para que cada uno pudiera capacitarse en base a su experiencia y necesidades.</p>
-								<a href="https://www.youtube.com/watch?v=9Y_Y7ODRz2g&list=PLHE_SVtQOB8rVbcM84J2HdtU9Ko1N2wOW" target="_blank" rel="noopener">Mira las conferencias</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/watch?v=9Y_Y7ODRz2g&list=PLHE_SVtQOB8rVbcM84J2HdtU9Ko1N2wOW" target="_blank" rel="noopener">Mira las conferencias</a>
+                                <a class="btn-register" id="watch?v=9Y_Y7ODRz2g&list=PLHE_SVtQOB8rVbcM84J2HdtU9Ko1N2wOW" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2016.png" alt="EMMS 2016">
@@ -133,8 +138,9 @@ require_once('././config.php');
 									y
 									más.
 									Esta vez fue la audiencia quien eligió de qué manera aprender.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8olvfTQWIY-K12xmfh-083T" target="_blank" rel="noopener">Disfruta cada formato</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8olvfTQWIY-K12xmfh-083T" target="_blank" rel="noopener">Disfruta cada formato</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8olvfTQWIY-K12xmfh-083T" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2015.png" alt="EMMS 2015">
@@ -142,8 +148,9 @@ require_once('././config.php');
 								<p>Como cada edición, el EMMS se renovó. Las conferencias se convirtieron en un evento de dos días con
 									10
 									oradores destacados dentro de 2 temáticas: motivación y acción.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8rSRLFPeeXwpbFwXglMAjw6" target="_blank" rel="noopener">Descubre lo que pasó</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8rSRLFPeeXwpbFwXglMAjw6" target="_blank" rel="noopener">Descubre lo que pasó</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8rSRLFPeeXwpbFwXglMAjw6" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2014.png" alt="EMMS 2014">
@@ -151,8 +158,9 @@ require_once('././config.php');
 								<p>El evento se transformó volviéndose 100% online, internacional y gratis. Con una duración de 10
 									horas
 									ininterrumpidas, 10 increíbles speakers y más de 10.000 asistentes.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8rfXIJu1cFWY8LjPe6wQQ4b" target="_blank" rel="noopener">Escucha las ponencias</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8rfXIJu1cFWY8LjPe6wQQ4b" target="_blank" rel="noopener">Escucha las ponencias</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8rfXIJu1cFWY8LjPe6wQQ4b" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2013.png" alt="EMMS 2013">
@@ -160,24 +168,28 @@ require_once('././config.php');
 								<p>Por primera vez el evento viajó por 5 países: Ecuador, España, República Dominicana, México y
 									Argentina,
 									los influencers del sector se lucieron con charlas magníficas.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8qr7C4nts3AwCXRP3fPi1y1" target="_blank" rel="noopener">Mira los videos</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8qr7C4nts3AwCXRP3fPi1y1" target="_blank" rel="noopener">Mira los videos</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8qr7C4nts3AwCXRP3fPi1y1" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
+
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2012.png" alt="EMMS 2012">
 								<h4>EMMS 2012</h4>
 								<p>Inspirado en el “fin del mundo” volvió el EMMS para salvar a aquellos que no pensaban actualizarse
 									con
 									las últimas tendencias del Marketing. Más de 2.000 participantes.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8pFFK1-Tg8o1uDOWKUGBaoM" target="_blank" rel="noopener">Dale play a las charlas</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8pFFK1-Tg8o1uDOWKUGBaoM" target="_blank" rel="noopener">Dale play a las charlas</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8pFFK1-Tg8o1uDOWKUGBaoM" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2011.png" alt="EMMS 2011">
 								<h4>EMMS 2011</h4>
 								<p>El evento más relevante de Marketing Online llegó a México. Se discutieron temas como el Mobile
 									Marketing, tendencias del mercado y se inauguró el panel de casos de éxito.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8pCjMuMVOwrataaoQUyaFvo" target="_blank" rel="noopener">Mira las conferencias</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8pCjMuMVOwrataaoQUyaFvo" target="_blank" rel="noopener">Mira las conferencias</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8pCjMuMVOwrataaoQUyaFvo" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2010.png" alt="EMMS 2010">
@@ -186,8 +198,9 @@ require_once('././config.php');
 									en
 									el
 									reconocido Seminario del Email Marketing Made Simple.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8oQe0h6OLhb1QOwMHSfoI3P" target="_blank" rel="noopener">Disfruta las Capacitaciones</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8oQe0h6OLhb1QOwMHSfoI3P" target="_blank" rel="noopener">Disfruta las Capacitaciones</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8oQe0h6OLhb1QOwMHSfoI3P" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 
 							<div class="emms22__editions__cards emms22__fade-in">
 								<img class="lazyload" loading="lazy" data-src="../../common/html/img/emms/emms2009.png" alt="EMMS 2009">
@@ -196,13 +209,101 @@ require_once('././config.php');
 									Tendencias
 									en
 									Social Media, Content Marketing, SEO y mucho más.</p>
-								<a href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8qZykZGtv66ITP3zxHPUhfV" target="_blank" rel="noopener">Revive el evento</a>
-							</div>
+								<a class="btn-video" href="https://www.youtube.com/playlist?list=PLHE_SVtQOB8qZykZGtv66ITP3zxHPUhfV" target="_blank" rel="noopener">Revive el evento</a>
+                                <a class="btn-register" id="playlist?list=PLHE_SVtQOB8qZykZGtv66ITP3zxHPUhfV" data-target="modalRegister" data-toggle="emms22__modal-register">Revive el evento</a>
+                            </div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+        <div id="modalRegister" class="emms22__modal-register">
+            <div class="emms22__pre-event__container-form">
+                <form class="emms22__pre-event__form" id="formModal" novalidate autocomplete="off">
+                    <div class="emms22__home__container-form__column">
+                        <h3>Regístrate aquí para ver las ediciones anteriores 🙂</h3>
+                        <ul class="emms22__pre-event__form__field-group">
+                            <li class="emms22__pre-event__form__field-item">
+                                <div class="holder">
+                                    <label class="required-label" for="firstname">Nombre *</label>
+                                    <input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
+                                </div>
+                            </li>
+                            <li class="emms22__pre-event__form__field-item">
+                                <div class="holder">
+                                    <label class="required-label" for="email">Email *</label>
+                                    <input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
+                                </div>
+                            </li>
+                                <li class="emms22__pre-event__form__field-item">
+                                    <div class="holder">
+                                        <label for="industry-input">Industria *</label>
+                                        <select name="industry-input" class="required" autocomplete="off">
+                                            <option disabled selected value>Elige una industria</option>
+                                            <option value="Agencias-de-comunicacion-Publicidad-Consultor">Agencia de Comunicaci&oacute;n / Publicidad / Consultor</option>
+                                            <option value="Agencias-de-Empleo">Agencias de Empleo</option>
+                                            <option value="Alimentaci&oacute;n-Consumo-Masivo">Alimentaci&oacute;n / Consumo Masivo</option>
+                                            <option value="Autom&oacute;viles">Autom&oacute;viles</option>
+                                            <option value="Banca-Finanzas-Seguros">Banca / Finanzas / Seguros</option>
+                                            <option value="Belleza-Cosm&eacute;tica">Belleza / Cosm&eacute;tica</option>
+                                            <option value="Educaci&oacute;n">Educaci&oacute;n</option>
+                                            <option value="Entretenimiento">Entretenimiento</option>
+                                            <option value="Industria-Fabricaci&oacute;n">Industria / Fabricaci&oacute;n</option>
+                                            <option value="Inform&aacute;tica-Electr&oacute;nica">Inform&aacute;tica / Electr&oacute;nica</option>
+                                            <option value="Medios-de-Comunicaci&oacute;n">Medios de Comunicaci&oacute;n</option>
+                                            <option value="Real-Estate">Real Estate</option>
+                                            <option value="Retail">Retail</option>
+                                            <option value="Ropa-Accesorios-Art&iacute;culos Deportivos">Ropa / Accesorios / Art&iacute;culos Deportivos</option>
+                                            <option value="Salud">Salud</option>
+                                            <option value="Sector-P&uacute;blico">Sector P&uacute;blico</option>
+                                            <option value="Servicios">Servicios</option>
+                                            <option value="Supermercado">Supermercado</option>
+                                            <option value="Telecomunicaciones">Telecomunicaciones</option>
+                                            <option value="Turismo">Turismo</option>
+                                            <option value="Otros">Otros</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="emms22__pre-event__form__field-group">
+                                <li class="emms22__pre-event__form__field-item emms22__pre-event__form__field-item__checkbox">
+                                    <div class="holder">
+                                        <input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check acept-politic"><span class="checkmark"></span><label for="acepto-politicas">
+                                            Acepto la Pol&iacute;tica de Privacidad de Doppler *
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="emms22__pre-event__form__field-item emms22__pre-event__form__field-item__checkbox">
+                                    <div class="holder">
+                                        <input name="promotions" type="checkbox" id="acepto-promociones" value="true"><span class="checkmark"></span><label for="acepto-promociones">
+                                            Acepto recibir promociones de Doppler y sus aliados</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                            <div class="emms22__home__container-form__column">
+                            <div class="emms22__home__legal">
+                                <p>Doppler te informa que los datos de car&aacute;cter personal que nos proporciones al rellenar el presente formulario ser&aacute;n tratados por Doppler LLC como responsable de esta Web.<br>
+                                    <strong>Finalidad: </strong>Dar de alta esta suscripci&oacute;n para enviar newsletters con informaci&oacute;n y promociones de productos o servicios propios o de nuestros aliados.<br>
+                                    <strong>Legitimaci&oacute;n: </strong>Consentimiento del interesado. <br>
+                                    <strong>Destinatarios: </strong>Tus datos ser&aacute;n guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creaci&oacute;n de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integraci&oacute;n de apps.<br>
+                                    <strong>Informaci&oacute;n adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Pol&iacute;tica de Privacidad</a> de Doppler encontrar&aacute;s informaci&oacute;n adicional
+                                    sobre la recopilaci&oacute;n y el uso de su informaci&oacute;n personal por parte de Doppler, incluida
+                                    informaci&oacute;n sobre acceso, conservaci&oacute;n, rectificaci&oacute;n, eliminaci&oacute;n, seguridad,
+                                    transferencias
+                                    transfronterizas y otros temas. <br>
+                                </p>
+                            </div>
+                            <div class="emms22__home__btn">
+                                <button class="emms22__button emms22__fade-in" id="register-button">ACCEDER AHORA</button>
+                            </div>
+                        </div>
+                        <?php include_once('././common/components/commonUtms.php') ?>
+                    </form>
+                    <a data-dismiss="emms22__modal-register" class="emms22__modal-close"></a>
+                </div>
+        </div>
 
 
 		<footer class="emms22__footer">
@@ -238,6 +339,8 @@ require_once('././config.php');
 		const changeNavIfLoged = changeRedirectLoged;
 		changeNavIfLoged();
 	</script>
+
+    <script type="module" src="../../common/html/<?= VERSION ?>/js/edicionesAnteriores.js?version=<?= VERSION ?>"></script>
 
 </body>
 
