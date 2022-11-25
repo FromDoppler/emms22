@@ -306,3 +306,93 @@
     font-size: 14px;
   }
 }
+
+
+/* Registration modal */
+
+.btn-register{
+    cursor: pointer;
+}
+
+.emms22__modal-register{
+    display: none;
+}
+
+.emms22__modal-register.emms22__modal-register--open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(57, 35, 92, 0.8);
+    z-index: 1;
+}
+
+.emms22__modal-register .emms22__pre-event__container-form{
+    max-width: 830px;
+    width: 90%;
+    position: relative;
+}
+
+.emms22__modal-register .emms22__pre-event__container-form .emms22__pre-event__form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.emms22__modal-register .emms22__pre-event__container-form .emms22__pre-event__form .emms22__home__container-form__column{
+    width: 47%;
+}
+
+.emms22__modal-register .emms22__pre-event__container-form .emms22__pre-event__form h3{
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 30px 0;
+}
+
+@media(min-width:620px){
+    .emms22__modal-register .emms22__pre-event__form__field-group:nth-child(3){
+        margin: 0;
+    }
+
+    .emms22__modal-register .emms22__pre-event__form__field-group:nth-child(3) li:nth-child(2){
+        margin: 0;
+    }
+}
+
+.emms22__modal-register .emms22__modal-close{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 18px;
+    height: 18px;
+    background: url("../../img/icon-close-white.png") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+@media(max-width:620px){
+    .emms22__modal-register .emms22__pre-event__container-form .emms22__pre-event__form .emms22__home__container-form__column{
+        width: 100%;
+    }
+
+    .emms22__modal-register .emms22__home__legal{
+        margin: 0;
+    }
+
+    .emms22__modal-register .emms22__pre-event__container-form{
+        padding: 70px 25px 30px 25px;
+        margin: 0 auto;
+    }
+
+    .emms22__modal-register.emms22__modal-register--open{
+        display: block;
+        overflow-y: scroll;
+        padding: 50px 0;
+    }
+}
+
+
